@@ -1,0 +1,434 @@
+[
+  {
+    "titulo": "Snakes: passado simples irregular (A2)",
+    "tema": "Passado simples irregular",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Last summer my class visited a small reptile park near the river. A guide showed us six snakes and explained how they hunt. One snake was very long and green. I was nervous, so I ___ behind my teacher for a few minutes. Then I touched the snake's skin. It felt dry and smooth, not wet at all.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "stood",
+      "standed",
+      "did stood",
+      "was stand",
+      "stooded"
+    ],
+    "gabarito": "A",
+    "comentario": "O texto narra fatos passados (visited, showed, was), portanto a lacuna pede o passado simples de to stand, que é irregular: stood. As formas standed e stooded não existem, pois stand não recebe a terminação -ed. Além disso, did stood está errado porque depois do auxiliar did o verbo fica no infinitivo, e was stand mistura o verbo to be com um infinitivo sem sentido.",
+    "meta_description": "Exercício de inglês nível A2 sobre passado simples de verbos irregulares, com texto curto sobre cobras e explicação da regra."
+  },
+  {
+    "titulo": "Zoos: presente contínuo (A2)",
+    "tema": "Presente contínuo",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Modern zoos are changing. Many of them now work with universities to protect animals in danger. At the city zoo this month, the keepers ___ a new home for the small monkeys. It has tall trees, ropes and a warm pool. Visitors can watch the work from a window and read simple signs about the project.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "are building",
+      "is building",
+      "are build",
+      "are builded",
+      "be building"
+    ],
+    "gabarito": "A",
+    "comentario": "A expressão this month indica uma ação em andamento no período atual, então usamos o presente contínuo: verbo to be + verbo com -ing. Como o sujeito the keepers é plural, o auxiliar correto é are, o que elimina is building. Também estão erradas are build, porque falta o -ing, e be building, porque o verbo to be precisa estar conjugado.",
+    "meta_description": "Questão de inglês A2 sobre presente contínuo em um texto curto a respeito de zoológicos modernos e projetos de conservação."
+  },
+  {
+    "titulo": "Dolphins: comparativo de superioridade (A2)",
+    "tema": "Comparativo de superioridade",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Dolphins live in family groups and talk to each other with clicks and whistles. Scientists say that a dolphin brain is ___ than the brain of most other sea animals. Dolphins learn tricks quickly and remember them for years. They also help sick friends stay near the surface so they can breathe air. Many people study these animals in warm oceans around the world.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "bigger",
+      "more big",
+      "big",
+      "biggest",
+      "more bigger"
+    ],
+    "gabarito": "A",
+    "comentario": "A palavra than logo depois da lacuna mostra que a frase é uma comparação entre dois elementos. Adjetivos curtos como big formam o comparativo com a terminação -er, dobrando a consoante final: bigger. Por isso more big e more bigger estão errados, já que more só aparece com adjetivos longos e nunca junto de -er. O superlativo biggest também não serve, porque não se combina com than.",
+    "meta_description": "Exercício de inglês A2 sobre comparativo de superioridade com adjetivos curtos, em um texto curto sobre golfinhos."
+  },
+  {
+    "titulo": "Bats: advérbios de frequência (A2)",
+    "tema": "Advérbios de frequência",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Bats sleep all day in caves, old buildings or tall trees. When the sun goes down, ___ their homes to look for food. Some kinds eat fruit, others catch insects in the dark air. They find their way with sound, not with their eyes. In cold countries, many bats sleep through the whole winter. They wake up again when the days become long and warm.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "they usually leave",
+      "they usually leaves",
+      "they are usually leave",
+      "they usually leaving",
+      "leave they usually"
+    ],
+    "gabarito": "A",
+    "comentario": "O advérbio de frequência usually vem entre o sujeito e o verbo principal no presente simples, formando they usually leave. A opção they usually leaves está errada porque o -s só aparece com he, she e it. Já they are usually leave junta o verbo to be a um verbo principal sem o -ing, e leave they usually inverte a ordem sujeito-verbo, o que só acontece em perguntas.",
+    "meta_description": "Questão de inglês A2 sobre posição dos advérbios de frequência na frase, com um texto curto e informativo sobre morcegos."
+  },
+  {
+    "titulo": "The moon: futuro com will (A2)",
+    "tema": "Futuro com will",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "The moon has no air and no water, so nothing grows there. Scientists believe that people ___ build a small base near the south pole in the next twenty years. Ice under the ground could give them water. A day on the moon is very long: about fourteen Earth days of light and fourteen of dark.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "will",
+      "will to",
+      "will be",
+      "are will",
+      "shall to"
+    ],
+    "gabarito": "A",
+    "comentario": "Previsões e crenças sobre o futuro são expressas com will seguido do verbo no infinitivo sem to. Por isso will to e shall to estão errados, já que modais nunca vêm acompanhados de to. A forma will be também não funciona, porque produziria will be build, e are will é impossível, pois um modal não se combina com o verbo to be dessa maneira.",
+    "meta_description": "Exercício de inglês A2 sobre futuro com will para previsões, em um texto curto sobre a Lua e futuras bases espaciais."
+  },
+  {
+    "titulo": "Crocodiles: superlativo (A2)",
+    "tema": "Superlativo",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Crocodiles have lived on Earth for millions of years. A saltwater crocodile is ___ reptile in the world, and some males are over six metres long. They can stay under water for about an hour without breathing. Mother crocodiles are careful parents and carry their tiny babies to the water inside their mouths. Their strong jaws and hard skin are famous all over the world.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "the largest",
+      "the most large",
+      "largest",
+      "more large",
+      "the larger"
+    ],
+    "gabarito": "A",
+    "comentario": "A expressão in the world indica um superlativo, que com adjetivos curtos se forma com the + adjetivo + -est: the largest. A opção the most large está errada porque most só aparece com adjetivos longos. O superlativo também exige o artigo the, o que elimina largest sozinho, e the larger não serve porque comparativos não aparecem com in the world.",
+    "meta_description": "Questão de inglês A2 sobre superlativo de adjetivos curtos, com um texto curto e didático a respeito de crocodilos."
+  },
+  {
+    "titulo": "Helicopters: have to (A2)",
+    "tema": "Obrigação com have to",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "A helicopter can fly straight up and stay still in the air, so it is perfect for rescue work. Pilots ___ study for many months before they fly alone. They learn about wind, weather and machines. In big cities, helicopters carry doctors to accidents when the roads are full of slow cars. Rescue teams also train together every month, in rain or in sun.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "have to",
+      "has to",
+      "must to",
+      "are have to",
+      "having to"
+    ],
+    "gabarito": "A",
+    "comentario": "A ideia de obrigação no presente é expressa por have to seguido do infinitivo sem to. Como o sujeito Pilots é plural, a forma correta é have to, e não has to, que só aparece com he, she e it. A opção must to está errada porque must nunca vem com to, e are have to junta indevidamente o verbo to be ao verbo have.",
+    "meta_description": "Exercício de inglês A2 sobre have to para expressar obrigação, em um texto curto sobre helicópteros e trabalho de resgate."
+  },
+  {
+    "titulo": "Jungles: quantificadores com incontáveis (A2)",
+    "tema": "Quantificadores com incontáveis",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "A jungle is hot and wet, and the trees are so tall that only ___ light reaches the ground. Because of this, the floor of the forest is quite dark and empty. Thousands of plants and insects live high in the branches instead. Scientists still find new species there every year, especially in South America.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "a little",
+      "a few",
+      "many",
+      "few",
+      "a lot"
+    ],
+    "gabarito": "A",
+    "comentario": "A palavra light é um substantivo incontável, por isso pede quantificadores como a little, que indica pouca quantidade. As opções a few e few estão erradas porque só acompanham substantivos contáveis no plural, assim como many. Já a lot precisaria da preposição of para funcionar antes de um substantivo.",
+    "meta_description": "Questão de inglês A2 sobre quantificadores com substantivos incontáveis, em um texto curto sobre a floresta tropical."
+  },
+  {
+    "titulo": "Computers: preposições de tempo (A2)",
+    "tema": "Preposições de tempo",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "The first electronic computers were built ___ the 1940s. They were enormous machines that filled whole rooms and used a huge amount of electricity. Today a small phone is far more powerful than those early computers. Engineers keep making chips smaller and cheaper, and many students now write their own programs at home. Some of them write their first small game before leaving school.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "in",
+      "on",
+      "at",
+      "for",
+      "since"
+    ],
+    "gabarito": "A",
+    "comentario": "Com décadas, séculos, anos, meses e estações do ano usamos a preposição in, como em in the 1940s. A preposição on serve para dias e datas específicas, e at aparece com horas e expressões como at night, por isso ambas estão erradas. As opções for e since indicam duração e ponto de partida e não combinam com o passado simples were built.",
+    "meta_description": "Exercício de inglês A2 sobre preposições de tempo com décadas e anos, em um texto curto sobre a história dos computadores."
+  },
+  {
+    "titulo": "Cities: superlativo com most (A2)",
+    "tema": "Superlativo com most",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "More than half of the people on the planet live in cities. Tokyo is one of ___ cities in the world, with over thirty million people in its wider area. Big cities offer jobs, schools and hospitals, but they also create traffic and noise. Many of them are now building parks and bicycle lanes. These changes help to make the air cleaner for everybody.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "the most crowded",
+      "the crowdedest",
+      "the more crowded",
+      "most crowded",
+      "the most crowd"
+    ],
+    "gabarito": "A",
+    "comentario": "Adjetivos longos como crowded formam o superlativo com the most, resultando em the most crowded. A forma the crowdedest está errada porque a terminação -est só aparece em adjetivos curtos. A opção the more crowded é comparativa e não combina com a estrutura one of, que exige superlativo, e the most crowd usa um substantivo no lugar do adjetivo.",
+    "meta_description": "Questão de inglês A2 sobre superlativo de adjetivos longos com most, em um texto curto sobre as grandes cidades do mundo."
+  },
+  {
+    "titulo": "Pandas: passado simples regular (A2)",
+    "tema": "Passado simples regular",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Fifty years ago, very few giant pandas lived in the mountains of China. Then the government ___ several large parks and stopped people from cutting the bamboo forests. Slowly the number of pandas grew again. Today baby pandas are born in special centres, and some of them return to the wild when they are strong.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "created",
+      "createed",
+      "did created",
+      "was create",
+      "creating"
+    ],
+    "gabarito": "A",
+    "comentario": "O trecho descreve ações concluídas no passado, como mostram lived, stopped e grew, então a lacuna pede o passado simples de create. Verbos regulares terminados em -e recebem apenas -d, formando created, e nunca createed. A opção did created está errada porque após did o verbo fica no infinitivo, e creating sozinha não pode funcionar como verbo principal da frase.",
+    "meta_description": "Exercício de inglês A2 sobre passado simples de verbos regulares, em um texto curto sobre a proteção dos pandas gigantes."
+  },
+  {
+    "titulo": "Football: futuro com going to (A2)",
+    "tema": "Futuro com going to",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Football is the most popular sport on the planet. Our school players have trained hard all year, and next Saturday they ___ play in the regional final. The coach has already chosen the eleven names. Tickets are free, and the whole school will travel by bus to watch the match in the city stadium. Nobody in our class wants to miss such an important game.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "are going to",
+      "is going to",
+      "are going",
+      "are go to",
+      "going to"
+    ],
+    "gabarito": "A",
+    "comentario": "Planos já decididos são expressos com to be + going to + verbo no infinitivo. Como o sujeito they é plural, o verbo to be deve ser are, o que elimina is going to. A opção are going deixaria a frase sem o to obrigatório, e going to sozinho não serve porque o verbo to be não pode ser omitido.",
+    "meta_description": "Questão de inglês A2 sobre futuro com going to para planos, em um texto curto sobre um jogo de futebol escolar."
+  },
+  {
+    "titulo": "Sport: quantificador much (A2)",
+    "tema": "Quantificador much",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Doctors say that children do not do ___ exercise these days. They spend hours in front of screens and travel everywhere by car. Half an hour of running, swimming or dancing a day is enough to keep a young body strong. Schools can help by giving students more time to play outside during breaks. Small changes like these make a big difference over the years.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "much",
+      "many",
+      "a lot",
+      "few",
+      "a few"
+    ],
+    "gabarito": "A",
+    "comentario": "A palavra exercise, no sentido de atividade física, é um substantivo incontável, e em frases negativas usamos much diante de incontáveis. As opções many, few e a few estão erradas porque acompanham apenas substantivos contáveis no plural. Já a lot só pode aparecer antes de um substantivo se vier seguido de of.",
+    "meta_description": "Exercício de inglês A2 sobre o quantificador much com incontáveis em frases negativas, num texto curto sobre esporte e saúde."
+  },
+  {
+    "titulo": "Choosing a pet: comparativo de adjetivos (A2)",
+    "tema": "Comparativo de adjetivos",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Before you choose a pet, think about your home and your free time. A cat is usually ___ than a dog, because it does not need long walks every day. Fish are quiet, but their water must be clean. Rabbits are gentle and love company. Remember that an animal lives with you for many years.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "easier",
+      "more easy",
+      "easy",
+      "easiest",
+      "the easiest"
+    ],
+    "gabarito": "A",
+    "comentario": "A presença de than confirma que se trata de uma comparação entre duas coisas. Adjetivos de duas sílabas terminados em -y trocam o y por i e recebem -er, gerando easier. Por isso more easy está errado, e o adjetivo simples easy não pode aparecer antes de than. As formas easiest e the easiest são superlativos e nunca se combinam com than.",
+    "meta_description": "Questão de inglês A2 sobre comparativo de adjetivos terminados em y, num texto curto sobre como escolher um animal de estimação."
+  },
+  {
+    "titulo": "Pets: ausência de obrigação com have to (A2)",
+    "tema": "Ausência de obrigação",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "A pet is not a toy, and different animals need different care. A dog needs a walk every single day, but a cat ___ go outside, and many cats live happily in a small flat. Fish need clean water once a week. Before you bring any animal home, ask a vet how much time it really needs.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "doesn't have to",
+      "don't have to",
+      "doesn't have",
+      "hasn't to",
+      "not have to"
+    ],
+    "gabarito": "A",
+    "comentario": "Para dizer que algo não é obrigatório usamos a forma negativa de have to com o auxiliar do. Como o sujeito a cat é terceira pessoa do singular, o correto é doesn't have to, e não don't have to. A opção doesn't have perde o to necessário antes do verbo, e hasn't to não existe no inglês moderno, assim como not have to sem auxiliar.",
+    "meta_description": "Exercício de inglês A2 sobre a forma negativa de have to para indicar ausência de obrigação, num texto sobre animais de estimação."
+  },
+  {
+    "titulo": "Tea or coffee: quantificador any (A2)",
+    "tema": "Quantificador any",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "In Brazil most people start the day with coffee, while in England tea is still the classic morning drink. Both plants grow in warm countries and both give you energy. If you do not want ___ sugar in your cup, try green tea, because it tastes fresh and light. Two or three cups a day are fine.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "any",
+      "many",
+      "a few",
+      "few",
+      "several"
+    ],
+    "gabarito": "A",
+    "comentario": "Em frases negativas usamos any diante de substantivos incontáveis, como sugar. As opções many, a few e few acompanham somente substantivos contáveis no plural e por isso não funcionam com sugar. O mesmo vale para several, que também exige um substantivo contável no plural.",
+    "meta_description": "Questão de inglês A2 sobre o quantificador any em frases negativas, num texto curto que compara o consumo de chá e de café."
+  },
+  {
+    "titulo": "Teeth: advérbio de frequência often (A2)",
+    "tema": "Advérbio de frequência",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Dentists give very simple advice: brush your teeth twice a day and use a soft brush. Many people ___ forget the teeth at the back of the mouth, and that is where problems usually start. Sugar in soft drinks is dangerous too. Visit a dentist once a year, even when nothing hurts. Small holes in a tooth are much easier to repair when they are new.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "often",
+      "are often",
+      "often are",
+      "have often",
+      "often have"
+    ],
+    "gabarito": "A",
+    "comentario": "Com verbos no presente simples, o advérbio de frequência fica entre o sujeito e o verbo principal, sem nenhum auxiliar: Many people often forget. As opções are often e often are estão erradas porque colocam o verbo to be antes de um verbo principal no infinitivo. Da mesma forma, have often e often have exigiriam o particípio forgotten, e não forget.",
+    "meta_description": "Exercício de inglês A2 sobre o uso e a posição do advérbio de frequência often, num texto curto sobre cuidados com os dentes."
+  },
+  {
+    "titulo": "Farms: presente contínuo no singular (A2)",
+    "tema": "Presente contínuo",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Farming is changing fast. On many modern farms, machines drive themselves and follow maps from satellites. Right now, an engineer in the south ___ a robot that picks strawberries without breaking them. Farmers also use small planes to check their fields. All this technology saves water and time, but good farmers still walk through their crops.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "is testing",
+      "are testing",
+      "is test",
+      "is tested",
+      "be testing"
+    ],
+    "gabarito": "A",
+    "comentario": "A expressão right now pede o presente contínuo, formado por to be + verbo com -ing. Como o sujeito an engineer é singular, o auxiliar correto é is, o que elimina are testing. A opção is test não tem a terminação -ing, e is tested seria uma voz passiva, incompatível com o objeto direto a robot que aparece logo depois.",
+    "meta_description": "Questão de inglês A2 sobre presente contínuo com sujeito no singular, num texto sobre tecnologia usada em fazendas modernas."
+  },
+  {
+    "titulo": "Parrots: verbo irregular no passado (A2)",
+    "tema": "Passado simples irregular",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Parrots are among the cleverest birds in the world. A famous grey parrot called Alex worked with a scientist for thirty years. He learned more than a hundred words and ___ simple questions about colours and shapes. He could even say when he was tired. Today many parrots are in danger because people sell them.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "understood",
+      "understanded",
+      "did understood",
+      "was understand",
+      "understanding"
+    ],
+    "gabarito": "A",
+    "comentario": "A lacuna vem ligada pela conjunção and ao verbo learned, que está no passado simples, então precisamos do passado de understand. Esse verbo é irregular e faz understood, de modo que understanded não existe. Também estão erradas did understood, porque após did o verbo fica no infinitivo, e understanding, que sozinha não pode ser o verbo principal da oração.",
+    "meta_description": "Exercício de inglês A2 sobre passado simples de verbos irregulares, num texto curto sobre a inteligência dos papagaios."
+  },
+  {
+    "titulo": "Water plants: preposição in com partes do dia (A2)",
+    "tema": "Preposições de tempo",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Water lilies are strange and beautiful plants. Their roots stay in the mud at the bottom of the lake, and their round leaves float on the surface. Some flowers open early ___ the morning and close again when the sun goes down. Their leaves give shade to small fish and hiding places to frogs. Frogs and insects rest there during the hottest hours of the day.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "in",
+      "on",
+      "at",
+      "of",
+      "to"
+    ],
+    "gabarito": "A",
+    "comentario": "Com partes do dia usamos in the morning, in the afternoon e in the evening. A preposição on aparece com dias da semana e datas, e at é usada em at night e em horas exatas, por isso as duas estão erradas aqui. As opções of e to não introduzem expressões de tempo desse tipo em inglês.",
+    "meta_description": "Questão de inglês A2 sobre preposições de tempo com partes do dia, num texto curto sobre plantas aquáticas como as vitórias-régias."
+  },
+  {
+    "titulo": "Cheese: going to no singular (A2)",
+    "tema": "Futuro com going to",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Cheese is one of the oldest foods in the world. People discovered it thousands of years ago, probably by accident, when milk turned solid inside a bag made of animal skin. Next month my brother ___ visit a small farm in the mountains and watch the whole process. The farmer says he can taste four kinds.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "is going to",
+      "are going to",
+      "is going",
+      "is go to",
+      "going to"
+    ],
+    "gabarito": "A",
+    "comentario": "A expressão next month e o plano já combinado pedem a estrutura to be + going to + infinitivo. Como o sujeito my brother é singular, o verbo to be deve ser is, o que torna are going to incorreto. A opção is going deixaria a frase sem o to obrigatório, e is go to usa o verbo go no lugar da forma going.",
+    "meta_description": "Exercício de inglês A2 sobre futuro com going to no singular, num texto curto sobre a história e a produção do queijo."
+  },
+  {
+    "titulo": "Libraries: will para previsões (A2)",
+    "tema": "Futuro com will",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Some people think that libraries ___ disappear, but the opposite is happening. Modern libraries lend films, music and electronic books, and many of them offer free internet and quiet rooms for students. Children go there for story time on Saturdays. A library is now a meeting place for the whole neighbourhood, not only a silent room.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "will",
+      "will to",
+      "willing",
+      "are will",
+      "wills"
+    ],
+    "gabarito": "A",
+    "comentario": "Opiniões e previsões sobre o futuro usam o modal will seguido do verbo no infinitivo sem to. Assim, will to está errado, porque modais nunca aceitam to. Também são impossíveis wills, já que modais não recebem -s em nenhuma pessoa, e are will, pois um modal não se combina com o verbo to be.",
+    "meta_description": "Questão de inglês A2 sobre o futuro com will em previsões, num texto curto sobre o papel atual das bibliotecas nas cidades."
+  },
+  {
+    "titulo": "Lions: comparativo com adjetivo curto (A2)",
+    "tema": "Comparativo de superioridade",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "Lions are the only cats that live in groups, called prides. The females do most of the hunting, and they work together as a team. A male lion is much ___ than a female and has a thick mane around his head. Lions rest for about twenty hours a day and hunt when the air is cool.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "heavier",
+      "more heavy",
+      "heavy",
+      "heaviest",
+      "the heaviest"
+    ],
+    "gabarito": "A",
+    "comentario": "A palavra than mostra que a frase compara dois seres, o macho e a fêmea. Adjetivos de duas sílabas terminados em -y formam o comparativo com i + er, resultando em heavier, e por isso more heavy está errado. O adjetivo heavy sozinho não pode vir antes de than, e as formas heaviest e the heaviest são superlativos, incompatíveis com essa estrutura.",
+    "meta_description": "Exercício de inglês A2 sobre comparativo de superioridade com adjetivos curtos, num texto curto sobre a vida dos leões em bandos."
+  },
+  {
+    "titulo": "Whales: superlativo com adjetivo curto (A2)",
+    "tema": "Superlativo",
+    "genero_textual": "texto didatico",
+    "nivel": "A2",
+    "texto_base": "The blue whale is ___ animal that has ever lived on our planet. Its heart alone weighs as much as a small car. It eats tiny sea creatures called krill and swallows tons of them every single day. Whales breathe air, so they must come to the surface. Their long songs travel for kilometres under water.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "the biggest",
+      "the most big",
+      "biggest",
+      "the bigger",
+      "bigger"
+    ],
+    "gabarito": "A",
+    "comentario": "A expressão that has ever lived indica comparação com todos os outros animais, ou seja, um superlativo. Adjetivos curtos formam o superlativo com the + adjetivo + -est, gerando the biggest, e nunca com most, o que elimina the most big. A forma biggest sem o artigo the está incompleta, e the bigger e bigger são comparativos, que exigiriam than.",
+    "meta_description": "Questão de inglês A2 sobre superlativo de adjetivos curtos, num texto curto e informativo sobre a baleia-azul e seu tamanho."
+  }
+]
