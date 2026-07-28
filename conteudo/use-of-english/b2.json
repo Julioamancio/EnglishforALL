@@ -1,0 +1,434 @@
+[
+  {
+    "titulo": "Snakes: particípios em orações reduzidas (B2)",
+    "tema": "Particípios em orações reduzidas",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "___ for centuries as symbols of treachery, snakes are only now being reassessed by conservation biologists. Field studies in southern Brazil suggest that a single rattlesnake may remove several hundred crop-eating rodents from a farm each season, work that would otherwise require poison. Venom research has changed the picture as well: molecules isolated from a Brazilian pit viper in the 1960s led directly to a family of blood-pressure medicines now taken by millions of patients. Despite this, populations continue to fall, squeezed by habitat loss, roads and deliberate killing, while antivenom still comes from a handful of underfunded public laboratories. Herpetologists therefore argue that education matters as much as legislation, since a farmer who understands what a snake actually does is far less likely to reach for a spade.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Dismissing",
+      "Dismissed",
+      "To dismiss",
+      "Dismiss",
+      "Having dismissed"
+    ],
+    "gabarito": "B",
+    "comentario": "A oração reduzida inicial tem sentido passivo: as cobras foram descartadas (dismissed) pelas pessoas, e não descartaram algo. Por isso usa-se o particípio passado, equivalente a \"Since they have been dismissed for centuries...\". \"Dismissing\" e \"Having dismissed\" exigiriam que o sujeito \"snakes\" fosse o agente da ação, o que produz um sentido absurdo. \"To dismiss\" indicaria finalidade e \"Dismiss\" seria um imperativo, ambos incompatíveis com a estrutura da frase.",
+    "meta_description": "Exercício B2 sobre particípios em orações reduzidas, com texto em inglês a respeito da conservação de serpentes."
+  },
+  {
+    "titulo": "Zoos: terceira condicional (B2)",
+    "tema": "Terceira condicional",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "The modern zoo is an uncomfortable institution. Its critics point out that enclosures rarely reproduce the space or complexity of a wild territory, and that a large predator pacing behind glass teaches visitors very little about ecology. Its defenders answer with captive breeding. The Arabian oryx is the case they always cite: the last free-living animals were captured in the early 1970s, and if that decision had not been taken, the species ___ beyond the end of that decade. Reintroduced herds now graze in Oman and Jordan. Even so, the number of species genuinely saved this way remains small, and the money involved is enormous. Many biologists argue that the same budget spent on habitat protection would keep far more animals alive, and would do so without the ethical cost of lifelong captivity.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "would not survive",
+      "will not have survived",
+      "had not survived",
+      "would not have survived",
+      "would not be surviving"
+    ],
+    "gabarito": "D",
+    "comentario": "A condição está no past perfect (\"if that decision had not been taken\") e o resultado se situa num momento passado específico (\"beyond the end of that decade\"), o que caracteriza a terceira condicional: would + have + particípio. \"Would not survive\" descreveria uma consequência presente ou hipotética atual, incompatível com o marcador temporal passado. \"Will not have survived\" mistura futuro com uma condição irreal do passado, e \"had not survived\" repetiria a forma da oração condicional na oração principal, o que a gramática não admite.",
+    "meta_description": "Questão B2 de terceira condicional a partir de um texto sobre zoológicos, reprodução em cativeiro e ética da conservação."
+  },
+  {
+    "titulo": "Dolphins: discurso indireto (B2)",
+    "tema": "Discurso indireto",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Bottlenose dolphins in Laguna, in southern Brazil, have cooperated with local fishermen for generations, driving mullet towards the nets and signalling the moment to cast with a distinctive dive. The behaviour is learned, not instinctive, and it passes from mother to calf on both sides of the partnership. Researchers who study the population have built an acoustic library of individual whistles, each of which functions rather like a name. At a public seminar in Florianópolis, a journalist asked the team ___, and the answer surprised the audience: eleven years of intermittent recording, most of it done from small boats in poor weather. The scientists added that the tradition is now fragile, because fewer young fishermen learn it and boat traffic increasingly interferes with the sounds the animals rely on.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "how long the recordings had taken",
+      "how long had the recordings taken",
+      "how long did the recordings take",
+      "how long the recordings did take",
+      "how long have the recordings taken"
+    ],
+    "gabarito": "A",
+    "comentario": "Em perguntas no discurso indireto, a ordem das palavras volta a ser a de uma afirmação (sujeito antes do verbo) e não se usa o auxiliar \"do/did\". Como o verbo introdutor está no passado (\"asked\"), ocorre também o recuo temporal do past simple para o past perfect. \"How long had the recordings taken\" e \"how long did the recordings take\" mantêm a inversão típica da pergunta direta, e \"how long the recordings did take\" conserva o auxiliar, que só aparece em perguntas diretas ou em ênfase.",
+    "meta_description": "Item B2 de discurso indireto com texto sobre a pesca cooperativa entre golfinhos e pescadores em Laguna."
+  },
+  {
+    "titulo": "Bats: past perfect (B2)",
+    "tema": "Past perfect",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "White-nose syndrome has killed millions of hibernating bats in North America since the fungus arrived from Europe, probably on the boots of a caver. The disease wakes the animals repeatedly during winter, forcing them to burn fat reserves at a season when there are no insects to replace them. One monitoring site in the north-east illustrates the speed of the collapse. Counts in November recorded a healthy population of little brown bats; by the time the survey team returned to the same cave in March, the fungus ___ more than ninety per cent of them. The economic argument for protecting bats is straightforward, since a single colony consumes tonnes of agricultural pests each summer, but the ethical argument matters too: humans carried the fungus across the Atlantic.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "has already killed",
+      "have already killed",
+      "had already killed",
+      "would already kill",
+      "had already been killed"
+    ],
+    "gabarito": "C",
+    "comentario": "A expressão \"by the time\" seguida de um verbo no passado (\"returned\") exige que a ação anterior apareça no past perfect, mostrando qual dos dois fatos ocorreu primeiro. \"Has already killed\" e \"have already killed\" são present perfect e ligam a ação ao presente, entrando em conflito com o marcador passado \"in March\". \"Had already been killed\" está na voz passiva, o que tornaria o fungo o ser morto, invertendo o sentido; \"would already kill\" expressaria hipótese ou futuro do passado, não um fato consumado.",
+    "meta_description": "Questão B2 de past perfect baseada em texto sobre a síndrome do nariz branco e o declínio de morcegos."
+  },
+  {
+    "titulo": "The moon: condicionais mistas (B2)",
+    "tema": "Condicionais mistas",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "The Moon keeps one face permanently turned towards us, a consequence of tidal forces that slowed its rotation until it matched its orbit. The far side was therefore a complete mystery until a Soviet probe photographed it in 1959, and the images revealed a surface far more heavily cratered, with almost none of the dark volcanic plains that dominate the side we see. If the Moon were not tidally locked, astronomers ___ that difference centuries ago, and our theories of planetary formation would have taken a different route. Today the far side has practical value as well: it is permanently shielded from terrestrial radio noise, which makes it the best site in the inner solar system for the kind of radio telescope that cannot function on Earth.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "would map",
+      "will have mapped",
+      "had mapped",
+      "would be mapping",
+      "would have mapped"
+    ],
+    "gabarito": "E",
+    "comentario": "Trata-se de uma condicional mista: a condição descreve um fato permanente e presente (\"if the Moon were not tidally locked\") e a consequência se situa no passado, marcada por \"centuries ago\", exigindo would + have + particípio. \"Would map\" e \"would be mapping\" colocariam a consequência no presente, contradizendo o advérbio de tempo passado. \"Will have mapped\" pertence ao futuro perfeito e não combina com uma condição irreal, e \"had mapped\" seria a forma da oração condicional, não da principal.",
+    "meta_description": "Exercício B2 de condicionais mistas com texto sobre a face oculta da Lua e a radioastronomia."
+  },
+  {
+    "titulo": "Crocodiles: preposições dependentes (B2)",
+    "tema": "Preposições dependentes",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "The recovery of several crocodilian species is one of the least celebrated successes in conservation. In the 1970s the spectacled caiman of the Pantanal was being slaughtered on an industrial scale for the leather trade, and the American alligator was formally listed as endangered. Regulated ranching changed both stories: farmers were allowed to harvest a proportion of eggs from wild nests, on condition that a share of the hatchlings was returned to the marshes. Because the wetland became a source of income, it stopped being drained. Critics of the model insist ___ far tighter monitoring, arguing that quotas are easy to write and hard to police, and that the same mechanism collapses quickly wherever inspection budgets are cut or officials are poorly paid.",
+    "enunciado": "Assinale a alternativa com a preposição que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "in",
+      "on",
+      "at",
+      "for",
+      "about"
+    ],
+    "gabarito": "B",
+    "comentario": "O verbo \"insist\" seleciona obrigatoriamente a preposição \"on\" quando seguido de um complemento nominal: insist on something. Trata-se de uma preposição dependente, fixada pelo verbo e não deduzível do sentido, como ocorre também em depend on e result in. \"Insist in\" e \"insist at\" não existem em inglês padrão, e \"insist for\" é um decalque comum de outras línguas, mas igualmente incorreto. \"Insist about\" confunde o verbo com estruturas do tipo complain about.",
+    "meta_description": "Questão B2 sobre preposições dependentes com texto a respeito do manejo sustentavel de jacarés e crocodilos."
+  },
+  {
+    "titulo": "Helicopters: causativo have something done (B2)",
+    "tema": "Causativo have something done",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Helicopter maintenance is governed by rules written after accidents. Unlike a fixed-wing aircraft, a helicopter depends on a single rotor system in which the failure of one component is rarely survivable, so airworthiness authorities require operators to ___ at fixed intervals, regardless of how well the machine appears to be flying. Air ambulance services in remote regions face a particular dilemma: the aircraft that saves lives is also expensive to ground, and pressure to keep it available has been identified in several inquiries as a contributing factor in crashes. The industry's answer has been to separate the engineering decision from the commercial one, so that the person who signs the release to service has no financial interest in whether the flight departs on time.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "have the rotor blades to inspect",
+      "have the rotor blades inspecting",
+      "have the rotor blades inspect",
+      "have the rotor blades inspected",
+      "having the rotor blades inspected"
+    ],
+    "gabarito": "D",
+    "comentario": "O causativo have something done indica que o sujeito manda executar um serviço por terceiros e se constrói com have + objeto + particípio passado. \"Have the rotor blades inspecting\" e \"have the rotor blades inspect\" tornariam as pás o agente da inspeção, o que é impossível. \"Have the rotor blades to inspect\" significaria que os operadores têm pás para inspecionar por conta própria, mudando o sentido, e \"having\" não pode seguir a partícula \"to\" do infinitivo exigido por \"require operators to\".",
+    "meta_description": "Item B2 sobre o causativo have something done, com texto a respeito da manutenção obrigatoria de helicópteros."
+  },
+  {
+    "titulo": "Jungles: phrasal verbs (B2)",
+    "tema": "Phrasal verbs",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Tropical forest is not a single thing. From the air it looks uniform, but ecologists distinguish primary forest, which has never been cleared, from secondary growth that returns after logging and holds a fraction of the original diversity. The economics are brutally simple: a hectare of standing forest earns nothing for the person who lives beside it, while the same hectare cleared for cattle earns something immediately. Certification schemes and carbon payments exist precisely to change that arithmetic, but they only work if the money actually reaches the community. Investigations in the Amazon have repeatedly shown that concession holders ___ commitments they signed years earlier, leaving villages without the schools, clinics or royalties they were promised, and leaving the forest cut anyway.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "go back on",
+      "go back to",
+      "go through with",
+      "go along with",
+      "go down with"
+    ],
+    "gabarito": "A",
+    "comentario": "\"Go back on\" significa descumprir uma promessa ou um compromisso assumido, sentido exigido pela continuação da frase, que descreve comunidades deixadas sem o que lhes foi prometido. \"Go through with\" quer dizer justamente levar algo adiante até o fim, produzindo uma contradição com o restante do período. \"Go along with\" indica concordar com algo e \"go down with\" significa adoecer, nenhum dos dois compatível com \"commitments\". \"Go back to\" expressa apenas retorno a um lugar, atividade ou estado anterior.",
+    "meta_description": "Questão B2 de phrasal verbs com texto sobre desmatamento, concessões florestais e compromissos com comunidades."
+  },
+  {
+    "titulo": "Computers: colocações (B2)",
+    "tema": "Colocações com verbos",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Algorithms now make decisions that used to belong to people: who is offered credit, whose CV reaches a human recruiter, which neighbourhoods receive extra policing. The difficulty is that a model trained on historical data inherits whatever bias the history contains, and then applies it at a speed and scale no human committee could match. In 2020 a European court examined an automated system used to detect welfare fraud and ordered it withdrawn, on the grounds that citizens could not understand or challenge the reasoning behind a decision that affected them. That judgment ___ an important precedent, and regulators elsewhere have cited it since. Engineers increasingly accept that explainability is not a luxury feature but a legal requirement, and that auditing a model belongs in the development budget.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "put",
+      "made",
+      "set",
+      "did",
+      "gave"
+    ],
+    "gabarito": "C",
+    "comentario": "A colocação fixa em inglês é set a precedent, e nenhum outro verbo é aceito nessa combinação, ainda que a tradução para o português admita variação. \"Made a precedent\" e \"gave a precedent\" são erros típicos de transferência da língua materna e não ocorrem em inglês padrão. \"Did\" combina com tarefas e atividades (do research, do business), e \"put\" exigiria um complemento de lugar, como put pressure on. Colocações precisam ser memorizadas em bloco, junto com o substantivo que as acompanha.",
+    "meta_description": "Exercício B2 de colocacoes verbais, com texto sobre decisões algorítmicas, viés de dados e regulação judicial."
+  },
+  {
+    "titulo": "Cities: wish e if only (B2)",
+    "tema": "Wish e if only",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Between 1950 and 1970 dozens of cities in Europe and the Americas dismantled their tram networks. The reasoning seemed sound at the time: rails were expensive to maintain, buses were flexible, and the private car was the future. Planners now wish they ___ those systems, because rebuilding a light-rail line costs many times what it would have cost to keep one running, and cities that never removed their trams enjoy an advantage they did nothing recent to earn. The wider lesson concerns how urban decisions are evaluated. A tram line looks like a cost on a spreadsheet, while congestion, poor air quality and the hours residents lose in traffic appear nowhere, because nobody sends an invoice for them. Cost-benefit analysis is only as honest as the columns it includes.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "have kept",
+      "would have kept",
+      "will have kept",
+      "were keeping",
+      "had kept"
+    ],
+    "gabarito": "E",
+    "comentario": "Quando \"wish\" expressa arrependimento por algo que aconteceu no passado, o verbo seguinte vai para o past perfect: I wish I had done it. Como as redes de bondes foram desmontadas décadas atrás, apenas \"had kept\" traduz o lamento retrospectivo dos urbanistas. \"Would have kept\" não é usado depois de wish com o mesmo sujeito, já que would after wish serve para reclamar do comportamento de outra pessoa ou de situações futuras. \"Have kept\" e \"will have kept\" são tempos ligados ao presente e ao futuro, incompatíveis com um fato encerrado.",
+    "meta_description": "Item B2 sobre wish e if only, com texto a respeito da desativação das redes de bondes e do planejamento urbano."
+  },
+  {
+    "titulo": "Pandas: discurso indireto (B2)",
+    "tema": "Discurso indireto",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Giant panda conservation is the most expensive rescue operation ever mounted for a single species, and it divides biologists. Supporters note that protecting panda habitat also protects an entire mountain ecosystem containing thousands of less charismatic species, and that the animal raises money nothing else could raise. Critics reply that the same funds would save far more biodiversity if spread across less photogenic reserves. Whatever the argument, the numbers have improved: wild populations grew enough for the species to be reclassified from endangered to vulnerable in 2016. At a press conference that year, the director of one breeding centre announced that the programme ___ twelve captive-born animals the following season, a figure that would have been unthinkable when the first centres opened in the 1980s with almost no successful births.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "will release",
+      "would release",
+      "would have released",
+      "had released",
+      "will have released"
+    ],
+    "gabarito": "B",
+    "comentario": "No discurso indireto com verbo introdutor no passado (\"announced\"), o futuro com will passa a would, criando o chamado futuro do pretérito. A expressão \"the following season\" confirma esse deslocamento temporal, já que substitui \"next season\" da fala original. \"Will release\" e \"will have released\" mantêm o futuro sem o recuo exigido pelo verbo introdutor no passado. \"Had released\" indicaria uma ação anterior ao anúncio, e \"would have released\" expressaria algo hipotético que não se realizou, contrariando o sentido de plano anunciado.",
+    "meta_description": "Questão B2 de discurso indireto com texto sobre o custo e os resultados dos programas de conservacao do panda."
+  },
+  {
+    "titulo": "Football: terceira condicional (B2)",
+    "tema": "Terceira condicional",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Football clubs are unusual businesses: they are judged weekly, their assets can be injured, and their supporters will not accept the argument that a bad season is acceptable if the accounts are healthy. That pressure explains why so many boards choose the transfer market over the academy. Buying a finished player solves a problem this month; developing one takes eight years and may produce nobody. Yet the arithmetic favours patience. Analysts studying a mid-sized European club calculated that if the board had rebuilt the youth system in 2010, the club ___ tens of millions on transfer fees over the following decade. Instead it spent heavily, finished mid-table, and sold its training ground. Academies also anchor a club to its city, which is worth something that never appears in the accounts.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "would save",
+      "had saved",
+      "has saved",
+      "would have saved",
+      "will have saved"
+    ],
+    "gabarito": "D",
+    "comentario": "A condição é irreal e passada (\"if the board had rebuilt the youth system in 2010\") e a consequência se encerra dentro de um período igualmente passado (\"over the following decade\"), o que caracteriza a terceira condicional com would + have + particípio. \"Would save\" projetaria a consequência para o presente, o que o recorte temporal do texto exclui. \"Had saved\" apenas repetiria a forma da oração condicional, e \"has saved\" e \"will have saved\" descrevem fatos reais ligados ao presente ou ao futuro, incompatíveis com uma hipótese contrária aos fatos.",
+    "meta_description": "Exercício B2 de terceira condicional com texto sobre categorias de base, mercado de transferencias e gestão de clubes."
+  },
+  {
+    "titulo": "Sport: particípios em orações reduzidas (B2)",
+    "tema": "Particípios em orações reduzidas",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "___ that broadcasting income would rise indefinitely, several national federations signed spending commitments in the last decade that they are now unable to meet. Television money has not disappeared, but it has fragmented: audiences moved to streaming platforms, rights were sold in smaller packages, and the guaranteed sums written into budgets stopped arriving. The consequences fall unevenly. Elite competitions absorb the shock, while regional programmes, women's leagues and disability sport are cut first, because they generate the least revenue and have the fewest people defending them. Sports economists argue that governing bodies should be required to publish reserves in the same way as any other organisation handling public subsidy. Athletes, who have no say in these contracts and short careers in which to recover, carry most of the risk.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Assuming",
+      "Assumed",
+      "To assume",
+      "Assume",
+      "To be assumed"
+    ],
+    "gabarito": "A",
+    "comentario": "A oração reduzida tem sentido ativo, pois quem supôs foram as federações, sujeito da oração principal; usa-se então o particípio presente terminado em -ing. \"Assumed\" e \"To be assumed\" trariam sentido passivo, o que exigiria que as federações fossem supostas por alguém, algo sem sentido aqui. \"To assume\" indicaria finalidade, como se as federações tivessem assinado contratos com o objetivo de supor algo. \"Assume\" é forma de imperativo ou de presente simples e não pode iniciar uma oração reduzida.",
+    "meta_description": "Item B2 sobre orações reduzidas de particípio, com texto a respeito de receitas de transmissão e finanças no esporte."
+  },
+  {
+    "titulo": "Choosing a pet: phrasal verbs (B2)",
+    "tema": "Phrasal verbs",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Shelters report the same pattern every January: animals adopted as gifts in December are returned within weeks. The reasons are rarely cruelty; they are arithmetic. A medium-sized dog needs two walks a day for twelve to fifteen years, and veterinary bills for an ageing animal can exceed a month's salary. Rescue organisations therefore ask applicants to ___ the real cost in money, time and housing before they visit the kennels at all, and some now refuse same-day adoptions on principle. Matching matters as much as willingness: a working sheepdog in a small flat becomes destructive, not because it is badly behaved, but because it was bred to solve problems all day. The most useful question is not which animal you like, but which animal your life can honestly support.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "weigh down",
+      "weigh in",
+      "weigh up",
+      "weigh on",
+      "weigh out"
+    ],
+    "gabarito": "C",
+    "comentario": "\"Weigh up\" significa avaliar cuidadosamente prós e contras antes de decidir, sentido exigido pelo contexto de adoção responsável. \"Weigh down\" quer dizer sobrecarregar alguém ou algo, e teria como objeto a pessoa, não o custo a ser considerado. \"Weigh on\" descreve uma preocupação que pesa sobre alguém e é intransitivo nesse uso, incompatível com o objeto direto da frase. \"Weigh in\" refere-se a pesar-se antes de uma competição ou a intervir num debate, e \"weigh out\" significa medir uma quantidade em uma balança.",
+    "meta_description": "Questão B2 de phrasal verbs com texto sobre adoção responsavel de animais e devoluções em abrigos."
+  },
+  {
+    "titulo": "Pets: causativo have something done (B2)",
+    "tema": "Causativo have something done",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Neutering is the least glamorous part of animal welfare and probably the most effective. Every unplanned litter competes for the same limited number of homes, and shelters in most large cities are permanently full. For this reason many rescue organisations will not release an animal until the future owner agrees to ___ within an agreed period, and some include the procedure in the adoption fee so that cost cannot be an excuse. The policy is occasionally criticised as paternalistic, and vets acknowledge that very early surgery carries risks for certain large breeds. Yet the alternative is visible in any municipality without a subsidised programme: colonies of stray cats, dogs euthanised for lack of space, and volunteers paying out of their own pockets for problems that public policy has ignored.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "have it to neuter",
+      "have it neuter",
+      "have it neutering",
+      "having it neutered",
+      "have it neutered"
+    ],
+    "gabarito": "E",
+    "comentario": "O tutor não realiza a cirurgia: ele providencia que um veterinário a realize, situação expressa pelo causativo have + objeto + particípio passado. \"Have it neuter\" e \"have it neutering\" fariam do próprio animal o agente da castração, o que é impossível. \"Have it to neuter\" significaria que o tutor tem o animal disponível para castrar pessoalmente, alterando o sentido. \"Having it neutered\" não pode aparecer depois de \"agrees to\", que exige infinitivo sem terminação -ing.",
+    "meta_description": "Exercício B2 sobre o causativo have something done, com texto a respeito de castração e políticas de bem-estar animal."
+  },
+  {
+    "titulo": "Tea or coffee: colocações (B2)",
+    "tema": "Colocações com verbos",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Tea and coffee are grown by roughly twenty-five million smallholders, most of them farming less than two hectares, and both crops share a structural problem: the value is added after the farm gate. Roasting, blending and branding happen in consuming countries, which is where the margin stays. Certification schemes were designed to correct this, and the evidence suggests they ___ a modest difference to household income when prices collapse, mainly because the guaranteed minimum acts as a floor. Their limits are equally clear: certification costs money to obtain, the premium is often paid to a cooperative rather than an individual, and a label cannot compensate for a harvest lost to drought or leaf rust. Climate change is now pushing suitable altitudes upwards, which no consumer decision can reverse.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "do",
+      "make",
+      "take",
+      "bring",
+      "give"
+    ],
+    "gabarito": "B",
+    "comentario": "A colocação consagrada é make a difference, usada sempre que se fala em produzir um efeito ou provocar mudança. \"Do a difference\" é o erro mais frequente entre falantes de português, porque tanto make quanto do se traduzem por fazer, mas do combina com atividades e tarefas, não com difference. \"Take\" e \"give\" formam outras colocações (take a decision, give an example) e não se aplicam aqui. \"Bring a difference\" não existe em inglês padrão; o que existe é bring about a change.",
+    "meta_description": "Item B2 de colocacoes verbais, com texto sobre certificação, cadeias produtivas de cafe e chá e renda de pequenos produtores."
+  },
+  {
+    "titulo": "Teeth: preposições dependentes (B2)",
+    "tema": "Preposições dependentes",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Dentistry is one of the few areas of medicine where prevention is cheap, effective and still unevenly applied. Water fluoridation at recommended levels reduces decay across an entire population without requiring anybody to change their behaviour, which is precisely why it works: no appointment, no cost, no need to remember. Its safety at those levels is no longer subject ___ serious scientific dispute, yet the policy is repeatedly abandoned in cities where campaigners frame it as medication without consent. Dentists respond that untreated decay is not a cosmetic matter. It causes infection, sleep loss and days missed from school or work, and it falls hardest on families who cannot afford private treatment. Where fluoridation stops, hospital admissions of children needing extractions under general anaesthetic tend to rise within a few years.",
+    "enunciado": "Assinale a alternativa com a preposição que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "of",
+      "for",
+      "with",
+      "to",
+      "at"
+    ],
+    "gabarito": "D",
+    "comentario": "O adjetivo \"subject\" exige obrigatoriamente a preposição \"to\" quando significa sujeito a algo: subject to change, subject to approval, subject to dispute. Assim como depend on e result in, trata-se de uma preposição dependente, imposta pela palavra que a antecede. \"Subject of\" só ocorre quando subject é substantivo com o sentido de assunto, como em the subject of the debate, e não cabe nesta construção adjetiva. \"Subject for\", \"subject with\" e \"subject at\" não formam combinações reconhecidas em inglês padrão.",
+    "meta_description": "Questão B2 sobre preposições dependentes com texto a respeito da fluoretacao da água e saúde bucal pública."
+  },
+  {
+    "titulo": "Farms: past perfect (B2)",
+    "tema": "Past perfect",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Organic certification is a bureaucratic process rather than a philosophical one. An inspector examines records, soil tests and input receipts, and the land must be free of prohibited substances for a defined conversion period before anything can be labelled. That waiting period is where most farms fail, because they carry the higher costs of organic production while still selling at conventional prices. One cooperative in Paraná illustrates the problem well. When its certificate finally arrived in 2019, the members ___ organic methods for almost a decade, having converted long before any buyer offered them a premium. Their advantage now is not the label itself but the soil beneath it: years of cover cropping produced a structure that holds water through dry spells, which matters more each season.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "had been using",
+      "have been using",
+      "has been using",
+      "would have been using",
+      "are using"
+    ],
+    "gabarito": "A",
+    "comentario": "A frase mede a duração de uma prática que começou antes de outro fato passado (\"when its certificate arrived in 2019\"), o que exige o past perfect contínuo: had been + verbo com -ing. \"Have been using\" e \"has been using\" são present perfect contínuo e ancoram a duração no presente, chocando-se com a referência a 2019; além disso, \"has\" não concorda com o sujeito plural \"the members\". \"Are using\" descreve apenas o momento atual, e \"would have been using\" introduziria uma hipótese, não um fato verificado.",
+    "meta_description": "Exercício B2 de past perfect contínuo com texto sobre certificação orgânica, período de conversão e manejo do solo."
+  },
+  {
+    "titulo": "Parrots: wish e if only (B2)",
+    "tema": "Wish e if only",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "The grey parrot is among the most intelligent animals ever studied in a laboratory, capable of using words referentially rather than by imitation alone. It is also among the most heavily trafficked. Trappers take chicks from nest holes in trees that took a century to grow, and a large proportion die before reaching a buyer. If only the trade ___ how much damage it was doing while wild populations were still large, regulation might have arrived in time; instead protection came after numbers in several West African countries had collapsed. Captive breeding supplies part of the market now, but a parrot may live sixty years, outliving the person who bought it, and rescue centres are full of birds surrendered by families who never expected a lifelong dependant.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "has admitted",
+      "would have admitted",
+      "had admitted",
+      "will admit",
+      "were admitting"
+    ],
+    "gabarito": "C",
+    "comentario": "\"If only\" funciona como \"wish\" e, para lamentar algo que não aconteceu no passado, pede o past perfect. O resto do período confirma a referência passada, tanto pelo resultado hipotético \"might have arrived\" quanto pela informação de que a proteção só veio depois do colapso das populações. \"Would have admitted\" não é usado depois de if only para lamentar o passado, construção reservada a would + infinitivo em queixas sobre o comportamento alheio. \"Has admitted\" e \"will admit\" descrevem fatos reais no presente e no futuro, e \"were admitting\" indicaria uma situação irreal presente.",
+    "meta_description": "Item B2 sobre if only e wish, com texto a respeito do tráfico de papagaios-cinzentos e regulação tardia."
+  },
+  {
+    "titulo": "Water plants: condicionais mistas (B2)",
+    "tema": "Condicionais mistas",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Water hyacinth is the clearest example of a plant punished for doing exactly what it is good at. Native to the Amazon basin, it absorbs nutrients from water at extraordinary speed, which is why nineteenth-century collectors carried it around the world as an ornamental, and why sanitary engineers later built it into treatment ponds. In warm nutrient-rich water outside its natural range, and without the insects that control it at home, the same efficiency turns it into a mat thick enough to stop boats, block turbines and suffocate the life below. If the species were not such a formidable purifier, engineers ___ it into those systems in the first place, and dozens of tropical reservoirs would be cheaper to manage today.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "would never introduce",
+      "will never have introduced",
+      "had never introduced",
+      "would never be introducing",
+      "would never have introduced"
+    ],
+    "gabarito": "E",
+    "comentario": "A condição descreve uma característica permanente da planta, expressa no passado simples do irreal (\"if the species were not\"), enquanto a consequência se localiza claramente no passado, marcada por \"in the first place\": trata-se de uma condicional mista com would + have + particípio. \"Would never introduce\" e \"would never be introducing\" situariam a consequência no presente, contrariando o fato histórico de que a planta já foi introduzida. \"Will never have introduced\" não combina com uma condição irreal, e \"had never introduced\" é forma de oração condicional, não de oração principal.",
+    "meta_description": "Questão B2 de condicionais mistas com texto sobre aguapé, espécies invasoras e manejo de reservatórios tropicais."
+  },
+  {
+    "titulo": "Cheese: particípios em orações reduzidas (B2)",
+    "tema": "Particípios em orações reduzidas",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Traditional hard cheese is a technology for storing summer in a form that survives winter. Milk that would spoil in two days becomes a wheel that keeps for two years, and every step in the process exists to control which microorganisms thrive. ___ by hand twice a week and washed with brine, the rinds develop a dense surface that protects the paste while allowing it to breathe. Industrial production has reproduced much of this chemistry with starter cultures and controlled humidity, and the results are safe, consistent and cheap. What is lost is harder to price: the microbial character of a particular cave, and the livelihoods of mountain farms whose economics only work when milk becomes cheese on site rather than travelling to a distant factory.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Turning",
+      "Turned",
+      "To turn",
+      "Turn",
+      "Having turned"
+    ],
+    "gabarito": "B",
+    "comentario": "A oração reduzida é passiva, como comprova o paralelismo com \"and washed with brine\", que também está no particípio passado; as cascas são viradas por alguém, à mão. \"Turning\" e \"Having turned\" dariam sentido ativo e transformariam as cascas no agente da ação, incoerente com a locução \"by hand\". \"To turn\" exprimiria finalidade, sugerindo que as cascas se desenvolvem para serem viradas, o que inverte a lógica do processo. \"Turn\" é imperativo e não pode encabeçar uma oração reduzida ligada ao sujeito da principal.",
+    "meta_description": "Exercício B2 de orações reduzidas de particípio, com texto sobre maturação de queijos e produção artesanal de montanha."
+  },
+  {
+    "titulo": "Libraries: discurso indireto (B2)",
+    "tema": "Discurso indireto",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Public libraries survive because they keep redefining what they are for. Circulation of physical books has fallen in most countries, yet visits have not, because the building now provides free internet access, a warm room, help with online benefit applications and a place for teenagers who have nowhere else to go. Local archives remain their least visible function and often the most valuable. During a refurbishment in one English town, the council asked the librarians ___, since the run of local newspapers held there was the only complete record of the area between 1890 and 1960, and no digital copy existed anywhere. Librarians increasingly describe their work in these terms: not lending, but guaranteeing that a community can still find out what happened to it.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "not throw anything away",
+      "do not throw anything away",
+      "that not to throw anything away",
+      "not to throw anything away",
+      "for not throwing anything away"
+    ],
+    "gabarito": "D",
+    "comentario": "Pedidos e ordens negativas no discurso indireto se constroem com ask/tell + objeto + not + infinitivo com to. \"Not throw anything away\" omite o \"to\" obrigatório depois de \"asked the librarians\". \"Do not throw anything away\" mantém a forma imperativa do discurso direto, que exigiria aspas. \"That not to throw anything away\" mistura duas estruturas incompatíveis, e \"for not throwing anything away\" indicaria motivo ou agradecimento, não o conteúdo de um pedido.",
+    "meta_description": "Item B2 de discurso indireto com texto sobre bibliotecas públicas, arquivos locais e preservação de memória comunitaria."
+  },
+  {
+    "titulo": "Lions: terceira condicional (B2)",
+    "tema": "Terceira condicional",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Lion numbers across Africa have fallen by roughly half in three decades, and the cause is not what films suggest. Trophy hunting attracts most public anger, but the majority of lions are killed by herders protecting cattle, usually with poison, and the rest lose their habitat to farmland. Conservationists working in Kenya have shown that reinforced enclosures for livestock reduce retaliatory killing dramatically, at a cost far lower than any reintroduction programme. Reviewing one collapsed population, researchers concluded that if compensation for lost cattle ___ available ten years earlier, the reserve would not have lost its resident prides at all. The lesson is uncomfortable for donors who prefer charismatic projects: the animal is saved by paying farmers, not by filming predators.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "had been",
+      "would have been",
+      "has been",
+      "having been",
+      "would be"
+    ],
+    "gabarito": "A",
+    "comentario": "A lacuna está na oração condicional de uma terceira condicional, cuja principal já aparece pronta (\"would not have lost\"); nesse tipo de período, o if é seguido de past perfect, aqui \"had been\". \"Would have been\" e \"would be\" pertencem à oração de resultado e não podem aparecer depois de if em inglês padrão. \"Has been\" é present perfect e liga o fato ao presente, incompatível com \"ten years earlier\". \"Having been\" não constitui uma forma verbal finita e não pode seguir a conjunção if.",
+    "meta_description": "Questão B2 de terceira condicional com texto sobre conflito entre pecuaristas e leões e políticas de compensação."
+  },
+  {
+    "titulo": "Whales: phrasal verbs (B2)",
+    "tema": "Phrasal verbs",
+    "genero_textual": "texto didatico",
+    "nivel": "B2",
+    "texto_base": "Commercial whaling is no longer the main threat to large whales; shipping is. Collisions with vessels kill an unknown but substantial number every year, and chronic engine noise interferes with the low-frequency calls that whales use to find each other across hundreds of kilometres. Both problems have the same cheap solution: slower ships. A modest reduction in speed in known feeding corridors reduces both the force of any strike and the noise generated, while saving the operator fuel rather than costing money. Marine biologists have therefore ___ mandatory speed limits in a small number of well-mapped areas, rather than a general restriction that industry would fight for a decade. Voluntary schemes already exist, and compliance, unsurprisingly, is highest where somebody publishes the data.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "called off",
+      "called up",
+      "called for",
+      "called in",
+      "called on"
+    ],
+    "gabarito": "C",
+    "comentario": "\"Call for\" significa exigir ou reivindicar publicamente uma medida, sentido pedido pelo contexto, em que os cientistas defendem limites obrigatórios de velocidade. \"Call off\" quer dizer cancelar algo já previsto, o que inverteria completamente o argumento do texto. \"Call on\" exige uma pessoa como objeto, seguida de infinitivo, como em call on governments to act, e não combina com \"speed limits\". \"Call up\" e \"call in\" significam convocar alguém ou solicitar a presença de um especialista, e não se aplicam a uma norma.",
+    "meta_description": "Exercício B2 de phrasal verbs com texto sobre colisões de navios, ruído oceanico e proteção de baleias."
+  }
+]

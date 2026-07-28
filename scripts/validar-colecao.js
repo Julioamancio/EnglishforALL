@@ -28,7 +28,9 @@ const LETRAS = ['A', 'B', 'C', 'D', 'E'];
 const ACENTOS = /[áàâãéêíóôõúüçÁÀÂÃÉÊÍÓÔÕÚÜÇ]/;
 
 // Palavras que em português brasileiro praticamente sempre levam acento.
-const SEM_ACENTO = /\b(nao|sao|entao|tambem|porem|alem|voce|portugues|ingles|ja|so|apos|atraves|serie|proprio|necessario|possivel|dificil|facil|especifico|generico|ultimo|proximo)\b/gi;
+// Fora da lista de propósito: "so" e "ja", porque os comentários citam estruturas
+// em inglês ("So complete is the hold…") e disparavam falso positivo.
+const SEM_ACENTO = /\b(nao|sao|entao|tambem|porem|alem|voce|portugues|ingles|apos|atraves|proprio|necessario|possivel|dificil|facil|especifico|generico|ultimo|proximo|questao|inversao|colocacao|oracao|opcao|construcao|expressao|funcao|posicao|frequencia|paragrafo|vocabulario|unica|negacao|precisao|analise|enfase|hipotese|adverbio|semantica|conotacao|substituicao|sequencia|consequencia|evidencia|experiencia|memoria|logica|seculo)\b/gi;
 
 let total = 0;
 let problemas = 0;

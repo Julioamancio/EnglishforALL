@@ -1,0 +1,434 @@
+[
+  {
+    "titulo": "Snakes: inversão após advérbio negativo (C1)",
+    "tema": "Inversão após advérbio negativo",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Few creatures have provoked so contradictory a response as the snake. In some traditions it guards wisdom and renewal; in others it is the emblem of treachery. Rarely ___ so thoroughly by a single animal as it has been by this one, and the consequences are not merely symbolic. Conservationists working in rural districts report that most of the snakes killed on sight belong to harmless species, mistaken for the two or three that are genuinely dangerous. The cost is ecological: rodent populations expand, stored grain is lost, and the very communities that feared the snake pay for its absence. Public health campaigns have begun to argue that education about identification saves more lives than eradication ever did, since antivenom supply, rather than the animal itself, determines mortality in most regions. The lesson is uncomfortable. What threatens people is seldom the creature they picture, and policy built on inherited fear tends to produce precisely the scarcity it was meant to prevent.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "the popular imagination has been shaped",
+      "has the popular imagination been shaped",
+      "have the popular imagination been shaped",
+      "has been the popular imagination shaped",
+      "the popular imagination had been shaped"
+    ],
+    "gabarito": "B",
+    "comentario": "Quando um advérbio de sentido negativo ou restritivo como \"rarely\" abre a oração, o inglês formal exige inversão sujeito-auxiliar: auxiliar + sujeito + restante do verbo. A ordem correta é, portanto, \"has the popular imagination been shaped\". As opções com ordem direta (\"the popular imagination has been shaped\" e \"the popular imagination had been shaped\") ignoram a inversão obrigatória depois do advérbio fronteado. A forma \"have\" viola a concordância com o sujeito singular, e \"has been the popular imagination shaped\" desloca o particípio para depois do sujeito, o que não existe em inglês.",
+    "meta_description": "Questão C1 de Use of English sobre inversão após advérbios negativos, em texto ensaístico a respeito de serpentes e conservação."
+  },
+  {
+    "titulo": "Zoos: estrutura clivada com it is... that (C1)",
+    "tema": "Estrutura clivada enfática",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The modern zoo lives with a contradiction it did not invent. It began as a display of imperial reach, a cabinet of captured territories arranged for the pleasure of the metropolis, and it has spent the past half-century trying to become something else: a laboratory, a refuge, an ark. The transformation is real. Breeding programmes have returned the Arabian oryx to the desert and the California condor to the air, and studbooks maintained across continents now manage genetic diversity with a precision no wild population enjoys. ___ most defenders of the institution appeal when they are asked to justify the enclosure. Critics reply that the arithmetic is convenient: the species restored are few, the animals confined are many, and the educational effect on visitors has never been measured with the rigour applied to the breeding itself. Both arguments are honest. What remains unresolved is whether an institution can atone for its origins while continuing to depend on the spectacle those origins created.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "It is to this record of reintroduction which",
+      "It is this record of reintroduction that",
+      "Is it to this record of reintroduction that",
+      "It is to this record of reintroduction that",
+      "It is to this record of reintroduction what"
+    ],
+    "gabarito": "D",
+    "comentario": "A clivada enfática segue o molde \"it is + elemento focalizado + that\", e o elemento focalizado aqui é o sintagma preposicionado exigido pelo verbo \"appeal to\". Por isso a preposição \"to\" precisa acompanhar o foco e o conectivo precisa ser \"that\". A opção sem \"to\" deixa o verbo \"appeal\" sem a preposição que ele rege, tornando a frase agramatical. \"Which\" e \"what\" não funcionam como conectivo de clivada com foco preposicionado, e \"Is it...\" transformaria a oração em pergunta, incompatível com o ponto final e com o encadeamento argumentativo.",
+    "meta_description": "Questão C1 sobre sentenças clivadas enfáticas em inglês, aplicada a um texto crítico sobre a função contemporânea dos zoológicos."
+  },
+  {
+    "titulo": "Dolphins: nuance modal com may well (C1)",
+    "tema": "Nuance modal de probabilidade",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Dolphins occupy an awkward position in environmental ethics. Their brains are large, their social bonds durable, and their capacity for individual recognition well documented; captive animals learn arbitrary symbols and appear to grieve. On the strength of such findings, several countries have closed marine parks outright, and a few campaigners argue that the animals should be granted a legal status closer to personhood than to property. Others regard this as sentimental. The evidence for complex cognition, they note, is strong in cetaceans and equally strong in corvids and pigs, neither of which attracts comparable protection; the dolphin benefits less from its intelligence than from its resemblance to a smile. That objection ___ justified, but justification is not the same as necessity. If public affection is what mobilises funding for marine reserves, refusing to use it is a costly form of consistency. The harder question is whether a movement built on charisma can ever extend its protection to the animals nobody finds charming.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "may well be",
+      "may well been",
+      "might well being",
+      "must well be",
+      "may well to be"
+    ],
+    "gabarito": "A",
+    "comentario": "O advérbio \"well\" entre o modal e o infinitivo reforça a probabilidade, produzindo o sentido de \"é bem possível que\", adequado à concessão que o texto faz antes do contraste com \"but\". Depois de um modal vem o infinitivo sem \"to\", o que elimina de imediato \"may well to be\". As formas \"may well been\" e \"might well being\" são impossíveis porque nem particípio nem gerúndio podem seguir diretamente o modal sem auxiliar. Já \"must\" não admite esse uso de \"well\" e, além disso, expressaria certeza dedutiva, incompatível com uma concessão parcial.",
+    "meta_description": "Questão C1 de Use of English sobre modais de probabilidade como may well, em texto sobre golfinhos e ética da conservação."
+  },
+  {
+    "titulo": "Bats: inversão com no sooner... than (C1)",
+    "tema": "Inversão com no sooner",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Bats have long been the beneficiaries of indifference. Nocturnal, unglamorous and difficult to count, they attracted little popular attention and correspondingly little persecution. That changed when virologists began tracing several emerging pathogens to bat reservoirs. ___ the association entered general circulation than culls were reported in caves across three continents, sometimes organised by local authorities and sometimes improvised by frightened residents. Ecologists responded with two arguments. The first was practical: destroying a colony disperses its survivors, increasing rather than reducing contact with people. The second was economic: insectivorous bats suppress crop pests at a value estimated in the billions annually, and their pollination of agave and durian sustains entire industries. Neither argument travels well through fear. What the episode revealed is less about zoonosis than about the machinery of public response, which reliably converts a statistical risk into a visible enemy and then destroys the enemy at a cost nobody troubles to calculate until the harvest fails.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "No sooner did",
+      "Hardly had",
+      "No sooner had",
+      "No sooner",
+      "Not sooner had"
+    ],
+    "gabarito": "C",
+    "comentario": "A construção correlativa é \"no sooner + had + sujeito + particípio ... than\", e a presença de \"than\" na segunda parte da frase já indica qual correlativo deve abrir a oração. Com \"No sooner did\", o verbo teria de aparecer na forma base (\"enter\"), e não em \"entered\", como está no texto. \"Hardly\" existe em estrutura semelhante, mas se correlaciona com \"when\", não com \"than\". Sem auxiliar algum, como em \"No sooner the association entered\", falta a inversão obrigatória, e \"Not sooner\" simplesmente não é forma do inglês.",
+    "meta_description": "Questão C1 sobre a inversão correlativa no sooner... than, aplicada a um texto sobre morcegos, zoonoses e pânico público."
+  },
+  {
+    "titulo": "The moon: conector formal notwithstanding (C1)",
+    "tema": "Conector formal concessivo",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The Outer Space Treaty of 1967 declares that celestial bodies are not subject to national appropriation. It says nothing definite about extraction. ___ this ambiguity, several states have passed domestic legislation granting their companies title to material they retrieve from the lunar surface, on the reasoning that a rock removed from the ground is not the ground itself. Lawyers disagree, and the disagreement is not academic: the south polar craters that hold water ice are few, small and clustered, and the first arrival may establish a de facto exclusion zone simply by operating there. The Moon thus poses in miniature the problem that has defeated every commons regime on Earth. Rules written when a resource is unreachable are rarely tested; rules written when it is contested are rarely agreed. Whether an international framework can be built in the interval between those two conditions is, at present, the most consequential unanswered question in space policy, and the interval is closing.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Nevertheless",
+      "Despite of",
+      "Albeit",
+      "Notwithstanding of",
+      "Notwithstanding"
+    ],
+    "gabarito": "E",
+    "comentario": "A lacuna é seguida de um sintagma nominal (\"this ambiguity\"), de modo que o conectivo precisa funcionar como preposição concessiva, papel que \"notwithstanding\" desempenha no registro jurídico e acadêmico. \"Nevertheless\" é advérbio conectivo e liga orações independentes, não podendo reger diretamente um sintagma nominal. \"Despite of\" é um cruzamento agramatical entre \"despite\" e \"in spite of\", e \"notwithstanding of\" acrescenta uma preposição que a palavra não admite. \"Albeit\" introduz normalmente um adjetivo, sintagma ou oração reduzida de valor concessivo, e não um objeto nominal desse tipo.",
+    "meta_description": "Questão C1 de Use of English sobre conectores formais concessivos, em texto sobre mineração lunar e direito espacial internacional."
+  },
+  {
+    "titulo": "Crocodiles: particípio em oração reduzida (C1)",
+    "tema": "Particípio em oração reduzida",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "___ as vermin for most of the twentieth century, crocodiles were shot on sight across northern Australia and much of southern Africa. Their recovery is one of the few unambiguous successes in vertebrate conservation, and it was achieved by an argument that many conservationists still find distasteful. Rather than prohibiting exploitation, several governments licensed it: landholders were permitted to harvest eggs and sell skins, provided a fixed proportion of hatchlings was returned to the wild. The animal acquired a price, and with a price came an incentive to protect the wetlands it depends on. Populations rebounded so completely that management now concerns itself with attacks on people rather than with scarcity. The model has obvious limits. It works for a species that breeds prolifically and yields a luxury commodity, and it fails for anything slow, unprofitable or aesthetically inconvenient. Still, it forces an uncomfortable admission: sentiment saved fewer crocodiles than commerce did, and conservation policy has never fully absorbed the lesson.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Classifying",
+      "Classified",
+      "Having classified",
+      "Being classify",
+      "To classify"
+    ],
+    "gabarito": "B",
+    "comentario": "A oração reduzida inicial tem valor passivo, pois o sujeito da oração principal, \"crocodiles\", é quem foi classificado como praga, e não quem classificou. O particípio passado \"classified\" expressa exatamente esse valor e mantém a concordância de sujeito exigida pela redução. \"Classifying\" e \"having classified\" são formas ativas e atribuiriam aos crocodilos a ação de classificar, invertendo o sentido do texto. \"Being classify\" mistura auxiliar e forma base, e \"to classify\" introduziria uma finalidade que não se sustenta com o sujeito da principal.",
+    "meta_description": "Questão C1 sobre particípio passado em orações reduzidas, em texto sobre crocodilos, uso sustentável e política de conservação."
+  },
+  {
+    "titulo": "Helicopters: subjuntivo em that-clause (C1)",
+    "tema": "Subjuntivo formal",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The helicopter is a machine of exceptions. It lands where nothing else can, and for that reason it is trusted with the work that tolerates least error: mountain rescue, offshore transfer, organ delivery, the evacuation of casualties from ground no ambulance will reach. It is also, by a considerable margin, the least forgiving aircraft in routine civilian use. Its accident rate reflects not mechanical fragility but the missions it is asked to fly, often at night, often in weather that has already grounded everything else, and often under pressure from the very urgency that justified the flight. Regulators have responded by attacking the pressure rather than the machine. After a series of fatal medical-transport crashes, safety boards demanded that a second qualified pilot ___ present on every night mission, and that dispatchers be shielded from knowing whether a patient is critical. The reasoning is deliberately impersonal: a crew that does not know the stakes cannot be tempted by them.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "is",
+      "was",
+      "will be",
+      "be",
+      "having been"
+    ],
+    "gabarito": "D",
+    "comentario": "Verbos de ordem e exigência como \"demand\" introduzem uma that-clause no subjuntivo, em que o verbo aparece na forma base independentemente do tempo do verbo principal. O próprio texto confirma o padrão logo adiante, na oração coordenada \"that dispatchers be shielded\". Por isso \"is\" e \"was\" estão descartados: o indicativo transformaria a exigência em relato de fato, sentido incompatível com a decisão regulatória descrita. \"Will be\" é igualmente impossível, pois o subjuntivo mandativo não admite marca de futuro, e \"having been\" produziria uma forma sem verbo finito na subordinada.",
+    "meta_description": "Questão C1 de Use of English sobre subjuntivo em that-clauses após verbos de exigência, em texto sobre segurança de voo em helicópteros."
+  },
+  {
+    "titulo": "Jungles: conector formal insofar as (C1)",
+    "tema": "Conector formal restritivo",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The word jungle carries a history that the word forest does not. It arrived in English through colonial administration and it described land that was uncultivated, impenetrable and therefore, in the logic of the period, unused. That description had consequences. Territory classified as waste could be claimed, cleared and improved without anyone's consent, and the people who had managed it for centuries appeared in the record only as an obstacle. Ecologists now describe the same land in the opposite terms: tropical forests regulate rainfall across continents, store carbon at densities no plantation approaches, and shelter species inventories that remain largely undescribed. Yet the valuation is still instrumental. These forests are treated as worth defending ___ they deliver services that can be priced, and the moment a competing land use yields a higher number, the argument collapses. Whether anything can be protected on grounds other than its usefulness is the question conservation economics has been careful never to ask directly.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "insofar as",
+      "notwithstanding",
+      "whereby",
+      "inasmuch",
+      "insofar that"
+    ],
+    "gabarito": "A",
+    "comentario": "A lacuna introduz uma oração completa e exige um conectivo de restrição com o sentido de \"na medida em que\", que é precisamente o valor de \"insofar as\". A forma \"insofar that\" não existe: a locução se completa obrigatoriamente com \"as\", e o mesmo vale para \"inasmuch\", que só funciona seguido de \"as\". \"Notwithstanding\" seria concessivo e, diante de oração, precisaria de \"that\", além de contrariar o argumento do parágrafo. \"Whereby\" é relativo e retomaria um antecedente nominal, papel que nenhum termo anterior à lacuna cumpre aqui.",
+    "meta_description": "Questão C1 sobre conectores formais restritivos como insofar as, em texto sobre florestas tropicais e valoração econômica da natureza."
+  },
+  {
+    "titulo": "Computers: clivada com what... is (C1)",
+    "tema": "Clivada com what",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Every generation has described the computer in the vocabulary of its anxieties: first a brain, then a bureaucracy, now an oracle. The metaphors matter, because they determine which failures we notice. When the machine was understood as a calculator, its errors were arithmetic and therefore checkable. When it became a decision system, its errors migrated somewhere less visible, into the selection of training data, the framing of the objective and the weighting of outcomes that no user ever sees. ___ is not the speed of the machine but the opacity of its reasoning, and the two are related: a model performs well precisely because it exploits regularities too numerous for any person to audit. Demanding an explanation may therefore mean accepting a worse system, which regulators are reluctant to say aloud. The interesting question is not whether machines will think, but whether institutions will keep using tools whose judgements they can neither reproduce nor defend when challenged.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Which troubles ethicists most",
+      "That troubles ethicists most",
+      "What troubles ethicists most",
+      "What troubles ethicists most is",
+      "What ethicists troubles most"
+    ],
+    "gabarito": "C",
+    "comentario": "A clivada com \"what\" constrói o sujeito da oração por meio de uma relativa livre, cujo verbo copulativo já aparece no texto imediatamente após a lacuna. Por isso a alternativa que repete \"is\" cria uma duplicação do verbo e é agramatical. \"Which\" e \"that\" não introduzem relativas livres em posição de sujeito sem antecedente expresso, o que inviabiliza as duas opções. Já \"What ethicists troubles most\" inverte sujeito e verbo dentro da relativa e ainda quebra a concordância, pois \"ethicists\" é plural.",
+    "meta_description": "Questão C1 de Use of English sobre clivadas com what, aplicada a um texto sobre opacidade algorítmica e ética da tecnologia."
+  },
+  {
+    "titulo": "Cities: nominalização em registro formal (C1)",
+    "tema": "Nominalização",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "For most of the twentieth century, the direction of urban policy was outward. Density was diagnosed as the source of disease, disorder and unrest, and the remedy was space: wide roads, separated functions, a lawn between every household and its neighbour. The consequences were slow to appear and are now difficult to reverse. Distance made the car compulsory, the car made the distance greater, and the tax base that might have funded transit dispersed along with the population. The ___ of density as a planning ideal has been driven less by aesthetics than by arithmetic. Compact settlement lowers the per-household cost of pipes, cables, buses and emergency response, and the difference is large enough to appear in municipal balance sheets. What has not been resolved is who pays for the transition. Adding homes to an established neighbourhood imposes visible costs on residents already there and delivers diffuse benefits to people who have not yet arrived, and no political system rewards that arrangement.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "resurgent",
+      "resurge",
+      "resurgently",
+      "resurgency",
+      "resurgence"
+    ],
+    "gabarito": "E",
+    "comentario": "A estrutura \"the ___ of\" exige um substantivo abstrato, e a nominalização correta da ideia de reaparecimento é \"resurgence\". \"Resurgent\" é adjetivo e não pode ocupar o núcleo de um sintagma nominal precedido de artigo definido e seguido de \"of\". \"Resurge\" é verbo, incompatível com essa posição sintática, e \"resurgently\" é advérbio, que jamais funciona como núcleo nominal. Já \"resurgency\" não é forma dicionarizada do inglês, sendo apenas um distrator morfológico construído por analogia com sufixos produtivos.",
+    "meta_description": "Questão C1 sobre nominalização e formação de palavras em registro formal, em texto sobre densidade urbana e custo de infraestrutura."
+  },
+  {
+    "titulo": "Pandas: inversão com not only... but also (C1)",
+    "tema": "Inversão com not only",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "No animal has been asked to carry a heavier symbolic load than the giant panda. It is the emblem of an international conservation movement, the star exhibit of a dozen zoos, and an instrument of statecraft: for decades the loan of a breeding pair has marked a warming of relations, and its withdrawal a cooling. Not only ___ a diplomatic instrument, but it has also reshaped how conservation is financed. The reserves established to protect it now cover a substantial share of a mountain range, sheltering takins, golden monkeys and thousands of plant species that no donor would have funded directly. Sceptics call this an accident of charisma, and they are right. The species chosen to attract money are chosen for their faces, and the ecosystems that lack a photogenic occupant remain unprotected. The defence is pragmatic rather than principled: a flagship is a fundraising device, and a movement that refuses such devices tends to protect nothing at all.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "the panda has become",
+      "has the panda become",
+      "have the panda become",
+      "has become the panda",
+      "the panda had become"
+    ],
+    "gabarito": "B",
+    "comentario": "Com \"not only\" em posição inicial, a oração exige inversão sujeito-auxiliar, e o present perfect da segunda parte da correlação (\"but it has also reshaped\") confirma que o auxiliar deve ser \"has\". As alternativas em ordem direta mantêm a estrutura de oração declarativa comum e por isso não atendem à exigência do advérbio fronteado. \"Have\" quebra a concordância com o sujeito singular \"the panda\". Em \"has become the panda\", o sujeito aparece depois do verbo principal, ordem que a inversão do inglês não autoriza, pois apenas o auxiliar antecede o sujeito.",
+    "meta_description": "Questão C1 de Use of English sobre inversão com not only, em texto sobre pandas, diplomacia e financiamento da conservação."
+  },
+  {
+    "titulo": "Football: preposição dependente em registro formal (C1)",
+    "tema": "Preposição dependente formal",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Football's peculiar power is that it organises loyalty around something with no obvious content. A club is not a set of players, who change every few seasons; nor a stadium, which can be demolished; nor a set of colours, which can be sold. It is a continuity that supporters agree to recognise, and that agreement has proved remarkably resistant to the commercial forces reshaping everything around it. Ownership has moved offshore, kick-off times follow broadcast markets in other hemispheres, and ticket prices have quietly excluded the neighbourhoods that built the tradition. Sociologists observe that the conditions most conducive ___ this kind of collective identity are precisely those the modern game is dismantling: proximity, repetition, and a shared sense that the institution belongs to nobody in particular. Supporter trusts and fan ownership models are an attempt to write that intuition into company law. Whether sentiment can survive being formalised is a question the game has not yet had to answer.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "for",
+      "of",
+      "with",
+      "to",
+      "in"
+    ],
+    "gabarito": "D",
+    "comentario": "O adjetivo \"conducive\" pertence ao grupo de adjetivos de registro formal que regem obrigatoriamente a preposição \"to\", como em \"conducive to growth\". Trata-se de uma regência fixa, não deduzível pelo sentido, e nenhuma das outras preposições é registrada com esse adjetivo. \"For\" e \"of\" seriam esperados com adjetivos de outra classe, como \"responsible for\" ou \"typical of\", mas não aqui. \"With\" e \"in\" produzem combinações inexistentes e tornariam o sintagma agramatical, ainda que o sentido geral do período permanecesse recuperável pelo contexto.",
+    "meta_description": "Questão C1 sobre regência de adjetivos formais em inglês, aplicada a um texto sobre futebol, identidade coletiva e comercialização."
+  },
+  {
+    "titulo": "Sport: modal perfeito em contexto hipotético (C1)",
+    "tema": "Modal perfeito hipotético",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The professionalisation of sport is usually told as a story of money, but it is better understood as a story of measurement. Once performance could be recorded, compared and ranked across distances and decades, the amateur ideal lost its footing: an activity whose whole point is the pursuit of a number cannot easily be described as play. Television completed the transformation by making that number visible to millions at once. Had the tournament calendar not been rebuilt around broadcast schedules in the 1970s, several disciplines ___ resolutely regional for another generation, watched by the towns that produced them and funded by subscription. Instead they acquired global audiences, global sponsors and the pathologies that follow: doping regimes designed around testing windows, youth academies that discard most of their intake, and governing bodies wealthy enough to answer to nobody. The paradox is that the same measurement which undermined the amateur ideal also made cheating detectable. Sport is now policed by the instruments that gave it a reason to cheat.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "might have remained",
+      "might remain",
+      "might had remained",
+      "may remaining",
+      "might have been remained"
+    ],
+    "gabarito": "A",
+    "comentario": "A oração condicional está invertida sem \"if\" e no past perfect (\"Had the calendar not been rebuilt\"), o que caracteriza uma hipótese contrafactual sobre o passado. A consequência exige, portanto, um modal perfeito: \"might have remained\". \"Might remain\" projetaria um resultado presente, incompatível com o complemento \"for another generation\" e com o passado narrado a seguir. \"Might had remained\" é impossível, pois modais nunca são seguidos de forma flexionada, e \"might have been remained\" cria uma voz passiva com um verbo intransitivo, que não admite passivização.",
+    "meta_description": "Questão C1 de Use of English sobre modais perfeitos em condicionais invertidas, em texto sobre profissionalização e medição no esporte."
+  },
+  {
+    "titulo": "Choosing a pet: inversão condicional sem if (C1)",
+    "tema": "Inversão condicional",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Shelters describe a predictable annual cycle. Adoptions rise sharply in December and returns rise in February, and the animals returned are overwhelmingly those acquired on a weekend visit, in the company of children, from a room in which forty others were also available. ___ to choose an animal that way, you would be joining a statistic that every shelter manager can recite from memory. The advice offered in response sounds unromantic. Establish the daily cost, the exercise requirement and the likely lifespan before setting foot in the building; establish who will do the work when the novelty passes; establish what happens if the household moves, or separates, or has a child. None of this is difficult, and almost nobody does it, because the decision is made by a part of the mind that does not consult spreadsheets. Shelters have learned to work with that. The best of them now interview adopters about their routines rather than their intentions, which are uniformly excellent.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Was you",
+      "Did you",
+      "Were you",
+      "Should you",
+      "Would you"
+    ],
+    "gabarito": "C",
+    "comentario": "A condicional formal sem \"if\" se forma pela inversão do verbo, e o padrão \"were + sujeito + to + infinitivo\" expressa hipótese sobre uma ação futura ou improvável, combinando com o \"would be joining\" da oração principal. \"Was you\" é agramatical, já que o subjuntivo \"were\" é invariável nessa construção. \"Did you\" e \"Would you\" não podem ser seguidos do infinitivo com \"to\" que já aparece no texto, o que sozinho os elimina. \"Should you\" existe em condicionais invertidas, mas rege infinitivo sem \"to\", como em \"should you choose\".",
+    "meta_description": "Questão C1 sobre condicionais invertidas sem if em registro formal, em texto sobre adoção impulsiva de animais e abrigos."
+  },
+  {
+    "titulo": "Pets: conector relativo formal whereby (C1)",
+    "tema": "Conector relativo formal",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The relationship between people and domestic animals has been reorganised twice in a century. Animals that were once working property became companions, and companions have lately become dependants with something close to a legal identity. Courts in several jurisdictions now decline to treat a dog as ordinary chattel in divorce proceedings, weighing instead which household better serves the animal's welfare, a standard borrowed openly from custody law. Insurance has followed, and so has medicine: procedures once reserved for humans are routine, and the bills are large enough that a market in pet health cover has emerged. Some ethicists welcome this as moral progress. Others note the arrangement ___ affection is converted into expenditure, and expenditure into an obligation nobody can afford to refuse. The animal that cannot be treated becomes a failure of love rather than a limit of income. Between the two positions lies a practical difficulty: welfare standards written for the wealthy tend to make ownership itself a privilege.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "whereas",
+      "thereby",
+      "hereby",
+      "whereupon",
+      "whereby"
+    ],
+    "gabarito": "E",
+    "comentario": "\"Whereby\" é o relativo formal equivalente a \"by which\" e retoma um antecedente que designa mecanismo, sistema ou disposição, exatamente o caso de \"the arrangement\". \"Whereas\" é conjunção contrastiva e não pode encabeçar uma relativa que modifica um substantivo. \"Thereby\" e \"hereby\" são advérbios: o primeiro indica consequência dentro da mesma oração e o segundo pertence à linguagem performativa de documentos, e nenhum dos dois liga uma oração relativa ao seu antecedente. \"Whereupon\" marcaria sucessão temporal imediata, sentido incompatível com a descrição de um mecanismo permanente.",
+    "meta_description": "Questão C1 de Use of English sobre relativos formais como whereby, em texto sobre estatuto jurídico dos animais de companhia."
+  },
+  {
+    "titulo": "Tea or coffee: clivada com it was not until... that (C1)",
+    "tema": "Clivada temporal enfática",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The choice between tea and coffee looks like temperament and is mostly history. Both arrived in Europe as expensive curiosities, both were denounced as dangerous by physicians, and both were rescued by economics rather than taste. ___ the East India Company began shipping tea in quantity that its price fell far enough to displace beer at the British breakfast table, and the shift was underwritten by a plantation system in Assam and a trade in opium that paid for it. Coffee followed a parallel route through Caribbean and Brazilian plantations built on enslaved labour. What survives of that history in the modern cup is a set of preferences that feel personal and are in fact geographical: the map of tea and coffee drinking still traces the shipping routes of the eighteenth and nineteenth centuries with uncomfortable precision. Certification schemes now attempt to attach an ethical account to each purchase, though the premium reaching the grower remains small enough to be disputed.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "It was until",
+      "It was not until",
+      "Not until it was",
+      "It was not until when",
+      "It has not been until"
+    ],
+    "gabarito": "B",
+    "comentario": "A clivada temporal negativa segue o molde fixo \"it was not until + marco temporal + that\", e o \"that\" já presente no texto confirma a estrutura. Sem a negação, como em \"It was until\", a frase perde sentido e deixa de formar uma clivada aceitável em inglês. \"Not until it was\" desloca o sujeito expletivo e produz uma sequência incoerente com o restante do período. \"It was not until when\" acrescenta um advérbio interrogativo indevido, e \"It has not been until\" introduz um present perfect incompatível com a narrativa integralmente situada no passado.",
+    "meta_description": "Questão C1 sobre a clivada enfática it was not until... that, em texto sobre a história econômica do chá e do café."
+  },
+  {
+    "titulo": "Teeth: subjuntivo após expressão de necessidade (C1)",
+    "tema": "Subjuntivo formal",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Few public health measures have been as effective or as unpopular as the fluoridation of drinking water. The evidence accumulated since the 1940s is consistent: at concentrations around one part per million, decay rates fall substantially, and the benefit is largest among children whose families cannot afford regular dental care. Dental associations therefore hold that it is essential that fluoride ___ added to municipal supplies wherever natural levels are low. Opponents rarely dispute the dental arithmetic. Their objection is political, and it is not trivial: medication delivered through the water supply cannot be refused without abandoning the supply itself, and consent, once removed, is difficult to restore selectively. Defenders answer that the same logic would forbid the chlorination that made the water safe to drink at all. The disagreement is really about where the boundary of individual choice falls when a collective system is the only means of delivery, and no amount of clinical data can settle that.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "is",
+      "was",
+      "would be",
+      "be",
+      "being"
+    ],
+    "gabarito": "D",
+    "comentario": "Expressões de necessidade do tipo \"it is essential that\" selecionam o subjuntivo presente, cuja forma é sempre a base do verbo, independentemente do sujeito. Como a lacuna precede o particípio \"added\", o que falta é o verbo auxiliar da passiva na forma \"be\". \"Is\" e \"was\" colocariam a subordinada no indicativo, convertendo uma recomendação normativa em constatação factual e desfazendo o valor prescritivo do trecho. \"Would be\" introduz modalidade condicional que a construção não admite, e \"being\" deixaria a oração sem verbo finito nem subjuntivo.",
+    "meta_description": "Questão C1 de Use of English sobre subjuntivo após expressões de necessidade, em texto sobre fluoretação da água e saúde pública."
+  },
+  {
+    "titulo": "Farms: particípio perfeito em oração reduzida (C1)",
+    "tema": "Particípio perfeito reduzido",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "___ for decades as a matter of national security, agricultural subsidy is now defended in an entirely different vocabulary. The original argument was memorably simple: a country that cannot feed itself cannot negotiate freely, and the memory of wartime shortage was recent enough to end the discussion. Once surpluses became chronic, that justification lost its force, and the payments were rewritten around landscape, biodiversity and rural employment. The new language has not changed the distribution of the money, which still flows overwhelmingly to the largest holdings, because area remains the simplest thing to measure. Reformers propose paying for outcomes instead: hedgerow restored, carbon retained, water leaving the farm cleaner than it arrived. The obstacle is administrative rather than ideological, since outcomes are expensive to verify and easy to dispute, while hectares are not. Agricultural policy thus illustrates a general law of public spending: the criterion that survives is not the one that is right but the one that can be audited.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Having been justified",
+      "Having justified",
+      "Been justified",
+      "Have been justified",
+      "Having being justified"
+    ],
+    "gabarito": "A",
+    "comentario": "A redução exige simultaneamente valor passivo e anterioridade em relação ao \"is now defended\" da oração principal, o que corresponde ao particípio perfeito passivo \"having been justified\". \"Having justified\" é ativo e faria do subsídio o agente da justificação, invertendo os papéis semânticos. \"Been justified\" e \"Have been justified\" não podem iniciar uma oração reduzida: a primeira carece de qualquer forma que a introduza e a segunda apresenta verbo finito sem sujeito expresso. \"Having being justified\" combina duas formas incompatíveis, pois após \"having\" só cabe o particípio \"been\".",
+    "meta_description": "Questão C1 sobre particípio perfeito passivo em orações reduzidas, em texto sobre subsídios agrícolas e critérios de política pública."
+  },
+  {
+    "titulo": "Parrots: nominalização de traço biológico (C1)",
+    "tema": "Nominalização",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Parrots present the law with a problem no other companion animal poses so acutely. The ___ of the larger species is extraordinary: macaws and cockatoos routinely live fifty years and occasionally reach eighty, which means the bird acquired by a young adult will very probably outlive the household that acquired it. Sanctuaries are consequently full of birds surrendered on the death or infirmity of an owner, many of them displaying the self-mutilation and stereotyped movement associated with prolonged isolation. The trade continues regardless, sustained by an intelligence that makes the animal appealing and by the same intelligence that makes captivity intolerable. Some jurisdictions have responded by requiring provision for the animal in a will, treating the bird less as property than as a long-term obligation attached to an estate. Others rely on breeders to discourage impulsive buyers, which is a conflict of interest dressed as regulation. The underlying difficulty is that human planning horizons are shorter than the creature we are planning for.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "long-lived",
+      "longevous",
+      "longevity",
+      "longly",
+      "longevate"
+    ],
+    "gabarito": "C",
+    "comentario": "A moldura \"the ___ of the larger species is\" exige um substantivo abstrato como núcleo do sujeito, papel que só \"longevity\" desempenha. \"Long-lived\" e \"longevous\" são adjetivos e, por isso, não podem ser antecedidos de artigo definido e seguidos de complemento com \"of\" nessa posição. \"Longly\" não é forma corrente do inglês e, ainda que fosse, um advérbio jamais seria núcleo de sintagma nominal. \"Longevate\" é um verbo inventado por analogia morfológica, sem registro lexical, e portanto agramatical na função de sujeito.",
+    "meta_description": "Questão C1 de Use of English sobre nominalização e classes de palavras, em texto sobre longevidade de papagaios e responsabilidade legal."
+  },
+  {
+    "titulo": "Water plants: subjuntivo após verbo de exigência (C1)",
+    "tema": "Subjuntivo formal",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Aquatic plants are the quiet agents of freshwater ecology. They oxygenate, they stabilise sediment, they shelter invertebrates and they compete with the algae that turn a lake opaque. They are also, in the wrong basin, among the most destructive invaders on record. Water hyacinth, sold ornamentally for its flower, has closed navigable channels across three continents and can double its coverage in a fortnight, and the cost of clearing it falls on fisheries that had no part in importing it. Ecologists have therefore demanded that the ministry ___ the licences that still permit the sale of several such species through garden centres and online traders. The request is resisted on familiar grounds: the trade is small, the risk is probabilistic, and the plants are already present in ponds throughout the country. Every one of those points is true, and none of them addresses the asymmetry at the centre of the case, in which private profit precedes an unbounded public liability.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "revokes",
+      "revoked",
+      "revoking",
+      "will revoke",
+      "revoke"
+    ],
+    "gabarito": "E",
+    "comentario": "Depois de \"demand that\", o inglês formal emprega o subjuntivo presente, no qual o verbo permanece na forma base mesmo com sujeito de terceira pessoa do singular. Por isso \"revokes\" está incorreto: a marca de concordância é justamente o que o subjuntivo suprime. \"Revoked\" transformaria a exigência em relato de um fato passado, o que contraria o pedido ainda pendente descrito no parágrafo seguinte. \"Revoking\" deixaria a subordinada sem verbo finito, e \"will revoke\" introduz futuro, incompatível com a construção mandativa.",
+    "meta_description": "Questão C1 sobre subjuntivo mandativo após demand that, em texto sobre plantas aquáticas invasoras e regulação do comércio ornamental."
+  },
+  {
+    "titulo": "Cheese: nominalização em texto normativo (C1)",
+    "tema": "Nominalização",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "Protected designations of origin were designed to defend small producers and have become, in places, an instrument of exclusion. The intention was defensible. A name built over generations has commercial value, and without legal protection that value is captured by whoever can print the word on a wrapper. Yet the ___ of local practice into legal definition requires decisions that were never made before: which pasture counts, which breed of animal, which starter culture, which minimum period of ageing. Whatever is written down becomes orthodoxy, and whatever was omitted becomes illegal. Producers whose families made the cheese for a century have found themselves outside the specification because their herd or their altitude fell on the wrong side of a line drawn by a committee. The regulation therefore preserves a tradition by freezing it, which is the one thing living traditions never do. Defenders reply that a frozen tradition is preferable to none, and the market suggests they are winning the argument.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "codify",
+      "codification",
+      "codified",
+      "codifiable",
+      "codificative"
+    ],
+    "gabarito": "B",
+    "comentario": "A posição entre o artigo \"the\" e o complemento \"of local practice\" só admite um substantivo, e a nominalização adequada do processo descrito é \"codification\". \"Codify\" é verbo e não pode receber artigo definido nem reger \"of\" nesse arranjo sintático. \"Codified\" é particípio com valor adjetivo e exigiria um núcleo nominal explícito depois de si, que o texto não oferece. \"Codifiable\" é adjetivo derivado e \"codificative\" não existe como palavra do inglês, servindo apenas como distrator morfológico plausível à primeira vista.",
+    "meta_description": "Questão C1 de Use of English sobre nominalização em registro normativo, em texto sobre denominações de origem protegida e queijos."
+  },
+  {
+    "titulo": "Libraries: preposição dependente de adjetivo (C1)",
+    "tema": "Preposição dependente formal",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The public library is the least fashionable and most durable of civic institutions. It survived the paperback, the internet and successive rounds of austerity, and it did so by quietly changing what it is for. Circulation of physical books has fallen; use of the building has not. The library is now where people apply for benefits they can only claim online, where the homeless spend a winter afternoon without being asked to buy anything, where children encounter a room that makes no demand of them. None of this appears in the statistics used to justify the budget, which still count loans. Defenders argue that the institution is inseparable ___ the idea that a public should have somewhere to go that is neither a shop nor an office, and that measuring it by transactions misses the point entirely. Councils facing statutory obligations elsewhere find that argument difficult to fund, which is why closures continue in the places with the fewest alternatives.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "of",
+      "to",
+      "with",
+      "from",
+      "for"
+    ],
+    "gabarito": "D",
+    "comentario": "O adjetivo \"inseparable\" tem regência fixa com \"from\", assim como \"different from\" ou \"distinct from\", e é essa preposição que introduz o termo do qual algo não pode ser apartado. \"Of\" produziria uma combinação inexistente, ainda que superficialmente sugestiva pela tradução para o português. \"To\" seria esperado com adjetivos de aproximação, como \"similar to\" ou \"attached to\", mas não com este. \"With\" e \"for\" tampouco são registradas com \"inseparable\" e tornariam o sintagma agramatical em qualquer registro.",
+    "meta_description": "Questão C1 sobre regência preposicional de adjetivos formais, em texto sobre bibliotecas públicas e a medição do valor social."
+  },
+  {
+    "titulo": "Lions: particípio passado em oração reduzida (C1)",
+    "tema": "Particípio em oração reduzida",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "___ of the corridors that once linked their territories, lion populations across West and Central Africa have contracted into isolated remnants, several of them too small to remain genetically viable for more than a few generations. The immediate causes are unremarkable: land converted to agriculture, prey depleted by bushmeat hunting, and retaliatory killing after livestock losses. The remedies are better understood than they are funded. Compensation schemes reduce retaliation where payment is prompt and disputes are settled locally, and reinforced enclosures work reliably wherever herders can afford the materials. Both depend on money arriving in villages rather than in capitals, and the machinery of international conservation is not designed for that. Meanwhile trophy hunting continues to divide the field, since well-managed concessions have preserved habitat that would otherwise have been ploughed, while poorly managed ones have removed the males a pride depends on. The evidence supports neither prohibition nor enthusiasm, which is precisely why the debate is conducted in moral rather than empirical terms.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Stripped",
+      "Stripping",
+      "Having stripped",
+      "Strip",
+      "To strip"
+    ],
+    "gabarito": "A",
+    "comentario": "A oração reduzida inicial descreve algo sofrido pelas populações de leões, e não praticado por elas, o que exige o particípio passado \"stripped\", em construção passiva com a preposição \"of\". \"Stripping\" e \"having stripped\" são formas ativas e, além de inverterem os papéis, deixariam o verbo transitivo sem objeto, já que \"of\" não pode receber o complemento direto. \"Strip\" na forma base não introduz oração reduzida em posição inicial. \"To strip\" indicaria finalidade, leitura absurda diante de um sujeito que é vítima do processo.",
+    "meta_description": "Questão C1 de Use of English sobre particípio passado em orações reduzidas, em texto sobre leões, fragmentação de habitat e conservação."
+  },
+  {
+    "titulo": "Whales: modal perfeito de dedução (C1)",
+    "tema": "Modal perfeito dedutivo",
+    "genero_textual": "texto didatico",
+    "nivel": "C1",
+    "texto_base": "The recovery of the great whales is usually presented as the environmental movement's clearest victory, and in one sense it is. Humpback numbers in several ocean basins have returned to something approaching their pre-industrial range, and the moratorium that made this possible was achieved by a coalition of states with no commercial interest in the outcome. The story is complicated by arithmetic. Whalers' logbooks record catches so sustained, and over such a period, that the population of the eighteenth century ___ far larger than any estimate derived from twentieth-century surveys allowed, which means the baseline against which recovery is measured may be badly wrong. Ecologists call this shifting baseline syndrome: each generation takes the depleted world it inherits as the natural one. If the historical populations were several times greater than assumed, then the oceans have not been restored but stabilised at a fraction of their former productivity, and the celebration marks a slower decline rather than a reversal.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "must been",
+      "must have being",
+      "must have been",
+      "must had been",
+      "had to being"
+    ],
+    "gabarito": "C",
+    "comentario": "A dedução lógica sobre um estado de coisas passado se expressa com o modal perfeito \"must have been\", forma exigida pela referência explícita ao século XVIII. \"Must been\" omite o auxiliar \"have\", sem o qual não existe modal perfeito em inglês. \"Must have being\" troca o particípio \"been\" pelo gerúndio, o que é impossível depois de \"have\" nessa construção. \"Must had been\" flexiona o verbo que segue o modal, algo que a gramática inglesa nunca autoriza, e \"had to being\" combina obrigação com uma forma verbal incompatível.",
+    "meta_description": "Questão C1 sobre modais perfeitos de dedução sobre o passado, em texto sobre baleias, linhas de base históricas e recuperação populacional."
+  }
+]

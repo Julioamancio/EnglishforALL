@@ -7,13 +7,13 @@
     "texto_base": "Snakes are often misunderstood animals. In many countries they ___ as dangerous enemies, and people kill them on sight. In reality, only a small number of species are really harmful to humans. Snakes control the population of rats and mice, so farmers who protect them usually lose less grain. Some scientists study snake venom because it can be used in modern medicine. Education programmes in schools explain how to behave when a snake appears in a garden. Slowly, the old fear is changing into respect.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "are still seen",
       "is still seen",
+      "are still seen",
       "are still seeing",
       "have still seen",
       "will still seeing"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "comentario": "A voz passiva no presente simples é formada por am/is/are + particípio passado, e o sujeito \"they\" (snakes) exige \"are\". \"Is still seen\" erra a concordância com o sujeito plural, e \"are still seeing\" é voz ativa contínua, que não combina com \"as dangerous enemies\" nem com o sentido do trecho. \"Will still seeing\" é agramatical, pois after \"will\" só se usa o infinitivo sem \"to\".",
     "meta_description": "Questão de Use of English nível B1 sobre voz passiva no presente, com texto informativo sobre serpentes e cinco alternativas."
   },
@@ -25,13 +25,13 @@
     "texto_base": "Modern zoos ___ enormously since the 1980s. Fifty years ago, most animals lived in small concrete cages with iron bars, and visitors came only to look at them. Today many zoos work as conservation centres: they protect species that have almost disappeared in the wild and they send young animals back to their natural habitat. Critics still argue that no cage can replace a forest, and that argument is serious. Even so, for some species a well-managed zoo has become the last safe place on the planet.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "have changed",
       "has changed",
       "changed",
       "are changing",
+      "have changed",
       "were changing"
     ],
-    "gabarito": "A",
+    "gabarito": "D",
     "comentario": "A expressão \"since the 1980s\" marca um período que começou no passado e continua até agora, o que exige o present perfect (have/has + particípio). Com o sujeito plural \"modern zoos\", usa-se \"have changed\"; por isso \"has changed\" está errado. \"Changed\", no past simple, é incompatível com \"since\", e \"were changing\" prende a ação a um passado já encerrado.",
     "meta_description": "Exercício B1 de Use of English sobre present perfect com \"since\", em texto sobre a mudança dos zoológicos modernos."
   },
@@ -61,13 +61,13 @@
     "texto_base": "Bats have a bad reputation in films, but they are extremely useful animals. A single small bat can eat thousands of insects in one night, including mosquitoes that carry diseases. In tropical regions, larger species pollinate flowers and spread the seeds of important trees. Their wings are actually thin skin stretched between very long fingers, so a bat ___ wings are damaged cannot hunt and usually dies. Many colonies are disappearing because caves are destroyed or visited by too many tourists. Protecting these dark, quiet places is now a serious environmental task.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "whose",
       "who",
       "which",
+      "whose",
       "that",
       "who's"
     ],
-    "gabarito": "A",
+    "gabarito": "C",
     "comentario": "A lacuna vem imediatamente antes do substantivo \"wings\", indicando posse: as asas pertencem ao morcego. Nesse caso, o único pronome relativo possível é \"whose\", usado tanto para pessoas quanto para animais e coisas. \"Which\" e \"that\" funcionam como sujeito ou objeto da oração relativa, mas nunca antes de um substantivo possuído, e \"who's\" é apenas a contração de \"who is\".",
     "meta_description": "Item de Use of English B1 sobre o pronome relativo possessivo \"whose\", em texto sobre a importância ecológica dos morcegos."
   },
@@ -79,13 +79,13 @@
     "texto_base": "The Moon looks peaceful in the night sky, but it is a hostile world. There is no air around it, so sound ___ travel from one place to another: an astronaut can shout as loudly as he wants and nobody will hear him. Temperatures change from about 120 degrees during the long lunar day to nearly minus 170 at night. Because there is no wind or rain, the footprints left by the first astronauts in 1969 are still perfectly visible. Several space agencies are now preparing new missions to build a small permanent base.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "cannot",
       "must",
       "should",
       "may",
-      "might"
+      "might",
+      "cannot"
     ],
-    "gabarito": "A",
+    "gabarito": "E",
     "comentario": "Quando concluímos que algo é logicamente impossível, usamos \"cannot/can't\" como modal de dedução negativa; o texto afirma que não há ar, e o som não se propaga no vácuo. \"Must\" expressa certeza positiva e inverteria completamente o sentido da frase. \"May\" e \"might\" indicam mera possibilidade, o que contradiz a explicação seguinte de que ninguém ouvirá o astronauta.",
     "meta_description": "Questão B1 de Use of English sobre modais de dedução, com texto informativo sobre as condições extremas da Lua."
   },
@@ -97,13 +97,13 @@
     "texto_base": "Crocodiles have existed for more than two hundred million years, and their design has hardly changed. People usually see them as monsters, but they play an essential role in rivers and lakes. They eat sick fish, dig holes that keep water during the dry season and control the number of other predators. If crocodiles disappeared from a river, the whole ecosystem ___ in a few years. In some regions hunters killed almost every animal for their skin, and governments had to create strict laws. Today the population is slowly recovering, although conflicts with local villages continue.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "would change",
       "will change",
+      "would change",
       "changes",
       "would changing",
       "is changing"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "comentario": "A oração condicional traz o past simple (\"if crocodiles disappeared\"), estrutura típica da segunda condicional, que fala de situações hipotéticas ou improváveis. Nesse padrão, a oração principal exige \"would + infinitivo sem to\". \"Will change\" pertence à primeira condicional e não combina com o passado da condição; \"would changing\" é agramatical, pois depois de \"would\" não se usa gerúndio.",
     "meta_description": "Exercício B1 de Use of English sobre segunda condicional, em texto sobre o papel ecológico dos crocodilos nos rios."
   },
@@ -115,13 +115,13 @@
     "texto_base": "A helicopter can do something no aeroplane can: it can stay in the air above a single point. The first practical machine ___ in the late 1930s, and since then helicopters have saved thousands of lives. They rescue climbers from mountains, carry patients to hospital and bring food to villages after floods. However, they are noisy, expensive and difficult to fly, because the pilot must control several movements at the same time. In cities, many people complain about the constant noise of helicopters used by television companies and by rich passengers avoiding traffic.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "was built",
       "was build",
       "were built",
       "has built",
+      "was built",
       "is building"
     ],
-    "gabarito": "A",
+    "gabarito": "D",
     "comentario": "A máquina não realiza a ação, ela a recebe, e a data \"in the late 1930s\" situa o fato num passado concluído: usa-se a passiva do past simple, was/were + particípio. \"Was build\" está errado porque \"build\" é a forma base, não o particípio \"built\". \"Were built\" contraria a concordância com o sujeito singular \"the first practical machine\", e \"has built\" é voz ativa, sugerindo que a máquina construiu algo.",
     "meta_description": "Questão de Use of English B1 sobre voz passiva no passado, com texto informativo sobre a história e os usos do helicóptero."
   },
@@ -151,13 +151,13 @@
     "texto_base": "Every year the world produces more than fifty million tonnes of electronic waste. Old computers contain gold, copper and other valuable metals, but they also contain lead and mercury, which are extremely toxic. Rich countries have sent millions of broken machines to poor regions, where families burn the plastic to recover a few grams of metal. Some companies have already created repair programmes and recycling centres, and a few cities collect old devices for free. However, most governments have not solved the problem ___, and our old laptops continue to poison distant rivers.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "yet",
       "already",
       "still",
+      "yet",
       "ever",
       "since"
     ],
-    "gabarito": "A",
+    "gabarito": "C",
     "comentario": "Em frases negativas no present perfect, \"yet\" aparece no fim da oração com o sentido de \"ainda não\", exatamente o que o texto expressa. \"Already\" é usado em frases afirmativas e vem antes do particípio, como no próprio texto (\"have already created\"). \"Still\" nesse sentido ocupa posição anterior ao auxiliar (\"have still not solved\"), e \"since\" exige um complemento de tempo depois dele.",
     "meta_description": "Questão B1 de Use of English sobre present perfect com \"yet\", em texto informativo sobre lixo eletrônico e computadores velhos."
   },
@@ -169,13 +169,13 @@
     "texto_base": "For most of human history, cities were the exception. Fifty years ago the majority of the population ___ in villages and small towns, working directly with the land. Today more than half of humanity lives in urban areas, and that number keeps growing. Big cities offer hospitals, universities and jobs, but they also produce traffic, pollution and loneliness. Urban planners now try to build neighbourhoods where a school, a market and a park are all within walking distance, so that families do not need a car for every single activity.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "used to live",
       "use to live",
       "used to living",
       "were used to live",
-      "are used to live"
+      "are used to live",
+      "used to live"
     ],
-    "gabarito": "A",
+    "gabarito": "E",
     "comentario": "Para falar de um hábito ou situação do passado que não existe mais, usa-se \"used to\" seguido do infinitivo sem \"to\". \"Use to\" só aparece em frases negativas e interrogativas com o auxiliar \"did\" (didn't use to live). \"Be used to\" tem outro significado, \"estar acostumado com\", e pede substantivo ou gerúndio depois, o que torna \"were used to live\" e \"are used to live\" incorretos.",
     "meta_description": "Exercício B1 de Use of English sobre \"used to\" para hábitos passados, em texto sobre o crescimento das cidades e da vida urbana."
   },
@@ -187,13 +187,13 @@
     "texto_base": "The giant panda spends up to fourteen hours a day eating bamboo, a plant with very little energy. Because its digestive system is closer to a carnivore's, the animal must eat enormous quantities simply to stay alive. Chinese reserves have connected separate areas of forest with green corridors, so young pandas can find partners more easily. Numbers are rising slowly, but climate change threatens the mountains where bamboo grows best. If those forests disappear, the species ___ in the wild, even though zoos around the world will still keep a few individuals.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "will not survive",
       "would not survive",
+      "will not survive",
       "will not surviving",
       "would not have survived",
       "is not surviving"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "comentario": "A condição vem no present simple (\"if those forests disappear\"), indicando uma possibilidade real no futuro: é a primeira condicional, cuja oração principal usa \"will + infinitivo\". \"Would not survive\" pertence à segunda condicional e não combina com um \"if\" no presente. \"Will not surviving\" é agramatical, pois \"will\" nunca é seguido de gerúndio, e \"would not have survived\" remete a um passado hipotético.",
     "meta_description": "Questão B1 de Use of English sobre primeira condicional, com texto informativo sobre o panda-gigante e a perda de florestas de bambu."
   },
@@ -205,13 +205,13 @@
     "texto_base": "Football is the most popular sport on the planet, ___? Almost every country has a national team, and millions of children play in the street with a cheap plastic ball. The rules are simple, the equipment costs almost nothing, and a match can happen anywhere. Professional football, however, is a huge industry: clubs pay enormous salaries, and big tournaments sometimes force poor cities to build stadiums they will never use again. Many fans love the game but criticise the business behind it, and supporters' associations now ask for cheaper tickets and more respect for local communities.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "isn't it",
       "is it",
       "isn't he",
       "doesn't it",
+      "isn't it",
       "aren't they"
     ],
-    "gabarito": "A",
+    "gabarito": "D",
     "comentario": "A question tag repete o auxiliar da frase e inverte a polaridade: como a afirmação é positiva e usa o verbo \"is\", a tag correta é a negativa \"isn't it\". \"Is it\" mantém a forma afirmativa e por isso não funciona depois de uma frase positiva. \"Doesn't it\" traria o auxiliar \"do\", que não aparece na oração, e \"aren't they\" erra a concordância com o sujeito singular \"football\".",
     "meta_description": "Item de Use of English B1 sobre question tags, em texto que discute a popularidade e o lado comercial do futebol."
   },
@@ -241,13 +241,13 @@
     "texto_base": "Choosing a pet is a decision for the next ten or fifteen years, not for a weekend. Before buying an animal, a family should think honestly about space, money and time. A dog needs company and long walks; if you ___ time for that, it is not a good choice. Cats are more independent, but they still need attention and a safe place. Rabbits and birds look easy, yet many of them suffer in small cages. Animal shelters are full of pets that were bought as presents and abandoned a few months later.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "do not have",
       "will not have",
       "would not have",
+      "do not have",
       "are not having",
       "did not have"
     ],
-    "gabarito": "A",
+    "gabarito": "C",
     "comentario": "Na primeira condicional, a oração introduzida por \"if\" fica no present simple, mesmo quando o sentido é futuro; por isso a forma correta é \"do not have\". \"Will not have\" é o erro mais comum: o futuro com \"will\" não aparece depois de \"if\" nesse tipo de frase. \"Would not have\" pertence à segunda condicional e \"did not have\" colocaria a condição num passado incompatível com \"it is not a good choice\".",
     "meta_description": "Exercício B1 de Use of English sobre a oração com \"if\" na primeira condicional, em texto sobre a escolha responsável de um animal."
   },
@@ -259,13 +259,13 @@
     "texto_base": "Living with an animal changes daily routines. Studies in several countries suggest that people who have a pet visit the doctor less often and feel less lonely, especially after retirement. Dogs, ___ were domesticated more than fifteen thousand years ago, read human faces surprisingly well and react to our voices. Cats came later and kept more independence. Of course, a pet is also a responsibility: vaccines, food and veterinary visits cost money every month. Anyone who cannot guarantee that care should probably wait, because an abandoned animal pays a very high price.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "which",
       "that",
       "who",
       "what",
-      "whose"
+      "whose",
+      "which"
     ],
-    "gabarito": "A",
+    "gabarito": "E",
     "comentario": "A oração está entre vírgulas, ou seja, é explicativa (non-defining), e nesse tipo de oração o pronome relativo para animais e coisas é obrigatoriamente \"which\". \"That\" jamais pode ser usado em orações relativas explicativas separadas por vírgulas. \"Who\" se refere a pessoas, \"what\" não funciona como pronome relativo depois de um substantivo e \"whose\" indicaria posse, exigindo um substantivo logo em seguida.",
     "meta_description": "Item B1 de Use of English sobre pronomes relativos em orações explicativas, em texto sobre a convivência com animais de estimação."
   },
@@ -277,13 +277,13 @@
     "texto_base": "Tea and coffee are the two most popular drinks in the world after water, and each one has created an enormous industry. Coffee ___ in more than seventy countries by millions of small farmers, and Brazil produces about a third of the global harvest. Tea travelled from China to Britain and became a national symbol there. Both plants need particular temperatures and rainfall, so climate change is already reducing the areas where they grow well. Prices in the supermarket rarely show how little money reaches the people who pick the leaves.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "is grown",
       "are grown",
+      "is grown",
       "is growing",
       "grows",
       "has grown"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "comentario": "A presença do agente \"by millions of small farmers\" mostra que a frase está na voz passiva, formada aqui por \"is\" + particípio, já que \"coffee\" é substantivo incontável e leva verbo no singular. \"Are grown\" quebra a concordância com esse sujeito. \"Is growing\", \"grows\" e \"has grown\" são formas ativas e ficam agramaticais diante do complemento agentivo introduzido por \"by\".",
     "meta_description": "Questão B1 de Use of English sobre voz passiva com agente, em texto informativo comparando as indústrias do chá e do café."
   },
@@ -295,13 +295,13 @@
     "texto_base": "Teeth are covered by enamel, the hardest material our body produces, but enamel cannot repair itself. Bacteria in the mouth transform sugar into acid, and that acid slowly opens tiny holes. Brushing twice a day helps, although dentists insist that cleaning between the teeth matters just as much. Sweet drinks are especially dangerous because the liquid touches every surface. So if a tooth suddenly hurts every time you drink something cold, something ___ wrong under the enamel, and you should visit a dentist before the pain becomes serious.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "must be",
       "can't be",
       "must to be",
       "cannot being",
+      "must be",
       "might not be"
     ],
-    "gabarito": "A",
+    "gabarito": "D",
     "comentario": "Diante de uma evidência clara, o inglês usa \"must + infinitivo sem to\" para expressar dedução com certeza quase total, e o texto conclui exatamente isso a partir da dor. \"Can't be\" e \"might not be\" negam o problema e contradizem a recomendação seguinte de procurar um dentista. \"Must to be\" e \"cannot being\" são agramaticais, porque modais nunca são seguidos de \"to\" nem de gerúndio.",
     "meta_description": "Exercício B1 de Use of English sobre modais de dedução, em texto sobre esmalte dentário, açúcar e sensibilidade nos dentes."
   },
@@ -331,13 +331,13 @@
     "texto_base": "Parrots are among the few animals that can copy human speech, and some of them clearly connect words with situations. In the wild they live in noisy groups and fly many kilometres every day, so a bird alone in a small cage quickly becomes stressed and starts pulling out its own feathers. Good owners give them toys, space and hours of company, and they cover the cage at night ___ the animal can rest properly. Illegal trade is still a serious problem, because thousands of chicks are taken from nests every year.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "so that",
       "so as",
       "although",
+      "so that",
       "however",
       "in order"
     ],
-    "gabarito": "A",
+    "gabarito": "C",
     "comentario": "Para introduzir uma finalidade seguida de uma oração completa com sujeito e verbo modal, usa-se \"so that\". \"So as\" e \"in order\" só aparecem antes de infinitivo com \"to\" (so as to rest, in order to rest), nunca antes de \"the animal can rest\". \"Although\" expressaria contraste e \"however\" é advérbio conectivo, ambos incompatíveis com a relação de propósito entre cobrir a gaiola e permitir o descanso.",
     "meta_description": "Item B1 de Use of English sobre conectores de finalidade como \"so that\", em texto informativo sobre papagaios em cativeiro."
   },
@@ -349,13 +349,13 @@
     "texto_base": "Water plants do much more than decorate a lake. Their roots hold the soil, their leaves give shade to fish, and many species absorb metals and other pollutants from the water. Engineers have copied this idea and built artificial wetlands that clean waste water from small towns at a very low cost. If every city ___ this natural technology, rivers would be considerably cleaner. Some floating species, however, grow so fast that they cover the whole surface, block the light and kill everything below, which is why they must be controlled carefully.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "used",
       "would use",
       "will use",
       "is using",
-      "has used"
+      "has used",
+      "used"
     ],
-    "gabarito": "A",
+    "gabarito": "E",
     "comentario": "A oração principal traz \"would be\", marca da segunda condicional, que fala de uma situação hipotética; nesse padrão a oração com \"if\" fica no past simple, ou seja, \"used\". \"Would use\" está errado porque \"would\" não aparece depois de \"if\" nessa estrutura. \"Will use\" pertence à primeira condicional e não combina com \"would be\" na oração principal.",
     "meta_description": "Questão B1 de Use of English sobre segunda condicional, em texto sobre plantas aquáticas e tratamento natural de água."
   },
@@ -367,13 +367,13 @@
     "texto_base": "Cheese was probably invented by accident, when milk was transported in bags made from animal stomachs. For thousands of years it ___ be simply a practical solution: a way of keeping the energy of milk for months without a refrigerator. Today it is a gastronomic product with hundreds of protected names, and some varieties are more expensive per kilo than meat. Production still depends on three things: good milk, the right bacteria and patience. Environmentally, however, dairy farming uses a lot of water and land, so many people are reducing the quantity they eat.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "used to",
       "use to",
+      "used to",
       "was used to",
       "is used to",
       "uses to"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "comentario": "A lacuna vem antes do infinitivo \"be\", e a estrutura que expressa um estado do passado que não vale mais é \"used to + infinitivo\". \"Use to\" e \"uses to\" não existem em frases afirmativas; a forma sem \"d\" só aparece com o auxiliar \"did\". \"Was used to\" e \"is used to\" significam \"estar acostumado\" e pedem substantivo ou gerúndio, jamais o infinitivo \"be\".",
     "meta_description": "Exercício B1 de Use of English sobre \"used to\" em frase afirmativa, com texto sobre a origem e a produção do queijo."
   },
@@ -385,13 +385,13 @@
     "texto_base": "A library is one of the last public spaces ___ you can stay for several hours without spending any money. That simple fact makes it much more than a room full of books. Modern libraries lend films and musical instruments, offer free internet, run reading clubs for children and give a quiet place to students who have no desk at home. In small towns, the library is often the only cultural centre. Budget cuts have closed many of them in the last decade, and communities have organised protests to keep the doors open.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "where",
       "which",
       "that",
       "who",
+      "where",
       "when"
     ],
-    "gabarito": "A",
+    "gabarito": "D",
     "comentario": "O antecedente \"public spaces\" indica lugar, e a oração relativa já está completa (\"you can stay for several hours\"), sem falta de sujeito ou objeto; nesse caso o pronome adequado é \"where\", que equivale a \"in which\". \"Which\" e \"that\" só caberiam se a oração ficasse sem sujeito ou objeto, o que não ocorre. \"Who\" se refere a pessoas e \"when\" a expressões de tempo.",
     "meta_description": "Item de Use of English B1 sobre o pronome relativo de lugar \"where\", em texto sobre o papel social das bibliotecas públicas."
   },
@@ -421,13 +421,13 @@
     "texto_base": "Whales are the largest animals that have ever lived on Earth, bigger even than the dinosaurs. During the nineteenth and twentieth centuries, industrial fleets hunted them for oil and meat until several species almost disappeared. In 1986 most countries agreed ___ commercial whaling, and some populations have slowly recovered since then. New dangers have appeared, though: collisions with enormous cargo ships, plastic in the stomach and underwater noise that confuses their communication. Scientists have also discovered that whales help the climate, because their bodies carry huge quantities of carbon to the deep ocean.",
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
-      "to stop",
       "stopping",
       "stop",
+      "to stop",
       "to stopping",
       "stopped"
     ],
-    "gabarito": "A",
+    "gabarito": "C",
     "comentario": "O verbo \"agree\" é seguido de infinitivo com \"to\" quando indica a decisão de fazer algo, como em \"they agreed to stop\". Por isso \"stopping\" está errado, já que \"agree\" não aceita gerúndio como complemento direto. \"Stop\" sem \"to\" e \"stopped\" também não formam estrutura possível depois desse verbo.",
     "meta_description": "Exercício B1 de Use of English sobre verbos seguidos de infinitivo, em texto sobre a caça às baleias e sua proteção internacional."
   }

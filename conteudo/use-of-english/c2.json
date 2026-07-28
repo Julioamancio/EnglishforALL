@@ -1,0 +1,434 @@
+[
+  {
+    "titulo": "Snakes: inversão após adverbial negativo (C2)",
+    "tema": "Inversão estilística",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "No animal has been asked to carry so much on so little. The snake has no limbs to gesture with, no face capable of expression, no voice beyond a warning; and yet, across languages that share nothing else, it has been made to stand for cunning, for medicine, for eternity, for the moment a garden stopped being safe. ___ has the snake been granted the dignity of neutrality. It arrives in our sentences already sentenced. What interests me is the mechanism: an animal that cannot be read acquires, precisely because it cannot be read, an unlimited capacity to be interpreted. Blankness invites projection. The lizard blinks and we relax; the snake does not blink, and into that steady lidless attention we pour whatever we cannot admit about ourselves. Herpetologists patiently explain the spectacle scale, the transparent disc fused over the eye, and the explanation changes nothing, because the fear was never about optics. It was about a creature that refuses the small social signals by which we decide, without ever deciding, that a thing means us no harm. We have not misread the snake. We have read it far too eagerly, and then called the result knowledge.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Throughout that long history",
+      "At no point in that long history",
+      "For much of that long history",
+      "During that long history",
+      "In the course of that long history"
+    ],
+    "gabarito": "B",
+    "comentario": "A ordem que segue a lacuna é invertida: o auxiliar has vem antes do sujeito the snake. Em inglês, essa inversão só é licenciada quando o elemento fronteado tem valor negativo ou restritivo, como em at no point, nowhere, seldom, only then. Throughout, during, for much of e in the course of são adverbiais puramente temporais e afirmativos: com eles a frase exigiria a ordem normal (the snake has been granted), de modo que produzem estrutura agramatical. A escolha, portanto, não é de sentido, mas de gatilho sintático.",
+    "meta_description": "Questão C2 sobre inversão após adverbial negativo, com texto ensaístico sobre cobras e simbolismo."
+  },
+  {
+    "titulo": "Zoos: verbo de relato com nuance de concessão (C2)",
+    "tema": "Verbos de relato",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The zoo is the only museum whose exhibits can die of boredom, and the only one whose curators are obliged to argue that captivity is a form of care. The argument is not absurd. Breeding programmes have pulled several species back from the edge, and the visitor who has stood close to something enormous rarely votes afterwards as though the world were empty. But the most honest defenders of the institution ___ that no enclosure, however ingeniously landscaped, can return to an animal the one thing its confinement removed: the possibility of going somewhere else. Everything else can be simulated. Climate, diet, substrate, even a plausible pretence of foraging can be engineered by a competent keeper. Distance cannot. A tiger's territory is not scenery to be reproduced at scale; it is a verb, an activity of crossing, and a hundred metres of naturalistic planting is not a small version of it but a different thing wearing its clothes. That admission does not close the case against the zoo. It simply relocates the question from architecture to ethics, where it has always belonged, and where the answers are harder to photograph and impossible to sell at the gift shop.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "contend",
+      "posit",
+      "maintain",
+      "concede",
+      "assert"
+    ],
+    "gabarito": "D",
+    "comentario": "O conector But e o adjetivo honest anunciam que os próprios defensores admitem algo que enfraquece a posição deles; concede é o único verbo de relato que codifica admissão contra o próprio interesse. Contend, maintain e assert significam sustentar ou afirmar com firmeza, o que tornaria os defensores autores de uma tese contrária a si mesmos sem qualquer marca de contraste. Posit apresenta uma hipótese a ser testada, incompatível com uma constatação que o texto trata como incontroversa. A escolha se decide por nuance semântica do verbo, não por sintaxe: todos aceitam oração com that.",
+    "meta_description": "Item C2 de verbos de relato: distinguir concede de contend, posit e assert em ensaio crítico sobre zoológicos."
+  },
+  {
+    "titulo": "Dolphins: elipse verbal e escolha do auxiliar (C2)",
+    "tema": "Elipse verbal",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The dolphin was given its reputation before it was ever given a hearing. Sailors credited it with rescue; the nineteenth century read tenderness into that permanent upturned mouth, as the twenty-first century still ___, though it now files the reading under cognition rather than sentiment and supports it with sonograms instead of sea stories. The face has not changed. Only the vocabulary of our flattery has. This matters, because the smile is an accident of skeletal architecture, a fixed curve of bone that would look identical on an animal in agony. We have built an entire moral relationship on a shape. And having built it, we defend it: the dolphin becomes the sea's ambassador, the acceptable recipient of feelings we withhold from creatures of less photogenic geometry. Meanwhile the actual animal does things that ought to trouble the ambassadorship, among them coordinated aggression, infanticide, and a politics of alliance intricate enough to embarrass our sentimentality. None of this makes it less remarkable. It makes it a real animal rather than a mirror. The uncomfortable possibility is that intelligence, wherever it appears, arrives with the whole package, and that we have been admiring a face while ignoring a mind.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "does",
+      "do",
+      "is",
+      "has",
+      "did"
+    ],
+    "gabarito": "A",
+    "comentario": "A lacuna é um caso de elipse verbal em oração comparativa introduzida por as: o verbo pleno reads tenderness into it é apagado e sobra apenas o auxiliar de apoio do. Como o sujeito é the twenty-first century, singular, e o advérbio still situa a ação no presente em curso, a única forma possível é does. Do falha por concordância; did falha porque colide com still e com um século ainda em andamento. Is exigiria antecedente progressivo ou passivo e has exigiria antecedente perfectivo, e o antecedente aqui é um presente simples subentendido.",
+    "meta_description": "Elipse verbal em C2: escolher o auxiliar correto em oração com as e still, em texto sobre golfinhos e projeção humana."
+  },
+  {
+    "titulo": "Bats: subjuntivo formal depois de lest (C2)",
+    "tema": "Subjuntivo com lest",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The eighteenth-century naturalists who first crawled into church roofs wrote in a register we have lost, and their caution reads now like piety. Move slowly through the loft, one of them advises, and keep the lantern low, lest a single careless beam ___ the colony into premature waking and cost the young the fat they will need in January. The advice is sound and the grammar is antique, and both are worth preserving. Bats have suffered more than most animals from our habit of assigning species to categories of feeling. They are neither the vermin of the sanitary pamphlet nor the gothic messengers of the illustrated novel; they are mammals with an expensive metabolism and an extremely narrow margin. A disturbed hibernaculum is not merely startled. It is impoverished. Each unscheduled arousal burns days of stored energy that cannot be replaced until the insects return, which is why a winter of curiosity can empty a roof more thoroughly than a winter of cold. What the old naturalist understood, without the physiology to explain it, was that our attention is not free. Even looking has a price, and something small and hanging in the dark is the one paying it.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "startles",
+      "startled",
+      "startle",
+      "will startle",
+      "would startle"
+    ],
+    "gabarito": "C",
+    "comentario": "A conjunção lest, marca de registro formal e literário, seleciona o subjuntivo presente, isto é, a forma nua do verbo, sem o s de terceira pessoa: lest a beam startle. O próprio texto sinaliza esse registro ao chamar a gramática de antique. Startles aplica a concordância do indicativo, que a construção com lest justamente suspende. Will startle e would startle são impossíveis porque lest já carrega o valor modal de receio e não admite auxiliar de futuro ou condicional. Startled introduziria passado, incompatível com um conselho dado no presente.",
+    "meta_description": "Questão C2 sobre o subjuntivo exigido por lest, em texto sobre morcegos, hibernação e o custo da curiosidade humana."
+  },
+  {
+    "titulo": "The moon: condicional invertida com were (C2)",
+    "tema": "Condicional invertida",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "Every calendar we have ever kept is a negotiation with a rock that is slowly leaving. The moon recedes by a few centimetres a year, which is nothing in a human life and everything across the span in which tides carved estuaries and organisms learned to time their spawning to a light in the sky. ___ the moon appreciably nearer, the tides would rise into the towns whose clocks were set by them, the day itself would be shorter, and the whole apparatus of hours we mistake for a natural fact would have to be renegotiated from the beginning. This is the quiet scandal of the object: it looks like permanence and behaves like a process. We have used it as the standard image of the unchanging, the same moon Sappho saw, as if sameness were the point, while it has been steadily draining momentum out of the planet's spin and lengthening our afternoons by fractions no ancestor could ever have felt. Nothing in the sky was ever a fixed point. There were only things moving slowly enough that a short-lived and self-important species could mistake their patience for eternity, and then build a mythology on the error.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Was",
+      "Had",
+      "Would",
+      "Should",
+      "Were"
+    ],
+    "gabarito": "E",
+    "comentario": "Trata-se de uma condicional irreal do presente sem if, formada pela inversão do subjuntivo were com o sujeito: Were the moon nearer equivale a If the moon were nearer, e a oração principal com would rise confirma a leitura hipotética. Was nunca sofre essa inversão, que é reservada à forma de subjuntivo. Had exigiria particípio, como em Had the moon been nearer, e aqui não há been. Would e Should não podem ser seguidos diretamente por um sintagma adjetivo sem verbo, o que torna as duas opções agramaticais.",
+    "meta_description": "Item C2 de condicional invertida com Were, em ensaio sobre a Lua, as marés e a ilusão de permanência."
+  },
+  {
+    "titulo": "Crocodiles: colocação fixa com bide (C2)",
+    "tema": "Colocação de baixa frequência",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "There is a kind of attention that looks exactly like absence, and the crocodile has perfected it. For an hour, for an afternoon, for whatever unit of time a reptile can be said to keep, it ___ its time at the waterline, and nothing in its posture distinguishes waiting from indifference or from death. Then the river folds over and something that came down to drink is no longer there. We are wrong to call this patience. Patience is a virtue, which is to say a cost, a thing endured against the pull of impulse; the animal is not enduring anything at all. Its economy is arranged so that stillness is cheap and effort is catastrophic, and what we admire as discipline is simply the shape a metabolism takes when calories are scarce and violence is expensive. The mistake is instructive. We keep reaching for moral vocabulary to describe organisms that have no use for it, and then congratulating ourselves on the insight. The crocodile has been doing this for longer than there have been flowers, and it will be doing it after the last observer has run out of adjectives, which is perhaps the only genuinely humbling fact in the business.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "bids",
+      "bides",
+      "abides",
+      "waits",
+      "keeps"
+    ],
+    "gabarito": "B",
+    "comentario": "Bide one's time é uma colocação fixa e de baixa frequência que significa aguardar deliberadamente o momento oportuno, exatamente o comportamento descrito no parágrafo. Bids pertence a outro verbo, ligado a ofertas e lances, e a grafia bide one's time é a única reconhecida na norma culta. Abides significa suportar ou permanecer e não admite time como objeto direto nesse sentido. Waits é intransitivo nesse uso e pediria for, já que a língua consagra waits its turn, e não waits its time; keeps its time remete à marcação de ritmo, sentido alheio ao contexto.",
+    "meta_description": "Colocação de baixa frequência em C2: bide one's time, em texto sobre crocodilos, imobilidade e vocabulário moral."
+  },
+  {
+    "titulo": "Helicopters: partícula precisa em phrasal verb (C2)",
+    "tema": "Escolha idiomática",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The aeroplane persuades; the helicopter argues. One shapes itself to the air and is carried, and the physics of that arrangement feel almost like consent. The other beats the air into temporary submission and stays up only for as long as the argument is maintained, which is why the machine feels less like a vehicle than like a position being held. Everything about it is provisional. Stop the engine on a wing and you have a glider and some time to think; stop it here and you have a negotiation with autorotation conducted at speed. And yet the helicopter does the work no wing can do: it goes to places that have no runway and no room, and it leaves with people who would otherwise have stayed. Watch a mountain rescue pilot set her ___ on a ledge the width of a kitchen table, in wind that arrives from three directions, and the abstraction dissolves. What looks like showmanship is arithmetic performed by hand, continuously, with no margin banked anywhere. The romance of flight belongs to the fixed wing. The helicopter has no romance. It has an argument, and it wins that argument several hundred times a day, and then lands.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "off",
+      "up",
+      "out",
+      "down",
+      "over"
+    ],
+    "gabarito": "D",
+    "comentario": "Set down é o phrasal verb consagrado para pousar uma aeronave em um ponto determinado, e o complemento on a ledge confirma esse sentido de contato com uma superfície. Set off significa desencadear ou partir em viagem, o que contradiz a imagem de pouso sobre uma saliência estreita. Set up significa montar ou instalar e set out significa expor ou dispor, ambos incompatíveis com um objeto que designa a própria aeronave. Set over não existe como unidade lexical no inglês corrente. A distinção é puramente idiomática, já que todas as partículas são gramaticalmente possíveis após set.",
+    "meta_description": "Questão C2 sobre a partícula correta em set down, com texto ensaístico sobre helicópteros e o custo do voo."
+  },
+  {
+    "titulo": "Jungles: hedging acadêmico com advérbio (C2)",
+    "tema": "Hedging acadêmico",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "___, the word arrived in European languages already carrying its verdict, and no amount of later botany has managed to strip that verdict out. Jungle came in from Sanskrit by way of administration, and what it named, in the mouths of the men who brought it home, was not an ecosystem but an obstacle: land that had refused cultivation, ground that would not submit to a straight line. The philological record is too thin to settle the matter cleanly, and one should be careful with etymologies, which tend to flatter whoever tells them. Still, the pattern is hard to miss. Rainforest is a description; jungle is a judgement wearing the costume of a description. One word invites study, the other invites clearing. And the judgement outlived the empire that issued it: the jungle is still where fictional characters go to lose their reason, still the adjective attached to markets and schoolyards we have decided are ungoverned. The forest itself is indifferent to all of this. It is the most structured thing on the planet, layered and scheduled and negotiated down to the millimetre, and the only real chaos in the vicinity has always been in the naming.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Arguably",
+      "Undeniably",
+      "Indisputably",
+      "Demonstrably",
+      "Incontrovertibly"
+    ],
+    "gabarito": "A",
+    "comentario": "O parágrafo declara que o registro filológico é too thin to settle the matter cleanly e recomenda cautela com etimologias, o que exige um advérbio de atenuação, função típica do hedging acadêmico. Arguably marca a tese como defensável, mas não provada, em harmonia com essa ressalva. Undeniably, indisputably e incontrovertibly afirmam que a proposição não pode ser contestada, contradizendo diretamente a frase seguinte. Demonstrably alega existir demonstração empírica, justamente o que o autor declara faltar. Todas as opções são advérbios de comentário e ocupariam a mesma posição sintática.",
+    "meta_description": "Hedging acadêmico em C2: escolher Arguably entre advérbios de certeza, em ensaio sobre a palavra jungle e o olhar colonial."
+  },
+  {
+    "titulo": "Computers: marcador de extensão paralela (C2)",
+    "tema": "Marcador discursivo",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "We were promised a tool and we received a habitat. That is not a complaint about screens; it is a claim about what tools do when they become continuous. A hammer shapes the hand for as long as the hand holds it, and then the hand is returned to itself. The machine on the desk is never put down, and so the shaping has no end point: attention learns the rhythm of the interface, memory outsources whatever the index will hold, and the sentence itself begins to arrive in the lengths the medium rewards. ___, the archive changes the archivist. A library that can be searched instantly does not merely deliver the passage faster; it makes a certain kind of thinker unnecessary, the one who held the shape of an argument in his head because retrieval was expensive. Whether that is a loss depends on what you believe thinking is for. If it is the production of conclusions, the exchange looks like a clear profit. If it is the slow arrangement of an interior, then something has been traded away quietly, without a receipt, and we will not know the price for a generation, by which time nobody will remember the alternative.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "On the contrary",
+      "Be that as it may",
+      "By the same token",
+      "For all that",
+      "In the event"
+    ],
+    "gabarito": "C",
+    "comentario": "A lacuna liga duas afirmações que seguem exatamente a mesma lógica: a ferramenta contínua molda o usuário e, pelo mesmo raciocínio, o arquivo molda o arquivista. By the same token é o marcador que estende um argumento a um caso paralelo. On the contrary exigiria uma negação anterior a ser corrigida, e não há nenhuma. Be that as it may e For all that são concessivos e sinalizariam que o que vem depois contraria o parágrafo anterior, quando na verdade o prolonga. In the event introduz circunstância ou eventualidade e não articula ideias argumentativas.",
+    "meta_description": "Marcador discursivo em C2: By the same token e a extensão paralela de um argumento sobre computadores e memória."
+  },
+  {
+    "titulo": "Cities: registro e conotação de substantivos urbanos (C2)",
+    "tema": "Registro e conotação",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "A city is the only artefact large enough to be experienced from the inside, which is why nobody can describe one honestly. The visitor sees a skyline and calls it ambition. The commuter sees the same skyline for the eleven thousandth time and sees nothing at all, which is not indifference but efficiency: perception is expensive, and a city survives its inhabitants only by becoming invisible to them. Between those two blindnesses sits everything worth saying about urban life. Consider the edge, where the argument is always sharpest, and where what the brochures call growth is what the people living out there experience as ___, the slow unplanned smear of warehouse and cul-de-sac across land that fed somebody a generation ago. The same process, two vocabularies, and the choice between them is not decorative. It determines what gets funded. Cities are, in the end, arguments about who is permitted to belong, conducted in concrete because concrete outlasts the people making the argument. Every zoning decision is a sentence in a language nobody admits to speaking, and every resident is fluent in it, and almost none of them could state a single rule of the grammar.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "expansion",
+      "growth",
+      "development",
+      "enlargement",
+      "sprawl"
+    ],
+    "gabarito": "E",
+    "comentario": "A frase opõe deliberadamente dois vocabulários, o dos folhetos e o dos moradores, e a lacuna precisa do termo carregado de conotação negativa que se contrapõe a growth. Sprawl é a colocação consagrada em urban sprawl e traz justamente a ideia pejorativa de espalhamento desordenado, retomada pela aposição slow unplanned smear. Growth esvaziaria o contraste, já que a mesma palavra aparece no outro lado da oposição. Expansion, development e enlargement são neutros ou até positivos e por isso não sustentam a antítese anunciada por The same process, two vocabularies.",
+    "meta_description": "Registro e conotação em C2: por que apenas sprawl completa a oposição entre discurso oficial e experiência dos moradores."
+  },
+  {
+    "titulo": "Pandas: verbo de relato para hipótese (C2)",
+    "tema": "Verbos de relato",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "No animal has been more thoroughly conscripted. The panda is a logo before it is a bear, and the logo has done real work, since money has been raised, habitat bought and treaties signed, at the cost of turning a living thing into a permanent invitation to condescend. The condescension is usually dressed as biology: an animal that eats what it cannot properly digest, that reproduces reluctantly, that seems to be managing a slow and dignified withdrawal from the business of existing. Some biologists ___ that the dietary corner is not a failure at all but an unusually stable bargain, with abundant food, few competitors and a low-energy life that has persisted for millions of years, though the proposition is far easier to state than to test, and the fossil evidence permits several stories. What is certain is that the mockery says more about us than about the bear. We admire efficiency because we are anxious about scarcity, and we read an animal that spends fourteen hours a day chewing as a creature failing at something. It is not failing. It is doing the only thing it has ever done, in the last forests where doing it remains possible.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "concede",
+      "posit",
+      "recant",
+      "lament",
+      "attest"
+    ],
+    "gabarito": "B",
+    "comentario": "O próprio texto chama o conteúdo da oração de proposition e observa que ela é easier to state than to test, ou seja, trata-se de uma hipótese avançada para discussão: posit é o verbo de relato que designa exatamente esse gesto. Concede implicaria admitir algo desfavorável à própria posição, mas a ideia defendida é favorável ao panda e nova. Attest afirma testemunhar a verdade de um fato, o que colide com a ressalva de que a evidência fóssil admite várias leituras. Recant significa retratar-se de uma tese anterior, inexistente aqui, e lament expressaria pesar, não proposição teórica.",
+    "meta_description": "Verbos de relato em C2: escolher posit para uma hipótese ainda não testada em texto crítico sobre pandas e símbolos."
+  },
+  {
+    "titulo": "Football: inversão enfática com so + adjetivo (C2)",
+    "tema": "Inversão enfática",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "Consider what the game has to work with: a field, a ball, a rule against hands. From that poverty it has built something no state religion has managed in a century, which is a set of rituals that people who agree on nothing else will perform simultaneously, weekly, in ninety countries, and pass on to their children as a matter of course. ___ the ritual's hold that a man who has not knelt in a building since childhood will find himself on his knees at the edge of a pitch, in public, weeping, and afterwards will be unable to explain it and will not much want to. The sociologists have their accounts and the accounts are not wrong. Tribal identification, the licensed suspension of decorum, the scarcity of legitimate occasions for adult male grief. But something escapes the explanation. What the ninety minutes provide is a contest whose outcome genuinely is not known, in a life increasingly arranged so that very little is genuinely not known, and the value of that is almost impossible to overstate. Uncertainty has become a luxury good. The stadium is one of the last places licensed to sell it, and it sells out.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "So completely is",
+      "Such complete is",
+      "So complete it is",
+      "So complete is",
+      "As complete is"
+    ],
+    "gabarito": "D",
+    "comentario": "A construção correlativa so + adjetivo + verbo + sujeito + that exige inversão obrigatória quando o adjetivo é fronteado: So complete is the hold that. So completely é advérbio e não pode funcionar como predicativo de hold, que pede adjetivo. Such combina-se com sintagma nominal, como em Such is the hold, e não com adjetivo isolado, o que elimina Such complete is. So complete it is mantém a ordem direta e desfaz a inversão que a estrutura exige. As complete is introduziria comparação sem segundo termo, deixando a oração incompleta.",
+    "meta_description": "Inversão enfática em C2 com so + adjetivo, em texto ensaístico sobre futebol, ritual e incerteza como bem escasso."
+  },
+  {
+    "titulo": "Sport: substituição por pro-forma adverbial (C2)",
+    "tema": "Substituição pro-forma",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "We like to say the contest is decided on the day, by the better performance, and that everything before the whistle is preparation rather than destiny. The ledgers of the last hundred years suggest ___. Money predicts outcome with a reliability that would be considered scandalous in any other domain claiming to be a meritocracy, and the predictions have grown more reliable, not less, as the sums involved have grown. This is the awkwardness at the centre of the whole enterprise. Sport sells the proposition that effort is legible and reward is proportional, the one clean transaction left in a world of opaque ones, while its economics quietly guarantee that the same handful of institutions will occupy the same handful of positions for the foreseeable future. And yet the appetite does not diminish. Perhaps that is because the proposition is not really a description but a wish, and wishes survive contradiction rather better than descriptions do. Or perhaps it is because the exceptions, being rare, are precious in a way that regularity could never make them: the small club that goes further than it should is not evidence against the system. It is the system's most effective advertisement.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "otherwise",
+      "not",
+      "so",
+      "else",
+      "contrary"
+    ],
+    "gabarito": "A",
+    "comentario": "A lacuna substitui uma oração inteira que contradiz a crença exposta antes, e suggest otherwise é a fórmula consagrada para dizer que os dados apontam o contrário. So funcionaria como pro-forma de confirmação, portanto inverteria o sentido, além de não ser colocação aceita com suggest. Not aparece como pro-forma apenas com verbos como think, hope e suppose, nunca com suggest. Else não ocorre como complemento verbal isolado e contrary só seria possível com artigo, na expressão suggest the contrary, que não é a opção apresentada.",
+    "meta_description": "Substituição por pro-forma em C2: suggest otherwise em ensaio sobre esporte, dinheiro e a ilusão de meritocracia."
+  },
+  {
+    "titulo": "Choosing a pet: condicional invertida com should (C2)",
+    "tema": "Condicional invertida",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "Nobody chooses a pet. People believe they do; they read about temperament and shedding and life expectancy, they consider the size of the flat and the hours they work, and then they go to the place where the animals are, and something happens that has nothing to do with any of it. ___ the decision be made on the evidence alone, most households would contain a different animal entirely, and a great many would contain no animal, since the honest calculation rarely favours acquiring a dependent that cannot be reasoned with and will predecease you. The criteria are not being applied. They are being assembled afterwards, to dignify a recognition that took less than a second. This is not a failure of rationality; it is a different faculty doing what it was built to do. We are pattern-reading animals with an oversensitive apparatus for detecting the presence of another mind, and that apparatus fires at a shape in a cage and produces a conviction the intellect then hurries to justify. The rest of the relationship follows from that first unearned certainty: fourteen years of feeding and vet bills, and grief that surprises everyone, including the mourner.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Were",
+      "Had",
+      "Should",
+      "Did",
+      "Would"
+    ],
+    "gabarito": "C",
+    "comentario": "A presença do infinitivo nu be identifica a inversão com should, equivalente a If the decision should be made, usada para hipóteses formais e pouco prováveis. Were exigiria a forma finita, como em Were the decision made, e não aceita be depois do sujeito. Had pediria particípio, como em Had the decision been made, também ausente. Did produziria uma pergunta e não uma condicional, e Would não encabeça oração condicional invertida em inglês padrão, além de deixar a estrutura sem verbo principal conjugado.",
+    "meta_description": "Condicional invertida com Should em nível C2, em texto sobre a escolha de um animal de estimação e a racionalização tardia."
+  },
+  {
+    "titulo": "Pets: colocação fixa out of all proportion (C2)",
+    "tema": "Colocação fixa",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The strangest thing about keeping an animal is not the expense or the mess. It is the discovery, usually made too late to be of any use, that one has contracted an attachment out of all ___ to the creature's actual span, and that no part of the surrounding culture has anything sensible to say about it. Bereavement leave does not cover a cat. Colleagues offer the small embarrassed sentence reserved for losses that are felt to be excessive, and the mourner, who half agrees, files the grief somewhere private and gets on with the week. But the disproportion is the point, not a defect. What the animal supplies is a relationship without language, which means a relationship without negotiation, without the accumulated sediment of things said and half-retracted that constitutes every human intimacy. Nothing has ever been explained; nothing therefore has ever been misunderstood. That is not a lesser bond. It is a bond of a different kind, and the reason it hurts so much on the last day at the surgery is precisely that it never contained a single word one might now wish unsaid. There is nothing to revise. There is only the absence, arriving all at once, in a quiet room.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "measure",
+      "scale",
+      "ratio",
+      "balance",
+      "proportion"
+    ],
+    "gabarito": "E",
+    "comentario": "Out of all proportion to é uma colocação fixa do inglês culto e a única sequência que aceita o complemento com to, retomada logo depois pelo substantivo disproportion. Measure aparece em beyond all measure, expressão que não admite complemento com to e usa outra preposição inicial. Scale ocorre em on a large scale, nunca no molde out of all scale to. Ratio pede a construção in a ratio of e pertence ao vocabulário quantitativo, e balance só funciona em out of balance with. Nenhuma variante alternativa sobrevive ao complemento to the creature's span.",
+    "meta_description": "Colocação fixa em C2: out of all proportion to, em texto sobre animais de estimação, luto e vínculos sem linguagem."
+  },
+  {
+    "titulo": "Tea or coffee: idiomatismo preposicional (C2)",
+    "tema": "Idiomatismo preposicional",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The two drinks arrived in Europe within a few decades of each other, both bitter, both stimulant, both requiring apparatus and ceremony, and within a century they had divided the continent along lines that had nothing to do with taste. Tea went where the empire went and acquired the manners of the drawing room. Coffee took the house of argument: the newsroom, the exchange, the room where a man could sit for an hour with a paper and still be considered employed. We inherit these arrangements as if they were preferences, and we defend them ___ the strength of nothing but habit and an accident of shipping routes. That is the interesting part. A preference this fiercely held ought to rest on something, and it does, but the something is a supply chain rather than a palate. Ask anyone to justify the choice and you will get a description of a mood, the pause, the clarity, the small daily punctuation, and every word of it would apply equally well to the other cup. What is being defended is not a flavour. It is a version of the self that came bundled with the drink, and versions of the self are not surrendered lightly.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "by",
+      "on",
+      "at",
+      "in",
+      "with"
+    ],
+    "gabarito": "B",
+    "comentario": "On the strength of é locução prepositiva fixa que significa com base em, apoiado em, e é a única combinação consagrada com strength nesse sentido. By the strength of soaria como referência à força física empregada, além de não existir como locução causal na norma. In strength ocorre apenas em expressões como arrive in strength, com sentido de contingente numeroso, e não admite o complemento com of neste molde. At e with não formam locução alguma com strength precedido de artigo definido, resultando em sequências agramaticais.",
+    "meta_description": "Idiomatismo preposicional em C2: on the strength of, em ensaio sobre chá, café e identidades herdadas pelo comércio."
+  },
+  {
+    "titulo": "Teeth: registro técnico e distância clínica (C2)",
+    "tema": "Registro e conotação",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "Teeth are the part of us that is already a fossil. Everything else is provisional, replaced and rebuilt on a schedule the body keeps to itself, but enamel is laid down once, in childhood, and thereafter can only be lost. There is no repair. There is only the management of a decline that began before we could form a memory of the mouth being whole. The profession keeps a Latin word for the process, and files the whole slow ruin under ___, and the Latin does what Latin has always done in medicine: it places a corridor between the patient and the fact, wide enough to stand a professional in. This is not cynicism. Distance is often a kindness, and the blunt everyday word for the same process would frighten more people than it helped. But notice how much of dentistry is conducted in this register, and how little of it we would tolerate in plain speech. A chart, a code, a term of art, and the thing itself, a body quietly dismantling the only hard structure it will ever make, is held at exactly the distance where it can be discussed. That distance is the profession's finest instrument.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "rot",
+      "decay",
+      "wear",
+      "caries",
+      "damage"
+    ],
+    "gabarito": "D",
+    "comentario": "O período afirma explicitamente que a profissão guarda uma palavra latina para o processo e depois contrasta esse termo com the blunt everyday word, de modo que a lacuna só admite o item de origem latina e registro técnico. Caries é o único termo latino do conjunto e o rótulo clínico consagrado. Rot pertence ao registro coloquial e é justamente a palavra crua que o texto opõe ao latim. Decay, wear e damage são substantivos de uso corrente e origem vernácula ou anglo-normanda, incapazes de sustentar a observação metalinguística sobre o latim.",
+    "meta_description": "Registro e conotação em C2: por que apenas caries satisfaz a observação sobre o latim clínico em texto sobre dentes."
+  },
+  {
+    "titulo": "Farms: hedging acadêmico em sintagma verbal (C2)",
+    "tema": "Hedging acadêmico",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The story we tell is a story of ascent: hunters wander, farmers settle, the settling produces surplus, and the surplus produces everything we mean by civilisation. The archaeological record ___ a rather less flattering arrangement. Skeletons from the first farming communities are shorter than those of the foragers who preceded them, more damaged by repetitive labour, more marked by the diseases that arrive when people and animals share a small space for generations. The evidence is fragmentary and contested, and nobody should build a philosophy on a scatter of carbonised seeds. Still, the outline is uncomfortable. Agriculture may not have been chosen so much as fallen into: a good year encourages a larger family, a larger family requires the next year's planting, and within three generations there is no way back to a way of life that no longer supports the number of people it produced. That is not progress. It is a ratchet. What the field gave us was not ease but obligation, and the obligation turned out to be inheritable, and every institution we have built since has been an attempt to organise the consequences of a decision nobody remembers making.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "would seem to suggest",
+      "proves",
+      "establishes",
+      "demonstrates",
+      "confirms"
+    ],
+    "gabarito": "A",
+    "comentario": "O parágrafo declara que a evidência é fragmentary and contested e adverte contra conclusões apressadas, o que exige atenuação no verbo que introduz a tese. A combinação de would, seem e suggest acumula três camadas de hedging, recurso típico da prosa acadêmica cautelosa. Proves, establishes e demonstrates atribuem valor demonstrativo pleno a um material que o próprio texto considera insuficiente, gerando contradição interna. Confirms pressupõe uma hipótese previamente formulada e agora verificada, o que também excede o que o autor admite. Todas as opções são sintagmas verbais que aceitam objeto direto.",
+    "meta_description": "Hedging acadêmico em C2: would seem to suggest contra verbos de certeza, em texto sobre agricultura e o mito do progresso."
+  },
+  {
+    "titulo": "Parrots: marcador discursivo concessivo (C2)",
+    "tema": "Marcador discursivo",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The parrot is the only animal that can quote us, and we have never quite forgiven it. What comes out of the bird is not language, since there is no syntax behind it, no proposition, nothing that could be true or false, and yet it is not mimicry in the way a recording is mimicry either, because the bird chooses its moments and repeats what has earned a reaction. It has learned, in other words, the social function of speech without any of its content, which is an unnerving thing to sit in a room with. ___, the distinction we are so anxious to defend may be thinner than we would like. A great deal of human talk is also produced for effect rather than meaning: the greeting that asks nothing, the agreement that commits to nothing, the phrase deployed because it worked last time. The bird is not doing what we do. But it may be doing what we do more often than we care to admit, and the discomfort in the room when a parrot answers a question correctly is not the discomfort of being imitated. It is the discomfort of being summarised.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Hence",
+      "In sum",
+      "That said",
+      "Thereupon",
+      "Otherwise"
+    ],
+    "gabarito": "C",
+    "comentario": "Antes da lacuna o autor defende que a fala do papagaio não é linguagem; depois dela admite que a fronteira pode ser mais tênue do que se gostaria. Esse movimento é uma concessão que relativiza o que se acabou de sustentar, função exata de That said. Hence introduziria consequência lógica, mas a segunda ideia enfraquece a primeira em vez de decorrer dela. In sum anunciaria síntese do que foi dito, e o que vem é uma ressalva nova. Thereupon marca sucessão temporal e Otherwise apresenta alternativa ou consequência de não se cumprir algo, valores ausentes no contexto.",
+    "meta_description": "Marcador discursivo concessivo em C2: That said, em texto sobre papagaios, imitação e a função social da fala."
+  },
+  {
+    "titulo": "Water plants: inversão com were it not for (C2)",
+    "tema": "Condicional invertida",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "A pond is not a place; it is a slow argument about light. Everything in it is competing for the same few centimetres immediately beneath the surface, and the plants that win are the ones that stop being plants in the ordinary sense, that abandon the stiff engineering the land demands and become instead something closer to a suspended structure, holding their leaves up by displacement rather than by wood. ___ for the scouring of the current and the appetite of a few unglamorous invertebrates, the weed would close the water over like a lid, and the pond would become a wet meadow within a decade, and then a meadow, and then nothing anyone would think to paint. The stillness is the illusion. What looks like the most restful landscape available to us is in fact the fastest, a system held at a particular stage by forces entirely capable of being interrupted. Ornamental ponds are dredged and cut and poisoned to preserve an appearance of repose that nature will not maintain unassisted. We are looking, in every case, at an argument temporarily suspended, and calling the suspension peace, and hanging it above the sofa.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "Was it not",
+      "Had it not",
+      "Should it not",
+      "Would it not",
+      "Were it not"
+    ],
+    "gabarito": "E",
+    "comentario": "A fórmula fixa da condicional negativa invertida no presente é Were it not for X, equivalente a If it were not for X, e a oração principal com would close confirma a hipótese contrafactual atual. Was it not é impossível porque a inversão condicional só opera com o subjuntivo were. Had it not exigiria o particípio been, resultando em Had it not been for, forma que remete ao passado e que não está entre as opções. Should it not e Would it not produziriam interrogativas ou orações principais, nunca a subordinada condicional exigida pela vírgula seguinte.",
+    "meta_description": "Condicional invertida em C2 com Were it not for, em texto sobre plantas aquáticas e a falsa quietude dos lagos."
+  },
+  {
+    "titulo": "Cheese: colocação verbal take hold (C2)",
+    "tema": "Colocação de baixa frequência",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "Cheese is spoilage that somebody agreed to supervise. That is the whole of it: milk, which goes bad reliably and fast, is persuaded to go bad in a direction, and the direction is enforced by salt, by temperature and by an inherited set of gestures nobody in the dairy could fully justify. It is the oldest technology of consent between a species and a microbe. Once the mould ___ hold in the paste, the maker's job is no longer to prevent decay but to referee it, deciding which organisms are guests and which are trespassers, on criteria that are ultimately aesthetic. A rind is a border. What lies on either side of it is chemically continuous, and the distinction between the delicacy and the ruined batch is a judgement made by a person standing in a cold room. This ought to unsettle us rather more than it does. We treat food as a domain of fact, safe or unsafe, fresh or spoiled, and here is an entire category built on the deliberate suspension of that binary, taught by hand, defended by law, and wholly dependent on somebody having decided, centuries ago, that this particular rot was worth the risk.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "gets",
+      "takes",
+      "makes",
+      "catches",
+      "holds"
+    ],
+    "gabarito": "B",
+    "comentario": "Take hold é a colocação consagrada para descrever algo que se instala e começa a se propagar, e funciona sem complemento preposicional obrigatório, como pede a estrutura Once the mould takes hold in the paste. Gets hold e catch hold existem apenas com of e objeto, como em get hold of a rope, sentido concreto de agarrar, incompatível aqui. Makes hold não é combinação aceita no inglês moderno. Holds hold seria uma repetição tautológica sem existência lexical. A escolha depende exclusivamente de colocação estabelecida, já que todos os verbos são formalmente possíveis na posição.",
+    "meta_description": "Colocação de baixa frequência em C2: take hold, em texto sobre queijo, fermentação e o julgamento estético do apodrecimento."
+  },
+  {
+    "titulo": "Libraries: elipse com auxiliar de voz passiva (C2)",
+    "tema": "Elipse e substituição",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "A library is an argument about the future disguised as a room. Everything in it was chosen, and the choosing is invisible, which is precisely what gives the collection its air of neutrality: the shelves look like the world rather than like a committee's opinion of the world. But the catalogue could have been arranged otherwise, and in three cities it ___, and the difference is not clerical. Where a book sits determines who finds it, and who finds it determines what gets written next, and what gets written next arrives, in due course, on a shelf. The system is a loop, and the loop has a temperature. Consider what is not there. Every acquisition is a small verdict on what a community will want to have known about itself in fifty years, delivered by people who will not be present to be corrected. This is an extraordinary power, exercised quietly, on a modest budget, by staff who are among the worst paid professionals in the sector. We defend libraries with the language of access, which is true and insufficient. They are not only where the record is kept. They are where the record is decided.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "had",
+      "has",
+      "did",
+      "was",
+      "were"
+    ],
+    "gabarito": "D",
+    "comentario": "O antecedente elidido é a estrutura passiva arranged otherwise, de modo que o auxiliar remanescente precisa ser uma forma do verbo be: in three cities it was, isto é, it was arranged otherwise. Did é incompatível porque retomaria uma construção ativa, e a oração anterior está na voz passiva. Had e has retomariam um perfeito, e o que se afirma dos três casos é um fato consumado no passado simples, não um aspecto perfectivo. Were viola a concordância com o sujeito singular it. Somente was preserva voz, tempo e concordância.",
+    "meta_description": "Elipse verbal em C2 com auxiliar passivo, em texto sobre bibliotecas, catalogação e o poder invisível da seleção."
+  },
+  {
+    "titulo": "Lions: verbo de relato em disputa científica (C2)",
+    "tema": "Verbos de relato",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "The lion arrived in our imagination as a king and has been paying rent on that metaphor ever since. Everything we notice about it is filtered through the sovereignty we assigned: the mane read as a crown, the sleeping read as leisure, the hunting done by others read as tribute. It is a remarkably durable misreading. Field biologists ___ that the male's celebrated idleness is a form of labour we have simply failed to price, since it includes border patrol, the deterrence of rival coalitions and the prevention of the infanticide that follows a takeover; and their critics reply, with equal confidence and comparable data, that this is a story told backwards from the outcome. The dispute is not going to be settled by better cameras. It is a dispute about what counts as work, which is a question we have not settled among ourselves, in a species that can at least be asked. Meanwhile the animal continues, indifferent to the ledger. What is genuinely strange is that the pride is one of the few social arrangements in the whole order, an exception rather than a rule, and we have taken that exception and made it the emblem of a category.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "contend",
+      "concede",
+      "confess",
+      "acknowledge",
+      "disclose"
+    ],
+    "gabarito": "A",
+    "comentario": "O período descreve uma tese sustentada contra opositores declarados, já que os críticos respondem com igual confiança; contend é precisamente o verbo de relato que marca afirmação em contexto de controvérsia. Concede e acknowledge indicam admitir algo já aceito ou desfavorável a quem fala, o que contradiz a existência de uma reação adversa. Confess implica revelação de falta ou constrangimento pessoal, alheio a um argumento técnico. Disclose supõe divulgar informação previamente oculta e factual, e não defender uma interpretação disputada dos mesmos dados.",
+    "meta_description": "Verbos de relato em C2: contend em contexto de controvérsia científica, em texto sobre leões e a metáfora da realeza."
+  },
+  {
+    "titulo": "Whales: partícula idiomática em hunt out of existence (C2)",
+    "tema": "Escolha idiomática",
+    "genero_textual": "texto didatico",
+    "nivel": "C2",
+    "texto_base": "There is no comfortable way to think about a whale. The scale defeats the ordinary machinery of sympathy: an animal whose heart a person could crawl through, whose calls cross an entire basin, whose life may run to two centuries and may therefore have begun before the industry that hunted it had even been invented. We have no category for that. So we reach for the categories we do have, and the whale becomes a symbol, of the ocean, of what we have damaged, of a scale of being that rebukes us, and the symbol is now so heavy that the animal underneath it can barely be seen at all. This is not a small loss. A symbol cannot surprise you. The actual creatures are stranger than any of the uses we have put them to: cultures of song that change annually across an entire ocean and are then abandoned, feeding techniques transmitted between individuals who are not related, the long unaccountable business of a body that size moving that quietly. We hunted them nearly ___ of existence and then, having stopped, hung them from museum ceilings and called the debt settled. It is not settled.",
+    "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
+    "alternativas": [
+      "off",
+      "clear",
+      "out",
+      "free",
+      "away"
+    ],
+    "gabarito": "C",
+    "comentario": "Hunt something out of existence é a construção resultativa consagrada, na qual out of indica remoção completa de um domínio, como em drive out of business ou frighten out of one's wits. Off não se combina com of nessa posição e produziria a sequência agramatical off of existence. Clear e free pedem outro molde, respectivamente clear of e free of com sentido de estar livre de algo, e não expressam o resultado de eliminação provocado pelo verbo. Away exigiria a preposição from, gerando away from existence, que não é colocação existente no inglês corrente.",
+    "meta_description": "Escolha idiomática em C2: hunt out of existence, em ensaio sobre baleias, escala e o peso dos símbolos."
+  }
+]
