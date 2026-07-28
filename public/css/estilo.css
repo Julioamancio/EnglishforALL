@@ -723,3 +723,51 @@ html[data-tema='escuro'] .quiz__opcao--certa { background: rgba(31,138,76,.18); 
   border: 0; background: none; cursor: pointer;
 }
 .nav__sair button:hover { color: var(--tinta); background: var(--fundo-2); }
+
+/* ---------------------------------------------------- montador de provas */
+.montar__intro { max-width: 60ch; }
+.filtros .acoes { margin-top: .4rem; }
+
+.montar__atalhos { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin: -.4rem 0 1.1rem; font-size: .88rem; }
+.montar__atalhos > span { color: var(--suave); margin-right: .15rem; }
+.chip { text-decoration: none; color: var(--suave); border: 1px solid var(--borda); border-radius: 100px; padding: .28rem .7rem; font-weight: 600; }
+.chip:hover { color: var(--tinta); border-color: var(--borda-forte); }
+.chip--on { color: #fff; background: var(--tinta); border-color: var(--tinta); }
+html[data-tema='escuro'] .chip--on { color: #0e1120; }
+
+.montar__cabeca { display: flex; flex-wrap: wrap; gap: .7rem; align-items: baseline; justify-content: space-between; }
+.montar__cabeca h2 { margin: 0; }
+.montar__pag { font-weight: 500; font-size: .85rem; color: var(--suave); margin-left: .5rem; }
+.montar__massa { display: flex; gap: .45rem; flex-wrap: wrap; }
+.btn--fino { padding: .38rem .8rem; font-size: .85rem; }
+
+.lista-q { list-style: none; margin: 1rem 0 0; padding: 0; }
+.escolha--rica { align-items: start; transition: border-color .12s, background .12s; }
+.escolha--rica:hover { border-color: var(--borda-forte); }
+.escolha--rica:has(input:checked) { border-color: var(--tinta); background: var(--fundo-2); }
+.escolha__corpo { display: grid; gap: .4rem; min-width: 0; }
+.escolha__topo { display: flex; flex-wrap: wrap; gap: .4rem .7rem; align-items: baseline; }
+.escolha__titulo { font-size: 1rem; line-height: 1.3; }
+.escolha__tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+.escolha__tema { font-size: .85rem; color: var(--suave); font-weight: 600; }
+.escolha__previa { font-size: .88rem; color: var(--suave); line-height: 1.5; }
+.escolha__ver { font-size: .82rem; font-weight: 600; justify-self: start; }
+
+.check-linha { display: flex; gap: .5rem; align-items: center; font-size: .92rem; }
+
+.paginacao { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; justify-content: center; margin-top: 1.2rem; }
+.paginacao__meio { font-size: .88rem; color: var(--suave); font-weight: 600; }
+
+/* Barra fixa com o contador e os botões de gerar. */
+.barra-prova { position: sticky; bottom: 0; z-index: 20; background: var(--superficie); border-top: 1px solid var(--borda); box-shadow: 0 -6px 20px rgba(0,0,0,.07); margin-top: 1.5rem; }
+html[data-tema='escuro'] .barra-prova { box-shadow: 0 -6px 20px rgba(0,0,0,.4); }
+.barra-prova__int { max-width: 68rem; margin: 0 auto; padding: .8rem 1.15rem; display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; justify-content: space-between; }
+.barra-prova__info { display: flex; gap: .6rem; align-items: baseline; }
+.barra-prova__limpar { font: inherit; font-size: .85rem; color: var(--suave); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+.barra-prova__limpar:hover { color: var(--tinta); }
+
+@media (max-width: 32rem) {
+  .barra-prova__int { padding: .7rem .9rem; }
+  .barra-prova .acoes { width: 100%; }
+  .barra-prova .btn { flex: 1; text-align: center; }
+}

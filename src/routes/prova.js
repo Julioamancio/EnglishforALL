@@ -19,24 +19,46 @@ router.use((req, res, next) => {
   next();
 });
 
+const POR_PAGINA = 25;
+
 router.get('/', (req, res) => {
   const filtros = {
     tipo: req.query.tipo || null,
     nivel: req.query.nivel || null,
     tema: req.query.tema || null,
     genero: req.query.genero || null,
+    instituicao: req.query.instituicao || null,
+    ano: req.query.ano || null,
     busca: req.query.q || null,
     // Rascunhos só aparecem para o admin.
     publicada: req.session.admin ? null : 1,
   };
 
+  const todas = db.listar(filtros);
+  const pagina = Math.max(1, parseInt(req.query.pagina, 10) || 1);
+  const paginas = Math.max(1, Math.ceil(todas.length / POR_PAGINA));
+  const atual = Math.min(pagina, paginas);
+  const questoes = todas.slice((atual - 1) * POR_PAGINA, atual * POR_PAGINA);
+
+  // Query string sem "pagina", para os links de paginação remontarem o filtro.
+  const base = new URLSearchParams();
+  Object.entries(req.query).forEach(([k, v]) => {
+    if (k !== 'pagina' && v) base.append(k, v);
+  });
+  const qsBase = base.toString();
+
   res.render('admin/montar', {
     title: 'Montar prova',
     description: '',
-    questoes: db.listar(filtros),
+    questoes,
+    total: todas.length,
+    pagina: atual,
+    paginas,
+    qsBase,
     filtros,
     facetas: db.facetas(),
     ROTULOS_TIPO,
+    erro: req.query.erro || null,
     layoutAdmin: true,
   });
 });

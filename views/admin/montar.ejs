@@ -1,26 +1,93 @@
 <%- include('../partials/cabeca') %>
+<%
+  function qs(extra) {
+    const p = new URLSearchParams();
+    const atual = { q: filtros.busca, tipo: filtros.tipo, nivel: filtros.nivel,
+                    genero: filtros.genero, instituicao: filtros.instituicao, ano: filtros.ano };
+    Object.assign(atual, extra);
+    Object.entries(atual).forEach(([k, v]) => { if (v) p.append(k, v); });
+    const s = p.toString();
+    return s ? '/prova?' + s : '/prova';
+  }
+  const temFiltro = Boolean(filtros.busca || filtros.tipo || filtros.nivel ||
+                            filtros.genero || filtros.instituicao || filtros.ano);
+%>
 <div class="env">
   <h1>Montar prova</h1>
-  <p>Filtre, marque as questões e gere o arquivo. O PDF sai pronto para imprimir; o Word sai editável.</p>
+  <p class="montar__intro">Filtre o que você precisa, marque as questões e gere o arquivo. O PDF sai pronto para imprimir; o Word sai editável.</p>
 
-  <form class="painel" method="get" action="/prova">
+  <% if (erro === 'vazio') { %>
+    <p class="aviso aviso--erro">Marque pelo menos uma questão antes de gerar a prova.</p>
+  <% } %>
+
+  <form class="painel filtros" method="get" action="/prova">
     <div class="linha linha--3">
-      <div class="campo"><label for="q">Buscar</label><input type="text" id="q" name="q" value="<%= filtros.busca || '' %>"></div>
-      <div class="campo"><label for="tipo">Tipo</label>
-        <select id="tipo" name="tipo"><option value="">Todos</option>
-          <% facetas.tipos.forEach(function(t){ %><option value="<%= t.valor %>"<%= filtros.tipo===t.valor?' selected':'' %>><%= ROTULOS_TIPO[t.valor]||t.valor %></option><% }) %>
+      <div class="campo">
+        <label for="q">Buscar por palavra</label>
+        <input type="search" id="q" name="q" value="<%= filtros.busca || '' %>" placeholder="tema, título, trecho do texto…">
+      </div>
+      <div class="campo">
+        <label for="nivel">Nível de dificuldade</label>
+        <select id="nivel" name="nivel">
+          <option value="">Todos os níveis</option>
+          <% facetas.niveis.forEach(function(n){ %>
+            <option value="<%= n.valor %>"<%= filtros.nivel===n.valor?' selected':'' %>><%= n.valor %> — <%= n.total %> questões</option>
+          <% }) %>
         </select>
       </div>
-      <div class="campo"><label for="nivel">Nível</label>
-        <select id="nivel" name="nivel"><option value="">Todos</option>
-          <% facetas.niveis.forEach(function(n){ %><option value="<%= n.valor %>"<%= filtros.nivel===n.valor?' selected':'' %>><%= n.valor %></option><% }) %>
+      <div class="campo">
+        <label for="tipo">Tipo de questão</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todos os tipos</option>
+          <% facetas.tipos.forEach(function(t){ %>
+            <option value="<%= t.valor %>"<%= filtros.tipo===t.valor?' selected':'' %>><%= ROTULOS_TIPO[t.valor]||t.valor %> — <%= t.total %></option>
+          <% }) %>
         </select>
       </div>
     </div>
-    <button class="btn btn--sec" type="submit">Filtrar</button>
+    <div class="linha linha--3">
+      <div class="campo">
+        <label for="genero">Gênero textual</label>
+        <select id="genero" name="genero">
+          <option value="">Todos os gêneros</option>
+          <% facetas.generos.forEach(function(g){ %>
+            <option value="<%= g.valor %>"<%= filtros.genero===g.valor?' selected':'' %>><%= rotuloGenero(g.valor) %> — <%= g.total %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="instituicao">Instituição</label>
+        <select id="instituicao" name="instituicao">
+          <option value="">Todas</option>
+          <% facetas.instituicoes.forEach(function(i){ %>
+            <option value="<%= i.valor %>"<%= filtros.instituicao===i.valor?' selected':'' %>><%= i.valor %> — <%= i.total %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="ano">Ano</label>
+        <select id="ano" name="ano">
+          <option value="">Todos</option>
+          <% facetas.anos.forEach(function(a){ %>
+            <option value="<%= a.valor %>"<%= String(filtros.ano)===String(a.valor)?' selected':'' %>><%= a.valor %> — <%= a.total %></option>
+          <% }) %>
+        </select>
+      </div>
+    </div>
+    <div class="acoes">
+      <button class="btn" type="submit">Aplicar filtros</button>
+      <% if (temFiltro) { %><a class="btn btn--sec" href="/prova">Limpar</a><% } %>
+    </div>
   </form>
 
-  <form method="post" action="/prova/pdf">
+  <div class="montar__atalhos">
+    <span>Atalhos:</span>
+    <% ['A1','A2','B1','B2','C1','C2'].forEach(function(n){ %>
+      <a class="chip<%= filtros.nivel===n?' chip--on':'' %>" href="<%= qs({nivel: filtros.nivel===n?'':n}) %>"><%= n %></a>
+    <% }) %>
+  </div>
+
+  <form method="post" action="/prova/pdf" id="formProva">
     <div class="painel">
       <h2>Cabeçalho da prova</h2>
       <div class="linha linha--3">
@@ -28,38 +95,83 @@
         <div class="campo"><label for="titulo_prova">Título</label><input type="text" id="titulo_prova" name="titulo_prova" value="Prova de Língua Inglesa"></div>
         <div class="campo"><label for="turma">Turma / bimestre</label><input type="text" id="turma" name="turma" placeholder="3º ano — 3º bimestre"></div>
       </div>
-      <label style="display:flex;gap:.5rem;align-items:center;font-size:.92rem">
+      <label class="check-linha">
         <input type="checkbox" name="com_gabarito" value="1" checked> Incluir folha de gabarito comentado
       </label>
     </div>
 
     <div class="painel">
-      <h2>Questões (<%= questoes.length %>)</h2>
+      <div class="montar__cabeca">
+        <h2>
+          <%= total %> <%= total === 1 ? 'questão encontrada' : 'questões encontradas' %>
+          <% if (paginas > 1) { %><span class="montar__pag">página <%= pagina %> de <%= paginas %></span><% } %>
+        </h2>
+        <div class="montar__massa">
+          <button class="btn btn--fino" type="button" data-marcar="todas">Marcar as <%= questoes.length %> desta página</button>
+          <button class="btn btn--fino btn--sec" type="button" data-marcar="nenhuma">Desmarcar tudo</button>
+        </div>
+      </div>
+
       <% if (!questoes.length) { %>
-        <p class="vazio">Nenhuma questão com esses filtros.</p>
+        <p class="vazio">Nenhuma questão com esses filtros. <a href="/prova">Limpar filtros</a>.</p>
       <% } else { %>
+        <ul class="lista-q">
         <% questoes.forEach(function(q){ %>
-          <label class="escolha">
-            <input type="checkbox" name="questoes" value="<%= q.id %>">
-            <span>
-              <strong><%= q.titulo %></strong>
-              <span class="card__meta" style="margin-top:.3rem">
-                <span class="card__tag card__tag--nivel"><%= q.nivel_cefr %></span>
-                <span class="card__tag"><%= ROTULOS_TIPO[q.tipo]||q.tipo %></span>
-                <span class="card__tag"><%= q.genero_textual %></span>
-                <% if (q.imagem) { %><span class="card__tag">com imagem</span><% } %>
-                <% if (!q.publicada) { %><span class="selo selo--rascunho">rascunho</span><% } %>
+          <li>
+            <label class="escolha escolha--rica">
+              <input type="checkbox" name="questoes" value="<%= q.id %>" data-titulo="<%= q.titulo.replace(/"/g,'&quot;') %>">
+              <span class="escolha__corpo">
+                <span class="escolha__topo">
+                  <strong class="escolha__titulo"><%= q.titulo %></strong>
+                  <span class="escolha__tags">
+                    <span class="card__tag card__tag--nivel"><%= q.nivel_cefr %></span>
+                    <span class="card__tag"><%= ROTULOS_TIPO[q.tipo]||q.tipo %></span>
+                    <span class="card__tag"><%= rotuloGenero(q.genero_textual) %></span>
+                    <% if (q.instituicao) { %><span class="card__tag"><%= q.instituicao %><%= q.ano ? ' ' + q.ano : '' %></span><% } %>
+                    <% if (q.imagem) { %><span class="card__tag">com imagem</span><% } %>
+                    <% if (!q.publicada) { %><span class="selo selo--rascunho">rascunho</span><% } %>
+                  </span>
+                </span>
+                <span class="escolha__tema"><%= q.tema %></span>
+                <span class="escolha__previa"><%= (q.texto_base || q.enunciado || '').replace(/<[^>]*>/g,'').slice(0, 180) %><%= (q.texto_base || '').length > 180 ? '…' : '' %></span>
+                <a class="escolha__ver" href="/questoes/<%= q.slug %>" target="_blank" rel="noopener">Ver questão completa ↗</a>
               </span>
-            </span>
-          </label>
+            </label>
+          </li>
         <% }) %>
+        </ul>
+      <% } %>
+
+      <% if (paginas > 1) { %>
+        <nav class="paginacao" aria-label="Páginas de questões">
+          <% if (pagina > 1) { %>
+            <a class="btn btn--sec btn--fino" href="/prova?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina - 1 %>">← Anterior</a>
+          <% } %>
+          <span class="paginacao__meio">Página <%= pagina %> de <%= paginas %></span>
+          <% if (pagina < paginas) { %>
+            <a class="btn btn--sec btn--fino" href="/prova?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina + 1 %>">Próxima →</a>
+          <% } %>
+        </nav>
+        <p class="dica">A seleção é mantida ao trocar de página e ao filtrar.</p>
       <% } %>
     </div>
 
-    <div class="acoes">
-      <button class="btn" type="submit" formaction="/prova/pdf">Gerar PDF</button>
-      <button class="btn btn--sec" type="submit" formaction="/prova/docx">Gerar Word</button>
-    </div>
+    <div id="selecionadas"></div>
   </form>
 </div>
+
+<div class="barra-prova" id="barraProva" hidden>
+  <div class="barra-prova__int">
+    <div class="barra-prova__info">
+      <strong id="contador">0 questões</strong>
+      <button class="barra-prova__limpar" type="button" id="limparSel" hidden>limpar seleção</button>
+    </div>
+    <div class="acoes">
+      <button class="btn" type="submit" form="formProva" formaction="/prova/pdf">Gerar PDF</button>
+      <button class="btn btn--sec" type="submit" form="formProva" formaction="/prova/docx">Gerar Word</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/montar.js?v=1" defer></script>
 <%- include('../partials/rodape') %>
