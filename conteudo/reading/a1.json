@@ -1,0 +1,398 @@
+[
+  {
+    "titulo": "The red apple: a fruta na lancheira de Mia (A1)",
+    "tema": "Alimentação e rotina escolar",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "My name is Mia. Every morning my mother puts an apple in my school bag. I like red apples. They are sweet. My brother likes green apples, but I think green apples are not sweet. I eat my apple after lunch.",
+    "enunciado": "De acordo com o texto, Mia prefere maçãs vermelhas porque elas",
+    "alternativas": [
+      "são maiores.",
+      "são doces.",
+      "são mais baratas.",
+      "são as preferidas do irmão.",
+      "cabem na mochila."
+    ],
+    "gabarito": "B",
+    "comentario": "O texto diz \"I like red apples. They are sweet\". O pronome \"they\" retoma \"red apples\", ligando a preferência ao sabor doce. As demais alternativas trazem informações que não aparecem no texto — tamanho, preço e espaço na mochila nunca são mencionados, e o irmão prefere justamente as verdes.",
+    "meta_description": "Questão de reading nível A1 sobre um texto simples de rotina escolar, com cinco alternativas e gabarito comentado em português."
+  },
+  {
+    "titulo": "Family night: a televisão da sala (A1)",
+    "tema": "Família e lazer doméstico",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "We have a big television in the living room. On Friday nights my family watches a film together. My father makes popcorn. My sister chooses the film because it is her turn this week. I always sit on the floor.",
+    "enunciado": "Segundo o texto, quem escolhe o filme da noite é",
+    "alternativas": [
+      "o pai, porque faz a pipoca.",
+      "o narrador, que senta no chão.",
+      "a mãe, que liga a televisão.",
+      "a irmã, porque é a vez dela.",
+      "toda a família, em conjunto."
+    ],
+    "gabarito": "D",
+    "comentario": "A frase \"My sister chooses the film because it is her turn this week\" responde diretamente à pergunta e ainda explica o motivo. O pai aparece no texto, mas fazendo pipoca; o narrador apenas senta no chão. A mãe não é mencionada nesse texto.",
+    "meta_description": "Reading A1 com texto curto sobre lazer em família, questão de compreensão literal e explicação do gabarito passo a passo."
+  },
+  {
+    "titulo": "Bobby the horse: o cavalo da fazenda do avô (A1)",
+    "tema": "Animais e vida no campo",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "My grandfather has a horse. His name is Bobby. Bobby is brown and very tall. He lives on a farm near a river. In the morning he eats grass. I visit him on Sundays and give him carrots.",
+    "enunciado": "De acordo com o texto, o narrador visita Bobby",
+    "alternativas": [
+      "aos domingos.",
+      "todas as manhãs.",
+      "durante as férias.",
+      "quando ele come grama.",
+      "sempre que vai ao rio."
+    ],
+    "gabarito": "A",
+    "comentario": "O texto afirma \"I visit him on Sundays\". A manhã aparece ligada ao que o cavalo come, não à visita; o rio serve apenas para localizar a fazenda. Férias não são mencionadas em momento algum.",
+    "meta_description": "Questão de interpretação em inglês nível A1 sobre um texto descritivo de animal, com gabarito comentado para estudo autônomo."
+  },
+  {
+    "titulo": "The new baby: o irmão que chegou em casa (A1)",
+    "tema": "Família e mudanças na rotina",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "There is a new baby in my house. His name is Tom. He is very small. He sleeps a lot and he cries at night. My mother is tired, so I help her. I sing songs for Tom and he stops crying.",
+    "enunciado": "No texto, o narrador ajuda a mãe porque ela",
+    "alternativas": [
+      "não sabe cantar.",
+      "trabalha à noite.",
+      "está cansada.",
+      "está com o bebê no colo.",
+      "pediu ajuda ao pai."
+    ],
+    "gabarito": "C",
+    "comentario": "A conjunção \"so\" liga causa e consequência em \"My mother is tired, so I help her\": o cansaço é o motivo da ajuda. As outras opções inventam causas que o texto não apresenta; o pai nem sequer aparece.",
+    "meta_description": "Reading A1 sobre a chegada de um bebê na família, com cinco alternativas em português e comentário explicando o conector so."
+  },
+  {
+    "titulo": "Anna's doll: a boneca que veio da avó (A1)",
+    "tema": "Infância e objetos de afeto",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "Anna has an old doll. The doll has yellow hair and a blue dress. It is not new, but Anna loves it. Her grandmother gave her the doll five years ago. Anna takes the doll to bed every night.",
+    "enunciado": "O texto indica que a boneca é importante para Anna porque",
+    "alternativas": [
+      "é nova e bonita.",
+      "tem um vestido azul.",
+      "foi comprada há cinco anos.",
+      "tem cabelo amarelo.",
+      "foi um presente da avó."
+    ],
+    "gabarito": "E",
+    "comentario": "O valor da boneca está no vínculo familiar: \"Her grandmother gave her the doll\". O texto até contrasta isso com a aparência ao dizer \"It is not new, but Anna loves it\". Cor do cabelo e do vestido são apenas descrição física, e a boneca foi dada, não comprada.",
+    "meta_description": "Questão de reading nível A1 sobre valor afetivo de um objeto, com gabarito comentado e foco no contraste marcado por but."
+  },
+  {
+    "titulo": "Where is the cat?: o gato que dorme na cadeira (A1)",
+    "tema": "Animais de estimação e casa",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "I have a small black cat. Her name is Luna. She sleeps on my chair all day. When I come home from school, she runs to the door. She is hungry. I give her milk and fish.",
+    "enunciado": "Segundo o texto, Luna corre até a porta quando",
+    "alternativas": [
+      "acorda na cadeira.",
+      "o narrador volta da escola.",
+      "ouve outro gato.",
+      "quer dormir.",
+      "vê o peixe na cozinha."
+    ],
+    "gabarito": "B",
+    "comentario": "A oração iniciada por \"When I come home from school\" estabelece o momento exato da ação \"she runs to the door\". A cadeira é onde ela dorme durante o dia, e o peixe só aparece depois, como alimento oferecido.",
+    "meta_description": "Reading A1 com texto curto sobre um gato de estimação, testando compreensão de oração temporal iniciada por when."
+  },
+  {
+    "titulo": "My desk: a mesa perto da janela (A1)",
+    "tema": "Estudo e organização pessoal",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "My desk is next to the window. On the desk there are books, two pens and a lamp. I do my homework there every afternoon. The window is good because I have a lot of light. My cat sometimes sits on my books.",
+    "enunciado": "De acordo com o texto, a janela é boa porque",
+    "alternativas": [
+      "fica perto da cama.",
+      "deixa o gato entrar.",
+      "abre para o jardim.",
+      "traz muita luz.",
+      "ajuda a guardar os livros."
+    ],
+    "gabarito": "D",
+    "comentario": "O texto explica a vantagem com a conjunção \"because\": \"The window is good because I have a lot of light\". O gato aparece em outro contexto, sentando sobre os livros, e não há menção a cama nem a jardim.",
+    "meta_description": "Questão de interpretação de texto em inglês nível A1 sobre ambiente de estudo, com cinco alternativas e comentário do gabarito."
+  },
+  {
+    "titulo": "The old phone: o telefone que só a avó usa (A1)",
+    "tema": "Tecnologia e gerações",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "My grandmother has an old phone. It is black and it has big buttons. She says the buttons are easy for her eyes. I have a new phone with a big screen. We call each other every Sunday.",
+    "enunciado": "No texto, a avó gosta dos botões grandes porque eles",
+    "alternativas": [
+      "são fáceis para os olhos dela.",
+      "são pretos como o telefone.",
+      "fazem um som alto.",
+      "são mais modernos.",
+      "cabem na mão dela."
+    ],
+    "gabarito": "A",
+    "comentario": "A justificativa está no discurso reportado \"She says the buttons are easy for her eyes\". A cor é apenas descrição do aparelho, e o texto não fala em som, modernidade ou tamanho da mão.",
+    "meta_description": "Reading A1 sobre tecnologia e diferenças entre gerações, com gabarito comentado e destaque para o discurso reportado."
+  },
+  {
+    "titulo": "My school: a escola azul da esquina (A1)",
+    "tema": "Vida escolar",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "My school is blue and white. It is not very big. There are twelve classrooms and a small library. I like the library because it is quiet. Classes start at seven o'clock and finish at noon.",
+    "enunciado": "Segundo o texto, o narrador gosta da biblioteca porque ela é",
+    "alternativas": [
+      "grande.",
+      "azul e branca.",
+      "silenciosa.",
+      "perto das salas.",
+      "aberta ao meio-dia."
+    ],
+    "gabarito": "C",
+    "comentario": "A resposta está em \"I like the library because it is quiet\". Note que o texto diz o oposto de \"grande\": a biblioteca é \"small\" e a escola \"not very big\". Azul e branco descrevem o prédio, não a biblioteca.",
+    "meta_description": "Questão de reading nível A1 sobre descrição de escola, com cinco alternativas em português e comentário explicando o gabarito."
+  },
+  {
+    "titulo": "Our classroom: os cartazes na parede (A1)",
+    "tema": "Ambiente escolar",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "Our classroom is on the first floor. There are twenty desks and one big board. On the wall we have posters of animals. My teacher puts our drawings next to the door. I sit near the window with my friend Paulo.",
+    "enunciado": "De acordo com o texto, os desenhos dos alunos ficam",
+    "alternativas": [
+      "na parede com os cartazes.",
+      "sobre as vinte carteiras.",
+      "no quadro grande.",
+      "perto da janela.",
+      "ao lado da porta."
+    ],
+    "gabarito": "E",
+    "comentario": "A locução \"next to the door\" indica exatamente onde ficam os desenhos. É preciso não confundir com os cartazes de animais, que estão \"on the wall\", nem com a janela, que marca o lugar do narrador.",
+    "meta_description": "Reading A1 sobre a sala de aula, testando localização no espaço com preposições, com gabarito comentado em português."
+  },
+  {
+    "titulo": "Mr. Silva: o professor que conta histórias (A1)",
+    "tema": "Professores e aprendizagem",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "Mr. Silva is my English teacher. He is tall and he wears glasses. He always tells funny stories in class. We laugh a lot and we learn new words. On Fridays he gives us a short game.",
+    "enunciado": "Segundo o texto, nas aulas do Mr. Silva os alunos",
+    "alternativas": [
+      "escrevem histórias engraçadas.",
+      "riem e aprendem palavras novas.",
+      "jogam todos os dias.",
+      "estudam apenas gramática.",
+      "leem livros em silêncio."
+    ],
+    "gabarito": "B",
+    "comentario": "O texto diz \"We laugh a lot and we learn new words\", unindo diversão e aprendizado. Quem conta as histórias é o professor, não os alunos, e o jogo acontece só às sextas — \"On Fridays\" —, não todos os dias.",
+    "meta_description": "Questão de interpretação em inglês nível A1 sobre a rotina de uma aula, com cinco alternativas e explicação do gabarito."
+  },
+  {
+    "titulo": "The tiger at the zoo: o tigre que dorme à tarde (A1)",
+    "tema": "Animais selvagens",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "The tiger is a big cat. It is orange with black lines. Tigers live in Asia. They eat meat and they are very strong. At the zoo, the tiger sleeps in the afternoon because the sun is hot.",
+    "enunciado": "De acordo com o texto, o tigre do zoológico dorme à tarde porque",
+    "alternativas": [
+      "comeu muita carne.",
+      "é um animal fraco.",
+      "vive na Ásia.",
+      "o sol está quente.",
+      "tem listras pretas."
+    ],
+    "gabarito": "D",
+    "comentario": "A causa vem depois de \"because\": \"the sun is hot\". O texto afirma justamente o contrário de fraqueza ao dizer \"they are very strong\", e Ásia e listras são informações gerais sobre a espécie, sem relação com o sono.",
+    "meta_description": "Reading A1 sobre animais selvagens, com foco em relação de causa introduzida por because e gabarito comentado."
+  },
+  {
+    "titulo": "The old computer: o computador da biblioteca (A1)",
+    "tema": "Tecnologia na escola",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "There is one computer in our school library. It is old and slow. We use it to look for books. Only two students can use it at the same time. My friend and I go there on Mondays.",
+    "enunciado": "Segundo o texto, o computador da biblioteca serve para",
+    "alternativas": [
+      "procurar livros.",
+      "jogar com os amigos.",
+      "escrever redações.",
+      "assistir a filmes.",
+      "conversar com professores."
+    ],
+    "gabarito": "A",
+    "comentario": "A finalidade aparece na estrutura \"We use it to look for books\", em que \"to\" introduz o objetivo. Nenhuma das outras atividades é mencionada, embora todas sejam usos plausíveis de um computador — por isso é preciso voltar ao texto.",
+    "meta_description": "Questão de reading nível A1 sobre uso de tecnologia na escola, com cinco alternativas e comentário sobre o infinitivo de finalidade."
+  },
+  {
+    "titulo": "A day at the beach: o guarda-sol amarelo (A1)",
+    "tema": "Férias e lazer",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "In January we go to the beach. My father takes a yellow umbrella and my mother takes fruit. I play in the water with my cousin. We build castles with wet sand. At five o'clock we go home.",
+    "enunciado": "De acordo com o texto, o narrador constrói castelos",
+    "alternativas": [
+      "sozinho, embaixo do guarda-sol.",
+      "com o pai, antes das cinco horas.",
+      "com o primo, usando areia molhada.",
+      "com a mãe, depois de comer frutas.",
+      "com os amigos da escola."
+    ],
+    "gabarito": "C",
+    "comentario": "Duas informações precisam ser combinadas: \"I play in the water with my cousin\" e \"We build castles with wet sand\" — o pronome \"we\" retoma o narrador e o primo. Pai e mãe aparecem no texto com outras ações.",
+    "meta_description": "Reading A1 sobre um dia na praia, exigindo juntar duas frases pelo pronome we, com gabarito comentado em português."
+  },
+  {
+    "titulo": "The sea in winter: o mar frio de julho (A1)",
+    "tema": "Natureza e estações do ano",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "The sea is beautiful in winter. The water is very cold, so people do not swim. They walk on the sand and look at the birds. My uncle is a fisherman. He goes to the sea early, at four in the morning.",
+    "enunciado": "Segundo o texto, no inverno as pessoas não nadam porque a água está",
+    "alternativas": [
+      "muito suja.",
+      "cheia de pássaros.",
+      "longe da areia.",
+      "perigosa de manhã.",
+      "muito fria."
+    ],
+    "gabarito": "E",
+    "comentario": "O conector \"so\" liga a causa à consequência: \"The water is very cold, so people do not swim\". Os pássaros são apenas o que as pessoas observam, e o horário das quatro da manhã se refere ao trabalho do tio pescador.",
+    "meta_description": "Questão de interpretação em inglês nível A1 sobre o mar no inverno, com cinco alternativas e comentário sobre o conector so."
+  },
+  {
+    "titulo": "My mother's garden: os tomates do quintal (A1)",
+    "tema": "Casa e cultivo de alimentos",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "My mother has a small garden behind our house. She grows tomatoes and flowers. Every morning she puts water on the plants. In summer we eat her tomatoes in salads. I help her on Saturdays.",
+    "enunciado": "De acordo com o texto, no verão a família",
+    "alternativas": [
+      "planta novas flores.",
+      "come os tomates em saladas.",
+      "rega o jardim toda manhã.",
+      "vende os tomates do quintal.",
+      "trabalha no jardim aos sábados."
+    ],
+    "gabarito": "B",
+    "comentario": "A informação está em \"In summer we eat her tomatoes in salads\", marcada pela expressão de tempo \"In summer\". Regar é atividade diária da mãe, e a ajuda aos sábados é do narrador, sem ligação com o verão. Venda não é mencionada.",
+    "meta_description": "Reading A1 sobre horta caseira, testando localização de informação por marcador temporal, com gabarito comentado."
+  },
+  {
+    "titulo": "A bird at the window: o pássaro que canta cedo (A1)",
+    "tema": "Natureza e cotidiano",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "A small bird comes to my window every morning. It is grey with a white chest. It sings at six o'clock and wakes me up. I put bread on the window for it. My mother says the bird is not afraid of me.",
+    "enunciado": "Segundo o texto, o pássaro acorda o narrador",
+    "alternativas": [
+      "quando come o pão da janela.",
+      "toda tarde, com barulho.",
+      "quando bate na janela.",
+      "às seis horas, quando canta.",
+      "junto com a mãe dele."
+    ],
+    "gabarito": "D",
+    "comentario": "As duas ações estão coordenadas por \"and\" na mesma frase: \"It sings at six o'clock and wakes me up\". O pão é oferecido depois, e o texto fala em \"every morning\", não à tarde.",
+    "meta_description": "Questão de reading nível A1 sobre natureza no cotidiano, com cinco alternativas em português e comentário do gabarito."
+  },
+  {
+    "titulo": "The crocodile river: o crocodilo que quase não se move (A1)",
+    "tema": "Animais e comportamento",
+    "genero_textual": "texto de divulgacao",
+    "nivel": "A1",
+    "texto_base": "Crocodiles live in rivers in Africa and Australia. They have very strong teeth. A crocodile can stay in the water for a long time and does not move. It waits for fish. People must not swim in those rivers.",
+    "enunciado": "De acordo com o texto, o crocodilo fica parado na água para",
+    "alternativas": [
+      "esperar peixes.",
+      "descansar os dentes.",
+      "fugir das pessoas.",
+      "dormir durante o dia.",
+      "esfriar o corpo."
+    ],
+    "gabarito": "A",
+    "comentario": "A frase seguinte explica o comportamento: \"It waits for fish\". Os dentes fortes aparecem como característica física, e o aviso sobre pessoas nadarem é uma consequência do perigo, não a razão de o animal ficar imóvel.",
+    "meta_description": "Reading A1 com texto de divulgação sobre crocodilos, testando relação entre frases próximas, com gabarito comentado."
+  },
+  {
+    "titulo": "My street: a rua com muitas árvores (A1)",
+    "tema": "Bairro e vida urbana",
+    "genero_textual": "descricao",
+    "nivel": "A1",
+    "texto_base": "I live on a quiet street with many trees. There is a bakery on the corner. In the afternoon children play football in front of my house. There are no big shops here. The bus stop is five minutes away.",
+    "enunciado": "Segundo o texto, na rua do narrador não há",
+    "alternativas": [
+      "árvores.",
+      "uma padaria.",
+      "lojas grandes.",
+      "crianças jogando.",
+      "ponto de ônibus."
+    ],
+    "gabarito": "C",
+    "comentario": "A forma negativa \"There are no big shops here\" indica exatamente o que falta na rua. Todos os outros elementos são afirmados no texto: árvores, padaria, crianças jogando futebol e ponto de ônibus a cinco minutos.",
+    "meta_description": "Questão de interpretação em inglês nível A1 sobre o bairro, com foco na estrutura negativa there are no e gabarito comentado."
+  },
+  {
+    "titulo": "Sunday at the zoo: os macacos e o sorvete (A1)",
+    "tema": "Passeios e lazer",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "Last Sunday I went to the zoo with my class. We saw elephants, monkeys and two lions. The monkeys were very funny. After the visit we ate ice cream in the park. It was a happy day.",
+    "enunciado": "De acordo com o texto, o sorvete foi comido",
+    "alternativas": [
+      "antes de ver os leões.",
+      "durante o passeio no zoológico.",
+      "na escola, com a turma.",
+      "enquanto os macacos brincavam.",
+      "depois da visita, no parque."
+    ],
+    "gabarito": "E",
+    "comentario": "A expressão \"After the visit\" marca a sequência dos fatos, e o lugar aparece logo em seguida: \"in the park\". O texto organiza os eventos em ordem cronológica, e o sorvete é o último deles antes da conclusão.",
+    "meta_description": "Reading A1 sobre um passeio escolar, testando ordem dos acontecimentos com after, e com gabarito comentado em português."
+  },
+  {
+    "titulo": "My first plane: a viagem para ver a avó (A1)",
+    "tema": "Viagens e primeiras experiências",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "Last year I took a plane for the first time. I was a little afraid, but the flight was short. I sat next to the window and looked at the clouds. My grandmother waited for me at the airport. She was very happy.",
+    "enunciado": "Segundo o texto, o narrador ficou um pouco com medo, mas",
+    "alternativas": [
+      "não olhou pela janela.",
+      "o voo foi curto.",
+      "viajou com a avó.",
+      "dormiu durante a viagem.",
+      "era a segunda vez de avião."
+    ],
+    "gabarito": "B",
+    "comentario": "A conjunção \"but\" introduz o contraponto ao medo: \"I was a little afraid, but the flight was short\". O narrador de fato olhou as nuvens pela janela, a avó o esperava no aeroporto e era a primeira vez — \"for the first time\".",
+    "meta_description": "Questão de reading nível A1 sobre primeira viagem de avião, com cinco alternativas e comentário sobre o contraste com but."
+  },
+  {
+    "titulo": "Tom is one year old: o primeiro aniversário do bebê (A1)",
+    "tema": "Família e celebrações",
+    "genero_textual": "relato pessoal",
+    "nivel": "A1",
+    "texto_base": "Today is Tom's birthday. He is one year old. My mother made a small cake with one candle. Tom cannot walk yet, but he can stand. He laughed when we sang the birthday song. He ate cake with his hands.",
+    "enunciado": "De acordo com o texto, Tom ainda não sabe",
+    "alternativas": [
+      "ficar de pé.",
+      "rir.",
+      "comer bolo.",
+      "andar.",
+      "ouvir música."
+    ],
+    "gabarito": "D",
+    "comentario": "O advérbio \"yet\" em \"Tom cannot walk yet\" indica algo que ainda não acontece. A oração seguinte, iniciada por \"but\", esclarece o que ele já consegue: \"he can stand\". Rir e comer bolo aparecem como ações realizadas na festa.",
+    "meta_description": "Reading A1 sobre aniversário de bebê, testando o uso de cannot yet em contraste com can, e com gabarito comentado."
+  }
+]

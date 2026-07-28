@@ -1,0 +1,398 @@
+[
+  {
+    "titulo": "Grandmother's Apples: as maçãs verdes do sítio (A2)",
+    "tema": "Frutas e memória de família",
+    "genero_textual": "relato pessoal",
+    "nivel": "A2",
+    "texto_base": "Last Saturday I visited my grandmother's small farm. She showed me an old apple tree behind the house. The apples were green and very hard, so I did not want to eat one. My grandmother laughed and cooked them with sugar. After twenty minutes, the apples were soft and sweet. Now I always ask her for that dessert when I visit.",
+    "enunciado": "De acordo com o texto, por que o narrador não quis comer uma das maçãs?",
+    "alternativas": [
+      "Porque a macieira era velha e ficava atrás da casa.",
+      "Porque as maçãs estavam verdes e muito duras.",
+      "Porque a avó já tinha cozinhado as maçãs com açúcar.",
+      "Porque as maçãs ficaram moles depois de vinte minutos.",
+      "Porque a avó riu quando ele se aproximou da árvore."
+    ],
+    "gabarito": "B",
+    "comentario": "O texto liga a recusa diretamente ao estado das frutas: \"The apples were green and very hard, so I did not want to eat one\". A opção sobre as maçãs moles inverte a ordem dos fatos, pois elas só ficaram \"soft and sweet\" depois de vinte minutos no fogo. A opção sobre o riso da avó também não se sustenta, já que \"My grandmother laughed and cooked them with sugar\" acontece depois da recusa, e não como causa dela.",
+    "meta_description": "Questão de inglês A2 sobre um relato pessoal: entenda por que o narrador recusou as maçãs verdes do sítio da avó."
+  },
+  {
+    "titulo": "The Old Television: a TV antiga da sala (A2)",
+    "tema": "Objetos da casa",
+    "genero_textual": "descricao",
+    "nivel": "A2",
+    "texto_base": "My family has an old television in the living room. It is smaller than the new ones in the shops, but the picture is still good. My father bought it before I was born, so it is older than me. Every Sunday night we watch a film together and my mother makes popcorn. We never think about buying a new one.",
+    "enunciado": "De acordo com o texto, a televisão da família",
+    "alternativas": [
+      "é maior que os aparelhos novos das lojas e por isso ninguém a troca.",
+      "foi comprada pela mãe do narrador pouco depois de ele nascer.",
+      "está com a imagem ruim, mas a família assiste a filmes assim mesmo.",
+      "é menor que os aparelhos novos das lojas, mas ainda tem boa imagem.",
+      "só é ligada aos domingos porque a mãe faz pipoca nesse dia."
+    ],
+    "gabarito": "D",
+    "comentario": "A informação está no trecho \"It is smaller than the new ones in the shops, but the picture is still good\". A opção sobre a imagem ruim contraria esse mesmo trecho, que afirma que a imagem continua boa. A opção sobre a mãe também falha, porque o texto diz \"My father bought it before I was born\", e não a mãe depois do nascimento.",
+    "meta_description": "Questão de inglês A2 com comparativos: leia a descrição de uma televisão antiga e identifique a informação correta."
+  },
+  {
+    "titulo": "An Email from the Farm: o primeiro passeio a cavalo (A2)",
+    "tema": "Animais e viagem",
+    "genero_textual": "email",
+    "nivel": "A2",
+    "texto_base": "Hi Bruno, How are you? I am writing from my uncle's farm. Yesterday I rode a horse for the first time. Her name is Luna and she is brown and very calm. I was nervous at first, but my uncle walked next to us, so I felt safe. Today Luna is eating grass near the river. Come here next summer! Marina",
+    "enunciado": "No trecho \"Her name is Luna and she is brown and very calm\", o pronome \"she\" refere-se",
+    "alternativas": [
+      "à égua que Marina montou pela primeira vez.",
+      "a Marina, que escreve o e-mail do sítio do tio.",
+      "ao tio, que caminhou ao lado durante o passeio.",
+      "à fazenda onde Marina está passando alguns dias.",
+      "ao rio perto do qual o animal está comendo grama."
+    ],
+    "gabarito": "A",
+    "comentario": "O pronome retoma o animal apresentado na frase anterior: \"Yesterday I rode a horse for the first time. Her name is Luna\". A opção que aponta para Marina não funciona, pois ela se refere a si mesma com \"I\" em todo o e-mail. A opção sobre o tio também não se sustenta, já que ele aparece como \"my uncle\" e é retomado por \"he\" implicitamente na ação de caminhar ao lado, nunca por \"she\".",
+    "meta_description": "Questão de inglês A2 sobre referência de pronome: descubra a quem se refere \"she\" no e-mail escrito da fazenda."
+  },
+  {
+    "titulo": "A New Baby at Home: as noites depois da chegada de Theo (A2)",
+    "tema": "Rotina da família",
+    "genero_textual": "relato pessoal",
+    "nivel": "A2",
+    "texto_base": "My sister had a baby in March and now my house is different. The baby's name is Theo and he is very small. He cries a lot at night, so my parents are tired every morning. But when Theo smiles at me, I forget the noise. Right now he is sleeping in my mother's arms and the house is finally quiet.",
+    "enunciado": "De acordo com o texto, os pais do narrador estão cansados todas as manhãs porque",
+    "alternativas": [
+      "o bebê dorme nos braços da mãe pela manhã.",
+      "a irmã do narrador teve o bebê no mês de março.",
+      "o bebê chora bastante durante a noite.",
+      "o narrador faz barulho quando Theo sorri para ele.",
+      "a casa só fica silenciosa quando Theo acorda."
+    ],
+    "gabarito": "C",
+    "comentario": "A relação de causa está marcada pelo conector \"so\": \"He cries a lot at night, so my parents are tired every morning\". A opção sobre o bebê dormir nos braços da mãe descreve um momento de calma (\"the house is finally quiet\"), não a causa do cansaço. A opção sobre o mês de março apenas situa o nascimento no tempo e não explica as noites mal dormidas.",
+    "meta_description": "Questão de inglês A2 sobre relação de causa: entenda por que os pais do narrador acordam cansados desde março."
+  },
+  {
+    "titulo": "Thank You for the Doll: a carta de Clara para a tia (A2)",
+    "tema": "Presentes e brinquedos",
+    "genero_textual": "carta",
+    "nivel": "A2",
+    "texto_base": "Dear Aunt Sofia, Thank you very much for the doll. She arrived on my birthday, and I opened the box first because it was the biggest present. Her dress is blue and her hair is longer than my hair. My little sister wanted to play with her too, so now we share her every afternoon. Love, Clara",
+    "enunciado": "De acordo com a carta, Clara abriu o pacote da tia antes dos outros porque",
+    "alternativas": [
+      "o vestido da boneca era azul, a cor preferida dela.",
+      "a boneca chegou alguns dias antes do aniversário.",
+      "a irmã menor queria brincar com a boneca primeiro.",
+      "o cabelo da boneca era mais comprido que o dela.",
+      "aquele era o maior presente que ela havia recebido."
+    ],
+    "gabarito": "E",
+    "comentario": "A carta explica a escolha com \"because\": \"I opened the box first because it was the biggest present\". A opção sobre a chegada antecipada contraria o texto, que diz \"She arrived on my birthday\". A opção sobre a irmã menor também não serve como causa, pois o desejo dela aparece depois, levando apenas ao acordo de dividir a boneca todas as tardes.",
+    "meta_description": "Questão de inglês A2 baseada em uma carta de agradecimento: identifique por que Clara abriu aquele pacote primeiro."
+  },
+  {
+    "titulo": "Where Is the Cat?: um diálogo sobre a gata que some (A2)",
+    "tema": "Animais de estimação",
+    "genero_textual": "dialogo",
+    "nivel": "A2",
+    "texto_base": "— Where is your cat, Paulo? — She is under my bed again. — Why does she sleep there? — Because the room is cold and it is dark under the bed. — Is she friendly? — Yes, but she is quieter than my old cat. When I open a can of fish, she runs to the kitchen very fast. Then she asks for food with a small noise.",
+    "enunciado": "De acordo com o diálogo, a gata corre depressa para a cozinha quando",
+    "alternativas": [
+      "o quarto de Paulo fica frio e escuro.",
+      "Paulo abre uma lata de peixe.",
+      "alguém a procura embaixo da cama.",
+      "a gata mais velha de Paulo faz barulho.",
+      "Paulo pede que ela saia de debaixo da cama."
+    ],
+    "gabarito": "B",
+    "comentario": "O diálogo é explícito: \"When I open a can of fish, she runs to the kitchen very fast\". A opção sobre o quarto frio e escuro usa palavras do texto, mas essa é a razão de a gata dormir embaixo da cama (\"Because the room is cold and it is dark under the bed\"), não de correr. A opção sobre a gata mais velha também não se sustenta, pois ela aparece apenas numa comparação de temperamento (\"she is quieter than my old cat\").",
+    "meta_description": "Questão de inglês A2 com diálogo curto sobre uma gata: localize a informação literal sobre a corrida até a cozinha."
+  },
+  {
+    "titulo": "Desk For Sale: um anúncio de mesa usada (A2)",
+    "tema": "Compra e venda de móveis",
+    "genero_textual": "anuncio",
+    "nivel": "A2",
+    "texto_base": "FOR SALE: wooden desk, only R$150. I bought it two years ago for my home office, but my new desk is bigger, so I do not need this one. It has three drawers and one small mark on the left side. The chair is not included. Call Renata after 6 p.m. You can see the desk on Saturday morning.",
+    "enunciado": "O objetivo principal do texto é",
+    "alternativas": [
+      "ensinar como escolher uma mesa para o escritório em casa.",
+      "avisar os vizinhos sobre a marca no lado esquerdo da mesa.",
+      "convidar os leitores para conhecer o escritório de Renata.",
+      "vender uma mesa de madeira usada para outra pessoa.",
+      "anunciar a venda de uma cadeira junto com a mesa."
+    ],
+    "gabarito": "D",
+    "comentario": "O texto começa com \"FOR SALE: wooden desk, only R$150\" e informa preço, estado e telefone de contato, tudo típico de um anúncio de venda. A opção sobre a cadeira contraria o texto, que diz \"The chair is not included\". A opção sobre a marca no lado esquerdo confunde um detalhe da descrição com a finalidade do anúncio.",
+    "meta_description": "Questão de inglês A2 sobre intenção do autor: analise um anúncio de mesa usada e identifique sua finalidade."
+  },
+  {
+    "titulo": "Notice to Students: regras sobre o celular na escola (A2)",
+    "tema": "Regras escolares",
+    "genero_textual": "aviso",
+    "nivel": "A2",
+    "texto_base": "NOTICE TO ALL STUDENTS: Please turn off your phone before the class starts. Last week a phone rang during a test, so the teacher stopped the activity for five minutes. You can use your phone in the corridor during the break, but not inside the room. If you need to call your family, talk to the secretary first. Thank you.",
+    "enunciado": "De acordo com o aviso, os alunos podem usar o celular",
+    "alternativas": [
+      "no corredor, durante o intervalo.",
+      "dentro da sala, antes de a aula começar.",
+      "durante a prova, se avisarem o professor.",
+      "por cinco minutos, depois do início da aula.",
+      "em qualquer lugar, se ligarem para a família."
+    ],
+    "gabarito": "A",
+    "comentario": "A permissão está clara em \"You can use your phone in the corridor during the break, but not inside the room\". A opção sobre usar dentro da sala é justamente o que o aviso proíbe, pedindo \"turn off your phone before the class starts\". A opção dos cinco minutos usa um número do texto com sentido errado: esse foi o tempo em que a professora interrompeu a atividade por causa de um celular tocando.",
+    "meta_description": "Questão de inglês A2 com um aviso escolar sobre celulares: identifique onde e quando o uso é permitido aos alunos."
+  },
+  {
+    "titulo": "Green Hill School: a história de uma escola (A2)",
+    "tema": "História de uma escola",
+    "genero_textual": "texto de divulgacao",
+    "nivel": "A2",
+    "texto_base": "Green Hill School opened in 1998 with only forty students. Today more than six hundred children study here. Last year we built a new library because our old room was too small for all the books. This month our students are painting a big garden wall with animals and flowers. Visit our school on 12 August and talk to our teachers.",
+    "enunciado": "Assinale a alternativa que apresenta a ordem correta dos fatos narrados no texto.",
+    "alternativas": [
+      "A escola pintou um muro, depois abriu com quarenta alunos e agora constrói uma biblioteca nova.",
+      "A escola construiu a biblioteca em 1998, depois recebeu seiscentos alunos e agora vai abrir as portas.",
+      "A escola abriu com quarenta alunos, depois ganhou uma biblioteca nova e agora os estudantes pintam um muro.",
+      "Os alunos pintaram o muro, depois a sala antiga ficou pequena e agora a escola tem quarenta alunos.",
+      "A escola recebeu seiscentos alunos, depois abriu em 1998 e agora pinta a sala antiga de livros."
+    ],
+    "gabarito": "C",
+    "comentario": "A sequência segue os marcadores de tempo do texto: \"opened in 1998 with only forty students\", \"Last year we built a new library\" e \"This month our students are painting a big garden wall\". As opções que colocam a pintura do muro no começo ignoram \"This month\", que indica um fato atual. Do mesmo modo, dizer que a escola ainda vai abrir contraria o verbo no passado \"opened in 1998\".",
+    "meta_description": "Questão de inglês A2 sobre ordem dos fatos: organize a linha do tempo da escola apresentada no texto de divulgação."
+  },
+  {
+    "titulo": "Our Classroom: a sala do segundo andar (A2)",
+    "tema": "Espaço escolar",
+    "genero_textual": "descricao",
+    "nivel": "A2",
+    "texto_base": "Our classroom is on the second floor, next to the science lab. It has eight windows, so it is very bright in the morning. The walls are white, but they are full of colourful posters about animals. There are twenty-six desks and a big green board. When it rains, we close the windows because the noise from the street is loud.",
+    "enunciado": "No trecho \"they are full of colourful posters about animals\", o pronome \"they\" refere-se",
+    "alternativas": [
+      "às oito janelas que deixam a sala clara.",
+      "aos cartazes coloridos sobre animais.",
+      "às vinte e seis carteiras da sala.",
+      "aos alunos que estudam no segundo andar.",
+      "às paredes brancas da sala de aula."
+    ],
+    "gabarito": "E",
+    "comentario": "O pronome retoma o sujeito da oração anterior: \"The walls are white, but they are full of colourful posters\". A opção das janelas não funciona, pois elas aparecem antes, ligadas à luz da manhã (\"It has eight windows, so it is very bright\"). A opção dos cartazes também se desfaz, porque \"posters\" é justamente o que está sobre as paredes, e não o elemento retomado pelo pronome.",
+    "meta_description": "Questão de inglês A2 sobre referência de pronome na descrição de uma sala de aula: a quem \"they\" retoma no texto."
+  },
+  {
+    "titulo": "Mr. Alves: lembranças de um professor de inglês (A2)",
+    "tema": "Professores e memórias",
+    "genero_textual": "relato pessoal",
+    "nivel": "A2",
+    "texto_base": "Mr. Alves was my English teacher in 2019. He never shouted, but everybody listened to him because his classes were fun. Once he brought his guitar and we sang a song in English for an hour. I was very shy then, so I only sang the last part. This year he is teaching in another city, and I still write him emails.",
+    "enunciado": "De acordo com o texto, todos os alunos prestavam atenção no professor porque",
+    "alternativas": [
+      "ele gritava quando a turma conversava.",
+      "as aulas dele eram divertidas.",
+      "ele levava o violão para todas as aulas.",
+      "os alunos eram muito tímidos naquele ano.",
+      "ele dava aulas também em outra cidade."
+    ],
+    "gabarito": "B",
+    "comentario": "A causa é apresentada com \"because\": \"everybody listened to him because his classes were fun\". A opção sobre gritos contraria o texto, que diz \"He never shouted\". A opção do violão exagera um episódio único, marcado por \"Once he brought his guitar\", e a mudança de cidade só acontece no presente (\"This year he is teaching in another city\").",
+    "meta_description": "Questão de inglês A2 sobre relação de causa: descubra por que os alunos ouviam com atenção o professor Mr. Alves."
+  },
+  {
+    "titulo": "The Tiger: o maior felino do mundo (A2)",
+    "tema": "Animais selvagens",
+    "genero_textual": "texto de divulgacao",
+    "nivel": "A2",
+    "texto_base": "The tiger is the biggest cat in the world. It lives in Asia, in forests and tall grass. A tiger hunts alone, usually at night, because its stripes are difficult to see in the dark. Today there are fewer tigers than one hundred years ago, so many countries are protecting them. In some parks, guards work every night to keep the animals safe.",
+    "enunciado": "No texto, a expressão \"there are fewer tigers than one hundred years ago\" indica que",
+    "alternativas": [
+      "os tigres vivem hoje mais tempo do que viviam antes.",
+      "os tigres passaram a caçar em grupo durante a noite.",
+      "existem mais parques com guardas do que há cem anos.",
+      "o número de tigres diminuiu com o passar do tempo.",
+      "as listras dos tigres ficaram mais difíceis de enxergar."
+    ],
+    "gabarito": "D",
+    "comentario": "O comparativo \"fewer... than\" indica quantidade menor, e a consequência confirma essa leitura: \"so many countries are protecting them\". A opção sobre caçar em grupo contraria o texto, que afirma \"A tiger hunts alone\". A opção sobre as listras aproveita um detalhe verdadeiro do texto, mas ele explica o hábito noturno de caça, não a redução do número de animais.",
+    "meta_description": "Questão de inglês A2 sobre sentido de expressão no contexto: o que revela o comparativo usado no texto sobre tigres."
+  },
+  {
+    "titulo": "New in Our Shop: um anúncio de computador (A2)",
+    "tema": "Tecnologia e compras",
+    "genero_textual": "anuncio",
+    "nivel": "A2",
+    "texto_base": "NEW IN OUR SHOP: a light computer for students. It is thinner than our old model and the battery works for ten hours. You can carry it in a small bag because it weighs only one kilo. This week we are offering a free mouse with every computer. Come to Rua das Palmeiras, 42, and try it before you buy.",
+    "enunciado": "No anúncio, a palavra \"light\", usada para descrever o computador, indica que ele",
+    "alternativas": [
+      "pesa pouco e é fácil de transportar.",
+      "tem uma tela clara e muito brilhante.",
+      "gasta pouca energia da bateria por hora.",
+      "é mais fino que o modelo antigo da loja.",
+      "custa menos que os outros modelos da loja."
+    ],
+    "gabarito": "A",
+    "comentario": "A própria frase seguinte esclarece o sentido: \"You can carry it in a small bag because it weighs only one kilo\". A opção sobre a tela clara explora o outro significado possível de \"light\", que não é o usado aqui. A opção sobre ser mais fino repete uma informação verdadeira do anúncio (\"thinner than our old model\"), mas essa característica é expressa por outra palavra, e não por \"light\".",
+    "meta_description": "Questão de inglês A2 sobre vocabulário em contexto: qual é o sentido da palavra \"light\" no anúncio do computador."
+  },
+  {
+    "titulo": "Days at the Beach: um e-mail escrito na praia (A2)",
+    "tema": "Férias e praia",
+    "genero_textual": "email",
+    "nivel": "A2",
+    "texto_base": "Hi Lara, We arrived at the beach house on Friday. The sand is white and the water is warmer than in Rio. Yesterday my brother and I walked for two hours and found many shells. Right now Dad is cooking fish outside because the kitchen is very hot. Tomorrow we are going back home, so I will call you at night. Bia",
+    "enunciado": "De acordo com o e-mail, o pai está cozinhando do lado de fora da casa porque",
+    "alternativas": [
+      "o peixe foi pescado naquela manhã.",
+      "a família volta para casa no dia seguinte.",
+      "a cozinha está muito quente.",
+      "a areia da praia é branca e limpa.",
+      "os irmãos caminharam durante duas horas."
+    ],
+    "gabarito": "C",
+    "comentario": "A explicação vem logo depois do conector \"because\": \"Dad is cooking fish outside because the kitchen is very hot\". A opção sobre a volta para casa usa uma informação do texto, mas ela se refere ao plano do dia seguinte (\"Tomorrow we are going back home\"). A opção sobre a caminhada dos irmãos também não explica nada, pois é apenas o relato do passeio do dia anterior.",
+    "meta_description": "Questão de inglês A2 com e-mail de férias na praia: identifique a causa de o pai estar cozinhando fora de casa."
+  },
+  {
+    "titulo": "The Sea from My Window: o mar visto da janela (A2)",
+    "tema": "Paisagem e mar",
+    "genero_textual": "descricao",
+    "nivel": "A2",
+    "texto_base": "From my window I can see the sea. In the morning it is calm and blue, but in the afternoon the wind arrives and the waves become bigger. Old fishermen leave the port before sunrise because the fish are near the rocks at that time. Today the sky is grey and no boat is going out, so the port is very quiet.",
+    "enunciado": "De acordo com o texto, à tarde o mar fica diferente porque",
+    "alternativas": [
+      "os pescadores saem do porto antes do amanhecer.",
+      "o céu fica cinzento em todas as tardes do ano.",
+      "os peixes se aproximam das pedras nesse horário.",
+      "nenhum barco consegue voltar para o porto.",
+      "o vento chega e as ondas ficam maiores."
+    ],
+    "gabarito": "E",
+    "comentario": "A mudança é descrita em \"in the afternoon the wind arrives and the waves become bigger\", em contraste com a manhã, quando o mar está \"calm and blue\". A opção sobre os pescadores trata de outro momento do dia, marcado por \"before sunrise\". A opção sobre os peixes perto das pedras explica o horário de saída dos barcos, e não o comportamento do mar à tarde.",
+    "meta_description": "Questão de inglês A2 sobre descrição do mar: entenda o que muda na paisagem quando a tarde chega, segundo o texto."
+  },
+  {
+    "titulo": "Our Garden: dois anos de trabalho no quintal (A2)",
+    "tema": "Horta e trabalho em família",
+    "genero_textual": "relato pessoal",
+    "nivel": "A2",
+    "texto_base": "Two years ago our garden was only grass and stones. My mother started to plant tomatoes and my grandfather brought two small trees. We worked every Sunday, so the work was slow but easy. Now the garden is greener than the park near our street. This week the first tomatoes are growing, and my mother is already planning a big salad.",
+    "enunciado": "Assinale a alternativa que apresenta a ordem correta dos fatos narrados no texto.",
+    "alternativas": [
+      "A família colheu tomates, depois plantou duas árvores e agora o quintal tem apenas grama e pedras.",
+      "O quintal tinha só grama e pedras, depois a família plantou aos domingos e agora nascem os primeiros tomates.",
+      "O avô trouxe as árvores, depois o quintal virou um parque e agora a mãe começa a plantar grama.",
+      "Os primeiros tomates nasceram, depois a mãe fez uma grande salada e agora a família trabalha aos domingos.",
+      "A família trabalhou dois anos seguidos, depois parou de plantar e agora o quintal tem só pedras."
+    ],
+    "gabarito": "B",
+    "comentario": "Os marcadores temporais organizam a sequência: \"Two years ago our garden was only grass and stones\", \"We worked every Sunday\" e \"This week the first tomatoes are growing\". A opção que termina com grama e pedras inverte o percurso, pois esse era o estado inicial. A opção da salada também erra, já que o texto diz que a mãe \"is already planning a big salad\", ou seja, a salada ainda não foi feita.",
+    "meta_description": "Questão de inglês A2 sobre ordem dos fatos: reconstrua a linha do tempo do quintal transformado pela família."
+  },
+  {
+    "titulo": "A Long Trip: o pássaro que voa até o Brasil (A2)",
+    "tema": "Aves migratórias",
+    "genero_textual": "texto de divulgacao",
+    "nivel": "A2",
+    "texto_base": "Every year a small bird called the sanderling flies from the cold north to Brazilian beaches. The trip is long, so the bird stops many times to eat and rest. It is not bigger than your hand, but it can fly thousands of kilometres. When our summer finishes, the birds go back north to have their babies.",
+    "enunciado": "De acordo com o texto, o pássaro faz várias paradas durante o percurso porque",
+    "alternativas": [
+      "ele é menor que uma mão e por isso voa devagar.",
+      "as praias brasileiras ficam no norte, longe do frio.",
+      "ele precisa cuidar dos filhotes durante todo o verão.",
+      "a viagem é longa e ele precisa comer e descansar.",
+      "o vento do norte o impede de voar longas distâncias."
+    ],
+    "gabarito": "D",
+    "comentario": "A causa aparece ligada pelo conector \"so\": \"The trip is long, so the bird stops many times to eat and rest\". A opção sobre o tamanho usa a comparação do texto (\"It is not bigger than your hand\"), mas ela serve para destacar o feito da ave, que \"can fly thousands of kilometres\". A opção sobre os filhotes contraria o texto, pois eles nascem depois, quando as aves voltam para o norte.",
+    "meta_description": "Questão de inglês A2 sobre aves migratórias: identifique por que o pequeno pássaro faz paradas durante a viagem."
+  },
+  {
+    "titulo": "Warning at the River: aviso sobre crocodilos (A2)",
+    "tema": "Segurança em parque natural",
+    "genero_textual": "aviso",
+    "nivel": "A2",
+    "texto_base": "WARNING — RIVER AREA: Crocodiles live in this river. Do not swim here, and do not walk near the water after 6 p.m., because the animals are more active at night. Keep children and dogs close to you at all times. If you see a crocodile on the path, walk away slowly and call the park office on 0800 555 122.",
+    "enunciado": "De acordo com o aviso, ao ver um crocodilo no caminho, o visitante deve",
+    "alternativas": [
+      "afastar-se devagar e telefonar para o escritório do parque.",
+      "entrar na água e nadar rapidamente para o outro lado.",
+      "manter as crianças e os cães bem perto do rio.",
+      "esperar até as 18h, quando os animais ficam mais calmos.",
+      "correr pela trilha até encontrar um guarda do parque."
+    ],
+    "gabarito": "A",
+    "comentario": "A orientação é literal: \"If you see a crocodile on the path, walk away slowly and call the park office\". A opção de nadar contraria a proibição \"Do not swim here\". A opção sobre esperar até as 18h inverte a informação do aviso, que diz que depois desse horário os animais ficam mais ativos (\"the animals are more active at night\").",
+    "meta_description": "Questão de inglês A2 com aviso de segurança em um parque: saiba o que fazer ao encontrar um crocodilo na trilha."
+  },
+  {
+    "titulo": "My Narrow Street: a rua estreita e suas horas (A2)",
+    "tema": "Vida no bairro",
+    "genero_textual": "descricao",
+    "nivel": "A2",
+    "texto_base": "I live on a narrow street with old houses and tall trees. In the morning it is busy because a bakery opens at six and many people stop there. In the afternoon the street is quieter than the avenue behind us. This month workers are painting the houses, so everything looks new. At night, only the cats walk on the stones.",
+    "enunciado": "De acordo com o texto, a rua fica movimentada pela manhã porque",
+    "alternativas": [
+      "trabalhadores estão pintando as casas ao longo deste mês.",
+      "a avenida atrás da rua fica mais silenciosa à tarde.",
+      "uma padaria abre às seis horas e muita gente para por lá.",
+      "os gatos caminham sobre as pedras durante a noite.",
+      "as casas são antigas e as árvores da rua são altas."
+    ],
+    "gabarito": "C",
+    "comentario": "O texto marca a causa com \"because\": \"In the morning it is busy because a bakery opens at six and many people stop there\". A opção dos pintores descreve algo que acontece \"this month\", mas o texto não relaciona esse trabalho ao movimento da manhã. A opção sobre os gatos também não se sustenta, pois eles aparecem justamente no período de menor movimento, \"at night\".",
+    "meta_description": "Questão de inglês A2 sobre causa e efeito: descubra o que torna a rua estreita movimentada logo pela manhã."
+  },
+  {
+    "titulo": "City Zoo: novos horários e regras (A2)",
+    "tema": "Visita ao zoológico",
+    "genero_textual": "anuncio",
+    "nivel": "A2",
+    "texto_base": "CITY ZOO — NEW HOURS: From 1 September the zoo opens at 9 a.m. and closes at 5 p.m. Tickets are cheaper on Wednesdays. Children under six do not pay. Our monkeys are living in a new area now, so please follow the blue signs. Do not give food to the animals, because they have a special diet. Come early and enjoy your visit with the family.",
+    "enunciado": "O texto tem como objetivo principal",
+    "alternativas": [
+      "convidar apenas as crianças menores de seis anos para uma visita gratuita.",
+      "explicar aos leitores por que os macacos mudaram de área no zoológico.",
+      "ensinar aos visitantes qual é a dieta especial de cada animal do parque.",
+      "anunciar que os ingressos ficarão mais baratos em todos os dias da semana.",
+      "informar os visitantes sobre os novos horários e as regras do zoológico."
+    ],
+    "gabarito": "E",
+    "comentario": "O título \"CITY ZOO — NEW HOURS\" e a lista de orientações mostram que o texto informa mudanças e regras aos visitantes. A opção sobre os ingressos contraria o anúncio, que limita o desconto a um dia: \"Tickets are cheaper on Wednesdays\". A opção sobre a dieta confunde uma justificativa pontual (\"because they have a special diet\") com a finalidade geral do texto.",
+    "meta_description": "Questão de inglês A2 sobre intenção do autor: analise o anúncio do zoológico e reconheça a finalidade do texto."
+  },
+  {
+    "titulo": "The First Flight: uma conversa dentro do avião (A2)",
+    "tema": "Viagem de avião",
+    "genero_textual": "dialogo",
+    "nivel": "A2",
+    "texto_base": "— Is this your first flight, Clara? — Yes, and I am a little nervous. — Don't worry. The plane is safer than a car. — How long is the trip? — Only two hours, so we arrive before lunch. — Can I look out of the window? — Of course. When we go up, you can see the whole city under us.",
+    "enunciado": "No diálogo, ao dizer \"The plane is safer than a car\", o interlocutor pretende",
+    "alternativas": [
+      "explicar a Clara quanto tempo dura a viagem de avião.",
+      "tranquilizar Clara, que está nervosa com o primeiro voo.",
+      "convencer Clara a olhar pela janela durante a subida.",
+      "comparar o preço da passagem com o de uma viagem de carro.",
+      "avisar Clara de que o voo vai chegar antes do almoço."
+    ],
+    "gabarito": "B",
+    "comentario": "A fala vem logo depois de \"Yes, and I am a little nervous\" e é introduzida por \"Don't worry\", o que confirma a intenção de acalmar Clara. A opção sobre a duração corresponde a outra resposta do diálogo (\"Only two hours\"). A opção sobre a janela também não serve, pois a permissão para olhar aparece depois, em \"Of course\", já em outro momento da conversa.",
+    "meta_description": "Questão de inglês A2 sobre intenção do falante: entenda por que alguém compara o avião a um carro no diálogo."
+  },
+  {
+    "titulo": "Baby Nina's First Steps: os primeiros passos da vizinha (A2)",
+    "tema": "Crescimento de um bebê",
+    "genero_textual": "carta",
+    "nivel": "A2",
+    "texto_base": "Dear Grandma, Do you remember baby Nina, our neighbour's daughter? Last week she walked for the first time! She held the sofa, then she made four steps and fell on the carpet. She did not cry; she laughed. Now her mother is putting soft things on the floor, because Nina wants to run everywhere. Come and see her soon. Kisses, Helena",
+    "enunciado": "Assinale a alternativa que apresenta a ordem correta dos fatos narrados na carta.",
+    "alternativas": [
+      "Nina caiu no tapete, depois se segurou no sofá e começou a chorar.",
+      "Nina correu pela casa, depois deu quatro passos e se segurou no sofá.",
+      "A mãe colocou coisas macias no chão e só então Nina deu os primeiros passos.",
+      "Nina se segurou no sofá, deu quatro passos, caiu no tapete e riu.",
+      "Nina riu, depois chorou sobre o tapete e por fim se segurou no sofá."
+    ],
+    "gabarito": "D",
+    "comentario": "A carta apresenta a sequência com \"then\": \"She held the sofa, then she made four steps and fell on the carpet. She did not cry; she laughed\". As opções que incluem choro contrariam o texto, que diz claramente \"She did not cry\". A opção sobre as coisas macias também inverte a ordem, pois essa providência da mãe vem depois, marcada por \"Now\".",
+    "meta_description": "Questão de inglês A2 sobre ordem dos fatos: organize os primeiros passos do bebê Nina narrados em uma carta."
+  }
+]
