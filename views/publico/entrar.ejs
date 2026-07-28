@@ -1,0 +1,21 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <h1>Entrar na sua conta</h1>
+  <% if (erro) { %><p class="aviso aviso--erro"><%= erro %></p><% } %>
+  <div class="painel">
+    <form method="post" action="/entrar">
+      <input type="hidden" name="voltar" value="<%= voltar %>">
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required autocomplete="email" value="<%= email %>" autofocus>
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required autocomplete="current-password">
+      </div>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+  </div>
+  <p>Ainda não tem conta? <a href="/cadastro?voltar=<%= encodeURIComponent(voltar) %>">Criar conta grátis</a></p>
+</div>
+<%- include('../partials/rodape') %>

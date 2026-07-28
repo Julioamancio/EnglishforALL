@@ -6,8 +6,8 @@ const { gerarDOCX } = require('../lib/prova-docx');
 const router = express.Router();
 
 function exigirLogin(req, res, next) {
-  if (req.session.admin) return next();
-  res.redirect('/admin/login');
+  if (req.session.admin || req.session.usuario) return next();
+  res.redirect('/entrar?voltar=' + encodeURIComponent(req.originalUrl));
 }
 
 router.use(exigirLogin);
@@ -26,7 +26,8 @@ router.get('/', (req, res) => {
     tema: req.query.tema || null,
     genero: req.query.genero || null,
     busca: req.query.q || null,
-    publicada: null,
+    // Rascunhos só aparecem para o admin.
+    publicada: req.session.admin ? null : 1,
   };
 
   res.render('admin/montar', {
@@ -68,7 +69,9 @@ router.post('/pdf', (req, res, next) => {
   const { ids, titulo, escola, turma, comGabarito } = coletar(req);
   if (!ids.length) return res.redirect('/prova?erro=vazio');
 
-  const questoes = db.porIds(ids);
+  let questoes = db.porIds(ids);
+  if (!req.session.admin) questoes = questoes.filter((q) => q.publicada);
+  if (!questoes.length) return res.redirect('/prova?erro=vazio');
 
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
@@ -88,7 +91,9 @@ router.post('/docx', async (req, res, next) => {
   if (!ids.length) return res.redirect('/prova?erro=vazio');
 
   try {
-    const questoes = db.porIds(ids);
+    let questoes = db.porIds(ids);
+    if (!req.session.admin) questoes = questoes.filter((q) => q.publicada);
+    if (!questoes.length) return res.redirect('/prova?erro=vazio');
     const buffer = await gerarDOCX({ titulo, escola, turma, questoes, comGabarito });
 
     res.setHeader(

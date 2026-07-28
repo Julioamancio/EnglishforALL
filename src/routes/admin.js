@@ -89,6 +89,7 @@ router.get('/', (req, res) => {
     questoes,
     filtros: { q: req.query.q || '', tipo: req.query.tipo || '', nivel: req.query.nivel || '' },
     assinantes: db.assinantes().length,
+    usuarios: db.usuarios().length,
     layoutAdmin: true,
   });
 });
@@ -244,6 +245,15 @@ router.get('/assinantes', (req, res) => {
     title: 'E-mails capturados',
     description: '',
     assinantes: db.assinantes(),
+    layoutAdmin: true,
+  });
+});
+
+router.get('/usuarios', (req, res) => {
+  res.render('admin/usuarios', {
+    title: 'Usuários cadastrados',
+    description: '',
+    usuarios: db.usuarios(),
     layoutAdmin: true,
   });
 });

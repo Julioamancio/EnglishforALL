@@ -2,19 +2,17 @@
 <div class="env env--estreito">
   <h1>Monte uma prova em PDF ou Word</h1>
   <p>As questões deste banco são gratuitas. O que economiza seu domingo é o trabalho depois delas: escolher, formatar, montar cabeçalho e gabarito, e imprimir.</p>
-  <% if (enviado) { %>
-    <p class="aviso aviso--ok">E-mail registrado. Você recebe um aviso assim que a montagem de provas abrir.</p>
-  <% } %>
   <div class="painel">
-    <h2>Quero ser avisado</h2>
-    <form method="post" action="/montar-prova">
-      <div class="campo">
-        <label for="email">Seu e-mail</label>
-        <input type="email" id="email" name="email" required autocomplete="email" placeholder="professor@escola.com.br">
-        <p class="dica">Só e-mail, nada mais. Você sai da lista quando quiser.</p>
-      </div>
-      <button class="btn" type="submit">Quero receber</button>
-    </form>
+    <h2>Como funciona</h2>
+    <ol>
+      <li>Crie sua conta gratuita — leva menos de um minuto.</li>
+      <li>Filtre as questões por tipo, nível e tema, e marque as que quiser.</li>
+      <li>Baixe a prova pronta em PDF para imprimir ou em Word para editar, com cabeçalho da escola e folha de gabarito comentado.</li>
+    </ol>
+    <div class="acoes">
+      <a class="btn" href="/cadastro?voltar=%2Fprova">Criar conta grátis</a>
+      <a class="btn btn--sec" href="/entrar?voltar=%2Fprova">Já tenho conta</a>
+    </div>
   </div>
 </div>
 <%- include('../partials/rodape') %>

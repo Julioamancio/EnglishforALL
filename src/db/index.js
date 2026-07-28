@@ -174,6 +174,31 @@ function assinantes() {
   return db.prepare('SELECT * FROM assinantes ORDER BY criado_em DESC').all();
 }
 
+// ------------------------------------------------------------- usuários
+
+function criarUsuario(nome, email, senhaHash) {
+  const info = db
+    .prepare('INSERT INTO usuarios (nome, email, senha_hash) VALUES (?, ?, ?)')
+    .run(nome.trim(), email.trim().toLowerCase(), senhaHash);
+  return info.lastInsertRowid;
+}
+
+function usuarioPorEmail(email) {
+  return db
+    .prepare('SELECT * FROM usuarios WHERE email = ?')
+    .get(email.trim().toLowerCase());
+}
+
+function usuarioPorId(id) {
+  return db.prepare('SELECT * FROM usuarios WHERE id = ?').get(id);
+}
+
+function usuarios() {
+  return db
+    .prepare('SELECT id, nome, email, criado_em FROM usuarios ORDER BY criado_em DESC')
+    .all();
+}
+
 function porIds(ids) {
   if (!ids.length) return [];
   const marcas = ids.map(() => '?').join(',');
@@ -201,4 +226,8 @@ module.exports = {
   slugLivre,
   salvarAssinante,
   assinantes,
+  criarUsuario,
+  usuarioPorEmail,
+  usuarioPorId,
+  usuarios,
 };

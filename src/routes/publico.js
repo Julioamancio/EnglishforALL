@@ -137,11 +137,12 @@ router.get('/gramatica/:slug', (req, res, next) => {
 });
 
 router.get('/montar-prova', (req, res) => {
+  // Quem já tem sessão vai direto para o montador.
+  if (req.session.usuario || req.session.admin) return res.redirect('/prova');
   res.render('publico/montar-prova', {
     title: 'Monte uma prova de inglês em PDF e Word',
     description:
       'Escolha questões do banco e gere uma prova formatada com cabeçalho e gabarito, pronta para imprimir, em PDF ou Word.',
-    enviado: req.query.ok === '1',
   });
 });
 

@@ -1,0 +1,17 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Usuários cadastrados</h1>
+  <p><%= usuarios.length %> no total.</p>
+  <div class="painel rolagem">
+    <% if (!usuarios.length) { %><p class="vazio">Nenhum usuário ainda.</p><% } else { %>
+    <table class="tabela">
+      <thead><tr><th>Nome</th><th>E-mail</th><th>Cadastro</th></tr></thead>
+      <tbody>
+        <% usuarios.forEach(function(u){ %><tr><td><%= u.nome %></td><td><%= u.email %></td><td><%= u.criado_em %></td></tr><% }) %>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+  <a class="btn btn--sec" href="/admin">Voltar</a>
+</div>
+<%- include('../partials/rodape') %>

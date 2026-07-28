@@ -714,3 +714,12 @@ html[data-tema='escuro'] .quiz__opcao--certa { background: rgba(31,138,76,.18); 
   .fala { max-width: 100%; }
   .nivel-selo { width: 40px; height: 40px; }
 }
+
+/* Botão "Sair" da conta de usuário, com cara de link de navegação. */
+.nav__sair { display: inline; }
+.nav__sair button {
+  font: inherit; font-weight: 600; color: var(--suave);
+  padding: .42rem .75rem; border-radius: 100px;
+  border: 0; background: none; cursor: pointer;
+}
+.nav__sair button:hover { color: var(--tinta); background: var(--fundo-2); }

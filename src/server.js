@@ -46,10 +46,12 @@ app.use((req, res, next) => {
   res.locals.SITE_URL = SITE_URL;
   res.locals.caminho = req.path;
   res.locals.logado = Boolean(req.session.admin);
+  res.locals.usuario = req.session.usuario || null;
   res.locals.canonical = SITE_URL.replace(/\/$/, '') + req.path;
   next();
 });
 
+app.use('/', require('./routes/conta'));
 app.use('/', require('./routes/publico'));
 app.use('/', require('./routes/exercicios'));
 app.use('/admin', require('./routes/admin'));

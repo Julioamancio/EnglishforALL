@@ -1,0 +1,27 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <h1>Criar conta grátis</h1>
+  <p>Com a conta você monta provas com as questões do banco e baixa em PDF ou Word, com cabeçalho da escola e folha de gabarito.</p>
+  <% if (erro) { %><p class="aviso aviso--erro"><%= erro %></p><% } %>
+  <div class="painel">
+    <form method="post" action="/cadastro">
+      <input type="hidden" name="voltar" value="<%= voltar %>">
+      <div class="campo">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name" value="<%= valores.nome %>" autofocus>
+      </div>
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required autocomplete="email" value="<%= valores.email %>" placeholder="professor@escola.com.br">
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required autocomplete="new-password" minlength="8">
+        <p class="dica">Pelo menos 8 caracteres.</p>
+      </div>
+      <button class="btn" type="submit">Criar conta</button>
+    </form>
+  </div>
+  <p>Já tem conta? <a href="/entrar?voltar=<%= encodeURIComponent(voltar) %>">Entrar</a></p>
+</div>
+<%- include('../partials/rodape') %>
