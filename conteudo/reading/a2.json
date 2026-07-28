@@ -382,7 +382,7 @@
     "tema": "Crescimento de um bebê",
     "genero_textual": "carta",
     "nivel": "A2",
-    "texto_base": "Dear Grandma, Do you remember baby Nina, our neighbour's daughter? Last week she walked for the first time! She held the sofa, then she made four steps and fell on the carpet. She did not cry; she laughed. Now her mother is putting soft things on the floor, because Nina wants to run everywhere. Come and see her soon. Kisses, Helena",
+    "texto_base": "Dear Grandma, Do you remember baby Nina, our neighbour's daughter? Last week she walked for the first time! She held on to the sofa, then she took four steps and fell on the carpet. She did not cry; she laughed. Now her mother is putting soft things on the floor, because Nina wants to run everywhere. Come and see her soon. Kisses, Helena",
     "enunciado": "Assinale a alternativa que apresenta a ordem correta dos fatos narrados na carta.",
     "alternativas": [
       "Nina caiu no tapete, depois se segurou no sofá e começou a chorar.",
@@ -392,7 +392,7 @@
       "Nina riu, depois chorou sobre o tapete e por fim se segurou no sofá."
     ],
     "gabarito": "D",
-    "comentario": "A carta apresenta a sequência com \"then\": \"She held the sofa, then she made four steps and fell on the carpet. She did not cry; she laughed\". As opções que incluem choro contrariam o texto, que diz claramente \"She did not cry\". A opção sobre as coisas macias também inverte a ordem, pois essa providência da mãe vem depois, marcada por \"Now\".",
+    "comentario": "A carta apresenta a sequência com \"then\": \"She held on to the sofa, then she took four steps and fell on the carpet. She did not cry; she laughed\". As opções que incluem choro contrariam o texto, que diz claramente \"She did not cry\". A opção sobre as coisas macias também inverte a ordem, pois essa providência da mãe vem depois, marcada por \"Now\".",
     "meta_description": "Questão de inglês A2 sobre ordem dos fatos: organize os primeiros passos do bebê Nina narrados em uma carta."
   }
 ]

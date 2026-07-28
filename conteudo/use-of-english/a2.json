@@ -170,13 +170,13 @@
     "enunciado": "Assinale a alternativa que completa corretamente a lacuna do texto.",
     "alternativas": [
       "the crowdedest",
-      "the more crowded",
+      "more crowded",
       "most crowded",
       "the most crowd",
       "the most crowded"
     ],
     "gabarito": "E",
-    "comentario": "Adjetivos longos como crowded formam o superlativo com the most, resultando em the most crowded. A forma the crowdedest está errada porque a terminação -est só aparece em adjetivos curtos. A opção the more crowded é comparativa e não combina com a estrutura one of, que exige superlativo, e the most crowd usa um substantivo no lugar do adjetivo.",
+    "comentario": "Adjetivos longos como crowded formam o superlativo com the most, resultando em the most crowded. A forma the crowdedest está errada porque a terminação -est só aparece em adjetivos curtos. A opção more crowded falha porque, sem o artigo the, não se forma superlativo, e a estrutura one of exige um superlativo. Já the most crowd usa um substantivo no lugar do adjetivo.",
     "meta_description": "Questão de inglês A2 sobre superlativo de adjetivos longos com most, em um texto curto sobre as grandes cidades do mundo."
   },
   {

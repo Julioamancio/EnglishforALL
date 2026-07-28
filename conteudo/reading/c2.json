@@ -149,16 +149,16 @@
     "genero_textual": "editorial",
     "nivel": "C2",
     "texto_base": "Ask any adult what they retained from eleven years of formal instruction and you will be told, after some embarrassment, almost nothing: a few dates, a theorem misremembered, a poem's first line. This is routinely reported as a failure of schools. It is nothing of the kind. It is evidence that the curriculum was never the syllabus. What the institution transmitted, with an efficiency no examination has ever measured, was a relation to time: that the day may be divided by a bell into portions one did not choose; that an interest may be terminated at its most absorbing moment; that one's presence is recorded, and that this record is somehow oneself. Add to this an education in hierarchy so complete that most of us can still, decades later, identify the exact tone in which a corridor instruction is issued. None of it appears in the prospectus, and none of it is forgotten. Those who campaign to reform education by adjusting the subjects taught are therefore addressing the least durable part of the enterprise. The building teaches. The timetable teaches. The queue teaches, and it teaches the same lesson to the child who excels and the child who fails, which is why the two remember it identically.",
-    "enunciado": "O editorial refuta a premissa segundo a qual",
+    "enunciado": "Ao rejeitar a explicação corrente para o esquecimento dos conteúdos escolares, o editorial sustenta que",
     "alternativas": [
       "a reforma dos currículos seria impossível sem antes reformar a arquitetura e os horários das instituições de ensino existentes.",
       "os alunos de melhor desempenho guardariam da escola recordações substancialmente distintas das guardadas pelos alunos com dificuldades.",
-      "o esquecimento dos conteúdos programáticos comprovaria o fracasso da escola, quando na verdade evidencia que o ensino duradouro é outro, feito de tempo, hierarquia e registro.",
+      "o ensino verdadeiramente duradouro não está no programa de conteúdos, mas na relação com o tempo, a hierarquia e o registro que a instituição impõe.",
       "a avaliação por exames constituiria o instrumento mais confiável para medir aquilo que efetivamente se transmite em uma sala de aula.",
       "a experiência escolar seria irrelevante para a formação adulta, dado que quase nada do que foi ensinado permanece acessível à memória."
     ],
     "gabarito": "C",
-    "comentario": "O texto cita a queixa comum sobre o esquecimento e a rejeita de imediato: \"This is routinely reported as a failure of schools. It is nothing of the kind. It is evidence that the curriculum was never the syllabus.\" O que permanece é descrito como \"a relation to time\" e uma educação em hierarquia que \"None of it appears in the prospectus, and none of it is forgotten\". A alternativa sobre memórias divergentes entre bons e maus alunos contraria a frase final, que afirma que ambos \"remember it identically\". A alternativa sobre a irrelevância da escola é o contrário da tese: o editorial defende que a escola ensina muito, apenas não aquilo que declara ensinar.",
+    "comentario": "O editorial recusa a leitura corrente do esquecimento — \"This is routinely reported as a failure of schools. It is nothing of the kind\" — e a substitui por uma tese própria: \"It is evidence that the curriculum was never the syllabus.\" O que de fato permanece é descrito como \"a relation to time\", somado a uma educação em hierarquia da qual \"none of it is forgotten\". As alternativas que tratam de memórias divergentes entre bons e maus alunos ou da irrelevância da escola descrevem premissas que o texto também rejeita, mas nenhuma delas é a tese que ele defende no lugar.",
     "meta_description": "Questão C2: editorial sobre currículo oculto, esquecimento dos conteúdos e o que a escola realmente transmite."
   },
   {
