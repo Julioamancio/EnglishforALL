@@ -23,14 +23,15 @@ function tituloFiltro({ tipo, nivel, tema, genero, instituicao, ano }) {
 }
 
 router.get('/', (req, res) => {
-  const recentes = db.listar({ limite: 12 });
+  const recentes = db.listar({ limite: 12, colecao: '' });
   res.render('publico/home', {
     title: 'Questões de inglês do ENEM com gabarito comentado',
     description:
       'Banco gratuito de questões de inglês no estilo ENEM: texto autêntico com fonte citada, cinco alternativas e gabarito comentado. Filtre por tipo, nível CEFR e gênero textual.',
     recentes,
-    facetas: db.facetas(),
-    total: db.contar(),
+    facetas: db.facetas(''),
+    total: db.contar({ colecao: '' }),
+    totalReading: db.contar({ colecao: 'reading' }),
     ROTULOS_TIPO,
   });
 });
@@ -44,6 +45,8 @@ router.get('/questoes', (req, res) => {
     instituicao: req.query.instituicao || null,
     ano: req.query.ano ? Number(req.query.ano) || null : null,
     busca: req.query.q || null,
+    // O acervo de provas não se mistura com a coleção autoral de reading.
+    colecao: '',
   };
 
   const questoes = db.listar(filtros);
@@ -53,7 +56,68 @@ router.get('/questoes', (req, res) => {
     description: `${questoes.length} questões de inglês no estilo ENEM com gabarito comentado, texto autêntico e fonte citada.`,
     questoes,
     filtros,
-    facetas: db.facetas(),
+    facetas: db.facetas(''),
+    ROTULOS_TIPO,
+  });
+});
+
+// ------------------------------------------------- coleção de reading (A1–C2)
+
+const NIVEIS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
+const DESCRICAO_NIVEL = {
+  A1: 'Frases curtas no presente, vocabulário do dia a dia. Primeiro contato com leitura em inglês.',
+  A2: 'Textos com passado simples e conectores básicos. Situações concretas e familiares.',
+  B1: 'Textos de opinião e reportagem. Já exigem inferência e leitura de conectores.',
+  B2: 'Argumentação com nuance e ironia leve. Nível típico das provas do ENEM.',
+  C1: 'Ensaio e crítica: metáfora, ambiguidade e tese implícita.',
+  C2: 'Prosa densa de proficiência. Paradoxo, mudança de registro e leitura nas entrelinhas.',
+};
+
+router.get('/reading', (req, res) => {
+  const nivel = NIVEIS.includes(req.query.nivel) ? req.query.nivel : null;
+  const filtros = {
+    colecao: 'reading',
+    nivel,
+    genero: req.query.genero || null,
+    busca: req.query.q || null,
+  };
+
+  const facetas = db.facetas('reading');
+  const porNivel = NIVEIS.map((n) => ({
+    nivel: n,
+    total: facetas.niveis.find((f) => f.valor === n)?.total || 0,
+    descricao: DESCRICAO_NIVEL[n],
+  }));
+
+  const todas = db.listar(filtros);
+  const POR_PAGINA = 24;
+  const paginas = Math.max(1, Math.ceil(todas.length / POR_PAGINA));
+  const pagina = Math.min(Math.max(1, parseInt(req.query.pagina, 10) || 1), paginas);
+  const questoes = todas.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
+
+  const qsBase = new URLSearchParams();
+  Object.entries(req.query).forEach(([k, v]) => {
+    if (k !== 'pagina' && v) qsBase.append(k, v);
+  });
+
+  res.render('publico/reading', {
+    title: nivel
+      ? `Reading em inglês nível ${nivel}: ${todas.length} textos com gabarito`
+      : 'Reading em inglês do A1 ao C2 com gabarito comentado',
+    description: nivel
+      ? `${todas.length} textos originais de reading nível ${nivel} com questão de interpretação, cinco alternativas e gabarito comentado em português.`
+      : 'Coleção de textos originais de reading em inglês, organizados do A1 ao C2, cada um com questão de interpretação e gabarito comentado em português.',
+    questoes,
+    encontradas: todas.length,
+    pagina,
+    paginas,
+    qsBase: qsBase.toString(),
+    filtros,
+    nivel,
+    porNivel,
+    facetas,
+    total: db.contar({ colecao: 'reading' }),
     ROTULOS_TIPO,
   });
 });
@@ -164,6 +228,8 @@ router.get('/sitemap.xml', (req, res) => {
   const urls = [
     { loc: `${base}/`, prio: '1.0' },
     { loc: `${base}/questoes`, prio: '0.9' },
+    { loc: `${base}/reading`, prio: '0.9' },
+    ...NIVEIS.map((n) => ({ loc: `${base}/reading?nivel=${n}`, prio: '0.7' })),
     { loc: `${base}/montar-prova`, prio: '0.7' },
     { loc: `${base}/gramatica`, prio: '0.9' },
     ...require('../lib/gramatica')

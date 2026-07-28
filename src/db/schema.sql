@@ -24,6 +24,9 @@ CREATE TABLE IF NOT EXISTS questoes (
   gabarito        TEXT    NOT NULL,   -- A..E
   comentario      TEXT    NOT NULL DEFAULT '',
 
+  -- '' = banco principal (ENEM e vestibulares); 'reading' = coleção autoral por nível
+  colecao         TEXT    NOT NULL DEFAULT '',
+
   publicada       INTEGER NOT NULL DEFAULT 0,
   criada_em       TEXT    NOT NULL DEFAULT (datetime('now')),
   atualizada_em   TEXT    NOT NULL DEFAULT (datetime('now'))
@@ -68,6 +71,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 CREATE INDEX IF NOT EXISTS idx_q_publicada ON questoes(publicada);
+CREATE INDEX IF NOT EXISTS idx_q_colecao   ON questoes(colecao);
 CREATE INDEX IF NOT EXISTS idx_q_tipo      ON questoes(tipo);
 CREATE INDEX IF NOT EXISTS idx_q_nivel     ON questoes(nivel_cefr);
 CREATE INDEX IF NOT EXISTS idx_q_tema      ON questoes(tema);

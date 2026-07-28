@@ -84,6 +84,7 @@ for (const arquivo of lista) {
       enunciado: q.enunciado,
       gabarito: q.gabarito,
       comentario: q.comentario,
+      colecao: 'reading',
       publicada: publicar ? 1 : 0,
     };
 

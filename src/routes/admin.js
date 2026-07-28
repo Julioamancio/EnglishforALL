@@ -169,6 +169,7 @@ function extrairDados(req, imagemAtual) {
       enunciado: (b.enunciado || '').trim(),
       gabarito: b.gabarito,
       comentario: b.comentario || '',
+      colecao: (b.colecao || '').trim(),
       publicada: b.publicada === '1' ? 1 : 0,
     },
     alternativas: db.LETRAS.map((l) => (b[`alt_${l}`] || '').trim()),

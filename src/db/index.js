@@ -7,6 +7,13 @@ const CAMINHO = process.env.DB_PATH || path.join(__dirname, '../../dados/banco.d
 fs.mkdirSync(path.dirname(CAMINHO), { recursive: true });
 
 const db = new Database(CAMINHO);
+
+// Colunas acrescentadas depois da primeira versão do schema.
+const colunas = () => db.prepare('PRAGMA table_info(questoes)').all().map((c) => c.name);
+if (colunas().length && !colunas().includes('colecao')) {
+  db.exec("ALTER TABLE questoes ADD COLUMN colecao TEXT NOT NULL DEFAULT ''");
+}
+
 db.exec(fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8'));
 
 const LETRAS = ['A', 'B', 'C', 'D', 'E'];
@@ -36,13 +43,18 @@ function porId(id) {
  * Listagem com filtros combináveis. Todos os campos são opcionais.
  * Usada tanto pelo site público quanto pelo painel e pelo montador de provas.
  */
-function listar({ tipo, nivel, tema, genero, instituicao, ano, busca, publicada = 1, limite, offset = 0 } = {}) {
+function listar({ tipo, nivel, tema, genero, instituicao, ano, busca, colecao, publicada = 1, limite, offset = 0 } = {}) {
   const where = [];
   const params = [];
 
   if (publicada !== null) {
     where.push('publicada = ?');
     params.push(publicada);
+  }
+  // colecao: undefined = tudo; string = só aquela coleção ('' é o banco principal).
+  if (colecao !== undefined && colecao !== null) {
+    where.push('colecao = ?');
+    params.push(colecao);
   }
   if (tipo) { where.push('tipo = ?'); params.push(tipo); }
   if (nivel) { where.push('nivel_cefr = ?'); params.push(nivel); }
@@ -71,12 +83,18 @@ function contar(filtros = {}) {
   return listar({ ...filtros, limite: null }).length;
 }
 
-function facetas() {
+function facetas(colecao) {
+  // Sem argumento, conta o acervo inteiro; com string, só aquela coleção.
+  const filtro = colecao === undefined || colecao === null ? '' : ' AND colecao = @colecao';
+  const p = { colecao };
+
   const q = (col) =>
     db
-      .prepare(`SELECT ${col} AS valor, COUNT(*) AS total FROM questoes WHERE publicada = 1
+      .prepare(`SELECT ${col} AS valor, COUNT(*) AS total FROM questoes
+                WHERE publicada = 1${filtro}
                 GROUP BY ${col} ORDER BY ${col}`)
-      .all();
+      .all(p);
+
   return {
     tipos: q('tipo'),
     niveis: q('nivel_cefr'),
@@ -84,14 +102,14 @@ function facetas() {
     generos: q('genero_textual'),
     instituicoes: db
       .prepare(`SELECT instituicao AS valor, COUNT(*) AS total FROM questoes
-                WHERE publicada = 1 AND instituicao != ''
+                WHERE publicada = 1 AND instituicao != ''${filtro}
                 GROUP BY instituicao ORDER BY total DESC`)
-      .all(),
+      .all(p),
     anos: db
       .prepare(`SELECT ano AS valor, COUNT(*) AS total FROM questoes
-                WHERE publicada = 1 AND ano IS NOT NULL
+                WHERE publicada = 1 AND ano IS NOT NULL${filtro}
                 GROUP BY ano ORDER BY ano DESC`)
-      .all(),
+      .all(p),
   };
 }
 
@@ -122,11 +140,11 @@ const criar = db.transaction((dados, alternativas) => {
       `INSERT INTO questoes
        (slug, titulo, meta_description, tipo, genero_textual, tema, nivel_cefr,
         texto_base, imagem, imagem_alt, fonte_veiculo, fonte_url, fonte_data,
-        enunciado, gabarito, comentario, publicada)
+        enunciado, gabarito, comentario, colecao, publicada)
        VALUES
        (@slug, @titulo, @meta_description, @tipo, @genero_textual, @tema, @nivel_cefr,
         @texto_base, @imagem, @imagem_alt, @fonte_veiculo, @fonte_url, @fonte_data,
-        @enunciado, @gabarito, @comentario, @publicada)`
+        @enunciado, @gabarito, @comentario, @colecao, @publicada)`
     )
     .run(dados);
   salvarAlternativas(info.lastInsertRowid, alternativas);
@@ -142,7 +160,7 @@ const atualizar = db.transaction((id, dados, alternativas) => {
        imagem = @imagem, imagem_alt = @imagem_alt,
        fonte_veiculo = @fonte_veiculo, fonte_url = @fonte_url,
        fonte_data = @fonte_data, enunciado = @enunciado, gabarito = @gabarito,
-       comentario = @comentario, publicada = @publicada,
+       comentario = @comentario, colecao = @colecao, publicada = @publicada,
        atualizada_em = datetime('now')
      WHERE id = @id`
   ).run({ ...dados, id });
