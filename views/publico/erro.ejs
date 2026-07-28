@@ -1,0 +1,8 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <h1>Algo deu errado</h1>
+  <p>Não foi possível carregar esta página. Tente novamente em instantes.</p>
+  <% if (mensagem) { %><pre class="aviso aviso--erro" style="white-space:pre-wrap"><%= mensagem %></pre><% } %>
+  <a class="btn" href="/">Voltar ao início</a>
+</div>
+<%- include('../partials/rodape') %>

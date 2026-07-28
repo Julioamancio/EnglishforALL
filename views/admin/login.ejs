@@ -1,0 +1,15 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <h1>Entrar no painel</h1>
+  <% if (erro) { %><p class="aviso aviso--erro"><%= erro %></p><% } %>
+  <div class="painel">
+    <form method="post" action="/admin/login">
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required autocomplete="current-password" autofocus>
+      </div>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+  </div>
+</div>
+<%- include('../partials/rodape') %>

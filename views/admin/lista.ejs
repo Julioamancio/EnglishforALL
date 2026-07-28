@@ -1,0 +1,60 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Painel</h1>
+  <div class="acoes" style="margin-bottom:1.25rem">
+    <a class="btn" href="/admin/nova">+ Nova questão</a>
+    <a class="btn btn--sec" href="/prova">Montar prova</a>
+    <a class="btn btn--sec" href="/admin/assinantes">E-mails (<%= assinantes %>)</a>
+  </div>
+
+  <form class="painel" method="get" action="/admin">
+    <div class="linha linha--3">
+      <div class="campo"><label for="q">Buscar</label><input type="text" id="q" name="q" value="<%= filtros.q %>"></div>
+      <div class="campo"><label for="tipo">Tipo</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todos</option>
+          <option value="interpretacao"<%= filtros.tipo==='interpretacao'?' selected':'' %>>Interpretação</option>
+          <option value="gramatica"<%= filtros.tipo==='gramatica'?' selected':'' %>>Gramática</option>
+          <option value="vocabulario"<%= filtros.tipo==='vocabulario'?' selected':'' %>>Vocabulário</option>
+        </select>
+      </div>
+      <div class="campo"><label for="nivel">Nível</label>
+        <select id="nivel" name="nivel">
+          <option value="">Todos</option>
+          <% ['A1','A2','B1','B2','C1','C2'].forEach(function(n){ %><option value="<%= n %>"<%= filtros.nivel===n?' selected':'' %>><%= n %></option><% }) %>
+        </select>
+      </div>
+    </div>
+    <button class="btn" type="submit">Filtrar</button>
+  </form>
+
+  <div class="painel rolagem">
+    <% if (!questoes.length) { %>
+      <p class="vazio">Nenhuma questão ainda. Comece criando a primeira.</p>
+    <% } else { %>
+    <table class="tabela">
+      <thead><tr><th>Título</th><th>Tipo</th><th>Nível</th><th>Img</th><th>Status</th><th></th></tr></thead>
+      <tbody>
+      <% questoes.forEach(function(q){ %>
+        <tr>
+          <td><a href="/admin/editar/<%= q.id %>"><%= q.titulo %></a></td>
+          <td><%= q.tipo %></td>
+          <td><%= q.nivel_cefr %></td>
+          <td><%= q.imagem ? 'sim' : '—' %></td>
+          <td><span class="selo <%= q.publicada ? 'selo--publicada' : 'selo--rascunho' %>"><%= q.publicada ? 'publicada' : 'rascunho' %></span></td>
+          <td>
+            <div class="acoes">
+              <% if (q.publicada) { %><a class="btn btn--sec btn--pequeno" href="/questoes/<%= q.slug %>" target="_blank">Ver</a><% } %>
+              <form method="post" action="/admin/excluir/<%= q.id %>" onsubmit="return confirm('Excluir esta questão? Não dá para desfazer.')">
+                <button class="btn btn--perigo btn--pequeno" type="submit">Excluir</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+      <% }) %>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+</div>
+<%- include('../partials/rodape') %>

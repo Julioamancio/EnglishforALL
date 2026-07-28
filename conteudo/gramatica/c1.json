@@ -1,0 +1,2302 @@
+{
+ "nivel": "C1",
+ "titulo": "C1 — Sofisticação",
+ "descricao": "No C1 você deixa de apenas se comunicar bem e passa a escolher estruturas com estilo: ênfase, elegância e precisão de quem realmente domina o inglês.",
+ "topicos": [
+  {
+   "slug": "inversion",
+   "titulo": "Inversion (Never have I…)",
+   "subtitulo": "Vire a frase de cabeça para baixo e ganhe dramaticidade instantânea.",
+   "resumo": "Inversão é quando colocamos o auxiliar antes do sujeito depois de expressões negativas ou restritivas como never, rarely e not only. É uma estrutura formal e enfática, muito usada em discursos, redações e literatura. Dominar inversão é um dos sinais mais claros de nível avançado.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, I read the sentence 'Never have I felt so alive' in a novel. Why isn't it 'I have never felt'?",
+     "pt": "Sofia, li a frase 'Nunca me senti tão vivo' num romance. Por que não é 'I have never felt'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Both are correct, Maya! But when you start with 'never', you invert: the auxiliary comes before the subject. It adds drama and emphasis.",
+     "pt": "As duas estão corretas, Maya! Mas quando você começa com 'never', você inverte: o auxiliar vem antes do sujeito. Isso dá drama e ênfase."
+    },
+    {
+     "persona": "max",
+     "en": "Got it! Not only I studied inversion, but I also practiced it!",
+     "pt": "Entendi! 'Not only I studied' inversão, como também pratiquei!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! With 'not only' you need the auxiliary first: 'Not only did I study inversion, but I also practiced it.'",
+     "pt": "Quase, Max! Com 'not only' o auxiliar vem primeiro: 'Not only did I study inversion, but I also practiced it.'"
+    },
+    {
+     "persona": "leo",
+     "en": "Think of it like a question in disguise: 'Never have I seen' follows the same order as 'Have I seen?'. If you can build the question, you can build the inversion.",
+     "pt": "Pense nisso como uma pergunta disfarçada: 'Never have I seen' segue a mesma ordem de 'Have I seen?'. Se você sabe montar a pergunta, sabe montar a inversão."
+    },
+    {
+     "persona": "maya",
+     "en": "Rarely has a grammar tip been so useful!",
+     "pt": "Raramente uma dica de gramática foi tão útil!"
+    }
+   ],
+   "quando_usar": [
+    "Para dar ênfase dramática em textos formais ou discursos, como em \"Never have we faced such a challenge\".",
+    "Depois de expressões restritivas como rarely, seldom e little, como em \"Little did she know what was coming\".",
+    "Com 'not only... but also' para destacar duas informações, como em \"Not only does he sing, but he also composes\".",
+    "Depois de 'only + expressão de tempo', como em \"Only after the meeting did I understand the problem\".",
+    "Com 'under no circumstances' e 'on no account' em avisos formais, como em \"Under no circumstances should you share your password\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Com advérbio negativo",
+     "estrutura": "Never / Rarely / Seldom + auxiliar + sujeito + verbo",
+     "exemplo_en": "Never have I tasted such good feijoada.",
+     "exemplo_pt": "Nunca provei uma feijoada tão boa."
+    },
+    {
+     "rotulo": "Com not only",
+     "estrutura": "Not only + auxiliar + sujeito + verbo, but + sujeito + also...",
+     "exemplo_en": "Not only did they arrive late, but they also forgot the documents.",
+     "exemplo_pt": "Não só chegaram atrasados, como também esqueceram os documentos."
+    },
+    {
+     "rotulo": "Com only + tempo",
+     "estrutura": "Only then / Only after X + auxiliar + sujeito + verbo",
+     "exemplo_en": "Only then did I realize my mistake.",
+     "exemplo_pt": "Só então percebi meu erro."
+    },
+    {
+     "rotulo": "Com little",
+     "estrutura": "Little + auxiliar + sujeito + verbo",
+     "exemplo_en": "Little does he know that we planned a surprise.",
+     "exemplo_pt": "Mal sabe ele que planejamos uma surpresa."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: a inversão usa exatamente a ordem da pergunta. 'Did she call?' vira 'Rarely did she call'. Se não existe auxiliar na frase original, chame o 'do/does/did' para o resgate."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "A inversão só acontece quando a expressão negativa abre a frase. Em 'I have never seen it', a ordem é normal. Não saia invertendo tudo que tem 'never' no meio!"
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Never I have seen something like this.",
+     "certo": "Never have I seen anything like this.",
+     "explicacao": "Brasileiro tende a manter a ordem do português ('nunca eu vi'). Em inglês, com 'never' no início, o auxiliar 'have' pula para antes do sujeito."
+    },
+    {
+     "errado": "Not only he is smart, but also hardworking.",
+     "certo": "Not only is he smart, but also hardworking.",
+     "explicacao": "Com 'not only' abrindo a frase, o verbo 'be' se comporta como auxiliar e vem antes do sujeito."
+    },
+    {
+     "errado": "Only after did I arrive home I saw the message.",
+     "certo": "Only after I arrived home did I see the message.",
+     "explicacao": "A inversão acontece na oração principal, não dentro da expressão de tempo. Primeiro complete o 'only after...', depois inverta."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: ___ have I heard such a moving speech.",
+     "opcoes": [
+      "Rarely",
+      "Rare",
+      "Rarity"
+     ],
+     "correta": 0,
+     "explicacao": "'Rarely' é o advérbio restritivo que dispara a inversão: 'Rarely have I heard...'."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "Little she knew about the plan.",
+      "Little did she know about the plan.",
+      "Little knew she did about the plan."
+     ],
+     "correta": 1,
+     "explicacao": "'Little' no início exige inversão com auxiliar: 'Little did she know'."
+    },
+    {
+     "pergunta": "Complete: Not only ___ the report, but she also presented it.",
+     "opcoes": [
+      "she wrote",
+      "wrote she",
+      "did she write"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de 'not only' em posição inicial, usamos auxiliar + sujeito + verbo: 'did she write'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ had I closed the door when the alarm went off.",
+     "opcoes": [
+      "Hardly",
+      "No sooner",
+      "Only when"
+     ],
+     "correta": 0,
+     "explicacao": "\"Hardly... when\" é o par correto para inversão temporal. \"No sooner\" exige \"than\", não \"when\" — troca clássica entre as duas estruturas."
+    },
+    {
+     "pergunta": "Not until the results were published ___ the true extent of the fraud.",
+     "opcoes": [
+      "we grasped",
+      "did we grasp",
+      "we did grasp"
+     ],
+     "correta": 1,
+     "explicacao": "Quando \"Not until...\" abre a frase, a oração principal exige inversão com auxiliar (did we grasp). Manter a ordem direta (we grasped) é o erro típico de quem traduz do português."
+    },
+    {
+     "pergunta": "___ she known about the traffic, she would have left earlier.",
+     "opcoes": [
+      "Would",
+      "Should",
+      "Had"
+     ],
+     "correta": 2,
+     "explicacao": "Inversão condicional: \"Had she known\" = \"If she had known\". \"Should\" também inverte condicionais, mas pede verbo no infinitivo sem to (Should she know), não particípio."
+    },
+    {
+     "pergunta": "Only after the meeting ___ how serious the situation was.",
+     "opcoes": [
+      "did I understand",
+      "I understood",
+      "I did understand"
+     ],
+     "correta": 0,
+     "explicacao": "\"Only after...\" em posição inicial dispara inversão sujeito-auxiliar na oração principal. \"I did understand\" usa o auxiliar sem inverter, o que só serviria para ênfase em frase normal."
+    },
+    {
+     "pergunta": "Under no circumstances ___ to disclose your password to anyone.",
+     "opcoes": [
+      "you are",
+      "are you",
+      "you would be"
+     ],
+     "correta": 1,
+     "explicacao": "Expressão negativa inicial (\"Under no circumstances\") obriga a inversão: are you. Sem inversão, a frase fica agramatical em registro formal."
+    },
+    {
+     "pergunta": "Little ___ that the decision would change her career forever.",
+     "opcoes": [
+      "she knew",
+      "she did know",
+      "did she know"
+     ],
+     "correta": 2,
+     "explicacao": "\"Little\" com valor negativo no início da frase exige inversão: \"Little did she know\". \"She knew\" só seria possível sem o \"little\" fronteado."
+    },
+    {
+     "pergunta": "No sooner ___ the stage than the crowd erupted.",
+     "opcoes": [
+      "had the singer stepped onto",
+      "the singer had stepped onto",
+      "did the singer step onto"
+     ],
+     "correta": 0,
+     "explicacao": "\"No sooner... than\" pede past perfect invertido (had the singer stepped). O simple past invertido (did... step) quebra a relação de anterioridade entre as duas ações."
+    },
+    {
+     "pergunta": "So intense ___ that the match had to be suspended.",
+     "opcoes": [
+      "the heat was",
+      "was the heat",
+      "it was the heat"
+     ],
+     "correta": 1,
+     "explicacao": "Com \"So + adjetivo\" fronteado, ocorre inversão: \"So intense was the heat that...\". \"It was the heat\" mistura a estrutura com uma cleft sentence."
+    },
+    {
+     "pergunta": "Seldom ___ such a compelling performance in this theatre.",
+     "opcoes": [
+      "we have witnessed",
+      "we witnessed",
+      "have we witnessed"
+     ],
+     "correta": 2,
+     "explicacao": "Advérbio restritivo (\"Seldom\") em posição inicial exige inversão com o auxiliar: have we witnessed. A ordem direta é o erro mais comum de brasileiros nesse padrão."
+    },
+    {
+     "pergunta": "Not only ___ the deadline, but he also exceeded every target.",
+     "opcoes": [
+      "did he meet",
+      "he met",
+      "he did meet"
+     ],
+     "correta": 0,
+     "explicacao": "\"Not only\" no início da frase pede inversão com auxiliar (did he meet). \"He did meet\" usa o auxiliar apenas como ênfase, sem a inversão obrigatória."
+    }
+   ]
+  },
+  {
+   "slug": "cleft-sentences",
+   "titulo": "Cleft sentences (It was… / What I need is…)",
+   "subtitulo": "Recorte a frase e jogue o holofote exatamente onde você quer.",
+   "resumo": "Cleft sentences dividem uma frase simples em duas partes para destacar uma informação específica. Com 'It was John who called' ou 'What I need is coffee', você controla o foco da mensagem. É a ferramenta perfeita para corrigir mal-entendidos e enfatizar ideias com elegância.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, is there a natural way to emphasize one part of a sentence in English? In Portuguese we say 'foi ele que fez isso'.",
+     "pt": "Sofia, existe um jeito natural de enfatizar uma parte da frase em inglês? Em português a gente diz 'foi ele que fez isso'."
+    },
+    {
+     "persona": "sofia",
+     "en": "Great question! English has the same tool: 'It was he who did it' — or more naturally, 'It was him who did it'. We call these cleft sentences.",
+     "pt": "Ótima pergunta! O inglês tem a mesma ferramenta: 'It was he who did it' — ou, mais natural, 'It was him who did it'. Chamamos isso de cleft sentences."
+    },
+    {
+     "persona": "max",
+     "en": "So I can say: What I want is that you help me?",
+     "pt": "Então posso dizer: 'What I want is that you help me'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Close! The natural version is 'What I want is for you to help me' — after 'is', we usually use a noun or an infinitive structure.",
+     "pt": "Quase! A versão natural é 'What I want is for you to help me' — depois do 'is', normalmente usamos um substantivo ou uma estrutura com infinitivo."
+    },
+    {
+     "persona": "leo",
+     "en": "Cleft sentences are just like 'o que eu quero é...' in Portuguese. Same logic, same drama, different language!",
+     "pt": "Cleft sentences são igualzinhas ao 'o que eu quero é...' do português. Mesma lógica, mesmo drama, outra língua!"
+    }
+   ],
+   "quando_usar": [
+    "Para corrigir uma informação errada com ênfase, como em \"It wasn't Ana who broke the vase, it was the cat\".",
+    "Para destacar o que realmente importa numa discussão, como em \"What matters is the result, not the method\".",
+    "Para introduzir um desejo ou necessidade com força, como em \"What I really need is a week off\".",
+    "Para enfatizar tempo ou lugar, como em \"It was in 2019 that everything changed\".",
+    "Para resumir uma ação inteira com 'all', como em \"All I did was ask a question\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "It-cleft",
+     "estrutura": "It + be + elemento destacado + who/that + resto",
+     "exemplo_en": "It was my sister who found the keys.",
+     "exemplo_pt": "Foi a minha irmã que achou as chaves."
+    },
+    {
+     "rotulo": "Wh-cleft",
+     "estrutura": "What + sujeito + verbo + be + elemento destacado",
+     "exemplo_en": "What annoys me is the constant noise.",
+     "exemplo_pt": "O que me irrita é o barulho constante."
+    },
+    {
+     "rotulo": "All-cleft",
+     "estrutura": "All + sujeito + verbo + be + elemento destacado",
+     "exemplo_en": "All she wanted was a bit of respect.",
+     "exemplo_pt": "Tudo o que ela queria era um pouco de respeito."
+    },
+    {
+     "rotulo": "Wh-cleft com ação",
+     "estrutura": "What + sujeito + do/did + be + (to) verbo",
+     "exemplo_en": "What he did was call the manager directly.",
+     "exemplo_pt": "O que ele fez foi ligar direto para o gerente."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Cleft sentences são a tradução quase literal de 'foi... que' e 'o que... é'. É das poucas vezes que pensar em português ajuda: se soa bem em 'foi X que', vai soar bem em 'it was X that'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Na wh-cleft com ação, o verbo depois do 'be' fica no infinitivo com ou sem 'to': 'What she did was (to) resign'. Não use gerúndio: 'What she did was resigning' soa errado."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Was John who solved the problem.",
+     "certo": "It was John who solved the problem.",
+     "explicacao": "Em português omitimos o sujeito ('Foi o John que...'), mas em inglês o 'It' é obrigatório para abrir a cleft sentence."
+    },
+    {
+     "errado": "What I need is that you listen to me.",
+     "certo": "What I need is for you to listen to me.",
+     "explicacao": "A estrutura 'is that you + verbo' é decalque do português 'é que você...'. O inglês natural pede 'is for you to + verbo'."
+    },
+    {
+     "errado": "It was yesterday when I saw her.",
+     "certo": "It was yesterday that I saw her.",
+     "explicacao": "Na it-cleft, o conector padrão é 'that', mesmo para tempo. 'When' até aparece informalmente, mas 'that' é a forma segura e correta em provas."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete para enfatizar: ___ the manager that approved the budget.",
+     "opcoes": [
+      "It was",
+      "There was",
+      "That was"
+     ],
+     "correta": 0,
+     "explicacao": "A it-cleft começa com 'It + be': 'It was the manager that approved the budget'."
+    },
+    {
+     "pergunta": "Qual frase enfatiza corretamente a ação?",
+     "opcoes": [
+      "What he did was buying a new car.",
+      "What he did was buy a new car.",
+      "What he did was bought a new car."
+     ],
+     "correta": 1,
+     "explicacao": "Depois de 'What he did was', o verbo fica no infinitivo sem 'to': 'buy'."
+    },
+    {
+     "pergunta": "Complete: ___ I want for my birthday is peace and quiet.",
+     "opcoes": [
+      "That",
+      "Which",
+      "All"
+     ],
+     "correta": 2,
+     "explicacao": "'All I want... is' é a all-cleft, perfeita para dizer 'tudo o que eu quero'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "It was only when she apologized ___ I agreed to stay.",
+     "opcoes": [
+      "when",
+      "that",
+      "which"
+     ],
+     "correta": 1,
+     "explicacao": "Na cleft com \"It was... that\", o conector padrão é \"that\", mesmo com expressões de tempo. Repetir \"when\" é interferência do português (\"foi quando... que\")."
+    },
+    {
+     "pergunta": "___ annoys me most is his refusal to listen.",
+     "opcoes": [
+      "That",
+      "Which",
+      "What"
+     ],
+     "correta": 2,
+     "explicacao": "A wh-cleft usa \"What\" como sujeito (\"What annoys me most is...\"). \"That\" e \"Which\" não podem iniciar esse tipo de oração nominal."
+    },
+    {
+     "pergunta": "It was the manager, not the interns, ___ responsible for the error.",
+     "opcoes": [
+      "who was",
+      "who were",
+      "who have been"
+     ],
+     "correta": 0,
+     "explicacao": "O verbo concorda com o elemento focalizado (\"the manager\", singular): who was. \"Who were\" seria atração indevida pelo plural \"interns\"."
+    },
+    {
+     "pergunta": "What the committee did ___ postpone the vote until March.",
+     "opcoes": [
+      "was for",
+      "was to",
+      "was that"
+     ],
+     "correta": 1,
+     "explicacao": "Na cleft com \"What... did\", o complemento vem com infinitivo: \"was to postpone\" (ou infinitivo sem to). \"Was that\" exigiria uma oração completa, não um verbo no infinitivo."
+    },
+    {
+     "pergunta": "___ we need right now is a clear set of priorities.",
+     "opcoes": [
+      "Which",
+      "That",
+      "All"
+     ],
+     "correta": 2,
+     "explicacao": "\"All (that) we need is...\" é a cleft de foco restritivo (a única coisa que precisamos). \"That\" e \"Which\" sozinhos não formam sujeito de wh-cleft."
+    },
+    {
+     "pergunta": "It ___ until midnight that the negotiations finally ended.",
+     "opcoes": [
+      "wasn't",
+      "didn't",
+      "hadn't been"
+     ],
+     "correta": 0,
+     "explicacao": "A estrutura fixa é \"It wasn't until X that Y\" (= só à meia-noite as negociações terminaram). \"Didn't\" não funciona porque o verbo da cleft é \"be\"."
+    },
+    {
+     "pergunta": "The reason ___ she resigned was never made public.",
+     "opcoes": [
+      "because",
+      "why",
+      "for"
+     ],
+     "correta": 1,
+     "explicacao": "Depois de \"the reason\", usa-se \"why\" (ou omite-se o conector). \"The reason because\" é decalque direto de \"a razão porque\", erro frequente de brasileiros."
+    },
+    {
+     "pergunta": "It was in Salvador ___ they first met.",
+     "opcoes": [
+      "where",
+      "in which",
+      "that"
+     ],
+     "correta": 2,
+     "explicacao": "Na cleft \"It was + lugar\", o conector padrão é \"that\", pois a preposição já está no foco (\"in Salvador\"). \"Where\" duplicaria a ideia de lugar."
+    },
+    {
+     "pergunta": "What happened ___ that the files were deleted by mistake.",
+     "opcoes": [
+      "was",
+      "it was",
+      "was it"
+     ],
+     "correta": 0,
+     "explicacao": "Na wh-cleft, \"What happened\" já é o sujeito, então segue direto o verbo: \"What happened was that...\". Inserir \"it\" duplica o sujeito, erro comum de tradução."
+    },
+    {
+     "pergunta": "It is his arrogance, rather than his ideas, ___ people object to.",
+     "opcoes": [
+      "what",
+      "that",
+      "whom"
+     ],
+     "correta": 1,
+     "explicacao": "Cleft com \"It is... that\": \"that\" retoma o elemento focalizado mesmo havendo preposição no fim (object to). \"What\" nunca é usado como conector de it-cleft."
+    }
+   ]
+  },
+  {
+   "slug": "unreal-past",
+   "titulo": "Unreal past (I'd rather, it's time…)",
+   "subtitulo": "O passado que não é passado: fale do presente com verbo no pretérito.",
+   "resumo": "Depois de expressões como 'I'd rather', 'it's time', 'wish' e 'if only', o inglês usa o passado para falar de situações presentes ou hipotéticas. É o chamado unreal past: a forma é de passado, mas o sentido é de agora. Entender isso destrava um monte de estruturas sofisticadas de uma vez só.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "Sofia, my neighbor plays loud music every night. I'd rather he stops!",
+     "pt": "Sofia, meu vizinho toca música alta toda noite. Preferia que ele 'stops'!"
+    },
+    {
+     "persona": "sofia",
+     "en": "I feel you, Max! But after 'I'd rather' with another subject, we use the past: 'I'd rather he stopped.'",
+     "pt": "Te entendo, Max! Mas depois de 'I'd rather' com outro sujeito, usamos o passado: 'I'd rather he stopped.'"
+    },
+    {
+     "persona": "maya",
+     "en": "Wait, the past? But he's playing music now, not yesterday!",
+     "pt": "Espera, o passado? Mas ele está tocando música agora, não ontem!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Exactly! That's the unreal past: past form, present meaning. 'It's time we talked about it' means now, not before.",
+     "pt": "Exatamente! Esse é o unreal past: forma de passado, sentido de presente. 'It's time we talked about it' significa agora, não antes."
+    },
+    {
+     "persona": "leo",
+     "en": "Portuguese does the same trick with the subjunctive: 'preferia que ele parasse'. That '-asse' feeling? In English, it looks like simple past.",
+     "pt": "O português faz o mesmo truque com o subjuntivo: 'preferia que ele parasse'. Aquela sensação do '-asse'? Em inglês, ela aparece como simple past."
+    },
+    {
+     "persona": "max",
+     "en": "If only I knew this before... I mean, if only I had known this before!",
+     "pt": "Se ao menos eu soubesse disso antes... quer dizer, se ao menos eu tivesse sabido disso antes!"
+    }
+   ],
+   "quando_usar": [
+    "Para expressar preferência sobre a ação de outra pessoa, como em \"I'd rather you didn't smoke here\".",
+    "Para dizer que algo já deveria estar acontecendo, como em \"It's time we left — the movie starts in ten minutes\".",
+    "Para expressar desejos sobre o presente, como em \"I wish I lived closer to the beach\".",
+    "Para lamentar algo com 'if only', como em \"If only he listened to advice\".",
+    "Para tratar alguém com familiaridade excessiva no bom humor britânico com 'suppose', como em \"Suppose we tried a different approach?\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "I'd rather + outro sujeito",
+     "estrutura": "I'd rather + sujeito + passado simples",
+     "exemplo_en": "I'd rather you told me the truth.",
+     "exemplo_pt": "Eu preferia que você me contasse a verdade."
+    },
+    {
+     "rotulo": "It's (high) time",
+     "estrutura": "It's time / It's high time + sujeito + passado simples",
+     "exemplo_en": "It's high time the city fixed these roads.",
+     "exemplo_pt": "Já passou da hora de a cidade consertar essas estradas."
+    },
+    {
+     "rotulo": "Wish / If only (presente)",
+     "estrutura": "wish / if only + sujeito + passado simples",
+     "exemplo_en": "I wish I spoke German.",
+     "exemplo_pt": "Queria falar alemão."
+    },
+    {
+     "rotulo": "Wish / If only (passado)",
+     "estrutura": "wish / if only + sujeito + past perfect",
+     "exemplo_en": "If only we had booked the tickets earlier.",
+     "exemplo_pt": "Se ao menos tivéssemos comprado os ingressos antes."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Tradutor mental do Leo: sempre que o português pedir '-asse/-esse/-isse' (parasse, fizesse, saísse), o inglês pede simple past. 'Queria que ele viesse' = 'I wish he came'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Com 'wish' para o futuro, use 'would', não 'will': 'I wish it would stop raining'. E 'I wish I would...' não existe — para si mesmo, use 'I wish I could'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I wish I have more time to study.",
+     "certo": "I wish I had more time to study.",
+     "explicacao": "Depois de 'wish' para o presente, o verbo vai para o passado. 'Have' no presente é decalque direto de 'queria que eu tenho'."
+    },
+    {
+     "errado": "It's time to we go home.",
+     "certo": "It's time we went home.",
+     "explicacao": "Ou 'It's time to go home' (com infinitivo, sem sujeito) ou 'It's time we went home' (com sujeito e passado). Misturar os dois é erro clássico."
+    },
+    {
+     "errado": "I'd rather that he comes tomorrow.",
+     "certo": "I'd rather he came tomorrow.",
+     "explicacao": "Com 'I'd rather' + outro sujeito, o verbo fica no passado mesmo falando do futuro, e o 'that' normalmente é omitido."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: I'd rather you ___ me before coming over.",
+     "opcoes": [
+      "call",
+      "called",
+      "will call"
+     ],
+     "correta": 1,
+     "explicacao": "'I'd rather + outro sujeito' pede passado simples: 'I'd rather you called me'."
+    },
+    {
+     "pergunta": "Complete: If only I ___ how to dance forró!",
+     "opcoes": [
+      "know",
+      "have known",
+      "knew"
+     ],
+     "correta": 2,
+     "explicacao": "'If only' sobre o presente usa passado simples: 'If only I knew'."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "It's high time the government invested in education.",
+      "It's high time the government invests in education.",
+      "It's high time the government to invest in education."
+     ],
+     "correta": 0,
+     "explicacao": "'It's high time' + sujeito exige verbo no passado: 'invested'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "I'd rather you ___ smoke in the car.",
+     "opcoes": [
+      "don't",
+      "wouldn't have",
+      "didn't"
+     ],
+     "correta": 2,
+     "explicacao": "\"Would rather + sujeito diferente\" pede passado irreal para presente/futuro: didn't. \"Don't\" é o erro típico de quem não percebe a mudança de sujeito."
+    },
+    {
+     "pergunta": "It's high time the government ___ this issue seriously.",
+     "opcoes": [
+      "took",
+      "takes",
+      "would take"
+     ],
+     "correta": 0,
+     "explicacao": "\"It's (high) time + sujeito\" usa passado irreal (took) para falar do presente. O present simple (takes) é a interferência mais comum do português (\"é hora de o governo levar\")."
+    },
+    {
+     "pergunta": "I wish I ___ to her advice when I had the chance.",
+     "opcoes": [
+      "listened",
+      "had listened",
+      "would listen"
+     ],
+     "correta": 1,
+     "explicacao": "Arrependimento sobre o passado pede \"wish + past perfect\" (had listened). \"Listened\" expressaria desejo sobre o presente, não sobre a chance perdida."
+    },
+    {
+     "pergunta": "He talks as if he ___ the only person who works here.",
+     "opcoes": [
+      "would be",
+      "is being",
+      "were"
+     ],
+     "correta": 2,
+     "explicacao": "\"As if\" com situação irreal usa passado subjuntivo: were. \"Would be\" após \"as if\" é decalque do português (\"como se fosse\" → \"seria\")."
+    },
+    {
+     "pergunta": "If only it ___ stop raining — we've been stuck inside for days.",
+     "opcoes": [
+      "would",
+      "had",
+      "did"
+     ],
+     "correta": 0,
+     "explicacao": "\"If only + would\" expressa desejo de mudança em algo fora do nosso controle (a chuva). \"Had\" indicaria arrependimento sobre o passado, o que não cabe aqui."
+    },
+    {
+     "pergunta": "Suppose you ___ the lottery tomorrow — what would you do first?",
+     "opcoes": [
+      "win",
+      "won",
+      "had won"
+     ],
+     "correta": 1,
+     "explicacao": "\"Suppose\" com hipótese irreal segue a lógica da segunda condicional: passado (won) + would. \"Had won\" pediria \"what would you have done\"."
+    },
+    {
+     "pergunta": "I'd sooner we ___ this discussion for another day.",
+     "opcoes": [
+      "leave",
+      "will leave",
+      "left"
+     ],
+     "correta": 2,
+     "explicacao": "\"Would sooner\", como \"would rather\", pede passado irreal quando o sujeito muda: left. O presente (leave) só seria possível se o sujeito fosse o mesmo (I'd sooner leave)."
+    },
+    {
+     "pergunta": "She wishes she ___ speak French as fluently as her sister.",
+     "opcoes": [
+      "could",
+      "would",
+      "can"
+     ],
+     "correta": 0,
+     "explicacao": "Para habilidade irreal no presente, usa-se \"wish + could\". \"Would\" não se usa para desejos sobre a própria capacidade, apenas sobre comportamento de terceiros ou situações externas."
+    },
+    {
+     "pergunta": "It's about time you ___ taking responsibility for your choices.",
+     "opcoes": [
+      "start",
+      "started",
+      "would start"
+     ],
+     "correta": 1,
+     "explicacao": "\"It's about time + sujeito\" exige passado irreal (started) com sentido presente. \"Would start\" não é usado nessa estrutura."
+    },
+    {
+     "pergunta": "I wish you ___ interrupting me every time I try to explain.",
+     "opcoes": [
+      "stop",
+      "stopped",
+      "would stop"
+     ],
+     "correta": 2,
+     "explicacao": "Reclamação sobre hábito irritante de outra pessoa usa \"wish + would\" (would stop). \"Stopped\" descreveria um estado desejado, não o pedido de mudança de comportamento."
+    }
+   ]
+  },
+  {
+   "slug": "advanced-conditionals",
+   "titulo": "Conditionals avançadas (provided, but for…)",
+   "subtitulo": "Muito além do if: condições com estilo de contrato e de romance.",
+   "resumo": "No C1, as condicionais ganham novas roupas: 'provided that', 'as long as', 'but for', 'unless' e as inversões formais como 'Had I known'. São estruturas que aparecem em contratos, textos acadêmicos e no inglês elegante do dia a dia. Elas dizem a mesma coisa que o 'if', mas com mais precisão e sofisticação.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, I saw 'But for your help, I would have failed' in an essay. Where's the 'if' in that sentence?",
+     "pt": "Sofia, vi 'But for your help, I would have failed' numa redação. Cadê o 'if' nessa frase?"
+    },
+    {
+     "persona": "sofia",
+     "en": "There isn't one! 'But for your help' means 'if it hadn't been for your help'. It's a compact, elegant conditional.",
+     "pt": "Não tem! 'But for your help' significa 'se não fosse pela sua ajuda'. É uma condicional compacta e elegante."
+    },
+    {
+     "persona": "leo",
+     "en": "In Portuguese we say 'não fosse por você'. 'But for' is exactly that, in two little words.",
+     "pt": "Em português dizemos 'não fosse por você'. 'But for' é exatamente isso, em duas palavrinhas."
+    },
+    {
+     "persona": "max",
+     "en": "So I can say: I will lend you my bike, unless you return it by Friday.",
+     "pt": "Então posso dizer: 'Empresto minha bike, unless você devolva até sexta.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful, Max! 'Unless' means 'if not'. You want the opposite: 'I'll lend you my bike provided that you return it by Friday.'",
+     "pt": "Cuidado, Max! 'Unless' significa 'se não'. Você quer o contrário: 'I'll lend you my bike provided that you return it by Friday.'"
+    },
+    {
+     "persona": "max",
+     "en": "Ah! Provided that I study more, these conditionals will make sense.",
+     "pt": "Ah! Contanto que eu estude mais, essas condicionais vão fazer sentido."
+    }
+   ],
+   "quando_usar": [
+    "Para impor uma condição firme, quase contratual, como em \"You can use the car provided that you fill the tank\".",
+    "Para dizer 'se não fosse por' de forma elegante, como em \"But for the traffic, we would have arrived on time\".",
+    "Para condições negativas com 'unless', como em \"We'll lose the client unless we act fast\".",
+    "Para soar formal com inversão, como em \"Had I known about the meeting, I would have prepared\".",
+    "Para hipóteses improváveis com 'should', como em \"Should you need anything, just call me\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Provided / As long as",
+     "estrutura": "oração principal + provided (that) / as long as + condição",
+     "exemplo_en": "You'll pass provided that you review every week.",
+     "exemplo_pt": "Você vai passar contanto que revise toda semana."
+    },
+    {
+     "rotulo": "But for",
+     "estrutura": "But for + substantivo, + would/could have + particípio",
+     "exemplo_en": "But for the rain, the show would have been perfect.",
+     "exemplo_pt": "Não fosse a chuva, o show teria sido perfeito."
+    },
+    {
+     "rotulo": "Inversão com Had",
+     "estrutura": "Had + sujeito + particípio, + would have + particípio",
+     "exemplo_en": "Had she asked me, I would have said yes.",
+     "exemplo_pt": "Tivesse ela me perguntado, eu teria dito sim."
+    },
+    {
+     "rotulo": "Inversão com Should",
+     "estrutura": "Should + sujeito + verbo, + imperativo/will",
+     "exemplo_en": "Should the flight be delayed, we will notify you.",
+     "exemplo_pt": "Caso o voo atrase, nós avisaremos você."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "As inversões 'Had I known', 'Were I you' e 'Should you need' são só as condicionais clássicas sem o 'if': 'If I had known' perde o 'if' e inverte. Três fórmulas, som de nativo garantido."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'Unless' já é negativo por natureza; não o combine com 'not' para a mesma ideia. 'Unless you don't study' significa o oposto do que a maioria quer dizer."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "If I would have known, I would have called you.",
+     "certo": "Had I known, I would have called you.",
+     "explicacao": "'Would' nunca entra na parte da condição. Ou 'If I had known' ou a versão invertida 'Had I known'."
+    },
+    {
+     "errado": "Unless you study hard, you will pass the exam.",
+     "certo": "Unless you study hard, you will fail the exam.",
+     "explicacao": "Brasileiro confunde 'unless' com 'desde que'. 'Unless' = 'a menos que': a frase precisa fazer sentido com 'se você NÃO estudar'."
+    },
+    {
+     "errado": "But for you helped me, I would have given up.",
+     "certo": "But for your help, I would have given up.",
+     "explicacao": "'But for' é seguido de substantivo ou pronome, nunca de oração com verbo conjugado."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: ___ you require further information, please contact our office.",
+     "opcoes": [
+      "Would",
+      "Should",
+      "Unless"
+     ],
+     "correta": 1,
+     "explicacao": "'Should you require' é a inversão formal de 'If you require', comum em e-mails corporativos."
+    },
+    {
+     "pergunta": "Qual frase significa 'Se não fosse pelo meu professor, eu teria desistido'?",
+     "opcoes": [
+      "Unless my teacher, I would have quit.",
+      "Provided my teacher, I would have quit.",
+      "But for my teacher, I would have quit."
+     ],
+     "correta": 2,
+     "explicacao": "'But for + substantivo' expressa exatamente 'se não fosse por'."
+    },
+    {
+     "pergunta": "Complete: ___ I known you were in town, I would have invited you for dinner.",
+     "opcoes": [
+      "Had",
+      "Have",
+      "Would"
+     ],
+     "correta": 0,
+     "explicacao": "A inversão da terceira condicional é 'Had + sujeito + particípio': 'Had I known'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ your timely warning, we would have missed the flight.",
+     "opcoes": [
+      "But for",
+      "Unless",
+      "If it wasn't"
+     ],
+     "correta": 0,
+     "explicacao": "\"But for + substantivo\" = \"se não fosse por\" (But for your warning = If it hadn't been for it). \"Unless\" precisa de oração completa, não de sintagma nominal."
+    },
+    {
+     "pergunta": "If she ___ the training course last year, she would be leading the team now.",
+     "opcoes": [
+      "attended",
+      "had attended",
+      "would have attended"
+     ],
+     "correta": 1,
+     "explicacao": "Condicional mista: condição passada (had attended) com resultado presente (would be leading). \"Attended\" criaria uma segunda condicional, incompatível com \"last year\"."
+    },
+    {
+     "pergunta": "You can borrow the car ___ you return it with a full tank.",
+     "opcoes": [
+      "in case",
+      "unless",
+      "provided that"
+     ],
+     "correta": 2,
+     "explicacao": "\"Provided that\" = \"contanto que\", condição para permitir o empréstimo. \"In case\" indica precaução (\"para o caso de\"), não condição — confusão comum de brasileiros."
+    },
+    {
+     "pergunta": "Should you ___ any further assistance, do not hesitate to contact us.",
+     "opcoes": [
+      "require",
+      "required",
+      "will require"
+     ],
+     "correta": 0,
+     "explicacao": "Na inversão condicional com \"Should\", o verbo fica no infinitivo sem to: \"Should you require\" = \"If you should require\". \"Required\" mistura a estrutura com a inversão de \"Had\"."
+    },
+    {
+     "pergunta": "If he weren't so stubborn, he ___ the offer yesterday.",
+     "opcoes": [
+      "would accept",
+      "would have accepted",
+      "had accepted"
+     ],
+     "correta": 1,
+     "explicacao": "Condicional mista: estado presente (weren't so stubborn) com resultado passado (\"yesterday\"), logo would have accepted. \"Would accept\" ignora a marca temporal passada."
+    },
+    {
+     "pergunta": "I wrote down her address ___ I needed to send the documents later.",
+     "opcoes": [
+      "unless",
+      "provided that",
+      "in case"
+     ],
+     "correta": 2,
+     "explicacao": "\"In case\" expressa precaução: anotei por via das dúvidas. \"Provided that\" indicaria condição para a ação principal, o que não faz sentido aqui."
+    },
+    {
+     "pergunta": "Were it not ___ the sponsors, the festival would not exist.",
+     "opcoes": [
+      "for",
+      "by",
+      "because of"
+     ],
+     "correta": 0,
+     "explicacao": "A estrutura fixa é \"Were it not for\" (= If it were not for), \"se não fosse pelos\". \"Because of\" não se combina com essa inversão formal."
+    },
+    {
+     "pergunta": "Hurry up; ___, we'll lose our reservation.",
+     "opcoes": [
+      "unless",
+      "otherwise",
+      "in case"
+     ],
+     "correta": 1,
+     "explicacao": "\"Otherwise\" = \"caso contrário\", condicional implícita após um imperativo. \"Unless\" precisaria introduzir uma oração com sujeito e verbo, não pode ficar isolado entre vírgulas."
+    },
+    {
+     "pergunta": "If you ___ to change your mind, the offer still stands.",
+     "opcoes": [
+      "would happen",
+      "will happen",
+      "should happen"
+     ],
+     "correta": 2,
+     "explicacao": "\"If you should happen to...\" é a forma tentativa e polida de apresentar uma possibilidade remota. \"Will\" e \"would\" não são usados na oração do if nesse padrão."
+    },
+    {
+     "pergunta": "___ he apologizes publicly, I will not withdraw the complaint.",
+     "opcoes": [
+      "Unless",
+      "If not",
+      "Provided"
+     ],
+     "correta": 0,
+     "explicacao": "\"Unless\" = \"a menos que\": só retiro a queixa se ele se desculpar. \"Provided\" inverteria a lógica (manteria a queixa justamente se ele se desculpasse), e \"If not\" não introduz oração completa."
+    }
+   ]
+  },
+  {
+   "slug": "participle-clauses",
+   "titulo": "Participle clauses",
+   "subtitulo": "Enxugue suas frases: diga mais escrevendo menos.",
+   "resumo": "Participle clauses substituem orações inteiras por um verbo no -ing ou no particípio: 'Feeling tired, she went to bed' em vez de 'Because she felt tired...'. São a marca registrada da escrita fluida e econômica em inglês. Perfeitas para redações, relatórios e para dar aquele ar de texto profissional.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, my essays feel repetitive. I keep writing 'because', 'when', 'after' all the time.",
+     "pt": "Sofia, minhas redações parecem repetitivas. Fico escrevendo 'because', 'when', 'after' o tempo todo."
+    },
+    {
+     "persona": "sofia",
+     "en": "Participle clauses are your answer! Instead of 'After she finished the report, she went home', try 'Having finished the report, she went home.'",
+     "pt": "Participle clauses são a resposta! Em vez de 'After she finished the report, she went home', experimente 'Having finished the report, she went home.'"
+    },
+    {
+     "persona": "max",
+     "en": "Nice! Walking down the street, the buildings looked beautiful.",
+     "pt": "Legal! 'Walking down the street, the buildings looked beautiful.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful, Max — that sentence says the buildings were walking! The subject of both parts must be the same: 'Walking down the street, I noticed the beautiful buildings.'",
+     "pt": "Cuidado, Max — essa frase diz que os prédios estavam andando! O sujeito das duas partes precisa ser o mesmo: 'Walking down the street, I noticed the beautiful buildings.'"
+    },
+    {
+     "persona": "leo",
+     "en": "That's the famous dangling participle — the grammar version of a selfie where you forgot to appear in the photo.",
+     "pt": "Esse é o famoso particípio solto — a versão gramatical de uma selfie em que você esqueceu de aparecer na foto."
+    }
+   ],
+   "quando_usar": [
+    "Para substituir orações de causa, como em \"Being the oldest, she felt responsible for her siblings\".",
+    "Para mostrar duas ações simultâneas, como em \"He left the room, slamming the door behind him\".",
+    "Para indicar que uma ação veio antes da outra, como em \"Having saved enough money, they bought the house\".",
+    "Para substituir orações relativas em descrições, como em \"The man wearing the red cap is my uncle\".",
+    "Para dar ideia passiva de forma compacta, como em \"Built in 1920, the theater still hosts concerts\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Presente ativo",
+     "estrutura": "Verbo-ing + vírgula + oração principal",
+     "exemplo_en": "Knowing the answer, she raised her hand.",
+     "exemplo_pt": "Sabendo a resposta, ela levantou a mão."
+    },
+    {
+     "rotulo": "Perfeito (ação anterior)",
+     "estrutura": "Having + particípio + vírgula + oração principal",
+     "exemplo_en": "Having lived in Recife, he knows the city well.",
+     "exemplo_pt": "Tendo morado em Recife, ele conhece bem a cidade."
+    },
+    {
+     "rotulo": "Passivo",
+     "estrutura": "Particípio passado + vírgula + oração principal",
+     "exemplo_en": "Written in a hurry, the email was full of typos.",
+     "exemplo_pt": "Escrito às pressas, o e-mail estava cheio de erros de digitação."
+    },
+    {
+     "rotulo": "Com conjunção",
+     "estrutura": "When / While / After + verbo-ing",
+     "exemplo_en": "While cooking dinner, I listened to a podcast.",
+     "exemplo_pt": "Enquanto fazia o jantar, ouvi um podcast."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Use 'Having + particípio' quando a ordem dos eventos importa: 'Having read the contract, she signed it' deixa claro que ela leu ANTES de assinar. É o 'tendo feito' do português."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Teste do sujeito fantasma: pergunte QUEM faz a ação do -ing. Se não for o sujeito da oração principal, a frase quebra. 'Opening the fridge, the milk had expired' — o leite não abriu a geladeira!"
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "After finish the course, I got a better job.",
+     "certo": "After finishing the course, I got a better job.",
+     "explicacao": "Depois de preposições e conjunções como 'after', 'before' e 'without', o verbo vai para o -ing, nunca fica na forma base."
+    },
+    {
+     "errado": "Arriving late, the teacher scolded the student.",
+     "certo": "Arriving late, the student was scolded by the teacher.",
+     "explicacao": "Quem chegou atrasado foi o aluno, mas a frase errada diz que foi o professor. O sujeito da participle clause tem que ser o sujeito da oração principal."
+    },
+    {
+     "errado": "Having did my homework, I watched TV.",
+     "certo": "Having done my homework, I watched TV.",
+     "explicacao": "Depois de 'having' vem o particípio passado (done, seen, written), nunca o passado simples (did, saw, wrote)."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: ___ all the ingredients, she started cooking.",
+     "opcoes": [
+      "Buying",
+      "Having bought",
+      "Bought"
+     ],
+     "correta": 1,
+     "explicacao": "A compra veio antes de cozinhar, então usamos o perfeito: 'Having bought'."
+    },
+    {
+     "pergunta": "Qual frase NÃO tem sujeito solto (dangling participle)?",
+     "opcoes": [
+      "Running to catch the bus, my phone fell.",
+      "Running to catch the bus, I dropped my phone.",
+      "Running to catch the bus, the phone was dropped."
+     ],
+     "correta": 1,
+     "explicacao": "Quem corria era 'I', que é o sujeito da oração principal. Nas outras, o telefone parece estar correndo."
+    },
+    {
+     "pergunta": "Complete: ___ in 1554, São Paulo is one of the largest cities in the world.",
+     "opcoes": [
+      "Founding",
+      "Being found",
+      "Founded"
+     ],
+     "correta": 2,
+     "explicacao": "Sentido passivo (a cidade foi fundada) pede particípio passado: 'Founded in 1554'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ the report twice, she noticed several inconsistencies.",
+     "opcoes": [
+      "Reading",
+      "Having read",
+      "Read"
+     ],
+     "correta": 1,
+     "explicacao": "\"Having read\" marca que a leitura foi concluída antes de notar os problemas. \"Reading\" indicaria ações simultâneas, incompatível com \"twice\"."
+    },
+    {
+     "pergunta": "___ from a distance, the sculpture resembles a bird in flight.",
+     "opcoes": [
+      "Seeing",
+      "Having seen",
+      "Seen"
+     ],
+     "correta": 2,
+     "explicacao": "A escultura é vista (sentido passivo), então usa-se o particípio passado: Seen. \"Seeing\" faria a escultura ser quem vê — erro clássico de dangling participle."
+    },
+    {
+     "pergunta": "Not ___ what to say, he remained silent.",
+     "opcoes": [
+      "knowing",
+      "known",
+      "to know"
+     ],
+     "correta": 0,
+     "explicacao": "Oração de particípio ativa com negação: \"Not knowing\" = \"como não sabia\". \"Known\" daria sentido passivo, impossível com o sujeito \"he\" sabendo algo."
+    },
+    {
+     "pergunta": "The documents ___ to the e-mail must be signed by both parties.",
+     "opcoes": [
+      "attaching",
+      "attached",
+      "having attached"
+     ],
+     "correta": 1,
+     "explicacao": "Particípio passado com valor passivo reduzindo a relativa: \"documents (which were) attached\". \"Attaching\" indicaria que os documentos anexam algo, invertendo a voz."
+    },
+    {
+     "pergunta": "___ that the roads were blocked, we decided to postpone the trip.",
+     "opcoes": [
+      "Informing",
+      "Having informed",
+      "Informed"
+     ],
+     "correta": 2,
+     "explicacao": "\"(Having been) Informed that...\" tem sentido passivo: fomos informados. \"Informing\" e \"having informed\" seriam ativos e exigiriam um objeto (informar alguém)."
+    },
+    {
+     "pergunta": "Weather ___, the ceremony will be held outdoors.",
+     "opcoes": [
+      "permitting",
+      "permitted",
+      "permits"
+     ],
+     "correta": 0,
+     "explicacao": "\"Weather permitting\" é um absolute participle fixo (\"se o tempo permitir\"). \"Permits\" criaria uma oração finita sem conjunção, agramatical aqui."
+    },
+    {
+     "pergunta": "___ in 1962, the theatre remains one of the city's most treasured landmarks.",
+     "opcoes": [
+      "Building",
+      "Built",
+      "Having built"
+     ],
+     "correta": 1,
+     "explicacao": "O teatro foi construído (voz passiva), logo particípio passado: Built. \"Having built\" atribuiria a construção ao próprio teatro, erro de voz comum entre brasileiros."
+    },
+    {
+     "pergunta": "She left the meeting early, ___ her assistant in charge of the presentation.",
+     "opcoes": [
+      "left",
+      "having been left",
+      "leaving"
+     ],
+     "correta": 2,
+     "explicacao": "Particípio presente para resultado/ação simultânea do mesmo sujeito: \"leaving her assistant in charge\". \"Left\" exigiria outra estrutura, pois criaria dois verbos finitos soltos."
+    },
+    {
+     "pergunta": "___ all his savings on the renovation, he couldn't afford a holiday.",
+     "opcoes": [
+      "Having spent",
+      "Spent",
+      "Being spent"
+     ],
+     "correta": 0,
+     "explicacao": "\"Having spent\" mostra ação anterior e ativa: ele gastou antes e por isso não podia viajar. \"Spent\" e \"being spent\" dariam sentido passivo, incompatível com o sujeito \"he\"."
+    },
+    {
+     "pergunta": "Anyone ___ to attend the workshop should register by Friday.",
+     "opcoes": [
+      "who wishing",
+      "wishing",
+      "wished"
+     ],
+     "correta": 1,
+     "explicacao": "Relativa reduzida ativa: \"Anyone (who wishes) → Anyone wishing\". \"Who wishing\" mistura as duas estruturas — ou se usa o pronome com verbo finito, ou só o particípio."
+    }
+   ]
+  },
+  {
+   "slug": "ellipsis-substitution",
+   "titulo": "Ellipsis & substitution",
+   "subtitulo": "A arte de não repetir: fale como nativo cortando o que já foi dito.",
+   "resumo": "Nativos raramente repetem palavras: eles cortam (ellipsis) ou substituem (substitution) o que já apareceu na conversa. É por isso que dizem 'I hope so', 'She might be' e 'I'd love to' sem completar a frase. Dominar esses cortes deixa seu inglês mais leve, rápido e natural.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "Maya, do you think our team will win tonight? I think that our team will win tonight!",
+     "pt": "Maya, você acha que nosso time ganha hoje? Eu acho que nosso time ganha hoje!"
+    },
+    {
+     "persona": "maya",
+     "en": "Max, you can just say 'I think so'! Repeating the whole sentence sounds robotic... no offense.",
+     "pt": "Max, você pode dizer só 'I think so'! Repetir a frase inteira soa robótico... sem ofensa."
+    },
+    {
+     "persona": "max",
+     "en": "None taken. So if someone asks 'Are you coming to the party?', I answer 'I'd love to come to the party'?",
+     "pt": "Sem problemas. Então se alguém pergunta 'Você vem para a festa?', eu respondo 'I'd love to come to the party'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Just 'I'd love to'! The 'to' stays, and everything after it disappears. That little 'to' carries the whole idea.",
+     "pt": "Só 'I'd love to'! O 'to' fica, e tudo depois dele desaparece. Aquele 'to' pequenininho carrega a ideia inteira."
+    },
+    {
+     "persona": "leo",
+     "en": "In Portuguese we cut too — 'Vai à festa?' 'Adoraria!' — but English keeps a little anchor word: so, to, one, do. Learn the anchors and you're set.",
+     "pt": "Em português a gente também corta — 'Vai à festa?' 'Adoraria!' — mas o inglês guarda uma palavrinha-âncora: so, to, one, do. Aprenda as âncoras e pronto."
+    }
+   ],
+   "quando_usar": [
+    "Para responder sem repetir a frase inteira, como em \"Is it going to rain? — I think so\".",
+    "Para aceitar ou recusar convites de forma natural, como em \"Want to join us? — I'd love to\".",
+    "Para substituir substantivos já mencionados com 'one/ones', como em \"I prefer the blue shirt to the red one\".",
+    "Para evitar repetir o verbo com 'do/does/did', como em \"She works harder than I do\".",
+    "Para concordar ou discordar rapidamente, como em \"I loved the film. — So did I!\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Substituição com so/not",
+     "estrutura": "verbo de opinião + so / not",
+     "exemplo_en": "Will they accept the offer? — I hope so, but I'm afraid not.",
+     "exemplo_pt": "Será que eles aceitam a proposta? — Espero que sim, mas receio que não."
+    },
+    {
+     "rotulo": "Ellipsis com to",
+     "estrutura": "verbo + to (cortando o resto)",
+     "exemplo_en": "I didn't want to go, but I had to.",
+     "exemplo_pt": "Eu não queria ir, mas tive que ir."
+    },
+    {
+     "rotulo": "Substituição com one/ones",
+     "estrutura": "adjetivo + one/ones no lugar do substantivo",
+     "exemplo_en": "These cookies are stale; let's bake fresh ones.",
+     "exemplo_pt": "Esses biscoitos estão murchos; vamos assar uns frescos."
+    },
+    {
+     "rotulo": "Eco com auxiliar",
+     "estrutura": "sujeito + auxiliar (do/have/be/modal)",
+     "exemplo_en": "I haven't seen the show, but my sister has.",
+     "exemplo_pt": "Eu não vi a série, mas minha irmã viu."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Regra de ouro: corte tudo, mas deixe uma âncora. 'I hope SO', 'I'd love TO', 'the red ONE', 'she DID'. A âncora avisa o ouvinte que o resto da frase está subentendido."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'I think so' concorda, mas a negativa tem duas formas: 'I don't think so' (comum) e 'I hope not' — nunca 'I don't hope so'. Cada verbo tem sua preferência; hope, guess e be afraid pedem 'not'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Do you like jazz? — Yes, I like.",
+     "certo": "Do you like jazz? — Yes, I do.",
+     "explicacao": "Português aceita 'Sim, gosto', mas o inglês exige o auxiliar como âncora: 'Yes, I do'. 'I like' sozinho fica pendurado, pedindo um objeto."
+    },
+    {
+     "errado": "She sings better than I sing.",
+     "certo": "She sings better than I do.",
+     "explicacao": "Repetir o verbo principal soa artificial. Nativo substitui por 'do/does/did' na comparação."
+    },
+    {
+     "errado": "Are you coming? — I'd love it.",
+     "certo": "Are you coming? — I'd love to.",
+     "explicacao": "Para aceitar um convite de ação, a âncora é 'to' (de 'to come'), não 'it'. 'I'd love it' se refere a uma coisa, não à ação de ir."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Is the meeting still on? — I believe ___.",
+     "opcoes": [
+      "that",
+      "so",
+      "yes"
+     ],
+     "correta": 1,
+     "explicacao": "'I believe so' substitui a oração inteira 'that the meeting is still on'."
+    },
+    {
+     "pergunta": "Complete: My old laptop broke, so I bought a new ___.",
+     "opcoes": [
+      "one",
+      "it",
+      "that"
+     ],
+     "correta": 0,
+     "explicacao": "'One' substitui o substantivo 'laptop' já mencionado: 'a new one'."
+    },
+    {
+     "pergunta": "Complete: He didn't enjoy the lecture, but I ___.",
+     "opcoes": [
+      "enjoyed",
+      "was",
+      "did"
+     ],
+     "correta": 2,
+     "explicacao": "O eco da frase 'enjoyed the lecture' é feito com o auxiliar 'did', evitando a repetição do verbo."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "A: Will they cancel the event? B: I hope ___ — we've already bought the tickets.",
+     "opcoes": [
+      "it",
+      "no",
+      "not"
+     ],
+     "correta": 2,
+     "explicacao": "A forma negativa reduzida é \"I hope not\", substituindo toda a oração (\"that they won't cancel\"). \"I hope no\" é decalque direto de \"espero que não\"."
+    },
+    {
+     "pergunta": "She said she'd finish the project by Friday, and finish it she ___.",
+     "opcoes": [
+      "did",
+      "has",
+      "would"
+     ],
+     "correta": 0,
+     "explicacao": "Na estrutura enfática com fronting (\"and finish it she did\"), o auxiliar \"did\" substitui o verbo já mencionado no passado. \"Would\" mudaria o sentido para algo ainda não realizado."
+    },
+    {
+     "pergunta": "I don't think it will rain, but if it ___, we'll move the party indoors.",
+     "opcoes": [
+      "will",
+      "does",
+      "is"
+     ],
+     "correta": 1,
+     "explicacao": "\"Does\" substitui \"rains\" e mantém a regra de presente na oração condicional. \"Will\" após \"if\" é o erro clássico de condicional."
+    },
+    {
+     "pergunta": "These shoes are worn out; I need to buy some new ___.",
+     "opcoes": [
+      "one",
+      "them",
+      "ones"
+     ],
+     "correta": 2,
+     "explicacao": "\"Ones\" substitui o substantivo plural \"shoes\" após adjetivo. \"Them\" não pode vir depois de \"new\", e \"one\" só serviria para singular."
+    },
+    {
+     "pergunta": "He asked me to review the figures, and I am doing ___ right now.",
+     "opcoes": [
+      "so",
+      "such",
+      "alike"
+     ],
+     "correta": 0,
+     "explicacao": "\"Do so\" substitui a ação inteira já mencionada (review the figures) em registro formal. \"Such\" e \"alike\" não funcionam como substitutos verbais em inglês."
+    },
+    {
+     "pergunta": "She can't attend the ceremony, and ___ can I.",
+     "opcoes": [
+      "so",
+      "neither",
+      "either"
+     ],
+     "correta": 1,
+     "explicacao": "Para concordar com uma frase negativa usa-se \"neither + auxiliar + sujeito\". \"So can I\" só serve para frases afirmativas, e \"either\" exigiria \"I can't either\"."
+    },
+    {
+     "pergunta": "Would you like more coffee? — Yes, I'd love ___.",
+     "opcoes": [
+      "it",
+      "one",
+      "some"
+     ],
+     "correta": 2,
+     "explicacao": "\"Some\" substitui o incontável \"more coffee\". \"One\" pressupõe substantivo contável, e \"it\" se referiria a um café específico já mencionado, não a uma nova porção."
+    },
+    {
+     "pergunta": "They promised to lower taxes, but they never ___.",
+     "opcoes": [
+      "did",
+      "made",
+      "done"
+     ],
+     "correta": 0,
+     "explicacao": "O auxiliar \"did\" retoma \"lowered taxes\" por elipse. \"Made\" é a confusão make/do, e \"done\" precisaria de um auxiliar (have done)."
+    },
+    {
+     "pergunta": "A: I found the lecture fascinating. B: ___ did I.",
+     "opcoes": [
+      "Such",
+      "So",
+      "As"
+     ],
+     "correta": 1,
+     "explicacao": "Concordância com afirmativa usa \"So + auxiliar + sujeito\" (So did I = eu também). \"As did I\" existe, mas como continuação na mesma frase, não como resposta isolada."
+    },
+    {
+     "pergunta": "I asked him to apologise, but he refused ___.",
+     "opcoes": [
+      "doing",
+      "to do",
+      "to"
+     ],
+     "correta": 2,
+     "explicacao": "O infinitivo reduzido (\"refused to\") evita repetir \"apologise\" — elipse típica de nível avançado. \"To do\" precisaria de complemento (to do so)."
+    }
+   ]
+  },
+  {
+   "slug": "hedging",
+   "titulo": "Hedging: suavizando afirmações",
+   "subtitulo": "Diga a mesma coisa com 30% menos certeza e 100% mais elegância.",
+   "resumo": "Hedging é a arte de suavizar afirmações com palavras como 'seem', 'tend to', 'arguably' e 'somewhat'. Em inglês acadêmico e profissional, afirmar com certeza absoluta soa arrogante ou ingênuo. Quem domina hedging discorda sem ofender, critica sem agredir e opina com autoridade tranquila.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "Sofia, I wrote in my report: 'This strategy is wrong and will fail.'",
+     "pt": "Sofia, escrevi no meu relatório: 'Esta estratégia está errada e vai fracassar.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Ouch! Technically grammatical, diplomatically disastrous. Try: 'This strategy seems somewhat risky and might not deliver the expected results.'",
+     "pt": "Ai! Gramaticalmente correto, diplomaticamente desastroso. Tente: 'Esta estratégia parece um tanto arriscada e talvez não entregue os resultados esperados.'"
+    },
+    {
+     "persona": "maya",
+     "en": "Interesting! So hedging isn't about being insecure — it's about being professional?",
+     "pt": "Interessante! Então hedging não é insegurança — é profissionalismo?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Exactly. 'The data suggests' sounds more credible than 'the data proves'. Softness, in academic English, is strength.",
+     "pt": "Exatamente. 'Os dados sugerem' soa mais confiável que 'os dados provam'. Suavidade, no inglês acadêmico, é força."
+    },
+    {
+     "persona": "leo",
+     "en": "It's the English version of our 'será que...', 'meio que...', 'pode ser que...'. Brazilians hedge all day in Portuguese — just transfer the habit!",
+     "pt": "É a versão inglesa do nosso 'será que...', 'meio que...', 'pode ser que...'. Brasileiro suaviza o dia inteiro em português — é só transferir o hábito!"
+    }
+   ],
+   "quando_usar": [
+    "Para apresentar conclusões em textos acadêmicos, como em \"The results suggest a strong correlation\".",
+    "Para discordar educadamente em reuniões, como em \"That approach may not be the most efficient\".",
+    "Para fazer generalizações honestas, como em \"Brazilians tend to be warm with strangers\".",
+    "Para criticar sem soar agressivo, como em \"The report is somewhat unclear in places\".",
+    "Para opinar com autoridade sem arrogância, como em \"This is arguably the best solution available\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Verbos de aparência",
+     "estrutura": "seem / appear + to + verbo",
+     "exemplo_en": "The numbers appear to support our theory.",
+     "exemplo_pt": "Os números parecem sustentar nossa teoria."
+    },
+    {
+     "rotulo": "Tendência",
+     "estrutura": "tend to + verbo",
+     "exemplo_en": "Meetings tend to run longer than planned.",
+     "exemplo_pt": "Reuniões tendem a durar mais que o planejado."
+    },
+    {
+     "rotulo": "Modais de possibilidade",
+     "estrutura": "may / might / could + verbo",
+     "exemplo_en": "This decision could affect our timeline.",
+     "exemplo_pt": "Essa decisão pode afetar nosso cronograma."
+    },
+    {
+     "rotulo": "Advérbios suavizantes",
+     "estrutura": "arguably / somewhat / to some extent + afirmação",
+     "exemplo_en": "The plan is somewhat ambitious, to say the least.",
+     "exemplo_pt": "O plano é um tanto ambicioso, para dizer o mínimo."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Kit básico de sobrevivência acadêmica: troque 'is' por 'seems to be', 'proves' por 'suggests', 'all' por 'most', 'will' por 'is likely to'. Quatro trocas, texto instantaneamente mais maduro."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Hedging demais vira mingau: 'It could perhaps possibly seem to suggest...' não convence ninguém. Um ou dois suavizantes por frase bastam."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "In my opinion, I think that maybe this is wrong.",
+     "certo": "This approach may be flawed.",
+     "explicacao": "Empilhar 'in my opinion' + 'I think' + 'maybe' é hedging redundante, vício comum de brasileiro inseguro em inglês. Um único suavizante bem escolhido é mais forte."
+    },
+    {
+     "errado": "The research proves that coffee is healthy.",
+     "certo": "The research suggests that coffee may be healthy.",
+     "explicacao": "'Prove' é uma palavra fortíssima em inglês acadêmico. Pesquisas 'suggest', 'indicate' ou 'point to' — quase nunca 'prove'."
+    },
+    {
+     "errado": "All Brazilians are friendly.",
+     "certo": "Brazilians tend to be friendly.",
+     "explicacao": "Generalizações absolutas com 'all' e 'always' soam ingênuas no C1. 'Tend to' faz a mesma afirmação com honestidade estatística."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual versão é mais adequada para um artigo acadêmico?",
+     "opcoes": [
+      "The data suggests a link between sleep and memory.",
+      "The data proves that sleep controls memory.",
+      "Sleep obviously controls memory."
+     ],
+     "correta": 0,
+     "explicacao": "'Suggests' é o verbo de hedging padrão em textos acadêmicos; 'proves' e 'obviously' soam categóricos demais."
+    },
+    {
+     "pergunta": "Complete para suavizar: The new policy ___ cause some confusion at first.",
+     "opcoes": [
+      "will definitely",
+      "might",
+      "must"
+     ],
+     "correta": 1,
+     "explicacao": "'Might' apresenta a consequência como possibilidade, o tom certo para uma previsão prudente."
+    },
+    {
+     "pergunta": "Como discordar educadamente de um colega?",
+     "opcoes": [
+      "You are completely wrong about the budget.",
+      "Your budget idea makes no sense.",
+      "I'm not sure the budget figures fully add up."
+     ],
+     "correta": 2,
+     "explicacao": "'I'm not sure...' introduz a discordância como dúvida, preservando a relação profissional."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The findings ___ that stress may be a contributing factor.",
+     "opcoes": [
+      "suggest",
+      "prove",
+      "guarantee"
+     ],
+     "correta": 0,
+     "explicacao": "\"Suggest\" é o verbo de hedging adequado a conclusões cautelosas, coerente com \"may\". \"Prove\" afirma certeza absoluta, quebrando o tom acadêmico tentativo."
+    },
+    {
+     "pergunta": "There ___ to be a link between sleep quality and memory retention.",
+     "opcoes": [
+      "is appearing",
+      "appears",
+      "appear"
+     ],
+     "correta": 1,
+     "explicacao": "\"There appears to be\" é a estrutura impessoal de cautela; \"appear\" como verbo de estado não vai para o progressivo. \"Appear\" sem -s falha na concordância com \"a link\"."
+    },
+    {
+     "pergunta": "It ___ be argued that the policy has done more harm than good.",
+     "opcoes": [
+      "must",
+      "can't",
+      "could"
+     ],
+     "correta": 2,
+     "explicacao": "\"It could be argued that\" apresenta a tese como possibilidade defensável, sem comprometer o autor. \"Must\" imporia obrigação/certeza, o oposto do hedging."
+    },
+    {
+     "pergunta": "The data ___ well support an alternative interpretation.",
+     "opcoes": [
+      "may",
+      "can",
+      "must"
+     ],
+     "correta": 0,
+     "explicacao": "\"May well\" é a colocação fixa para probabilidade considerável com tom cauteloso. \"Can well support\" não é colocação natural em inglês acadêmico."
+    },
+    {
+     "pergunta": "It is ___ likely that the committee will approve the proposal.",
+     "opcoes": [
+      "strongly",
+      "highly",
+      "heavily"
+     ],
+     "correta": 1,
+     "explicacao": "A colocação padrão é \"highly likely\". \"Strongly\" combina com verbos (strongly suggest), não com \"likely\" — erro típico de colocação em nível avançado."
+    },
+    {
+     "pergunta": "The results should be treated with caution, as the sample was ___ small.",
+     "opcoes": [
+      "anyhow",
+      "scarcely",
+      "somewhat"
+     ],
+     "correta": 2,
+     "explicacao": "\"Somewhat\" atenua o adjetivo (\"um tanto pequena\"), típico de hedging acadêmico. \"Scarcely\" significa \"mal/quase não\", o que inverteria o sentido."
+    },
+    {
+     "pergunta": "Commentators ___ to overstate the impact of social media on attention spans.",
+     "opcoes": [
+      "tend",
+      "use",
+      "accustom"
+     ],
+     "correta": 0,
+     "explicacao": "\"Tend to\" suaviza a generalização (\"costumam exagerar\"). \"Use to\" no presente é o erro clássico de brasileiros por analogia com \"used to\"."
+    },
+    {
+     "pergunta": "___ speaking, the evidence points to a gradual decline in participation.",
+     "opcoes": [
+      "Widely",
+      "Broadly",
+      "Largely"
+     ],
+     "correta": 1,
+     "explicacao": "\"Broadly speaking\" é a expressão fixa para generalizações cautelosas (\"em linhas gerais\"). \"Widely speaking\" e \"largely speaking\" não são colocações do inglês."
+    },
+    {
+     "pergunta": "The medication is thought ___ side effects in a small minority of patients.",
+     "opcoes": [
+      "causing",
+      "that causes",
+      "to cause"
+     ],
+     "correta": 2,
+     "explicacao": "Após a passiva de opinião (\"is thought\"), usa-se infinitivo: to cause. \"That causes\" exigiria a estrutura \"It is thought that it causes\"."
+    },
+    {
+     "pergunta": "There is ___ evidence to suggest that the trend is beginning to reverse.",
+     "opcoes": [
+      "some",
+      "any",
+      "few"
+     ],
+     "correta": 0,
+     "explicacao": "\"Some evidence to suggest\" apresenta a afirmação com cautela em frase afirmativa. \"Any\" pede contexto negativo/interrogativo e \"few\" não combina com o incontável \"evidence\"."
+    }
+   ]
+  },
+  {
+   "slug": "dependent-prepositions",
+   "titulo": "Dependent prepositions & collocations",
+   "subtitulo": "O casamento das palavras: quem combina com quem em inglês.",
+   "resumo": "Muitos verbos, adjetivos e substantivos exigem uma preposição específica: depend ON, interested IN, capable OF. E collocations são as duplas naturais da língua: make a decision, heavy rain, fast food. Errar essas combinações não impede a comunicação, mas denuncia na hora que o inglês não é nativo.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "Maya, my presentation depends of the internet connection. I'm worried with the wifi here.",
+     "pt": "Maya, minha apresentação 'depends of' a conexão. Estou 'worried with' o wifi daqui."
+    },
+    {
+     "persona": "maya",
+     "en": "Max, I fall for those too! Sofia, why is it 'depends ON' and 'worried ABOUT'? Portuguese says 'depende DE' and 'preocupado COM'.",
+     "pt": "Max, eu também caio nessas! Sofia, por que é 'depends ON' e 'worried ABOUT'? Em português é 'depende DE' e 'preocupado COM'."
+    },
+    {
+     "persona": "sofia",
+     "en": "Because prepositions don't translate — they come attached to each word, like a surname. You learn 'depend on' as one unit, not two words.",
+     "pt": "Porque preposições não se traduzem — elas vêm grudadas em cada palavra, como um sobrenome. Você aprende 'depend on' como uma unidade, não duas palavras."
+    },
+    {
+     "persona": "leo",
+     "en": "My trick: never write a new verb in your notebook alone. Write the couple: 'succeed IN', 'accuse OF', 'rely ON'. Words are married; respect the wedding!",
+     "pt": "Meu truque: nunca anote um verbo novo sozinho no caderno. Anote o casal: 'succeed IN', 'accuse OF', 'rely ON'. As palavras são casadas; respeite o casamento!"
+    },
+    {
+     "persona": "max",
+     "en": "Understood. From now on, my success depends ON my notebook.",
+     "pt": "Entendido. De agora em diante, meu sucesso 'depends ON' meu caderno."
+    }
+   ],
+   "quando_usar": [
+    "Sempre que usar verbos com preposição fixa, como em \"The outcome depends on several factors\".",
+    "Com adjetivos que pedem preposição própria, como em \"She's fully capable of leading the team\".",
+    "Com substantivos que carregam preposição, como em \"There's been a rise in unemployment\".",
+    "Ao escolher o verbo certo para cada substantivo, como em \"make a mistake\" e \"do research\", nunca o contrário.",
+    "Em collocations de intensidade, como em \"heavy traffic\", \"strong coffee\" e \"highly unlikely\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Verbo + preposição",
+     "estrutura": "depend on / rely on / succeed in / apologize for",
+     "exemplo_en": "She apologized for arriving late.",
+     "exemplo_pt": "Ela pediu desculpas por chegar atrasada."
+    },
+    {
+     "rotulo": "Adjetivo + preposição",
+     "estrutura": "worried about / capable of / responsible for / keen on",
+     "exemplo_en": "He's responsible for the entire project.",
+     "exemplo_pt": "Ele é responsável pelo projeto inteiro."
+    },
+    {
+     "rotulo": "Substantivo + preposição",
+     "estrutura": "reason for / increase in / solution to / access to",
+     "exemplo_en": "We finally found a solution to the problem.",
+     "exemplo_pt": "Finalmente encontramos uma solução para o problema."
+    },
+    {
+     "rotulo": "Collocations verbo + substantivo",
+     "estrutura": "make + decision/effort; do + homework/business; take + risk/break",
+     "exemplo_en": "It's time to make a decision and take a risk.",
+     "exemplo_pt": "É hora de tomar uma decisão e correr um risco."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Preposição depois do verbo? O próximo verbo vai de -ing: 'insist on going', 'dream of traveling', 'good at cooking'. Essa regrinha vale ouro no C1."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Cuidado com os falsos amigos de preposição: 'married TO' (não 'with'), 'arrive IN/AT' (não 'to'), 'depends ON' (não 'of'). São os três que mais entregam brasileiros em entrevista."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "It depends of the weather.",
+     "certo": "It depends on the weather.",
+     "explicacao": "Decalque de 'depende DE'. Em inglês, 'depend' casou com 'on' e o divórcio não está nos planos."
+    },
+    {
+     "errado": "We need to discuss about the contract.",
+     "certo": "We need to discuss the contract.",
+     "explicacao": "'Discuss' já significa 'falar sobre'; ele dispensa preposição. O 'about' vem do português 'discutir sobre'."
+    },
+    {
+     "errado": "She is married with a doctor.",
+     "certo": "She is married to a doctor.",
+     "explicacao": "'Casada COM' vira 'married TO' em inglês. 'Married with' só aparece em frases como 'married with children' (casado e com filhos)."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Success in this field consists ___ discipline and patience.",
+     "opcoes": [
+      "in",
+      "of",
+      "on"
+     ],
+     "correta": 1,
+     "explicacao": "'Consist of' significa 'ser composto de': disciplina e paciência são os componentes."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "Let's make a research about this topic.",
+      "Let's do a research on this topic.",
+      "Let's do some research on this topic."
+     ],
+     "correta": 2,
+     "explicacao": "'Research' colloca com 'do', é incontável (sem 'a') e pede 'on': 'do some research on'."
+    },
+    {
+     "pergunta": "Complete: I'm not very keen ___ horror movies.",
+     "opcoes": [
+      "on",
+      "in",
+      "about"
+     ],
+     "correta": 0,
+     "explicacao": "'Keen on' é a combinação fixa para dizer que você curte (ou não) algo."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "She was accused ___ leaking confidential documents.",
+     "opcoes": [
+      "for",
+      "of",
+      "by"
+     ],
+     "correta": 1,
+     "explicacao": "O verbo pede \"accuse somebody OF something\". \"For\" é a interferência de \"blame for\" e do português \"acusada por\"."
+    },
+    {
+     "pergunta": "His success depends largely ___ how well he handles pressure.",
+     "opcoes": [
+      "of",
+      "in",
+      "on"
+     ],
+     "correta": 2,
+     "explicacao": "\"Depend ON\" é a regência fixa em inglês. \"Depend of\" é decalque direto de \"depender de\", um dos erros mais persistentes entre brasileiros."
+    },
+    {
+     "pergunta": "The residents objected ___ the construction of a new landfill.",
+     "opcoes": [
+      "to",
+      "against",
+      "for"
+     ],
+     "correta": 0,
+     "explicacao": "\"Object TO\" é a combinação correta. \"Against\" parece lógico pelo sentido de oposição, mas não é a preposição que o verbo rege."
+    },
+    {
+     "pergunta": "I'm not familiar ___ that version of the software.",
+     "opcoes": [
+      "to",
+      "with",
+      "about"
+     ],
+     "correta": 1,
+     "explicacao": "\"Familiar WITH\" quando a pessoa conhece algo. \"Familiar to\" existe, mas inverte a relação (something is familiar to someone) — pegadinha clássica de C1."
+    },
+    {
+     "pergunta": "The sharp rise ___ unemployment has alarmed economists.",
+     "opcoes": [
+      "on",
+      "of",
+      "in"
+     ],
+     "correta": 2,
+     "explicacao": "Para aumento no nível de algo, usa-se \"rise IN unemployment\". \"Of\" é a interferência de \"aumento de\", mas em inglês \"rise of\" sugere ascensão/surgimento, não variação numérica."
+    },
+    {
+     "pergunta": "She insisted ___ paying for everyone's dinner.",
+     "opcoes": [
+      "on",
+      "in",
+      "to"
+     ],
+     "correta": 0,
+     "explicacao": "\"Insist ON + -ing\" é a regência correta. \"Insist in\" é decalque de \"insistir em\", erro quase universal entre falantes de português."
+    },
+    {
+     "pergunta": "He is perfectly capable ___ managing the project alone.",
+     "opcoes": [
+      "to",
+      "of",
+      "for"
+     ],
+     "correta": 1,
+     "explicacao": "\"Capable OF + -ing\" é a estrutura fixa. \"Capable to\" surge por analogia com \"able to\", que tem regência diferente."
+    },
+    {
+     "pergunta": "The new regulation will have a profound effect ___ small businesses.",
+     "opcoes": [
+      "in",
+      "over",
+      "on"
+     ],
+     "correta": 2,
+     "explicacao": "\"Effect ON\" é a colocação correta (assim como \"impact on\" e \"influence on\"). \"In\" é interferência de \"efeito em\"."
+    },
+    {
+     "pergunta": "There is no point ___ arguing with him once he has made up his mind.",
+     "opcoes": [
+      "in",
+      "on",
+      "of"
+     ],
+     "correta": 0,
+     "explicacao": "A expressão fixa é \"there is no point IN + -ing\". \"Of\" aparece por analogia com \"no use of\", mas não é a preposição usada nessa estrutura."
+    },
+    {
+     "pergunta": "The results are entirely consistent ___ earlier studies.",
+     "opcoes": [
+      "to",
+      "with",
+      "of"
+     ],
+     "correta": 1,
+     "explicacao": "\"Consistent WITH\" = compatível com. \"Consistent to\" é decalque de \"consistente com/a\" e não existe em inglês padrão."
+    }
+   ]
+  },
+  {
+   "slug": "discourse-markers",
+   "titulo": "Discourse markers avançados",
+   "subtitulo": "Os conectores de luxo que costuram suas ideias com fio de seda.",
+   "resumo": "No C1 você aposenta o 'but' e o 'so' de todo dia e passa a usar 'nevertheless', 'albeit', 'having said that', 'by and large' e companhia. Discourse markers avançados organizam o texto, sinalizam contraste e concessão, e mostram ao leitor que você pensa em parágrafos, não em frases soltas.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, my writing feels like a shopping list: 'and, but, so, and, but, so'. How do I level up?",
+     "pt": "Sofia, meu texto parece lista de compras: 'and, but, so, and, but, so'. Como eu evoluo?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Swap them strategically! 'But' can become 'however', 'nevertheless' or 'that said'. 'So' can become 'therefore', 'hence' or 'as a result'.",
+     "pt": "Troque com estratégia! 'But' pode virar 'however', 'nevertheless' ou 'that said'. 'So' pode virar 'therefore', 'hence' ou 'as a result'."
+    },
+    {
+     "persona": "max",
+     "en": "I tried that! I wrote: 'The plan is good. Despite of that, it is expensive.'",
+     "pt": "Eu tentei! Escrevi: 'The plan is good. Despite of that, it is expensive.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Nice try, Max! But it's either 'despite that' or 'in spite of that' — 'despite of' mixes the two. Grammar doesn't allow that fusion cuisine.",
+     "pt": "Boa tentativa, Max! Mas ou é 'despite that' ou 'in spite of that' — 'despite of' mistura os dois. A gramática não permite essa culinária fusion."
+    },
+    {
+     "persona": "leo",
+     "en": "Think of markers as traffic signs: 'moreover' means keep going straight, 'nevertheless' means sharp turn ahead, 'in a nutshell' means final destination.",
+     "pt": "Pense nos marcadores como placas de trânsito: 'moreover' é siga em frente, 'nevertheless' é curva acentuada adiante, 'in a nutshell' é destino final."
+    },
+    {
+     "persona": "maya",
+     "en": "By and large, my essays are about to get much fancier.",
+     "pt": "De modo geral, minhas redações estão prestes a ficar bem mais chiques."
+    }
+   ],
+   "quando_usar": [
+    "Para contraste forte entre frases, como em \"The offer was tempting. Nevertheless, she turned it down\".",
+    "Para conceder um ponto antes de discordar, como em \"Having said that, the risks are still manageable\".",
+    "Para adicionar um argumento com peso, como em \"Moreover, the study confirms earlier findings\".",
+    "Para generalizar com honestidade, como em \"By and large, the feedback has been positive\".",
+    "Para concessão elegante dentro da frase com 'albeit', como em \"The project succeeded, albeit at a high cost\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Contraste entre frases",
+     "estrutura": "Frase. + However / Nevertheless / Nonetheless, + frase",
+     "exemplo_en": "The evidence was weak. Nevertheless, the jury convicted him.",
+     "exemplo_pt": "As provas eram fracas. Mesmo assim, o júri o condenou."
+    },
+    {
+     "rotulo": "Concessão com albeit",
+     "estrutura": "afirmação + albeit + adjetivo/advérbio/frase curta",
+     "exemplo_en": "It was a victory, albeit a costly one.",
+     "exemplo_pt": "Foi uma vitória, ainda que custosa."
+    },
+    {
+     "rotulo": "Mudança de rumo",
+     "estrutura": "Having said that / That said, + frase",
+     "exemplo_en": "The app is expensive. That said, it saves me hours every week.",
+     "exemplo_pt": "O aplicativo é caro. Dito isso, ele me poupa horas toda semana."
+    },
+    {
+     "rotulo": "Consequência formal",
+     "estrutura": "Therefore / Hence / Consequently, + frase",
+     "exemplo_en": "Sales dropped sharply; consequently, the store closed.",
+     "exemplo_pt": "As vendas caíram bruscamente; consequentemente, a loja fechou."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "'Albeit' é um 'although' de bolso: só funciona antes de adjetivo, advérbio ou frase curta ('albeit slowly', 'albeit imperfect'), nunca antes de oração completa com sujeito e verbo."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'However' entre vírgulas não emenda duas frases sozinho. 'It was late, however we stayed' está errado: use ponto ou ponto e vírgula antes ('It was late; however, we stayed')."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Despite of the rain, the match continued.",
+     "certo": "Despite the rain, the match continued.",
+     "explicacao": "'Despite' nunca leva 'of'. A confusão vem de 'in spite OF', que tem sentido idêntico mas estrutura diferente."
+    },
+    {
+     "errado": "The results were good. Although, we can improve.",
+     "certo": "The results were good. However, we can improve.",
+     "explicacao": "'Although' é conjunção e precisa ligar duas orações na mesma frase. Para abrir frase nova com contraste, use 'However'."
+    },
+    {
+     "errado": "In the other hand, prices went up.",
+     "certo": "On the other hand, prices went up.",
+     "explicacao": "A expressão fixa é 'ON the other hand'. O 'in' vem do português 'por outro lado' passando por 'em outra mão'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: The hotel was charming, ___ slightly overpriced.",
+     "opcoes": [
+      "albeit",
+      "moreover",
+      "hence"
+     ],
+     "correta": 0,
+     "explicacao": "'Albeit' introduz uma concessão curta antes do adjetivo: 'charming, albeit overpriced'."
+    },
+    {
+     "pergunta": "Qual marcador indica consequência?",
+     "opcoes": [
+      "Nonetheless",
+      "Nevertheless",
+      "Consequently"
+     ],
+     "correta": 2,
+     "explicacao": "'Consequently' sinaliza resultado; 'nonetheless' e 'nevertheless' sinalizam contraste."
+    },
+    {
+     "pergunta": "Complete: I love working from home. ___, I do miss my colleagues.",
+     "opcoes": [
+      "Moreover",
+      "Having said that",
+      "As a result"
+     ],
+     "correta": 1,
+     "explicacao": "'Having said that' concede um contraponto ao que acabou de ser afirmado."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The venue was expensive; ___, it lacked adequate parking.",
+     "opcoes": [
+      "therefore",
+      "otherwise",
+      "moreover"
+     ],
+     "correta": 2,
+     "explicacao": "A frase adiciona uma segunda desvantagem, pedindo marcador aditivo: moreover. \"Therefore\" indicaria consequência, relação que não existe entre preço e estacionamento."
+    },
+    {
+     "pergunta": "He is strict but fair; his brother, ___, is completely unpredictable.",
+     "opcoes": [
+      "by contrast",
+      "on the contrary",
+      "in the other hand"
+     ],
+     "correta": 0,
+     "explicacao": "\"By contrast\" compara duas pessoas diferentes. \"On the contrary\" só nega uma afirmação anterior sobre o mesmo referente, e \"in the other hand\" é o decalque errado de \"on the other hand\"."
+    },
+    {
+     "pergunta": "___ the initial setbacks, the campaign turned out to be a resounding success.",
+     "opcoes": [
+      "Although",
+      "Despite",
+      "Even"
+     ],
+     "correta": 1,
+     "explicacao": "\"Despite\" rege sintagma nominal (\"the initial setbacks\"). \"Although\" exigiria oração com sujeito e verbo — confusão recorrente mesmo em nível avançado."
+    },
+    {
+     "pergunta": "The project ran over budget. ___, the client was satisfied with the final result.",
+     "opcoes": [
+      "Consequently",
+      "Furthermore",
+      "Nevertheless"
+     ],
+     "correta": 2,
+     "explicacao": "Há contraste entre estourar o orçamento e o cliente ficar satisfeito: Nevertheless. \"Consequently\" estabeleceria uma relação de causa que contradiz o sentido."
+    },
+    {
+     "pergunta": "She missed three deadlines in a row; ___, her contract was not renewed.",
+     "opcoes": [
+      "as a result",
+      "in addition",
+      "on the whole"
+     ],
+     "correta": 0,
+     "explicacao": "A não renovação é consequência dos atrasos: \"as a result\". \"In addition\" apenas somaria fatos sem expressar a relação causal."
+    },
+    {
+     "pergunta": "___ he apologised profusely, the damage to his reputation had been done.",
+     "opcoes": [
+      "Despite",
+      "Although",
+      "However"
+     ],
+     "correta": 1,
+     "explicacao": "\"Although\" introduz oração concessiva completa. \"Despite\" precisaria de substantivo ou -ing (Despite apologising), e \"However\" não conecta duas orações na mesma frase assim."
+    },
+    {
+     "pergunta": "The figures are provisional and, ___, subject to revision.",
+     "opcoes": [
+      "such as",
+      "so that",
+      "as such"
+     ],
+     "correta": 2,
+     "explicacao": "\"As such\" = \"como tais / por isso mesmo\", retomando a condição de provisórios. \"Such as\" introduz exemplos, confusão frequente entre as duas expressões."
+    },
+    {
+     "pergunta": "We had better set off early; ___, we risk hitting rush-hour traffic.",
+     "opcoes": [
+      "otherwise",
+      "however",
+      "meanwhile"
+     ],
+     "correta": 0,
+     "explicacao": "\"Otherwise\" = \"caso contrário\", consequência de não seguir a recomendação. \"Meanwhile\" indicaria simultaneidade temporal, sem relação lógica aqui."
+    },
+    {
+     "pergunta": "___ regards the budget, no final decision has been made.",
+     "opcoes": [
+      "In",
+      "As",
+      "What"
+     ],
+     "correta": 1,
+     "explicacao": "A expressão correta é \"As regards\" (= quanto a). \"In regards\" é forma popular considerada incorreta no registro formal — o padrão seria \"in/with regard to\", sem s."
+    },
+    {
+     "pergunta": "The trial was inconclusive; ___, the drug will undergo further testing.",
+     "opcoes": [
+      "whereas",
+      "albeit",
+      "hence"
+     ],
+     "correta": 2,
+     "explicacao": "\"Hence\" expressa consequência formal (\"por isso\"). \"Whereas\" opõe duas ideias e \"albeit\" introduz concessão reduzida, ambos incoerentes com a relação causal da frase."
+    }
+   ]
+  },
+  {
+   "slug": "passive-reporting",
+   "titulo": "Passive reporting (He is said to…)",
+   "subtitulo": "O tom de jornal: relate fatos e boatos sem apontar o dedo.",
+   "resumo": "Estruturas como 'He is said to be rich' e 'It is believed that...' relatam informações sem revelar (ou sem precisar saber) quem disse. É a voz da imprensa, da academia e dos relatórios formais. No C1, essas construções são obrigatórias para escrever com distanciamento e credibilidade.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, news articles are full of 'is believed to', 'is thought to', 'is expected to'. Why so much passive?",
+     "pt": "Sofia, as notícias estão cheias de 'is believed to', 'is thought to', 'is expected to'. Por que tanta passiva?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Journalists use it to report claims without naming sources. 'The CEO is expected to resign' — nobody said it officially, but everybody's saying it.",
+     "pt": "Jornalistas usam para relatar afirmações sem citar fontes. 'The CEO is expected to resign' — ninguém disse oficialmente, mas todo mundo anda dizendo."
+    },
+    {
+     "persona": "max",
+     "en": "Let me try: It is said that the old library to be haunted.",
+     "pt": "Deixa eu tentar: 'It is said that the old library to be haunted.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Two structures collided there, Max! Either 'It is said that the library is haunted' or 'The library is said to be haunted'. Pick one lane!",
+     "pt": "Duas estruturas colidiram aí, Max! Ou 'It is said that the library is haunted' ou 'The library is said to be haunted'. Escolha uma pista!"
+    },
+    {
+     "persona": "leo",
+     "en": "Portuguese has 'dizem que...' — that's 'it is said that'. And for the fancy version, imagine 'consta que ele...' becoming 'he is said to...'.",
+     "pt": "O português tem o 'dizem que...' — isso é 'it is said that'. E para a versão chique, imagine o 'consta que ele...' virando 'he is said to...'."
+    },
+    {
+     "persona": "max",
+     "en": "I am said to be improving very fast!",
+     "pt": "Dizem que eu estou melhorando muito rápido!"
+    }
+   ],
+   "quando_usar": [
+    "Para relatar opiniões gerais sem citar a fonte, como em \"It is widely believed that exercise improves mood\".",
+    "Para escrever notícias e relatórios com distanciamento, como em \"The minister is expected to announce new measures\".",
+    "Para relatar fatos passados sobre alguém, como em \"She is said to have declined the offer twice\".",
+    "Para rumores e lendas, como em \"The mansion is rumored to be haunted\".",
+    "Para dar peso acadêmico a afirmações, como em \"The method is considered to be highly reliable\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Impessoal com it",
+     "estrutura": "It + is said/believed/thought + that + oração",
+     "exemplo_en": "It is thought that the painting is a forgery.",
+     "exemplo_pt": "Acredita-se que o quadro seja uma falsificação."
+    },
+    {
+     "rotulo": "Pessoal com infinitivo",
+     "estrutura": "Sujeito + is said/believed + to + verbo",
+     "exemplo_en": "The painting is thought to be a forgery.",
+     "exemplo_pt": "Acredita-se que o quadro seja uma falsificação."
+    },
+    {
+     "rotulo": "Infinitivo perfeito (passado)",
+     "estrutura": "Sujeito + is said + to have + particípio",
+     "exemplo_en": "The band is said to have recorded a secret album.",
+     "exemplo_pt": "Dizem que a banda gravou um álbum secreto."
+    },
+    {
+     "rotulo": "Com verbos de expectativa",
+     "estrutura": "Sujeito + is expected/reported/rumored + to + verbo",
+     "exemplo_en": "Prices are expected to rise next quarter.",
+     "exemplo_pt": "Espera-se que os preços subam no próximo trimestre."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "A versão com sujeito pessoal ('He is said to...') soa mais elegante e é a queridinha das provas de proficiência. Quando o fato relatado é anterior, use 'to have + particípio': 'He is said to HAVE BEEN a spy'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Nem todo verbo aceita as duas formas. 'Rumored' quase só aparece na pessoal ('is rumored to'), e 'It is rumored that' é raro. Na dúvida, os seguros são say, believe, think, know, expect e report."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Is said that he owns three houses.",
+     "certo": "It is said that he owns three houses.",
+     "explicacao": "Português omite o sujeito ('Dizem que...'), mas o inglês exige o 'It' impessoal para segurar a estrutura."
+    },
+    {
+     "errado": "He is said that he is very generous.",
+     "certo": "He is said to be very generous.",
+     "explicacao": "Com sujeito pessoal, a continuação é 'to + verbo', nunca 'that'. O 'that' só funciona na versão com 'It'."
+    },
+    {
+     "errado": "She is believed to win the election last year.",
+     "certo": "She is believed to have won the election last year.",
+     "explicacao": "Para fatos passados, o infinitivo simples não basta: é preciso o infinitivo perfeito 'to have won'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: The ancient city ___ to have been destroyed by an earthquake.",
+     "opcoes": [
+      "is believed",
+      "believes",
+      "is believing"
+     ],
+     "correta": 0,
+     "explicacao": "A cidade não acredita em nada; ela É objeto da crença: 'is believed to have been destroyed'."
+    },
+    {
+     "pergunta": "Qual frase relata corretamente um fato passado?",
+     "opcoes": [
+      "He is said to live in Paris in the 90s.",
+      "He is said to have lived in Paris in the 90s.",
+      "He is said that he lived in Paris in the 90s."
+     ],
+     "correta": 1,
+     "explicacao": "Fato anterior ao presente pede infinitivo perfeito: 'to have lived'."
+    },
+    {
+     "pergunta": "Reescreva 'People expect that the team will win' na forma pessoal:",
+     "opcoes": [
+      "The team is expected that it will win.",
+      "It is expected the team to win.",
+      "The team is expected to win."
+     ],
+     "correta": 2,
+     "explicacao": "A estrutura pessoal é sujeito + 'is expected to' + verbo: 'The team is expected to win'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The suspect ___ to have fled the country shortly after the robbery.",
+     "opcoes": [
+      "is believed",
+      "believes",
+      "is believing"
+     ],
+     "correta": 0,
+     "explicacao": "Passiva de reporte: \"is believed to have fled\" (acredita-se que fugiu). \"Believes\" tornaria o suspeito o autor da crença, invertendo o sentido."
+    },
+    {
+     "pergunta": "It ___ that the painting was smuggled out of the country during the war.",
+     "opcoes": [
+      "thinks",
+      "is thought",
+      "is thinking"
+     ],
+     "correta": 1,
+     "explicacao": "Estrutura impessoal \"It is thought that...\" (pensa-se que). \"It thinks\" atribuiria a opinião ao pronome vazio \"it\", que aqui não tem referente."
+    },
+    {
+     "pergunta": "The company is reported ___ record profits last quarter.",
+     "opcoes": [
+      "to make",
+      "that it made",
+      "to have made"
+     ],
+     "correta": 2,
+     "explicacao": "Como o lucro é anterior ao reporte (\"last quarter\"), usa-se o infinitivo perfeito: to have made. \"To make\" indicaria fato presente/habitual, incompatível com o passado."
+    },
+    {
+     "pergunta": "There ___ to be over a thousand applicants for the position.",
+     "opcoes": [
+      "are said",
+      "is said",
+      "are saying"
+     ],
+     "correta": 0,
+     "explicacao": "Na estrutura \"There + passiva de reporte\", o verbo concorda com o sujeito real plural (applicants): are said. \"Is said\" falha na concordância."
+    },
+    {
+     "pergunta": "The new bridge is expected ___ by the end of next year.",
+     "opcoes": [
+      "to complete",
+      "to be completed",
+      "being completed"
+     ],
+     "correta": 1,
+     "explicacao": "A ponte será concluída (voz passiva), logo \"is expected to be completed\". \"To complete\" faria da ponte o agente da conclusão."
+    },
+    {
+     "pergunta": "He is alleged ___ in the scheme for over a decade.",
+     "opcoes": [
+      "to be involving",
+      "that he was involved",
+      "to have been involved"
+     ],
+     "correta": 2,
+     "explicacao": "\"Is alleged to have been involved\" combina reporte presente com fato passivo anterior e contínuo. \"That he was involved\" só caberia na estrutura impessoal \"It is alleged that...\"."
+    },
+    {
+     "pergunta": "The manuscript ___ to date from the twelfth century.",
+     "opcoes": [
+      "is presumed",
+      "presumes",
+      "is presuming"
+     ],
+     "correta": 0,
+     "explicacao": "Passiva de reporte: \"is presumed to date from\" (presume-se que date de). \"Presumes\" daria ao manuscrito o papel de quem presume."
+    },
+    {
+     "pergunta": "It is widely assumed ___ the talks will resume next month.",
+     "opcoes": [
+      "which",
+      "that",
+      "for"
+     ],
+     "correta": 1,
+     "explicacao": "Após \"It is assumed\", a oração de conteúdo é introduzida por \"that\". \"Which\" só retomaria um antecedente, que não existe aqui."
+    },
+    {
+     "pergunta": "The victims are understood ___ warning messages hours before the flood.",
+     "opcoes": [
+      "to receive",
+      "receiving",
+      "to have received"
+     ],
+     "correta": 2,
+     "explicacao": "O recebimento é anterior ao momento do reporte (\"hours before the flood\"), pedindo infinitivo perfeito: to have received. \"To receive\" perderia essa anterioridade."
+    },
+    {
+     "pergunta": "The minister ___ to be considering resignation, although no statement has been issued.",
+     "opcoes": [
+      "is rumoured",
+      "rumours",
+      "has rumoured"
+     ],
+     "correta": 0,
+     "explicacao": "\"Is rumoured to be considering\" = corre o boato de que está considerando. \"Rumour\" como verbo só existe na passiva de reporte; as formas ativas são agramaticais nesse sentido."
+    }
+   ]
+  }
+ ]
+}

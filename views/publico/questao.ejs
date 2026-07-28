@@ -1,0 +1,73 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <a class="crumb" href="/questoes">&larr; Todas as questões</a>
+
+  <article class="questao">
+    <ul class="chips">
+      <li><a class="chip" href="/questoes?nivel=<%= questao.nivel_cefr %>">Nível <%= questao.nivel_cefr %></a></li>
+      <li><a class="chip" href="/questoes?tipo=<%= questao.tipo %>"><%= ROTULOS_TIPO[questao.tipo] || questao.tipo %></a></li>
+      <li><a class="chip" href="/questoes?tema=<%= encodeURIComponent(questao.tema) %>"><%= questao.tema.replace(/-/g, ' ') %></a></li>
+      <li><a class="chip" href="/questoes?genero=<%= encodeURIComponent(questao.genero_textual) %>"><%= questao.genero_textual %></a></li>
+      <% if (questao.instituicao) { %><li><a class="chip" href="/questoes?instituicao=<%= encodeURIComponent(questao.instituicao) %>"><%= questao.instituicao %></a></li><% } %>
+      <% if (questao.ano) { %><li><a class="chip" href="/questoes?ano=<%= questao.ano %>"><%= questao.ano %></a></li><% } %>
+    </ul>
+
+    <h1><%= questao.titulo %></h1>
+
+    <% if (questao.imagem) { %>
+      <figure class="questao__figura">
+        <img src="<%= questao.imagem %>" alt="<%= questao.imagem_alt %>">
+      </figure>
+    <% } %>
+
+    <% if (questao.texto_base && questao.texto_base.trim()) { %>
+      <blockquote class="texto-base" cite="<%= questao.fonte_url %>">
+        <% questao.texto_base.trim().split(/\n\s*\n/).forEach(function(p){ %><p><%= p %></p><% }) %>
+      </blockquote>
+    <% } %>
+
+    <% if (questao.fonte_veiculo) { %>
+      <p class="fonte">Fonte: <a href="<%= questao.fonte_url %>" target="_blank" rel="noopener nofollow"><%= questao.fonte_veiculo %></a><%= questao.fonte_data ? ', ' + questao.fonte_data : '' %>.</p>
+    <% } %>
+
+    <p class="enunciado"><%= questao.enunciado %></p>
+
+    <ol class="alternativas" data-gabarito="<%= questao.gabarito %>">
+      <% questao.alternativas.forEach(function(a){ %>
+        <li class="alt" data-letra="<%= a.letra %>">
+          <span class="bolha" aria-hidden="true"><%= a.letra %></span>
+          <span><span class="sr"><%= a.letra %>)</span> <%= a.texto %></span>
+        </li>
+      <% }) %>
+    </ol>
+
+    <details class="gabarito">
+      <summary>Ver gabarito comentado</summary>
+      <div class="gabarito__corpo">
+        <p class="gabarito__resp">Resposta correta: <%= questao.gabarito %></p>
+        <% if (questao.comentario && questao.comentario.trim()) { %>
+          <div><%- questao.comentario.replace(/\n/g, '<br>') %></div>
+        <% } %>
+      </div>
+    </details>
+  </article>
+
+  <% if (relacionadas.length) { %>
+    <section class="secao" style="margin-top:2.5rem">
+      <div class="secao__cabeca">
+        <h2>Questões relacionadas</h2>
+        <a href="/questoes">Ver todas &rarr;</a>
+      </div>
+      <div class="grade">
+        <% relacionadas.forEach(function(q){ %><%- include('../partials/card', { q: q, ROTULOS_TIPO: ROTULOS_TIPO }) %><% }) %>
+      </div>
+    </section>
+  <% } %>
+
+  <aside class="painel" style="margin-top:2rem">
+    <h2>Precisa aplicar isso em sala?</h2>
+    <p>Junte as questões deste banco numa prova formatada, com cabeçalho e gabarito, pronta para imprimir em PDF ou editar no Word.</p>
+    <a class="btn" href="/montar-prova">Montar prova</a>
+  </aside>
+</div>
+<%- include('../partials/rodape') %>

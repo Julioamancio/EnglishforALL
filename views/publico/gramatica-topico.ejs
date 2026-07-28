@@ -1,0 +1,137 @@
+<%- include('../partials/cabeca') %>
+
+<div class="env env--estreito">
+
+  <nav class="migalhas" aria-label="Você está em">
+    <a href="/gramatica">Grammar</a> <span aria-hidden="true">/</span>
+    <a href="/gramatica#nivel-<%= topico.nivel.toLowerCase() %>">Nível <%= topico.nivel %></a> <span aria-hidden="true">/</span>
+    <span><%= topico.titulo %></span>
+  </nav>
+
+  <article class="gtopico">
+    <header class="gtopico__cabeca">
+      <span class="nivel-selo nivel-selo--<%= topico.nivel.toLowerCase() %>"><%= topico.nivel %></span>
+      <h1><%= topico.titulo %></h1>
+      <% if (topico.subtitulo) { %><p class="gtopico__sub"><%= topico.subtitulo %></p><% } %>
+      <% if (topico.resumo) { %><p class="gtopico__resumo"><%= topico.resumo %></p><% } %>
+    </header>
+
+    <% if (topico.dialogo && topico.dialogo.length) { %>
+    <section class="gsec" aria-label="Diálogo de exemplo">
+      <h2 class="gsec__titulo">Na prática</h2>
+      <div class="papo">
+        <% topico.dialogo.forEach(function(fala){ %>
+        <div class="fala fala--<%= fala.persona %>">
+          <%- include('../partials/persona', { nome: fala.persona }) %>
+          <div class="fala__balao">
+            <p class="fala__en"><%= fala.en %></p>
+            <p class="fala__pt"><%= fala.pt %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <% } %>
+
+    <% if (topico.quando_usar && topico.quando_usar.length) { %>
+    <section class="gsec">
+      <h2 class="gsec__titulo">Quando usar</h2>
+      <ul class="glista">
+        <% topico.quando_usar.forEach(function(item){ %><li><%= item %></li><% }) %>
+      </ul>
+    </section>
+    <% } %>
+
+    <% if (topico.formacao && topico.formacao.length) { %>
+    <section class="gsec">
+      <h2 class="gsec__titulo">Como formar</h2>
+      <div class="formacao">
+        <% topico.formacao.forEach(function(f){ %>
+        <div class="formacao__linha">
+          <span class="formacao__rotulo"><%= f.rotulo %></span>
+          <code class="formacao__estrutura"><%= f.estrutura %></code>
+          <p class="formacao__ex"><em><%= f.exemplo_en %></em> — <%= f.exemplo_pt %></p>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <% } %>
+
+    <% if (topico.dicas && topico.dicas.length) { %>
+    <section class="gsec" aria-label="Dicas">
+      <% topico.dicas.forEach(function(d){ var eDica = d.tipo !== 'atencao'; %>
+      <aside class="dica <%= eDica ? 'dica--leo' : 'dica--atencao' %>">
+        <%- include('../partials/persona', { nome: eDica ? 'leo' : 'sofia' }) %>
+        <div>
+          <strong><%= eDica ? 'Macete do Leo' : 'Atenção, diz a Teacher Sofia' %></strong>
+          <p><%= d.texto %></p>
+        </div>
+      </aside>
+      <% }) %>
+    </section>
+    <% } %>
+
+    <% if (topico.erros_comuns && topico.erros_comuns.length) { %>
+    <section class="gsec">
+      <h2 class="gsec__titulo">Os tropeços do Max</h2>
+      <p class="gsec__nota">O Max erra como todo aprendiz — a Teacher Sofia corrige.</p>
+      <div class="erros">
+        <% topico.erros_comuns.forEach(function(e){ %>
+        <div class="erro">
+          <div class="erro__lado erro__lado--errado">
+            <%- include('../partials/persona', { nome: 'max' }) %>
+            <p><s><%= e.errado %></s></p>
+          </div>
+          <div class="erro__lado erro__lado--certo">
+            <%- include('../partials/persona', { nome: 'sofia' }) %>
+            <p><strong><%= e.certo %></strong></p>
+          </div>
+          <p class="erro__explica"><%= e.explicacao %></p>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <% } %>
+
+    <% if (topico.mini_teste && topico.mini_teste.length) { %>
+    <section class="gsec" id="mini-teste">
+      <h2 class="gsec__titulo">Mini-teste da Maya</h2>
+      <p class="gsec__nota">Clique na alternativa para conferir na hora.</p>
+      <% topico.mini_teste.forEach(function(q, qi){ %>
+      <div class="quiz" data-correta="<%= q.correta %>">
+        <p class="quiz__pergunta"><span class="quiz__n"><%= qi + 1 %></span> <%= q.pergunta %></p>
+        <div class="quiz__opcoes">
+          <% q.opcoes.forEach(function(op, oi){ %>
+            <button type="button" class="quiz__opcao" data-i="<%= oi %>"><%= op %></button>
+          <% }) %>
+        </div>
+        <p class="quiz__explica" hidden><%= q.explicacao %></p>
+      </div>
+      <% }) %>
+    </section>
+    <% } %>
+
+    <% if (topico.exercicios && topico.exercicios.length) { %>
+    <aside class="dica dica--leo" id="teste-completo">
+      <%- include('../partials/persona', { nome: 'maya' }) %>
+      <div>
+        <strong>Pronto para o desafio?</strong>
+        <p>Este tópico tem um teste de consolidação com <%= topico.exercicios.length %> questões e correção na hora. <a href="/exercicios/<%= topico.slug %>">Fazer o teste de <%= topico.titulo %> &rarr;</a></p>
+      </div>
+    </aside>
+    <% } %>
+
+    <nav class="gnav" aria-label="Outros tópicos do nível">
+      <% if (vizinhos.anterior) { %>
+        <a class="gnav__lado" href="/gramatica/<%= vizinhos.anterior.slug %>"><span>&larr; Anterior</span><strong><%= vizinhos.anterior.titulo %></strong></a>
+      <% } else { %><span></span><% } %>
+      <% if (vizinhos.proximo) { %>
+        <a class="gnav__lado gnav__lado--dir" href="/gramatica/<%= vizinhos.proximo.slug %>"><span>Próximo &rarr;</span><strong><%= vizinhos.proximo.titulo %></strong></a>
+      <% } %>
+    </nav>
+
+    <p class="gtopico__cta">Quer praticar de verdade? <a href="/questoes?nivel=<%= topico.nivel %>">Resolva questões de nível <%= topico.nivel %> &rarr;</a></p>
+  </article>
+</div>
+
+<%- include('../partials/rodape') %>

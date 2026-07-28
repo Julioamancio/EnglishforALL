@@ -1,0 +1,2289 @@
+{
+ "nivel": "A1",
+ "titulo": "A1 — Primeiros passos",
+ "descricao": "Aqui você constrói a base do inglês: as estruturas essenciais para se apresentar, falar do dia a dia e fazer suas primeiras perguntas com confiança.",
+ "topicos": [
+  {
+   "slug": "verb-to-be",
+   "titulo": "Verb to be (am, is, are)",
+   "subtitulo": "O verbo mais importante do inglês",
+   "resumo": "O verb to be significa ser ou estar, tudo em um verbo só. Ele aparece em quase toda conversa: para dizer quem você é, de onde vem, como se sente e onde está. Dominar am, is e are é o primeiro grande passo do inglês.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Hi! I am Maya. I am from Brazil.",
+     "pt": "Oi! Eu sou a Maya. Eu sou do Brasil."
+    },
+    {
+     "persona": "max",
+     "en": "Hello! I is Max. I is a robot.",
+     "pt": "Olá! Eu é o Max. Eu é um robô."
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! With I, we always say am: I am Max, I am a robot.",
+     "pt": "Quase, Max! Com I, a gente sempre diz am: I am Max, I am a robot."
+    },
+    {
+     "persona": "max",
+     "en": "Oh! I am Max. I am happy now.",
+     "pt": "Ah! Eu sou o Max. Eu estou feliz agora."
+    },
+    {
+     "persona": "leo",
+     "en": "See? One little verb for ser and estar. English is lazy, in a good way!",
+     "pt": "Viu? Um verbinho só para ser e estar. O inglês é preguiçoso, no bom sentido!"
+    }
+   ],
+   "quando_usar": [
+    "Para se apresentar e dizer seu nome ou profissão: \"I am a student\".",
+    "Para dizer de onde você é: \"She is from São Paulo\".",
+    "Para falar de sentimentos e estados: \"We are tired\".",
+    "Para dizer onde algo ou alguém está: \"The keys are on the table\".",
+    "Para descrever características: \"He is tall\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "Sujeito + am/is/are + complemento",
+     "exemplo_en": "She is a teacher.",
+     "exemplo_pt": "Ela é professora."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + am/is/are + not + complemento",
+     "exemplo_en": "They are not at home.",
+     "exemplo_pt": "Eles não estão em casa."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Am/Is/Are + sujeito + complemento?",
+     "exemplo_en": "Is he your brother?",
+     "exemplo_pt": "Ele é seu irmão?"
+    },
+    {
+     "rotulo": "Contrações",
+     "estrutura": "I'm / you're / he's / isn't / aren't",
+     "exemplo_en": "I'm hungry. She isn't here.",
+     "exemplo_pt": "Estou com fome. Ela não está aqui."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: decore o trio como uma escadinha — I am, he/she/it is, e o resto (you/we/they) are. Três degraus, sem exceção. E lembre: to be junta ser e estar do português em um verbo só."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Na pergunta, o verb to be pula para a frente do sujeito, sem ajuda de nenhum outro verbo: \"Are you ok?\", e não \"You are ok?\". Não existe do/does com to be."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I have 25 years old.",
+     "certo": "I am 25 years old.",
+     "explicacao": "Em português a gente TEM idade, mas em inglês a gente É a idade. Idade sempre com to be, nunca com have."
+    },
+    {
+     "errado": "Is very hot today.",
+     "certo": "It is very hot today.",
+     "explicacao": "Em português dá para dizer só 'está quente', mas o inglês exige um sujeito. Para clima, hora e distância, use o sujeito it."
+    },
+    {
+     "errado": "You is my friend.",
+     "certo": "You are my friend.",
+     "explicacao": "You sempre usa are, mesmo quando se refere a uma pessoa só. Não existe 'you is'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: She ___ a doctor.",
+     "opcoes": [
+      "am",
+      "is",
+      "are"
+     ],
+     "correta": 1,
+     "explicacao": "Com he, she e it, o verb to be é sempre is: She is a doctor."
+    },
+    {
+     "pergunta": "Qual é a forma correta na negativa?",
+     "opcoes": [
+      "They are not ready.",
+      "They not are ready.",
+      "They is not ready."
+     ],
+     "correta": 0,
+     "explicacao": "O not vem depois de are: They are not ready. E they sempre usa are."
+    },
+    {
+     "pergunta": "Complete a pergunta: ___ you from Brazil?",
+     "opcoes": [
+      "Is",
+      "Am",
+      "Are"
+     ],
+     "correta": 2,
+     "explicacao": "You combina com are, e na pergunta o verbo vem antes do sujeito: Are you from Brazil?"
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "I ___ a student at a new school.",
+     "opcoes": [
+      "am",
+      "is",
+      "are"
+     ],
+     "correta": 0,
+     "explicacao": "Com o sujeito 'I' usamos sempre 'am'. 'Is' é para he/she/it e 'are' para you/we/they."
+    },
+    {
+     "pergunta": "My parents ___ at home now.",
+     "opcoes": [
+      "is",
+      "are",
+      "am"
+     ],
+     "correta": 1,
+     "explicacao": "'My parents' é plural (= they), então usamos 'are'. O erro comum é usar 'is' pensando na família como uma coisa só."
+    },
+    {
+     "pergunta": "The coffee ___ hot. Be careful!",
+     "opcoes": [
+      "are",
+      "am",
+      "is"
+     ],
+     "correta": 2,
+     "explicacao": "'The coffee' é singular (= it), por isso 'is'. 'Are' só serve para plural e para you/we/they."
+    },
+    {
+     "pergunta": "___ you from Recife?",
+     "opcoes": [
+      "Is",
+      "Are",
+      "Am"
+     ],
+     "correta": 1,
+     "explicacao": "Em perguntas com 'you', o verbo to be é 'are' e vem antes do sujeito. 'Is you' é um erro comum de quem traduz do português."
+    },
+    {
+     "pergunta": "It ___ not cold today.",
+     "opcoes": [
+      "is",
+      "are",
+      "be"
+     ],
+     "correta": 0,
+     "explicacao": "'It' pede 'is', e a negativa se faz com 'is not' (isn't). 'Be' sozinho não funciona como verbo conjugado aqui."
+    },
+    {
+     "pergunta": "We ___ very happy with the new house.",
+     "opcoes": [
+      "is",
+      "am",
+      "are"
+     ],
+     "correta": 2,
+     "explicacao": "'We' sempre usa 'are'. 'Is' engana porque em português dizemos 'a gente é', que parece singular."
+    },
+    {
+     "pergunta": "My name ___ Paulo.",
+     "opcoes": [
+      "is",
+      "are",
+      "am"
+     ],
+     "correta": 0,
+     "explicacao": "'My name' é singular (= it), então usamos 'is'. 'Am' engana porque a frase fala de mim, mas o sujeito é 'name', não 'I'."
+    },
+    {
+     "pergunta": "The children ___ in the park.",
+     "opcoes": [
+      "is",
+      "are",
+      "am"
+     ],
+     "correta": 1,
+     "explicacao": "'Children' é o plural de 'child', então o sujeito é plural e pede 'are'. Como não termina em -s, muita gente acha que é singular."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "I is a teacher.",
+      "I are a teacher.",
+      "I am a teacher."
+     ],
+     "correta": 2,
+     "explicacao": "'I' combina somente com 'am'. 'I is' e 'I are' são erros de concordância do verbo to be."
+    },
+    {
+     "pergunta": "The dog ___ under the table.",
+     "opcoes": [
+      "are",
+      "am",
+      "is"
+     ],
+     "correta": 2,
+     "explicacao": "'The dog' é singular (= it), então o correto é 'is'. 'Are' seria usado se fossem vários cachorros (the dogs)."
+    }
+   ]
+  },
+  {
+   "slug": "subject-pronouns",
+   "titulo": "Subject pronouns (I, you, he…)",
+   "subtitulo": "Quem faz a ação? Eles respondem",
+   "resumo": "Os pronomes de sujeito dizem quem realiza a ação da frase: I, you, he, she, it, we, they. Diferente do português, o inglês não deixa o sujeito escondido: toda frase precisa de um deles (ou de um nome) antes do verbo.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, do I really need a pronoun in every sentence?",
+     "pt": "Sofia, eu realmente preciso de um pronome em toda frase?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Yes! In English, the subject never hides. We say 'I like coffee', not just 'like coffee'.",
+     "pt": "Sim! Em inglês, o sujeito nunca se esconde. Dizemos 'I like coffee', não apenas 'like coffee'."
+    },
+    {
+     "persona": "max",
+     "en": "My dog is cute. He... no, wait... it is cute!",
+     "pt": "Meu cachorro é fofo. Ele... não, espera... it é fofo!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Both work, Max! For pets we love, he or she is fine. For things, always it.",
+     "pt": "Os dois funcionam, Max! Para pets queridos, he ou she está ótimo. Para coisas, sempre it."
+    },
+    {
+     "persona": "leo",
+     "en": "And here is a gift: 'you' is one word for você, tu and vocês. Three for the price of one!",
+     "pt": "E aqui vai um presente: 'you' é uma palavra só para você, tu e vocês. Três pelo preço de um!"
+    }
+   ],
+   "quando_usar": [
+    "Para dizer quem faz a ação sem repetir o nome: \"Ana is my sister. She is a nurse\".",
+    "Para falar de coisas, lugares e animais em geral com it: \"It is a beautiful city\".",
+    "Para falar de você mesmo com I, sempre em maiúscula: \"I work here\".",
+    "Para se referir a um grupo que inclui você com we: \"We are a team\".",
+    "Para falar de várias pessoas ou coisas com they: \"They are my books\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Singular",
+     "estrutura": "I (eu), you (você), he (ele), she (ela), it (ele/ela para coisas e animais)",
+     "exemplo_en": "He is my neighbor.",
+     "exemplo_pt": "Ele é meu vizinho."
+    },
+    {
+     "rotulo": "Plural",
+     "estrutura": "we (nós), you (vocês), they (eles/elas)",
+     "exemplo_en": "They are at school.",
+     "exemplo_pt": "Eles estão na escola."
+    },
+    {
+     "rotulo": "Posição na frase",
+     "estrutura": "Pronome + verbo + complemento",
+     "exemplo_en": "She speaks English.",
+     "exemplo_pt": "Ela fala inglês."
+    },
+    {
+     "rotulo": "It para clima e tempo",
+     "estrutura": "It + verbo (sujeito obrigatório)",
+     "exemplo_en": "It is raining.",
+     "exemplo_pt": "Está chovendo."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: they serve para eles E elas — o inglês não separa por gênero no plural, como o português faz. E it é o pronome das coisas: se não é gente, provavelmente é it."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Em português falamos 'Fui ao mercado' sem o 'eu'. Em inglês isso não existe: sem sujeito, a frase quebra. Sempre 'I went', 'She said', 'It happened'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Is raining a lot.",
+     "certo": "It is raining a lot.",
+     "explicacao": "Português esconde o sujeito, inglês não. Frases sobre clima precisam do it: It is raining."
+    },
+    {
+     "errado": "The car is new. He is fast.",
+     "certo": "The car is new. It is fast.",
+     "explicacao": "Carro é 'ele' em português, mas em inglês coisas são it, não he ou she."
+    },
+    {
+     "errado": "i am from Recife.",
+     "certo": "I am from Recife.",
+     "explicacao": "O pronome I é sempre maiúsculo em inglês, em qualquer posição da frase. É a única palavra com esse privilégio."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: My parents are nice. ___ are funny too.",
+     "opcoes": [
+      "They",
+      "We",
+      "He"
+     ],
+     "correta": 0,
+     "explicacao": "My parents são duas pessoas (eles), então o pronome é they: They are funny too."
+    },
+    {
+     "pergunta": "Qual pronome usamos para 'the book'?",
+     "opcoes": [
+      "he",
+      "it",
+      "she"
+     ],
+     "correta": 1,
+     "explicacao": "Coisas e objetos usam it em inglês, mesmo que em português 'livro' seja 'ele'."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "Am happy today.",
+      "I happy today.",
+      "I am happy today."
+     ],
+     "correta": 2,
+     "explicacao": "Toda frase precisa de sujeito e verbo: I (sujeito) + am (verbo) + happy. As outras opções omitem um dos dois."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ is my brother. His name is Leo.",
+     "opcoes": [
+      "He",
+      "She",
+      "It"
+     ],
+     "correta": 0,
+     "explicacao": "'Brother' (irmão) é uma pessoa do sexo masculino, então o pronome é 'he'. 'It' só é usado para coisas e animais."
+    },
+    {
+     "pergunta": "Maria and I are friends. ___ study together.",
+     "opcoes": [
+      "They",
+      "We",
+      "She"
+     ],
+     "correta": 1,
+     "explicacao": "'Maria and I' inclui quem fala, então vira 'we' (nós). 'They' engana porque são duas pessoas, mas uma delas sou eu."
+    },
+    {
+     "pergunta": "This is my car. ___ is new.",
+     "opcoes": [
+      "He",
+      "She",
+      "It"
+     ],
+     "correta": 2,
+     "explicacao": "Em inglês, coisas como 'car' usam o pronome 'it'. O brasileiro erra porque em português dizemos 'ele é novo' para o carro."
+    },
+    {
+     "pergunta": "___ am tired today.",
+     "opcoes": [
+      "I",
+      "Me",
+      "My"
+     ],
+     "correta": 0,
+     "explicacao": "O pronome de sujeito é 'I' (sempre maiúsculo). 'Me' é objeto (ex.: help me) e 'my' é possessivo (ex.: my house)."
+    },
+    {
+     "pergunta": "Ana is a doctor. ___ works in a hospital.",
+     "opcoes": [
+      "He",
+      "It",
+      "She"
+     ],
+     "correta": 2,
+     "explicacao": "Ana é uma mulher, então o pronome é 'she'. 'He' é para homens e 'it' para coisas e animais."
+    },
+    {
+     "pergunta": "My grandparents live in Bahia. ___ are very kind.",
+     "opcoes": [
+      "They",
+      "We",
+      "He"
+     ],
+     "correta": 0,
+     "explicacao": "'Grandparents' (avós) são duas ou mais pessoas, então usamos 'they'. 'We' incluiria quem fala, o que não é o caso."
+    },
+    {
+     "pergunta": "Look at the sun. ___ is very hot today.",
+     "opcoes": [
+      "He",
+      "It",
+      "She"
+     ],
+     "correta": 1,
+     "explicacao": "'The sun' não é pessoa, então em inglês usamos 'it'. Em português o sol é 'ele', e isso leva ao erro de usar 'he'."
+    },
+    {
+     "pergunta": "Pedro and Lucas are late. ___ are on the bus.",
+     "opcoes": [
+      "We",
+      "You",
+      "They"
+     ],
+     "correta": 2,
+     "explicacao": "'Pedro and Lucas' são outras pessoas (não incluem quem fala), então o pronome é 'they' (eles)."
+    },
+    {
+     "pergunta": "___ are my best friend.",
+     "opcoes": [
+      "You",
+      "He",
+      "I"
+     ],
+     "correta": 0,
+     "explicacao": "O verbo 'are' combina com 'you'. 'He' pediria 'is' e 'I' pediria 'am'."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "Is a good movie.",
+      "It is a good movie.",
+      "He is a good movie."
+     ],
+     "correta": 1,
+     "explicacao": "Em inglês toda frase precisa de sujeito: usamos 'it' para coisas. Em português dizemos 'É um bom filme' sem sujeito, por isso o erro de começar direto com 'Is'."
+    }
+   ]
+  },
+  {
+   "slug": "articles-a-an-the",
+   "titulo": "Articles: a, an, the",
+   "subtitulo": "Pequenos no tamanho, gigantes no uso",
+   "resumo": "Os artigos aparecem o tempo todo: a e an significam um/uma (algo genérico), e the significa o/a/os/as (algo específico). A boa notícia é que eles nunca mudam de forma: the serve para tudo, singular, plural, masculino e feminino.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, when do I use 'an' instead of 'a'?",
+     "pt": "Sofia, quando eu uso 'an' em vez de 'a'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Listen to the sound! Before a vowel sound, use an: an apple, an egg. Before a consonant sound, use a: a book.",
+     "pt": "Ouça o som! Antes de som de vogal, use an: an apple, an egg. Antes de som de consoante, use a: a book."
+    },
+    {
+     "persona": "max",
+     "en": "I understand! I want to eat a orange.",
+     "pt": "Entendi! Eu quero comer a orange."
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful, Max! Orange starts with a vowel sound, so it is an orange.",
+     "pt": "Cuidado, Max! Orange começa com som de vogal, então é an orange."
+    },
+    {
+     "persona": "leo",
+     "en": "Trick: 'an' exists just to make speaking smooth. Try saying 'a apple' fast. Ugly, right?",
+     "pt": "Macete: o 'an' existe só para deixar a fala fluida. Tenta falar 'a apple' rápido. Feio, né?"
+    }
+   ],
+   "quando_usar": [
+    "Para mencionar algo pela primeira vez ou algo genérico: \"I have a car\".",
+    "Antes de palavras com som de vogal: \"She is an engineer\".",
+    "Para falar de algo específico que os dois conhecem: \"The car is in the garage\".",
+    "Para coisas únicas no mundo: \"The sun is hot today\".",
+    "Para profissões, onde o artigo é obrigatório: \"He is a doctor\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "A (som de consoante)",
+     "estrutura": "a + palavra com som inicial de consoante",
+     "exemplo_en": "a house, a university",
+     "exemplo_pt": "uma casa, uma universidade"
+    },
+    {
+     "rotulo": "An (som de vogal)",
+     "estrutura": "an + palavra com som inicial de vogal",
+     "exemplo_en": "an hour, an umbrella",
+     "exemplo_pt": "uma hora, um guarda-chuva"
+    },
+    {
+     "rotulo": "The (específico)",
+     "estrutura": "the + substantivo já conhecido, singular ou plural",
+     "exemplo_en": "the teacher, the students",
+     "exemplo_pt": "o professor, os alunos"
+    },
+    {
+     "rotulo": "Sem artigo",
+     "estrutura": "generalização no plural ou incontáveis",
+     "exemplo_en": "I love dogs. Water is important.",
+     "exemplo_pt": "Eu amo cachorros. Água é importante."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: a/an é apresentação ('um carro qualquer'), the é intimidade ('o carro que você já conhece'). E o the é um coringa: vale por o, a, os e as, tudo junto."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "O que manda é o SOM, não a letra. University começa com U mas soa como 'iu' (consoante), então é a university. Hour tem H mudo e soa como 'au', então é an hour."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She is teacher.",
+     "certo": "She is a teacher.",
+     "explicacao": "Em português dizemos 'ela é professora' sem artigo, mas em inglês profissões pedem a ou an: She is a teacher."
+    },
+    {
+     "errado": "The life is beautiful.",
+     "certo": "Life is beautiful.",
+     "explicacao": "Português usa 'a vida', mas inglês não coloca the em generalizações: life, love, music, sem artigo."
+    },
+    {
+     "errado": "I need a information.",
+     "certo": "I need some information.",
+     "explicacao": "Information é incontável em inglês, então não aceita a/an. Use some ou nada: some information."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: She wants ___ ice cream.",
+     "opcoes": [
+      "a",
+      "an",
+      "the"
+     ],
+     "correta": 1,
+     "explicacao": "Ice começa com som de vogal, então usamos an: an ice cream."
+    },
+    {
+     "pergunta": "Complete: ___ moon is beautiful tonight.",
+     "opcoes": [
+      "A",
+      "An",
+      "The"
+     ],
+     "correta": 2,
+     "explicacao": "A lua é única no céu, algo específico que todos conhecem, então usamos the: The moon."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "My mother is a nurse.",
+      "My mother is an nurse.",
+      "My mother is nurse."
+     ],
+     "correta": 0,
+     "explicacao": "Profissões exigem artigo, e nurse começa com som de consoante: a nurse."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "She has ___ orange in her bag.",
+     "opcoes": [
+      "a",
+      "an",
+      "the"
+     ],
+     "correta": 1,
+     "explicacao": "'Orange' começa com som de vogal, então usamos 'an'. 'A' só vem antes de som de consoante (a banana, a car)."
+    },
+    {
+     "pergunta": "I have ___ dog and two cats.",
+     "opcoes": [
+      "a",
+      "an",
+      "the"
+     ],
+     "correta": 0,
+     "explicacao": "'Dog' começa com som de consoante e está sendo mencionado pela primeira vez, então usamos 'a'. 'An' seria para som de vogal."
+    },
+    {
+     "pergunta": "___ sun is very strong today.",
+     "opcoes": [
+      "A",
+      "An",
+      "The"
+     ],
+     "correta": 2,
+     "explicacao": "Coisas únicas, como o sol e a lua, sempre levam 'the'. 'A/an' são para algo não específico, e o sol só existe um."
+    },
+    {
+     "pergunta": "He is ___ engineer.",
+     "opcoes": [
+      "an",
+      "a",
+      "the"
+     ],
+     "correta": 0,
+     "explicacao": "Profissões levam artigo em inglês, e 'engineer' começa com som de vogal, por isso 'an'. Em português dizemos 'ele é engenheiro' sem artigo, daí o erro de não usar nada."
+    },
+    {
+     "pergunta": "This is ___ umbrella.",
+     "opcoes": [
+      "a",
+      "the",
+      "an"
+     ],
+     "correta": 2,
+     "explicacao": "'Umbrella' começa com som de vogal (â), então pede 'an'. Cuidado: a regra é o som, não apenas a letra."
+    },
+    {
+     "pergunta": "My father is ___ teacher at my school.",
+     "opcoes": [
+      "an",
+      "a",
+      "the"
+     ],
+     "correta": 1,
+     "explicacao": "'Teacher' começa com som de consoante, então usamos 'a'. Lembre-se: em inglês, profissão sempre leva 'a' ou 'an'."
+    },
+    {
+     "pergunta": "Can you open ___ door, please?",
+     "opcoes": [
+      "the",
+      "an",
+      "a"
+     ],
+     "correta": 0,
+     "explicacao": "Usamos 'the' porque as duas pessoas sabem de qual porta se trata (algo específico). 'A' seria uma porta qualquer, não faz sentido aqui."
+    },
+    {
+     "pergunta": "It's ___ old house.",
+     "opcoes": [
+      "a",
+      "an",
+      "the"
+     ],
+     "correta": 1,
+     "explicacao": "A palavra seguinte é 'old', que começa com som de vogal, então usamos 'an'. O artigo olha para a palavra logo depois dele, não para 'house'."
+    },
+    {
+     "pergunta": "I eat ___ apple every day.",
+     "opcoes": [
+      "a",
+      "an",
+      "the"
+     ],
+     "correta": 1,
+     "explicacao": "'Apple' começa com som de vogal, então pede 'an'. 'A apple' é um dos erros mais comuns de iniciantes."
+    },
+    {
+     "pergunta": "Look at ___ moon! It's beautiful.",
+     "opcoes": [
+      "a",
+      "an",
+      "the"
+     ],
+     "correta": 2,
+     "explicacao": "A lua é única, então usamos 'the moon'. 'A/an' indicariam 'uma lua qualquer', o que não existe."
+    }
+   ]
+  },
+  {
+   "slug": "plural-of-nouns",
+   "titulo": "Plural of nouns",
+   "subtitulo": "Um vira dois: a arte de adicionar o -s",
+   "resumo": "Formar o plural em inglês costuma ser simples: adicione -s no final da palavra. Mas existem regrinhas de escrita (como -es e -ies) e alguns plurais rebeldes que não seguem regra nenhuma, como man/men e child/children.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "I saw three womans and two childs at the park.",
+     "pt": "Eu vi três 'womans' e dois 'childs' no parque."
+    },
+    {
+     "persona": "sofia",
+     "en": "Good try, Max! But those are irregular: three women and two children.",
+     "pt": "Boa tentativa, Max! Mas esses são irregulares: three women e two children."
+    },
+    {
+     "persona": "max",
+     "en": "Women? Children? English, why?",
+     "pt": "Women? Children? Inglês, por quê?"
+    },
+    {
+     "persona": "leo",
+     "en": "Relax, there are few rebels. Learn the top ones: men, women, children, people, feet, teeth.",
+     "pt": "Relaxa, os rebeldes são poucos. Aprenda os principais: men, women, children, people, feet, teeth."
+    },
+    {
+     "persona": "maya",
+     "en": "So for the rest, I just add -s? Like books, cars, houses?",
+     "pt": "Então para o resto eu só adiciono -s? Tipo books, cars, houses?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Exactly! The -s solves ninety percent of your plural problems.",
+     "pt": "Exatamente! O -s resolve noventa por cento dos seus problemas de plural."
+    }
+   ],
+   "quando_usar": [
+    "Para falar de mais de uma coisa: \"I have two brothers\".",
+    "Para fazer generalizações no plural, sem artigo: \"Cats are independent\".",
+    "Depois de números maiores que um: \"She has three jobs\".",
+    "Com quantidades como some, many e a lot of: \"There are many students here\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Regra geral",
+     "estrutura": "substantivo + s",
+     "exemplo_en": "book → books, car → cars",
+     "exemplo_pt": "livro → livros, carro → carros"
+    },
+    {
+     "rotulo": "Terminados em -s, -sh, -ch, -x, -o",
+     "estrutura": "substantivo + es",
+     "exemplo_en": "bus → buses, watch → watches, tomato → tomatoes",
+     "exemplo_pt": "ônibus → ônibus, relógio → relógios, tomate → tomates"
+    },
+    {
+     "rotulo": "Consoante + y",
+     "estrutura": "troca o y por ies",
+     "exemplo_en": "city → cities, baby → babies",
+     "exemplo_pt": "cidade → cidades, bebê → bebês"
+    },
+    {
+     "rotulo": "Irregulares",
+     "estrutura": "forma própria, sem -s",
+     "exemplo_en": "man → men, child → children, foot → feet",
+     "exemplo_pt": "homem → homens, criança → crianças, pé → pés"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: em português a gente às vezes fala 'dois real', 'os menino', e a frase sobrevive. Em inglês o -s do plural é sagrado: two books, sempre. Se tem número maior que um, tem -s (ou plural irregular)."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "People já é plural! Significa 'pessoas' e usa verbo no plural: \"People are nice\", nunca \"People is nice\". Para uma pessoa só, diga a person."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I have two brother.",
+     "certo": "I have two brothers.",
+     "explicacao": "Como no português falado a gente engole o plural ('dois irmão'), o brasileiro esquece o -s. Em inglês ele é obrigatório: two brothers."
+    },
+    {
+     "errado": "The peoples in my city are friendly.",
+     "certo": "The people in my city are friendly.",
+     "explicacao": "People já significa 'pessoas', não precisa de -s. 'Peoples' só existe com o sentido raro de 'povos'."
+    },
+    {
+     "errado": "Three mans work here.",
+     "certo": "Three men work here.",
+     "explicacao": "Man tem plural irregular: men. O mesmo vale para woman → women. Nada de -s nesses casos."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual é o plural de 'city'?",
+     "opcoes": [
+      "citys",
+      "cities",
+      "cityes"
+     ],
+     "correta": 1,
+     "explicacao": "Consoante + y: troca o y por ies. City → cities."
+    },
+    {
+     "pergunta": "Complete: There are five ___ in the room.",
+     "opcoes": [
+      "childs",
+      "childrens",
+      "children"
+     ],
+     "correta": 2,
+     "explicacao": "Child tem plural irregular: children, sem -s extra. 'Childrens' não existe."
+    },
+    {
+     "pergunta": "Qual é o plural de 'watch'?",
+     "opcoes": [
+      "watches",
+      "watchs",
+      "watchies"
+     ],
+     "correta": 0,
+     "explicacao": "Palavras terminadas em -ch ganham -es no plural: watch → watches."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "I have two ___.",
+     "opcoes": [
+      "childs",
+      "children",
+      "childrens"
+     ],
+     "correta": 1,
+     "explicacao": "'Child' tem plural irregular: 'children'. 'Childs' e 'childrens' são erros comuns de quem aplica a regra do -s."
+    },
+    {
+     "pergunta": "There are three ___ on the table.",
+     "opcoes": [
+      "boxes",
+      "boxs",
+      "boxies"
+     ],
+     "correta": 0,
+     "explicacao": "Palavras terminadas em -x formam o plural com -es: box → boxes. 'Boxs' esquece o -e obrigatório."
+    },
+    {
+     "pergunta": "Two ___ are swimming in the lake.",
+     "opcoes": [
+      "fishes",
+      "fishs",
+      "fish"
+     ],
+     "correta": 2,
+     "explicacao": "'Fish' normalmente não muda no plural: one fish, two fish. 'Fishes' engana porque parece seguir a regra do -es."
+    },
+    {
+     "pergunta": "My ___ are dirty. I need to wash them.",
+     "opcoes": [
+      "foots",
+      "feet",
+      "foot"
+     ],
+     "correta": 1,
+     "explicacao": "'Foot' tem plural irregular: 'feet'. 'Foots' é o erro clássico de aplicar o -s a uma palavra irregular."
+    },
+    {
+     "pergunta": "She has three ___.",
+     "opcoes": [
+      "babys",
+      "babyes",
+      "babies"
+     ],
+     "correta": 2,
+     "explicacao": "Consoante + y: troca-se o y por -ies (baby → babies). 'Babys' mantém o y, o que é incorreto."
+    },
+    {
+     "pergunta": "There are many ___ in the library.",
+     "opcoes": [
+      "books",
+      "bookes",
+      "bookies"
+     ],
+     "correta": 0,
+     "explicacao": "'Book' é regular: basta acrescentar -s. Só usamos -es depois de sons como -x, -s, -ch e -sh."
+    },
+    {
+     "pergunta": "Those ___ work in the bank.",
+     "opcoes": [
+      "mans",
+      "mens",
+      "men"
+     ],
+     "correta": 2,
+     "explicacao": "'Man' tem plural irregular: 'men', sem -s. 'Mens' erra ao somar -s a um plural que já está pronto."
+    },
+    {
+     "pergunta": "I need two ___ for the sandwich.",
+     "opcoes": [
+      "tomatoes",
+      "tomatos",
+      "tomaties"
+     ],
+     "correta": 0,
+     "explicacao": "Palavras terminadas em -o geralmente ganham -es: tomato → tomatoes. 'Tomatos' esquece o -e."
+    },
+    {
+     "pergunta": "How many ___ do you see in the street?",
+     "opcoes": [
+      "busses",
+      "buses",
+      "busies"
+     ],
+     "correta": 1,
+     "explicacao": "'Bus' termina em -s, então o plural é 'buses'. A forma padrão tem um 's' só antes do -es."
+    },
+    {
+     "pergunta": "The ___ in this city are very clean.",
+     "opcoes": [
+      "beachs",
+      "beachies",
+      "beaches"
+     ],
+     "correta": 2,
+     "explicacao": "Palavras terminadas em -ch formam o plural com -es: beach → beaches. 'Beachs' esquece o -e obrigatório."
+    }
+   ]
+  },
+  {
+   "slug": "present-simple",
+   "titulo": "Present Simple",
+   "subtitulo": "O tempo da rotina e das verdades",
+   "resumo": "O Present Simple descreve rotinas, hábitos, fatos e gostos: coisas que acontecem sempre ou são verdade em geral. É o tempo verbal mais usado do inglês, e seu maior desafio é lembrar do -s na terceira pessoa e do do/does nas perguntas e negativas.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "I wake up at six and drink coffee every day. Is that Present Simple?",
+     "pt": "Eu acordo às seis e tomo café todo dia. Isso é Present Simple?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Perfect example! Routines and habits always use it.",
+     "pt": "Exemplo perfeito! Rotinas e hábitos sempre usam esse tempo."
+    },
+    {
+     "persona": "max",
+     "en": "My sister work in a hospital. She like her job.",
+     "pt": "Minha irmã trabalha num hospital. Ela gosta do trabalho dela."
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! With she, the verb wears a hat: she works, she likes.",
+     "pt": "Quase, Max! Com she, o verbo ganha um chapeuzinho: she works, she likes."
+    },
+    {
+     "persona": "leo",
+     "en": "I call it the selfish -s: he, she and it keep it all for themselves.",
+     "pt": "Eu chamo de -s egoísta: he, she e it guardam ele só para si."
+    }
+   ],
+   "quando_usar": [
+    "Para rotinas e hábitos: \"I study English every day\".",
+    "Para fatos e verdades gerais: \"The sun rises in the east\".",
+    "Para gostos e preferências: \"She loves chocolate\".",
+    "Para falar de trabalho e situações permanentes: \"They live in Curitiba\".",
+    "Com advérbios de frequência como always, usually e never: \"He never eats meat\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "Sujeito + verbo (+ s/es com he, she, it)",
+     "exemplo_en": "I play soccer. She plays soccer.",
+     "exemplo_pt": "Eu jogo futebol. Ela joga futebol."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + don't/doesn't + verbo no infinitivo",
+     "exemplo_en": "He doesn't like tea.",
+     "exemplo_pt": "Ele não gosta de chá."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Do/Does + sujeito + verbo no infinitivo?",
+     "exemplo_en": "Do you work here? Does she work here?",
+     "exemplo_pt": "Você trabalha aqui? Ela trabalha aqui?"
+    },
+    {
+     "rotulo": "Respostas curtas",
+     "estrutura": "Yes/No + sujeito + do/does (ou don't/doesn't)",
+     "exemplo_en": "Do you like pizza? Yes, I do.",
+     "exemplo_pt": "Você gosta de pizza? Sim, gosto."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: pense no do/does como um ajudante invisível. Ele aparece para montar perguntas e negativas, e quando o does entra em cena, ele rouba o -s do verbo: she works → does she work?"
+    },
+    {
+     "tipo": "atencao",
+     "texto": "O erro número 1 do brasileiro no A1: esquecer o -s da terceira pessoa. 'She work' soa incompleto para um nativo. Grave o mantra: he works, she works, it works."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "He have a new phone.",
+     "certo": "He has a new phone.",
+     "explicacao": "Have é especial: na terceira pessoa vira has, não 'haves' nem 'have'. He has, she has, it has."
+    },
+    {
+     "errado": "You like music?",
+     "certo": "Do you like music?",
+     "explicacao": "Em português basta mudar a entonação para perguntar. Em inglês, pergunta no Present Simple precisa do do/does no início."
+    },
+    {
+     "errado": "She doesn't likes coffee.",
+     "certo": "She doesn't like coffee.",
+     "explicacao": "O -s já está no doesn't; o verbo volta para a forma base. Um -s por frase é o suficiente."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: My father ___ TV at night.",
+     "opcoes": [
+      "watch",
+      "watches",
+      "watchs"
+     ],
+     "correta": 1,
+     "explicacao": "Terceira pessoa (my father = he) e verbo terminado em -ch: ganha -es. He watches TV."
+    },
+    {
+     "pergunta": "Complete a pergunta: ___ she speak English?",
+     "opcoes": [
+      "Does",
+      "Do",
+      "Is"
+     ],
+     "correta": 0,
+     "explicacao": "Com she, o ajudante da pergunta é does: Does she speak English? E o verbo fica sem -s."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "I doesn't like onions.",
+      "I not like onions.",
+      "I don't like onions."
+     ],
+     "correta": 2,
+     "explicacao": "Com I, a negativa usa don't + verbo base: I don't like onions. Doesn't é só para he, she e it."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "She ___ to work by bus.",
+     "opcoes": [
+      "go",
+      "goes",
+      "going"
+     ],
+     "correta": 1,
+     "explicacao": "Na 3ª pessoa do singular (she), o verbo ganha -es: 'goes'. 'Go' sem -es é o erro mais comum nessa pessoa."
+    },
+    {
+     "pergunta": "I ___ coffee every morning.",
+     "opcoes": [
+      "drink",
+      "drinks",
+      "drinking"
+     ],
+     "correta": 0,
+     "explicacao": "Com 'I' o verbo fica na forma base: 'drink'. O -s de 'drinks' é só para he/she/it."
+    },
+    {
+     "pergunta": "He ___ like soccer.",
+     "opcoes": [
+      "don't",
+      "doesn't",
+      "isn't"
+     ],
+     "correta": 1,
+     "explicacao": "A negativa de 'he' no present simple usa 'doesn't'. 'Don't' é para I/you/we/they, e 'isn't' é do verbo to be, não combina com 'like'."
+    },
+    {
+     "pergunta": "___ they live in Curitiba?",
+     "opcoes": [
+      "Do",
+      "Does",
+      "Are"
+     ],
+     "correta": 0,
+     "explicacao": "Perguntas com 'they' no present simple usam 'do'. 'Are' engana porque o brasileiro tenta usar o to be em toda pergunta."
+    },
+    {
+     "pergunta": "My mother ___ dinner at seven o'clock.",
+     "opcoes": [
+      "cook",
+      "cooking",
+      "cooks"
+     ],
+     "correta": 2,
+     "explicacao": "'My mother' é 3ª pessoa do singular (= she), então o verbo leva -s: 'cooks'. 'Cooking' precisaria do verbo to be antes."
+    },
+    {
+     "pergunta": "We ___ English on Mondays.",
+     "opcoes": [
+      "study",
+      "studies",
+      "studying"
+     ],
+     "correta": 0,
+     "explicacao": "Com 'we' o verbo fica na forma base: 'study'. 'Studies' (com -ies) é só para he/she/it."
+    },
+    {
+     "pergunta": "___ she work on Saturdays?",
+     "opcoes": [
+      "Do",
+      "Is",
+      "Does"
+     ],
+     "correta": 2,
+     "explicacao": "Perguntas com 'she' no present simple usam 'does', e o verbo principal fica sem -s. 'Is' não se usa com verbo de ação nesse tempo."
+    },
+    {
+     "pergunta": "The bank ___ at 10 a.m.",
+     "opcoes": [
+      "open",
+      "opens",
+      "opening"
+     ],
+     "correta": 1,
+     "explicacao": "'The bank' é singular (= it), então o verbo ganha -s: 'opens'. 'Open' sem -s só serve para I/you/we/they."
+    },
+    {
+     "pergunta": "I ___ watch TV at night.",
+     "opcoes": [
+      "don't",
+      "doesn't",
+      "not"
+     ],
+     "correta": 0,
+     "explicacao": "A negativa com 'I' usa 'don't' + verbo. 'Not' sozinho antes do verbo é uma tradução direta do português e está errada."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "He play the guitar.",
+      "He playing the guitar.",
+      "He plays the guitar."
+     ],
+     "correta": 2,
+     "explicacao": "Com 'he' o verbo precisa do -s: 'plays'. 'He play' esquece o -s e 'he playing' está sem o verbo to be."
+    }
+   ]
+  },
+  {
+   "slug": "present-continuous",
+   "titulo": "Present Continuous",
+   "subtitulo": "O que está rolando agora, neste momento",
+   "resumo": "O Present Continuous descreve ações em andamento: o que está acontecendo agora ou por estes dias. A fórmula é sempre a mesma, to be + verbo com -ing, bem parecida com o nosso 'estou fazendo' do português.",
+   "dialogo": [
+    {
+     "persona": "sofia",
+     "en": "Maya, what are you doing right now?",
+     "pt": "Maya, o que você está fazendo agora?"
+    },
+    {
+     "persona": "maya",
+     "en": "I am studying English and drinking juice. Multitasking!",
+     "pt": "Estou estudando inglês e tomando suco. Multitarefa!"
+    },
+    {
+     "persona": "max",
+     "en": "I working on my homework too.",
+     "pt": "Eu trabalhando na minha lição também."
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! The -ing needs a partner: I am working. Never forget the verb to be.",
+     "pt": "Quase, Max! O -ing precisa de um parceiro: I am working. Nunca esqueça o verb to be."
+    },
+    {
+     "persona": "leo",
+     "en": "Think of it as a couple: to be and -ing always dance together.",
+     "pt": "Pense neles como um casal: to be e -ing sempre dançam juntos."
+    }
+   ],
+   "quando_usar": [
+    "Para ações acontecendo agora: \"She is cooking dinner\".",
+    "Para situações temporárias destes dias: \"I am reading a great book this week\".",
+    "Para descrever uma cena ou foto: \"The kids are playing in the garden\".",
+    "Para planos já combinados do futuro próximo: \"We are traveling on Saturday\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "Sujeito + am/is/are + verbo-ing",
+     "exemplo_en": "They are watching a movie.",
+     "exemplo_pt": "Eles estão assistindo a um filme."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + am/is/are + not + verbo-ing",
+     "exemplo_en": "I am not sleeping.",
+     "exemplo_pt": "Eu não estou dormindo."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Am/Is/Are + sujeito + verbo-ing?",
+     "exemplo_en": "Are you listening to me?",
+     "exemplo_pt": "Você está me ouvindo?"
+    },
+    {
+     "rotulo": "Ajustes de escrita",
+     "estrutura": "make → making (corta o e), run → running (dobra a consoante)",
+     "exemplo_en": "He is running in the park.",
+     "exemplo_pt": "Ele está correndo no parque."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: o -ing é o nosso -ndo. Working = trabalhando, eating = comendo. Se em português você diria 'estou ...ndo', em inglês é 'I am ...ing'. Tradução quase automática!"
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Alguns verbos não gostam de -ing: like, want, need, know, love (verbos de estado). Diga \"I want water\", nunca \"I am wanting water\", mesmo que a vontade seja agora."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She cooking dinner now.",
+     "certo": "She is cooking dinner now.",
+     "explicacao": "O brasileiro tende a pular o to be porque o -ing já parece suficiente. Mas a estrutura exige os dois: is + cooking."
+    },
+    {
+     "errado": "I am liking this song.",
+     "certo": "I like this song.",
+     "explicacao": "Like é verbo de estado e não vai para o contínuo. Gostos usam Present Simple: I like, I love, I want."
+    },
+    {
+     "errado": "They are study English now.",
+     "certo": "They are studying English now.",
+     "explicacao": "Se entrou o to be, o verbo principal precisa do -ing. Are + studying, sempre em dupla."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Look! The baby ___ .",
+     "opcoes": [
+      "is sleeping",
+      "sleeping",
+      "sleeps"
+     ],
+     "correta": 0,
+     "explicacao": "Ação acontecendo agora (Look!) pede Present Continuous completo: is + sleeping."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "I am needing help now.",
+      "We are running late.",
+      "She is swiming fast."
+     ],
+     "correta": 1,
+     "explicacao": "Need não usa -ing (verbo de estado) e swim dobra o m: swimming. A correta é We are running late."
+    },
+    {
+     "pergunta": "Complete a pergunta: ___ they playing video games?",
+     "opcoes": [
+      "Do",
+      "Is",
+      "Are"
+     ],
+     "correta": 2,
+     "explicacao": "No Present Continuous a pergunta começa com o to be. Com they, usamos are: Are they playing?"
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Look! It ___ raining.",
+     "opcoes": [
+      "is",
+      "are",
+      "am"
+     ],
+     "correta": 0,
+     "explicacao": "O present continuous usa to be + verbo com -ing, e 'it' pede 'is'. 'Are' é para you/we/they."
+    },
+    {
+     "pergunta": "They ___ playing video games now.",
+     "opcoes": [
+      "is",
+      "am",
+      "are"
+     ],
+     "correta": 2,
+     "explicacao": "'They' pede 'are' no present continuous. 'Is' só combina com he/she/it."
+    },
+    {
+     "pergunta": "She is ___ a letter to her friend.",
+     "opcoes": [
+      "write",
+      "writing",
+      "writes"
+     ],
+     "correta": 1,
+     "explicacao": "Depois do verbo to be, o verbo principal ganha -ing: 'writing'. 'Writes' é do present simple e não combina com 'is' aqui."
+    },
+    {
+     "pergunta": "I ___ studying for the test right now.",
+     "opcoes": [
+      "is",
+      "am",
+      "are"
+     ],
+     "correta": 1,
+     "explicacao": "Com 'I' o verbo to be é 'am': 'I am studying'. 'Is' e 'are' não combinam com 'I'."
+    },
+    {
+     "pergunta": "What ___ you doing?",
+     "opcoes": [
+      "are",
+      "is",
+      "am"
+     ],
+     "correta": 0,
+     "explicacao": "'You' pede 'are', mesmo em perguntas: 'What are you doing?'. 'Is you' é um erro comum de iniciantes."
+    },
+    {
+     "pergunta": "The baby is ___ now. Please be quiet.",
+     "opcoes": [
+      "sleep",
+      "sleeps",
+      "sleeping"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de 'is', a ação em andamento usa -ing: 'sleeping'. 'Sleeps' pertence ao present simple (rotina), não ao agora."
+    },
+    {
+     "pergunta": "We are ___ lunch at the moment.",
+     "opcoes": [
+      "have",
+      "having",
+      "has"
+     ],
+     "correta": 1,
+     "explicacao": "'At the moment' indica ação em andamento: are + having. 'Has' é present simple de 3ª pessoa e não se usa depois de 'are'."
+    },
+    {
+     "pergunta": "He ___ not working today.",
+     "opcoes": [
+      "are",
+      "am",
+      "is"
+     ],
+     "correta": 2,
+     "explicacao": "'He' pede 'is', e a negativa fica 'is not working' (isn't working). 'Are' e 'am' não combinam com 'he'."
+    },
+    {
+     "pergunta": "My friends ___ swimming in the pool.",
+     "opcoes": [
+      "are",
+      "is",
+      "be"
+     ],
+     "correta": 0,
+     "explicacao": "'My friends' é plural (= they), então usamos 'are'. 'Be' sem conjugar é erro típico de quem decora 'to be' como uma palavra só."
+    },
+    {
+     "pergunta": "Listen! Someone is ___ at the door.",
+     "opcoes": [
+      "knock",
+      "knocking",
+      "knocks"
+     ],
+     "correta": 1,
+     "explicacao": "'Listen!' mostra que a ação acontece agora: is + knocking. O -ing é obrigatório depois do verbo to be nesse tempo."
+    }
+   ]
+  },
+  {
+   "slug": "there-is-there-are",
+   "titulo": "There is / There are",
+   "subtitulo": "O jeito inglês de dizer que algo existe",
+   "resumo": "There is e there are equivalem ao nosso 'tem' e 'há': servem para dizer que algo existe em um lugar. There is acompanha o singular, there are acompanha o plural, e essa dupla é essencial para descrever qualquer ambiente.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "How do I say 'tem um parque perto da minha casa' in English?",
+     "pt": "Como eu digo 'tem um parque perto da minha casa' em inglês?"
+    },
+    {
+     "persona": "sofia",
+     "en": "There is a park near my house. For existence, English uses there is or there are.",
+     "pt": "There is a park near my house. Para existência, o inglês usa there is ou there are."
+    },
+    {
+     "persona": "max",
+     "en": "Have two supermarkets in my street!",
+     "pt": "Tem dois supermercados na minha rua!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Classic mistake, Max! Not 'have': there ARE two supermarkets, because they are plural.",
+     "pt": "Erro clássico, Max! Não é 'have': there ARE two supermarkets, porque é plural."
+    },
+    {
+     "persona": "leo",
+     "en": "Golden rule: if you would say 'tem' in Portuguese, think 'there is/are', never 'have'.",
+     "pt": "Regra de ouro: se você diria 'tem' em português, pense 'there is/are', nunca 'have'."
+    }
+   ],
+   "quando_usar": [
+    "Para dizer que algo existe em um lugar: \"There is a cat on the roof\".",
+    "Para descrever cidades, casas e ambientes: \"There are two bedrooms in my apartment\".",
+    "Para perguntar se algo existe: \"Is there a bank near here?\".",
+    "Para dizer que algo não existe, com no ou any: \"There are no tickets left\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa singular",
+     "estrutura": "There is + a/an + substantivo singular",
+     "exemplo_en": "There is a pharmacy on this street.",
+     "exemplo_pt": "Tem uma farmácia nesta rua."
+    },
+    {
+     "rotulo": "Afirmativa plural",
+     "estrutura": "There are + substantivo plural",
+     "exemplo_en": "There are many restaurants downtown.",
+     "exemplo_pt": "Tem muitos restaurantes no centro."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "There isn't a... / There aren't any...",
+     "exemplo_en": "There aren't any eggs in the fridge.",
+     "exemplo_pt": "Não tem ovos na geladeira."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Is there...? / Are there...?",
+     "exemplo_en": "Is there a problem?",
+     "exemplo_pt": "Tem algum problema?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: nosso 'tem' de existência é um falso amigo do 'have'. Toda vez que o 'tem' não tiver dono ('tem uma padaria ali'), a tradução é there is/there are. Se tiver dono ('eu tenho'), aí sim é have."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Conte antes de falar: uma coisa → there is; duas ou mais → there are. Em português 'tem' serve para os dois, mas em inglês errar o par singular/plural denuncia o iniciante."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Have a good restaurant near here.",
+     "certo": "There is a good restaurant near here.",
+     "explicacao": "Tradução direta do 'tem' brasileiro. Existência em inglês é there is/are; have é só para posse."
+    },
+    {
+     "errado": "There is many people at the party.",
+     "certo": "There are many people at the party.",
+     "explicacao": "People é plural, então pede there are. There is só combina com singular."
+    },
+    {
+     "errado": "There aren't nothing in the box.",
+     "certo": "There is nothing in the box.",
+     "explicacao": "Inglês não aceita dupla negativa. Ou 'There is nothing' ou 'There isn't anything', nunca as duas negações juntas."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: ___ a big park in my city.",
+     "opcoes": [
+      "There are",
+      "There is",
+      "Have"
+     ],
+     "correta": 1,
+     "explicacao": "A park é singular, então usamos there is. E 'have' nunca expressa existência."
+    },
+    {
+     "pergunta": "Complete: ___ any buses after midnight?",
+     "opcoes": [
+      "Are there",
+      "Is there",
+      "There are"
+     ],
+     "correta": 0,
+     "explicacao": "Buses é plural e a frase é pergunta, então invertemos: Are there any buses?"
+    },
+    {
+     "pergunta": "Como dizer 'Não tem açúcar em casa'?",
+     "opcoes": [
+      "Not have sugar at home.",
+      "There isn't sugar at home... have no.",
+      "There isn't any sugar at home."
+     ],
+     "correta": 2,
+     "explicacao": "Existência negativa com incontável: There isn't any sugar. Nada de 'have' para o 'tem' de existência."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ a cat on the sofa.",
+     "opcoes": [
+      "There is",
+      "There are",
+      "There have"
+     ],
+     "correta": 0,
+     "explicacao": "'A cat' é singular, então usamos 'there is'. 'There have' é tradução direta do 'tem' do português e não existe em inglês."
+    },
+    {
+     "pergunta": "___ many students in the classroom.",
+     "opcoes": [
+      "There is",
+      "There are",
+      "There has"
+     ],
+     "correta": 1,
+     "explicacao": "'Many students' é plural, então o correto é 'there are'. 'There is' com plural é um erro muito comum."
+    },
+    {
+     "pergunta": "___ there a bank near here?",
+     "opcoes": [
+      "Are",
+      "Am",
+      "Is"
+     ],
+     "correta": 2,
+     "explicacao": "'A bank' é singular, então a pergunta é 'Is there...?'. 'Are there' seria para plural (Are there banks...?)."
+    },
+    {
+     "pergunta": "There ___ two bedrooms in my house.",
+     "opcoes": [
+      "is",
+      "are",
+      "have"
+     ],
+     "correta": 1,
+     "explicacao": "'Two bedrooms' é plural, então usamos 'are'. 'Have' engana porque em português dizemos 'tem dois quartos'."
+    },
+    {
+     "pergunta": "There ___ some milk in the fridge.",
+     "opcoes": [
+      "is",
+      "are",
+      "be"
+     ],
+     "correta": 0,
+     "explicacao": "'Milk' é incontável e se comporta como singular, então usamos 'is'. 'Are' só serve para substantivos no plural."
+    },
+    {
+     "pergunta": "___ any good restaurants in this street?",
+     "opcoes": [
+      "Is there",
+      "There are",
+      "Are there"
+     ],
+     "correta": 2,
+     "explicacao": "'Restaurants' é plural e a frase é uma pergunta, então a ordem é 'Are there...?'. 'There are' é a ordem de afirmação, não de pergunta."
+    },
+    {
+     "pergunta": "There ___ a big park in my city.",
+     "opcoes": [
+      "are",
+      "have",
+      "is"
+     ],
+     "correta": 2,
+     "explicacao": "'A big park' é singular, então o correto é 'there is'. 'There have' não existe, mesmo que em português seja 'tem um parque'."
+    },
+    {
+     "pergunta": "There ___ not any eggs in the kitchen.",
+     "opcoes": [
+      "is",
+      "are",
+      "has"
+     ],
+     "correta": 1,
+     "explicacao": "'Eggs' é plural, então usamos 'are': 'There are not (aren't) any eggs'. 'Is' só serve para singular e incontáveis."
+    },
+    {
+     "pergunta": "___ a lot of water on the floor!",
+     "opcoes": [
+      "There is",
+      "There are",
+      "There be"
+     ],
+     "correta": 0,
+     "explicacao": "'Water' é incontável, então mesmo com 'a lot of' usamos 'there is'. 'A lot of' engana e faz parecer plural."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "Have a supermarket near my house.",
+      "There have a supermarket near my house.",
+      "There is a supermarket near my house."
+     ],
+     "correta": 2,
+     "explicacao": "Para dizer que algo existe, o inglês usa 'there is/are', nunca 'have' sozinho. As outras opções traduzem o 'tem' do português palavra por palavra."
+    }
+   ]
+  },
+  {
+   "slug": "can-ability",
+   "titulo": "Can: habilidade e permissão",
+   "subtitulo": "O verbo do 'eu consigo' e do 'posso?'",
+   "resumo": "Can expressa habilidade (sei/consigo fazer) e permissão (posso fazer). É um dos verbos mais simpáticos do inglês: nunca muda de forma, não aceita -s e dispensa o do/does em perguntas e negativas.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Leo, can you climb trees?",
+     "pt": "Leo, você consegue subir em árvores?"
+    },
+    {
+     "persona": "leo",
+     "en": "Of course I can! I am a fox. But I can't fly, sadly.",
+     "pt": "Claro que consigo! Sou uma raposa. Mas não consigo voar, infelizmente."
+    },
+    {
+     "persona": "max",
+     "en": "I can to calculate very fast!",
+     "pt": "Eu consigo 'to' calcular muito rápido!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! After can, the verb comes alone: I can calculate. No 'to'.",
+     "pt": "Quase, Max! Depois de can, o verbo vem sozinho: I can calculate. Sem 'to'."
+    },
+    {
+     "persona": "max",
+     "en": "Got it. Sofia, can I take a break now?",
+     "pt": "Entendi. Sofia, posso fazer uma pausa agora?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Yes, you can! See? You just used can for permission.",
+     "pt": "Sim, pode! Viu? Você acabou de usar can para permissão."
+    }
+   ],
+   "quando_usar": [
+    "Para falar de habilidades: \"I can swim\".",
+    "Para dizer o que você não consegue fazer: \"She can't drive\".",
+    "Para pedir permissão: \"Can I open the window?\".",
+    "Para fazer pedidos informais: \"Can you help me, please?\".",
+    "Para falar de possibilidades: \"You can pay by card here\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "Sujeito + can + verbo base (sem to, sem -s)",
+     "exemplo_en": "He can cook very well.",
+     "exemplo_pt": "Ele sabe cozinhar muito bem."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + can't (cannot) + verbo base",
+     "exemplo_en": "I can't hear you.",
+     "exemplo_pt": "Eu não consigo te ouvir."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Can + sujeito + verbo base?",
+     "exemplo_en": "Can you play the guitar?",
+     "exemplo_pt": "Você sabe tocar violão?"
+    },
+    {
+     "rotulo": "Respostas curtas",
+     "estrutura": "Yes, ... can. / No, ... can't.",
+     "exemplo_en": "Can she dance? Yes, she can.",
+     "exemplo_pt": "Ela sabe dançar? Sim, sabe."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: can cobre três verbos do português de uma vez: poder, conseguir e saber (fazer algo). 'Sei nadar', 'consigo nadar' e 'posso nadar' viram todos 'I can swim'. Economia pura!"
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Can é rebelde: não ganha -s com he/she/it (she can, nunca 'she cans') e não usa do/does. A pergunta é só inverter: Can you...? A negativa é só can't."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She cans speak French.",
+     "certo": "She can speak French.",
+     "explicacao": "Verbos modais como can nunca recebem -s, nem na terceira pessoa. She can, he can, it can."
+    },
+    {
+     "errado": "Do you can help me?",
+     "certo": "Can you help me?",
+     "explicacao": "Can não precisa do ajudante do/does. Ele mesmo vai para o início da pergunta: Can you...?"
+    },
+    {
+     "errado": "I can to speak English.",
+     "certo": "I can speak English.",
+     "explicacao": "Interferência do 'consigo falar': depois de can o verbo vem na forma base, sem to. Can speak, can go, can do."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: My grandmother ___ use a smartphone very well.",
+     "opcoes": [
+      "cans",
+      "can to",
+      "can"
+     ],
+     "correta": 2,
+     "explicacao": "Can nunca muda: sem -s e sem to. She can use a smartphone."
+    },
+    {
+     "pergunta": "Como pedir permissão para entrar?",
+     "opcoes": [
+      "Can I come in?",
+      "Do I can come in?",
+      "I can come in?"
+     ],
+     "correta": 0,
+     "explicacao": "Pergunta com can é só inversão: Can I come in? Sem do/does e com o can na frente."
+    },
+    {
+     "pergunta": "Complete: I ___ swim, but I can ride a bike.",
+     "opcoes": [
+      "don't can",
+      "can't",
+      "not can"
+     ],
+     "correta": 1,
+     "explicacao": "A negativa de can é can't (ou cannot), tudo em uma palavra. 'Don't can' não existe."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "She ___ swim very well.",
+     "opcoes": [
+      "can",
+      "cans",
+      "can to"
+     ],
+     "correta": 0,
+     "explicacao": "'Can' nunca muda: não ganha -s nem aceita 'to' depois. 'She cans' é o erro de aplicar a regra da 3ª pessoa a um modal."
+    },
+    {
+     "pergunta": "I can ___ English and Spanish.",
+     "opcoes": [
+      "to speak",
+      "speak",
+      "speaking"
+     ],
+     "correta": 1,
+     "explicacao": "Depois de 'can' o verbo fica na forma base, sem 'to' e sem -ing. 'Can to speak' é tradução direta de 'posso falar'."
+    },
+    {
+     "pergunta": "___ you play the piano?",
+     "opcoes": [
+      "Do can",
+      "Are",
+      "Can"
+     ],
+     "correta": 2,
+     "explicacao": "'Can' faz a pergunta sozinho, indo para o início: 'Can you...?'. Não se usa 'do' junto com 'can'."
+    },
+    {
+     "pergunta": "He ___ drive. He doesn't have a car.",
+     "opcoes": [
+      "can't",
+      "don't can",
+      "no can"
+     ],
+     "correta": 0,
+     "explicacao": "A negativa de 'can' é 'can't' (cannot). 'Don't can' mistura dois auxiliares, o que não existe em inglês."
+    },
+    {
+     "pergunta": "My brother can ___ very fast.",
+     "opcoes": [
+      "runs",
+      "running",
+      "run"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de 'can' usa-se o verbo na forma base: 'run'. 'Runs' e 'running' são formas conjugadas que não cabem após um modal."
+    },
+    {
+     "pergunta": "___ your dog do tricks?",
+     "opcoes": [
+      "Does can",
+      "Can",
+      "Do"
+     ],
+     "correta": 1,
+     "explicacao": "Para perguntar sobre habilidade, 'can' vai para o início da frase sozinho. 'Does can' junta dois auxiliares e está errado."
+    },
+    {
+     "pergunta": "Sorry, I ___ help you now. I'm busy.",
+     "opcoes": [
+      "can",
+      "can't",
+      "don't can"
+     ],
+     "correta": 1,
+     "explicacao": "O contexto ('I'm busy') pede negativa: 'can't'. 'Don't can' não existe — a negativa do modal é can + not."
+    },
+    {
+     "pergunta": "We ___ see the ocean from our window.",
+     "opcoes": [
+      "can",
+      "can to",
+      "cans"
+     ],
+     "correta": 0,
+     "explicacao": "'Can' vem direto antes do verbo na forma base: 'can see'. Nunca leva 'to' nem -s."
+    },
+    {
+     "pergunta": "Birds can ___.",
+     "opcoes": [
+      "fly",
+      "to fly",
+      "flying"
+     ],
+     "correta": 0,
+     "explicacao": "Depois de 'can' o verbo fica na forma base: 'fly'. 'To fly' engana porque em português dizemos 'podem voar' com infinitivo."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "She cans dance.",
+      "She can dances.",
+      "She can dance."
+     ],
+     "correta": 2,
+     "explicacao": "Nem 'can' nem o verbo depois dele recebem -s: o certo é 'she can dance'. Modais não seguem a regra da 3ª pessoa."
+    }
+   ]
+  },
+  {
+   "slug": "prepositions-in-on-at",
+   "titulo": "Prepositions: in, on, at",
+   "subtitulo": "O trio que localiza tudo no tempo e no espaço",
+   "resumo": "In, on e at respondem 'onde?' e 'quando?'. A lógica geral: in para espaços fechados e períodos longos, on para superfícies e dias, at para pontos exatos de lugar e hora. Com esse mapa, você acerta a maioria dos casos.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, is it 'in Monday' or 'on Monday'? I always mix them up.",
+     "pt": "Sofia, é 'in Monday' ou 'on Monday'? Eu sempre confundo."
+    },
+    {
+     "persona": "sofia",
+     "en": "Days and dates use on: on Monday, on July 27th. In is for months and years: in July, in 2026.",
+     "pt": "Dias e datas usam on: on Monday, on July 27th. In é para meses e anos: in July, in 2026."
+    },
+    {
+     "persona": "max",
+     "en": "So my class starts in 8 o'clock on the morning?",
+     "pt": "Então minha aula começa 'in' 8 horas 'on' the morning?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Two swaps, Max! Exact time uses at: at 8 o'clock. And it is in the morning.",
+     "pt": "Duas trocas, Max! Hora exata usa at: at 8 o'clock. E é in the morning."
+    },
+    {
+     "persona": "leo",
+     "en": "Picture a zoom: in is the big box, on is the surface, at is the exact point.",
+     "pt": "Imagine um zoom: in é a caixa grande, on é a superfície, at é o ponto exato."
+    }
+   ],
+   "quando_usar": [
+    "In para lugares fechados, cidades e países: \"She lives in Brazil\".",
+    "In para meses, anos e partes do dia: \"My birthday is in December\".",
+    "On para superfícies: \"The phone is on the table\".",
+    "On para dias da semana e datas: \"The meeting is on Friday\".",
+    "At para pontos específicos e horas exatas: \"I am at the bus stop at 7 o'clock\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "In (dentro / períodos longos)",
+     "estrutura": "in + lugar fechado, cidade, país, mês, ano",
+     "exemplo_en": "The milk is in the fridge. I was born in 2000.",
+     "exemplo_pt": "O leite está na geladeira. Eu nasci em 2000."
+    },
+    {
+     "rotulo": "On (superfície / dias)",
+     "estrutura": "on + superfície, dia da semana, data",
+     "exemplo_en": "The picture is on the wall. See you on Sunday.",
+     "exemplo_pt": "O quadro está na parede. Te vejo no domingo."
+    },
+    {
+     "rotulo": "At (ponto exato / hora)",
+     "estrutura": "at + ponto específico, hora, lugares fixos (home, work, school)",
+     "exemplo_en": "She is at work. The movie starts at 9 pm.",
+     "exemplo_pt": "Ela está no trabalho. O filme começa às 21h."
+    },
+    {
+     "rotulo": "Exceções que caem em prova",
+     "estrutura": "at night, on the weekend (EUA), in the morning/afternoon/evening",
+     "exemplo_en": "I study at night and relax on the weekend.",
+     "exemplo_pt": "Eu estudo à noite e relaxo no fim de semana."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: pense em tamanho. IN = grande (país, mês, ano), ON = médio (dia, superfície), AT = pequeno e exato (hora, ponto). Do maior para o menor: in 2026, on Monday, at 8 o'clock."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "O nosso 'no/na' engana: 'na mesa' é on the table (superfície), 'na caixa' é in the box (dentro), 'na festa' é at the party (ponto). Não traduza a preposição, traduza a ideia."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I have class in Monday.",
+     "certo": "I have class on Monday.",
+     "explicacao": "Dias da semana sempre com on. O brasileiro pensa 'na segunda' e escolhe in, mas o inglês exige on Monday."
+    },
+    {
+     "errado": "She is in home now.",
+     "certo": "She is at home now.",
+     "explicacao": "Home, work e school funcionam como pontos: at home, at work, at school. 'In home' soa estranho para o nativo."
+    },
+    {
+     "errado": "The bus arrives at the morning.",
+     "certo": "The bus arrives in the morning.",
+     "explicacao": "Partes do dia usam in: in the morning, in the afternoon. A exceção famosa é at night."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: My exam is ___ Friday.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 1,
+     "explicacao": "Dias da semana usam on: on Friday, on Monday, on Sunday."
+    },
+    {
+     "pergunta": "Complete: The party starts ___ 10 pm.",
+     "opcoes": [
+      "at",
+      "on",
+      "in"
+     ],
+     "correta": 0,
+     "explicacao": "Hora exata é ponto no tempo, então usamos at: at 10 pm, at noon, at midnight."
+    },
+    {
+     "pergunta": "Complete: They live ___ Portugal.",
+     "opcoes": [
+      "at",
+      "on",
+      "in"
+     ],
+     "correta": 2,
+     "explicacao": "Países e cidades usam in: in Portugal, in Lisbon, in Brazil."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "My birthday is ___ March.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 0,
+     "explicacao": "Meses usam 'in': in March, in December. 'On' é para dias e datas completas."
+    },
+    {
+     "pergunta": "The class starts ___ 8 o'clock.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 2,
+     "explicacao": "Horas exatas usam 'at': at 8 o'clock, at noon. 'In' e 'on' não se usam com horário."
+    },
+    {
+     "pergunta": "We have English class ___ Mondays.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 1,
+     "explicacao": "Dias da semana usam 'on': on Mondays, on Friday. 'In' engana porque em português dizemos 'na segunda'."
+    },
+    {
+     "pergunta": "She lives ___ Brazil.",
+     "opcoes": [
+      "at",
+      "in",
+      "on"
+     ],
+     "correta": 1,
+     "explicacao": "Países, cidades e estados usam 'in': in Brazil, in São Paulo. 'At' é para pontos específicos, como at the bus stop."
+    },
+    {
+     "pergunta": "The book is ___ the table.",
+     "opcoes": [
+      "on",
+      "in",
+      "at"
+     ],
+     "correta": 0,
+     "explicacao": "'On' indica contato com uma superfície: o livro está sobre a mesa. 'In' seria dentro de algo, como in the box."
+    },
+    {
+     "pergunta": "He is ___ home now.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 2,
+     "explicacao": "A expressão fixa é 'at home'. 'In home' é tradução direta de 'em casa' e está errada."
+    },
+    {
+     "pergunta": "The party is ___ Saturday night.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 1,
+     "explicacao": "Quando o dia aparece junto ('Saturday night'), usamos 'on'. 'At night' sozinho usa 'at', e é isso que confunde."
+    },
+    {
+     "pergunta": "My keys are ___ my bag.",
+     "opcoes": [
+      "in",
+      "on",
+      "at"
+     ],
+     "correta": 0,
+     "explicacao": "'In' indica dentro de algo: as chaves estão dentro da bolsa. 'On' seria em cima da bolsa."
+    },
+    {
+     "pergunta": "I wake up early ___ the morning.",
+     "opcoes": [
+      "at",
+      "on",
+      "in"
+     ],
+     "correta": 2,
+     "explicacao": "Períodos do dia usam 'in': in the morning, in the afternoon. A exceção é 'at night', que confunde muita gente."
+    },
+    {
+     "pergunta": "Let's meet ___ the bus stop.",
+     "opcoes": [
+      "on",
+      "at",
+      "in"
+     ],
+     "correta": 1,
+     "explicacao": "Pontos de encontro específicos usam 'at': at the bus stop, at the door. 'In' seria dentro de um lugar fechado."
+    }
+   ]
+  },
+  {
+   "slug": "question-words",
+   "titulo": "Question words (what, where, who…)",
+   "subtitulo": "As chaves que abrem qualquer conversa",
+   "resumo": "What, where, who, when, why, how e companhia são as palavras que começam as perguntas abertas, aquelas que não se respondem com sim ou não. Com elas você pergunta nome, lugar, hora, motivo e preço: o kit de sobrevivência de qualquer viagem.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, what is the difference between 'what' and 'which'?",
+     "pt": "Sofia, qual é a diferença entre 'what' e 'which'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Great question! What is open, which is for limited options: Which one, the blue or the red?",
+     "pt": "Ótima pergunta! What é aberto, which é para opções limitadas: Qual, o azul ou o vermelho?"
+    },
+    {
+     "persona": "max",
+     "en": "Where you live, Maya?",
+     "pt": "Onde você mora, Maya?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! Question word + do: Where DO you live?",
+     "pt": "Quase, Max! Palavra interrogativa + do: Where DO you live?"
+    },
+    {
+     "persona": "maya",
+     "en": "I live in Fortaleza. And how old are you, Max?",
+     "pt": "Eu moro em Fortaleza. E quantos anos você tem, Max?"
+    },
+    {
+     "persona": "max",
+     "en": "I am two years old. A very smart baby robot!",
+     "pt": "Eu tenho dois anos. Um robô bebê muito inteligente!"
+    }
+   ],
+   "quando_usar": [
+    "What para perguntar sobre coisas e informações: \"What is your name?\".",
+    "Where para lugares: \"Where is the bathroom?\".",
+    "Who para pessoas: \"Who is that girl?\".",
+    "When e what time para momentos: \"When is your birthday?\".",
+    "How e suas combinações para modo e quantidade: \"How much is this?\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Com o verb to be",
+     "estrutura": "Question word + am/is/are + sujeito?",
+     "exemplo_en": "Where are you? Who is she?",
+     "exemplo_pt": "Onde você está? Quem é ela?"
+    },
+    {
+     "rotulo": "Com outros verbos",
+     "estrutura": "Question word + do/does + sujeito + verbo?",
+     "exemplo_en": "What do you do? Where does he work?",
+     "exemplo_pt": "O que você faz? Onde ele trabalha?"
+    },
+    {
+     "rotulo": "Combinações com how",
+     "estrutura": "how old / how much / how many / how often",
+     "exemplo_en": "How many brothers do you have?",
+     "exemplo_pt": "Quantos irmãos você tem?"
+    },
+    {
+     "rotulo": "Whose (posse)",
+     "estrutura": "Whose + substantivo + is/are...?",
+     "exemplo_en": "Whose bag is this?",
+     "exemplo_pt": "De quem é esta bolsa?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: quase todas começam com WH, por isso são as WH-questions. Tradução rápida: what = o quê, where = onde, who = quem, when = quando, why = por quê, how = como. Decore as seis e você já viaja o mundo perguntando."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "A palavra interrogativa não dispensa a inversão: depois dela ainda vem o to be ou o do/does. \"Where do you work?\", e não \"Where you work?\". A ordem é sagrada: WH + auxiliar + sujeito."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "What means 'saudade'?",
+     "certo": "What does 'saudade' mean?",
+     "explicacao": "Erro clássico: a pergunta precisa do does e o verbo vai para o final da estrutura: What does it mean?"
+    },
+    {
+     "errado": "How old you are?",
+     "certo": "How old are you?",
+     "explicacao": "Depois de how old, o verbo vem antes do sujeito: are you. Manter a ordem do português quebra a pergunta."
+    },
+    {
+     "errado": "Who you invited to the party?",
+     "certo": "Who did you invite to the party?",
+     "explicacao": "Quando who é o objeto da pergunta, o auxiliar aparece: Who did you invite? Sem ele, a frase fica incompleta."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: ___ is your English teacher?",
+     "opcoes": [
+      "What",
+      "Who",
+      "Where"
+     ],
+     "correta": 1,
+     "explicacao": "A pergunta é sobre uma pessoa, então usamos who: Who is your English teacher?"
+    },
+    {
+     "pergunta": "Complete: ___ do you go to the gym? Twice a week.",
+     "opcoes": [
+      "How often",
+      "How much",
+      "How old"
+     ],
+     "correta": 0,
+     "explicacao": "A resposta fala de frequência (duas vezes por semana), então a pergunta é How often."
+    },
+    {
+     "pergunta": "Qual pergunta está correta?",
+     "opcoes": [
+      "Where she works?",
+      "Where does she works?",
+      "Where does she work?"
+     ],
+     "correta": 2,
+     "explicacao": "Estrutura: WH + does + sujeito + verbo base. O does absorve o -s: Where does she work?"
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ is your name?",
+     "opcoes": [
+      "What",
+      "Who",
+      "Where"
+     ],
+     "correta": 0,
+     "explicacao": "Para perguntar o nome usamos 'what': What is your name?. 'Who' pergunta por uma pessoa, não por uma informação."
+    },
+    {
+     "pergunta": "___ do you live?",
+     "opcoes": [
+      "When",
+      "Where",
+      "What"
+     ],
+     "correta": 1,
+     "explicacao": "'Where' pergunta sobre lugar: onde você mora. 'When' é sobre tempo e 'what' é sobre coisas."
+    },
+    {
+     "pergunta": "___ old are you?",
+     "opcoes": [
+      "What",
+      "Who",
+      "How"
+     ],
+     "correta": 2,
+     "explicacao": "Idade se pergunta com 'How old...?'. 'What old' é tradução direta de 'quantos anos' e não existe em inglês."
+    },
+    {
+     "pergunta": "___ is your English teacher?",
+     "opcoes": [
+      "Who",
+      "What",
+      "Where"
+     ],
+     "correta": 0,
+     "explicacao": "'Who' pergunta por pessoas: quem é seu professor. 'What' seria para coisas e 'where' para lugares."
+    },
+    {
+     "pergunta": "___ is your birthday?",
+     "opcoes": [
+      "Where",
+      "When",
+      "Who"
+     ],
+     "correta": 1,
+     "explicacao": "'When' pergunta sobre tempo/data: quando é seu aniversário. 'Where' engana porque pergunta sobre lugar."
+    },
+    {
+     "pergunta": "___ are you sad? — Because I lost my keys.",
+     "opcoes": [
+      "What",
+      "When",
+      "Why"
+     ],
+     "correta": 2,
+     "explicacao": "A resposta com 'because' mostra que a pergunta pede um motivo: 'why' (por quê). 'What' e 'when' não combinam com 'because'."
+    },
+    {
+     "pergunta": "___ much is this T-shirt?",
+     "opcoes": [
+      "How",
+      "What",
+      "Who"
+     ],
+     "correta": 0,
+     "explicacao": "Preço se pergunta com 'How much...?'. 'What much' não existe, embora pareça natural para quem pensa em português."
+    },
+    {
+     "pergunta": "___ color is your car?",
+     "opcoes": [
+      "How",
+      "Who",
+      "What"
+     ],
+     "correta": 2,
+     "explicacao": "Para perguntar a cor usamos 'What color...?'. 'How color' é um erro comum por causa do 'how' de 'how old' e 'how much'."
+    },
+    {
+     "pergunta": "___ is your favorite singer?",
+     "opcoes": [
+      "When",
+      "Who",
+      "Where"
+     ],
+     "correta": 1,
+     "explicacao": "Cantor é uma pessoa, então perguntamos com 'who'. 'When' é para tempo e 'where' para lugar."
+    },
+    {
+     "pergunta": "___ do you go to school? — By bus.",
+     "opcoes": [
+      "What",
+      "Where",
+      "How"
+     ],
+     "correta": 2,
+     "explicacao": "A resposta 'by bus' indica o modo/meio de transporte, então a pergunta é com 'how'. 'Where' engana porque a frase fala de escola, mas a resposta não é um lugar."
+    }
+   ]
+  }
+ ]
+}

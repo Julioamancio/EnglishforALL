@@ -1,0 +1,2287 @@
+{
+ "nivel": "C2",
+ "titulo": "C2 — Domínio pleno",
+ "descricao": "No C2 você deixa de apenas falar inglês corretamente e passa a escolher, com precisão de nativo, o tom, o ritmo e o efeito de cada frase.",
+ "topicos": [
+  {
+   "slug": "nominalisation",
+   "titulo": "Nominalisation",
+   "subtitulo": "Transforme ações em ideias e soe instantaneamente mais acadêmico.",
+   "resumo": "Nominalisation é o processo de transformar verbos e adjetivos em substantivos: decide vira decision, fail vira failure, complex vira complexity. É a marca registrada do inglês acadêmico e profissional, porque permite empacotar uma frase inteira em um único conceito e conectar ideias com mais densidade.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, my essay sounds too chatty. My tutor wrote 'too verbal' in the margin. What does that even mean?",
+     "pt": "Sofia, minha redação está soando informal demais. Meu orientador escreveu 'verbal demais' na margem. O que isso quer dizer?"
+    },
+    {
+     "persona": "sofia",
+     "en": "It usually means you rely on verbs where academic English prefers nouns. Compare 'because the government failed to act quickly' with 'the government's failure to act quickly'.",
+     "pt": "Normalmente significa que você depende de verbos onde o inglês acadêmico prefere substantivos. Compare 'porque o governo falhou em agir rápido' com 'a falha do governo em agir rápido'."
+    },
+    {
+     "persona": "max",
+     "en": "Got it! So I write: 'The analyze of the data shows a grow in sales.'",
+     "pt": "Entendi! Então eu escrevo: 'The analyze of the data shows a grow in sales.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max — but the noun forms are 'analysis' and 'growth'. 'The analysis of the data shows a growth in sales.' Each verb has its own noun shape.",
+     "pt": "Quase, Max — mas as formas substantivadas são 'analysis' e 'growth'. 'The analysis of the data shows a growth in sales.' Cada verbo tem sua forma nominal própria."
+    },
+    {
+     "persona": "leo",
+     "en": "Here's the trick: Portuguese does this all the time with '-ção'. If you can say 'implementação' in Portuguese, hunt for the '-tion' cousin in English: 'implementation'.",
+     "pt": "O macete é este: o português faz isso o tempo todo com '-ção'. Se você consegue dizer 'implementação' em português, procure o primo '-tion' em inglês: 'implementation'."
+    },
+    {
+     "persona": "maya",
+     "en": "So nominalisation is basically zipping a whole clause into one heavy noun. That explains why academic texts feel so dense!",
+     "pt": "Então nominalisation é basicamente compactar uma oração inteira em um substantivo pesado. Isso explica por que textos acadêmicos parecem tão densos!"
+    }
+   ],
+   "quando_usar": [
+    "Em escrita acadêmica, para condensar uma oração inteira em um conceito: \"The collapse of the bridge surprised engineers\" em vez de \"The bridge collapsed and this surprised engineers\".",
+    "Em relatórios profissionais, para soar objetivo e impessoal: \"The implementation of the new policy begins in May\".",
+    "Para retomar uma ideia já mencionada sem repetir a frase toda: \"Prices rose sharply. This increase worried investors\".",
+    "Em títulos e manchetes, onde substantivos pesam mais que verbos: \"Reduction in emissions announced\".",
+    "Para construir argumentos em cadeia, usando o substantivo como sujeito da próxima frase: \"Their refusal to negotiate led to the strike\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Verbo → substantivo com sufixo",
+     "estrutura": "verbo + -tion / -ment / -al / -ance",
+     "exemplo_en": "reject → rejection; refuse → refusal; perform → performance",
+     "exemplo_pt": "rejeitar → rejeição; recusar → recusa; desempenhar → desempenho"
+    },
+    {
+     "rotulo": "Adjetivo → substantivo abstrato",
+     "estrutura": "adjetivo + -ity / -ness / -cy",
+     "exemplo_en": "scarce → scarcity; aware → awareness; accurate → accuracy",
+     "exemplo_pt": "escasso → escassez; consciente → consciência; preciso → precisão"
+    },
+    {
+     "rotulo": "Substantivo como sujeito denso",
+     "estrutura": "The + nominalisation + of + complemento + verbo",
+     "exemplo_en": "The expansion of remote work has reshaped city centres.",
+     "exemplo_pt": "A expansão do trabalho remoto remodelou os centros das cidades."
+    },
+    {
+     "rotulo": "Nominalisation sem sufixo (conversão)",
+     "estrutura": "verbo = substantivo (mesma forma)",
+     "exemplo_en": "a sharp rise, a steady decline, a major shift",
+     "exemplo_pt": "uma alta acentuada, um declínio constante, uma mudança importante"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Quando quiser revisar seu texto para cima, sublinhe os verbos principais e pergunte: existe um substantivo para isso? 'We decided to expand' vira 'Our decision to expand', e de repente a frase carrega autoridade."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Nominalisation demais sufoca o texto. Se cada frase tem três substantivos abstratos terminados em -tion, o leitor se perde. Nativos alternam: frases densas para conceitos, frases verbais para ação e clareza."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "The grow of the company was impressive.",
+     "certo": "The growth of the company was impressive.",
+     "explicacao": "Brasileiro avançado às vezes usa a forma do verbo como substantivo por analogia com pares como 'increase'. 'Grow' não aceita conversão: o substantivo é 'growth'."
+    },
+    {
+     "errado": "The formation of the students in critical thinking is our goal.",
+     "certo": "The training of students in critical thinking is our goal.",
+     "explicacao": "Falso cognato clássico em nível alto: 'formação' acadêmica/profissional é 'training', 'education' ou 'background'. 'Formation' em inglês é formação geológica, militar ou de formações físicas."
+    },
+    {
+     "errado": "We discussed about the reduction of costs.",
+     "certo": "We discussed the reduction of costs.",
+     "explicacao": "Mesmo em frases nominalizadas e formais, 'discuss' nunca leva 'about'. O 'discutir sobre' do português contamina até quem já domina o resto da frase."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual versão soa mais adequada para um relatório formal?",
+     "opcoes": [
+      "Because we failed to deliver on time, the client left.",
+      "Our failure to deliver on time cost us the client.",
+      "We didn't deliver on time so the client left us."
+     ],
+     "correta": 1,
+     "explicacao": "'Our failure to deliver' nominaliza o verbo 'fail', empacotando a causa em um sujeito denso — o padrão preferido em escrita profissional."
+    },
+    {
+     "pergunta": "Complete: 'The ___ of the new system took three months.'",
+     "opcoes": [
+      "implement",
+      "implementing of",
+      "implementation"
+     ],
+     "correta": 2,
+     "explicacao": "O substantivo derivado de 'implement' é 'implementation'. A estrutura 'the + nominalisation + of' pede a forma substantivada, não o verbo."
+    },
+    {
+     "pergunta": "Qual é o substantivo correto derivado de 'maintain'?",
+     "opcoes": [
+      "maintenance",
+      "maintainment",
+      "maintention"
+     ],
+     "correta": 0,
+     "explicacao": "'Maintenance' é forma irregular — muda a grafia da raiz. 'Maintainment' e 'maintention' não existem, embora sigam padrões de sufixo reais."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Visitors are denied ___ to the vault outside working hours.",
+     "opcoes": [
+      "admittance",
+      "admission",
+      "admitting"
+     ],
+     "correta": 0,
+     "explicacao": "\"Admittance\" refere-se à permissão física de entrada em um local (registro formal); \"admission\" é usado para ingresso em instituições, eventos pagos ou confissões."
+    },
+    {
+     "pergunta": "Strict ___ of the ceasefire was monitored by international observers.",
+     "opcoes": [
+      "observation",
+      "observance",
+      "observing"
+     ],
+     "correta": 1,
+     "explicacao": "\"Observance\" significa cumprimento de uma regra, acordo ou ritual; \"observation\" é o ato de observar visualmente ou um comentário."
+    },
+    {
+     "pergunta": "The committee questioned the ___ of the new levy on small traders.",
+     "opcoes": [
+      "incidents",
+      "incidental",
+      "incidence"
+     ],
+     "correta": 2,
+     "explicacao": "\"Incidence\" é a nominalização correta para o impacto/recaída de um tributo sobre um grupo; \"incidents\" são ocorrências isoladas e \"incidental\" é adjetivo."
+    },
+    {
+     "pergunta": "Her sudden ___ to fame brought unwelcome scrutiny.",
+     "opcoes": [
+      "rise",
+      "raise",
+      "rising"
+     ],
+     "correta": 0,
+     "explicacao": "A colocação fixa é \"rise to fame\" (ascensão intransitiva); \"raise\" como substantivo significa aumento salarial e \"rising\" não forma essa colocação."
+    },
+    {
+     "pergunta": "The ___ of hostilities was announced at dawn.",
+     "opcoes": [
+      "ceasing",
+      "cessation",
+      "cease"
+     ],
+     "correta": 1,
+     "explicacao": "No registro formal e diplomático, a nominalização consagrada é \"cessation of hostilities\"; \"ceasing\" soa improvisado e \"cease\" só aparece como substantivo em \"without cease\"."
+    },
+    {
+     "pergunta": "He gave every ___ that the funds would be repaid.",
+     "opcoes": [
+      "insurance",
+      "surety",
+      "assurance"
+     ],
+     "correta": 2,
+     "explicacao": "\"Assurance\" é a garantia verbal formal de que algo acontecerá; \"insurance\" é seguro contratual e \"surety\" é o fiador ou a caução jurídica."
+    },
+    {
+     "pergunta": "The ___ of the old statute paved the way for reform.",
+     "opcoes": [
+      "repeal",
+      "repealing",
+      "repealment"
+     ],
+     "correta": 0,
+     "explicacao": "A nominalização consagrada no registro jurídico é \"repeal\" (revogação de lei); \"repealment\" não existe e \"repealing\" é apenas o gerúndio, menos idiomático aqui."
+    },
+    {
+     "pergunta": "Any ___ from the agreed procedure must be documented.",
+     "opcoes": [
+      "deviance",
+      "deviation",
+      "deviating"
+     ],
+     "correta": 1,
+     "explicacao": "\"Deviation\" é o desvio pontual de norma ou procedimento; \"deviance\" refere-se a comportamento socialmente desviante, nuance que só o C2 costuma distinguir."
+    },
+    {
+     "pergunta": "The minister announced the ___ of the emergency decree.",
+     "opcoes": [
+      "revoking",
+      "revocatory",
+      "revocation"
+     ],
+     "correta": 2,
+     "explicacao": "\"Revocation\" é a nominalização formal padrão para o ato de revogar um decreto; \"revocatory\" é adjetivo e \"revoking\" tem sabor coloquial nesse registro."
+    },
+    {
+     "pergunta": "His ___ to detail borders on the obsessive.",
+     "opcoes": [
+      "attention",
+      "attentiveness",
+      "attendance"
+     ],
+     "correta": 0,
+     "explicacao": "A colocação fixa é \"attention to detail\"; \"attentiveness\" descreve a qualidade de uma pessoa atenciosa e \"attendance\" significa comparecimento."
+    }
+   ]
+  },
+  {
+   "slug": "fronting-emphasis",
+   "titulo": "Fronting & emphasis",
+   "subtitulo": "Mude a ordem, mude o impacto: o inglês também sabe dramatizar.",
+   "resumo": "Fronting é deslocar para o início da frase um elemento que normalmente viria depois, criando ênfase e ritmo: \"Never have I seen such chaos\", \"What matters most is honesty\". No C2, essas estruturas deixam de ser truques de prova e viram ferramentas reais de retórica, escrita e fala expressiva.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "I heard a speaker say 'Only when the results came in did we understand the scale of the problem.' Why is 'did we' inverted there?",
+     "pt": "Ouvi um palestrante dizer 'Only when the results came in did we understand the scale of the problem.' Por que o 'did we' está invertido ali?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Because he fronted 'only when the results came in'. When a negative or restrictive phrase opens the sentence, the auxiliary jumps before the subject — it signals deliberate emphasis.",
+     "pt": "Porque ele deslocou 'only when the results came in' para o início. Quando uma expressão negativa ou restritiva abre a frase, o auxiliar pula para antes do sujeito — isso sinaliza ênfase deliberada."
+    },
+    {
+     "persona": "max",
+     "en": "Let me try. 'Rarely I have felt so motivated!'",
+     "pt": "Deixa eu tentar. 'Rarely I have felt so motivated!'"
+    },
+    {
+     "persona": "sofia",
+     "en": "So close, Max! Once 'rarely' opens the sentence, you must invert: 'Rarely have I felt so motivated.' No inversion, no drama.",
+     "pt": "Quase lá, Max! Quando 'rarely' abre a frase, você precisa inverter: 'Rarely have I felt so motivated.' Sem inversão, não há drama."
+    },
+    {
+     "persona": "leo",
+     "en": "Think of it like the Portuguese 'Nunca na vida eu vi isso' — we front for drama too, but English charges a toll: the auxiliary must move. Fronting without inversion is like samba without percussion.",
+     "pt": "Pense no português 'Nunca na vida eu vi isso' — nós também deslocamos para dramatizar, mas o inglês cobra pedágio: o auxiliar tem que se mover. Fronting sem inversão é samba sem percussão."
+    }
+   ],
+   "quando_usar": [
+    "Para ênfase dramática com advérbios negativos no início: \"Never before had the team faced such pressure\".",
+    "Para destacar o que realmente importa com oração-Wh: \"What we need now is a clear plan\".",
+    "Em descrições literárias ou vívidas, deslocando o lugar: \"At the top of the hill stood a lonely chapel\".",
+    "Para criar contraste retomando algo mencionado: \"Some mistakes we can fix; others we simply learn to live with\".",
+    "Com 'so/such' para intensificar resultados: \"So convincing was her argument that nobody objected\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Inversão negativa",
+     "estrutura": "Never / Rarely / Seldom / Not only + auxiliar + sujeito + verbo",
+     "exemplo_en": "Not only did they miss the deadline, they also lost the files.",
+     "exemplo_pt": "Eles não só perderam o prazo, como também perderam os arquivos."
+    },
+    {
+     "rotulo": "Cleft com What",
+     "estrutura": "What + oração + be + elemento enfatizado",
+     "exemplo_en": "What annoys me is the constant noise.",
+     "exemplo_pt": "O que me irrita é o barulho constante."
+    },
+    {
+     "rotulo": "Fronting de lugar com inversão",
+     "estrutura": "Advérbio/locução de lugar + verbo + sujeito",
+     "exemplo_en": "Out of the fog came a slow, silent ship.",
+     "exemplo_pt": "De dentro da neblina surgiu um navio lento e silencioso."
+    },
+    {
+     "rotulo": "Only + expressão adverbial",
+     "estrutura": "Only then / Only after X + auxiliar + sujeito + verbo",
+     "exemplo_en": "Only after signing did she read the contract carefully.",
+     "exemplo_pt": "Só depois de assinar é que ela leu o contrato com atenção."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Na fala, essas estruturas pedem entonação: em 'Never have I been so proud', o pico de voz cai em 'Never'. Se você usa a estrutura mas mantém a entonação plana, o efeito se perde."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "A inversão só acontece quando a expressão negativa modifica a frase inteira. Em 'Not far from here, there is a bakery', não há inversão, porque 'not far from here' é só localização, não ênfase restritiva."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Only then I realised the danger.",
+     "certo": "Only then did I realise the danger.",
+     "explicacao": "O português permite 'Só então eu percebi' sem mexer na ordem, e o brasileiro transfere isso. Depois de 'only then', o inglês exige o auxiliar antes do sujeito."
+    },
+    {
+     "errado": "What I like it is the flexibility of the schedule.",
+     "certo": "What I like is the flexibility of the schedule.",
+     "explicacao": "Eco do português 'o que eu gosto é...': o falante insere um 'it' extra depois do verbo. Na cleft com 'what', a própria oração já é o sujeito — nada de pronome duplicado."
+    },
+    {
+     "errado": "Never I had seen such a beautiful sunset.",
+     "certo": "Never had I seen such a beautiful sunset.",
+     "explicacao": "A inversão pede auxiliar + sujeito, não apenas mudar o advérbio de lugar. 'Never I had seen' mantém a ordem do português e desmonta toda a estrutura enfática."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: '___ had the meeting started when the fire alarm went off.'",
+     "opcoes": [
+      "Hardly",
+      "As soon",
+      "Just when"
+     ],
+     "correta": 0,
+     "explicacao": "'Hardly had the meeting started when...' é a estrutura clássica de inversão para eventos quase simultâneos. 'As soon' precisaria de 'as' e ordem normal."
+    },
+    {
+     "pergunta": "Qual frase usa fronting corretamente?",
+     "opcoes": [
+      "Under no circumstances you should open that door.",
+      "Under no circumstances should you open that door.",
+      "Under no circumstances that door should be opened by you."
+     ],
+     "correta": 1,
+     "explicacao": "'Under no circumstances' é expressão negativa fronteada, então o auxiliar 'should' precisa vir antes do sujeito 'you'."
+    },
+    {
+     "pergunta": "Para enfatizar 'her honesty' na frase 'I admire her honesty', qual cleft funciona?",
+     "opcoes": [
+      "It is her honesty what I admire.",
+      "That I admire is her honesty.",
+      "What I admire is her honesty."
+     ],
+     "correta": 2,
+     "explicacao": "A pseudo-cleft correta é 'What I admire is her honesty'. Em 'it-cleft' seria 'It is her honesty that I admire' — nunca com 'what' depois do elemento enfatizado."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ had the negotiations begun than a fresh dispute erupted.",
+     "opcoes": [
+      "No sooner when",
+      "No sooner",
+      "Hardly"
+     ],
+     "correta": 1,
+     "explicacao": "Com \"than\", a estrutura de inversão correta é \"No sooner had... than\"; \"Hardly\" exigiria \"when\" em vez de \"than\"."
+    },
+    {
+     "pergunta": "Only after the audit was completed ___ the extent of the losses.",
+     "opcoes": [
+      "the board grasped",
+      "the board did grasp",
+      "did the board grasp"
+     ],
+     "correta": 2,
+     "explicacao": "Quando \"Only after...\" abre a frase, a oração principal exige inversão sujeito-auxiliar: \"did the board grasp\"."
+    },
+    {
+     "pergunta": "___ was the damage that the bridge had to be closed indefinitely.",
+     "opcoes": [
+      "Such",
+      "So",
+      "Much"
+     ],
+     "correta": 0,
+     "explicacao": "Com substantivo (\"the damage\"), usa-se \"Such was... that\"; \"So\" só se combina com adjetivo ou advérbio (\"So great was the damage...\")."
+    },
+    {
+     "pergunta": "Little ___ that her offhand remark would end the merger talks.",
+     "opcoes": [
+      "she suspected",
+      "did she suspect",
+      "she did suspect"
+     ],
+     "correta": 1,
+     "explicacao": "O advérbio negativo \"Little\" em posição inicial dispara inversão obrigatória: \"Little did she suspect\"."
+    },
+    {
+     "pergunta": "___ the consequences, she would never have signed.",
+     "opcoes": [
+      "Had she foresaw",
+      "If she had foresaw",
+      "Had she foreseen"
+     ],
+     "correta": 2,
+     "explicacao": "A condicional invertida sem \"if\" exige \"Had + sujeito + particípio\"; o particípio de \"foresee\" é \"foreseen\", não \"foresaw\"."
+    },
+    {
+     "pergunta": "Not until the final page ___ the narrator's true identity.",
+     "opcoes": [
+      "do we learn",
+      "we learn",
+      "we do learn"
+     ],
+     "correta": 0,
+     "explicacao": "\"Not until\" em posição inicial exige inversão na oração principal: \"do we learn\"; sem inversão a frase fica agramatical nesse contexto enfático."
+    },
+    {
+     "pergunta": "So absurd ___ that nobody dared take it seriously.",
+     "opcoes": [
+      "the proposal seemed",
+      "did the proposal seem",
+      "seemed the proposal"
+     ],
+     "correta": 1,
+     "explicacao": "Com \"So + adjetivo\" fronteado, a inversão é feita com auxiliar: \"So absurd did the proposal seem that...\"."
+    },
+    {
+     "pergunta": "___ it not for the subsidies, the plant would have shut down years ago.",
+     "opcoes": [
+      "Was",
+      "Should",
+      "Were"
+     ],
+     "correta": 2,
+     "explicacao": "A expressão fixa de condicional invertida é \"Were it not for\" (subjuntivo), mesmo com sujeito singular; \"Was\" é agramatical nesse padrão formal."
+    },
+    {
+     "pergunta": "Scarcely ___ the podium when the lights failed.",
+     "opcoes": [
+      "had she mounted",
+      "she had mounted",
+      "did she mount"
+     ],
+     "correta": 0,
+     "explicacao": "\"Scarcely... when\" pede past perfect com inversão: \"Scarcely had she mounted... when\"; o simple past com inversão quebraria a sequência temporal."
+    },
+    {
+     "pergunta": "What irks me most ___ his refusal to apologise.",
+     "opcoes": [
+      "are",
+      "is",
+      "were"
+     ],
+     "correta": 1,
+     "explicacao": "Em frases clivadas com \"what\", o verbo da oração principal fica no singular: \"What irks me most is...\", independentemente do que vem depois."
+    }
+   ]
+  },
+  {
+   "slug": "subtle-modality",
+   "titulo": "Needn't have, dare, shall: nuances",
+   "subtitulo": "Os modais que separam o fluente do impecável.",
+   "resumo": "No C2, a modalidade vira jogo de nuances: \"needn't have done\" fala de esforço desnecessário já realizado, \"dare\" oscila entre modal e verbo comum, e \"shall\" sobrevive em ofertas, promessas solenes e contratos. Dominar esses detalhes é dominar o subtexto do inglês.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "I printed fifty copies of the report, but the meeting was cancelled. I didn't need to print them... or I needn't have printed them? Both feel right.",
+     "pt": "Imprimi cinquenta cópias do relatório, mas a reunião foi cancelada. 'I didn't need to print them'... ou 'I needn't have printed them'? Os dois parecem certos."
+    },
+    {
+     "persona": "sofia",
+     "en": "Great question — and here both are possible, but they whisper different things. 'I needn't have printed them' clearly says you DID print them, for nothing. 'I didn't need to print them' can mean you never printed them at all.",
+     "pt": "Ótima pergunta — e aqui os dois são possíveis, mas sussurram coisas diferentes. 'I needn't have printed them' deixa claro que você imprimiu, à toa. 'I didn't need to print them' pode significar que você nem chegou a imprimir."
+    },
+    {
+     "persona": "maya",
+     "en": "So 'needn't have' always carries that flavour of wasted effort? Like regret with a receipt attached?",
+     "pt": "Então 'needn't have' sempre carrega esse sabor de esforço desperdiçado? Tipo um arrependimento com nota fiscal anexada?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Exactly. And speaking of subtle modals: 'How dare you say that!' uses 'dare' as a modal — no 'to', no '-s'. But 'She didn't dare to complain' treats it as a normal verb. English lets 'dare' live a double life.",
+     "pt": "Exatamente. E por falar em modais sutis: 'How dare you say that!' usa 'dare' como modal — sem 'to', sem '-s'. Mas 'She didn't dare to complain' o trata como verbo comum. O inglês deixa 'dare' viver uma vida dupla."
+    },
+    {
+     "persona": "leo",
+     "en": "And 'shall'? Keep it for three moments: elegant offers like 'Shall we begin?', solemn promises, and contracts, where 'The tenant shall pay rent monthly' means pure obligation. Elsewhere, it sounds like a top hat at the beach.",
+     "pt": "E o 'shall'? Guarde para três momentos: ofertas elegantes como 'Shall we begin?', promessas solenes e contratos, onde 'The tenant shall pay rent monthly' significa obrigação pura. Fora disso, soa como cartola na praia."
+    }
+   ],
+   "quando_usar": [
+    "Use \"needn't have + particípio\" para esforço realizado e desnecessário: \"You needn't have brought a gift, but thank you\".",
+    "Use \"didn't need to\" quando a ação provavelmente nem aconteceu: \"I didn't need to take a taxi because Ana drove me\".",
+    "Use \"Shall I...?\" e \"Shall we...?\" para ofertas e sugestões educadas: \"Shall I open a window?\".",
+    "Use \"shall\" em textos jurídicos e regulamentos para obrigação formal: \"Members shall renew their registration annually\".",
+    "Use \"dare\" em desafios e indignação: \"How dare he take the credit for your work?\" e \"Don't you dare tell anyone\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Needn't have (esforço inútil)",
+     "estrutura": "sujeito + needn't have + particípio passado",
+     "exemplo_en": "We needn't have hurried; the train was an hour late.",
+     "exemplo_pt": "Não precisávamos ter corrido; o trem estava uma hora atrasado."
+    },
+    {
+     "rotulo": "Dare como modal",
+     "estrutura": "dare + sujeito / sujeito + daren't + verbo base (sem to)",
+     "exemplo_en": "How dare they raise prices again? I daren't complain.",
+     "exemplo_pt": "Como eles ousam aumentar os preços de novo? Não tenho coragem de reclamar."
+    },
+    {
+     "rotulo": "Dare como verbo comum",
+     "estrutura": "sujeito + don't/didn't + dare + (to) + verbo",
+     "exemplo_en": "He didn't dare (to) interrupt the director.",
+     "exemplo_pt": "Ele não ousou interromper o diretor."
+    },
+    {
+     "rotulo": "Shall solene e contratual",
+     "estrutura": "sujeito + shall + verbo base",
+     "exemplo_en": "The supplier shall deliver all goods within thirty days.",
+     "exemplo_pt": "O fornecedor deverá entregar todas as mercadorias em até trinta dias."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Teste rápido para needn't have: pergunte 'a ação aconteceu?'. Se sim, e foi à toa, 'needn't have' é a escolha cirúrgica. Se a ação nunca aconteceu, fique com 'didn't need to'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'Shall' com 'you/he/they' fora de contratos soa arcaico ou ameaçador em inglês moderno. 'You shall finish this today' parece fala de vilão de fantasia; no dia a dia, prefira 'must' ou 'will have to'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "You didn't need to worry — but you did, and it was pointless.",
+     "certo": "You needn't have worried — it all turned out fine.",
+     "explicacao": "Quando o contexto deixa explícito que a pessoa se preocupou à toa, 'needn't have worried' é a forma que carrega exatamente essa nuance de esforço emocional desperdiçado."
+    },
+    {
+     "errado": "How dare you to speak with me like that?",
+     "certo": "How dare you speak to me like that?",
+     "explicacao": "Dois deslizes de brasileiro: 'dare' modal não aceita 'to' depois, e 'falar com alguém' nesse tom de confronto é 'speak to', não 'speak with'."
+    },
+    {
+     "errado": "Shall you send me the file later?",
+     "certo": "Will you send me the file later? / Could you send me the file later?",
+     "explicacao": "'Shall' interrogativo moderno só funciona naturalmente com 'I' e 'we' (ofertas e sugestões). Com 'you', o pedido pede 'will', 'can' ou 'could'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Ana estudou o capítulo 10 a noite toda, mas ele não caiu na prova. O que ela diria?",
+     "opcoes": [
+      "I mustn't have studied chapter 10.",
+      "I needn't have studied chapter 10.",
+      "I couldn't have studied chapter 10."
+     ],
+     "correta": 1,
+     "explicacao": "Ela estudou (ação realizada) e foi desnecessário: 'needn't have studied'. 'Mustn't have' seria dedução negativa; 'couldn't have', impossibilidade."
+    },
+    {
+     "pergunta": "Qual frase usa 'dare' corretamente como modal?",
+     "opcoes": [
+      "She dares not to answer him.",
+      "She dare not answers him.",
+      "She dare not answer him."
+     ],
+     "correta": 2,
+     "explicacao": "Como modal, 'dare' não flexiona nem aceita 'to': 'She dare not answer him.' É formal e literário, mas gramaticalmente exato."
+    },
+    {
+     "pergunta": "Num contrato, 'The client shall provide feedback within five days' significa que o cliente...",
+     "opcoes": [
+      "tem a obrigação de dar feedback nesse prazo.",
+      "pode dar feedback se quiser.",
+      "provavelmente dará feedback nesse prazo."
+     ],
+     "correta": 0,
+     "explicacao": "No registro jurídico, 'shall' expressa obrigação vinculante — equivale ao 'deverá' dos contratos brasileiros, não a futuro ou probabilidade."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "You ___ have bothered booking; the hall was half empty.",
+     "opcoes": [
+      "mustn't",
+      "couldn't",
+      "needn't"
+     ],
+     "correta": 2,
+     "explicacao": "\"Needn't have + particípio\" indica que a pessoa fez algo que, no fim, era desnecessário; \"mustn't have\" não expressa ausência de necessidade no passado."
+    },
+    {
+     "pergunta": "The ceremony ___ to have taken place in May, but was postponed indefinitely.",
+     "opcoes": [
+      "was",
+      "is",
+      "has"
+     ],
+     "correta": 0,
+     "explicacao": "\"Was to have + particípio\" expressa um plano ou arranjo que não se concretizou; \"is to have\" conflita com o passado e \"has to have\" indicaria dedução, contradizendo o contexto."
+    },
+    {
+     "pergunta": "He ___ well have missed the announcement — he was abroad all month.",
+     "opcoes": [
+      "can",
+      "may",
+      "must"
+     ],
+     "correta": 1,
+     "explicacao": "\"May well have + particípio\" expressa probabilidade considerável; \"can\" não se usa em afirmativas para especulação e \"must well\" não é colocação idiomática."
+    },
+    {
+     "pergunta": "___ you require further assistance, do not hesitate to contact us.",
+     "opcoes": [
+      "Will",
+      "Might",
+      "Should"
+     ],
+     "correta": 2,
+     "explicacao": "\"Should you require\" é a condicional invertida formal equivalente a \"If you should require\"; \"Will\" e \"Might\" não formam essa estrutura."
+    },
+    {
+     "pergunta": "She ___ sit for hours watching the tide when she was a girl.",
+     "opcoes": [
+      "would",
+      "should",
+      "might"
+     ],
+     "correta": 0,
+     "explicacao": "\"Would\" expressa hábito repetido no passado (equivalente narrativo de \"used to\" com verbos de ação); \"should\" e \"might\" não têm esse valor."
+    },
+    {
+     "pergunta": "You ___ at least have warned me you'd be late!",
+     "opcoes": [
+      "can",
+      "might",
+      "must"
+     ],
+     "correta": 1,
+     "explicacao": "\"Might (at least) have + particípio\" expressa censura ou reprovação por algo que a pessoa não fez; \"can have\" é agramatical em afirmativas e \"must have\" indicaria dedução."
+    },
+    {
+     "pergunta": "___ that as it may, the rules still apply to everyone.",
+     "opcoes": [
+      "However",
+      "Being",
+      "Be"
+     ],
+     "correta": 2,
+     "explicacao": "\"Be that as it may\" é uma expressão fixa com subjuntivo formulaico que significa \"seja como for\"; nenhuma outra forma verbal é possível nessa fórmula."
+    },
+    {
+     "pergunta": "It's odd that he ___ be so dismissive of an idea he once championed.",
+     "opcoes": [
+      "should",
+      "would",
+      "shall"
+     ],
+     "correta": 0,
+     "explicacao": "É o chamado \"putative should\", usado após expressões de julgamento ou surpresa (\"It's odd that...\") para comentar o fato, não para dar conselho."
+    },
+    {
+     "pergunta": "If you ___ change your mind, the offer stands until Friday.",
+     "opcoes": [
+      "will",
+      "should",
+      "would"
+     ],
+     "correta": 1,
+     "explicacao": "\"If you should\" apresenta a condição como remota ou tentativa, tom típico de ofertas corteses; \"if you will\" expressaria disposição/insistência, outra nuance."
+    },
+    {
+     "pergunta": "There was no reply; they ___ have already left.",
+     "opcoes": [
+      "should",
+      "would",
+      "must"
+     ],
+     "correta": 2,
+     "explicacao": "\"Must have + particípio\" expressa dedução lógica sobre o passado; \"should have\" indicaria expectativa frustrada e \"would have\" pediria uma condição."
+    }
+   ]
+  },
+  {
+   "slug": "complex-noun-phrases",
+   "titulo": "Complex noun phrases",
+   "subtitulo": "Uma frase inteira dentro de um único sujeito — sem perder o fio.",
+   "resumo": "O inglês sofisticado adora empilhar informação ao redor de um substantivo: antes dele (a rapidly growing tech company) e depois dele (the decision announced yesterday by the board). Dominar noun phrases complexas é o que permite ler o The Economist sem tropeçar e escrever com densidade sem virar bagunça.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "I got lost reading this headline: 'Government-backed small business loan scheme extension approved.' Where is the verb in all that?",
+     "pt": "Me perdi lendo esta manchete: 'Government-backed small business loan scheme extension approved.' Onde está o verbo nisso tudo?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Everything before 'approved' is one giant noun phrase. Strip it back: the extension. Which extension? Of the scheme. Which scheme? The loan scheme for small businesses, backed by the government.",
+     "pt": "Tudo antes de 'approved' é uma única noun phrase gigante. Desmonte de trás para frente: a extensão. Qual extensão? Do programa. Qual programa? O programa de empréstimos para pequenas empresas, apoiado pelo governo."
+    },
+    {
+     "persona": "leo",
+     "en": "Golden rule for Brazilians: English stacks modifiers BEFORE the noun, Portuguese unrolls them AFTER with 'de'. So read those towers backwards — last noun first — and the fog lifts.",
+     "pt": "Regra de ouro para brasileiros: o inglês empilha modificadores ANTES do substantivo, o português desenrola DEPOIS com 'de'. Então leia essas torres de trás para frente — último substantivo primeiro — e a neblina some."
+    },
+    {
+     "persona": "max",
+     "en": "So I can say 'the of the company annual report results presentation'?",
+     "pt": "Então posso dizer 'the of the company annual report results presentation'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Not quite — you mixed both systems! Either stack: 'the company's annual results presentation', or unroll: 'the presentation of the company's annual results'. Choose one direction and commit.",
+     "pt": "Não exatamente — você misturou os dois sistemas! Ou empilhe: 'the company's annual results presentation', ou desenrole: 'the presentation of the company's annual results'. Escolha uma direção e siga até o fim."
+    }
+   ],
+   "quando_usar": [
+    "Em manchetes e títulos, onde artigos e preposições somem: \"Airport security staff pay dispute continues\".",
+    "Na escrita acadêmica, para comprimir informação com particípios: \"the data collected during the first trial\".",
+    "Em descrições técnicas com substantivo modificando substantivo: \"a stainless steel water filtration system\".",
+    "Para evitar orações relativas em sequência, usando particípio: \"the candidates shortlisted for the final interview\" em vez de \"who were shortlisted\".",
+    "Em inglês corporativo, para nomear processos e cargos: \"customer retention strategy review meeting\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Pré-modificação empilhada",
+     "estrutura": "determinante + advérbio + adjetivo + substantivo-modificador + núcleo",
+     "exemplo_en": "an increasingly popular Brazilian street food festival",
+     "exemplo_pt": "um festival de comida de rua brasileira cada vez mais popular"
+    },
+    {
+     "rotulo": "Pós-modificação com particípio",
+     "estrutura": "núcleo + particípio presente/passado + complementos",
+     "exemplo_en": "the passengers stranded at the airport overnight",
+     "exemplo_pt": "os passageiros presos no aeroporto durante a noite"
+    },
+    {
+     "rotulo": "Pós-modificação com preposição",
+     "estrutura": "núcleo + of/in/for + sintagma nominal",
+     "exemplo_en": "the rise in the cost of living in coastal cities",
+     "exemplo_pt": "o aumento do custo de vida nas cidades litorâneas"
+    },
+    {
+     "rotulo": "Aposição",
+     "estrutura": "núcleo + vírgula + sintagma nominal explicativo",
+     "exemplo_en": "Dr. Ferraz, a leading expert on tropical diseases, will speak first.",
+     "exemplo_pt": "A Dra. Ferraz, uma das maiores especialistas em doenças tropicais, falará primeiro."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Ao ler uma torre de substantivos como 'employee satisfaction survey results', ache o núcleo (a última palavra, 'results') e leia de trás para frente: resultados da pesquisa de satisfação dos funcionários. Funciona em 95% dos casos."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Mais de três substantivos empilhados começam a soar burocráticos até para nativos. 'Q3 marketing budget allocation review process update' é tecnicamente possível, mas cruel com o leitor — desenrole parte com 'of' ou 'for'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "the report of sales of the last quarter",
+     "certo": "last quarter's sales report",
+     "explicacao": "O brasileiro avançado desenrola tudo com 'of' como faria com 'de' em português. O inglês natural comprime: possessivo + substantivo-modificador + núcleo."
+    },
+    {
+     "errado": "a five-years plan to modernise the ports",
+     "certo": "a five-year plan to modernise the ports",
+     "explicacao": "Quando o número + substantivo funciona como adjetivo antes do núcleo, o substantivo fica no singular: five-year plan, two-hour meeting, ten-page report."
+    },
+    {
+     "errado": "the informations contained in the attached documents",
+     "certo": "the information contained in the attached documents",
+     "explicacao": "Mesmo dominando o particípio pós-modificador, o brasileiro escorrega no incontável: 'information' nunca ganha '-s', por mais plural que 'informações' seja em português."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual é o núcleo da noun phrase 'the newly appointed regional sales director'?",
+     "opcoes": [
+      "sales",
+      "director",
+      "regional"
+     ],
+     "correta": 1,
+     "explicacao": "O núcleo é sempre o último substantivo da pilha: 'director'. Todo o resto — newly appointed, regional, sales — o modifica."
+    },
+    {
+     "pergunta": "Qual opção comprime corretamente 'the strategy that was proposed by the committee'?",
+     "opcoes": [
+      "the strategy proposed by the committee",
+      "the proposed by the committee strategy",
+      "the strategy proposing by the committee"
+     ],
+     "correta": 0,
+     "explicacao": "A relativa reduzida usa o particípio passado logo após o núcleo: 'the strategy proposed by the committee'. A ordem 'proposed by the committee' não pode vir antes do núcleo."
+    },
+    {
+     "pergunta": "Como dizer 'uma reunião de duas horas' em inglês natural?",
+     "opcoes": [
+      "a two hours meeting",
+      "a meeting of two hours long",
+      "a two-hour meeting"
+     ],
+     "correta": 2,
+     "explicacao": "Número + substantivo em função adjetiva fica no singular e com hífen: 'a two-hour meeting'. É um dos deslizes mais persistentes até no nível C2."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ objecting so late in the process struck everyone as odd.",
+     "opcoes": [
+      "His",
+      "Him",
+      "He"
+     ],
+     "correta": 0,
+     "explicacao": "No registro formal, o gerúndio em função de sujeito pede possessivo: \"His objecting...\"; \"Him objecting\" é aceitável apenas em contextos informais."
+    },
+    {
+     "pergunta": "The proposal, ___ merits are still debated, was shelved indefinitely.",
+     "opcoes": [
+      "that its",
+      "whose",
+      "which its"
+     ],
+     "correta": 1,
+     "explicacao": "\"Whose\" é o relativo possessivo correto mesmo para antecedentes inanimados; \"that its\" e \"which its\" duplicam o possessivo e são agramaticais."
+    },
+    {
+     "pergunta": "She lives in a ___ cottage.",
+     "opcoes": [
+      "little charming stone",
+      "stone charming little",
+      "charming little stone"
+     ],
+     "correta": 2,
+     "explicacao": "A ordem canônica dos adjetivos é opinião (charming) + tamanho (little) + material (stone); qualquer outra sequência soa não nativa."
+    },
+    {
+     "pergunta": "Applicants ___ the criteria will be shortlisted automatically.",
+     "opcoes": [
+      "meeting",
+      "who meeting",
+      "met"
+     ],
+     "correta": 0,
+     "explicacao": "\"Meeting\" é a oração relativa reduzida ativa (= who meet); \"met\" implicaria voz passiva, invertendo o sentido, e \"who meeting\" mistura as duas estruturas."
+    },
+    {
+     "pergunta": "The rumour ___ the CEO was resigning wiped billions off the share price.",
+     "opcoes": [
+      "which",
+      "that",
+      "of that"
+     ],
+     "correta": 1,
+     "explicacao": "Trata-se de oração apositiva (o conteúdo do boato), que exige \"that\"; \"which\" só caberia numa relativa com lacuna sintática, o que não é o caso."
+    },
+    {
+     "pergunta": "There's no question ___ the deadline; it simply can't be done.",
+     "opcoes": [
+      "to extend",
+      "of extend",
+      "of extending"
+     ],
+     "correta": 2,
+     "explicacao": "A estrutura fixa é \"no question of + gerúndio\" (= está fora de cogitação); com infinitivo o sentido e a gramática se perdem."
+    },
+    {
+     "pergunta": "___ being no further business, the meeting was adjourned.",
+     "opcoes": [
+      "There",
+      "It",
+      "With"
+     ],
+     "correta": 0,
+     "explicacao": "\"There being no...\" é a construção absoluta formal típica de atas e documentos; \"It being\" mudaria a referência e \"With\" exigiria outra montagem sintática."
+    },
+    {
+     "pergunta": "The delay was caused by ___ to submit the paperwork on time.",
+     "opcoes": [
+      "the failure of contractor",
+      "the contractor's failure",
+      "contractor's the failure"
+     ],
+     "correta": 1,
+     "explicacao": "O genitivo saxônico \"the contractor's failure\" é a forma natural; \"the failure of contractor\" omite o artigo obrigatório e a terceira opção inverte a ordem dos determinantes."
+    },
+    {
+     "pergunta": "It was ___ a blunder that resignation was inevitable.",
+     "opcoes": [
+      "a so serious",
+      "such serious",
+      "so serious"
+     ],
+     "correta": 2,
+     "explicacao": "Com artigo indefinido, a ordem enfática é \"so + adjetivo + a + substantivo\" (so serious a blunder); \"such\" pediria \"such a serious blunder\"."
+    },
+    {
+     "pergunta": "The question of ___ should bear the costs remains unresolved.",
+     "opcoes": [
+      "who",
+      "whom",
+      "whose"
+     ],
+     "correta": 0,
+     "explicacao": "O pronome é sujeito de \"should bear\", logo a forma correta é \"who\"; \"whom\" só caberia em função de objeto, hipercorreção comum mesmo entre falantes cultos."
+    }
+   ]
+  },
+  {
+   "slug": "idioms-fixed-expressions",
+   "titulo": "Idioms & fixed expressions",
+   "subtitulo": "Quando o sentido da frase não está em nenhuma das palavras.",
+   "resumo": "Idioms são expressões cujo significado não se deduz palavra por palavra: \"bite the bullet\" não envolve balas, e \"under the weather\" não fala de clima. No C2, a meta não é decorar listas, mas usar idioms com naturalidade, no registro certo e sem traduzir os do português ao pé da letra.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "The project failed, but as we say, I gave my hand to the palmatory. I take full responsibility.",
+     "pt": "O projeto falhou, mas como dizemos, 'dei a mão à palmatória'. Assumo total responsabilidade."
+    },
+    {
+     "persona": "sofia",
+     "en": "I love the honesty, Max, but that idiom doesn't exist in English! You'd say 'I'll hold my hands up' or 'I'll own up to it'. Translating idioms literally is the fastest way to confuse a native speaker.",
+     "pt": "Adoro a honestidade, Max, mas esse idiom não existe em inglês! Você diria 'I'll hold my hands up' ou 'I'll own up to it'. Traduzir idioms ao pé da letra é o jeito mais rápido de confundir um nativo."
+    },
+    {
+     "persona": "maya",
+     "en": "How do I know when an idiom fits the situation? Some feel too casual for a report, like 'it cost an arm and a leg'.",
+     "pt": "Como sei quando um idiom cabe na situação? Alguns parecem informais demais para um relatório, como 'it cost an arm and a leg'."
+    },
+    {
+     "persona": "sofia",
+     "en": "Perfect instinct. In a report you'd write 'it was prohibitively expensive'. Idioms carry register: 'kick the bucket' is almost comic, while 'pass away' is gentle. C2 is knowing which shelf each one sits on.",
+     "pt": "Instinto perfeito. Num relatório você escreveria 'it was prohibitively expensive'. Idioms carregam registro: 'kick the bucket' é quase cômico, enquanto 'pass away' é delicado. O C2 é saber em que prateleira cada um fica."
+    },
+    {
+     "persona": "leo",
+     "en": "My trick: collect idioms in pairs with their Portuguese cousins. 'A pig in a poke' is our 'gato por lebre'; 'to beat around the bush' is 'enrolar'. Map the idea, never the words.",
+     "pt": "Meu macete: colecione idioms em pares com os primos em português. 'A pig in a poke' é o nosso 'gato por lebre'; 'to beat around the bush' é 'enrolar'. Mapeie a ideia, nunca as palavras."
+    }
+   ],
+   "quando_usar": [
+    "Em conversas informais para soar natural e próximo: \"Setting up the printer was a piece of cake\".",
+    "Para suavizar más notícias com expressões fixas: \"Let's face it, the numbers speak for themselves\".",
+    "Em storytelling e apresentações, para criar imagem vívida: \"We were flying blind for the first six months\".",
+    "Para demonstrar cumplicidade cultural em negociações: \"Let's not reinvent the wheel here\".",
+    "Em escrita jornalística leve, com moderação: \"The new policy is a double-edged sword\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Idiom verbal fixo",
+     "estrutura": "verbo + complemento imutável",
+     "exemplo_en": "bite the bullet, break the ice, call it a day",
+     "exemplo_pt": "encarar de vez, quebrar o gelo, dar o dia por encerrado"
+    },
+    {
+     "rotulo": "Idiom com comparação",
+     "estrutura": "as + adjetivo + as + substantivo fixo",
+     "exemplo_en": "as clear as mud, as cool as a cucumber",
+     "exemplo_pt": "claro como lama (ou seja, nada claro), calmo como um pepino (tranquilíssimo)"
+    },
+    {
+     "rotulo": "Expressão fixa preposicionada",
+     "estrutura": "preposição + substantivo em combinação fixa",
+     "exemplo_en": "on the fence, in the loop, off the record",
+     "exemplo_pt": "em cima do muro, por dentro do assunto, em off"
+    },
+    {
+     "rotulo": "Idiom flexionável",
+     "estrutura": "parte fixa + elemento que se conjuga/possessivo",
+     "exemplo_en": "She really put her foot in it. / They pulled our leg.",
+     "exemplo_pt": "Ela pisou na bola feio. / Eles nos zoaram."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Aprenda idioms dentro de uma frase-âncora sua, com contexto pessoal: 'Negotiating my rent, I had to bite the bullet.' O cérebro guarda a cena, e a expressão vem junto na hora de falar."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Não altere as palavras internas de um idiom: é 'a blessing in disguise', nunca 'a blessing in costume'. Trocar um termo por sinônimo desmonta a expressão e denuncia o falante estrangeiro na hora."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "He was pushing the sardine to his side during the whole negotiation.",
+     "certo": "He was looking out for his own interests during the whole negotiation.",
+     "explicacao": "'Puxar a sardinha' não tem versão literal em inglês. Idioms brasileiros traduzidos palavra por palavra geram frases sem sentido para nativos — traduza a ideia, não a imagem."
+    },
+    {
+     "errado": "The exam was a seven-headed beast for me.",
+     "certo": "The exam was a real uphill battle for me.",
+     "explicacao": "'Bicho de sete cabeças' vira 'uphill battle', 'a nightmare' ou 'rocket science' (em negativas: 'it's not rocket science'). A besta de sete cabeças não assusta ninguém em inglês."
+    },
+    {
+     "errado": "We are in the same boat, so let's row for the same side.",
+     "certo": "We are in the same boat, so let's pull together.",
+     "explicacao": "'In the same boat' existe e é idêntico ao português, mas a continuação 'remar para o mesmo lado' não: o idiom nativo de esforço conjunto é 'pull together'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Seu colega diz: 'I'm feeling a bit under the weather.' O que ele quer dizer?",
+     "opcoes": [
+      "Está desanimado com a previsão do tempo.",
+      "Está levemente adoentado.",
+      "Está sem dinheiro até o fim do mês."
+     ],
+     "correta": 1,
+     "explicacao": "'Under the weather' significa estar indisposto, meio doente. Não tem relação com clima nem com finanças — é o clássico idiom não literal."
+    },
+    {
+     "pergunta": "Qual expressão completa naturalmente: 'Deciding to sell the house was hard, but we finally ___.'",
+     "opcoes": [
+      "bit the bullet",
+      "kicked the bucket",
+      "spilled the beans"
+     ],
+     "correta": 0,
+     "explicacao": "'Bite the bullet' é tomar coragem para algo difícil. 'Kick the bucket' é morrer (informal) e 'spill the beans' é entregar um segredo — desastres nesse contexto."
+    },
+    {
+     "pergunta": "Em um relatório formal, qual é o melhor substituto para 'it cost an arm and a leg'?",
+     "opcoes": [
+      "it cost a fortune, dude",
+      "it was crazy expensive",
+      "the cost was prohibitively high"
+     ],
+     "correta": 2,
+     "explicacao": "Idioms e gírias descem de registro. Em documento formal, 'prohibitively high' comunica o mesmo com o tom adequado — essa troca consciente é habilidade C2."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "He promised to help us move house and then left us in ___ at the last minute.",
+     "opcoes": [
+      "limbo",
+      "the lurch",
+      "the cold"
+     ],
+     "correta": 1,
+     "explicacao": "\"Leave someone in the lurch\" = abandonar alguém na mão em um momento de necessidade; \"in limbo\" descreve situação indefinida e \"the cold\" exigiria \"out in the cold\"."
+    },
+    {
+     "pergunta": "I can't quite put my ___ on what's wrong with the design.",
+     "opcoes": [
+      "thumb",
+      "hand",
+      "finger"
+     ],
+     "correta": 2,
+     "explicacao": "A expressão fixa é \"put one's finger on something\" = identificar exatamente o problema; as outras partes do corpo não formam o idiomatismo."
+    },
+    {
+     "pergunta": "Her criticism was unfair, but I decided to take it on the ___ .",
+     "opcoes": [
+      "chin",
+      "jaw",
+      "cheek"
+     ],
+     "correta": 0,
+     "explicacao": "\"Take it on the chin\" = aceitar uma adversidade ou crítica com coragem, sem reclamar; \"cheek\" evocaria \"turn the other cheek\", outra expressão."
+    },
+    {
+     "pergunta": "We finished the report in the very ___ of time.",
+     "opcoes": [
+      "brink",
+      "nick",
+      "verge"
+     ],
+     "correta": 1,
+     "explicacao": "\"In the nick of time\" = no último instante possível; \"brink\" e \"verge\" combinam com \"on the brink/verge of\", regência diferente."
+    },
+    {
+     "pergunta": "By the same ___ , higher wages tend to push prices up.",
+     "opcoes": [
+      "measure",
+      "logic",
+      "token"
+     ],
+     "correta": 2,
+     "explicacao": "\"By the same token\" é o conectivo idiomático fixo que significa \"pela mesma razão\"; \"measure\" e \"logic\" são substituições plausíveis mas não idiomáticas."
+    },
+    {
+     "pergunta": "The plan never really got off the ___ .",
+     "opcoes": [
+      "ground",
+      "floor",
+      "start"
+     ],
+     "correta": 0,
+     "explicacao": "\"Get off the ground\" = decolar, sair do papel; \"floor\" atrai o aluno por \"ground floor\", mas não forma o idiomatismo."
+    },
+    {
+     "pergunta": "To all intents and ___ , the negotiations are over.",
+     "opcoes": [
+      "ends",
+      "purposes",
+      "means"
+     ],
+     "correta": 1,
+     "explicacao": "\"To all intents and purposes\" = para todos os efeitos; \"ends\" e \"means\" evocam outras expressões (\"the ends justify the means\") e servem de distratores."
+    },
+    {
+     "pergunta": "His apology didn't quite ring ___ .",
+     "opcoes": [
+      "truly",
+      "honest",
+      "true"
+     ],
+     "correta": 2,
+     "explicacao": "\"Ring true\" usa adjetivo, não advérbio, pois \"ring\" aqui é verbo de ligação; \"ring truly\" é a hipercorreção clássica que o C2 deve evitar."
+    },
+    {
+     "pergunta": "She has a vested ___ in seeing the merger fail.",
+     "opcoes": [
+      "interest",
+      "stake",
+      "concern"
+     ],
+     "correta": 0,
+     "explicacao": "A colocação fixa é \"a vested interest in\"; \"stake\" existe em \"have a stake in\", mas não combina com \"vested\"."
+    },
+    {
+     "pergunta": "The committee gave the proposal short ___ .",
+     "opcoes": [
+      "thrift",
+      "shrift",
+      "script"
+     ],
+     "correta": 1,
+     "explicacao": "\"Give something short shrift\" = descartar sem consideração; \"thrift\" (economia) é o distrator fonético clássico dessa expressão."
+    }
+   ]
+  },
+  {
+   "slug": "register-formality",
+   "titulo": "Registro e formalidade",
+   "subtitulo": "A mesma mensagem, cinco roupas diferentes — vista a certa.",
+   "resumo": "Registro é o ajuste fino entre o que você diz e para quem diz: o e-mail para o diretor, a mensagem para o amigo e o artigo acadêmico pedem vocabulário, gramática e tom diferentes. No C2, errar o registro é mais grave que errar a gramática — e acertá-lo é o que faz você soar verdadeiramente nativo.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "I sent this to a client: 'Hey buddy, gonna need that contract ASAP, cheers!' He hasn't replied in three days.",
+     "pt": "Mandei isto para um cliente: 'Hey buddy, gonna need that contract ASAP, cheers!' Ele não responde há três dias."
+    },
+    {
+     "persona": "sofia",
+     "en": "Oh, Max. The grammar is fine; the register is a car crash. For a client, try: 'I would appreciate it if you could send the signed contract at your earliest convenience.'",
+     "pt": "Ai, Max. A gramática está bem; o registro é um desastre. Para um cliente, tente: 'I would appreciate it if you could send the signed contract at your earliest convenience.'"
+    },
+    {
+     "persona": "maya",
+     "en": "But isn't that too stiff? I've seen native colleagues write 'Could you send the contract when you get a chance? Thanks!'",
+     "pt": "Mas isso não é engessado demais? Já vi colegas nativos escreverem 'Could you send the contract when you get a chance? Thanks!'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Sharp eye, Maya. That's the middle register — friendly professional. C2 is having all three gears: formal, neutral and casual, and knowing which road you're on.",
+     "pt": "Olhar afiado, Maya. Esse é o registro do meio — profissional amigável. O C2 é ter as três marchas: formal, neutro e casual, e saber em que estrada você está."
+    },
+    {
+     "persona": "leo",
+     "en": "Quick compass: Latin-based words dress up ('commence', 'terminate'), phrasal verbs dress down ('kick off', 'wrap up'). Brazilians feel Latinate words are normal because they mirror Portuguese — that's why we often sound accidentally pompous.",
+     "pt": "Bússola rápida: palavras de origem latina vestem terno ('commence', 'terminate'), phrasal verbs vestem camiseta ('kick off', 'wrap up'). Para brasileiros, as latinas parecem normais porque espelham o português — por isso às vezes soamos pomposos sem querer."
+    }
+   ],
+   "quando_usar": [
+    "Em e-mails formais, prefira formas completas e verbos latinos: \"We regret to inform you that the event has been postponed\".",
+    "Em conversas e chats de equipe, use contrações e phrasal verbs: \"Let's wrap up and touch base tomorrow\".",
+    "Na escrita acadêmica, evite pronomes pessoais e escolha voz passiva ou nominalização: \"The samples were analysed over six weeks\".",
+    "Para suavizar pedidos delicados, use distanciamento modal: \"I was wondering if you might reconsider the deadline\".",
+    "Ao adaptar um texto para público leigo, troque jargão por linguagem cotidiana: \"use\" em vez de \"utilise\", \"start\" em vez de \"commence\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Escala do verbo",
+     "estrutura": "phrasal verb (casual) → verbo neutro → verbo latino (formal)",
+     "exemplo_en": "put off → delay → postpone; find out → discover → ascertain",
+     "exemplo_pt": "adiar (informal) → adiar → postergar; descobrir (informal) → descobrir → averiguar"
+    },
+    {
+     "rotulo": "Distanciamento no pedido",
+     "estrutura": "passado modal + oração indireta",
+     "exemplo_en": "I was hoping you could review the draft by Friday.",
+     "exemplo_pt": "Eu esperava que você pudesse revisar o rascunho até sexta."
+    },
+    {
+     "rotulo": "Impessoalização formal",
+     "estrutura": "It + voz passiva + that-oração",
+     "exemplo_en": "It has been decided that the branch will close in June.",
+     "exemplo_pt": "Foi decidido que a filial fechará em junho."
+    },
+    {
+     "rotulo": "Contração e elipse casual",
+     "estrutura": "contrações + omissão de sujeito/auxiliar",
+     "exemplo_en": "Gonna be late — traffic's terrible. See you there!",
+     "exemplo_pt": "Vou me atrasar — o trânsito está horrível. Te vejo lá!"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Antes de escrever, defina o leitor em uma palavra — chefe, amigo, banca, cliente — e deixe essa palavra escolher as ferramentas: contrações ou não, phrasal verb ou verbo latino, exclamação ou ponto final."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Misturar registros na mesma frase é o erro mais traiçoeiro do C2: 'We hereby request that you send the stuff' junta linguagem de cartório com gíria. Releia procurando esses choques de temperatura."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Dear Dr. Evans, I wanna schedule a meeting to discuss my thesis.",
+     "certo": "Dear Dr. Evans, I would like to schedule a meeting to discuss my thesis.",
+     "explicacao": "'Wanna' e 'gonna' são transcrições de fala relaxada e nunca entram em e-mail formal. O brasileiro as absorve de séries e as solta no contexto errado."
+    },
+    {
+     "errado": "Hey Paula! Pursuant to our conversation, segue the report attached.",
+     "certo": "Hi Paula! As we discussed, here's the report.",
+     "explicacao": "Dois problemas: 'pursuant to' é linguagem jurídica colada num chat informal, e 'segue' é contaminação direta do português corporativo — em inglês, 'here's' ou 'please find attached' (formal)."
+    },
+    {
+     "errado": "The research utilised participants which were students of the university for to collect data.",
+     "certo": "The study recruited university students as participants.",
+     "explicacao": "Formalidade não é empilhar palavras difíceis: 'utilise' desnecessário, 'which' para pessoas e 'for to' criam um texto que parece formal mas soa artificial. Registro alto pede precisão, não enfeite."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual frase é adequada para encerrar um e-mail a um cliente importante que você nunca conheceu?",
+     "opcoes": [
+      "Cheers, talk soon!",
+      "I look forward to hearing from you.",
+      "Waiting your answer, thanks."
+     ],
+     "correta": 1,
+     "explicacao": "'I look forward to hearing from you' é o fecho formal padrão. 'Cheers' é casual demais e 'Waiting your answer' é tradução literal do português, agramatical em inglês."
+    },
+    {
+     "pergunta": "Em um artigo acadêmico, qual versão é mais apropriada?",
+     "opcoes": [
+      "We checked out the results and they were pretty good.",
+      "I think the results we got were really nice.",
+      "The results indicate a significant improvement in performance."
+     ],
+     "correta": 2,
+     "explicacao": "O registro acadêmico evita phrasal verbs casuais, intensificadores vagos ('pretty', 'really nice') e opinião pessoal solta; prefere verbos precisos como 'indicate'."
+    },
+    {
+     "pergunta": "Seu colega de equipe pergunta no chat se você terminou a tarefa. Qual resposta soa natural?",
+     "opcoes": [
+      "Almost done — I'll ping you when it's ready.",
+      "The task is nearing completion and notification will follow.",
+      "I hereby confirm the imminent conclusion of the task."
+     ],
+     "correta": 0,
+     "explicacao": "Chat de equipe pede registro casual-profissional: contrações e 'ping'. As outras opções vestem smoking para ir à padaria — erro de registro, não de gramática."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Escolha a versão mais adequada a um relatório formal:",
+     "opcoes": [
+      "The numbers went up a lot last year.",
+      "The figures got quite a bit higher over last year.",
+      "The figures rose considerably over the past year."
+     ],
+     "correta": 2,
+     "explicacao": "O registro formal prefere \"figures rose considerably\" a verbos frasais e intensificadores vagos como \"a lot\" ou \"quite a bit\", típicos da fala."
+    },
+    {
+     "pergunta": "We regret to inform you that your application has been ___ .",
+     "opcoes": [
+      "unsuccessful",
+      "a flop",
+      "turned down flat"
+     ],
+     "correta": 0,
+     "explicacao": "\"Unsuccessful\" é o eufemismo formal padrão em correspondência institucional; \"a flop\" e \"turned down flat\" são coloquiais e abruptos."
+    },
+    {
+     "pergunta": "Escolha a versão mais adequada a um e-mail formal de cobrança:",
+     "opcoes": [
+      "You still haven't paid us, which is pretty annoying.",
+      "We note that the invoice remains outstanding and would appreciate prompt settlement.",
+      "Please sort out the money you owe as soon as you can."
+     ],
+     "correta": 1,
+     "explicacao": "A versão correta usa o vocabulário técnico-formal da cobrança (\"outstanding\", \"prompt settlement\") e evita acusação direta, marca de polidez profissional."
+    },
+    {
+     "pergunta": "Should you require any further information, please do not ___ to contact us.",
+     "opcoes": [
+      "wait",
+      "hold back",
+      "hesitate"
+     ],
+     "correta": 2,
+     "explicacao": "\"Do not hesitate to contact us\" é a fórmula fixa da correspondência formal; \"hold back\" é phrasal verb de registro neutro-informal."
+    },
+    {
+     "pergunta": "Escolha a alternativa em que o registro é consistentemente formal:",
+     "opcoes": [
+      "The committee endeavoured to ascertain the cause of the discrepancy.",
+      "The committee tried hard to figure out the cause of the discrepancy.",
+      "The committee endeavoured to find out what messed up the figures."
+     ],
+     "correta": 0,
+     "explicacao": "Só a primeira mantém o registro uniforme (\"endeavoured\", \"ascertain\"); as outras misturam itens formais com coloquialismos como \"figure out\" e \"messed up\"."
+    },
+    {
+     "pergunta": "The defendant ___ that he had been elsewhere on the night in question.",
+     "opcoes": [
+      "made out",
+      "maintained",
+      "banged on"
+     ],
+     "correta": 1,
+     "explicacao": "\"Maintained\" é o verbo de elocução formal adequado ao contexto jurídico; \"made out\" sugere fingimento coloquial e \"banged on\" é gíria britânica."
+    },
+    {
+     "pergunta": "Escolha o fechamento mais adequado após a saudação \"Dear Dr Evans\":",
+     "opcoes": [
+      "Cheers,",
+      "Best wishes!!",
+      "Yours sincerely,"
+     ],
+     "correta": 2,
+     "explicacao": "Quando a carta se dirige a destinatário nomeado, o fechamento convencional britânico é \"Yours sincerely\"; \"Cheers\" é informal e pontuação dupla é inadequada."
+    },
+    {
+     "pergunta": "Passengers are kindly requested to ___ from smoking.",
+     "opcoes": [
+      "refrain",
+      "abstain",
+      "desist"
+     ],
+     "correta": 0,
+     "explicacao": "\"Refrain from\" é a fórmula fixa de avisos públicos para pedidos pontuais; \"abstain\" sugere renúncia habitual (álcool, voto) e \"desist\" pertence ao jargão jurídico."
+    },
+    {
+     "pergunta": "Escolha a versão adequada a um aviso público:",
+     "opcoes": [
+      "Don't leave your bags lying about.",
+      "Luggage must not be left unattended.",
+      "You'd better watch your luggage."
+     ],
+     "correta": 1,
+     "explicacao": "Avisos públicos formais usam passiva impessoal (\"must not be left unattended\"); as demais versões são diretivas pessoais de tom coloquial."
+    },
+    {
+     "pergunta": "The minister declined to ___ on the allegations.",
+     "opcoes": [
+      "speak",
+      "remark",
+      "comment"
+     ],
+     "correta": 2,
+     "explicacao": "\"Declined to comment\" é a colocação jornalística-formal consagrada; \"remark on\" existe, mas não forma colocação natural com \"declined\", e \"speak on\" é vago."
+    }
+   ]
+  },
+  {
+   "slug": "cohesion-advanced",
+   "titulo": "Coesão avançada",
+   "subtitulo": "O texto que flui sem repetir: a costura invisível dos nativos.",
+   "resumo": "Coesão avançada é o conjunto de fios que amarram um texto: substituição (one, do so), elipse, referência (the former, the latter), conectores sofisticados e repetição estratégica por sinônimos. É o que separa um texto de frases corretas de um texto que se lê sem esforço.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "My writing feels repetitive. I wrote 'the company' six times in one paragraph and 'however' in every second sentence.",
+     "pt": "Minha escrita parece repetitiva. Escrevi 'the company' seis vezes num parágrafo e 'however' de duas em duas frases."
+    },
+    {
+     "persona": "sofia",
+     "en": "Classic plateau. English offers substitutes: 'the firm', 'the organisation', 'it', or a nominalisation like 'this expansion' to pick up a whole previous sentence.",
+     "pt": "Platô clássico. O inglês oferece substitutos: 'the firm', 'the organisation', 'it', ou uma nominalização como 'this expansion' para retomar uma frase inteira anterior."
+    },
+    {
+     "persona": "max",
+     "en": "I tried variety! I wrote: 'Investors expected profits. Despite of this, the company lost money.'",
+     "pt": "Eu tentei variar! Escrevi: 'Investors expected profits. Despite of this, the company lost money.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Good instinct, tiny flaw: it's 'despite this' or 'in spite of this' — never 'despite of'. The connector is right where it should be, though.",
+     "pt": "Bom instinto, falha minúscula: é 'despite this' ou 'in spite of this' — nunca 'despite of'. Mas o conector está exatamente onde deveria."
+    },
+    {
+     "persona": "leo",
+     "en": "And meet the elegant twins 'the former' and 'the latter': 'We compared Rio and Recife; the former is bigger, the latter is warmer.' They save you from repeating names like a parrot.",
+     "pt": "E conheça os gêmeos elegantes 'the former' e 'the latter': 'Comparamos Rio e Recife; o primeiro é maior, o segundo é mais quente.' Eles salvam você de repetir nomes feito papagaio."
+    },
+    {
+     "persona": "maya",
+     "en": "So cohesion isn't about adding connectors everywhere — it's about weaving references so the reader never loses the thread.",
+     "pt": "Então coesão não é encher o texto de conectores — é tecer referências para o leitor nunca perder o fio."
+    }
+   ],
+   "quando_usar": [
+    "Para retomar uma oração inteira sem repeti-la: \"Sales doubled in March. This surge caught everyone off guard\".",
+    "Para substituir substantivos já citados: \"I prefer the blue design, but the client chose the minimalist one\".",
+    "Para evitar repetir o verbo com 'do so': \"They promised to cut costs, and they did so within a year\".",
+    "Para contrastar dois referentes com elegância: \"Both plans have merits: the former is cheaper, the latter is faster\".",
+    "Para sinalizar a arquitetura do argumento: \"Admittedly, the sample was small. Nevertheless, the pattern is striking\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Referência demonstrativa resumitiva",
+     "estrutura": "This/That + substantivo resumidor (issue, shift, approach)",
+     "exemplo_en": "The team ignored the warnings. This oversight proved costly.",
+     "exemplo_pt": "A equipe ignorou os avisos. Esse descuido saiu caro."
+    },
+    {
+     "rotulo": "Substituição com one/ones",
+     "estrutura": "adjetivo + one(s) no lugar do substantivo",
+     "exemplo_en": "The old model sold well, but the new one is struggling.",
+     "exemplo_pt": "O modelo antigo vendeu bem, mas o novo está patinando."
+    },
+    {
+     "rotulo": "Elipse verbal",
+     "estrutura": "auxiliar sozinho, verbo principal omitido",
+     "exemplo_en": "She hasn't finished the course, but her brother has.",
+     "exemplo_pt": "Ela não terminou o curso, mas o irmão dela sim."
+    },
+    {
+     "rotulo": "Conectores de concessão e reforço",
+     "estrutura": "Nevertheless / Nonetheless / Moreover / In turn + vírgula",
+     "exemplo_en": "The evidence is limited. Nonetheless, the hypothesis deserves testing.",
+     "exemplo_pt": "As evidências são limitadas. Ainda assim, a hipótese merece ser testada."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Depois de escrever, faça o teste do dedo: aponte cada 'this', 'it' e 'one' e diga em voz alta a que se refere. Se você hesitar dois segundos, o leitor vai hesitar dez — reescreva com um substantivo resumidor: 'this delay', 'this proposal'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Conector sofisticado em frase rasa soa pedante: 'Notwithstanding, I like pizza'. A coesão de verdade vem da cadeia de referências; os conectores são só a cereja, não o bolo."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "The results were inconclusive. Despite of that, the paper was published.",
+     "certo": "The results were inconclusive. Despite that, the paper was published.",
+     "explicacao": "Fusão de 'despite' com 'in spite of'. O brasileiro junta as duas porque 'apesar de' pede preposição em português. 'Despite' já contém o 'de' embutido."
+    },
+    {
+     "errado": "Our competitors lowered prices. Beyond that, they extended the warranty, what forced our response.",
+     "certo": "Our competitors lowered prices. Moreover, they extended the warranty, which forced our response.",
+     "explicacao": "Dois calcos do português: 'beyond that' traduzindo 'além disso' (o natural é 'moreover' ou 'in addition') e 'what' como relativo de frase inteira — em inglês, esse papel é do 'which'."
+    },
+    {
+     "errado": "I asked for the report in PDF, but she sent me in Word.",
+     "certo": "I asked for the report in PDF, but she sent it in Word.",
+     "explicacao": "O português permite omitir o objeto ('ela mandou em Word'), mas o inglês exige o pronome de retomada: 'she sent IT in Word'. A omissão quebra a cadeia coesiva."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete com coesão elegante: 'We tested two prototypes: a foldable screen and a dual camera. ___ impressed the panel more.'",
+     "opcoes": [
+      "The second one mentioned before",
+      "The latter",
+      "The last of them both"
+     ],
+     "correta": 1,
+     "explicacao": "'The latter' retoma o segundo de dois itens citados com máxima economia. As outras opções são rodeios que nenhum nativo escreveria."
+    },
+    {
+     "pergunta": "Qual frase usa elipse verbal corretamente?",
+     "opcoes": [
+      "They said they would call back, but they didn't.",
+      "They said they would call back, but they didn't it.",
+      "They said they would call back, but they no did."
+     ],
+     "correta": 0,
+     "explicacao": "A elipse deixa o auxiliar sozinho: 'but they didn't'. Acrescentar 'it' ou alterar a negação desfaz a estrutura."
+    },
+    {
+     "pergunta": "'Prices soared in January. ___ alarmed both retailers and consumers.' Qual retomada é mais precisa?",
+     "opcoes": [
+      "This thing",
+      "It",
+      "This spike"
+     ],
+     "correta": 2,
+     "explicacao": "'This + substantivo resumidor' ('this spike') retoma a frase anterior com precisão. 'It' fica ambíguo e 'this thing' é vago demais para escrita cuidada."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The results were disappointing. ___ , the team remains optimistic.",
+     "opcoes": [
+      "Even so",
+      "Even though",
+      "Albeit"
+     ],
+     "correta": 0,
+     "explicacao": "\"Even so\" é o conectivo adverbial que liga duas frases independentes; \"Even though\" e \"albeit\" são subordinadores e exigiriam oração na mesma frase."
+    },
+    {
+     "pergunta": "He speaks little French, and his wife still ___ .",
+     "opcoes": [
+      "fewer",
+      "less",
+      "lesser"
+     ],
+     "correta": 1,
+     "explicacao": "\"Still less\" é a fórmula coesiva que intensifica uma negação anterior (= muito menos); \"fewer\" pede substantivo contável e \"lesser\" é adjetivo comparativo."
+    },
+    {
+     "pergunta": "Will the talks collapse? I'm afraid ___ .",
+     "opcoes": [
+      "it",
+      "that",
+      "so"
+     ],
+     "correta": 2,
+     "explicacao": "\"So\" substitui a oração inteira anterior (\"that the talks will collapse\"), mecanismo de substituição típico da coesão avançada; \"it\" e \"that\" não funcionam após \"afraid\" nesse uso."
+    },
+    {
+     "pergunta": "___ the committee's reservations, the project went ahead.",
+     "opcoes": [
+      "Notwithstanding",
+      "Nonetheless",
+      "However"
+     ],
+     "correta": 0,
+     "explicacao": "\"Notwithstanding\" é preposição e aceita o sintagma nominal que segue; \"Nonetheless\" e \"However\" são advérbios e não podem reger substantivo."
+    },
+    {
+     "pergunta": "She didn't attend the briefing, ___ did she send a representative.",
+     "opcoes": [
+      "neither",
+      "nor",
+      "so"
+     ],
+     "correta": 1,
+     "explicacao": "Após oração negativa ligada por vírgula, a conjunção padrão é \"nor\" com inversão; \"neither\" nesse padrão exigiria ponto e vírgula ou início de nova frase."
+    },
+    {
+     "pergunta": "You could have apologised, but you chose not ___ .",
+     "opcoes": [
+      "doing",
+      "doing so",
+      "to"
+     ],
+     "correta": 2,
+     "explicacao": "Trata-se da elipse do infinitivo: \"chose not to (apologise)\", em que \"to\" sozinho retoma o verbo anterior; \"doing so\" não combina com \"chose\"."
+    },
+    {
+     "pergunta": "___ is often the case with pilot schemes, funding dried up within a year.",
+     "opcoes": [
+      "As",
+      "Such",
+      "It"
+     ],
+     "correta": 0,
+     "explicacao": "\"As is often the case\" é a estrutura comparativa coesiva em que \"as\" funciona como relativo da oração inteira; \"It\" criaria duas orações sem conectivo."
+    },
+    {
+     "pergunta": "The plan has its flaws; ___ , it is the best option on the table.",
+     "opcoes": [
+      "conversely",
+      "that said",
+      "in contrast"
+     ],
+     "correta": 1,
+     "explicacao": "\"That said\" concede o ponto anterior antes de reafirmar a posição; \"conversely\" e \"in contrast\" indicam oposição simétrica, não concessão."
+    },
+    {
+     "pergunta": "The minister's account and the leaked memo differ; the ___ is far more damning.",
+     "opcoes": [
+      "later",
+      "last",
+      "latter"
+     ],
+     "correta": 2,
+     "explicacao": "\"The latter\" retoma o segundo de dois elementos mencionados (o memorando); \"later\" é temporal e \"last\" pressupõe mais de dois itens."
+    },
+    {
+     "pergunta": "Few doubted the verdict, and ___ who did kept quiet.",
+     "opcoes": [
+      "those",
+      "them",
+      "the ones whom"
+     ],
+     "correta": 0,
+     "explicacao": "\"Those who\" é o antecedente pronominal correto para \"as pessoas que\"; \"them who\" é agramatical no padrão culto e \"whom\" falha por ser sujeito da relativa."
+    }
+   ]
+  },
+  {
+   "slug": "binomials",
+   "titulo": "Binomials (safe and sound…)",
+   "subtitulo": "Pares que andam juntos — e sempre na mesma ordem.",
+   "resumo": "Binomials são duplas de palavras unidas por \"and\" ou \"or\" com ordem fixa: safe and sound, sooner or later, back and forth. Nativos nunca dizem \"sound and safe\" — a ordem é parte da expressão. Usá-los bem dá ritmo e naturalidade instantânea à sua fala e escrita.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "The trip was exhausting, but we arrived sound and safe!",
+     "pt": "A viagem foi exaustiva, mas chegamos 'sound and safe'!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost a perfect sentence, Max — but the binomial is frozen: 'safe and sound'. Swapping the order sounds as odd as saying 'forth and back'.",
+     "pt": "Uma frase quase perfeita, Max — mas o binomial é congelado: 'safe and sound'. Inverter a ordem soa tão estranho quanto dizer 'forth and back'."
+    },
+    {
+     "persona": "maya",
+     "en": "Why that order, though? Is there a rule, or do natives just memorise thousands of frozen pairs?",
+     "pt": "Mas por que essa ordem? Existe uma regra, ou os nativos simplesmente memorizam milhares de pares congelados?"
+    },
+    {
+     "persona": "sofia",
+     "en": "There are tendencies: the shorter word usually comes first, and English favours the vowel pattern i-before-a-or-o — that's why it's 'tick-tock', never 'tock-tick'. But in practice, you learn them as single blocks of vocabulary.",
+     "pt": "Existem tendências: a palavra mais curta costuma vir primeiro, e o inglês prefere o padrão vocálico i-antes-de-a-ou-o — por isso é 'tick-tock', nunca 'tock-tick'. Mas, na prática, você os aprende como blocos únicos de vocabulário."
+    },
+    {
+     "persona": "leo",
+     "en": "Portuguese has them too — 'cedo ou tarde', 'de mala e cuia' — and notice you'd never say 'tarde ou cedo'. Same instinct, different pairs. Steal the instinct, learn the English pairs.",
+     "pt": "O português também tem — 'cedo ou tarde', 'de mala e cuia' — e repare que você nunca diria 'tarde ou cedo'. Mesmo instinto, pares diferentes. Roube o instinto, aprenda os pares ingleses."
+    }
+   ],
+   "quando_usar": [
+    "Para tranquilizar alguém após um susto: \"Relax, the kids are back home, safe and sound\".",
+    "Para falar de negociações e concessões mútuas: \"Every partnership involves a bit of give and take\".",
+    "Para descrever esforço ou progresso gradual: \"Bit by bit, we rebuilt the client's trust\".",
+    "Em contextos formais e jurídicos, com pares consagrados: \"The terms and conditions are null and void\".",
+    "Para descrever movimento repetido ou indecisão: \"He kept pacing back and forth before the interview\"."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Binomial com and",
+     "estrutura": "palavra A + and + palavra B (ordem fixa)",
+     "exemplo_en": "peace and quiet, loud and clear, neat and tidy",
+     "exemplo_pt": "paz e sossego, alto e claro, limpo e arrumado"
+    },
+    {
+     "rotulo": "Binomial com or",
+     "estrutura": "palavra A + or + palavra B (ordem fixa)",
+     "exemplo_en": "sooner or later, take it or leave it, sink or swim",
+     "exemplo_pt": "mais cedo ou mais tarde, é pegar ou largar, ou vai ou racha"
+    },
+    {
+     "rotulo": "Binomial repetitivo",
+     "estrutura": "mesma palavra + preposição + mesma palavra",
+     "exemplo_en": "step by step, over and over, day after day",
+     "exemplo_pt": "passo a passo, repetidamente, dia após dia"
+    },
+    {
+     "rotulo": "Trinomial",
+     "estrutura": "A + vírgula + B + and + C",
+     "exemplo_en": "ready, willing and able; every Tom, Dick and Harry",
+     "exemplo_pt": "pronto, disposto e capaz; todo e qualquer zé-ninguém"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Binomials são ouro na prova de speaking: um 'to make a long story short' ou 'the pros and cons' no lugar certo mostra domínio idiomático sem esforço. Tenha cinco favoritos prontos para usar."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Não invente binomials novos por analogia: existe 'salt and pepper', mas ninguém diz 'fork and knife' — a ordem consagrada é 'knife and fork'. Na dúvida, confirme a ordem num dicionário de collocations."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "We discussed the cons and pros of remote work.",
+     "certo": "We discussed the pros and cons of remote work.",
+     "explicacao": "A ordem é fixa: 'pros and cons'. O brasileiro inverte porque em português 'contras e prós' não soa tão errado — em inglês, a inversão trava o ouvido nativo."
+    },
+    {
+     "errado": "The instructions were white on black: no refunds after thirty days.",
+     "certo": "The instructions were black and white: no refunds after thirty days.",
+     "explicacao": "'Preto no branco' vira 'in black and white' — com 'and', nessa ordem, e geralmente com 'in'. Traduzir a estrutura do português desmonta a expressão."
+    },
+    {
+     "errado": "Little by little the audience went away and the theatre got empty.",
+     "certo": "Little by little, the audience drifted away and the theatre emptied.",
+     "explicacao": "O binomial 'little by little' está correto — o deslize C2 está em não elevar o resto: 'drifted away' e 'emptied' mantêm o registro que o binomial estabeleceu. Coerência de registro também é gramática."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete o binomial: 'After the storm, we were relieved to find the boat ___.'",
+     "opcoes": [
+      "sound and safe",
+      "safe and healthy",
+      "safe and sound"
+     ],
+     "correta": 2,
+     "explicacao": "O par congelado é 'safe and sound', nessa ordem exata. 'Sound and safe' inverte o bloco e 'safe and healthy' não é um binomial consagrado."
+    },
+    {
+     "pergunta": "Qual binomial descreve uma negociação com concessões dos dois lados?",
+     "opcoes": [
+      "give and take",
+      "take it or leave it",
+      "odds and ends"
+     ],
+     "correta": 0,
+     "explicacao": "'Give and take' é a troca mútua de concessões. 'Take it or leave it' é ultimato, e 'odds and ends' são miudezas variadas."
+    },
+    {
+     "pergunta": "Qual frase usa o binomial na ordem correta?",
+     "opcoes": [
+      "The rules apply to each and all members.",
+      "Sooner or later, the truth comes out.",
+      "They searched the house low and high."
+     ],
+     "correta": 1,
+     "explicacao": "'Sooner or later' está na ordem consagrada. Os outros seriam 'each and every' e 'high and low' — pares fixos que não aceitam inversão nem substituição."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "After the storm, all the crew were found ___ .",
+     "opcoes": [
+      "sound and safe",
+      "safe and sound",
+      "safe and whole"
+     ],
+     "correta": 1,
+     "explicacao": "Binômios têm ordem fixa: \"safe and sound\" (são e salvo); a inversão \"sound and safe\" soa imediatamente estrangeira a um nativo."
+    },
+    {
+     "pergunta": "Long hours are ___ of running your own business.",
+     "opcoes": [
+      "parcel and part",
+      "piece and parcel",
+      "part and parcel"
+     ],
+     "correta": 2,
+     "explicacao": "\"Part and parcel of\" = parte inseparável de algo; a ordem é fixa e \"piece\" é o distrator fonético natural de \"part\"."
+    },
+    {
+     "pergunta": "The refugees fled with nothing but the odds and ___ they could carry.",
+     "opcoes": [
+      "ends",
+      "bits",
+      "sods"
+     ],
+     "correta": 0,
+     "explicacao": "\"Odds and ends\" = miudezas, objetos avulsos; \"bits\" pertence ao binômio paralelo \"bits and pieces\", armadilha clássica."
+    },
+    {
+     "pergunta": "We waited for news, pacing ___ .",
+     "opcoes": [
+      "forth and back",
+      "to and fro",
+      "fro and to"
+     ],
+     "correta": 1,
+     "explicacao": "\"To and fro\" = de um lado para o outro, com ordem imutável; em inglês diz-se \"back and forth\", nunca \"forth and back\"."
+    },
+    {
+     "pergunta": "The rules apply to everyone, ___ .",
+     "opcoes": [
+      "bar and none",
+      "none bar",
+      "bar none"
+     ],
+     "correta": 2,
+     "explicacao": "\"Bar none\" = sem exceção alguma; a expressão é fixa e não admite conjunção nem inversão dos elementos."
+    },
+    {
+     "pergunta": "It's high time we sorted this out ___ .",
+     "opcoes": [
+      "once and for all",
+      "once and for good",
+      "one time and for all"
+     ],
+     "correta": 0,
+     "explicacao": "\"Once and for all\" = de uma vez por todas; \"for good\" existe isoladamente (= para sempre), mas não se combina com \"once and\"."
+    },
+    {
+     "pergunta": "They perfected the recipe by ___ .",
+     "opcoes": [
+      "ups and downs",
+      "trial and error",
+      "hit and miss"
+     ],
+     "correta": 1,
+     "explicacao": "A colocação com \"by\" é \"by trial and error\" (por tentativa e erro); \"hit and miss\" é adjetival (\"a hit-and-miss approach\") e \"ups and downs\" significa altos e baixos."
+    },
+    {
+     "pergunta": "The negotiations involved a good deal of ___ before a deal was struck.",
+     "opcoes": [
+      "gift and take",
+      "give or take",
+      "give and take"
+     ],
+     "correta": 2,
+     "explicacao": "\"Give and take\" = concessões mútuas; \"give or take\" existe, mas significa \"aproximadamente\" (\"an hour, give or take\"), nuance que só o C2 distingue."
+    },
+    {
+     "pergunta": "He abandoned the ___ of city life for a croft in the Highlands.",
+     "opcoes": [
+      "hustle and bustle",
+      "bustle and hustle",
+      "hustle and rustle"
+     ],
+     "correta": 0,
+     "explicacao": "\"The hustle and bustle\" = a agitação da vida urbana; a ordem dos elementos é fixa e \"rustle\" (farfalhar) é distrator fonético."
+    },
+    {
+     "pergunta": "The terms of the will were laid out in ___ .",
+     "opcoes": [
+      "black on white",
+      "black and white",
+      "white and black"
+     ],
+     "correta": 1,
+     "explicacao": "\"In black and white\" = por escrito, preto no branco; a ordem é imutável e \"black on white\" é decalque do português."
+    }
+   ]
+  },
+  {
+   "slug": "metaphor-in-english",
+   "titulo": "Linguagem metafórica",
+   "subtitulo": "O inglês pensa em imagens — aprenda a enxergá-las.",
+   "resumo": "Grande parte do inglês cotidiano é metáfora disfarçada: ideias são comida (food for thought), discussões são guerra (defend an argument), tempo é dinheiro (spend time). No C2, você reconhece esses mapas mentais e os usa para argumentar, escrever e até fazer humor como um nativo.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "I noticed natives say 'that idea won't fly', 'the project took off', 'we're cruising now'. Is aviation a thing in English?",
+     "pt": "Percebi que nativos dizem 'that idea won't fly', 'the project took off', 'we're cruising now'. Aviação é um tema no inglês?"
+    },
+    {
+     "persona": "sofia",
+     "en": "You've spotted a conceptual metaphor: projects are flights. Once you see the map, dozens of expressions unlock at once — 'a bumpy start', 'running on autopilot', 'a crash landing'.",
+     "pt": "Você descobriu uma metáfora conceitual: projetos são voos. Quando você enxerga o mapa, dezenas de expressões se destravam de uma vez — 'a bumpy start', 'running on autopilot', 'a crash landing'."
+    },
+    {
+     "persona": "max",
+     "en": "Then I can say our sales are flying of success this quarter!",
+     "pt": "Então posso dizer que nossas vendas estão 'flying of success' neste trimestre!"
+    },
+    {
+     "persona": "sofia",
+     "en": "The image is right, the wording isn't. Natives would say 'sales are soaring' or 'sales have taken off'. Metaphors travel through fixed collocations — you can't rebuild them word by word.",
+     "pt": "A imagem está certa, a formulação não. Nativos diriam 'sales are soaring' ou 'sales have taken off'. Metáforas viajam por collocations fixas — você não pode reconstruí-las palavra por palavra."
+    },
+    {
+     "persona": "leo",
+     "en": "Handy contrast: in Portuguese, anger boils water — 'sangue fervendo'. English heats it too ('boiling with rage') but also explodes it: 'he blew up at me', 'she erupted'. Map the shared images first; they're free vocabulary.",
+     "pt": "Contraste útil: em português, a raiva ferve água — 'sangue fervendo'. O inglês também esquenta ('boiling with rage'), mas ainda explode: 'he blew up at me', 'she erupted'. Mapeie primeiro as imagens compartilhadas; elas são vocabulário de graça."
+    }
+   ],
+   "quando_usar": [
+    "Para argumentar com vividez em apresentações: \"This proposal is a solid foundation we can build on\".",
+    "Para descrever emoções com precisão idiomática: \"She was drowning in paperwork after the merger\".",
+    "Em textos persuasivos, ativando o mapa de jornada: \"We are at a crossroads, and the next step will define the decade\".",
+    "Para suavizar críticas com imagens em vez de acusações: \"I think we're barking up the wrong tree here\".",
+    "Na leitura crítica de jornais, para decodificar viés: perceber que \"a tsunami of immigration\" enquadra pessoas como desastre natural."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Metáfora conceitual",
+     "estrutura": "domínio abstrato expresso por vocabulário de domínio concreto",
+     "exemplo_en": "ARGUMENT IS WAR: she attacked my point, I defended my position.",
+     "exemplo_pt": "DISCUSSÃO É GUERRA: ela atacou meu argumento, eu defendi minha posição."
+    },
+    {
+     "rotulo": "Verbo metafórico consagrado",
+     "estrutura": "verbo concreto + complemento abstrato",
+     "exemplo_en": "to digest information, to plant an idea, to weigh options",
+     "exemplo_pt": "digerir informação, plantar uma ideia, pesar opções"
+    },
+    {
+     "rotulo": "Símile explícita",
+     "estrutura": "like / as if + imagem",
+     "exemplo_en": "The office went silent, as if someone had pulled a plug.",
+     "exemplo_pt": "O escritório silenciou, como se alguém tivesse puxado um plugue da tomada."
+    },
+    {
+     "rotulo": "Metáfora estendida",
+     "estrutura": "uma imagem sustentada por várias frases",
+     "exemplo_en": "The startup set sail in 2022, weathered two storms, and finally reached calmer waters.",
+     "exemplo_pt": "A startup zarpou em 2022, enfrentou duas tempestades e finalmente chegou a águas mais calmas."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Ao aprender uma expressão metafórica, pergunte qual é o mapa por trás: 'spend time', 'waste time', 'invest time' vêm todos de TEMPO É DINHEIRO. Aprendendo o mapa, você ganha a família inteira de expressões."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Cuidado com metáforas misturadas: 'We'll cross that bridge when it catches fire' junta duas imagens e vira piada involuntária. Sustente uma imagem por vez, principalmente na escrita formal."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "This decision will bring a cold in the spine of investors.",
+     "certo": "This decision will send shivers down investors' spines.",
+     "explicacao": "'Frio na espinha' tem prima em inglês, mas com outra anatomia verbal: 'send shivers/chills down someone's spine'. A imagem coincide; as palavras, não."
+    },
+    {
+     "errado": "He is very head-hard and never accepts feedback.",
+     "certo": "He is very stubborn and never takes feedback on board.",
+     "explicacao": "'Cabeça-dura' não vira 'head-hard' (nem 'hard-headed' resolve sempre: existe, mas é menos comum e pode soar regional). O par natural é 'stubborn', e receber feedback é 'take it on board' — metáfora náutica."
+    },
+    {
+     "errado": "The new manager is an iron hand in a velvet glove, as we say in my country.",
+     "certo": "The new manager is an iron fist in a velvet glove.",
+     "explicacao": "A expressão existe em inglês, mas o corpo é outro: 'iron fist', não 'iron hand'. Em metáforas cristalizadas, trocar uma palavra por sinônimo quebra o cristal."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual metáfora conceitual sustenta as expressões 'food for thought', 'digest the news' e 'a half-baked idea'?",
+     "opcoes": [
+      "Ideias são plantas.",
+      "Ideias são construções.",
+      "Ideias são comida."
+     ],
+     "correta": 2,
+     "explicacao": "As três tratam ideias como comida: alimento para o pensamento, digerir notícias, ideia mal assada. Reconhecer o mapa destrava a família toda."
+    },
+    {
+     "pergunta": "Complete com a collocation metafórica natural: 'After the scandal, the CEO's reputation was ___.'",
+     "opcoes": [
+      "in tatters",
+      "in pieces of cloth",
+      "in broken parts"
+     ],
+     "correta": 0,
+     "explicacao": "'In tatters' (em farrapos) é a expressão consagrada para reputação destruída. As outras tentam reconstruir a imagem palavra por palavra — e falham."
+    },
+    {
+     "pergunta": "Por que 'a tsunami of refugees' é uma escolha problemática em textos jornalísticos?",
+     "opcoes": [
+      "Porque 'tsunami' é palavra japonesa e exige itálico.",
+      "Porque a metáfora enquadra pessoas como desastre natural, carregando viés.",
+      "Porque metáforas nunca são aceitas em jornalismo."
+     ],
+     "correta": 1,
+     "explicacao": "Metáforas enquadram a realidade: comparar pessoas a desastre naturaliza a ideia de ameaça. Leitura C2 inclui perceber e questionar esses enquadramentos."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Her theory ___ under the weight of the new evidence.",
+     "opcoes": [
+      "melted",
+      "dissolved",
+      "collapsed"
+     ],
+     "correta": 2,
+     "explicacao": "Teorias são conceituadas como edifícios em inglês (THEORIES ARE BUILDINGS): elas têm \"foundations\" e podem \"collapse\"; \"melt\" e \"dissolve\" pertencem a outros campos metafóricos."
+    },
+    {
+     "pergunta": "He ___ every objection the panel threw at him.",
+     "opcoes": [
+      "parried",
+      "shielded",
+      "fenced"
+     ],
+     "correta": 0,
+     "explicacao": "Na metáfora ARGUMENT IS WAR, objeções são golpes que se \"aparam\" (parry); \"shield\" protege alguém de algo (regência diferente) e \"fence\" não é transitivo nesse sentido."
+    },
+    {
+     "pergunta": "The idea took a while to ___ in — I had to reread the letter twice.",
+     "opcoes": [
+      "soak",
+      "sink",
+      "settle"
+     ],
+     "correta": 1,
+     "explicacao": "\"Sink in\" é a metáfora consagrada para uma informação ser plenamente absorvida pela mente; \"soak in\" existe para líquidos, mas não é a colocação idiomática aqui."
+    },
+    {
+     "pergunta": "Their marriage finally hit the ___ after years of quiet resentment.",
+     "opcoes": [
+      "cliffs",
+      "stones",
+      "rocks"
+     ],
+     "correta": 2,
+     "explicacao": "Relacionamentos são viagens marítimas na metáfora convencional: \"hit the rocks\" / \"on the rocks\" = naufragar; \"cliffs\" e \"stones\" quebram a expressão fixa."
+    },
+    {
+     "pergunta": "I couldn't quite ___ his argument — it was too abstract.",
+     "opcoes": [
+      "digest",
+      "chew",
+      "swallow up"
+     ],
+     "correta": 0,
+     "explicacao": "Na metáfora IDEAS ARE FOOD, compreender plenamente é \"digest\"; \"chew\" exigiria \"chew on\" (ponderar) e \"swallow up\" significa engolfar, não aceitar uma ideia."
+    },
+    {
+     "pergunta": "Negotiations are at a delicate stage, and one careless word could ___ the deal.",
+     "opcoes": [
+      "capsize",
+      "torpedo",
+      "drown"
+     ],
+     "correta": 1,
+     "explicacao": "\"Torpedo\" é o verbo metafórico consagrado para destruir deliberadamente um acordo; \"capsize\" e \"drown\" mantêm o campo náutico, mas não formam a colocação."
+    },
+    {
+     "pergunta": "The speech ___ new life into a flagging campaign.",
+     "opcoes": [
+      "blew",
+      "pumped",
+      "breathed"
+     ],
+     "correta": 2,
+     "explicacao": "A expressão fixa é \"breathe new life into\" (insuflar vida nova); \"pump\" combina com \"money into\", distrator de campo semântico próximo."
+    },
+    {
+     "pergunta": "A wave of nostalgia ___ over him as the old song played.",
+     "opcoes": [
+      "washed",
+      "rained",
+      "spilled"
+     ],
+     "correta": 0,
+     "explicacao": "Emoções são águas na metáfora convencional: \"a wave of emotion washes over someone\"; \"rain\" e \"spill\" não colocam com \"wave... over\"."
+    },
+    {
+     "pergunta": "The article ___ light on a neglected chapter of the war.",
+     "opcoes": [
+      "throws away",
+      "sheds",
+      "spills"
+     ],
+     "correta": 1,
+     "explicacao": "Na metáfora UNDERSTANDING IS SEEING, esclarecer é \"shed/throw/cast light on\"; \"throw away\" (jogar fora) e \"spill\" destroem a colocação."
+    },
+    {
+     "pergunta": "Time is simply ___ away while we argue over details.",
+     "opcoes": [
+      "escaping",
+      "fleeing",
+      "slipping"
+     ],
+     "correta": 2,
+     "explicacao": "O tempo é conceituado como substância que escorre entre os dedos: \"time slips away\"; \"escape\" e \"flee\" pedem agentes animados e não formam a colocação."
+    }
+   ]
+  },
+  {
+   "slug": "punctuation-style",
+   "titulo": "Pontuação e estilo",
+   "subtitulo": "Vírgulas, travessões e ponto e vírgula: os maestros silenciosos do texto.",
+   "resumo": "No C2, pontuação deixa de ser regra decorada e vira instrumento de estilo: o ponto e vírgula une ideias irmãs, o travessão cria drama, os dois-pontos anunciam. E como as regras do inglês diferem das do português em pontos cruciais — como a vírgula antes de 'que' —, é aqui que muitos brasileiros fluentes ainda se entregam.",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "My editor crossed out this sentence: 'The results, that we published last month, changed everything.'",
+     "pt": "Meu editor cortou esta frase: 'The results, that we published last month, changed everything.'"
+    },
+    {
+     "persona": "sofia",
+     "en": "Two issues in one sentence, Max. With commas, the clause is non-defining, so it needs 'which', not 'that': 'The results, which we published last month, changed everything.' 'That' never follows a comma in relative clauses.",
+     "pt": "Dois problemas numa frase só, Max. Com vírgulas, a oração é explicativa, então precisa de 'which', não 'that': 'The results, which we published last month, changed everything.' 'That' nunca vem depois de vírgula em orações relativas."
+    },
+    {
+     "persona": "maya",
+     "en": "What about semicolons? I love them in Portuguese, but I never know if English uses them the same way.",
+     "pt": "E o ponto e vírgula? Adoro usá-lo em português, mas nunca sei se o inglês o usa do mesmo jeito."
+    },
+    {
+     "persona": "sofia",
+     "en": "Same core job: joining two independent sentences that belong together. 'The lab closed at noon; the experiment kept running.' Just never use it where a comma plus 'and' would feel natural — that's overdressing.",
+     "pt": "Mesma função central: unir duas frases independentes que pertencem uma à outra. 'The lab closed at noon; the experiment kept running.' Só nunca o use onde uma vírgula com 'and' soaria natural — isso é vestir o texto demais."
+    },
+    {
+     "persona": "leo",
+     "en": "And here's the em dash — the espresso of punctuation. It interrupts, highlights, dramatises. British writers sip it; American writers drink it by the mug. Use it when a comma feels weak and a colon feels stiff.",
+     "pt": "E eis o travessão — o expresso da pontuação. Ele interrompe, destaca, dramatiza. Escritores britânicos o tomam de gole em gole; americanos, de caneca. Use quando a vírgula parecer fraca e os dois-pontos, engessados."
+    }
+   ],
+   "quando_usar": [
+    "Use ponto e vírgula para unir frases independentes intimamente ligadas: \"The flight was delayed; nobody complained\".",
+    "Use dois-pontos para anunciar lista, explicação ou clímax: \"She had one goal: to finish the marathon\".",
+    "Use travessão (em dash) para inserção dramática ou mudança de rumo: \"The plan was perfect — until it rained\".",
+    "Use a vírgula de Oxford para desfazer ambiguidade em listas: \"We invited the designers, Marta, and Felipe\" (Marta e Felipe não são os designers).",
+    "Use vírgulas apenas em relativas explicativas: \"My brother, who lives in Recife, is visiting\" (tenho um irmão) versus \"My brother who lives in Recife is visiting\" (tenho vários)."
+   ],
+   "formacao": [
+    {
+     "rotulo": "Ponto e vírgula entre orações",
+     "estrutura": "oração independente + ; + oração independente relacionada",
+     "exemplo_en": "The evidence was thin; the jury noticed.",
+     "exemplo_pt": "As provas eram frágeis; o júri percebeu."
+    },
+    {
+     "rotulo": "Dois-pontos anunciativos",
+     "estrutura": "oração completa + : + lista/explicação/clímax",
+     "exemplo_en": "Three things ruin a launch: haste, ego and silence.",
+     "exemplo_pt": "Três coisas arruínam um lançamento: pressa, ego e silêncio."
+    },
+    {
+     "rotulo": "Par de travessões para inserção",
+     "estrutura": "início da frase + — inserção — + fim da frase",
+     "exemplo_en": "Our best client — the one we almost lost — renewed for three years.",
+     "exemplo_pt": "Nosso melhor cliente — aquele que quase perdemos — renovou por três anos."
+    },
+    {
+     "rotulo": "Vírgula em relativa explicativa",
+     "estrutura": "substantivo + , which/who + informação extra + ,",
+     "exemplo_en": "The report, which took months to write, was shelved in a week.",
+     "exemplo_pt": "O relatório, que levou meses para ser escrito, foi engavetado em uma semana."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Teste do ponto final: se você pode trocar o ponto e vírgula por um ponto e as duas partes sobrevivem como frases completas, o ponto e vírgula está correto. Se uma das partes não se sustenta sozinha, você precisava de vírgula ou dois-pontos."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "O inglês NÃO usa vírgula antes de oração que completa o sentido do verbo: 'He said that he would come' jamais leva vírgula antes de 'that'. A vírgula brasileira intuitiva antes de 'que' é um dos últimos sotaques escritos a desaparecer."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "The team believes, that the deadline is unrealistic.",
+     "certo": "The team believes that the deadline is unrealistic.",
+     "explicacao": "Vírgula antes de 'that' completivo é transferência direta da pausa que o brasileiro faz na fala. Em inglês, verbo e sua oração-objeto nunca se separam por vírgula."
+    },
+    {
+     "errado": "We visited three cities: London, Paris and Rome, they were all crowded.",
+     "certo": "We visited three cities: London, Paris and Rome. They were all crowded.",
+     "explicacao": "Comma splice: vírgula não pode unir duas orações independentes. Depois da lista, feche com ponto (ou ponto e vírgula) antes de 'they were all crowded'."
+    },
+    {
+     "errado": "My sister, that works as an engineer, is moving to Canada.",
+     "certo": "My sister, who works as an engineer, is moving to Canada.",
+     "explicacao": "Entre vírgulas, a relativa é explicativa e exige 'who' para pessoas ou 'which' para coisas. 'That' só vive em relativas restritivas, sem vírgula alguma."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Qual frase está pontuada corretamente?",
+     "opcoes": [
+      "The storm passed; the damage remained.",
+      "The storm passed; and the damage remained.",
+      "The storm passed, the damage remained."
+     ],
+     "correta": 0,
+     "explicacao": "Ponto e vírgula une duas orações independentes sem conjunção. Com 'and', use vírgula; vírgula sozinha entre duas orações independentes é comma splice."
+    },
+    {
+     "pergunta": "'Employees who arrive late will lose the bonus' versus 'Employees, who arrive late, will lose the bonus'. Qual é a diferença?",
+     "opcoes": [
+      "Nenhuma; as vírgulas são opcionais nesse caso.",
+      "A segunda é mais formal que a primeira.",
+      "A primeira restringe (só os atrasados perdem); a segunda diz que todos se atrasam e todos perdem."
+     ],
+     "correta": 2,
+     "explicacao": "Sem vírgulas, a relativa restringe o grupo. Com vírgulas, ela vira comentário sobre todos os funcionários — mudando (e arruinando) o sentido da política."
+    },
+    {
+     "pergunta": "Complete com a pontuação mais expressiva: 'She opened the envelope and found the one thing she never expected ___ an apology.'",
+     "opcoes": [
+      "a comma (,)",
+      "an em dash (—)",
+      "a semicolon (;)"
+     ],
+     "correta": 1,
+     "explicacao": "O travessão cria a pausa dramática antes da revelação. A vírgula seria fraca demais e o ponto e vírgula exigiria uma oração independente depois."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "The committee's findings—startling as they were—went unpublished.",
+      "The committees findings—startling as they were—went unpublished.",
+      "The committee's findings—startling as they were,—went unpublished."
+     ],
+     "correta": 0,
+     "explicacao": "Travessões parentéticos não se combinam com vírgula, e \"committee's\" exige apóstrofo de posse; só a primeira versão atende às duas regras."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "The results were inconclusive, the sample was too small.",
+      "The results were inconclusive; the sample was too small.",
+      "The results were inconclusive; because the sample was too small."
+     ],
+     "correta": 1,
+     "explicacao": "Duas orações independentes não podem ser ligadas só por vírgula (comma splice); o ponto e vírgula resolve, mas não pode preceder oração subordinada com \"because\"."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "My brother, who lives in Leeds sells insurance.",
+      "My brother who lives in Leeds, sells insurance.",
+      "My brother, who lives in Leeds, sells insurance."
+     ],
+     "correta": 2,
+     "explicacao": "A relativa explicativa (non-restrictive) exige vírgulas dos dois lados; vírgula única em qualquer posição separa indevidamente sujeito e verbo."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "Three factors were cited: cost, timing and staffing.",
+      "Three factors were cited; cost, timing and staffing.",
+      "Three factors were cited, cost, timing and staffing."
+     ],
+     "correta": 0,
+     "explicacao": "Dois-pontos introduzem a enumeração anunciada pela oração completa anterior; ponto e vírgula exigiria outra oração independente, não uma lista."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "The company revised it's forecast, shares rallied.",
+      "The company revised its forecast; shares rallied.",
+      "The company revised its forecast shares rallied."
+     ],
+     "correta": 1,
+     "explicacao": "\"Its\" possessivo não leva apóstrofo, e as duas orações independentes pedem ponto e vírgula; a primeira versão comete os dois erros clássicos."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "She is a highly-regarded, well known surgeon.",
+      "She is a highly regarded well-known, surgeon.",
+      "She is a highly regarded, well-known surgeon."
+     ],
+     "correta": 2,
+     "explicacao": "Advérbios em -ly não recebem hífen (\"highly regarded\"), mas compostos como \"well-known\" antes do substantivo sim; e a vírgula nunca separa o último adjetivo do substantivo."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "The two ministers' aides exchanged notes.",
+      "The two minister's aides exchanged notes.",
+      "The two ministers's aides exchanged notes."
+     ],
+     "correta": 0,
+     "explicacao": "Posse de plural regular terminado em -s leva apenas apóstrofo após o s (\"ministers'\"); \"minister's\" indicaria um único ministro, contradizendo \"two\"."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "He asked whether the report was ready?",
+      "He asked whether the report was ready.",
+      "He asked, whether the report was ready."
+     ],
+     "correta": 1,
+     "explicacao": "Pergunta indireta termina com ponto final, não com interrogação, e não se separa o verbo de sua completiva com vírgula."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "Its a delicate matter, one that demands tact.",
+      "It's a delicate matter one that demands tact.",
+      "It's a delicate matter, one that demands tact."
+     ],
+     "correta": 2,
+     "explicacao": "\"It's\" (= it is) exige apóstrofo, e o aposto \"one that demands tact\" deve vir separado por vírgula; cada distrator viola uma dessas regras."
+    },
+    {
+     "pergunta": "Escolha a frase pontuada corretamente:",
+     "opcoes": [
+      "However carefully you plan, something always goes wrong.",
+      "However, carefully you plan, something always goes wrong.",
+      "However carefully you plan something always goes wrong."
+     ],
+     "correta": 0,
+     "explicacao": "Aqui \"however\" modifica \"carefully\" (= por mais cuidadosamente que), então não pode haver vírgula entre eles; a vírgula obrigatória fica após a oração adverbial fronteada."
+    }
+   ]
+  }
+ ]
+}

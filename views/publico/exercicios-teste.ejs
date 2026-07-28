@@ -1,0 +1,51 @@
+<%- include('../partials/cabeca') %>
+
+<div class="env env--estreito">
+
+  <nav class="migalhas" aria-label="Você está em">
+    <a href="/exercicios">Grammar Exercises</a> <span aria-hidden="true">/</span>
+    <a href="/exercicios#ex-<%= topico.nivel.toLowerCase() %>">Nível <%= topico.nivel %></a> <span aria-hidden="true">/</span>
+    <span><%= topico.titulo %></span>
+  </nav>
+
+  <article class="gtopico">
+    <header class="gtopico__cabeca">
+      <span class="nivel-selo nivel-selo--<%= topico.nivel.toLowerCase() %>"><%= topico.nivel %></span>
+      <h1>Teste: <%= topico.titulo %></h1>
+      <p class="gtopico__sub"><%= topico.exercicios.length %> questões &middot; clique na alternativa e confira na hora</p>
+      <p class="gtopico__resumo">Ficou com dúvida em alguma? A explicação aparece logo abaixo da questão — e a teoria completa está em <a href="/gramatica/<%= topico.slug %>">Grammar Explanation: <%= topico.titulo %></a>.</p>
+    </header>
+
+    <div class="placar" data-placar hidden>
+      <strong data-placar-texto></strong>
+      <div class="placar__barra"><span data-placar-barra style="width:0%"></span></div>
+    </div>
+
+    <section class="gsec" aria-label="Questões do teste">
+      <% topico.exercicios.forEach(function(q, qi){ %>
+      <div class="quiz" data-correta="<%= q.correta %>">
+        <p class="quiz__pergunta"><span class="quiz__n"><%= qi + 1 %></span> <%= q.pergunta %></p>
+        <div class="quiz__opcoes">
+          <% q.opcoes.forEach(function(op, oi){ %>
+            <button type="button" class="quiz__opcao" data-i="<%= oi %>"><%= op %></button>
+          <% }) %>
+        </div>
+        <p class="quiz__explica" hidden><%= q.explicacao %></p>
+      </div>
+      <% }) %>
+    </section>
+
+    <nav class="gnav" aria-label="Outros testes do nível">
+      <% if (vizinhos.anterior && (vizinhos.anterior.exercicios || []).length) { %>
+        <a class="gnav__lado" href="/exercicios/<%= vizinhos.anterior.slug %>"><span>&larr; Teste anterior</span><strong><%= vizinhos.anterior.titulo %></strong></a>
+      <% } else { %><span></span><% } %>
+      <% if (vizinhos.proximo && (vizinhos.proximo.exercicios || []).length) { %>
+        <a class="gnav__lado gnav__lado--dir" href="/exercicios/<%= vizinhos.proximo.slug %>"><span>Próximo teste &rarr;</span><strong><%= vizinhos.proximo.titulo %></strong></a>
+      <% } %>
+    </nav>
+
+    <p class="gtopico__cta">Quer o contexto completo? <a href="/gramatica/<%= topico.slug %>">Leia a explicação de <%= topico.titulo %> com a Teacher Sofia &rarr;</a></p>
+  </article>
+</div>
+
+<%- include('../partials/rodape') %>

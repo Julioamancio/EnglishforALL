@@ -1,0 +1,2304 @@
+{
+ "nivel": "A2",
+ "titulo": "A2 — Ganhando confiança",
+ "descricao": "No nível A2 você começa a contar histórias, comparar coisas e falar do futuro — é aqui que o inglês vira conversa de verdade.",
+ "topicos": [
+  {
+   "slug": "past-simple",
+   "titulo": "Past Simple",
+   "subtitulo": "Conte o que aconteceu ontem sem medo!",
+   "resumo": "O Past Simple é o tempo verbal para falar de ações que começaram e terminaram no passado: ontem, semana passada, em 2020. É o tempo das histórias, das memórias e do famoso 'o que você fez no fim de semana?'.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, what did you do last weekend?",
+     "pt": "Sofia, o que você fez no fim de semana passado?"
+    },
+    {
+     "persona": "sofia",
+     "en": "I visited my grandmother and we cooked together. It was lovely!",
+     "pt": "Eu visitei minha avó e nós cozinhamos juntas. Foi ótimo!"
+    },
+    {
+     "persona": "max",
+     "en": "Nice! I didn't cooked anything. I only watched TV.",
+     "pt": "Legal! Eu não cozinhei nada. Eu só assisti TV."
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful, Max: after 'didn't' we use the base form — I didn't cook anything.",
+     "pt": "Cuidado, Max: depois de 'didn't' usamos o verbo na forma base — I didn't cook anything."
+    },
+    {
+     "persona": "leo",
+     "en": "Easy trick: 'did' already carries the past, so the verb relaxes!",
+     "pt": "Macete fácil: o 'did' já carrega o passado, então o verbo relaxa!"
+    },
+    {
+     "persona": "max",
+     "en": "Got it! I didn't cook, but I ate a lot of pizza.",
+     "pt": "Entendi! Eu não cozinhei, mas comi muita pizza."
+    }
+   ],
+   "quando_usar": [
+    "Para ações terminadas em um momento definido do passado: \"I watched a movie yesterday.\"",
+    "Para contar histórias e sequências de eventos: \"She opened the door, saw the cake and smiled.\"",
+    "Para hábitos que existiam no passado e acabaram: \"I played soccer every Saturday when I was a kid.\"",
+    "Para perguntar sobre o passado de alguém: \"Did you travel last year?\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa (regulares)",
+     "estrutura": "Sujeito + verbo com -ed",
+     "exemplo_en": "They worked until late last night.",
+     "exemplo_pt": "Eles trabalharam até tarde ontem à noite."
+    },
+    {
+     "rotulo": "Afirmativa (irregulares)",
+     "estrutura": "Sujeito + forma irregular do verbo",
+     "exemplo_en": "We went to the beach on Sunday.",
+     "exemplo_pt": "Nós fomos à praia no domingo."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + did not (didn't) + verbo base",
+     "exemplo_en": "He didn't call me yesterday.",
+     "exemplo_pt": "Ele não me ligou ontem."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Did + sujeito + verbo base?",
+     "exemplo_en": "Did you finish your homework?",
+     "exemplo_pt": "Você terminou sua lição de casa?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Pense no 'did' como uma mochila que carrega o passado da frase inteira. Quando ele aparece (em negativas e perguntas), o verbo principal viaja leve, na forma base. Em português conjugamos tudo ('não fui', 'não comi'), mas em inglês só o 'did' muda."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "O verbo 'to be' é rebelde: ele não usa 'did'. Diga 'I wasn't tired' e 'Were you at home?', nunca 'I didn't be tired'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I didn't went to the party.",
+     "certo": "I didn't go to the party.",
+     "explicacao": "Brasileiro adora conjugar duas vezes, como em 'não fui'. Em inglês, o 'didn't' já marca o passado; o verbo fica na forma base."
+    },
+    {
+     "errado": "You liked the movie?",
+     "certo": "Did you like the movie?",
+     "explicacao": "Em português basta mudar a entonação para perguntar. Em inglês, a pergunta no passado precisa do 'Did' no começo."
+    },
+    {
+     "errado": "She studyed all night.",
+     "certo": "She studied all night.",
+     "explicacao": "Verbos terminados em consoante + y trocam o y por i antes do -ed: study vira studied, try vira tried."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: They ___ soccer last Saturday.",
+     "opcoes": [
+      "played",
+      "play",
+      "plays"
+     ],
+     "correta": 0,
+     "explicacao": "Ação terminada no passado ('last Saturday') pede o Past Simple: played."
+    },
+    {
+     "pergunta": "Qual é a forma correta da negativa?",
+     "opcoes": [
+      "She didn't bought the dress.",
+      "She didn't buy the dress.",
+      "She don't bought the dress."
+     ],
+     "correta": 1,
+     "explicacao": "Depois de 'didn't' o verbo fica na forma base: didn't buy."
+    },
+    {
+     "pergunta": "Como perguntar se ele viu o jogo?",
+     "opcoes": [
+      "He watched the game?",
+      "Did he watched the game?",
+      "Did he watch the game?"
+     ],
+     "correta": 2,
+     "explicacao": "Pergunta no passado usa 'Did' + sujeito + verbo base: Did he watch...?"
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Yesterday I ___ to the supermarket with my mother.",
+     "opcoes": [
+      "went",
+      "goed",
+      "go"
+     ],
+     "correta": 0,
+     "explicacao": "\"Go\" é verbo irregular: o passado é \"went\". \"Goed\" é um erro comum de quem aplica a regra do -ed a verbos irregulares."
+    },
+    {
+     "pergunta": "She ___ watch TV last night because she was tired.",
+     "opcoes": [
+      "doesn't",
+      "didn't",
+      "wasn't"
+     ],
+     "correta": 1,
+     "explicacao": "A negativa do Past Simple usa \"didn't\" + verbo base. \"Doesn't\" é presente e \"wasn't\" só se usa com o verbo to be."
+    },
+    {
+     "pergunta": "___ you see the football match on Saturday?",
+     "opcoes": [
+      "Do",
+      "Were",
+      "Did"
+     ],
+     "correta": 2,
+     "explicacao": "Perguntas no Past Simple são formadas com \"Did\" + sujeito + verbo base. \"Do\" indica presente e \"Were\" é usado apenas com o verbo to be."
+    },
+    {
+     "pergunta": "We ___ a great pizza at the new restaurant last week.",
+     "opcoes": [
+      "eat",
+      "eated",
+      "ate"
+     ],
+     "correta": 2,
+     "explicacao": "\"Eat\" é irregular: o passado é \"ate\". \"Eated\" não existe — é o erro de colocar -ed em verbo irregular."
+    },
+    {
+     "pergunta": "My parents ___ in São Paulo in 1995.",
+     "opcoes": [
+      "lived",
+      "live",
+      "living"
+     ],
+     "correta": 0,
+     "explicacao": "\"In 1995\" indica passado, então usamos \"lived\" (verbo regular + -ed). \"Live\" é presente e \"living\" precisaria de um auxiliar."
+    },
+    {
+     "pergunta": "He ___ his homework, so the teacher was angry.",
+     "opcoes": [
+      "don't do",
+      "doesn't did",
+      "didn't do"
+     ],
+     "correta": 2,
+     "explicacao": "Na negativa do passado usamos \"didn't\" + verbo base: \"didn't do\". \"Doesn't did\" mistura presente com passado, um erro comum."
+    },
+    {
+     "pergunta": "When ___ home yesterday?",
+     "opcoes": [
+      "you arrived",
+      "did you arrive",
+      "you did arrive"
+     ],
+     "correta": 1,
+     "explicacao": "Em perguntas com palavra interrogativa, a ordem é wh-word + did + sujeito + verbo base. \"When you arrived\" é a ordem do português, não do inglês."
+    },
+    {
+     "pergunta": "I ___ very happy when I saw my grade.",
+     "opcoes": [
+      "was",
+      "were",
+      "did"
+     ],
+     "correta": 0,
+     "explicacao": "Com o sujeito \"I\", o passado do verbo to be é \"was\". \"Were\" é usado com you/we/they e \"did\" é auxiliar, não verbo principal aqui."
+    },
+    {
+     "pergunta": "They ___ the bus to school this morning.",
+     "opcoes": [
+      "taked",
+      "took",
+      "take"
+     ],
+     "correta": 1,
+     "explicacao": "\"Take\" é irregular: o passado é \"took\". \"Taked\" não existe em inglês."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "She didn't went to the party.",
+      "She didn't go to the party.",
+      "She no went to the party."
+     ],
+     "correta": 1,
+     "explicacao": "Depois de \"didn't\" o verbo fica na forma base: \"didn't go\". \"Didn't went\" repete o passado duas vezes, erro muito comum entre brasileiros."
+    }
+   ]
+  },
+  {
+   "slug": "past-continuous",
+   "titulo": "Past Continuous",
+   "subtitulo": "A foto em movimento do passado",
+   "resumo": "O Past Continuous descreve ações que estavam em andamento em um momento do passado — o famoso 'eu estava fazendo'. Ele é perfeito para montar o cenário de uma história e mostrar o que acontecia quando outra coisa interrompeu.",
+   "dialogo": [
+    {
+     "persona": "sofia",
+     "en": "Maya, I called you at eight last night. What were you doing?",
+     "pt": "Maya, eu te liguei às oito ontem à noite. O que você estava fazendo?"
+    },
+    {
+     "persona": "maya",
+     "en": "Sorry! I was taking a shower when you called.",
+     "pt": "Desculpa! Eu estava tomando banho quando você ligou."
+    },
+    {
+     "persona": "max",
+     "en": "I was watch a series at that time.",
+     "pt": "Eu estava assistir uma série nessa hora."
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! We need the -ing: I was watching a series.",
+     "pt": "Quase, Max! Precisamos do -ing: I was watching a series."
+    },
+    {
+     "persona": "leo",
+     "en": "Think of it like a movie scene: was/were sets the camera, -ing keeps it rolling!",
+     "pt": "Pense como uma cena de filme: was/were liga a câmera, o -ing mantém ela rodando!"
+    }
+   ],
+   "quando_usar": [
+    "Para ações em andamento em um momento específico do passado: \"At 10 p.m. I was studying.\"",
+    "Para uma ação longa interrompida por outra mais curta: \"I was sleeping when the phone rang.\"",
+    "Para duas ações acontecendo ao mesmo tempo: \"While I was cooking, he was setting the table.\"",
+    "Para descrever o cenário de uma história: \"It was raining and people were running home.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "Sujeito + was/were + verbo com -ing",
+     "exemplo_en": "She was reading a book at midnight.",
+     "exemplo_pt": "Ela estava lendo um livro à meia-noite."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + was/were + not + verbo com -ing",
+     "exemplo_en": "We weren't listening to the teacher.",
+     "exemplo_pt": "Nós não estávamos ouvindo a professora."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Was/Were + sujeito + verbo com -ing?",
+     "exemplo_en": "Were you working at six o'clock?",
+     "exemplo_pt": "Você estava trabalhando às seis horas?"
+    },
+    {
+     "rotulo": "Com interrupção",
+     "estrutura": "Past Continuous + when + Past Simple",
+     "exemplo_en": "I was walking home when it started to rain.",
+     "exemplo_pt": "Eu estava indo para casa quando começou a chover."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "O Past Continuous é quase uma tradução direta do nosso 'estava + gerúndio': 'eu estava comendo' = 'I was eating'. Se em português cabe 'estava ...ndo', em inglês cabe 'was/were ...ing'. Essa é das poucas vezes que traduzir ao pé da letra funciona!"
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Verbos de estado como like, want, know e need normalmente não vão para o contínuo. Diga 'I wanted help', não 'I was wanting help'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I was study when she arrived.",
+     "certo": "I was studying when she arrived.",
+     "explicacao": "O -ing é obrigatório no contínuo. Sem ele, a frase fica quebrada — 'was' precisa do parceiro '-ing'."
+    },
+    {
+     "errado": "They was playing video games.",
+     "certo": "They were playing video games.",
+     "explicacao": "Interferência do português, onde 'estava' serve para quase tudo. Em inglês: I/he/she/it usam was; you/we/they usam were."
+    },
+    {
+     "errado": "When I was arriving home, I saw the accident.",
+     "certo": "When I arrived home, I saw the accident.",
+     "explicacao": "Chegar é ação pontual, não durativa. Para eventos rápidos e completos, use o Past Simple."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: She ___ dinner when the lights went out.",
+     "opcoes": [
+      "cooked",
+      "was cooking",
+      "is cooking"
+     ],
+     "correta": 1,
+     "explicacao": "Ação em andamento interrompida por outra: was cooking (contínua) + went out (pontual)."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "We were watching TV at 9 p.m.",
+      "We was watching TV at 9 p.m.",
+      "We were watch TV at 9 p.m."
+     ],
+     "correta": 0,
+     "explicacao": "'We' pede 'were', e o verbo principal precisa do -ing: were watching."
+    },
+    {
+     "pergunta": "Como perguntar o que ele estava fazendo?",
+     "opcoes": [
+      "What he was doing?",
+      "What did he doing?",
+      "What was he doing?"
+     ],
+     "correta": 2,
+     "explicacao": "Na pergunta, was/were vem antes do sujeito: What was he doing?"
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "I ___ TV when the phone rang.",
+     "opcoes": [
+      "watched",
+      "was watching",
+      "am watching"
+     ],
+     "correta": 1,
+     "explicacao": "A ação em andamento no passado usa Past Continuous: \"was watching\". \"Am watching\" é presente e \"watched\" não mostra a ação em progresso."
+    },
+    {
+     "pergunta": "What ___ at 8 p.m. yesterday?",
+     "opcoes": [
+      "were you doing",
+      "you were doing",
+      "did you doing"
+     ],
+     "correta": 0,
+     "explicacao": "Na pergunta, o verbo to be vem antes do sujeito: \"were you doing\". \"You were doing\" é a ordem de frase afirmativa."
+    },
+    {
+     "pergunta": "They ___ football when it started to rain.",
+     "opcoes": [
+      "are playing",
+      "played",
+      "were playing"
+     ],
+     "correta": 2,
+     "explicacao": "A ação mais longa interrompida pela chuva fica no Past Continuous: \"were playing\". \"Are playing\" é presente."
+    },
+    {
+     "pergunta": "She ___ when the teacher asked the question.",
+     "opcoes": [
+      "wasn't listening",
+      "didn't listening",
+      "isn't listened"
+     ],
+     "correta": 0,
+     "explicacao": "A negativa do Past Continuous é was/were + not + verbo com -ing: \"wasn't listening\". \"Didn't\" não combina com a forma -ing."
+    },
+    {
+     "pergunta": "While we ___ dinner, my sister was doing her homework.",
+     "opcoes": [
+      "cooking",
+      "was cooking",
+      "were cooking"
+     ],
+     "correta": 2,
+     "explicacao": "Com o sujeito \"we\" usamos \"were cooking\". \"Was cooking\" é o erro de usar \"was\" com we/you/they."
+    },
+    {
+     "pergunta": "___ when I called you last night?",
+     "opcoes": [
+      "Did you sleep",
+      "Were you sleeping",
+      "Are you sleeping"
+     ],
+     "correta": 1,
+     "explicacao": "Queremos saber se a ação estava em andamento no momento da ligação, então usamos \"Were you sleeping\". \"Are you sleeping\" é presente."
+    },
+    {
+     "pergunta": "The children ___ in the park at 10 o'clock this morning.",
+     "opcoes": [
+      "was playing",
+      "were playing",
+      "are play"
+     ],
+     "correta": 1,
+     "explicacao": "\"The children\" é plural, então o correto é \"were playing\". \"Was playing\" só serve para sujeitos no singular."
+    },
+    {
+     "pergunta": "He fell while he ___ his bike.",
+     "opcoes": [
+      "was riding",
+      "rode",
+      "is riding"
+     ],
+     "correta": 0,
+     "explicacao": "Depois de \"while\" usamos a ação em andamento: \"was riding\". \"Rode\" (Past Simple) não transmite a ideia de ação em progresso."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "I were reading when she arrived.",
+      "I was reading when she arrived.",
+      "I reading when she arrived."
+     ],
+     "correta": 1,
+     "explicacao": "Com \"I\" usamos \"was\": \"I was reading\". \"I were\" troca o auxiliar e \"I reading\" omite o verbo to be, erro comum de brasileiros."
+    },
+    {
+     "pergunta": "It ___ when we left the house.",
+     "opcoes": [
+      "was rain",
+      "is raining",
+      "was raining"
+     ],
+     "correta": 2,
+     "explicacao": "O Past Continuous precisa de was/were + verbo com -ing: \"was raining\". \"Was rain\" esquece o -ing, erro frequente."
+    }
+   ]
+  },
+  {
+   "slug": "comparatives",
+   "titulo": "Comparatives",
+   "subtitulo": "Maior, melhor, mais rápido: compare tudo!",
+   "resumo": "Os comparativos servem para comparar duas coisas: cidades, pessoas, preços, times de futebol. Em inglês, adjetivos curtos ganham -er e adjetivos longos ganham 'more' — e o 'than' faz o papel do nosso 'do que'.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Leo, is São Paulo bigger than Rio?",
+     "pt": "Leo, São Paulo é maior do que o Rio?"
+    },
+    {
+     "persona": "leo",
+     "en": "Much bigger! But Rio is more famous for its beaches.",
+     "pt": "Muito maior! Mas o Rio é mais famoso pelas praias."
+    },
+    {
+     "persona": "max",
+     "en": "And the food in Rio is more cheap, right?",
+     "pt": "E a comida no Rio é mais barata, né?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Good try, Max, but 'cheap' is short: the food is cheaper, not 'more cheap'.",
+     "pt": "Boa tentativa, Max, mas 'cheap' é curto: the food is cheaper, e não 'more cheap'."
+    },
+    {
+     "persona": "max",
+     "en": "Cheaper! So my city is smaller than São Paulo but nicer for me.",
+     "pt": "Cheaper! Então minha cidade é menor que São Paulo, mas mais agradável para mim."
+    }
+   ],
+   "quando_usar": [
+    "Para comparar duas coisas ou pessoas: \"My brother is taller than me.\"",
+    "Para comparar com adjetivos longos usando more: \"This book is more interesting than that one.\"",
+    "Para dizer que algo é menos: \"The bus is less expensive than a taxi.\"",
+    "Para dizer que duas coisas são iguais com as...as: \"Her car is as fast as mine.\"",
+    "Para intensificar a comparação: \"Today is much hotter than yesterday.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Adjetivos curtos",
+     "estrutura": "Adjetivo + -er + than",
+     "exemplo_en": "This street is quieter than the avenue.",
+     "exemplo_pt": "Esta rua é mais silenciosa do que a avenida."
+    },
+    {
+     "rotulo": "Adjetivos longos",
+     "estrutura": "more + adjetivo + than",
+     "exemplo_en": "Math is more difficult than history for me.",
+     "exemplo_pt": "Matemática é mais difícil do que história para mim."
+    },
+    {
+     "rotulo": "Irregulares",
+     "estrutura": "good → better / bad → worse / far → farther",
+     "exemplo_en": "Your idea is better than mine.",
+     "exemplo_pt": "A sua ideia é melhor do que a minha."
+    },
+    {
+     "rotulo": "Igualdade",
+     "estrutura": "as + adjetivo + as",
+     "exemplo_en": "This test is as easy as the last one.",
+     "exemplo_pt": "Esta prova é tão fácil quanto a última."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Regra da respiração do Leo: se o adjetivo tem uma sílaba só (tall, fast, old), cole o -er. Se tem três ou mais (expensive, beautiful), use 'more'. Com duas sílabas terminadas em -y (happy, easy), troque o y por -ier: happier, easier."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Nunca misture os dois sistemas: 'more better' e 'more taller' não existem. Ou -er, ou more — nunca os dois juntos."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "My house is more big than yours.",
+     "certo": "My house is bigger than yours.",
+     "explicacao": "Como em português tudo é 'mais + adjetivo', o brasileiro tende a usar 'more' para tudo. Adjetivos curtos pedem -er: bigger, taller, faster."
+    },
+    {
+     "errado": "She is taller that me.",
+     "certo": "She is taller than me.",
+     "explicacao": "O nosso 'do que' vira 'than', não 'that'. Os dois soam parecidos, mas 'that' não compara nada."
+    },
+    {
+     "errado": "This exercise is more easy.",
+     "certo": "This exercise is easier.",
+     "explicacao": "'Easy' termina em -y, então vira 'easier'. O mesmo vale para happy → happier e busy → busier."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: A plane is ___ than a bus.",
+     "opcoes": [
+      "more fast",
+      "fastest",
+      "faster"
+     ],
+     "correta": 2,
+     "explicacao": "'Fast' é curto, então recebe -er: faster than."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "This movie is more interesting than the book.",
+      "This movie is interestinger than the book.",
+      "This movie is more interesting that the book."
+     ],
+     "correta": 0,
+     "explicacao": "'Interesting' é longo, então usa 'more', e a comparação pede 'than'."
+    },
+    {
+     "pergunta": "Como dizer que sua nota foi melhor?",
+     "opcoes": [
+      "My grade was more good.",
+      "My grade was better.",
+      "My grade was gooder."
+     ],
+     "correta": 1,
+     "explicacao": "'Good' é irregular: o comparativo é 'better', sem -er e sem 'more'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "My brother is ___ than me.",
+     "opcoes": [
+      "more tall",
+      "taller",
+      "tallest"
+     ],
+     "correta": 1,
+     "explicacao": "Adjetivos curtos formam o comparativo com -er: \"taller\". \"More tall\" é o erro de usar \"more\" com adjetivo curto."
+    },
+    {
+     "pergunta": "This exercise is ___ than the last one.",
+     "opcoes": [
+      "easier",
+      "easyer",
+      "more easy"
+     ],
+     "correta": 0,
+     "explicacao": "Adjetivos terminados em -y trocam o y por -ier: \"easier\". \"Easyer\" ignora essa mudança de grafia."
+    },
+    {
+     "pergunta": "A car is ___ than a bicycle.",
+     "opcoes": [
+      "expensiver",
+      "most expensive",
+      "more expensive"
+     ],
+     "correta": 2,
+     "explicacao": "Adjetivos longos usam \"more\": \"more expensive\". \"Expensiver\" não existe e \"most expensive\" é superlativo, não comparativo."
+    },
+    {
+     "pergunta": "Today is ___ than yesterday.",
+     "opcoes": [
+      "hotter",
+      "hoter",
+      "more hot"
+     ],
+     "correta": 0,
+     "explicacao": "\"Hot\" dobra a consoante final antes de -er: \"hotter\". \"Hoter\" esquece de dobrar o T."
+    },
+    {
+     "pergunta": "This film is ___ than the book.",
+     "opcoes": [
+      "badder",
+      "more bad",
+      "worse"
+     ],
+     "correta": 2,
+     "explicacao": "\"Bad\" tem comparativo irregular: \"worse\". \"Badder\" e \"more bad\" são tentativas de aplicar regras que não valem para esse adjetivo."
+    },
+    {
+     "pergunta": "My new phone is ___ than my old one.",
+     "opcoes": [
+      "gooder",
+      "better",
+      "more good"
+     ],
+     "correta": 1,
+     "explicacao": "\"Good\" tem comparativo irregular: \"better\". \"Gooder\" e \"more good\" não existem em inglês padrão."
+    },
+    {
+     "pergunta": "Maria is ___ than her sister.",
+     "opcoes": [
+      "prettier",
+      "more pretty",
+      "prettyer"
+     ],
+     "correta": 0,
+     "explicacao": "\"Pretty\" termina em -y, então vira \"prettier\". \"Prettyer\" erra a grafia e \"more pretty\" não é a forma padrão para adjetivos curtos."
+    },
+    {
+     "pergunta": "Travelling by plane is ___ than travelling by bus.",
+     "opcoes": [
+      "fast",
+      "faster",
+      "fastest"
+     ],
+     "correta": 1,
+     "explicacao": "Com \"than\" usamos o comparativo: \"faster\". \"Fastest\" é superlativo e \"fast\" está na forma normal do adjetivo."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "London is bigger than Manchester.",
+      "London is more big than Manchester.",
+      "London is biggest than Manchester."
+     ],
+     "correta": 0,
+     "explicacao": "\"Big\" é curto e dobra o G: \"bigger than\". \"More big\" usa \"more\" indevidamente e \"biggest\" é superlativo, que não combina com \"than\"."
+    },
+    {
+     "pergunta": "Math is ___ difficult than History for me.",
+     "opcoes": [
+      "most",
+      "the more",
+      "more"
+     ],
+     "correta": 2,
+     "explicacao": "Adjetivos longos como \"difficult\" formam o comparativo com \"more\". \"Most\" é para superlativo e \"the more\" não se usa antes do adjetivo nesse tipo de frase."
+    }
+   ]
+  },
+  {
+   "slug": "superlatives",
+   "titulo": "Superlatives",
+   "subtitulo": "O maior, o melhor, o mais incrível de todos",
+   "resumo": "O superlativo aponta o campeão de um grupo: o mais alto, o melhor, o mais caro. Em inglês, adjetivos curtos ganham -est e os longos ganham 'the most'. É a gramática perfeita para falar de recordes, favoritos e exageros.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "What's the best pizza place in town, Sofia?",
+     "pt": "Qual é a melhor pizzaria da cidade, Sofia?"
+    },
+    {
+     "persona": "sofia",
+     "en": "For me, it's Bella Napoli. It's also the cheapest one near here.",
+     "pt": "Para mim, é a Bella Napoli. Também é a mais barata aqui perto."
+    },
+    {
+     "persona": "max",
+     "en": "I think it's the most good pizza of the world!",
+     "pt": "Eu acho que é a pizza mais boa do mundo!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Two fixes, Max: the best pizza in the world.",
+     "pt": "Duas correções, Max: the best pizza in the world."
+    },
+    {
+     "persona": "leo",
+     "en": "Remember: superlatives love the word 'the' — the tallest, the best, the most famous!",
+     "pt": "Lembre: os superlativos amam a palavra 'the' — the tallest, the best, the most famous!"
+    },
+    {
+     "persona": "max",
+     "en": "The best pizza in the world. Now I'm the hungriest robot in this room.",
+     "pt": "A melhor pizza do mundo. Agora eu sou o robô mais faminto desta sala."
+    }
+   ],
+   "quando_usar": [
+    "Para destacar um item entre três ou mais: \"She is the tallest girl in the class.\"",
+    "Para falar de recordes e extremos: \"The Amazon is the largest rainforest in the world.\"",
+    "Para opiniões e favoritos: \"This is the most beautiful song on the album.\"",
+    "Para experiências marcantes: \"It was the worst day of my life.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Adjetivos curtos",
+     "estrutura": "the + adjetivo + -est",
+     "exemplo_en": "February is the shortest month.",
+     "exemplo_pt": "Fevereiro é o mês mais curto."
+    },
+    {
+     "rotulo": "Adjetivos longos",
+     "estrutura": "the most + adjetivo",
+     "exemplo_en": "That was the most expensive dinner ever.",
+     "exemplo_pt": "Aquele foi o jantar mais caro de todos."
+    },
+    {
+     "rotulo": "Irregulares",
+     "estrutura": "good → the best / bad → the worst",
+     "exemplo_en": "He's the best player on the team.",
+     "exemplo_pt": "Ele é o melhor jogador do time."
+    },
+    {
+     "rotulo": "Com lugares",
+     "estrutura": "superlativo + in + lugar/grupo",
+     "exemplo_en": "It's the biggest city in Brazil.",
+     "exemplo_pt": "É a maior cidade do Brasil."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Comparativo compara dois; superlativo coroa um entre muitos. E o macete do 'the': se em português você diria 'O mais...', em inglês o 'the' é obrigatório — the fastest, the most important. Sem 'the', o superlativo fica pelado!"
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Depois de superlativo, lugares usam 'in', não 'of': 'the best restaurant in town', 'the tallest building in the world'. O 'of' aparece com grupos e períodos: 'the best day of my life'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She is the most smart student.",
+     "certo": "She is the smartest student.",
+     "explicacao": "'Smart' é adjetivo curto, então recebe -est. O brasileiro usa 'most' demais porque em português tudo é 'a mais inteligente'."
+    },
+    {
+     "errado": "It's the biggest country of the world.",
+     "certo": "It's the biggest country in the world.",
+     "explicacao": "Tradução literal de 'do mundo'. Com lugares, o inglês usa 'in the world', 'in Brazil', 'in my city'."
+    },
+    {
+     "errado": "He is best player of the team.",
+     "certo": "He is the best player on the team.",
+     "explicacao": "Faltou o 'the', que é obrigatório no superlativo. E com times e equipes usamos 'on the team'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Monday is ___ day of the week for me.",
+     "opcoes": [
+      "the worst",
+      "the baddest",
+      "worse"
+     ],
+     "correta": 0,
+     "explicacao": "'Bad' é irregular: o superlativo é 'the worst'."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "This is the most easy exercise.",
+      "This is the easiest exercise.",
+      "This is the easyest exercise."
+     ],
+     "correta": 1,
+     "explicacao": "'Easy' termina em -y, então vira 'the easiest' (y → i + est)."
+    },
+    {
+     "pergunta": "Como dizer que o Everest é a montanha mais alta do mundo?",
+     "opcoes": [
+      "Everest is the higher mountain in the world.",
+      "Everest is the most high mountain of the world.",
+      "Everest is the highest mountain in the world."
+     ],
+     "correta": 2,
+     "explicacao": "Superlativo de 'high' é 'the highest', e 'do mundo' vira 'in the world'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "This is ___ restaurant in town.",
+     "opcoes": [
+      "the best",
+      "the better",
+      "the goodest"
+     ],
+     "correta": 0,
+     "explicacao": "O superlativo irregular de \"good\" é \"the best\". \"The better\" é comparativo e \"the goodest\" não existe."
+    },
+    {
+     "pergunta": "February is ___ month of the year.",
+     "opcoes": [
+      "the shorter",
+      "the shortest",
+      "most short"
+     ],
+     "correta": 1,
+     "explicacao": "Para destacar um entre todos usamos o superlativo: \"the shortest\". \"The shorter\" é comparativo, usado para comparar apenas dois."
+    },
+    {
+     "pergunta": "Mount Everest is ___ mountain in the world.",
+     "opcoes": [
+      "the higher",
+      "highest",
+      "the highest"
+     ],
+     "correta": 2,
+     "explicacao": "O superlativo pede \"the\" + adjetivo com -est: \"the highest\". \"Highest\" sozinho, sem \"the\", é um erro comum nesse tipo de frase."
+    },
+    {
+     "pergunta": "She is ___ student in the class.",
+     "opcoes": [
+      "the most intelligent",
+      "the more intelligent",
+      "the intelligentest"
+     ],
+     "correta": 0,
+     "explicacao": "Adjetivos longos formam o superlativo com \"the most\": \"the most intelligent\". \"The more intelligent\" é comparativo e \"intelligentest\" não existe."
+    },
+    {
+     "pergunta": "That was ___ day of my life.",
+     "opcoes": [
+      "the happier",
+      "the happiest",
+      "most happiest"
+     ],
+     "correta": 1,
+     "explicacao": "\"Happy\" vira \"the happiest\" no superlativo (y → iest). \"Most happiest\" mistura duas formas de superlativo, o que é incorreto."
+    },
+    {
+     "pergunta": "The Nile is one of ___ rivers in the world.",
+     "opcoes": [
+      "the longest",
+      "the longer",
+      "longest of"
+     ],
+     "correta": 0,
+     "explicacao": "Na estrutura \"one of the...\" usamos o superlativo: \"one of the longest rivers\". \"The longer\" é comparativo."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "This is the baddest pizza in the city.",
+      "This is the most bad pizza in the city.",
+      "This is the worst pizza in the city."
+     ],
+     "correta": 2,
+     "explicacao": "O superlativo irregular de \"bad\" é \"the worst\". \"Baddest\" e \"most bad\" são formas que não existem no inglês padrão."
+    },
+    {
+     "pergunta": "My grandfather is ___ person in my family.",
+     "opcoes": [
+      "oldest",
+      "the oldest",
+      "the older"
+     ],
+     "correta": 1,
+     "explicacao": "O superlativo precisa do artigo \"the\": \"the oldest\". Sem \"the\" a frase fica incompleta, e \"the older\" é comparativo."
+    },
+    {
+     "pergunta": "This is ___ expensive hotel in the city.",
+     "opcoes": [
+      "the most",
+      "the more",
+      "most of"
+     ],
+     "correta": 0,
+     "explicacao": "Adjetivos longos formam o superlativo com \"the most\": \"the most expensive\". \"The more\" é comparativo."
+    },
+    {
+     "pergunta": "Who is ___ player on your team?",
+     "opcoes": [
+      "the goodest",
+      "better",
+      "the best"
+     ],
+     "correta": 2,
+     "explicacao": "Entre todos os jogadores do time, usamos o superlativo irregular \"the best\". \"Better\" compara apenas dois e \"goodest\" não existe."
+    }
+   ]
+  },
+  {
+   "slug": "going-to-and-will",
+   "titulo": "Futuro: going to & will",
+   "subtitulo": "Planos marcados ou decisões de última hora?",
+   "resumo": "O inglês tem dois futuros favoritos: 'going to' para planos e intenções já decididas, e 'will' para decisões na hora, promessas e previsões. Escolher entre eles é mais sobre a sua cabeça do que sobre o calendário.",
+   "dialogo": [
+    {
+     "persona": "sofia",
+     "en": "Any plans for the holiday, everyone?",
+     "pt": "Algum plano para o feriado, pessoal?"
+    },
+    {
+     "persona": "maya",
+     "en": "Yes! I'm going to visit my cousins in Salvador. I bought the tickets already.",
+     "pt": "Sim! Eu vou visitar meus primos em Salvador. Já comprei as passagens."
+    },
+    {
+     "persona": "max",
+     "en": "I will going to stay home, I think.",
+     "pt": "Eu vou ficar em casa, eu acho."
+    },
+    {
+     "persona": "sofia",
+     "en": "Pick one, Max: 'I'm going to stay home' or 'I think I'll stay home'.",
+     "pt": "Escolha um, Max: 'I'm going to stay home' ou 'I think I'll stay home'."
+    },
+    {
+     "persona": "leo",
+     "en": "Plan made before? Going to. Deciding right now? Will. Simple as that!",
+     "pt": "Plano feito antes? Going to. Decidindo agora? Will. Simples assim!"
+    },
+    {
+     "persona": "max",
+     "en": "Then I'll join you in Salvador, Maya!",
+     "pt": "Então eu vou com você para Salvador, Maya!"
+    }
+   ],
+   "quando_usar": [
+    "Use going to para planos já decididos: \"We're going to travel in December.\"",
+    "Use going to para previsões com evidência visível: \"Look at those clouds! It's going to rain.\"",
+    "Use will para decisões tomadas na hora da fala: \"I'm tired. I'll take a taxi.\"",
+    "Use will para promessas e ofertas: \"Don't worry, I'll help you with the boxes.\"",
+    "Use will para previsões e opiniões sobre o futuro: \"I think Brazil will win the next World Cup.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa com going to",
+     "estrutura": "Sujeito + am/is/are + going to + verbo base",
+     "exemplo_en": "She's going to start a new course.",
+     "exemplo_pt": "Ela vai começar um curso novo."
+    },
+    {
+     "rotulo": "Afirmativa com will",
+     "estrutura": "Sujeito + will ('ll) + verbo base",
+     "exemplo_en": "I'll call you tonight.",
+     "exemplo_pt": "Eu te ligo hoje à noite."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "won't + verbo base / am not-isn't-aren't going to + verbo base",
+     "exemplo_en": "They won't come to the party.",
+     "exemplo_pt": "Eles não virão à festa."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Will + sujeito + verbo? / Am-Is-Are + sujeito + going to + verbo?",
+     "exemplo_en": "Are you going to sell your car?",
+     "exemplo_pt": "Você vai vender seu carro?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "O nosso 'vou fazer' é praticamente o 'going to': 'vou viajar' = 'I'm going to travel'. Já o 'will' aparece quando você decide na hora, como quando o garçom chega e você diz 'I'll have the lasagna' — em português seria o nosso 'vou querer'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Depois de 'will' o verbo fica sempre na forma base: 'she will travel', nunca 'she will travels' ou 'she will to travel'. E 'will' + 'going to' juntos ('will going to') não existe."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I will to buy a new phone.",
+     "certo": "I will buy a new phone. / I'm going to buy a new phone.",
+     "explicacao": "Como dizemos 'vou comprar' (com dois verbos), o brasileiro enfia um 'to' depois de will. 'Will' já se conecta direto ao verbo, sem 'to'."
+    },
+    {
+     "errado": "She will goes to the doctor tomorrow.",
+     "certo": "She will go to the doctor tomorrow.",
+     "explicacao": "Depois de 'will', nada de -s na terceira pessoa. O 'will' congela o verbo na forma base."
+    },
+    {
+     "errado": "I go to travel next month.",
+     "certo": "I'm going to travel next month.",
+     "explicacao": "Tradução literal de 'eu vou viajar'. O futuro com plano é 'am/is/are + going to', não o verbo 'go' sozinho no presente."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "O telefone toca e você decide atender agora. O que dizer?",
+     "opcoes": [
+      "I'm going to answer it!",
+      "I'll answer it!",
+      "I answer it!"
+     ],
+     "correta": 1,
+     "explicacao": "Decisão tomada na hora da fala pede 'will': I'll answer it."
+    },
+    {
+     "pergunta": "Complete: Look at the sky! It ___ rain.",
+     "opcoes": [
+      "will to",
+      "is going to",
+      "goes to"
+     ],
+     "correta": 1,
+     "explicacao": "Previsão com evidência visível (o céu escuro) usa 'going to': It's going to rain."
+    },
+    {
+     "pergunta": "Qual frase mostra um plano já decidido?",
+     "opcoes": [
+      "Maybe I'll study tonight.",
+      "I'll have a coffee, please.",
+      "We're going to move to Curitiba in July."
+     ],
+     "correta": 2,
+     "explicacao": "Plano com data e decisão anterior usa 'going to': We're going to move..."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "Look at those black clouds! It ___ rain.",
+     "opcoes": [
+      "will",
+      "is going to",
+      "is go to"
+     ],
+     "correta": 1,
+     "explicacao": "Quando há uma evidência visível (nuvens escuras), usamos \"going to\" para a previsão. \"Will\" é mais usado para opiniões sem evidência."
+    },
+    {
+     "pergunta": "I think our team ___ win the championship next year.",
+     "opcoes": [
+      "will",
+      "is going",
+      "going to"
+     ],
+     "correta": 0,
+     "explicacao": "Com opiniões e verbos como \"I think\", usamos \"will\" para previsões. \"Going to\" sozinho, sem o verbo to be, está incompleto."
+    },
+    {
+     "pergunta": "We ___ visit my grandmother next weekend. We already have the tickets.",
+     "opcoes": [
+      "will to",
+      "is going to",
+      "are going to"
+     ],
+     "correta": 2,
+     "explicacao": "Plano já decidido usa \"going to\", e com \"we\" o verbo to be é \"are\": \"are going to\". \"Will to\" é erro, pois \"will\" nunca vem seguido de \"to\"."
+    },
+    {
+     "pergunta": "A: The phone is ringing. B: I ___ answer it.",
+     "opcoes": [
+      "am going to",
+      "going",
+      "will"
+     ],
+     "correta": 2,
+     "explicacao": "Decisão tomada na hora de falar usa \"will\": \"I'll answer it\". \"Going to\" seria para algo planejado antes."
+    },
+    {
+     "pergunta": "She ___ study medicine next year. It's her plan.",
+     "opcoes": [
+      "is going to",
+      "will to",
+      "goes to"
+     ],
+     "correta": 0,
+     "explicacao": "A frase fala de um plano já decidido, então usamos \"is going to\". \"Will to\" não existe, pois \"will\" não aceita \"to\" depois."
+    },
+    {
+     "pergunta": "Don't worry, I ___ help you with your homework.",
+     "opcoes": [
+      "am going",
+      "going to",
+      "will"
+     ],
+     "correta": 2,
+     "explicacao": "Promessas e ofertas usam \"will\": \"I will help you\". \"Am going\" e \"going to\" estão incompletos ou não expressam promessa espontânea."
+    },
+    {
+     "pergunta": "What ___ do after school today?",
+     "opcoes": [
+      "you are going to",
+      "are you going to",
+      "will you to"
+     ],
+     "correta": 1,
+     "explicacao": "Na pergunta, o verbo to be vem antes do sujeito: \"are you going to\". \"You are going to\" é ordem de afirmativa e \"will you to\" acrescenta um \"to\" indevido."
+    },
+    {
+     "pergunta": "He ___ going to buy a new car next month.",
+     "opcoes": [
+      "is",
+      "will",
+      "does"
+     ],
+     "correta": 0,
+     "explicacao": "A estrutura é verbo to be + going to: \"He is going to buy\". \"Will\" não se combina com \"going to\" nessa estrutura básica."
+    },
+    {
+     "pergunta": "Don't be sad. Everything ___ be OK.",
+     "opcoes": [
+      "is going",
+      "will",
+      "going to"
+     ],
+     "correta": 1,
+     "explicacao": "Para tranquilizar alguém com uma previsão, usamos \"will\": \"Everything will be OK\". As outras opções estão incompletas sem o verbo to be + to."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "She will travels tomorrow.",
+      "She wills travel tomorrow.",
+      "She will travel tomorrow."
+     ],
+     "correta": 2,
+     "explicacao": "Depois de \"will\" o verbo fica sempre na forma base: \"will travel\". \"Will travels\" e \"wills\" acrescentam um -s que não existe com modais."
+    }
+   ]
+  },
+  {
+   "slug": "countable-uncountable",
+   "titulo": "Countable & uncountable + some/any",
+   "subtitulo": "Dá para contar ou não dá? Eis a questão",
+   "resumo": "Em inglês, alguns substantivos podem ser contados (two apples) e outros não (water, money, information). Essa divisão muda tudo: o artigo, o plural e o uso de some e any. Dominar isso evita pedidos estranhos no restaurante!",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, I'm making a cake. Do we have any eggs?",
+     "pt": "Sofia, estou fazendo um bolo. Temos ovos?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Yes, there are some eggs in the fridge, but there isn't any milk.",
+     "pt": "Sim, tem alguns ovos na geladeira, mas não tem leite."
+    },
+    {
+     "persona": "max",
+     "en": "I can go to the store. I need to buy a milk and some breads.",
+     "pt": "Eu posso ir ao mercado. Preciso comprar um leite e alguns pães."
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful: milk and bread are uncountable. Buy some milk and some bread.",
+     "pt": "Cuidado: milk e bread são incontáveis. Compre some milk e some bread."
+    },
+    {
+     "persona": "leo",
+     "en": "If you can't count it one by one, no 'a' and no plural — just 'some'!",
+     "pt": "Se você não consegue contar um por um, nada de 'a' e nada de plural — só 'some'!"
+    }
+   ],
+   "quando_usar": [
+    "Use a/an só com contáveis no singular: \"I ate an apple and a sandwich.\"",
+    "Use some em afirmativas com incontáveis ou plurais: \"There's some juice and some cookies.\"",
+    "Use any em negativas: \"We don't have any sugar at home.\"",
+    "Use any em perguntas comuns: \"Is there any coffee left?\"",
+    "Use some em pedidos e ofertas educadas: \"Would you like some tea?\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Contáveis",
+     "estrutura": "a/an no singular, número ou some no plural",
+     "exemplo_en": "I have a car and two bikes.",
+     "exemplo_pt": "Eu tenho um carro e duas bicicletas."
+    },
+    {
+     "rotulo": "Incontáveis",
+     "estrutura": "sem a/an, sem plural — use some/any ou medidas",
+     "exemplo_en": "I need some water and a glass of juice.",
+     "exemplo_pt": "Eu preciso de água e de um copo de suco."
+    },
+    {
+     "rotulo": "Negativa com any",
+     "estrutura": "Sujeito + verbo negativo + any + substantivo",
+     "exemplo_en": "There isn't any rice in the kitchen.",
+     "exemplo_pt": "Não tem arroz na cozinha."
+    },
+    {
+     "rotulo": "Pergunta com any",
+     "estrutura": "Verbo + sujeito + any + substantivo?",
+     "exemplo_en": "Do you have any questions?",
+     "exemplo_pt": "Você tem alguma pergunta?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Teste do Leo: tente colocar um número na frente. 'Three chairs' funciona, então chair é contável. 'Three waters' soa como pedido de restaurante, não gramática — water é incontável. Na dúvida, líquidos, pós e ideias abstratas quase sempre são incontáveis."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Palavras que são contáveis em português podem ser incontáveis em inglês: money, information, advice, furniture e news não têm plural! Diga 'some information', nunca 'informations'."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Can you give me some informations?",
+     "certo": "Can you give me some information?",
+     "explicacao": "'Informação' tem plural em português, mas 'information' é incontável em inglês — nunca ganha -s."
+    },
+    {
+     "errado": "I don't have some money.",
+     "certo": "I don't have any money.",
+     "explicacao": "Em frases negativas, o par do 'not' é 'any', não 'some'. O nosso 'não tenho nenhum' vira 'don't have any'."
+    },
+    {
+     "errado": "She bought a bread in the bakery.",
+     "certo": "She bought some bread at the bakery.",
+     "explicacao": "'Bread' é incontável: nada de 'a bread'. Se quiser uma unidade, diga 'a loaf of bread' (um pão de forma) ou 'a roll' (um pãozinho)."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Is there ___ sugar in this coffee?",
+     "opcoes": [
+      "any",
+      "a",
+      "an"
+     ],
+     "correta": 0,
+     "explicacao": "Pergunta com incontável (sugar) usa 'any': Is there any sugar?"
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "I need some advices.",
+      "I need an advice.",
+      "I need some advice."
+     ],
+     "correta": 2,
+     "explicacao": "'Advice' é incontável: sem plural e sem 'an'. Use 'some advice' ou 'a piece of advice'."
+    },
+    {
+     "pergunta": "Complete: We don't have ___ eggs, but we have ___ cheese.",
+     "opcoes": [
+      "some / any",
+      "any / some",
+      "a / some"
+     ],
+     "correta": 1,
+     "explicacao": "Negativa pede 'any' (don't have any eggs); afirmativa pede 'some' (we have some cheese)."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "There is ___ milk in the fridge.",
+     "opcoes": [
+      "some",
+      "a",
+      "many"
+     ],
+     "correta": 0,
+     "explicacao": "\"Milk\" é incontável, então usamos \"some\" em frases afirmativas. \"A\" só se usa com substantivos contáveis no singular."
+    },
+    {
+     "pergunta": "Can I have ___ water, please?",
+     "opcoes": [
+      "a",
+      "some",
+      "an"
+     ],
+     "correta": 1,
+     "explicacao": "\"Water\" é incontável, então pedimos \"some water\". \"A water\" é o erro de tratar um incontável como contável, comum entre brasileiros."
+    },
+    {
+     "pergunta": "There aren't ___ eggs for the cake.",
+     "opcoes": [
+      "some",
+      "much",
+      "any"
+     ],
+     "correta": 2,
+     "explicacao": "Em frases negativas usamos \"any\": \"There aren't any eggs\". \"Some\" é para afirmativas e \"much\" acompanha incontáveis."
+    },
+    {
+     "pergunta": "She bought ___ apples at the market.",
+     "opcoes": [
+      "some",
+      "a",
+      "much"
+     ],
+     "correta": 0,
+     "explicacao": "Com plural contável em frase afirmativa usamos \"some\": \"some apples\". \"Much\" só combina com substantivos incontáveis."
+    },
+    {
+     "pergunta": "Is there ___ sugar in this coffee?",
+     "opcoes": [
+      "a",
+      "any",
+      "an"
+     ],
+     "correta": 1,
+     "explicacao": "Em perguntas usamos \"any\" com incontáveis: \"any sugar\". \"A\" e \"an\" não se usam com substantivos incontáveis como \"sugar\"."
+    },
+    {
+     "pergunta": "I'd like ___ information about the course.",
+     "opcoes": [
+      "an",
+      "a",
+      "some"
+     ],
+     "correta": 2,
+     "explicacao": "\"Information\" é incontável em inglês, então usamos \"some information\". \"An information\" é erro típico de brasileiro, por influência de \"uma informação\"."
+    },
+    {
+     "pergunta": "We don't have ___ bread at home.",
+     "opcoes": [
+      "any",
+      "a",
+      "an"
+     ],
+     "correta": 0,
+     "explicacao": "\"Bread\" é incontável e a frase é negativa, então usamos \"any\". \"A bread\" trata o pão como contável, o que não funciona em inglês."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "I have many homeworks today.",
+      "I have a lot of homework today.",
+      "I have a homework today."
+     ],
+     "correta": 1,
+     "explicacao": "\"Homework\" é incontável: não tem plural nem aceita \"a\". Por isso o correto é \"a lot of homework\"; \"homeworks\" é erro clássico de brasileiro."
+    },
+    {
+     "pergunta": "He gave me ___ good advice.",
+     "opcoes": [
+      "an",
+      "a",
+      "some"
+     ],
+     "correta": 2,
+     "explicacao": "\"Advice\" é incontável em inglês, então dizemos \"some advice\". \"An advice\" vem da tradução direta de \"um conselho\", mas está errado."
+    },
+    {
+     "pergunta": "There are ___ chairs in the room.",
+     "opcoes": [
+      "any",
+      "a few",
+      "a little"
+     ],
+     "correta": 1,
+     "explicacao": "\"Chairs\" é contável plural em frase afirmativa, então usamos \"a few\". \"A little\" é para incontáveis e \"any\" se usa em negativas e perguntas."
+    }
+   ]
+  },
+  {
+   "slug": "much-many-a-lot",
+   "titulo": "Much, many, a lot of",
+   "subtitulo": "Três jeitos de dizer 'muito' sem se enrolar",
+   "resumo": "Much, many e a lot of significam 'muito', mas cada um tem seu território: many com contáveis, much com incontáveis, e a lot of com os dois. Saber quem vai com quem deixa suas frases naturais de verdade.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Wow, you have a lot of books, Sofia! Did you read all of them?",
+     "pt": "Uau, você tem muitos livros, Sofia! Você leu todos?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Not all! I don't have much time to read these days.",
+     "pt": "Nem todos! Eu não tenho muito tempo para ler ultimamente."
+    },
+    {
+     "persona": "max",
+     "en": "I don't read much books. I watch many TV.",
+     "pt": "Eu não leio muitos livros. Eu assisto muita TV."
+    },
+    {
+     "persona": "sofia",
+     "en": "Swap them, Max: many books, because books are countable, and much TV.",
+     "pt": "Troque, Max: many books, porque livros são contáveis, e much TV."
+    },
+    {
+     "persona": "leo",
+     "en": "When in doubt, 'a lot of' saves the day — it works with everything!",
+     "pt": "Na dúvida, 'a lot of' salva o dia — funciona com tudo!"
+    },
+    {
+     "persona": "max",
+     "en": "Then I watch a lot of TV and read a lot of comic books!",
+     "pt": "Então eu assisto muita TV e leio muitos gibis!"
+    }
+   ],
+   "quando_usar": [
+    "Use many com contáveis, principalmente em perguntas e negativas: \"How many students are there?\"",
+    "Use much com incontáveis, principalmente em perguntas e negativas: \"I don't drink much coffee.\"",
+    "Use a lot of em afirmativas com qualquer substantivo: \"She has a lot of friends.\"",
+    "Use how much para perguntar preço: \"How much is this shirt?\"",
+    "Use too much / too many para exageros: \"I ate too much chocolate.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Com contáveis",
+     "estrutura": "many + substantivo no plural",
+     "exemplo_en": "There aren't many parks in my neighborhood.",
+     "exemplo_pt": "Não há muitos parques no meu bairro."
+    },
+    {
+     "rotulo": "Com incontáveis",
+     "estrutura": "much + substantivo no singular",
+     "exemplo_en": "We don't have much time before the class.",
+     "exemplo_pt": "Nós não temos muito tempo antes da aula."
+    },
+    {
+     "rotulo": "Universal",
+     "estrutura": "a lot of + qualquer substantivo",
+     "exemplo_en": "They spent a lot of money on the trip.",
+     "exemplo_pt": "Eles gastaram muito dinheiro na viagem."
+    },
+    {
+     "rotulo": "Perguntas de quantidade",
+     "estrutura": "How many + contável? / How much + incontável?",
+     "exemplo_en": "How much water do you drink a day?",
+     "exemplo_pt": "Quanta água você bebe por dia?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Pensa assim: many rima com 'menina contando moedas' (contável), much lembra 'mingau' (não dá para contar mingau!). E 'a lot of' é o coringa do baralho: em frase afirmativa, use ele e seja feliz — 'a lot of friends', 'a lot of water'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'Much' em frase afirmativa soa estranho para nativos: em vez de 'I have much work', prefira 'I have a lot of work'. Reserve o 'much' para negativas e perguntas."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "How much people came to the party?",
+     "certo": "How many people came to the party?",
+     "explicacao": "Como 'quanta gente' é singular em português, o brasileiro usa 'much'. Mas 'people' é plural e contável em inglês: how many people."
+    },
+    {
+     "errado": "She has many money.",
+     "certo": "She has a lot of money.",
+     "explicacao": "'Money' é incontável, então 'many' não serve. Em afirmativa, o mais natural é 'a lot of money'."
+    },
+    {
+     "errado": "I have a lot of homeworks today.",
+     "certo": "I have a lot of homework today.",
+     "explicacao": "'Homework' é incontável e não tem plural, mesmo que em português digamos 'as lições'. O 'a lot of' está certo; o -s que sobrou."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: How ___ sugar do you want in your juice?",
+     "opcoes": [
+      "many",
+      "much",
+      "a lot of"
+     ],
+     "correta": 1,
+     "explicacao": "'Sugar' é incontável, então a pergunta de quantidade usa 'how much'."
+    },
+    {
+     "pergunta": "Qual frase soa mais natural em inglês?",
+     "opcoes": [
+      "I have a lot of work this week.",
+      "I have much work this week.",
+      "I have many work this week."
+     ],
+     "correta": 0,
+     "explicacao": "Em afirmativas, 'a lot of' é a escolha natural. 'Much' afirmativo soa estranho e 'many' não combina com incontável."
+    },
+    {
+     "pergunta": "Complete: There aren't ___ chairs in the room.",
+     "opcoes": [
+      "much",
+      "a lot",
+      "many"
+     ],
+     "correta": 2,
+     "explicacao": "'Chairs' é contável plural e a frase é negativa: many é a escolha certa."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "How ___ money do you have?",
+     "opcoes": [
+      "many",
+      "much",
+      "a lot"
+     ],
+     "correta": 1,
+     "explicacao": "\"Money\" é incontável, então perguntamos \"How much money\". \"Many\" só se usa com substantivos contáveis no plural."
+    },
+    {
+     "pergunta": "There are ___ students in my class.",
+     "opcoes": [
+      "a lot of",
+      "much",
+      "a lot"
+     ],
+     "correta": 0,
+     "explicacao": "Antes de um substantivo usamos \"a lot of\": \"a lot of students\". \"A lot\" sem \"of\" só aparece no fim da frase, e \"much\" não combina com contáveis."
+    },
+    {
+     "pergunta": "How ___ brothers do you have?",
+     "opcoes": [
+      "much",
+      "a lot",
+      "many"
+     ],
+     "correta": 2,
+     "explicacao": "\"Brothers\" é contável plural, então usamos \"How many\". \"How much\" é o erro de usar a forma dos incontáveis."
+    },
+    {
+     "pergunta": "I don't drink ___ coffee.",
+     "opcoes": [
+      "many",
+      "much",
+      "a lot"
+     ],
+     "correta": 1,
+     "explicacao": "\"Coffee\" é incontável e a frase é negativa, então usamos \"much\". \"A lot\" precisaria de \"of\" antes do substantivo."
+    },
+    {
+     "pergunta": "She has ___ friends at school.",
+     "opcoes": [
+      "much",
+      "many of",
+      "a lot of"
+     ],
+     "correta": 2,
+     "explicacao": "Em afirmativas, \"a lot of\" é a forma mais natural: \"a lot of friends\". \"Many of\" precisaria de um determinante depois (many of my friends)."
+    },
+    {
+     "pergunta": "We don't have ___ time before the bus leaves.",
+     "opcoes": [
+      "much",
+      "many",
+      "a lot"
+     ],
+     "correta": 0,
+     "explicacao": "\"Time\" é incontável, então em negativas usamos \"much time\". \"Many\" é para contáveis no plural."
+    },
+    {
+     "pergunta": "There isn't ___ juice in the bottle.",
+     "opcoes": [
+      "many",
+      "much",
+      "a lot"
+     ],
+     "correta": 1,
+     "explicacao": "\"Juice\" é incontável e a frase é negativa: \"isn't much juice\". \"Many\" não combina com incontáveis."
+    },
+    {
+     "pergunta": "Did you take ___ photos on your trip?",
+     "opcoes": [
+      "much",
+      "a lot",
+      "many"
+     ],
+     "correta": 2,
+     "explicacao": "\"Photos\" é contável plural, então em perguntas usamos \"many\". \"Much\" seria para incontáveis, como \"much water\"."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "I have a lot of things to do.",
+      "I have much things to do.",
+      "I have a lot things to do."
+     ],
+     "correta": 0,
+     "explicacao": "\"Things\" é contável, então usamos \"a lot of things\". \"Much things\" mistura incontável com plural, e \"a lot things\" esquece o \"of\"."
+    },
+    {
+     "pergunta": "How ___ people were at the party?",
+     "opcoes": [
+      "much",
+      "many",
+      "a lot of"
+     ],
+     "correta": 1,
+     "explicacao": "\"People\" é plural contável, então usamos \"How many people\". \"How much people\" é um dos erros mais comuns de brasileiros."
+    }
+   ]
+  },
+  {
+   "slug": "adverbs-of-frequency",
+   "titulo": "Adverbs of frequency",
+   "subtitulo": "Sempre, às vezes ou nunca? Conte sua rotina",
+   "resumo": "Always, usually, often, sometimes, rarely e never mostram com que frequência algo acontece. O segredo em inglês é a posição: eles ficam antes do verbo principal, mas depois do verbo to be. Pequeno detalhe, grande diferença!",
+   "dialogo": [
+    {
+     "persona": "sofia",
+     "en": "Maya, how often do you exercise?",
+     "pt": "Maya, com que frequência você se exercita?"
+    },
+    {
+     "persona": "maya",
+     "en": "I usually run in the morning, but I never go to the gym.",
+     "pt": "Eu geralmente corro de manhã, mas nunca vou à academia."
+    },
+    {
+     "persona": "max",
+     "en": "I go always to bed very late.",
+     "pt": "Eu vou sempre dormir muito tarde."
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! The adverb comes before the verb: I always go to bed late.",
+     "pt": "Quase, Max! O advérbio vem antes do verbo: I always go to bed late."
+    },
+    {
+     "persona": "leo",
+     "en": "Golden rule: before the action, after the 'be' — 'I always run' but 'I am always tired'!",
+     "pt": "Regra de ouro: antes da ação, depois do 'be' — 'I always run', mas 'I am always tired'!"
+    }
+   ],
+   "quando_usar": [
+    "Para descrever rotinas e hábitos: \"I always have coffee for breakfast.\"",
+    "Para dizer o que quase nunca acontece: \"He rarely eats fast food.\"",
+    "Para negar totalmente uma frequência: \"They never travel by plane.\"",
+    "Para perguntar sobre frequência: \"How often do you see your grandparents?\"",
+    "Para suavizar afirmações: \"Sometimes I forget people's names.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Com verbos comuns",
+     "estrutura": "Sujeito + advérbio + verbo",
+     "exemplo_en": "She often studies at night.",
+     "exemplo_pt": "Ela frequentemente estuda à noite."
+    },
+    {
+     "rotulo": "Com o verbo to be",
+     "estrutura": "Sujeito + am/is/are + advérbio",
+     "exemplo_en": "He is always late for meetings.",
+     "exemplo_pt": "Ele está sempre atrasado para as reuniões."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "Sujeito + don't/doesn't + advérbio + verbo",
+     "exemplo_en": "I don't usually watch the news.",
+     "exemplo_pt": "Eu normalmente não assisto ao noticiário."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "How often + do/does + sujeito + verbo?",
+     "exemplo_en": "How often does she visit you?",
+     "exemplo_pt": "Com que frequência ela te visita?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Monte uma escadinha mental de porcentagem: never (0%), rarely (10%), sometimes (40%), often (60%), usually (80%), always (100%). Em português a posição do 'sempre' é livre ('sempre vou', 'vou sempre'), mas em inglês ele tem cadeira marcada: antes do verbo de ação."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'Never' já é negativo, então nada de negar duas vezes: 'I never eat meat', nunca 'I don't never eat meat'. Diferente do português, onde 'não vou nunca' é normal."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She goes always to church on Sundays.",
+     "certo": "She always goes to church on Sundays.",
+     "explicacao": "Em português, 'vai sempre' soa natural, mas em inglês o advérbio de frequência vem antes do verbo de ação: always goes."
+    },
+    {
+     "errado": "I always am happy on Fridays.",
+     "certo": "I am always happy on Fridays.",
+     "explicacao": "Com o verbo to be, a ordem inverte: o advérbio vem depois de am/is/are."
+    },
+    {
+     "errado": "He doesn't go never to the beach.",
+     "certo": "He never goes to the beach.",
+     "explicacao": "Dupla negação é normal em português ('não vai nunca'), mas em inglês 'never' trabalha sozinho, com o verbo afirmativo."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Onde entra 'usually' na frase 'I drink coffee in the morning'?",
+     "opcoes": [
+      "I drink usually coffee...",
+      "Usually I drink coffee... ou I usually drink coffee...",
+      "I drink coffee usually in the morning... apenas"
+     ],
+     "correta": 1,
+     "explicacao": "A posição padrão é antes do verbo (I usually drink), e no início da frase também é aceitável."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "She is never late.",
+      "She never is late.",
+      "She is late never."
+     ],
+     "correta": 0,
+     "explicacao": "Com o verbo to be, o advérbio vem depois: is never late."
+    },
+    {
+     "pergunta": "Complete: They ___ eat sushi. They hate fish!",
+     "opcoes": [
+      "always",
+      "usually",
+      "never"
+     ],
+     "correta": 2,
+     "explicacao": "Se eles odeiam peixe, a frequência é zero: never."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "He ___ coffee in the morning.",
+     "opcoes": [
+      "drinks always",
+      "always drinks",
+      "always drink"
+     ],
+     "correta": 1,
+     "explicacao": "O advérbio de frequência vem antes do verbo principal: \"always drinks\". \"Drinks always\" segue a ordem do português, e \"always drink\" esquece o -s da 3ª pessoa."
+    },
+    {
+     "pergunta": "She is ___ late for work.",
+     "opcoes": [
+      "ever",
+      "not never",
+      "never"
+     ],
+     "correta": 2,
+     "explicacao": "Com o verbo to be, o advérbio vem depois: \"is never late\". \"Not never\" cria dupla negativa, que não se usa em inglês padrão."
+    },
+    {
+     "pergunta": "We ___ go to the beach in the summer.",
+     "opcoes": [
+      "usually",
+      "use to",
+      "usual"
+     ],
+     "correta": 0,
+     "explicacao": "\"Usually\" é o advérbio que indica frequência no presente. \"Use to\" é confusão com \"used to\" (passado) e \"usual\" é adjetivo, não advérbio."
+    },
+    {
+     "pergunta": "How ___ do you play video games?",
+     "opcoes": [
+      "much often",
+      "often",
+      "many often"
+     ],
+     "correta": 1,
+     "explicacao": "Para perguntar frequência usamos \"How often\". \"How much often\" e \"How many often\" misturam estruturas e não existem em inglês."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "They watch sometimes TV after dinner.",
+      "Sometimes watch they TV after dinner.",
+      "They sometimes watch TV after dinner."
+     ],
+     "correta": 2,
+     "explicacao": "O advérbio de frequência fica entre o sujeito e o verbo principal: \"They sometimes watch TV\". \"Watch sometimes TV\" copia a ordem do português."
+    },
+    {
+     "pergunta": "I am ___ tired on Mondays.",
+     "opcoes": [
+      "always",
+      "alway",
+      "allways"
+     ],
+     "correta": 0,
+     "explicacao": "A grafia correta é \"always\": nem com dois L (\"allways\"), nem sem o -s final (\"alway\"). Com o verbo to be, o advérbio vem depois dele."
+    },
+    {
+     "pergunta": "My father ___ cooks dinner; my mother usually does it.",
+     "opcoes": [
+      "rarely",
+      "rare",
+      "rarely does"
+     ],
+     "correta": 0,
+     "explicacao": "\"Rarely\" é o advérbio (raramente) e vem antes do verbo principal. \"Rare\" é adjetivo, e \"rarely does cooks\" duplicaria o verbo."
+    },
+    {
+     "pergunta": "She ___ eats meat because she is a vegetarian.",
+     "opcoes": [
+      "always",
+      "sometimes",
+      "never"
+     ],
+     "correta": 2,
+     "explicacao": "Se ela é vegetariana, ela nunca come carne: \"never eats meat\". Em inglês, \"never\" já é negativo e não precisa de \"don't\"."
+    },
+    {
+     "pergunta": "He goes to the gym three times ___ week.",
+     "opcoes": [
+      "a",
+      "in",
+      "on"
+     ],
+     "correta": 0,
+     "explicacao": "Para expressar frequência usamos \"three times a week\" (três vezes por semana). \"In the week\" e \"on week\" são traduções literais que não funcionam aqui."
+    },
+    {
+     "pergunta": "I hardly ___ see my cousins.",
+     "opcoes": [
+      "never",
+      "ever",
+      "always"
+     ],
+     "correta": 1,
+     "explicacao": "A expressão fixa é \"hardly ever\" (quase nunca). \"Hardly never\" criaria uma dupla negativa, erro comum de quem traduz do português."
+    }
+   ]
+  },
+  {
+   "slug": "object-and-possessive-pronouns",
+   "titulo": "Object & possessive pronouns",
+   "subtitulo": "Me, him, mine, yours: cada pronome no seu lugar",
+   "resumo": "Os pronomes objeto (me, you, him, her, it, us, them) recebem a ação do verbo, e os possessivos (mine, yours, his, hers, ours, theirs) mostram de quem é algo sem repetir o substantivo. Eles deixam a conversa rápida e natural.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, is this blue notebook yours?",
+     "pt": "Sofia, este caderno azul é seu?"
+    },
+    {
+     "persona": "sofia",
+     "en": "No, mine is red. Ask Leo, maybe it's his.",
+     "pt": "Não, o meu é vermelho. Pergunte ao Leo, talvez seja dele."
+    },
+    {
+     "persona": "leo",
+     "en": "Not mine! But I saw Max with a blue notebook. Give it to him.",
+     "pt": "Meu não é! Mas eu vi o Max com um caderno azul. Entregue a ele."
+    },
+    {
+     "persona": "max",
+     "en": "Yes! It's my! Thank you for finding he!",
+     "pt": "Sim! É meu! Obrigado por encontrá-lo!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Two fixes, Max: it's mine, and thank you for finding it.",
+     "pt": "Duas correções, Max: it's mine, e thank you for finding it."
+    },
+    {
+     "persona": "max",
+     "en": "It's mine and you found it. Perfect, thanks!",
+     "pt": "É meu e vocês o encontraram. Perfeito, obrigado!"
+    }
+   ],
+   "quando_usar": [
+    "Use pronome objeto depois do verbo: \"She called me last night.\"",
+    "Use pronome objeto depois de preposições: \"This gift is for her.\"",
+    "Use possessivo para não repetir o substantivo: \"Your phone is new, mine is old.\"",
+    "Use possessivo em perguntas de posse: \"Is this jacket yours?\"",
+    "Use 'of + possessivo' em expressões como: \"He's a friend of mine.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Pronomes objeto",
+     "estrutura": "me, you, him, her, it, us, them (após verbo ou preposição)",
+     "exemplo_en": "I saw them at the mall yesterday.",
+     "exemplo_pt": "Eu os vi no shopping ontem."
+    },
+    {
+     "rotulo": "Adjetivos possessivos",
+     "estrutura": "my, your, his, her, its, our, their + substantivo",
+     "exemplo_en": "Her house is near our school.",
+     "exemplo_pt": "A casa dela fica perto da nossa escola."
+    },
+    {
+     "rotulo": "Pronomes possessivos",
+     "estrutura": "mine, yours, his, hers, ours, theirs (sem substantivo depois)",
+     "exemplo_en": "That umbrella isn't yours, it's hers.",
+     "exemplo_pt": "Aquele guarda-chuva não é seu, é dela."
+    },
+    {
+     "rotulo": "Pergunta de posse",
+     "estrutura": "Whose + substantivo + is this? / Is this + possessivo?",
+     "exemplo_en": "Whose keys are these? Are they yours?",
+     "exemplo_pt": "De quem são estas chaves? São suas?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Macete do Leo: adjetivo possessivo é grudento — precisa de um substantivo colado nele (my car). Pronome possessivo é independente — anda sozinho (the car is mine). Se depois da palavra vier um substantivo, use my/your/his; se a frase terminar ali, use mine/yours/his."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'His' serve para os dois (his book / the book is his), mas 'her' muda: her book, porém the book is hers. E 'it's mine' nunca vira 'it's my' — esse é dos erros mais comuns em provas!"
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I love she.",
+     "certo": "I love her.",
+     "explicacao": "Em português dizemos 'amo ela' na fala, então a tentação é usar 'she'. Depois do verbo, o pronome vira objeto: her."
+    },
+    {
+     "errado": "This pen is my.",
+     "certo": "This pen is mine.",
+     "explicacao": "'É meu' termina a frase, então precisa do pronome possessivo 'mine'. 'My' só funciona grudado num substantivo: my pen."
+    },
+    {
+     "errado": "The dog broke it's toy.",
+     "certo": "The dog broke its toy.",
+     "explicacao": "'It's' é abreviação de 'it is'. O possessivo de 'it' é 'its', sem apóstrofo — pegadinha que engana até nativo."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: My parents called ___ this morning. (eu)",
+     "opcoes": [
+      "I",
+      "me",
+      "my"
+     ],
+     "correta": 1,
+     "explicacao": "Depois do verbo, usamos o pronome objeto: called me."
+    },
+    {
+     "pergunta": "Complete: This backpack isn't mine. Is it ___?",
+     "opcoes": [
+      "your",
+      "you",
+      "yours"
+     ],
+     "correta": 2,
+     "explicacao": "Sem substantivo depois, usamos o pronome possessivo: Is it yours?"
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "We invited them to the barbecue.",
+      "We invited they to the barbecue.",
+      "We invited their to the barbecue."
+     ],
+     "correta": 0,
+     "explicacao": "Quem recebe o convite é o objeto da frase: invited them."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "This is my sister. Do you know ___?",
+     "opcoes": [
+      "her",
+      "she",
+      "hers"
+     ],
+     "correta": 0,
+     "explicacao": "Depois do verbo usamos o pronome objeto: \"know her\". \"She\" é pronome sujeito e \"hers\" é possessivo."
+    },
+    {
+     "pergunta": "That book is ___. I bought it yesterday.",
+     "opcoes": [
+      "my",
+      "me",
+      "mine"
+     ],
+     "correta": 2,
+     "explicacao": "Sem substantivo depois, usamos o pronome possessivo \"mine\". \"My\" precisa vir antes de um substantivo (my book)."
+    },
+    {
+     "pergunta": "I love my dog. I play with ___ every day.",
+     "opcoes": [
+      "he",
+      "it",
+      "its"
+     ],
+     "correta": 1,
+     "explicacao": "Para animais geralmente usamos \"it\" como pronome objeto: \"play with it\". \"He\" é pronome sujeito e \"its\" é possessivo."
+    },
+    {
+     "pergunta": "Is this pen ___?",
+     "opcoes": [
+      "yours",
+      "your",
+      "you"
+     ],
+     "correta": 0,
+     "explicacao": "No fim da frase, sem substantivo, usamos o possessivo \"yours\". \"Your\" só funciona antes de um substantivo (your pen)."
+    },
+    {
+     "pergunta": "We invited ___ to the party.",
+     "opcoes": [
+      "they",
+      "their",
+      "them"
+     ],
+     "correta": 2,
+     "explicacao": "Depois do verbo usamos o pronome objeto \"them\". \"They\" é sujeito e \"their\" é possessivo adjetivo."
+    },
+    {
+     "pergunta": "The teacher gave ___ a lot of homework.",
+     "opcoes": [
+      "us",
+      "we",
+      "our"
+     ],
+     "correta": 0,
+     "explicacao": "O pronome objeto de \"we\" é \"us\": \"gave us\". Usar \"we\" depois do verbo é erro comum por influência do português."
+    },
+    {
+     "pergunta": "That car is ___. He bought it last month.",
+     "opcoes": [
+      "him",
+      "his",
+      "he's"
+     ],
+     "correta": 1,
+     "explicacao": "O possessivo \"his\" pode ficar sozinho no fim da frase: \"That car is his\". \"He's\" é a contração de \"he is\", não um possessivo."
+    },
+    {
+     "pergunta": "Look at ___! He is dancing!",
+     "opcoes": [
+      "he",
+      "his",
+      "him"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de preposição (at) usamos o pronome objeto: \"Look at him\". \"He\" só funciona como sujeito da frase."
+    },
+    {
+     "pergunta": "This house is ___. They built it in 2010.",
+     "opcoes": [
+      "their",
+      "theirs",
+      "them"
+     ],
+     "correta": 1,
+     "explicacao": "Sem substantivo depois, o possessivo correto é \"theirs\". \"Their\" exige um substantivo em seguida (their house)."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "She called I last night.",
+      "She called mine last night.",
+      "She called me last night."
+     ],
+     "correta": 2,
+     "explicacao": "Depois do verbo usamos o pronome objeto \"me\": \"She called me\". \"I\" é pronome sujeito e \"mine\" é possessivo."
+    }
+   ]
+  },
+  {
+   "slug": "have-to-must",
+   "titulo": "Have to & must: obrigação",
+   "subtitulo": "O que você PRECISA fazer (e o que é proibido)",
+   "resumo": "Have to e must expressam obrigação: regras, deveres e necessidades. Must soa mais forte e pessoal; have to aparece mais no dia a dia para regras externas. E cuidado com as negativas: don't have to e mustn't são completamente diferentes!",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, do we have to do the essay for Friday?",
+     "pt": "Sofia, nós temos que fazer a redação para sexta?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Yes, you have to hand it in on Friday, and you must write it in English.",
+     "pt": "Sim, vocês têm que entregar na sexta, e devem escrevê-la em inglês."
+    },
+    {
+     "persona": "max",
+     "en": "So we mustn't do it today, right? I want to play video games.",
+     "pt": "Então somos proibidos de fazer hoje, certo? Eu quero jogar videogame."
+    },
+    {
+     "persona": "sofia",
+     "en": "Not quite! You don't have to do it today — it's not forbidden, just not necessary yet.",
+     "pt": "Não exatamente! Você não precisa fazer hoje — não é proibido, só ainda não é necessário."
+    },
+    {
+     "persona": "leo",
+     "en": "Big difference: mustn't means it's forbidden, don't have to means you can relax!",
+     "pt": "Grande diferença: mustn't significa proibido, don't have to significa que você pode relaxar!"
+    },
+    {
+     "persona": "max",
+     "en": "Great! I don't have to start today, but I must finish by Friday.",
+     "pt": "Ótimo! Eu não preciso começar hoje, mas devo terminar até sexta."
+    }
+   ],
+   "quando_usar": [
+    "Use have to para obrigações externas e rotina: \"I have to wake up at 6 for work.\"",
+    "Use must para obrigações fortes e regras escritas: \"You must wear a seatbelt.\"",
+    "Use mustn't para proibições: \"You mustn't use your phone during the test.\"",
+    "Use don't have to quando algo não é necessário: \"You don't have to pay, it's free.\"",
+    "Use Do/Does...have to para perguntar sobre obrigações: \"Does she have to work on Saturdays?\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "Sujeito + have to / must + verbo base",
+     "exemplo_en": "He has to renew his passport.",
+     "exemplo_pt": "Ele tem que renovar o passaporte."
+    },
+    {
+     "rotulo": "Negativa (sem necessidade)",
+     "estrutura": "Sujeito + don't/doesn't have to + verbo base",
+     "exemplo_en": "You don't have to bring food to the party.",
+     "exemplo_pt": "Você não precisa levar comida para a festa."
+    },
+    {
+     "rotulo": "Negativa (proibição)",
+     "estrutura": "Sujeito + mustn't + verbo base",
+     "exemplo_en": "You mustn't smoke in the hospital.",
+     "exemplo_pt": "Você não pode fumar no hospital."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Do/Does + sujeito + have to + verbo base?",
+     "exemplo_en": "Do I have to book a table in advance?",
+     "exemplo_pt": "Eu preciso reservar uma mesa com antecedência?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Tradução mental do Leo: have to = 'ter que' (obrigação do mundo: chefe, escola, lei do dia a dia), must = 'dever' (obrigação forte, regra ou algo que você mesmo se impõe). E na terceira pessoa, have to vira has to: 'She has to study'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "A pegadinha clássica do A2: 'don't have to' NÃO é proibição! 'You don't have to come' = você não precisa vir (mas pode). Proibição é 'mustn't': 'You mustn't enter' = entrada proibida."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She must to study for the exam.",
+     "certo": "She must study for the exam.",
+     "explicacao": "Como 'have to' tem 'to', o brasileiro cola um 'to' no must também. 'Must' é verbo modal: conecta direto no verbo, sem 'to'."
+    },
+    {
+     "errado": "He have to work tomorrow.",
+     "certo": "He has to work tomorrow.",
+     "explicacao": "Na terceira pessoa do singular, 'have to' vira 'has to'. O 'tem que' do português não muda, por isso esquecemos."
+    },
+    {
+     "errado": "You mustn't pay, the entrance is free.",
+     "certo": "You don't have to pay, the entrance is free.",
+     "explicacao": "Se a entrada é grátis, pagar não é proibido — só desnecessário. 'Mustn't' diria que pagar é contra as regras!"
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: In Brazil, you ___ vote if you are between 18 and 70.",
+     "opcoes": [
+      "don't have to",
+      "have to",
+      "mustn't"
+     ],
+     "correta": 1,
+     "explicacao": "É uma obrigação legal externa: you have to vote."
+    },
+    {
+     "pergunta": "O museu é gratuito. O que dizer sobre o ingresso?",
+     "opcoes": [
+      "You mustn't buy a ticket.",
+      "You must buy a ticket.",
+      "You don't have to buy a ticket."
+     ],
+     "correta": 2,
+     "explicacao": "Comprar não é necessário, mas também não é proibido: don't have to."
+    },
+    {
+     "pergunta": "Qual frase indica proibição?",
+     "opcoes": [
+      "You mustn't park here.",
+      "You don't have to park here.",
+      "You have to park here."
+     ],
+     "correta": 0,
+     "explicacao": "'Mustn't' expressa proibição: é proibido estacionar aqui."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "You ___ wear a uniform at this school. It's the rule.",
+     "opcoes": [
+      "have to",
+      "has to",
+      "have"
+     ],
+     "correta": 0,
+     "explicacao": "Com \"you\" a obrigação externa usa \"have to\". \"Has to\" é apenas para he/she/it e \"have\" sozinho não indica obrigação."
+    },
+    {
+     "pergunta": "She ___ get up early tomorrow because she has a test.",
+     "opcoes": [
+      "have to",
+      "has to",
+      "must to"
+     ],
+     "correta": 1,
+     "explicacao": "Com \"she\" usamos \"has to\". \"Must to\" é erro clássico: \"must\" nunca vem seguido de \"to\"."
+    },
+    {
+     "pergunta": "You ___ smoke here. It's forbidden.",
+     "opcoes": [
+      "must",
+      "mustn't",
+      "don't have"
+     ],
+     "correta": 1,
+     "explicacao": "Proibição usa \"mustn't\": é proibido fumar. \"Must\" diria o contrário (obrigação de fumar) e \"don't have\" está incompleto sem o \"to\"."
+    },
+    {
+     "pergunta": "We ___ pay to enter the museum. It's free.",
+     "opcoes": [
+      "mustn't",
+      "don't have to",
+      "doesn't have to"
+     ],
+     "correta": 1,
+     "explicacao": "\"Don't have to\" indica ausência de obrigação (não é preciso pagar). \"Mustn't\" significaria que é proibido pagar, mudando o sentido."
+    },
+    {
+     "pergunta": "Does he ___ work on Saturdays?",
+     "opcoes": [
+      "has to",
+      "must",
+      "have to"
+     ],
+     "correta": 2,
+     "explicacao": "Depois do auxiliar \"does\", o verbo volta à forma base: \"have to\". \"Has to\" repetiria a marca de 3ª pessoa que o \"does\" já carrega."
+    },
+    {
+     "pergunta": "I ___ finish this homework tonight. The teacher wants it tomorrow.",
+     "opcoes": [
+      "must",
+      "must to",
+      "musts"
+     ],
+     "correta": 0,
+     "explicacao": "\"Must\" expressa obrigação e vem direto antes do verbo base: \"must finish\". \"Must to\" e \"musts\" não existem, pois modais não aceitam \"to\" nem -s."
+    },
+    {
+     "pergunta": "Escolha a frase correta:",
+     "opcoes": [
+      "He must to study more.",
+      "He musts study more.",
+      "He must study more."
+     ],
+     "correta": 2,
+     "explicacao": "Modais como \"must\" não mudam de forma e não aceitam \"to\": \"He must study\". \"Must to\" é erro típico de brasileiro por influência de \"tem que\"."
+    },
+    {
+     "pergunta": "You ___ be quiet in the library.",
+     "opcoes": [
+      "must to",
+      "must",
+      "have"
+     ],
+     "correta": 1,
+     "explicacao": "\"Must\" + verbo base expressa a regra: \"must be quiet\". \"Must to\" acrescenta um \"to\" que não existe depois de modais."
+    },
+    {
+     "pergunta": "They ___ wear a suit at work; the company is very informal.",
+     "opcoes": [
+      "don't have to",
+      "mustn't",
+      "doesn't have to"
+     ],
+     "correta": 0,
+     "explicacao": "Se a empresa é informal, não há obrigação: \"don't have to wear\". \"Mustn't\" indicaria proibição, e \"doesn't\" não combina com \"they\"."
+    },
+    {
+     "pergunta": "My brother ___ take medicine every day. The doctor said it.",
+     "opcoes": [
+      "have to",
+      "must to",
+      "has to"
+     ],
+     "correta": 2,
+     "explicacao": "Com \"my brother\" (3ª pessoa do singular) usamos \"has to\". \"Have to\" é para I/you/we/they e \"must to\" não existe."
+    }
+   ]
+  }
+ ]
+}

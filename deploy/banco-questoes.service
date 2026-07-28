@@ -1,0 +1,31 @@
+# /etc/systemd/system/banco-questoes.service
+#
+#   systemctl daemon-reload
+#   systemctl enable --now banco-questoes
+#   systemctl status banco-questoes
+#   journalctl -u banco-questoes -f
+
+[Unit]
+Description=Banco de Questoes de Ingles
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/banco-questoes
+EnvironmentFile=/var/www/banco-questoes/.env
+ExecStart=/usr/bin/node src/server.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Endurecimento básico
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/var/www/banco-questoes/dados /var/www/banco-questoes/public/uploads
+
+[Install]
+WantedBy=multi-user.target

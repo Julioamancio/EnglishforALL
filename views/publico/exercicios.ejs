@@ -1,0 +1,50 @@
+<%- include('../partials/cabeca') %>
+
+<section class="hero hero--gram">
+  <div class="hero__int">
+    <h1>Grammar <span class="grifo">Exercises</span></h1>
+    <p class="hero__sub">Testes de consolidação com 10 questões por tópico: clique na alternativa, veja a correção na hora e a explicação em português. Estudou a teoria? Prove.</p>
+  </div>
+</section>
+
+<div class="env">
+  <% if (!niveis.length) { %>
+    <p class="vazio">Os testes estão sendo preparados. Volte em breve!</p>
+  <% } else { %>
+
+  <nav class="niveis-nav" aria-label="Níveis CEFR">
+    <% niveis.forEach(function(n){ %>
+      <a class="niveis-nav__pill niveis-nav__pill--<%= n.nivel.toLowerCase() %>" href="#ex-<%= n.nivel.toLowerCase() %>">
+        <strong><%= n.nivel %></strong> <span><%= n.topicos.length %> testes</span>
+      </a>
+    <% }) %>
+  </nav>
+
+  <% niveis.forEach(function(n){ %>
+  <section class="nivel-bloco" id="ex-<%= n.nivel.toLowerCase() %>" aria-label="Testes nível <%= n.nivel %>">
+    <div class="nivel-bloco__cabeca">
+      <span class="nivel-selo nivel-selo--<%= n.nivel.toLowerCase() %>"><%= n.nivel %></span>
+      <div>
+        <h2>Testes <%= n.nivel %></h2>
+        <p><%= n.topicos.length %> testes &middot; <%= n.topicos.reduce(function(s,t){ return s + t.exercicios.length; }, 0) %> questões com explicação</p>
+      </div>
+    </div>
+    <div class="grade grade--gram">
+      <% n.topicos.forEach(function(t, i){ %>
+        <a class="gcard" href="/exercicios/<%= t.slug %>">
+          <span class="gcard__num"><%= String(i + 1).padStart(2, '0') %></span>
+          <span class="gcard__corpo">
+            <strong><%= t.titulo %></strong>
+            <span class="gcard__sub"><%= t.exercicios.length %> questões &middot; correção na hora</span>
+          </span>
+          <span class="seta" aria-hidden="true">&rarr;</span>
+        </a>
+      <% }) %>
+    </div>
+  </section>
+  <% }) %>
+
+  <% } %>
+</div>
+
+<%- include('../partials/rodape') %>

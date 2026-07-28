@@ -1,0 +1,65 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Montar prova</h1>
+  <p>Filtre, marque as questões e gere o arquivo. O PDF sai pronto para imprimir; o Word sai editável.</p>
+
+  <form class="painel" method="get" action="/prova">
+    <div class="linha linha--3">
+      <div class="campo"><label for="q">Buscar</label><input type="text" id="q" name="q" value="<%= filtros.busca || '' %>"></div>
+      <div class="campo"><label for="tipo">Tipo</label>
+        <select id="tipo" name="tipo"><option value="">Todos</option>
+          <% facetas.tipos.forEach(function(t){ %><option value="<%= t.valor %>"<%= filtros.tipo===t.valor?' selected':'' %>><%= ROTULOS_TIPO[t.valor]||t.valor %></option><% }) %>
+        </select>
+      </div>
+      <div class="campo"><label for="nivel">Nível</label>
+        <select id="nivel" name="nivel"><option value="">Todos</option>
+          <% facetas.niveis.forEach(function(n){ %><option value="<%= n.valor %>"<%= filtros.nivel===n.valor?' selected':'' %>><%= n.valor %></option><% }) %>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn--sec" type="submit">Filtrar</button>
+  </form>
+
+  <form method="post" action="/prova/pdf">
+    <div class="painel">
+      <h2>Cabeçalho da prova</h2>
+      <div class="linha linha--3">
+        <div class="campo"><label for="escola">Escola</label><input type="text" id="escola" name="escola" placeholder="Colégio Santo Antônio"></div>
+        <div class="campo"><label for="titulo_prova">Título</label><input type="text" id="titulo_prova" name="titulo_prova" value="Prova de Língua Inglesa"></div>
+        <div class="campo"><label for="turma">Turma / bimestre</label><input type="text" id="turma" name="turma" placeholder="3º ano — 3º bimestre"></div>
+      </div>
+      <label style="display:flex;gap:.5rem;align-items:center;font-size:.92rem">
+        <input type="checkbox" name="com_gabarito" value="1" checked> Incluir folha de gabarito comentado
+      </label>
+    </div>
+
+    <div class="painel">
+      <h2>Questões (<%= questoes.length %>)</h2>
+      <% if (!questoes.length) { %>
+        <p class="vazio">Nenhuma questão com esses filtros.</p>
+      <% } else { %>
+        <% questoes.forEach(function(q){ %>
+          <label class="escolha">
+            <input type="checkbox" name="questoes" value="<%= q.id %>">
+            <span>
+              <strong><%= q.titulo %></strong>
+              <span class="card__meta" style="margin-top:.3rem">
+                <span class="card__tag card__tag--nivel"><%= q.nivel_cefr %></span>
+                <span class="card__tag"><%= ROTULOS_TIPO[q.tipo]||q.tipo %></span>
+                <span class="card__tag"><%= q.genero_textual %></span>
+                <% if (q.imagem) { %><span class="card__tag">com imagem</span><% } %>
+                <% if (!q.publicada) { %><span class="selo selo--rascunho">rascunho</span><% } %>
+              </span>
+            </span>
+          </label>
+        <% }) %>
+      <% } %>
+    </div>
+
+    <div class="acoes">
+      <button class="btn" type="submit" formaction="/prova/pdf">Gerar PDF</button>
+      <button class="btn btn--sec" type="submit" formaction="/prova/docx">Gerar Word</button>
+    </div>
+  </form>
+</div>
+<%- include('../partials/rodape') %>

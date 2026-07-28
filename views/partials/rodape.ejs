@@ -1,0 +1,33 @@
+</main>
+<footer class="rodape">
+  <div class="env">
+    <div class="rodape__grade">
+      <div>
+        <h3>English for ALL</h3>
+        <p>Banco de questões de inglês estilo ENEM e vestibulares com gabarito comentado, e guia de gramática por nível CEFR (A1–C2). Os textos-base pertencem aos veículos citados em cada questão.</p>
+      </div>
+      <div>
+        <h3>Navegar</h3>
+        <ul>
+          <li><a href="/questoes">Todas as questões</a></li>
+          <li><a href="/gramatica">Grammar guide (A1–C2)</a></li>
+          <li><a href="/montar-prova">Montar prova em PDF</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Por nível</h3>
+        <ul>
+          <li><a href="/questoes?nivel=B1">Questões nível B1</a></li>
+          <li><a href="/questoes?nivel=B2">Questões nível B2</a></li>
+          <li><a href="/questoes?tipo=interpretacao">Interpretação de texto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape__fim">
+      <span>English for ALL — Language &amp; Learning Community.</span>
+      <% if (logado) { %><form method="post" action="/admin/sair" style="margin:0"><button class="btn btn--sec btn--pequeno" type="submit">Sair do painel</button></form><% } %>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

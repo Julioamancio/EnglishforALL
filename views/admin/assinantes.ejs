@@ -1,0 +1,17 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>E-mails capturados</h1>
+  <p><%= assinantes.length %> no total.</p>
+  <div class="painel rolagem">
+    <% if (!assinantes.length) { %><p class="vazio">Nenhum e-mail ainda.</p><% } else { %>
+    <table class="tabela">
+      <thead><tr><th>E-mail</th><th>Origem</th><th>Data</th></tr></thead>
+      <tbody>
+        <% assinantes.forEach(function(a){ %><tr><td><%= a.email %></td><td><%= a.origem %></td><td><%= a.criado_em %></td></tr><% }) %>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+  <a class="btn btn--sec" href="/admin">Voltar</a>
+</div>
+<%- include('../partials/rodape') %>

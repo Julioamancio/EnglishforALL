@@ -1,0 +1,98 @@
+<%- include('../partials/cabeca') %>
+<div class="env" style="padding-top:2rem">
+  <h1><%= title %></h1>
+
+  <form class="toolbar" method="get" action="/questoes">
+    <div class="busca">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="q" name="q" value="<%= filtros.busca || '' %>" placeholder="Filtrar por palavra, título ou tema…" aria-label="Buscar questões">
+      <button class="btn btn--pequeno" type="submit">Buscar</button>
+    </div>
+
+    <div class="toolbar__selects">
+      <div class="campo">
+        <label for="tipo">Tipo</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todos</option>
+          <% facetas.tipos.forEach(function(t){ %>
+            <option value="<%= t.valor %>"<%= filtros.tipo === t.valor ? ' selected' : '' %>><%= ROTULOS_TIPO[t.valor] || t.valor %> (<%= t.total %>)</option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="nivel">Nível CEFR</label>
+        <select id="nivel" name="nivel">
+          <option value="">Todos</option>
+          <% facetas.niveis.forEach(function(n){ %>
+            <option value="<%= n.valor %>"<%= filtros.nivel === n.valor ? ' selected' : '' %>><%= n.valor %> (<%= n.total %>)</option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="genero">Gênero textual</label>
+        <select id="genero" name="genero">
+          <option value="">Todos</option>
+          <% facetas.generos.forEach(function(g){ %>
+            <option value="<%= g.valor %>"<%= filtros.genero === g.valor ? ' selected' : '' %>><%= rotuloGenero(g.valor) %> (<%= g.total %>)</option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="instituicao">Instituição</label>
+        <select id="instituicao" name="instituicao">
+          <option value="">Todas</option>
+          <% facetas.instituicoes.forEach(function(i){ %>
+            <option value="<%= i.valor %>"<%= filtros.instituicao === i.valor ? ' selected' : '' %>><%= i.valor %> (<%= i.total %>)</option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="ano">Ano</label>
+        <select id="ano" name="ano">
+          <option value="">Todos</option>
+          <% facetas.anos.forEach(function(a){ %>
+            <option value="<%= a.valor %>"<%= filtros.ano === a.valor ? ' selected' : '' %>><%= a.valor %> (<%= a.total %>)</option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="tema">Tema</label>
+        <select id="tema" name="tema">
+          <option value="">Todos</option>
+          <% facetas.temas.forEach(function(t){ %>
+            <option value="<%= t.valor %>"<%= filtros.tema === t.valor ? ' selected' : '' %>><%= t.valor %> (<%= t.total %>)</option>
+          <% }) %>
+        </select>
+      </div>
+    </div>
+
+    <div class="toolbar__rodape">
+      <p class="resultado-n"><strong><%= questoes.length %></strong> questão<%= questoes.length === 1 ? '' : 'ões' %> encontrada<%= questoes.length === 1 ? '' : 's' %></p>
+
+      <% var temFiltro = filtros.tipo || filtros.nivel || filtros.genero || filtros.tema || filtros.instituicao || filtros.ano || filtros.busca; %>
+      <% if (temFiltro) { %>
+      <% var semBusca = [filtros.tipo && 'tipo='+filtros.tipo, filtros.nivel && 'nivel='+filtros.nivel, filtros.genero && 'genero='+encodeURIComponent(filtros.genero), filtros.tema && 'tema='+encodeURIComponent(filtros.tema), filtros.instituicao && 'instituicao='+encodeURIComponent(filtros.instituicao), filtros.ano && 'ano='+filtros.ano].filter(Boolean).join('&'); %>
+      <div class="filtros-ativos">
+        <span class="rotulo">Filtros:</span>
+        <% if (filtros.busca) { %><a class="chip chip--ativo" href="/questoes<%= semBusca ? '?' + semBusca : '' %>">"<%= filtros.busca %>" <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <% if (filtros.tipo) { %><a class="chip chip--ativo" href="/questoes"><%= ROTULOS_TIPO[filtros.tipo] || filtros.tipo %> <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <% if (filtros.nivel) { %><a class="chip chip--ativo" href="/questoes"><%= filtros.nivel %> <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <% if (filtros.genero) { %><a class="chip chip--ativo" href="/questoes"><%= rotuloGenero(filtros.genero) %> <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <% if (filtros.tema) { %><a class="chip chip--ativo" href="/questoes"><%= filtros.tema %> <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <% if (filtros.instituicao) { %><a class="chip chip--ativo" href="/questoes"><%= filtros.instituicao %> <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <% if (filtros.ano) { %><a class="chip chip--ativo" href="/questoes"><%= filtros.ano %> <span class="chip__x" aria-hidden="true">&times;</span></a><% } %>
+        <a class="chip" href="/questoes">Limpar tudo</a>
+      </div>
+      <% } %>
+    </div>
+  </form>
+
+  <% if (!questoes.length) { %>
+    <p class="vazio">Nenhuma questão com esses filtros. <a href="/questoes">Limpar filtros</a>.</p>
+  <% } else { %>
+    <div class="grade">
+      <% questoes.forEach(function(q){ %><%- include('../partials/card', { q: q, ROTULOS_TIPO: ROTULOS_TIPO }) %><% }) %>
+    </div>
+  <% } %>
+</div>
+<%- include('../partials/rodape') %>

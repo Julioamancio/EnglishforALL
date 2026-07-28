@@ -1,0 +1,76 @@
+<%- include('../partials/cabeca') %>
+<section class="hero">
+  <div class="hero__int">
+    <h1>Questões de inglês do ENEM com <span class="grifo">gabarito comentado</span></h1>
+    <p class="hero__sub">Texto autêntico com fonte citada, cinco alternativas equilibradas e um comentário explicando por que cada distrator falha. Resolva online com correção na hora ou monte sua prova em PDF.</p>
+
+    <form class="busca" method="get" action="/questoes" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" name="q" placeholder="Buscar por palavra, título ou tema…" aria-label="Buscar questões">
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+
+    <div class="acoes">
+      <a class="btn" href="/questoes">Ver todas as questões</a>
+      <a class="btn btn--sec" href="/montar-prova">Montar prova em PDF</a>
+    </div>
+  </div>
+</section>
+
+<div class="env">
+  <% if (facetas.tipos.length || facetas.niveis.length || facetas.generos.length) { %>
+  <section class="explorar" aria-label="Explorar o banco">
+    <div class="explorar__cabeca">
+      <h2>Explore por categoria</h2>
+      <span class="explorar__total"><strong><%= total %></strong> questões no acervo</span>
+    </div>
+    <%
+      var seta = '<svg class="menu__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+      var grupos = [
+        { rotulo: 'Tipo de questão', param: 'tipo',   itens: facetas.tipos,   nome: function(v){ return ROTULOS_TIPO[v] || v; } },
+        { rotulo: 'Nível CEFR',      param: 'nivel',  itens: facetas.niveis,  nome: function(v){ return v; } },
+        { rotulo: 'Gênero textual',  param: 'genero', itens: facetas.generos, nome: rotuloGenero },
+        { rotulo: 'Instituição',     param: 'instituicao', itens: facetas.instituicoes, nome: function(v){ return v; } },
+        { rotulo: 'Ano',             param: 'ano',    itens: facetas.anos,    nome: function(v){ return v; } }
+      ];
+    %>
+    <div class="menus">
+      <% grupos.forEach(function(gr){ if (!gr.itens.length) return; %>
+      <details class="menu">
+        <summary><%= gr.rotulo %> <span class="menu__badge"><%= gr.itens.length %></span> <%- seta %></summary>
+        <ul class="menu__painel">
+          <% gr.itens.forEach(function(it){ %>
+            <li><a href="/questoes?<%= gr.param %>=<%= encodeURIComponent(it.valor) %>"><span><%= gr.nome(it.valor) %></span><span class="menu__n"><%= it.total %></span></a></li>
+          <% }) %>
+        </ul>
+      </details>
+      <% }) %>
+    </div>
+
+    <% var populares = (facetas.generos || []).slice().sort(function(a,b){ return b.total - a.total; }).slice(0, 5); %>
+    <% if (populares.length) { %>
+    <p class="explorar__populares">
+      <span class="rotulo">Mais procurados:</span>
+      <% populares.forEach(function(g){ %>
+        <a class="chip" href="/questoes?genero=<%= encodeURIComponent(g.valor) %>"><%= rotuloGenero(g.valor) %> <span class="chip__n"><%= g.total %></span></a>
+      <% }) %>
+    </p>
+    <% } %>
+  </section>
+  <% } %>
+
+  <section class="secao">
+    <div class="secao__cabeca">
+      <h2>Questões recentes</h2>
+      <a href="/questoes">Ver todas &rarr;</a>
+    </div>
+    <% if (!recentes.length) { %>
+      <p class="vazio">Nenhuma questão publicada ainda.</p>
+    <% } else { %>
+      <div class="grade">
+        <% recentes.forEach(function(q){ %><%- include('../partials/card', { q: q, ROTULOS_TIPO: ROTULOS_TIPO }) %><% }) %>
+      </div>
+    <% } %>
+  </section>
+</div>
+<%- include('../partials/rodape') %>

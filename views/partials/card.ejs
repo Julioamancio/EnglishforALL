@@ -1,0 +1,14 @@
+<article class="card">
+  <% if (q.imagem) { %><img class="card__miniatura" src="<%= q.imagem %>" alt="<%= q.imagem_alt || '' %>" loading="lazy"><% } %>
+  <p class="card__meta">
+    <span class="card__tag card__tag--nivel"><%= q.nivel_cefr %></span>
+    <span class="card__tag"><%= ROTULOS_TIPO[q.tipo] || q.tipo %></span>
+    <span class="card__tag"><%= typeof rotuloGenero === 'function' ? rotuloGenero(q.genero_textual) : q.genero_textual %></span>
+  </p>
+  <a class="card__titulo" href="/questoes/<%= q.slug %>"><%= q.titulo %></a>
+  <% if (!q.imagem && q.texto_base && q.texto_base.trim()) { %>
+    <blockquote class="card__texto"><%= q.texto_base.trim().replace(/\s+/g, ' ').slice(0, 260) %>&hellip;</blockquote>
+  <% } %>
+  <% if (q.enunciado) { %><p class="card__trecho"><%= q.enunciado %></p><% } %>
+  <p class="card__rodape"><span>Resolver questão</span> <span class="seta" aria-hidden="true">&rarr;</span></p>
+</article>

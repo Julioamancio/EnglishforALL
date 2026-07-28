@@ -1,0 +1,2315 @@
+{
+ "nivel": "B2",
+ "titulo": "B2 — Independência real",
+ "descricao": "No B2 você para de traduzir na cabeça: aqui entram as estruturas que fazem seu inglês soar natural, preciso e adulto.",
+ "topicos": [
+  {
+   "slug": "third-conditional",
+   "titulo": "Third Conditional",
+   "subtitulo": "O passado que não aconteceu (mas quase)",
+   "resumo": "O third conditional fala de situações imaginárias no passado: coisas que não aconteceram e suas consequências, que também não aconteceram. É a estrutura do arrependimento, do alívio e do famoso 'e se...'. Sem ele, você não consegue contar direito como as coisas quase deram errado (ou quase deram certo).",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, how do I say 'se eu tivesse estudado, teria passado' in English?",
+     "pt": "Sofia, como eu digo 'se eu tivesse estudado, teria passado' em inglês?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Great question! You say: 'If I had studied, I would have passed.'",
+     "pt": "Ótima pergunta! Você diz: 'If I had studied, I would have passed.'"
+    },
+    {
+     "persona": "max",
+     "en": "Easy! If I would have studied, I would have passed!",
+     "pt": "Fácil! If I would have studied, I would have passed!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost, Max! No 'would' in the if-clause. It's 'if I had studied'.",
+     "pt": "Quase, Max! Nada de 'would' na oração com if. É 'if I had studied'."
+    },
+    {
+     "persona": "leo",
+     "en": "Trick from the fox: the 'if' part is pure past perfect, and the 'would' only shows up in the other half.",
+     "pt": "Macete da raposa: a parte do 'if' é past perfect puro, e o 'would' só aparece na outra metade."
+    },
+    {
+     "persona": "maya",
+     "en": "Got it! If I had known that before, I would have made fewer mistakes!",
+     "pt": "Entendi! Se eu soubesse disso antes, teria errado menos!"
+    }
+   ],
+   "quando_usar": [
+    "Para falar de arrependimento sobre o passado: \"If I had saved money, I would have traveled more.\"",
+    "Para expressar alívio por algo que não aconteceu: \"If we had taken that flight, we would have missed the wedding.\"",
+    "Para criticar ou analisar decisões passadas: \"If they had listened to the engineer, the bridge wouldn't have collapsed.\"",
+    "Para imaginar finais alternativos de uma história: \"If she had accepted the job, her life would have been completely different.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Afirmativa",
+     "estrutura": "If + sujeito + had + particípio, sujeito + would have + particípio",
+     "exemplo_en": "If you had called me, I would have helped you.",
+     "exemplo_pt": "Se você tivesse me ligado, eu teria ajudado você."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "If + sujeito + hadn't + particípio, sujeito + wouldn't have + particípio",
+     "exemplo_en": "If it hadn't rained, we wouldn't have canceled the picnic.",
+     "exemplo_pt": "Se não tivesse chovido, não teríamos cancelado o piquenique."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "What/How + would + sujeito + have + particípio + if...?",
+     "exemplo_en": "What would you have done if you had lost your passport?",
+     "exemplo_pt": "O que você teria feito se tivesse perdido o passaporte?"
+    },
+    {
+     "rotulo": "Variações",
+     "estrutura": "could have / might have no lugar de would have",
+     "exemplo_en": "If I had left earlier, I might have caught the train.",
+     "exemplo_pt": "Se eu tivesse saído mais cedo, talvez tivesse pegado o trem."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Na fala, os nativos contraem tudo: 'If I'd known, I would've told you.' Treine ouvir e falar 'would've' (soa como 'wudav') — é assim que a frase aparece na vida real."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'Had' aparece duas vezes com funções diferentes: 'If I had had time...' está correto! O primeiro 'had' é o auxiliar, o segundo é o verbo 'ter'. Estranho de ver, normal de usar."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "If I would have known, I would have called you.",
+     "certo": "If I had known, I would have called you.",
+     "explicacao": "Brasileiro adora colocar 'would' nas duas metades, mas a oração com 'if' usa apenas past perfect, nunca 'would have'."
+    },
+    {
+     "errado": "If she had studied, she would pass the exam.",
+     "certo": "If she had studied, she would have passed the exam.",
+     "explicacao": "Se a condição é passada e o resultado também é passado, as duas partes precisam da estrutura completa: 'would have + particípio'."
+    },
+    {
+     "errado": "If we had went by car, we would have arrived earlier.",
+     "certo": "If we had gone by car, we would have arrived earlier.",
+     "explicacao": "Depois de 'had' entra o particípio (gone), não o passado simples (went). É o erro clássico de misturar as formas do verbo irregular."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: If they ___ the map, they wouldn't have gotten lost.",
+     "opcoes": [
+      "would check",
+      "had checked",
+      "checked"
+     ],
+     "correta": 1,
+     "explicacao": "Na oração com 'if' do third conditional usamos past perfect: 'had checked'."
+    },
+    {
+     "pergunta": "Qual frase expressa um arrependimento sobre o passado?",
+     "opcoes": [
+      "If I had accepted the offer, I would have moved to Canada.",
+      "If I accept the offer, I will move to Canada.",
+      "If I accepted the offer, I would move to Canada."
+     ],
+     "correta": 0,
+     "explicacao": "Third conditional (had accepted / would have moved) fala de um passado que não aconteceu — a cara do arrependimento."
+    },
+    {
+     "pergunta": "Complete: She ___ the deadline if her computer hadn't crashed.",
+     "opcoes": [
+      "would meet",
+      "will have met",
+      "would have met"
+     ],
+     "correta": 2,
+     "explicacao": "Resultado imaginário no passado pede 'would have + particípio': 'would have met'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "If she ___ harder, she would have passed the exam.",
+     "opcoes": [
+      "had studied",
+      "studied",
+      "would study"
+     ],
+     "correta": 0,
+     "explicacao": "Na third conditional, a condição usa past perfect (had studied). 'Studied' é da second conditional, que fala de presente hipotético, não de passado."
+    },
+    {
+     "pergunta": "They would have arrived on time if they ___ the earlier train.",
+     "opcoes": [
+      "took",
+      "would take",
+      "had taken"
+     ],
+     "correta": 2,
+     "explicacao": "A oração com 'if' na third conditional pede past perfect (had taken). O erro comum é usar 'would' dentro da oração condicional."
+    },
+    {
+     "pergunta": "If I had known about the meeting, I ___.",
+     "opcoes": [
+      "would attend",
+      "would have attended",
+      "had attended"
+     ],
+     "correta": 1,
+     "explicacao": "O resultado irreal no passado usa 'would have + particípio'. 'Would attend' indicaria resultado no presente, não no passado."
+    },
+    {
+     "pergunta": "We ___ lost if we had brought the map.",
+     "opcoes": [
+      "wouldn't have got",
+      "wouldn't get",
+      "hadn't got"
+     ],
+     "correta": 0,
+     "explicacao": "A oração principal da third conditional usa 'would (not) have + particípio'. 'Hadn't got' é a forma da oração com 'if', não do resultado."
+    },
+    {
+     "pergunta": "If the company had invested in technology, it ___ so many clients.",
+     "opcoes": [
+      "wouldn't lose",
+      "hadn't lost",
+      "wouldn't have lost"
+     ],
+     "correta": 2,
+     "explicacao": "Resultado hipotético no passado: 'wouldn't have lost'. 'Wouldn't lose' misturaria com a second conditional e mudaria o tempo para o presente."
+    },
+    {
+     "pergunta": "She would have called you if she ___ your number.",
+     "opcoes": [
+      "would have had",
+      "has had",
+      "had had"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de 'if' na third conditional usa-se past perfect: 'had had' (ter tido). O brasileiro tende a estranhar o 'had had', mas ele é correto: had + particípio de have."
+    },
+    {
+     "pergunta": "If you ___ me the truth, I wouldn't have been so angry.",
+     "opcoes": [
+      "had told",
+      "told",
+      "would have told"
+     ],
+     "correta": 0,
+     "explicacao": "Condição irreal no passado pede past perfect (had told). 'Would have told' nunca vai na oração iniciada por 'if'."
+    },
+    {
+     "pergunta": "He ___ the job if he had prepared for the interview.",
+     "opcoes": [
+      "would get",
+      "might have got",
+      "might get"
+     ],
+     "correta": 1,
+     "explicacao": "Com resultado passado incerto usa-se 'might have + particípio'. 'Might get' e 'would get' apontam para o presente/futuro, incompatíveis com 'had prepared'."
+    },
+    {
+     "pergunta": "If it ___ so much, the match wouldn't have been cancelled.",
+     "opcoes": [
+      "didn't rain",
+      "hadn't rained",
+      "wouldn't rain"
+     ],
+     "correta": 1,
+     "explicacao": "A condição irreal no passado usa past perfect negativo: 'hadn't rained'. 'Didn't rain' é passado simples e formaria second conditional, não third."
+    },
+    {
+     "pergunta": "I would never have met her if I ___ to that party.",
+     "opcoes": [
+      "hadn't gone",
+      "didn't go",
+      "wouldn't go"
+     ],
+     "correta": 0,
+     "explicacao": "Third conditional: 'if + past perfect' (hadn't gone). 'Didn't go' é o erro típico de traduzir direto do português 'se eu não fosse'."
+    }
+   ]
+  },
+  {
+   "slug": "mixed-conditionals",
+   "titulo": "Mixed conditionals",
+   "subtitulo": "Quando o passado invade o presente",
+   "resumo": "Os mixed conditionals misturam tempos: uma condição no passado com resultado no presente, ou uma condição permanente com resultado no passado. É a estrutura para dizer 'se eu tivesse feito X, hoje minha vida seria Y'. Parece complicado, mas é só combinar peças que você já conhece do second e do third conditional.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, can I mix conditionals? Like... the mistake was in the past, but the problem is now?",
+     "pt": "Sofia, posso misturar condicionais? Tipo... o erro foi no passado, mas o problema é agora?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Exactly! 'If I had gone to bed early, I wouldn't be so tired now.' Past condition, present result.",
+     "pt": "Exatamente! 'If I had gone to bed early, I wouldn't be so tired now.' Condição no passado, resultado no presente."
+    },
+    {
+     "persona": "max",
+     "en": "So I can say: If I had gone to bed early, I wouldn't have been tired now?",
+     "pt": "Então posso dizer: If I had gone to bed early, I wouldn't have been tired now?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful! If the result is NOW, drop the 'have': 'I wouldn't be tired now.'",
+     "pt": "Cuidado! Se o resultado é AGORA, tire o 'have': 'I wouldn't be tired now.'"
+    },
+    {
+     "persona": "leo",
+     "en": "Fox rule: 'have' means past. Result in the present? No 'have' after would. Simple as that.",
+     "pt": "Regra da raposa: 'have' significa passado. Resultado no presente? Sem 'have' depois do would. Simples assim."
+    }
+   ],
+   "quando_usar": [
+    "Para mostrar como uma decisão passada afeta o presente: \"If I had learned English as a kid, I would speak fluently today.\"",
+    "Para explicar uma situação atual causada por algo que não aconteceu: \"If we had bought that apartment, we wouldn't be paying rent now.\"",
+    "Para conectar uma característica permanente a um evento passado: \"If I were more organized, I wouldn't have missed the meeting.\"",
+    "Para reclamar (com estilo) das consequências de escolhas antigas: \"If you had charged your phone, we wouldn't be lost right now.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Passado → presente",
+     "estrutura": "If + past perfect, sujeito + would + verbo base (agora)",
+     "exemplo_en": "If she had taken the job, she would live in London now.",
+     "exemplo_pt": "Se ela tivesse aceitado o emprego, moraria em Londres agora."
+    },
+    {
+     "rotulo": "Presente → passado",
+     "estrutura": "If + past simple (condição geral), sujeito + would have + particípio",
+     "exemplo_en": "If he were more careful, he wouldn't have broken the vase.",
+     "exemplo_pt": "Se ele fosse mais cuidadoso, não teria quebrado o vaso."
+    },
+    {
+     "rotulo": "Negativa",
+     "estrutura": "If + hadn't + particípio, sujeito + wouldn't + verbo base",
+     "exemplo_en": "If they hadn't argued, they would still be friends.",
+     "exemplo_pt": "Se eles não tivessem brigado, ainda seriam amigos."
+    },
+    {
+     "rotulo": "Com marcador de tempo",
+     "estrutura": "... + now / today / still (deixa o presente explícito)",
+     "exemplo_en": "If I had saved money, I would be on a beach today.",
+     "exemplo_pt": "Se eu tivesse economizado, estaria numa praia hoje."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Palavras como 'now', 'today' e 'still' são suas aliadas: elas deixam claro que o resultado é presente e ajudam você a lembrar de usar 'would + verbo' sem o 'have'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Antes de montar a frase, pergunte-se: QUANDO foi a condição e QUANDO é o resultado? Cada metade da frase segue o seu próprio tempo — é isso que 'mixed' significa."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "If I had studied medicine, I would have been a doctor now.",
+     "certo": "If I had studied medicine, I would be a doctor now.",
+     "explicacao": "Com 'now' o resultado é presente, então é 'would be', sem 'have'. O 'would have been' jogaria o resultado de volta para o passado."
+    },
+    {
+     "errado": "If I would be rich, I would have bought that house.",
+     "certo": "If I were rich, I would have bought that house.",
+     "explicacao": "Mesmo nos mixed conditionals, 'would' continua proibido na oração com 'if'. Condição presente usa past simple: 'if I were'."
+    },
+    {
+     "errado": "If she didn't miss the flight, she would be here now.",
+     "certo": "If she hadn't missed the flight, she would be here now.",
+     "explicacao": "A condição (perder o voo) aconteceu no passado, então precisa de past perfect: 'hadn't missed', não 'didn't miss'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: If I ___ that course last year, I ___ a better salary today.",
+     "opcoes": [
+      "had taken / would have",
+      "took / would have had",
+      "had taken / would have had"
+     ],
+     "correta": 0,
+     "explicacao": "Condição no passado (had taken) + resultado no presente (would have a better salary today, sem 'have' extra de passado)."
+    },
+    {
+     "pergunta": "Qual frase liga uma característica permanente a um erro no passado?",
+     "opcoes": [
+      "If he had been taller, he would play basketball.",
+      "If he weren't so shy, he would have talked to her at the party.",
+      "If he isn't shy, he will talk to her."
+     ],
+     "correta": 1,
+     "explicacao": "'If he weren't so shy' (característica atual/permanente) + 'would have talked' (resultado no passado): mixed conditional clássico."
+    },
+    {
+     "pergunta": "Complete: We ___ stuck in traffic now if you ___ earlier.",
+     "opcoes": [
+      "wouldn't have been / left",
+      "won't be / had left",
+      "wouldn't be / had left"
+     ],
+     "correta": 2,
+     "explicacao": "Resultado presente ('now') pede 'wouldn't be'; condição passada pede 'had left'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "If I had accepted that job in London, I ___ there now.",
+     "opcoes": [
+      "would live",
+      "would have lived",
+      "lived"
+     ],
+     "correta": 0,
+     "explicacao": "Condição passada com resultado presente ('now') pede 'would + verbo'. 'Would have lived' colocaria o resultado também no passado."
+    },
+    {
+     "pergunta": "If she ___ afraid of flying, she would have come with us to Japan.",
+     "opcoes": [
+      "weren't",
+      "isn't",
+      "wouldn't be"
+     ],
+     "correta": 0,
+     "explicacao": "O medo é uma característica presente/permanente e a condição é hipotética, então usa-se 'weren't'; o resultado ficou no passado (would have come). 'Isn't' mantém o presente real, sem o recuo hipotético."
+    },
+    {
+     "pergunta": "If he ___ so lazy, he would have finished the project by now.",
+     "opcoes": [
+      "wasn't being",
+      "weren't",
+      "wouldn't be"
+     ],
+     "correta": 1,
+     "explicacao": "Traço de personalidade presente ('so lazy') usa past simple hipotético 'weren't', com resultado no passado. 'Wouldn't be' nunca aparece na oração iniciada por 'if'."
+    },
+    {
+     "pergunta": "We would be rich now if we ___ that apartment in 2010.",
+     "opcoes": [
+      "bought",
+      "would buy",
+      "had bought"
+     ],
+     "correta": 2,
+     "explicacao": "A condição está no passado (2010), então pede past perfect 'had bought', mesmo com resultado presente. 'Bought' é o erro de usar second conditional para um fato já ocorrido."
+    },
+    {
+     "pergunta": "If you had gone to bed earlier, you ___ so tired now.",
+     "opcoes": [
+      "wouldn't have been",
+      "wouldn't be",
+      "weren't"
+     ],
+     "correta": 1,
+     "explicacao": "O resultado é presente ('now'), então 'wouldn't be'. 'Wouldn't have been' jogaria a consequência para o passado, contradizendo o 'now'."
+    },
+    {
+     "pergunta": "If I ___ better at math, I would have chosen engineering.",
+     "opcoes": [
+      "am",
+      "would be",
+      "were"
+     ],
+     "correta": 2,
+     "explicacao": "Habilidade vista como característica presente usa 'were' (subjuntivo), com resultado no passado. 'Would be' nunca aparece na oração com 'if', e 'am' não faz o recuo hipotético."
+    },
+    {
+     "pergunta": "She ___ the manager today if she hadn't turned down the promotion.",
+     "opcoes": [
+      "would have been",
+      "would be",
+      "were"
+     ],
+     "correta": 1,
+     "explicacao": "'Today' indica resultado presente: 'would be'. 'Would have been' descreveria um resultado que já acabou, não a situação atual."
+    },
+    {
+     "pergunta": "If they spoke English fluently, they ___ hired last month.",
+     "opcoes": [
+      "would have been",
+      "would be",
+      "had been"
+     ],
+     "correta": 0,
+     "explicacao": "Condição presente (não falam fluentemente) com resultado passado ('last month') pede 'would have been hired'. 'Would be' ignoraria a marca de passado."
+    },
+    {
+     "pergunta": "If we hadn't missed our flight, we ___ on the beach right now.",
+     "opcoes": [
+      "would have relaxed",
+      "were relaxing",
+      "would be relaxing"
+     ],
+     "correta": 2,
+     "explicacao": "Resultado em andamento no presente ('right now') usa 'would be + -ing'. 'Would have relaxed' colocaria tudo no passado."
+    },
+    {
+     "pergunta": "He wouldn't be in prison today if he ___ that contract.",
+     "opcoes": [
+      "hadn't signed",
+      "didn't sign",
+      "wouldn't have signed"
+     ],
+     "correta": 0,
+     "explicacao": "A assinatura foi um evento passado, então 'hadn't signed'. 'Didn't sign' é a tradução literal de 'não assinasse', erro comum de quem pensa em português."
+    }
+   ]
+  },
+  {
+   "slug": "past-perfect",
+   "titulo": "Past Perfect: simple & continuous",
+   "subtitulo": "O passado antes do passado",
+   "resumo": "O past perfect organiza a linha do tempo: quando você conta uma história no passado e precisa mencionar algo ainda mais antigo, é ele que entra em cena. A versão continuous (had been doing) destaca a duração da ação anterior. Dominar os dois deixa suas narrativas claras e sem confusão de 'o que veio primeiro'.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, why do people say 'the train had left' instead of just 'the train left'?",
+     "pt": "Sofia, por que as pessoas dizem 'the train had left' em vez de só 'the train left'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Because it happened BEFORE another past moment: 'When I arrived, the train had already left.'",
+     "pt": "Porque aconteceu ANTES de outro momento passado: 'Quando eu cheguei, o trem já tinha partido.'"
+    },
+    {
+     "persona": "max",
+     "en": "When I had arrived at the station, the train left.",
+     "pt": "When I had arrived at the station, the train left."
+    },
+    {
+     "persona": "sofia",
+     "en": "Inverted, Max! The earlier action takes the past perfect: 'When I arrived, the train had left.'",
+     "pt": "Invertido, Max! A ação mais antiga é que leva o past perfect: 'When I arrived, the train had left.'"
+    },
+    {
+     "persona": "leo",
+     "en": "Think of it like 'tinha feito' in Portuguese. 'Tinha saído' = 'had left'. Your own language already does this!",
+     "pt": "Pensa no 'tinha feito' do português. 'Tinha saído' = 'had left'. Sua própria língua já faz isso!"
+    },
+    {
+     "persona": "maya",
+     "en": "And 'had been waiting' is like 'estava esperando fazia tempo', right?",
+     "pt": "E 'had been waiting' é tipo 'estava esperando fazia tempo', né?"
+    }
+   ],
+   "quando_usar": [
+    "Para deixar claro qual ação veio primeiro no passado: \"When we got to the cinema, the movie had already started.\"",
+    "Para dar contexto ou explicação em narrativas: \"She was exhausted because she had worked a double shift.\"",
+    "Com o continuous, para destacar a duração antes de um momento passado: \"They had been dating for five years when they got married.\"",
+    "Depois de verbos como realized, remembered, found out: \"I realized I had forgotten my wallet at home.\"",
+    "Em reported speech e conditionals, onde ele aparece naturalmente: \"He said he had never seen snow before.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Simple — afirmativa",
+     "estrutura": "sujeito + had + particípio",
+     "exemplo_en": "By 10 a.m., she had finished the report.",
+     "exemplo_pt": "Às 10 da manhã, ela já tinha terminado o relatório."
+    },
+    {
+     "rotulo": "Simple — negativa",
+     "estrutura": "sujeito + hadn't + particípio",
+     "exemplo_en": "I hadn't heard that song until yesterday.",
+     "exemplo_pt": "Eu não tinha ouvido aquela música até ontem."
+    },
+    {
+     "rotulo": "Continuous",
+     "estrutura": "sujeito + had been + verbo-ing",
+     "exemplo_en": "He had been driving for six hours when the car broke down.",
+     "exemplo_pt": "Ele estava dirigindo havia seis horas quando o carro quebrou."
+    },
+    {
+     "rotulo": "Pergunta",
+     "estrutura": "Had + sujeito + particípio...?",
+     "exemplo_en": "Had you ever traveled abroad before that trip?",
+     "exemplo_pt": "Você já tinha viajado para o exterior antes daquela viagem?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Palavras-âncora do past perfect: already, just, never, by the time, until then. Se a frase tem duas ações passadas e uma delas vem com 'already', é quase certo que ela leva 'had'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Não use past perfect em tudo! Se os eventos aparecem na ordem em que aconteceram, o past simple resolve: 'I woke up, had breakfast and left.' O past perfect só entra quando a ordem se inverte."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "When the police arrived, the thief had ran away.",
+     "certo": "When the police arrived, the thief had run away.",
+     "explicacao": "Depois de 'had' vem o particípio (run), não o passado (ran). Verbos irregulares pedem atenção dobrada."
+    },
+    {
+     "errado": "I had been knowing him for years before we worked together.",
+     "certo": "I had known him for years before we worked together.",
+     "explicacao": "Verbos de estado como know, love, believe não vão para o continuous. Duração com esses verbos usa o past perfect simple."
+    },
+    {
+     "errado": "She had finished the project yesterday.",
+     "certo": "She finished the project yesterday.",
+     "explicacao": "Se há só um evento passado com tempo definido, use past simple. O past perfect precisa de outro momento passado como referência."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: By the time we arrived, the concert ___.",
+     "opcoes": [
+      "already started",
+      "had already started",
+      "has already started"
+     ],
+     "correta": 1,
+     "explicacao": "'By the time' + outra ação passada indica que o show começou antes: past perfect 'had already started'."
+    },
+    {
+     "pergunta": "Qual frase destaca a DURAÇÃO de uma ação antes de outro momento passado?",
+     "opcoes": [
+      "She had been studying for three hours when I called.",
+      "She studied for three hours yesterday.",
+      "She has been studying for three hours."
+     ],
+     "correta": 0,
+     "explicacao": "'Had been studying' é past perfect continuous: mostra ação em andamento por um período antes de outro evento passado ('when I called')."
+    },
+    {
+     "pergunta": "Complete: He was nervous because he ___ a presentation in English before.",
+     "opcoes": [
+      "never gave",
+      "hasn't given",
+      "had never given"
+     ],
+     "correta": 2,
+     "explicacao": "A experiência (nunca ter apresentado) é anterior ao momento passado em que ele estava nervoso: 'had never given'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "By the time we arrived at the station, the train ___.",
+     "opcoes": [
+      "already left",
+      "had already left",
+      "has already left"
+     ],
+     "correta": 1,
+     "explicacao": "'By the time' + passado exige past perfect para a ação anterior: 'had already left'. 'Has already left' (present perfect) não combina com narrativa no passado."
+    },
+    {
+     "pergunta": "She realized she ___ her keys at the office.",
+     "opcoes": [
+      "had left",
+      "has left",
+      "was leaving"
+     ],
+     "correta": 0,
+     "explicacao": "Esquecer as chaves aconteceu antes de ela perceber, por isso past perfect 'had left'. 'Has left' não se usa em sequência de eventos passados."
+    },
+    {
+     "pergunta": "After he ___ his homework, he went out to play.",
+     "opcoes": [
+      "has finished",
+      "had finished",
+      "would finish"
+     ],
+     "correta": 1,
+     "explicacao": "Com 'after' e ações passadas em sequência, a primeira usa past perfect: 'had finished'. 'Has finished' conecta com o presente, o que não faz sentido aqui."
+    },
+    {
+     "pergunta": "I didn't recognize the neighborhood because it ___ so much.",
+     "opcoes": [
+      "has changed",
+      "changed",
+      "had changed"
+     ],
+     "correta": 2,
+     "explicacao": "A mudança ocorreu antes do momento passado de referência, pedindo 'had changed'. 'Has changed' é o erro comum de calcar no 'tem mudado' do português."
+    },
+    {
+     "pergunta": "They ___ dinner before the guests arrived.",
+     "opcoes": [
+      "have cooked",
+      "had cooked",
+      "were cooked"
+     ],
+     "correta": 1,
+     "explicacao": "Ação concluída antes de outra ação passada usa past perfect: 'had cooked'. 'Were cooked' é passiva e diria que eles foram cozinhados."
+    },
+    {
+     "pergunta": "When I turned on the TV, the film ___.",
+     "opcoes": [
+      "had already started",
+      "has already started",
+      "already starts"
+     ],
+     "correta": 0,
+     "explicacao": "O filme começou antes de a TV ser ligada, então 'had already started'. O present perfect ('has started') não se combina com 'when + passado'."
+    },
+    {
+     "pergunta": "He couldn't pay for lunch because he ___ his wallet at home.",
+     "opcoes": [
+      "forgets",
+      "had left",
+      "has left"
+     ],
+     "correta": 1,
+     "explicacao": "Deixar a carteira em casa antecede o momento do almoço, exigindo 'had left'. 'Has left' criaria uma conexão indevida com o presente."
+    },
+    {
+     "pergunta": "It was the first time she ___ snow.",
+     "opcoes": [
+      "has ever seen",
+      "ever saw",
+      "had ever seen"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de 'It was the first time' usa-se past perfect: 'had ever seen'. Com 'It IS the first time' é que se usaria o present perfect."
+    },
+    {
+     "pergunta": "By 2015, the band ___ five albums.",
+     "opcoes": [
+      "had released",
+      "has released",
+      "was releasing"
+     ],
+     "correta": 0,
+     "explicacao": "'By + data passada' marca um limite no passado e pede past perfect: 'had released'. 'Has released' só serviria para um período que chega até hoje."
+    },
+    {
+     "pergunta": "The house was silent; everyone ___ to bed.",
+     "opcoes": [
+      "has gone",
+      "goes",
+      "had gone"
+     ],
+     "correta": 2,
+     "explicacao": "Ir para a cama aconteceu antes do momento descrito no passado, então 'had gone'. 'Has gone' misturaria present perfect numa narrativa passada."
+    }
+   ]
+  },
+  {
+   "slug": "passive-advanced",
+   "titulo": "Passive avançada + have something done",
+   "subtitulo": "Quando quem faz não importa (ou faz por você)",
+   "resumo": "No B2 a passiva ganha superpoderes: tempos perfeitos, modais, verbos com dois objetos e estruturas como 'it is said that'. E entra em cena o causativo 'have something done', essencial para dizer que você contratou alguém para fazer algo — cortar o cabelo, consertar o carro, pintar a casa. Sem ele, você acaba dizendo que fez tudo sozinho!",
+   "dialogo": [
+    {
+     "persona": "max",
+     "en": "I cut my hair yesterday. Do you like it?",
+     "pt": "Eu cortei meu cabelo ontem. Gostou?"
+    },
+    {
+     "persona": "sofia",
+     "en": "It looks great! But did YOU cut it yourself, with scissors, in front of the mirror?",
+     "pt": "Ficou ótimo! Mas foi VOCÊ que cortou, com tesoura, na frente do espelho?"
+    },
+    {
+     "persona": "max",
+     "en": "No! The hairdresser cut it. Error detected?",
+     "pt": "Não! O cabeleireiro cortou. Erro detectado?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Yes! Say 'I had my hair cut yesterday' — someone did it for you.",
+     "pt": "Sim! Diga 'I had my hair cut yesterday' — alguém fez isso por você."
+    },
+    {
+     "persona": "leo",
+     "en": "In Portuguese we just say 'cortei o cabelo' and everybody understands. English needs 'have something done' to show you paid for the service.",
+     "pt": "Em português a gente só diz 'cortei o cabelo' e todo mundo entende. O inglês precisa do 'have something done' para mostrar que você pagou pelo serviço."
+    },
+    {
+     "persona": "maya",
+     "en": "So next week I'm having my nails done, not doing my nails. Noted!",
+     "pt": "Então semana que vem I'm having my nails done, e não doing my nails. Anotado!"
+    }
+   ],
+   "quando_usar": [
+    "Para focar na ação e não em quem fez: \"The new bridge was opened last month.\"",
+    "Com modais, para regras e possibilidades: \"This form must be signed by a parent.\"",
+    "Para relatar opiniões gerais de forma impessoal: \"It is believed that the painting is over 300 years old.\"",
+    "Com 'have/get something done', para serviços que você contrata: \"We're having the roof repaired next week.\"",
+    "Para más experiências com o causativo: \"He had his phone stolen on the bus.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Passiva com perfect",
+     "estrutura": "sujeito + has/have/had been + particípio",
+     "exemplo_en": "The documents have been sent to the client.",
+     "exemplo_pt": "Os documentos foram enviados ao cliente."
+    },
+    {
+     "rotulo": "Passiva com modal",
+     "estrutura": "sujeito + modal + be + particípio",
+     "exemplo_en": "The results should be published tomorrow.",
+     "exemplo_pt": "Os resultados devem ser publicados amanhã."
+    },
+    {
+     "rotulo": "Impessoal",
+     "estrutura": "It is said/believed/known that + oração",
+     "exemplo_en": "It is said that the house is haunted.",
+     "exemplo_pt": "Dizem que a casa é mal-assombrada."
+    },
+    {
+     "rotulo": "Causativo",
+     "estrutura": "sujeito + have/get + objeto + particípio",
+     "exemplo_en": "She got her passport renewed last week.",
+     "exemplo_pt": "Ela renovou o passaporte (com alguém) semana passada."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "'Get something done' é a versão mais informal de 'have something done' e é comuníssima na fala: 'I need to get my car washed.' Nas provas e textos formais, prefira 'have'."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "A ordem no causativo é sagrada: have + OBJETO + particípio. 'I had my car repaired' (alguém consertou). Se você disser 'I had repaired my car', vira past perfect e o mecânico some da história!"
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I painted my apartment last month. (quando você contratou um pintor)",
+     "certo": "I had my apartment painted last month.",
+     "explicacao": "Em português dizemos 'pintei o apartamento' mesmo quando pagamos alguém. Em inglês, sem o causativo, você está dizendo que pintou com as próprias mãos."
+    },
+    {
+     "errado": "The meeting was cancel because of the storm.",
+     "certo": "The meeting was canceled because of the storm.",
+     "explicacao": "A passiva sempre usa o particípio: was + canceled. Esquecer o -ed é um deslize comum quando a pronúncia do particípio é sutil."
+    },
+    {
+     "errado": "Is believed that coffee improves memory.",
+     "certo": "It is believed that coffee improves memory.",
+     "explicacao": "Inglês exige sujeito explícito. O 'it' impessoal é obrigatório, mesmo que em português a frase comece direto com 'Acredita-se'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Você pagou um mecânico para trocar os freios. O que você diz?",
+     "opcoes": [
+      "I changed my brakes.",
+      "I had my brakes changed.",
+      "My brakes changed."
+     ],
+     "correta": 1,
+     "explicacao": "Serviço contratado usa o causativo: have + objeto (my brakes) + particípio (changed)."
+    },
+    {
+     "pergunta": "Complete: The winners ___ next Friday.",
+     "opcoes": [
+      "will announce",
+      "will be announcing",
+      "will be announced"
+     ],
+     "correta": 2,
+     "explicacao": "Os vencedores não anunciam, eles SÃO anunciados: passiva com modal/futuro, 'will be announced'."
+    },
+    {
+     "pergunta": "Qual é a forma impessoal correta?",
+     "opcoes": [
+      "It is known that octopuses are very intelligent.",
+      "Is known that octopuses are very intelligent.",
+      "It knows that octopuses are very intelligent."
+     ],
+     "correta": 0,
+     "explicacao": "A estrutura impessoal pede 'It is + particípio + that': 'It is known that...'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The new bridge ___ by the end of next year.",
+     "opcoes": [
+      "will have built",
+      "will be building",
+      "will have been built"
+     ],
+     "correta": 2,
+     "explicacao": "Futuro perfeito na passiva: 'will have been built' (terá sido construída). 'Will have built' é ativa e deixaria a ponte como sujeito que constrói."
+    },
+    {
+     "pergunta": "The suspect is believed ___ the country last week.",
+     "opcoes": [
+      "to leave",
+      "to have left",
+      "that he left"
+     ],
+     "correta": 1,
+     "explicacao": "Na estrutura 'is believed to...', a ação anterior usa infinitivo perfeito: 'to have left'. 'To leave' indicaria algo presente ou futuro, não da semana passada."
+    },
+    {
+     "pergunta": "She hates ___ while she is working.",
+     "opcoes": [
+      "being interrupted",
+      "to be interrupting",
+      "interrupting"
+     ],
+     "correta": 0,
+     "explicacao": "Ela sofre a ação, então gerúndio passivo: 'being interrupted'. 'Interrupting' diria que ela odeia interromper os outros."
+    },
+    {
+     "pergunta": "The report should ___ to the director yesterday.",
+     "opcoes": [
+      "have been sent",
+      "be sent",
+      "have sent"
+     ],
+     "correta": 0,
+     "explicacao": "Crítica a algo que não ocorreu no passado: 'should have been sent' (deveria ter sido enviado). 'Be sent' se referiria ao presente/futuro, e 'have sent' é voz ativa."
+    },
+    {
+     "pergunta": "English ___ in this school since 1990.",
+     "opcoes": [
+      "is taught",
+      "has been taught",
+      "is being taught"
+     ],
+     "correta": 1,
+     "explicacao": "'Since 1990' exige present perfect passivo: 'has been taught'. 'Is taught' descreve rotina sem ligação com o ponto de início no passado."
+    },
+    {
+     "pergunta": "The meeting ___ when the fire alarm went off.",
+     "opcoes": [
+      "was holding",
+      "was being held",
+      "has been held"
+     ],
+     "correta": 1,
+     "explicacao": "Ação em andamento no passado, na passiva: 'was being held'. 'Was holding' é ativa e sugeriria que a reunião segurava algo."
+    },
+    {
+     "pergunta": "He got ___ by a local company right after graduation.",
+     "opcoes": [
+      "hiring",
+      "hire",
+      "hired"
+     ],
+     "correta": 2,
+     "explicacao": "A passiva com 'get' usa particípio: 'got hired' (foi contratado). 'Got hiring' não existe como estrutura passiva."
+    },
+    {
+     "pergunta": "It ___ that the company will announce layoffs soon.",
+     "opcoes": [
+      "is expecting",
+      "expects",
+      "is expected"
+     ],
+     "correta": 2,
+     "explicacao": "Passiva impessoal: 'It is expected that...' (espera-se que). 'It is expecting' diria que 'it' está esperando algo, voz ativa sem sujeito lógico."
+    },
+    {
+     "pergunta": "The children love ___ to the zoo.",
+     "opcoes": [
+      "being taken",
+      "taking",
+      "to be taking"
+     ],
+     "correta": 0,
+     "explicacao": "As crianças são levadas, então gerúndio passivo: 'being taken'. 'Taking' significaria que elas mesmas levam alguém ao zoológico."
+    },
+    {
+     "pergunta": "The problem ___ with by the technical team right now.",
+     "opcoes": [
+      "is dealt",
+      "is being dealt",
+      "deals"
+     ],
+     "correta": 1,
+     "explicacao": "'Right now' pede presente contínuo passivo: 'is being dealt with'. 'Is dealt' descreveria uma rotina, não algo acontecendo agora."
+    }
+   ]
+  },
+  {
+   "slug": "reported-speech-questions",
+   "titulo": "Reported speech: perguntas e ordens",
+   "subtitulo": "Fofoca de qualidade exige gramática",
+   "resumo": "Relatar o que alguém perguntou ou mandou fazer é diferente de relatar afirmações: perguntas relatadas perdem a inversão e o ponto de interrogação, e ordens viram estruturas com 'to + verbo'. É a gramática que você usa o tempo todo para recontar conversas — no trabalho, em casa e, claro, na fofoca.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "The interviewer asked me so many questions! How do I tell my mom about it in English?",
+     "pt": "O entrevistador me fez tantas perguntas! Como eu conto isso pra minha mãe em inglês?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Use reported questions: 'He asked me where I worked' — no question order, no question mark.",
+     "pt": "Use perguntas relatadas: 'He asked me where I worked' — sem ordem de pergunta, sem ponto de interrogação."
+    },
+    {
+     "persona": "max",
+     "en": "He asked me where did I work.",
+     "pt": "He asked me where did I work."
+    },
+    {
+     "persona": "sofia",
+     "en": "Classic mistake, Max! Drop the 'did': 'He asked me where I worked.'",
+     "pt": "Erro clássico, Max! Tire o 'did': 'He asked me where I worked.'"
+    },
+    {
+     "persona": "leo",
+     "en": "Fox tip: after 'asked', the sentence calms down and becomes a normal statement. No inversion, no do/does/did.",
+     "pt": "Dica da raposa: depois do 'asked', a frase se acalma e vira uma afirmação normal. Sem inversão, sem do/does/did."
+    },
+    {
+     "persona": "maya",
+     "en": "And he told me to send my portfolio. Look, I reported an order correctly!",
+     "pt": "E ele me disse para enviar meu portfólio. Olha, relatei uma ordem corretamente!"
+    }
+   ],
+   "quando_usar": [
+    "Para relatar perguntas com wh- (what, where, why...): \"She asked me why I had left the party early.\"",
+    "Para relatar perguntas de sim/não, com if ou whether: \"He asked if I could work on weekends.\"",
+    "Para relatar ordens e instruções: \"The doctor told me to drink more water.\"",
+    "Para relatar pedidos de forma educada: \"She asked me to close the window.\"",
+    "Para relatar proibições, com not to: \"They told us not to touch the paintings.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Pergunta wh-",
+     "estrutura": "asked + (pessoa) + wh-word + sujeito + verbo (ordem de afirmação)",
+     "exemplo_en": "She asked me what time the store opened.",
+     "exemplo_pt": "Ela me perguntou a que horas a loja abria."
+    },
+    {
+     "rotulo": "Pergunta sim/não",
+     "estrutura": "asked + (pessoa) + if/whether + sujeito + verbo",
+     "exemplo_en": "He asked whether I had finished the report.",
+     "exemplo_pt": "Ele perguntou se eu tinha terminado o relatório."
+    },
+    {
+     "rotulo": "Ordem/instrução",
+     "estrutura": "told + pessoa + to + verbo",
+     "exemplo_en": "The teacher told us to turn off our phones.",
+     "exemplo_pt": "A professora nos disse para desligar os celulares."
+    },
+    {
+     "rotulo": "Ordem negativa",
+     "estrutura": "told/asked + pessoa + not to + verbo",
+     "exemplo_en": "Mom told me not to stay up late.",
+     "exemplo_pt": "Minha mãe me disse para não dormir tarde."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Lembre-se do 'passo atrás' nos tempos verbais: present vira past, past vira past perfect, will vira would. 'Where do you live?' vira 'He asked me where I lived.'"
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'Say' e 'tell' não são intercambiáveis: 'tell' sempre precisa da pessoa ('She told ME to wait'), enquanto 'say' dispensa ('She said she was tired'). 'She said me' não existe!"
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "She asked me where do I live.",
+     "certo": "She asked me where I lived.",
+     "explicacao": "Pergunta relatada não mantém a estrutura de pergunta: nada de do/does/did, e o verbo dá um passo para o passado."
+    },
+    {
+     "errado": "He said me to wait outside.",
+     "certo": "He told me to wait outside.",
+     "explicacao": "Para ordens com destinatário, o verbo é 'tell': told + pessoa + to. 'Say' nunca é seguido diretamente de 'me'."
+    },
+    {
+     "errado": "They told us to not run in the hallway.",
+     "certo": "They told us not to run in the hallway.",
+     "explicacao": "Na ordem negativa, 'not' vem antes do 'to': not to run. É a ordem fixa dessa estrutura."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Como relatar a pergunta 'Are you happy here?' feita pelo chefe?",
+     "opcoes": [
+      "My boss asked me if I was happy there.",
+      "My boss asked me was I happy here.",
+      "My boss asked me if am I happy here."
+     ],
+     "correta": 0,
+     "explicacao": "Pergunta sim/não relatada usa 'if' + ordem de afirmação, com o verbo um passo atrás: 'if I was happy'."
+    },
+    {
+     "pergunta": "Como relatar a ordem 'Don't open the door!'?",
+     "opcoes": [
+      "She told me don't open the door.",
+      "She told me to not opening the door.",
+      "She told me not to open the door."
+     ],
+     "correta": 2,
+     "explicacao": "Ordem negativa relatada: told + pessoa + not to + verbo base."
+    },
+    {
+     "pergunta": "Complete: The tourist asked ___ the museum.",
+     "opcoes": [
+      "where was",
+      "how he could get to",
+      "how could he get to"
+     ],
+     "correta": 1,
+     "explicacao": "Depois da wh-word, a ordem é de afirmação: 'how he could get to', sem inversão."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "She asked me where ___.",
+     "opcoes": [
+      "did I live",
+      "I lived",
+      "do I live"
+     ],
+     "correta": 1,
+     "explicacao": "Em pergunta reportada, a ordem volta a ser afirmativa e sem auxiliar: 'where I lived'. Manter 'did I live' é o erro clássico de copiar a estrutura da pergunta direta."
+    },
+    {
+     "pergunta": "He wanted to know if I ___ the film the night before.",
+     "opcoes": [
+      "have seen",
+      "had seen",
+      "did see"
+     ],
+     "correta": 1,
+     "explicacao": "'The night before' indica passado anterior à fala, exigindo past perfect: 'had seen'. 'Have seen' não sofre o recuo de tempo do discurso indireto."
+    },
+    {
+     "pergunta": "They asked when we ___.",
+     "opcoes": [
+      "would arrive",
+      "will arrive",
+      "are arriving"
+     ],
+     "correta": 0,
+     "explicacao": "No discurso indireto com verbo no passado, 'will' vira 'would': 'would arrive'. 'Will arrive' só se manteria se o verbo de relato estivesse no presente."
+    },
+    {
+     "pergunta": "The interviewer asked her why she ___ her previous job.",
+     "opcoes": [
+      "has left",
+      "did she leave",
+      "had left"
+     ],
+     "correta": 2,
+     "explicacao": "A saída do emprego é anterior à pergunta, então past perfect: 'had left'. 'Did she leave' repete a inversão da pergunta direta, proibida no discurso indireto."
+    },
+    {
+     "pergunta": "I asked him whether he ___ help me with the report.",
+     "opcoes": [
+      "could",
+      "can",
+      "may"
+     ],
+     "correta": 0,
+     "explicacao": "No discurso indireto no passado, 'can' recua para 'could'. Manter 'can' é o deslize comum quando o verbo de relato ('asked') já está no passado."
+    },
+    {
+     "pergunta": "She asked me what time ___.",
+     "opcoes": [
+      "does the bank open",
+      "the bank opened",
+      "did the bank open"
+     ],
+     "correta": 1,
+     "explicacao": "Pergunta reportada usa ordem afirmativa: 'what time the bank opened'. As formas com 'does/did' antes do sujeito pertencem apenas à pergunta direta."
+    },
+    {
+     "pergunta": "He asked me if I ___ to the conference the following week.",
+     "opcoes": [
+      "will go",
+      "am going",
+      "was going"
+     ],
+     "correta": 2,
+     "explicacao": "'Am going' recua para 'was going' no discurso indireto passado. 'The following week' confirma que a fala original ('next week') foi deslocada no tempo."
+    },
+    {
+     "pergunta": "My boss asked me how long I ___ for the company.",
+     "opcoes": [
+      "had been working",
+      "have been working",
+      "am working"
+     ],
+     "correta": 0,
+     "explicacao": "O present perfect continuous da fala original recua para past perfect continuous: 'had been working'. 'Have been working' ignora o recuo temporal."
+    },
+    {
+     "pergunta": "The tourist asked ___ get to the museum.",
+     "opcoes": [
+      "how could he",
+      "how he could",
+      "how can he"
+     ],
+     "correta": 1,
+     "explicacao": "Depois da palavra interrogativa, o sujeito vem antes do verbo: 'how he could'. 'How could he' mantém a inversão da pergunta direta."
+    },
+    {
+     "pergunta": "She wondered whether they ___ the invitation yet.",
+     "opcoes": [
+      "have received",
+      "receive",
+      "had received"
+     ],
+     "correta": 2,
+     "explicacao": "Com 'wondered' no passado, o present perfect vira past perfect: 'had received'. 'Have received' seria possível apenas com verbo de relato no presente."
+    }
+   ]
+  },
+  {
+   "slug": "modals-of-deduction",
+   "titulo": "Modals of deduction (must, might, can't)",
+   "subtitulo": "Vire detetive em inglês",
+   "resumo": "Must, might, may, could e can't servem para deduzir: quando você não tem certeza absoluta, mas as pistas apontam para uma conclusão. 'Must be' é quase certeza que sim, 'can't be' é quase certeza que não, e 'might/may/could be' ficam no talvez. Com 'have + particípio', você deduz até sobre o passado.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "The lights are off and his car isn't there. He must be out, right?",
+     "pt": "As luzes estão apagadas e o carro dele não está lá. Ele deve ter saído, né?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Perfect deduction! Strong evidence, so 'must be'. And if it were impossible? ",
+     "pt": "Dedução perfeita! Evidência forte, então 'must be'. E se fosse impossível?"
+    },
+    {
+     "persona": "max",
+     "en": "He mustn't be home! Impossible!",
+     "pt": "He mustn't be home! Impossível!"
+    },
+    {
+     "persona": "sofia",
+     "en": "Careful, Max: for impossible deductions we use 'can't'. 'He can't be home.'",
+     "pt": "Cuidado, Max: para deduções de impossibilidade usamos 'can't'. 'He can't be home.'"
+    },
+    {
+     "persona": "leo",
+     "en": "Fox logic: must = 'com certeza sim', can't = 'com certeza não', might = 'vai saber'. Mustn't stays out of this game.",
+     "pt": "Lógica da raposa: must = 'com certeza sim', can't = 'com certeza não', might = 'vai saber'. Mustn't fica fora desse jogo."
+    },
+    {
+     "persona": "maya",
+     "en": "So the package might have arrived while we were out. I'll check!",
+     "pt": "Então o pacote pode ter chegado enquanto estávamos fora. Vou verificar!"
+    }
+   ],
+   "quando_usar": [
+    "Para conclusões quase certas com base em evidências: \"She must be exhausted — she ran a marathon this morning.\"",
+    "Para dizer que algo é logicamente impossível: \"That can't be John's car; he sold his last month.\"",
+    "Para possibilidades em aberto: \"They might be stuck in traffic.\"",
+    "Para deduzir sobre o passado com have + particípio: \"He must have forgotten our meeting.\"",
+    "Para descartar hipóteses passadas: \"She can't have written this note — it's not her handwriting.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Quase certeza (sim)",
+     "estrutura": "must + verbo base / must be + -ing",
+     "exemplo_en": "You must be joking!",
+     "exemplo_pt": "Você só pode estar brincando!"
+    },
+    {
+     "rotulo": "Quase certeza (não)",
+     "estrutura": "can't + verbo base",
+     "exemplo_en": "It can't be true.",
+     "exemplo_pt": "Não pode ser verdade."
+    },
+    {
+     "rotulo": "Possibilidade",
+     "estrutura": "might/may/could + verbo base",
+     "exemplo_en": "She could be at the gym now.",
+     "exemplo_pt": "Ela pode estar na academia agora."
+    },
+    {
+     "rotulo": "Dedução sobre o passado",
+     "estrutura": "must/might/can't + have + particípio",
+     "exemplo_en": "They must have left early.",
+     "exemplo_pt": "Eles devem ter saído cedo."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Pense numa régua de certeza: can't (0%) — might/may/could (uns 50%) — must (uns 95%). Na dúvida sobre qual usar, avalie quanta evidência você tem."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "O oposto de 'must be' (dedução) é 'can't be', NÃO 'mustn't be'. 'Mustn't' significa proibição: 'You mustn't smoke here.' São mundos diferentes."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "He must to be very rich.",
+     "certo": "He must be very rich.",
+     "explicacao": "Modais nunca aceitam 'to' depois: must be, might go, can't know. O 'must to' vem da tradução mental de 'deve + de'."
+    },
+    {
+     "errado": "She mustn't be Brazilian — she doesn't speak Portuguese.",
+     "certo": "She can't be Brazilian — she doesn't speak Portuguese.",
+     "explicacao": "Dedução negativa usa 'can't'. 'Mustn't' é proibição ('não pode/não deve'), não impossibilidade lógica."
+    },
+    {
+     "errado": "They might arrived already.",
+     "certo": "They might have arrived already.",
+     "explicacao": "Para deduzir sobre o passado, o modal precisa de 'have + particípio': might have arrived. O modal sozinho não carrega passado."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "A luz do escritório está acesa às 22h. O que você diz?",
+     "opcoes": [
+      "Someone can be working late.",
+      "Someone must be working late.",
+      "Someone mustn't be working late."
+     ],
+     "correta": 1,
+     "explicacao": "Evidência forte (luz acesa) pede dedução com 'must be'. 'Can' não é usado para deduções afirmativas."
+    },
+    {
+     "pergunta": "Complete: That ___ be Maria at the door — she's traveling in Chile.",
+     "opcoes": [
+      "mustn't",
+      "might",
+      "can't"
+     ],
+     "correta": 2,
+     "explicacao": "É logicamente impossível ser a Maria, então 'can't be'. 'Mustn't' seria proibição, não dedução."
+    },
+    {
+     "pergunta": "Complete: The ground is wet. It ___ last night.",
+     "opcoes": [
+      "must have rained",
+      "must rained",
+      "must to rain"
+     ],
+     "correta": 0,
+     "explicacao": "Dedução sobre o passado: must + have + particípio = 'must have rained'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The lights are off; they ___ be at home.",
+     "opcoes": [
+      "can't",
+      "mustn't",
+      "shouldn't"
+     ],
+     "correta": 0,
+     "explicacao": "Para dedução negativa ('impossível que estejam') usa-se 'can't'. 'Mustn't' expressa proibição, o erro típico de quem traduz 'não devem estar'."
+    },
+    {
+     "pergunta": "She ___ have forgotten the meeting — she never misses one.",
+     "opcoes": [
+      "must",
+      "can't",
+      "shouldn't"
+     ],
+     "correta": 1,
+     "explicacao": "A frase nega a possibilidade: 'can't have forgotten' (não pode ter esquecido). 'Must have' afirmaria justamente o contrário, uma certeza positiva."
+    },
+    {
+     "pergunta": "He didn't answer the phone. He ___ have been sleeping.",
+     "opcoes": [
+      "might",
+      "can",
+      "will"
+     ],
+     "correta": 0,
+     "explicacao": "Para possibilidade sobre o passado usa-se 'might have been'. 'Can have been' não é usado para dedução afirmativa em inglês."
+    },
+    {
+     "pergunta": "You ___ be exhausted after such a long flight!",
+     "opcoes": [
+      "can",
+      "might to",
+      "must"
+     ],
+     "correta": 2,
+     "explicacao": "Dedução lógica quase certa usa 'must' (você deve estar exausto). 'Can' não expressa essa certeza, e 'might to' é forma inexistente — modais não levam 'to'."
+    },
+    {
+     "pergunta": "The ground is wet. It ___ have rained during the night.",
+     "opcoes": [
+      "should",
+      "must",
+      "can"
+     ],
+     "correta": 1,
+     "explicacao": "Conclusão forte a partir de evidência: 'must have rained' (deve ter chovido). 'Should have rained' significaria que era esperado chover, mas não choveu."
+    },
+    {
+     "pergunta": "That ___ be John's car — he sold his last month.",
+     "opcoes": [
+      "mustn't",
+      "doesn't have to",
+      "can't"
+     ],
+     "correta": 2,
+     "explicacao": "Impossibilidade lógica pede 'can't be'. 'Mustn't' indicaria proibição e 'doesn't have to' significa ausência de obrigação, não de possibilidade."
+    },
+    {
+     "pergunta": "They're not sure yet, but they ___ move to Portugal next year.",
+     "opcoes": [
+      "might",
+      "must",
+      "can't"
+     ],
+     "correta": 0,
+     "explicacao": "'Not sure yet' indica possibilidade incerta: 'might move'. 'Must' expressaria certeza ou obrigação, contradizendo a dúvida da frase."
+    },
+    {
+     "pergunta": "She passed the test without studying. It ___ have been very difficult.",
+     "opcoes": [
+      "must",
+      "can't",
+      "should"
+     ],
+     "correta": 1,
+     "explicacao": "Se ela passou sem estudar, a prova 'can't have been' muito difícil (não pode ter sido). 'Must have been' concluiria o oposto do que a evidência sugere."
+    },
+    {
+     "pergunta": "Someone's knocking. It ___ be the delivery man — he said he'd come at noon.",
+     "opcoes": [
+      "mustn't",
+      "shouldn't",
+      "could"
+     ],
+     "correta": 2,
+     "explicacao": "Possibilidade plausível no presente: 'could be'. 'Mustn't' e 'shouldn't' são negativos e não expressam essa hipótese afirmativa."
+    },
+    {
+     "pergunta": "He ___ have taken the keys; they were in his coat pocket all along.",
+     "opcoes": [
+      "mustn't",
+      "can't",
+      "shouldn't"
+     ],
+     "correta": 1,
+     "explicacao": "Dedução de impossibilidade no passado usa 'can't have taken' (não pode ter pegado, pois as chaves estavam no bolso o tempo todo). 'Mustn't have' não é usado para dedução no inglês padrão."
+    }
+   ]
+  },
+  {
+   "slug": "relative-clauses-advanced",
+   "titulo": "Non-defining relative clauses",
+   "subtitulo": "A vírgula que muda tudo",
+   "resumo": "Non-defining relative clauses adicionam informação extra sobre algo já identificado — e vêm sempre entre vírgulas: 'My brother, who lives in Recife, is a chef.' Diferente das defining clauses, elas podem ser removidas sem destruir o sentido da frase. O detalhe crucial: aqui 'that' é proibido e as vírgulas são obrigatórias.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, what's the difference between 'my sister who lives in Rio' and 'my sister, who lives in Rio'?",
+     "pt": "Sofia, qual a diferença entre 'my sister who lives in Rio' e 'my sister, who lives in Rio'?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Huge difference! Without commas, you have several sisters and you're specifying one. With commas, you have one sister, and Rio is just extra info.",
+     "pt": "Diferença enorme! Sem vírgulas, você tem várias irmãs e está especificando uma. Com vírgulas, você tem uma irmã só, e o Rio é apenas informação extra."
+    },
+    {
+     "persona": "max",
+     "en": "São Paulo, that is the biggest city in Brazil, never sleeps.",
+     "pt": "São Paulo, that is the biggest city in Brazil, never sleeps."
+    },
+    {
+     "persona": "sofia",
+     "en": "Almost! Between commas, 'that' is forbidden. Use 'which': 'São Paulo, which is the biggest city...'",
+     "pt": "Quase! Entre vírgulas, 'that' é proibido. Use 'which': 'São Paulo, which is the biggest city...'"
+    },
+    {
+     "persona": "leo",
+     "en": "Fox memory trick: commas are VIP areas — 'that' never gets past security. Only who, which and whose enter.",
+     "pt": "Macete da raposa: vírgulas são área VIP — o 'that' nunca passa pela segurança. Só entram who, which e whose."
+    }
+   ],
+   "quando_usar": [
+    "Para adicionar informação extra sobre pessoas: \"My grandmother, who is 92, still does yoga.\"",
+    "Para comentar coisas e lugares únicos: \"The Amazon River, which crosses several countries, is the largest in the world.\"",
+    "Para indicar posse com whose: \"Our neighbor, whose dog barks all night, is moving out.\"",
+    "Para comentar a frase inteira com which: \"He canceled at the last minute, which really annoyed me.\"",
+    "Com nomes próprios, que já são identificados por natureza: \"Machado de Assis, who wrote Dom Casmurro, was born in Rio.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Pessoas",
+     "estrutura": "..., who + verbo/oração, ...",
+     "exemplo_en": "My boss, who speaks four languages, moved here from Argentina.",
+     "exemplo_pt": "Meu chefe, que fala quatro línguas, se mudou para cá da Argentina."
+    },
+    {
+     "rotulo": "Coisas e lugares",
+     "estrutura": "..., which + verbo/oração, ...",
+     "exemplo_en": "This laptop, which I bought in 2020, still works perfectly.",
+     "exemplo_pt": "Este notebook, que comprei em 2020, ainda funciona perfeitamente."
+    },
+    {
+     "rotulo": "Posse",
+     "estrutura": "..., whose + substantivo, ...",
+     "exemplo_en": "Clara, whose parents are doctors, wants to study medicine.",
+     "exemplo_pt": "Clara, cujos pais são médicos, quer estudar medicina."
+    },
+    {
+     "rotulo": "Comentário sobre a frase toda",
+     "estrutura": "oração completa, which + comentário",
+     "exemplo_en": "It rained during the whole trip, which was a shame.",
+     "exemplo_pt": "Choveu a viagem inteira, o que foi uma pena."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Teste rápido: se você pode apagar a oração relativa e a frase continua fazendo sentido completo, ela é non-defining e precisa de vírgulas (e de who/which, nunca that)."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Na non-defining clause o pronome relativo nunca pode ser omitido: 'Paulo, who I met in college, ...' — o 'who' fica, mesmo sendo objeto. Omitir só é possível nas defining clauses."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Brasília, that is the capital of Brazil, was built in the 1950s.",
+     "certo": "Brasília, which is the capital of Brazil, was built in the 1950s.",
+     "explicacao": "'That' nunca aparece em non-defining clauses. Entre vírgulas, coisas e lugares pedem 'which'."
+    },
+    {
+     "errado": "He forgot my birthday, what made me really sad.",
+     "certo": "He forgot my birthday, which made me really sad.",
+     "explicacao": "O 'o que' do português vira 'which' nesse tipo de comentário, nunca 'what'. É uma das traduções literais mais traiçoeiras."
+    },
+    {
+     "errado": "My father who is a great cook made dinner tonight.",
+     "certo": "My father, who is a great cook, made dinner tonight.",
+     "explicacao": "Você só tem um pai, então a informação é extra e as vírgulas são obrigatórias. Sem elas, soa como se você tivesse vários pais e estivesse escolhendo um."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Salvador, ___ was Brazil's first capital, is famous for its carnival.",
+     "opcoes": [
+      "that",
+      "which",
+      "what"
+     ],
+     "correta": 1,
+     "explicacao": "Non-defining clause (entre vírgulas) sobre um lugar usa 'which'. 'That' é proibido e 'what' não é pronome relativo aqui."
+    },
+    {
+     "pergunta": "Qual frase indica que a pessoa tem APENAS UM irmão?",
+     "opcoes": [
+      "My brother who works abroad sent me a gift.",
+      "My brother that works abroad sent me a gift.",
+      "My brother, who works abroad, sent me a gift."
+     ],
+     "correta": 2,
+     "explicacao": "As vírgulas mostram que a informação é extra: há um irmão só. Sem vírgulas, a frase sugere que há outros irmãos."
+    },
+    {
+     "pergunta": "Complete: The team lost again, ___ surprised nobody.",
+     "opcoes": [
+      "which",
+      "that",
+      "what"
+     ],
+     "correta": 0,
+     "explicacao": "Para comentar a frase inteira ('o que não surpreendeu ninguém'), usa-se ', which'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "The hotel ___ we stayed last summer has closed down.",
+     "opcoes": [
+      "where",
+      "which",
+      "what"
+     ],
+     "correta": 0,
+     "explicacao": "Referindo-se a lugar sem preposição, usa-se 'where' (the hotel where we stayed). 'Which' exigiria preposição: 'in which we stayed'."
+    },
+    {
+     "pergunta": "She has three brothers, all of ___ live abroad.",
+     "opcoes": [
+      "which",
+      "whom",
+      "them who"
+     ],
+     "correta": 1,
+     "explicacao": "Depois de quantificador + 'of' referindo-se a pessoas, usa-se 'whom': 'all of whom'. 'Which' só serviria para coisas."
+    },
+    {
+     "pergunta": "The man ___ car was stolen reported it to the police.",
+     "opcoes": [
+      "whose",
+      "who's",
+      "that his"
+     ],
+     "correta": 0,
+     "explicacao": "Posse em oração relativa usa 'whose' (cujo carro). 'Who's' é a contração de 'who is' e não indica posse — confusão comum pela pronúncia idêntica."
+    },
+    {
+     "pergunta": "The project, ___ took two years to complete, won several awards.",
+     "opcoes": [
+      "that",
+      "what",
+      "which"
+     ],
+     "correta": 2,
+     "explicacao": "Em oração explicativa (entre vírgulas), usa-se 'which', nunca 'that'. Essa é uma restrição que costuma pegar brasileiros, já que 'que' serve para tudo em português."
+    },
+    {
+     "pergunta": "Everything ___ he said turned out to be true.",
+     "opcoes": [
+      "what",
+      "that",
+      "who"
+     ],
+     "correta": 1,
+     "explicacao": "Depois de 'everything', 'all', 'nothing', o pronome relativo é 'that'. 'Everything what' é a transferência direta de 'tudo o que', erro clássico do falante de português."
+    },
+    {
+     "pergunta": "The company for ___ she works is expanding to Asia.",
+     "opcoes": [
+      "which",
+      "who",
+      "that"
+     ],
+     "correta": 0,
+     "explicacao": "Após preposição, usa-se 'which' para coisas: 'for which she works'. 'That' nunca pode vir logo depois de preposição."
+    },
+    {
+     "pergunta": "He failed the exam, ___ surprised everyone.",
+     "opcoes": [
+      "what",
+      "that",
+      "which"
+     ],
+     "correta": 2,
+     "explicacao": "Para retomar a oração inteira ('ele ter reprovado'), usa-se 'which'. 'What' é o erro natural de quem traduz 'o que surpreendeu a todos'."
+    },
+    {
+     "pergunta": "The reason ___ she left the company remains a mystery.",
+     "opcoes": [
+      "why",
+      "because",
+      "for that"
+     ],
+     "correta": 0,
+     "explicacao": "'The reason why' é a combinação padrão em oração relativa. 'The reason because' é calco do português 'a razão porque'."
+    },
+    {
+     "pergunta": "Is that the woman ___ son won the science fair?",
+     "opcoes": [
+      "which",
+      "whose",
+      "who her"
+     ],
+     "correta": 1,
+     "explicacao": "Relação de posse com pessoa usa 'whose' (cujo filho). 'Who her son' duplica o possessivo, estrutura que não existe em inglês."
+    },
+    {
+     "pergunta": "There were twenty candidates, none of ___ had the required experience.",
+     "opcoes": [
+      "which",
+      "them",
+      "whom"
+     ],
+     "correta": 2,
+     "explicacao": "Em oração relativa com pessoas, após 'none of' usa-se 'whom'. 'None of them' só seria possível iniciando uma frase nova, não conectada por vírgula."
+    }
+   ]
+  },
+  {
+   "slug": "wish-if-only",
+   "titulo": "Wish & if only",
+   "subtitulo": "A gramática oficial do 'ah, se...'",
+   "resumo": "'I wish' e 'if only' expressam desejos sobre situações irreais: coisas que você queria que fossem diferentes agora, arrependimentos do passado e irritações com o comportamento dos outros. O truque é o tempo verbal: passado para desejos presentes, past perfect para arrependimentos, e 'would' para reclamar.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "Sofia, why is it 'I wish I HAD a car' if the wish is about now?",
+     "pt": "Sofia, por que é 'I wish I HAD a car' se o desejo é sobre agora?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Because the past tense shows the situation is unreal — you don't have a car, so English steps back in time.",
+     "pt": "Porque o passado mostra que a situação é irreal — você não tem carro, então o inglês dá um passo atrás no tempo."
+    },
+    {
+     "persona": "max",
+     "en": "I wish I have more memory. My processor is slow today.",
+     "pt": "I wish I have more memory. Meu processador está lento hoje."
+    },
+    {
+     "persona": "sofia",
+     "en": "Nice try, Max! 'I wish I HAD more memory.' Wish pushes the verb back.",
+     "pt": "Boa tentativa, Max! 'I wish I HAD more memory.' O wish empurra o verbo para trás."
+    },
+    {
+     "persona": "leo",
+     "en": "It works like 'quem me dera' + subjunctive in Portuguese: 'queria que fosse', not 'queria que é'. Same step back!",
+     "pt": "Funciona como 'quem me dera' + subjuntivo no português: 'queria que fosse', não 'queria que é'. O mesmo passo atrás!"
+    },
+    {
+     "persona": "maya",
+     "en": "If only I had discovered this trick years ago!",
+     "pt": "Ah, se eu tivesse descoberto esse macete anos atrás!"
+    }
+   ],
+   "quando_usar": [
+    "Para desejos sobre o presente (com past simple): \"I wish I lived closer to the beach.\"",
+    "Para arrependimentos sobre o passado (com past perfect): \"I wish I had studied English earlier.\"",
+    "Para reclamar de hábitos alheios (com would): \"I wish my neighbors would turn the music down.\"",
+    "Com 'if only' para dar ênfase dramática: \"If only I had listened to your advice!\"",
+    "Com were para todas as pessoas em situações irreais: \"I wish I were on vacation right now.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Desejo presente",
+     "estrutura": "wish/if only + sujeito + past simple",
+     "exemplo_en": "I wish I knew the answer.",
+     "exemplo_pt": "Queria saber a resposta."
+    },
+    {
+     "rotulo": "Arrependimento passado",
+     "estrutura": "wish/if only + sujeito + past perfect",
+     "exemplo_en": "She wishes she hadn't sold her bike.",
+     "exemplo_pt": "Ela se arrepende de ter vendido a bicicleta."
+    },
+    {
+     "rotulo": "Irritação com hábito",
+     "estrutura": "wish + sujeito + would + verbo base",
+     "exemplo_en": "I wish you would stop interrupting me.",
+     "exemplo_pt": "Queria que você parasse de me interromper."
+    },
+    {
+     "rotulo": "Com o verbo be",
+     "estrutura": "wish + sujeito + were (todas as pessoas)",
+     "exemplo_en": "He wishes he were taller.",
+     "exemplo_pt": "Ele queria ser mais alto."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "'If only' é o 'wish' com emoção no talo: mesma gramática, mais drama. 'If only it were Friday!' soa como um suspiro profundo de quarta-feira."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Não confunda 'wish' com 'hope': 'hope' é para coisas possíveis ('I hope you pass the test') e usa tempos normais. 'Wish' é para o irreal e empurra o verbo para trás."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "I wish I can speak English fluently.",
+     "certo": "I wish I could speak English fluently.",
+     "explicacao": "Depois de wish, tudo dá um passo para o passado: can vira could. O presente denuncia a tradução literal de 'queria que eu posso'."
+    },
+    {
+     "errado": "I wish I would be richer.",
+     "certo": "I wish I were richer.",
+     "explicacao": "'Wish + would' só serve para reclamar dos OUTROS (ou de coisas externas). Para desejos sobre você mesmo, use past simple: 'I wish I were'."
+    },
+    {
+     "errado": "I wish you a good luck in the interview. (quando quer dizer 'tomara que')",
+     "certo": "I hope you do well in the interview.",
+     "explicacao": "Para torcer por algo possível no futuro, o verbo é 'hope'. E cuidado extra: 'luck' não leva artigo — é 'good luck', sem 'a'."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: I wish I ___ how to swim. (desejo sobre o presente)",
+     "opcoes": [
+      "knew",
+      "know",
+      "had known"
+     ],
+     "correta": 0,
+     "explicacao": "Desejo sobre o presente usa past simple: 'I wish I knew'. O passado marca que a situação é irreal agora."
+    },
+    {
+     "pergunta": "Qual frase expressa arrependimento sobre o PASSADO?",
+     "opcoes": [
+      "If only I didn't say that.",
+      "If only I hadn't said that.",
+      "If only I wouldn't say that."
+     ],
+     "correta": 1,
+     "explicacao": "Arrependimento passado pede past perfect: 'hadn't said'. É o 'ah, se eu não tivesse dito aquilo'."
+    },
+    {
+     "pergunta": "Complete: I wish my brother ___ borrowing my clothes without asking.",
+     "opcoes": [
+      "stops",
+      "stopped always",
+      "would stop"
+     ],
+     "correta": 2,
+     "explicacao": "Reclamação sobre hábito irritante de outra pessoa usa 'wish + would': 'I wish he would stop'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "I wish I ___ speak French fluently.",
+     "opcoes": [
+      "can",
+      "could",
+      "would"
+     ],
+     "correta": 1,
+     "explicacao": "Desejo sobre uma habilidade presente usa 'could' após 'wish'. 'Can' não sofre o recuo hipotético exigido pela estrutura."
+    },
+    {
+     "pergunta": "She wishes she ___ that email yesterday.",
+     "opcoes": [
+      "hadn't sent",
+      "didn't send",
+      "wouldn't send"
+     ],
+     "correta": 0,
+     "explicacao": "Arrependimento sobre o passado usa past perfect: 'hadn't sent'. 'Didn't send' expressaria desejo sobre um hábito presente, não sobre 'yesterday'."
+    },
+    {
+     "pergunta": "If only it ___ stop raining — we want to go out!",
+     "opcoes": [
+      "will",
+      "would",
+      "had"
+     ],
+     "correta": 1,
+     "explicacao": "Para desejar que algo mude agora usa-se 'would' (if only it would stop). 'Will' não aparece após 'wish/if only'."
+    },
+    {
+     "pergunta": "I wish you ___ making that noise; I can't concentrate.",
+     "opcoes": [
+      "would stop",
+      "will stop",
+      "stop"
+     ],
+     "correta": 0,
+     "explicacao": "Reclamação sobre comportamento irritante de outra pessoa usa 'wish + would': 'would stop'. 'Will stop' é o erro de manter o futuro real numa estrutura hipotética."
+    },
+    {
+     "pergunta": "He wishes he ___ taller.",
+     "opcoes": [
+      "is",
+      "would be",
+      "were"
+     ],
+     "correta": 2,
+     "explicacao": "Desejo sobre situação presente usa passado subjuntivo: 'were'. 'Would be' não se usa com o próprio sujeito para estados, apenas para ações de outros."
+    },
+    {
+     "pergunta": "If only we ___ more time to finish the project last week.",
+     "opcoes": [
+      "had",
+      "have had",
+      "had had"
+     ],
+     "correta": 2,
+     "explicacao": "'Last week' marca desejo sobre o passado: past perfect 'had had'. 'Had' sozinho expressaria um desejo sobre o presente."
+    },
+    {
+     "pergunta": "I wish my parents ___ so far away — I miss them.",
+     "opcoes": [
+      "wouldn't live",
+      "didn't live",
+      "don't live"
+     ],
+     "correta": 1,
+     "explicacao": "Situação presente que se deseja diferente usa past simple: 'didn't live'. 'Don't live' não faz o recuo temporal obrigatório após 'wish'."
+    },
+    {
+     "pergunta": "If only I ___ his advice when I had the chance.",
+     "opcoes": [
+      "took",
+      "would take",
+      "had taken"
+     ],
+     "correta": 2,
+     "explicacao": "Arrependimento sobre oportunidade passada pede past perfect: 'had taken'. 'Took' deixaria o desejo no presente, incompatível com 'when I had the chance'."
+    },
+    {
+     "pergunta": "She wishes she ___ to the beach with us tomorrow, but she has to work.",
+     "opcoes": [
+      "could come",
+      "can come",
+      "came"
+     ],
+     "correta": 0,
+     "explicacao": "Impossibilidade relativa a um plano futuro usa 'could come'. 'Can come' quebra a regra do recuo modal depois de 'wish'."
+    },
+    {
+     "pergunta": "I wish it ___ so cold in here.",
+     "opcoes": [
+      "isn't",
+      "weren't",
+      "hadn't been"
+     ],
+     "correta": 1,
+     "explicacao": "Desejo sobre o presente usa 'weren't' (subjuntivo). 'Isn't' mantém o presente real, e 'hadn't been' falaria de um frio que já passou."
+    }
+   ]
+  },
+  {
+   "slug": "question-tags",
+   "titulo": "Question tags",
+   "subtitulo": "O 'né?' oficial do inglês",
+   "resumo": "Question tags são aquelas perguntinhas no fim da frase que pedem confirmação: 'You're Brazilian, aren't you?'. A regra de ouro: frase positiva ganha tag negativa, frase negativa ganha tag positiva, sempre repetindo o auxiliar. É o equivalente gramatical do nosso 'né?', mas com regras — e algumas pegadinhas famosas.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "In Portuguese we just say 'né?' for everything. English is more complicated, isn't it?",
+     "pt": "Em português a gente só fala 'né?' pra tudo. O inglês é mais complicado, não é?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Nice tag, Maya! Yes: you mirror the auxiliary and flip it. 'She works here, doesn't she?'",
+     "pt": "Bela tag, Maya! Sim: você espelha o auxiliar e inverte. 'She works here, doesn't she?'"
+    },
+    {
+     "persona": "max",
+     "en": "You like pizza, no?",
+     "pt": "Você gosta de pizza, não?"
+    },
+    {
+     "persona": "sofia",
+     "en": "That's the Brazilian 'né' escaping, Max! In English: 'You like pizza, don't you?'",
+     "pt": "Isso é o 'né' brasileiro escapando, Max! Em inglês: 'You like pizza, don't you?'"
+    },
+    {
+     "persona": "leo",
+     "en": "Fox shortcut: find the auxiliary, flip the polarity, add the pronoun. No auxiliary? Call do/does/did to the rescue.",
+     "pt": "Atalho da raposa: ache o auxiliar, inverta a polaridade, adicione o pronome. Não tem auxiliar? Chame do/does/did pro resgate."
+    },
+    {
+     "persona": "maya",
+     "en": "Let's practice more tomorrow, shall we?",
+     "pt": "Vamos praticar mais amanhã, que tal?"
+    }
+   ],
+   "quando_usar": [
+    "Para confirmar algo que você acha que é verdade: \"You've been to Salvador, haven't you?\"",
+    "Para puxar assunto e soar amigável: \"Lovely weather today, isn't it?\"",
+    "Para pedir concordância em opiniões: \"That movie was amazing, wasn't it?\"",
+    "Para suavizar pedidos e sugestões: \"You couldn't help me with this box, could you?\"",
+    "Depois de 'Let's', para convidar: \"Let's take a break, shall we?\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Positiva → tag negativa",
+     "estrutura": "frase afirmativa, auxiliar + n't + pronome?",
+     "exemplo_en": "They live in Curitiba, don't they?",
+     "exemplo_pt": "Eles moram em Curitiba, não moram?"
+    },
+    {
+     "rotulo": "Negativa → tag positiva",
+     "estrutura": "frase negativa, auxiliar + pronome?",
+     "exemplo_en": "You haven't seen my keys, have you?",
+     "exemplo_pt": "Você não viu minhas chaves, viu?"
+    },
+    {
+     "rotulo": "Casos especiais",
+     "estrutura": "I am → aren't I? / Let's → shall we? / imperativo → will you?",
+     "exemplo_en": "I'm late again, aren't I?",
+     "exemplo_pt": "Estou atrasado de novo, não estou?"
+    },
+    {
+     "rotulo": "Sem auxiliar aparente",
+     "estrutura": "verbo comum → do/does/did na tag",
+     "exemplo_en": "She called you yesterday, didn't she?",
+     "exemplo_pt": "Ela te ligou ontem, não ligou?"
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "A entonação muda o sentido: tag descendo = você só quer confirmação educada; tag subindo = você tem dúvida de verdade e espera uma resposta."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "Palavras como never, nobody, nothing e hardly já tornam a frase negativa — então a tag vem positiva: 'She never complains, does she?' (e não 'doesn't she?')."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "You speak French, no?",
+     "certo": "You speak French, don't you?",
+     "explicacao": "O 'no?' é o nosso 'né?' traduzido ao pé da letra. Em inglês, a tag precisa espelhar o auxiliar: 'don't you?'."
+    },
+    {
+     "errado": "I'm your best friend, amn't I?",
+     "certo": "I'm your best friend, aren't I?",
+     "explicacao": "'Amn't' não existe no inglês padrão. A tag de 'I am' é a exceção famosa: 'aren't I?'."
+    },
+    {
+     "errado": "He didn't call you, didn't he?",
+     "certo": "He didn't call you, did he?",
+     "explicacao": "As polaridades devem ser opostas: frase negativa pede tag positiva. Negativa dupla ('didn't... didn't') quebra a regra do espelho."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: Your parents have visited you, ___?",
+     "opcoes": [
+      "didn't they",
+      "haven't they",
+      "don't they"
+     ],
+     "correta": 1,
+     "explicacao": "O auxiliar da frase é 'have', então a tag espelha e inverte: 'haven't they?'."
+    },
+    {
+     "pergunta": "Complete: Let's order sushi tonight, ___?",
+     "opcoes": [
+      "don't we",
+      "will we",
+      "shall we"
+     ],
+     "correta": 2,
+     "explicacao": "Depois de 'Let's', a tag fixa é 'shall we?'. É um dos casos especiais para memorizar."
+    },
+    {
+     "pergunta": "Complete: Nobody answered the phone, ___?",
+     "opcoes": [
+      "did they",
+      "didn't they",
+      "did nobody"
+     ],
+     "correta": 0,
+     "explicacao": "'Nobody' já faz a frase ser negativa, então a tag vem positiva — e 'nobody' vira 'they': 'did they?'."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "You've finished the report, ___?",
+     "opcoes": [
+      "haven't you",
+      "didn't you",
+      "isn't it"
+     ],
+     "correta": 0,
+     "explicacao": "A tag repete o auxiliar da frase ('have') em forma negativa: 'haven't you'. 'Isn't it' é o vício de tratar toda tag como um 'né?' universal."
+    },
+    {
+     "pergunta": "She rarely eats meat, ___?",
+     "opcoes": [
+      "doesn't she",
+      "does she",
+      "isn't she"
+     ],
+     "correta": 1,
+     "explicacao": "'Rarely' torna a frase negativa, então a tag fica positiva: 'does she'. 'Doesn't she' ignoraria o valor negativo do advérbio."
+    },
+    {
+     "pergunta": "Let's take a break, ___?",
+     "opcoes": [
+      "will we",
+      "don't we",
+      "shall we"
+     ],
+     "correta": 2,
+     "explicacao": "Frases com 'Let's' pedem a tag fixa 'shall we'. 'Will we' e 'don't we' não se combinam com sugestões iniciadas por 'Let's'."
+    },
+    {
+     "pergunta": "Nobody called while I was out, ___?",
+     "opcoes": [
+      "did they",
+      "didn't they",
+      "did he"
+     ],
+     "correta": 0,
+     "explicacao": "'Nobody' é negativo, então a tag é positiva e retoma o pronome 'they': 'did they'. 'Did he' erra o pronome usado para indefinidos como nobody/everyone."
+    },
+    {
+     "pergunta": "I'm late again, ___?",
+     "opcoes": [
+      "amn't I",
+      "aren't I",
+      "isn't it"
+     ],
+     "correta": 1,
+     "explicacao": "A tag padrão para 'I am' é 'aren't I', pois 'amn't' não existe no inglês padrão. 'Isn't it' não concorda com o sujeito 'I'."
+    },
+    {
+     "pergunta": "He'd better apologize, ___?",
+     "opcoes": [
+      "wouldn't he",
+      "shouldn't he",
+      "hadn't he"
+     ],
+     "correta": 2,
+     "explicacao": "'He'd better' = 'he had better', então a tag usa 'hadn't he'. O 'd engana e leva muitos a escolher 'wouldn't he'."
+    },
+    {
+     "pergunta": "There's plenty of time left, ___?",
+     "opcoes": [
+      "isn't there",
+      "isn't it",
+      "is there"
+     ],
+     "correta": 0,
+     "explicacao": "Com sujeito 'there', a tag repete 'there': 'isn't there'. 'Isn't it' substitui o sujeito errado, erro comum por influência do português."
+    },
+    {
+     "pergunta": "Open the window, ___?",
+     "opcoes": [
+      "do you",
+      "will you",
+      "won't it"
+     ],
+     "correta": 1,
+     "explicacao": "Imperativos aceitam a tag 'will you' (ou 'can/could you'). 'Won't it' erra o pronome, pois o pedido é dirigido a 'you'."
+    },
+    {
+     "pergunta": "They used to live in Recife, ___?",
+     "opcoes": [
+      "usedn't they",
+      "weren't they",
+      "didn't they"
+     ],
+     "correta": 2,
+     "explicacao": "'Used to' se comporta como verbo comum no passado, então a tag é 'didn't they'. 'Usedn't they' é arcaico e 'weren't they' troca o auxiliar."
+    },
+    {
+     "pergunta": "She'd already left when you arrived, ___?",
+     "opcoes": [
+      "hadn't she",
+      "didn't she",
+      "wouldn't she"
+     ],
+     "correta": 0,
+     "explicacao": "Aqui 'She'd' = 'She had' (past perfect), então a tag é 'hadn't she'. Quem lê 'She'd' como 'she would' cai no distrator 'wouldn't she'."
+    }
+   ]
+  },
+  {
+   "slug": "linking-words",
+   "titulo": "Linking words (although, despite…)",
+   "subtitulo": "O cimento que segura suas ideias",
+   "resumo": "Linking words conectam ideias com lógica: contraste (although, despite, however), causa e consequência (therefore, since), adição (moreover) e propósito (in order to). São elas que transformam frases soltas em textos maduros — e são presença garantida em redações, e-mails de trabalho e provas de proficiência.",
+   "dialogo": [
+    {
+     "persona": "maya",
+     "en": "My essays sound like a shopping list: sentence, period, sentence, period. How do I fix that?",
+     "pt": "Minhas redações parecem lista de compras: frase, ponto, frase, ponto. Como resolvo isso?"
+    },
+    {
+     "persona": "sofia",
+     "en": "Linking words! Compare: 'It was raining. We went out.' versus 'Although it was raining, we went out.'",
+     "pt": "Linking words! Compare: 'It was raining. We went out.' com 'Although it was raining, we went out.'"
+    },
+    {
+     "persona": "max",
+     "en": "I learned one! Despite of the rain, we went out.",
+     "pt": "Aprendi uma! Despite of the rain, we went out."
+    },
+    {
+     "persona": "sofia",
+     "en": "So close, Max! It's 'despite the rain' or 'in spite of the rain'. 'Despite of' doesn't exist.",
+     "pt": "Quase lá, Max! É 'despite the rain' ou 'in spite of the rain'. 'Despite of' não existe."
+    },
+    {
+     "persona": "leo",
+     "en": "Fox formula: although + full sentence, despite + noun or -ing. Swap them and the sentence falls apart.",
+     "pt": "Fórmula da raposa: although + frase completa, despite + substantivo ou -ing. Troque um pelo outro e a frase desmorona."
+    },
+    {
+     "persona": "maya",
+     "en": "Therefore, I will practice every day. See what I did there?",
+     "pt": "Portanto, vou praticar todo dia. Viu o que eu fiz aqui?"
+    }
+   ],
+   "quando_usar": [
+    "Para contrastar com oração completa: \"Although the test was hard, everyone passed.\"",
+    "Para contrastar com substantivo ou -ing: \"Despite being tired, she finished the race.\"",
+    "Para contrastar entre duas frases separadas: \"The hotel was expensive. However, the service was terrible.\"",
+    "Para indicar consequência: \"He didn't back up his files; therefore, he lost everything.\"",
+    "Para expressar propósito: \"She moved to Dublin in order to improve her English.\""
+   ],
+   "formacao": [
+    {
+     "rotulo": "Contraste + oração",
+     "estrutura": "although/even though + sujeito + verbo",
+     "exemplo_en": "Even though he trained hard, he lost the match.",
+     "exemplo_pt": "Mesmo tendo treinado muito, ele perdeu a partida."
+    },
+    {
+     "rotulo": "Contraste + substantivo/-ing",
+     "estrutura": "despite / in spite of + substantivo ou verbo-ing",
+     "exemplo_en": "Despite the traffic, we arrived on time.",
+     "exemplo_pt": "Apesar do trânsito, chegamos na hora."
+    },
+    {
+     "rotulo": "Contraste entre frases",
+     "estrutura": "Frase 1. However, + frase 2",
+     "exemplo_en": "The apartment is small. However, the location is perfect.",
+     "exemplo_pt": "O apartamento é pequeno. Porém, a localização é perfeita."
+    },
+    {
+     "rotulo": "Consequência",
+     "estrutura": "Frase 1; therefore, / As a result, + frase 2",
+     "exemplo_en": "Sales dropped; therefore, the company changed its strategy.",
+     "exemplo_pt": "As vendas caíram; portanto, a empresa mudou de estratégia."
+    }
+   ],
+   "dicas": [
+    {
+     "tipo": "dica",
+     "texto": "Se quiser usar 'despite' com uma frase completa, adicione 'the fact that': 'Despite the fact that it was late, we kept talking.' Funciona, mas 'although' costuma ficar mais elegante."
+    },
+    {
+     "tipo": "atencao",
+     "texto": "'However' não emenda duas orações com vírgula simples. Use ponto ou ponto e vírgula antes: 'It was cold. However, we swam.' Escrever 'It was cold, however we swam' é erro de pontuação."
+    }
+   ],
+   "erros_comuns": [
+    {
+     "errado": "Despite of the problems, the event was a success.",
+     "certo": "Despite the problems, the event was a success.",
+     "explicacao": "É 'despite' OU 'in spite of' — misturar os dois cria o inexistente 'despite of', um dos erros mais cometidos por brasileiros."
+    },
+    {
+     "errado": "Although the rain, we went to the beach.",
+     "certo": "Despite the rain, we went to the beach.",
+     "explicacao": "'Although' exige oração com sujeito e verbo ('although it was raining'). Antes de substantivo puro, use 'despite' ou 'in spite of'."
+    },
+    {
+     "errado": "He studied a lot. Therefore he failed the exam.",
+     "certo": "He studied a lot. However, he failed the exam.",
+     "explicacao": "'Therefore' indica consequência lógica, mas reprovar depois de estudar é um CONTRASTE — o conector certo é 'however'. Escolha o conector pela lógica, não pelo som."
+    }
+   ],
+   "mini_teste": [
+    {
+     "pergunta": "Complete: ___ having little experience, she got the job.",
+     "opcoes": [
+      "Although",
+      "However",
+      "Despite"
+     ],
+     "correta": 2,
+     "explicacao": "Antes de verbo com -ing ('having'), o conector correto é 'despite'. 'Although' precisaria de oração completa."
+    },
+    {
+     "pergunta": "Complete: The flight was delayed. ___, we missed the connection.",
+     "opcoes": [
+      "As a result",
+      "Even though",
+      "In spite of"
+     ],
+     "correta": 0,
+     "explicacao": "Perder a conexão é consequência do atraso: 'As a result'. Os outros dois indicam contraste."
+    },
+    {
+     "pergunta": "Qual frase está correta?",
+     "opcoes": [
+      "Even though the price, I bought the tickets.",
+      "Even though the tickets were expensive, I bought them.",
+      "Despite the tickets were expensive, I bought them."
+     ],
+     "correta": 1,
+     "explicacao": "'Even though' + oração completa (the tickets were expensive) está perfeito. 'Despite' não aceita oração e 'even though' não aceita substantivo puro."
+    }
+   ],
+   "exercicios": [
+    {
+     "pergunta": "___ the heavy traffic, we arrived on time.",
+     "opcoes": [
+      "Despite",
+      "Although",
+      "However"
+     ],
+     "correta": 0,
+     "explicacao": "Antes de substantivo ('the heavy traffic') usa-se 'despite'. 'Although' exige oração com sujeito e verbo, e 'however' liga frases separadas."
+    },
+    {
+     "pergunta": "She went to work ___ she was feeling ill.",
+     "opcoes": [
+      "despite",
+      "in spite of",
+      "even though"
+     ],
+     "correta": 2,
+     "explicacao": "Antes de oração completa ('she was feeling ill') usa-se 'even though'. 'Despite' e 'in spite of' só aceitam substantivo ou gerúndio."
+    },
+    {
+     "pergunta": "The film got terrible reviews. ___, it was a box-office hit.",
+     "opcoes": [
+      "Despite",
+      "However",
+      "Although"
+     ],
+     "correta": 1,
+     "explicacao": "Para contrastar duas frases independentes, com vírgula depois, usa-se 'However'. 'Although' e 'despite' precisam se conectar dentro da mesma frase."
+    },
+    {
+     "pergunta": "He failed the test ___ studying hard for weeks.",
+     "opcoes": [
+      "although",
+      "even though",
+      "despite"
+     ],
+     "correta": 2,
+     "explicacao": "Antes de gerúndio ('studying') usa-se 'despite'. 'Although studying' está errado porque 'although' pede oração com sujeito explícito."
+    },
+    {
+     "pergunta": "I'll lend you the money ___ you pay me back by Friday.",
+     "opcoes": [
+      "as long as",
+      "unless",
+      "in case"
+     ],
+     "correta": 0,
+     "explicacao": "'As long as' expressa condição: 'contanto que você me pague'. 'Unless' inverteria o sentido ('a menos que'), tornando a frase ilógica."
+    },
+    {
+     "pergunta": "Take an umbrella ___ it rains.",
+     "opcoes": [
+      "unless",
+      "in case",
+      "so that"
+     ],
+     "correta": 1,
+     "explicacao": "'In case' indica precaução: leve o guarda-chuva para o caso de chover. 'Unless' significaria 'a menos que chova', o oposto da intenção."
+    },
+    {
+     "pergunta": "The company reduced prices ___ attract more customers.",
+     "opcoes": [
+      "so that",
+      "in order to",
+      "for to"
+     ],
+     "correta": 1,
+     "explicacao": "Antes de verbo no infinitivo usa-se 'in order to'. 'So that' exigiria oração completa ('so that it could attract'), e 'for to' é calco do português 'para'."
+    },
+    {
+     "pergunta": "___ being the youngest candidate, she got the job.",
+     "opcoes": [
+      "Although",
+      "However",
+      "In spite of"
+     ],
+     "correta": 2,
+     "explicacao": "Antes de gerúndio ('being') usa-se 'in spite of'. 'Although being' é o erro típico de quem decora 'although' como tradução única de 'embora'."
+    },
+    {
+     "pergunta": "He speaks English fluently, ___ his brother can barely order a coffee.",
+     "opcoes": [
+      "whereas",
+      "despite",
+      "unless"
+     ],
+     "correta": 0,
+     "explicacao": "'Whereas' contrasta duas situações paralelas ('ao passo que'). 'Despite' não pode conectar duas orações completas dessa forma."
+    },
+    {
+     "pergunta": "We decided to walk home ___ it was already dark.",
+     "opcoes": [
+      "despite",
+      "even though",
+      "however"
+     ],
+     "correta": 1,
+     "explicacao": "Oração completa de concessão pede 'even though'. 'Despite it was dark' é um dos erros mais comuns de brasileiros em nível avançado."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1><%= questao.id ? 'Editar questão' : 'Nova questão' %></h1>
+  <% if (erro) { %><p class="aviso aviso--erro"><%= erro %></p><% } %>
+
+  <form method="post" action="/admin/salvar" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<%= questao.id || '' %>">
+
+    <div class="painel">
+      <h2>Identificação</h2>
+      <div class="campo">
+        <label for="titulo">Título (máx. 70 caracteres)</label>
+        <input type="text" id="titulo" name="titulo" maxlength="70" required value="<%= questao.titulo %>" placeholder="Questão de inglês estilo ENEM: tirinha sobre meio ambiente">
+        <p class="dica">É o que aparece no Google. Comece com a palavra-chave.</p>
+      </div>
+      <div class="campo">
+        <label for="meta_description">Meta description (50 a 160 caracteres)</label>
+        <textarea id="meta_description" name="meta_description" maxlength="160" style="min-height:4rem"><%= questao.meta_description %></textarea>
+      </div>
+      <div class="linha linha--3">
+        <div class="campo">
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo">
+            <option value="interpretacao"<%= questao.tipo==='interpretacao'?' selected':'' %>>Interpretação de texto</option>
+            <option value="gramatica"<%= questao.tipo==='gramatica'?' selected':'' %>>Gramática</option>
+            <option value="vocabulario"<%= questao.tipo==='vocabulario'?' selected':'' %>>Vocabulário</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="nivel_cefr">Nível CEFR</label>
+          <select id="nivel_cefr" name="nivel_cefr">
+            <% ['A1','A2','B1','B2','C1','C2'].forEach(function(n){ %><option value="<%= n %>"<%= questao.nivel_cefr===n?' selected':'' %>><%= n %></option><% }) %>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="genero_textual">Gênero textual</label>
+          <input type="text" id="genero_textual" name="genero_textual" list="generos" value="<%= questao.genero_textual %>" placeholder="tirinha">
+          <datalist id="generos">
+            <option value="tirinha"><option value="charge"><option value="cartum"><option value="anúncio">
+            <option value="reportagem"><option value="artigo de opinião"><option value="poema"><option value="letra de música">
+            <option value="infográfico"><option value="cartaz"><option value="post de rede social"><option value="aviso">
+          </datalist>
+        </div>
+      </div>
+      <div class="campo">
+        <label for="tema">Tema</label>
+        <input type="text" id="tema" name="tema" value="<%= questao.tema %>" placeholder="meio-ambiente">
+        <p class="dica">Vira endereço de página. Use palavras simples: tecnologia, saúde, trabalho.</p>
+      </div>
+    </div>
+
+    <div class="painel">
+      <h2>Imagem</h2>
+      <% if (questao.imagem) { %>
+        <img src="<%= questao.imagem %>" alt="" style="max-width:320px;border:1px solid var(--borda);border-radius:8px;margin-bottom:.75rem">
+        <label style="display:flex;gap:.5rem;align-items:center;font-size:.9rem;margin-bottom:1rem">
+          <input type="checkbox" name="remover_imagem" value="1"> Remover esta imagem
+        </label>
+      <% } %>
+      <div class="campo">
+        <label for="imagem">Arquivo (JPG, PNG, WEBP ou GIF — até 4 MB)</label>
+        <input type="file" id="imagem" name="imagem" accept="image/jpeg,image/png,image/webp,image/gif">
+        <p class="dica">Para tirinha, charge, cartum, anúncio ou cartaz.</p>
+      </div>
+      <div class="campo">
+        <label for="imagem_alt">Descrição da imagem</label>
+        <input type="text" id="imagem_alt" name="imagem_alt" value="<%= questao.imagem_alt %>" placeholder="Tirinha em que dois personagens discutem reciclagem">
+        <p class="dica">Obrigatória para publicar com imagem. Serve a leitor de tela e ao Google.</p>
+      </div>
+    </div>
+
+    <div class="painel">
+      <h2>Texto-base e fonte</h2>
+      <div class="campo">
+        <label for="texto_base">Texto-base</label>
+        <textarea id="texto_base" name="texto_base" style="min-height:11rem" placeholder="Cole aqui o trecho autêntico. Separe parágrafos com uma linha em branco."><%= questao.texto_base %></textarea>
+        <p class="dica">Se a questão for só de imagem, pode ficar vazio.</p>
+      </div>
+      <div class="linha linha--3">
+        <div class="campo"><label for="fonte_veiculo">Veículo</label><input type="text" id="fonte_veiculo" name="fonte_veiculo" value="<%= questao.fonte_veiculo %>" placeholder="The Guardian"></div>
+        <div class="campo"><label for="fonte_url">URL</label><input type="url" id="fonte_url" name="fonte_url" value="<%= questao.fonte_url %>" placeholder="https://..."></div>
+        <div class="campo"><label for="fonte_data">Data</label><input type="text" id="fonte_data" name="fonte_data" value="<%= questao.fonte_data || '' %>" placeholder="14/03/2026"></div>
+      </div>
+    </div>
+
+    <div class="painel">
+      <h2>Comando e alternativas</h2>
+      <div class="campo">
+        <label for="enunciado">Enunciado</label>
+        <textarea id="enunciado" name="enunciado" required style="min-height:5rem"><%= questao.enunciado %></textarea>
+        <p class="dica">Não pode entregar a resposta nem a operação de leitura.</p>
+      </div>
+      <% questao.alternativas.forEach(function(a){ %>
+        <div class="campo">
+          <label for="alt_<%= a.letra %>">Alternativa <%= a.letra %></label>
+          <input type="text" id="alt_<%= a.letra %>" name="alt_<%= a.letra %>" required value="<%= a.texto %>">
+        </div>
+      <% }) %>
+      <div class="linha linha--2">
+        <div class="campo">
+          <label for="gabarito">Gabarito</label>
+          <select id="gabarito" name="gabarito">
+            <% ['A','B','C','D','E'].forEach(function(l){ %><option value="<%= l %>"<%= questao.gabarito===l?' selected':'' %>><%= l %></option><% }) %>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="publicada">Situação</label>
+          <select id="publicada" name="publicada">
+            <option value="0"<%= !questao.publicada?' selected':'' %>>Rascunho (não aparece no site)</option>
+            <option value="1"<%= questao.publicada?' selected':'' %>>Publicada</option>
+          </select>
+        </div>
+      </div>
+      <div class="campo">
+        <label for="comentario">Gabarito comentado</label>
+        <textarea id="comentario" name="comentario" style="min-height:9rem" placeholder="Por que a correta é correta e por que cada distrator falha."><%= questao.comentario %></textarea>
+        <p class="dica">Aceita HTML simples. Use &lt;mark&gt; para destacar a frase-chave.</p>
+      </div>
+    </div>
+
+    <div class="acoes">
+      <button class="btn" type="submit">Salvar</button>
+      <a class="btn btn--sec" href="/admin">Cancelar</a>
+    </div>
+  </form>
+</div>
+<%- include('../partials/rodape') %>

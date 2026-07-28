@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %> · English for ALL</title>
+<meta name="description" content="<%= description || '' %>">
+<link rel="canonical" href="<%= canonical %>">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<% if (typeof layoutAdmin !== 'undefined' && layoutAdmin) { %><meta name="robots" content="noindex, nofollow"><% } %>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="English for ALL">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:description" content="<%= description || '' %>">
+<meta property="og:url" content="<%= canonical %>">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2f3ab2">
+<script>(function(){try{var t=localStorage.getItem('tema');if(t!=='claro'&&t!=='escuro'){t=matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'}document.documentElement.dataset.tema=t}catch(e){document.documentElement.dataset.tema='claro'}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/estilo.css?v=8">
+<script src="/js/site.js?v=4" defer></script>
+<% if (typeof jsonld !== 'undefined' && jsonld) { %>
+<script type="application/ld+json"><%- JSON.stringify(jsonld) %></script>
+<% } %>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="topo__int">
+    <a class="marca" href="/"><img class="marca__logo" src="/img/logo.png" alt="" width="76" height="76"><span class="marca__nome">English for <em class="marca__all">ALL</em></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/questoes"<%= caminho.startsWith('/questoes') ? ' aria-current="page"' : '' %>>Questões</a>
+      <details class="menu menu--nav">
+        <summary<%= (caminho.startsWith('/gramatica') || caminho.startsWith('/exercicios')) ? ' class="ativo"' : '' %>>Aprender <svg class="menu__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul class="menu__painel">
+          <li><a href="/gramatica"><span>Grammar Explanation</span><span class="menu__n">A1&ndash;C2</span></a></li>
+          <li><a href="/exercicios"><span>Grammar Exercises</span><span class="menu__n">600</span></a></li>
+          <li><a href="/questoes?tipo=interpretacao"><span>Reading</span><span class="menu__n">provas</span></a></li>
+          <li><a href="/questoes?tipo=gramatica"><span>Use of English</span><span class="menu__n">provas</span></a></li>
+        </ul>
+      </details>
+      <% if (logado) { %>
+        <a href="/prova"<%= caminho.startsWith('/prova') ? ' aria-current="page"' : '' %>>Montar prova</a>
+        <a href="/admin"<%= caminho.startsWith('/admin') ? ' aria-current="page"' : '' %>>Painel</a>
+      <% } else { %>
+        <a href="/montar-prova"<%= caminho.startsWith('/montar-prova') ? ' aria-current="page"' : '' %>>Montar prova</a>
+      <% } %>
+      <button class="tema-btn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+        <svg class="icone-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icone-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">

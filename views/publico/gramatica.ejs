@@ -1,0 +1,69 @@
+<%- include('../partials/cabeca') %>
+
+<section class="hero hero--gram">
+  <div class="hero__int">
+    <h1>Grammar do <span class="grifo">A1 ao C2</span>, sem mistério</h1>
+    <p class="hero__sub">Toda a gramática do inglês explicada em português, nível por nível: diálogos, formação, erros comuns e um mini-teste em cada tópico.</p>
+
+    <div class="turma">
+      <figure class="turma__membro">
+        <%- include('../partials/persona', { nome: 'sofia' }) %>
+        <figcaption><strong>Teacher Sofia</strong><span>explica a regra</span></figcaption>
+      </figure>
+      <figure class="turma__membro">
+        <%- include('../partials/persona', { nome: 'maya' }) %>
+        <figcaption><strong>Maya</strong><span>pergunta o que você perguntaria</span></figcaption>
+      </figure>
+      <figure class="turma__membro">
+        <%- include('../partials/persona', { nome: 'leo' }) %>
+        <figcaption><strong>Leo</strong><span>dá os macetes</span></figcaption>
+      </figure>
+      <figure class="turma__membro">
+        <%- include('../partials/persona', { nome: 'max' }) %>
+        <figcaption><strong>Max</strong><span>erra para você não errar</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="env">
+  <% if (!niveis.length) { %>
+    <p class="vazio">O conteúdo de gramática está sendo preparado. Volte em breve!</p>
+  <% } else { %>
+
+  <nav class="niveis-nav" aria-label="Níveis CEFR">
+    <% niveis.forEach(function(n){ %>
+      <a class="niveis-nav__pill niveis-nav__pill--<%= n.nivel.toLowerCase() %>" href="#nivel-<%= n.nivel.toLowerCase() %>">
+        <strong><%= n.nivel %></strong> <span><%= n.topicos.length %> tópicos</span>
+      </a>
+    <% }) %>
+  </nav>
+
+  <% niveis.forEach(function(n){ %>
+  <section class="nivel-bloco" id="nivel-<%= n.nivel.toLowerCase() %>" aria-label="Nível <%= n.nivel %>">
+    <div class="nivel-bloco__cabeca">
+      <span class="nivel-selo nivel-selo--<%= n.nivel.toLowerCase() %>"><%= n.nivel %></span>
+      <div>
+        <h2><%= n.titulo %></h2>
+        <% if (n.descricao) { %><p><%= n.descricao %></p><% } %>
+      </div>
+    </div>
+    <div class="grade grade--gram">
+      <% n.topicos.forEach(function(t, i){ %>
+        <a class="gcard" href="/gramatica/<%= t.slug %>">
+          <span class="gcard__num"><%= String(i + 1).padStart(2, '0') %></span>
+          <span class="gcard__corpo">
+            <strong><%= t.titulo %></strong>
+            <% if (t.subtitulo) { %><span class="gcard__sub"><%= t.subtitulo %></span><% } %>
+          </span>
+          <span class="seta" aria-hidden="true">&rarr;</span>
+        </a>
+      <% }) %>
+    </div>
+  </section>
+  <% }) %>
+
+  <% } %>
+</div>
+
+<%- include('../partials/rodape') %>
