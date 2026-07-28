@@ -24,6 +24,7 @@ function contagens(agora) {
     enem: db.contar({ colecao: '', banca: 'ENEM' }),
     useOfEnglish: db.contar({ colecao: 'use-of-english' }),
     useOfEnglishProvas: db.contar({ colecao: '', tipo: 'gramatica' }),
+    medicina: db.contar({ colecao: '', instituicoes: require('./medicina').INSTITUICOES }),
     reading: db.contar({ colecao: 'reading' }),
     readingProvas: db.contar({ colecao: '', tipo: 'interpretacao' }),
     exercicios,

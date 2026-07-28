@@ -64,6 +64,73 @@ router.get('/questoes', (req, res) => {
   });
 });
 
+// ------------------------------------------- vestibulares de medicina
+
+const MED = require('../lib/medicina');
+
+router.get('/medicina', (req, res) => {
+  const filtros = {
+    colecao: '',
+    instituicoes: MED.INSTITUICOES,
+    instituicao: req.query.instituicao || null,
+    ano: req.query.ano ? Number(req.query.ano) || null : null,
+    nivel: req.query.nivel || null,
+    busca: req.query.q || null,
+  };
+
+  const todas = db.listar(filtros);
+
+  // Facetas calculadas sobre o recorte, para não oferecer filtro que dá zero.
+  const doRecorte = db.listar({ colecao: '', instituicoes: MED.INSTITUICOES });
+  const contar = (campo) => {
+    const m = new Map();
+    doRecorte.forEach((q) => {
+      const v = q[campo];
+      if (v === null || v === undefined || v === '') return;
+      m.set(v, (m.get(v) || 0) + 1);
+    });
+    return [...m.entries()].map(([valor, total]) => ({ valor, total }));
+  };
+
+  const porInstituicao = contar('instituicao')
+    .map((i) => ({ ...i, nome: MED.nomeAmigavel(i.valor) }))
+    .sort((a, b) => b.total - a.total);
+  const porAno = contar('ano').sort((a, b) => b.valor - a.valor);
+  const porNivel = contar('nivel_cefr').sort((a, b) => String(a.valor).localeCompare(String(b.valor)));
+
+  const POR_PAGINA = 24;
+  const paginas = Math.max(1, Math.ceil(todas.length / POR_PAGINA));
+  const pagina = Math.min(Math.max(1, parseInt(req.query.pagina, 10) || 1), paginas);
+  const questoes = todas.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
+
+  const qsBase = new URLSearchParams();
+  Object.entries(req.query).forEach(([k, v]) => {
+    if (k !== 'pagina' && v) qsBase.append(k, v);
+  });
+
+  const inst = req.query.instituicao;
+  res.render('publico/medicina', {
+    title: inst
+      ? `Questões de inglês do vestibular ${MED.nomeAmigavel(inst)} com gabarito`
+      : 'Questões de inglês dos vestibulares de Medicina com gabarito',
+    description: inst
+      ? `Questões de inglês do vestibular de medicina ${MED.nomeAmigavel(inst)}, com texto original, cinco alternativas e gabarito comentado em português.`
+      : 'Banco de questões de inglês dos vestibulares de Medicina — Albert Einstein, Famerp, Famema, Santa Casa e outros — com gabarito comentado em português.',
+    questoes,
+    encontradas: todas.length,
+    total: doRecorte.length,
+    porInstituicao,
+    porAno,
+    porNivel,
+    filtros,
+    pagina,
+    paginas,
+    qsBase: qsBase.toString(),
+    nomeAmigavel: MED.nomeAmigavel,
+    ROTULOS_TIPO,
+  });
+});
+
 // --------------------------------------- coleções autorais (reading, use of english)
 
 const { NIVEIS, COLECOES } = require('../lib/colecoes');

@@ -1,0 +1,113 @@
+<%- include('../partials/cabeca') %>
+<%
+  function url(extra) {
+    const p = new URLSearchParams();
+    const atual = { instituicao: filtros.instituicao, ano: filtros.ano, nivel: filtros.nivel, q: filtros.busca };
+    Object.assign(atual, extra);
+    Object.entries(atual).forEach(([k, v]) => { if (v) p.append(k, v); });
+    const s = p.toString();
+    return s ? '/medicina?' + s : '/medicina';
+  }
+  const temFiltro = Boolean(filtros.instituicao || filtros.ano || filtros.nivel || filtros.busca);
+%>
+<div class="env">
+
+  <section class="reading-capa">
+    <h1>Questões de inglês dos vestibulares de <em>Medicina</em></h1>
+    <p class="reading-capa__linha">
+      <strong><%= total %></strong> <%= total === 1 ? 'questão' : 'questões' %> de provas reais de vestibulares de medicina,
+      com texto original, fonte citada e gabarito comentado em português.
+    </p>
+    <p class="reading-capa__nota">Albert Einstein, Famerp, Famema, Santa Casa, Sírio Libanês, Unifesp e outros.</p>
+  </section>
+
+  <% if (porInstituicao.length) { %>
+    <section class="niveis" aria-label="Escolha a instituição">
+      <% porInstituicao.forEach(function(i){ %>
+        <a class="nivel-card<%= filtros.instituicao===i.valor ? ' nivel-card--on' : '' %>" href="<%= url({instituicao: filtros.instituicao===i.valor ? '' : i.valor, ano:'', nivel:'', q:''}) %>">
+          <span class="nivel-card__topo">
+            <span class="med-card__sigla"><%= i.valor %></span>
+            <span class="nivel-card__n"><%= i.total %></span>
+          </span>
+          <span class="nivel-card__desc"><%= i.nome %></span>
+        </a>
+      <% }) %>
+    </section>
+  <% } %>
+
+  <form class="reading-filtros" method="get" action="/medicina">
+    <% if (filtros.instituicao) { %><input type="hidden" name="instituicao" value="<%= filtros.instituicao %>"><% } %>
+    <div class="campo campo--cresce">
+      <label for="q">Buscar nestas questões</label>
+      <input type="search" id="q" name="q" value="<%= filtros.busca || '' %>" placeholder="tema, título ou trecho do texto…">
+    </div>
+    <div class="campo">
+      <label for="ano">Ano</label>
+      <select id="ano" name="ano">
+        <option value="">Todos os anos</option>
+        <% porAno.forEach(function(a){ %>
+          <option value="<%= a.valor %>"<%= String(filtros.ano)===String(a.valor)?' selected':'' %>><%= a.valor %> — <%= a.total %></option>
+        <% }) %>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="nivel">Nível</label>
+      <select id="nivel" name="nivel">
+        <option value="">Todos</option>
+        <% porNivel.forEach(function(n){ %>
+          <option value="<%= n.valor %>"<%= filtros.nivel===n.valor?' selected':'' %>><%= n.valor %> — <%= n.total %></option>
+        <% }) %>
+      </select>
+    </div>
+    <div class="reading-filtros__acoes">
+      <button class="btn" type="submit">Filtrar</button>
+      <% if (temFiltro) { %><a class="btn btn--sec" href="/medicina">Limpar</a><% } %>
+    </div>
+  </form>
+
+  <section aria-live="polite">
+    <h2 class="reading-h2">
+      <% if (filtros.instituicao) { %><%= nomeAmigavel(filtros.instituicao) %><% } else { %>Todas as instituições<% } %>
+      <span class="reading-h2__n">
+        <%= encontradas %> <%= encontradas === 1 ? 'questão' : 'questões' %><% if (paginas > 1) { %> · página <%= pagina %> de <%= paginas %><% } %>
+      </span>
+    </h2>
+
+    <% if (!questoes.length) { %>
+      <p class="vazio">Nenhuma questão com esses filtros. <a href="/medicina">Ver todas</a>.</p>
+    <% } else { %>
+      <div class="grade">
+        <% questoes.forEach(function(q){ %>
+          <%- include('../partials/card', { q: q }) %>
+        <% }) %>
+      </div>
+
+      <% if (paginas > 1) { %>
+        <nav class="paginacao" aria-label="Páginas">
+          <% if (pagina > 1) { %>
+            <a class="btn btn--sec btn--fino" rel="prev" href="/medicina?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina - 1 %>">← Anterior</a>
+          <% } %>
+          <span class="paginacao__meio">Página <%= pagina %> de <%= paginas %></span>
+          <% if (pagina < paginas) { %>
+            <a class="btn btn--sec btn--fino" rel="next" href="/medicina?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina + 1 %>">Próxima →</a>
+          <% } %>
+        </nav>
+      <% } %>
+    <% } %>
+  </section>
+
+  <section class="painel reading-cta">
+    <h2>Montar um simulado de medicina</h2>
+    <p>Escolha as questões por instituição e ano e gere um PDF pronto para imprimir ou um Word editável, com cabeçalho e folha de gabarito.</p>
+    <div class="acoes">
+      <% if (usuario || logado) { %>
+        <a class="btn" href="/prova">Ir para o montador</a>
+      <% } else { %>
+        <a class="btn" href="/cadastro?voltar=%2Fprova">Criar conta grátis</a>
+        <a class="btn btn--sec" href="/entrar?voltar=%2Fprova">Já tenho conta</a>
+      <% } %>
+    </div>
+  </section>
+
+</div>
+<%- include('../partials/rodape') %>
