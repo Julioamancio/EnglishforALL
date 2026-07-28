@@ -6,18 +6,16 @@
     Object.assign(atual, extra);
     Object.entries(atual).forEach(([k, v]) => { if (v) p.append(k, v); });
     const s = p.toString();
-    return s ? '/reading?' + s : '/reading';
+    return s ? col.caminho + '?' + s : col.caminho;
   }
   const temFiltro = Boolean(filtros.nivel || filtros.genero || filtros.busca);
+  const [sing, plur] = col.substantivo;
 %>
 <div class="env">
 
   <section class="reading-capa">
-    <h1>Reading em inglês, do <em>A1</em> ao <em>C2</em></h1>
-    <p class="reading-capa__linha">
-      <strong><%= total %></strong> textos originais, escritos especialmente para esta coleção.
-      Cada um traz uma questão de interpretação, cinco alternativas e gabarito comentado em português.
-    </p>
+    <h1><%- col.h1 %></h1>
+    <p class="reading-capa__linha"><strong><%= total %></strong> <%= col.chamada %></p>
     <p class="reading-capa__nota">Coleção autoral — separada do banco de questões de provas do ENEM e vestibulares.</p>
   </section>
 
@@ -33,7 +31,7 @@
     <% }) %>
   </section>
 
-  <form class="reading-filtros" method="get" action="/reading">
+  <form class="reading-filtros" method="get" action="<%= col.caminho %>">
     <% if (nivel) { %><input type="hidden" name="nivel" value="<%= nivel %>"><% } %>
     <div class="campo campo--cresce">
       <label for="q">Buscar nesta coleção</label>
@@ -50,7 +48,7 @@
     </div>
     <div class="reading-filtros__acoes">
       <button class="btn" type="submit">Filtrar</button>
-      <% if (temFiltro) { %><a class="btn btn--sec" href="/reading">Limpar</a><% } %>
+      <% if (temFiltro) { %><a class="btn btn--sec" href="<%= col.caminho %>">Limpar</a><% } %>
     </div>
   </form>
 
@@ -58,12 +56,12 @@
     <h2 class="reading-h2">
       <% if (nivel) { %>Nível <%= nivel %><% } else { %>Todos os níveis<% } %>
       <span class="reading-h2__n">
-        <%= encontradas %> <%= encontradas === 1 ? 'texto' : 'textos' %><% if (paginas > 1) { %> · página <%= pagina %> de <%= paginas %><% } %>
+        <%= encontradas %> <%= encontradas === 1 ? sing : plur %><% if (paginas > 1) { %> · página <%= pagina %> de <%= paginas %><% } %>
       </span>
     </h2>
 
     <% if (!questoes.length) { %>
-      <p class="vazio">Nenhum texto com esses filtros. <a href="/reading">Ver a coleção inteira</a>.</p>
+      <p class="vazio">Nenhum resultado com esses filtros. <a href="<%= col.caminho %>">Ver a coleção inteira</a>.</p>
     <% } else { %>
       <div class="grade">
         <% questoes.forEach(function(q){ %>
@@ -74,11 +72,11 @@
       <% if (paginas > 1) { %>
         <nav class="paginacao" aria-label="Páginas da coleção">
           <% if (pagina > 1) { %>
-            <a class="btn btn--sec btn--fino" rel="prev" href="/reading?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina - 1 %>">← Anterior</a>
+            <a class="btn btn--sec btn--fino" rel="prev" href="<%= col.caminho %>?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina - 1 %>">← Anterior</a>
           <% } %>
           <span class="paginacao__meio">Página <%= pagina %> de <%= paginas %></span>
           <% if (pagina < paginas) { %>
-            <a class="btn btn--sec btn--fino" rel="next" href="/reading?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina + 1 %>">Próxima →</a>
+            <a class="btn btn--sec btn--fino" rel="next" href="<%= col.caminho %>?<%= qsBase ? qsBase + '&' : '' %>pagina=<%= pagina + 1 %>">Próxima →</a>
           <% } %>
         </nav>
       <% } %>
@@ -86,8 +84,8 @@
   </section>
 
   <section class="painel reading-cta">
-    <h2>Montar uma prova com estes textos</h2>
-    <p>Escolha os textos por nível e gere um PDF pronto para imprimir ou um Word editável, com cabeçalho da escola e folha de gabarito.</p>
+    <h2><%= col.ctaTitulo %></h2>
+    <p><%= col.ctaTexto %></p>
     <div class="acoes">
       <% if (usuario || logado) { %>
         <a class="btn" href="/prova">Ir para o montador</a>

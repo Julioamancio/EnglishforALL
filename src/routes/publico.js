@@ -64,64 +64,56 @@ router.get('/questoes', (req, res) => {
   });
 });
 
-// ------------------------------------------------- coleção de reading (A1–C2)
+// --------------------------------------- coleções autorais (reading, use of english)
 
-const NIVEIS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const { NIVEIS, COLECOES } = require('../lib/colecoes');
 
-const DESCRICAO_NIVEL = {
-  A1: 'Frases curtas no presente, vocabulário do dia a dia. Primeiro contato com leitura em inglês.',
-  A2: 'Textos com passado simples e conectores básicos. Situações concretas e familiares.',
-  B1: 'Textos de opinião e reportagem. Já exigem inferência e leitura de conectores.',
-  B2: 'Argumentação com nuance e ironia leve. Nível típico das provas do ENEM.',
-  C1: 'Ensaio e crítica: metáfora, ambiguidade e tese implícita.',
-  C2: 'Prosa densa de proficiência. Paradoxo, mudança de registro e leitura nas entrelinhas.',
-};
+const POR_PAGINA_COLECAO = 24;
 
-router.get('/reading', (req, res) => {
-  const nivel = NIVEIS.includes(req.query.nivel) ? req.query.nivel : null;
-  const filtros = {
-    colecao: 'reading',
-    nivel,
-    genero: req.query.genero || null,
-    busca: req.query.q || null,
-  };
+// Uma única rota serve todas as coleções: a configuração vem de lib/colecoes.js.
+Object.values(COLECOES).forEach((col) => {
+  router.get(col.caminho, (req, res) => {
+    const nivel = NIVEIS.includes(req.query.nivel) ? req.query.nivel : null;
+    const filtros = {
+      colecao: col.chave,
+      nivel,
+      genero: req.query.genero || null,
+      busca: req.query.q || null,
+    };
 
-  const facetas = db.facetas('reading');
-  const porNivel = NIVEIS.map((n) => ({
-    nivel: n,
-    total: facetas.niveis.find((f) => f.valor === n)?.total || 0,
-    descricao: DESCRICAO_NIVEL[n],
-  }));
+    const facetas = db.facetas(col.chave);
+    const porNivel = NIVEIS.map((n) => ({
+      nivel: n,
+      total: facetas.niveis.find((f) => f.valor === n)?.total || 0,
+      descricao: col.niveis[n],
+    }));
 
-  const todas = db.listar(filtros);
-  const POR_PAGINA = 24;
-  const paginas = Math.max(1, Math.ceil(todas.length / POR_PAGINA));
-  const pagina = Math.min(Math.max(1, parseInt(req.query.pagina, 10) || 1), paginas);
-  const questoes = todas.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
+    const todas = db.listar(filtros);
+    const paginas = Math.max(1, Math.ceil(todas.length / POR_PAGINA_COLECAO));
+    const pagina = Math.min(Math.max(1, parseInt(req.query.pagina, 10) || 1), paginas);
+    const questoes = todas.slice((pagina - 1) * POR_PAGINA_COLECAO, pagina * POR_PAGINA_COLECAO);
 
-  const qsBase = new URLSearchParams();
-  Object.entries(req.query).forEach(([k, v]) => {
-    if (k !== 'pagina' && v) qsBase.append(k, v);
-  });
+    const qsBase = new URLSearchParams();
+    Object.entries(req.query).forEach(([k, v]) => {
+      if (k !== 'pagina' && v) qsBase.append(k, v);
+    });
 
-  res.render('publico/reading', {
-    title: nivel
-      ? `Reading em inglês nível ${nivel}: ${todas.length} textos com gabarito`
-      : 'Reading em inglês do A1 ao C2 com gabarito comentado',
-    description: nivel
-      ? `${todas.length} textos originais de reading nível ${nivel} com questão de interpretação, cinco alternativas e gabarito comentado em português.`
-      : 'Coleção de textos originais de reading em inglês, organizados do A1 ao C2, cada um com questão de interpretação e gabarito comentado em português.',
-    questoes,
-    encontradas: todas.length,
-    pagina,
-    paginas,
-    qsBase: qsBase.toString(),
-    filtros,
-    nivel,
-    porNivel,
-    facetas,
-    total: db.contar({ colecao: 'reading' }),
-    ROTULOS_TIPO,
+    res.render('publico/colecao', {
+      title: nivel ? col.tituloNivel(nivel, todas.length) : col.tituloBase,
+      description: nivel ? col.descricaoNivel(nivel, todas.length) : col.descricaoBase,
+      col,
+      questoes,
+      encontradas: todas.length,
+      pagina,
+      paginas,
+      qsBase: qsBase.toString(),
+      filtros,
+      nivel,
+      porNivel,
+      facetas,
+      total: db.contar({ colecao: col.chave }),
+      ROTULOS_TIPO,
+    });
   });
 });
 
@@ -231,8 +223,10 @@ router.get('/sitemap.xml', (req, res) => {
   const urls = [
     { loc: `${base}/`, prio: '1.0' },
     { loc: `${base}/questoes`, prio: '0.9' },
-    { loc: `${base}/reading`, prio: '0.9' },
-    ...NIVEIS.map((n) => ({ loc: `${base}/reading?nivel=${n}`, prio: '0.7' })),
+    ...Object.values(COLECOES).flatMap((c) => [
+      { loc: `${base}${c.caminho}`, prio: '0.9' },
+      ...NIVEIS.map((n) => ({ loc: `${base}${c.caminho}?nivel=${n}`, prio: '0.7' })),
+    ]),
     { loc: `${base}/montar-prova`, prio: '0.7' },
     { loc: `${base}/gramatica`, prio: '0.9' },
     ...require('../lib/gramatica')

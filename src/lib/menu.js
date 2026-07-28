@@ -22,7 +22,8 @@ function contagens(agora) {
   cache = {
     todas: db.contar({ colecao: '' }),
     enem: db.contar({ colecao: '', banca: 'ENEM' }),
-    useOfEnglish: db.contar({ colecao: '', tipo: 'gramatica' }),
+    useOfEnglish: db.contar({ colecao: 'use-of-english' }),
+    useOfEnglishProvas: db.contar({ colecao: '', tipo: 'gramatica' }),
     reading: db.contar({ colecao: 'reading' }),
     readingProvas: db.contar({ colecao: '', tipo: 'interpretacao' }),
     exercicios,

@@ -33,11 +33,12 @@
     <a class="marca" href="/"><img class="marca__logo" src="/img/logo.png" alt="" width="76" height="76"><span class="marca__nome">English for <em class="marca__all">ALL</em></span></a>
     <nav class="nav" aria-label="Principal">
       <details class="menu menu--nav">
-        <summary<%= (caminho.startsWith('/questoes') || caminho.startsWith('/reading') || caminho.startsWith('/exercicios')) ? ' class="ativo"' : '' %>>Questões <svg class="menu__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <summary<%= (caminho.startsWith('/questoes') || caminho.startsWith('/reading') || caminho.startsWith('/use-of-english') || caminho.startsWith('/exercicios')) ? ' class="ativo"' : '' %>>Questões <svg class="menu__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
         <ul class="menu__painel menu__painel--largo">
           <li><a href="/questoes"><span>Todas as questões</span><span class="menu__n"><%= menu.todas %></span></a></li>
           <li><a href="/questoes?banca=ENEM"><span>Questões ENEM</span><span class="menu__n"><%= menu.enem %></span></a></li>
-          <li><a href="/questoes?tipo=gramatica"><span>Use of English</span><span class="menu__n"><%= menu.useOfEnglish %></span></a></li>
+          <li><a href="/use-of-english"><span>Use of English</span><span class="menu__n">A1&ndash;C2</span></a></li>
+          <li><a href="/questoes?tipo=gramatica"><span>Use of English de provas</span><span class="menu__n"><%= menu.useOfEnglishProvas %></span></a></li>
           <li><a href="/reading"><span>Reading</span><span class="menu__n">A1&ndash;C2</span></a></li>
           <li><a href="/questoes?tipo=interpretacao"><span>Reading de provas</span><span class="menu__n"><%= menu.readingProvas %></span></a></li>
           <li><a href="/exercicios"><span>Grammar Exercises</span><span class="menu__n"><%= menu.exercicios %></span></a></li>
