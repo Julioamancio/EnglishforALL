@@ -10,8 +10,10 @@ router.use((req, res, next) => {
   next();
 });
 
-function tituloFiltro({ tipo, nivel, tema, genero, instituicao, ano }) {
+function tituloFiltro({ tipo, nivel, tema, genero, instituicao, banca, ano }) {
   const artigoInst = /^(enem|simulado)/i.test(instituicao || '') ? 'do' : 'da';
+  if (banca && ano) return `Questões de inglês do ${banca} de ${ano}`;
+  if (banca) return `Questões de inglês do ${banca} com gabarito comentado`;
   if (instituicao && ano) return `Questões de inglês ${artigoInst} ${instituicao} de ${ano}`;
   if (instituicao) return `Questões de inglês ${artigoInst} ${instituicao}`;
   if (ano) return `Questões de inglês de ${ano}`;
@@ -43,6 +45,7 @@ router.get('/questoes', (req, res) => {
     tema: req.query.tema || null,
     genero: req.query.genero || null,
     instituicao: req.query.instituicao || null,
+    banca: req.query.banca || null,
     ano: req.query.ano ? Number(req.query.ano) || null : null,
     busca: req.query.q || null,
     // O acervo de provas não se mistura com a coleção autoral de reading.

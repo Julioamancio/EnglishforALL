@@ -43,7 +43,7 @@ function porId(id) {
  * Listagem com filtros combináveis. Todos os campos são opcionais.
  * Usada tanto pelo site público quanto pelo painel e pelo montador de provas.
  */
-function listar({ tipo, nivel, tema, genero, instituicao, ano, busca, colecao, publicada = 1, limite, offset = 0 } = {}) {
+function listar({ tipo, nivel, tema, genero, instituicao, banca, ano, busca, colecao, publicada = 1, limite, offset = 0 } = {}) {
   const where = [];
   const params = [];
 
@@ -61,6 +61,8 @@ function listar({ tipo, nivel, tema, genero, instituicao, ano, busca, colecao, p
   if (tema) { where.push('tema = ?'); params.push(tema); }
   if (genero) { where.push('genero_textual = ?'); params.push(genero); }
   if (instituicao) { where.push('instituicao = ?'); params.push(instituicao); }
+  // banca agrupa as variantes de uma mesma prova: ENEM, ENEM PPL, ENEM Reaplicação.
+  if (banca) { where.push('instituicao LIKE ?'); params.push(`${banca}%`); }
   if (ano) { where.push('ano = ?'); params.push(ano); }
   if (busca) {
     where.push('(titulo LIKE ? OR enunciado LIKE ? OR texto_base LIKE ?)');

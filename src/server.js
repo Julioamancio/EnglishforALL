@@ -51,6 +51,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(require('./lib/menu').middleware);
+
 app.use('/', require('./routes/conta'));
 app.use('/', require('./routes/publico'));
 app.use('/', require('./routes/exercicios'));

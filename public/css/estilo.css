@@ -805,3 +805,6 @@ html[data-tema='escuro'] .barra-prova { box-shadow: 0 -6px 20px rgba(0,0,0,.4); 
 
 .reading-cta { margin-top: 2rem; }
 .reading-cta h2 { margin-top: 0; }
+
+/* Painel do menu Questões: cabe "Reading de provas" + contagem sem quebrar. */
+.menu__painel--largo { min-width: 275px; }
