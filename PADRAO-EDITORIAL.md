@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 14 (IDs 1–580
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 15 (IDs 1–605
 lidos; 1.049 publicadas).
 
 ---
@@ -104,6 +104,11 @@ numerado com o número antes da lacuna.
   a prova numera só as linhas com conteúdo; em "A HISTORY OF PI" (572–578) a
   linha em branco entre seções também é numerada — é por isso que o marcador 5
   aparece sozinho ali. Descobrir qual convenção o texto usa antes de mexer.
+- Nem todo número no começo da linha é numeração: o PDF deixa marcas de coluna
+  ou de página que viram um algarismo solto no meio do texto. Em "DISTANT PEAK
+  CAR" (584–591) havia dois "1" assim, nas linhas 16 e 31. Sinal de que é ruído:
+  o valor não cabe na sequência de 5 em 5 e a linha começa em minúscula
+  ("1 which offer rental…").
 - **A citação de linha é um contrato com o aluno e precisa ser verificada.**
   `audita-linhas.js` percorre o acervo, extrai o trecho citado antes de cada
   "(linha n)" e confere se ele cai naquela linha. Em 30/07/2026 acusou o bloco
