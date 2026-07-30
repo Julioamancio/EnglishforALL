@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 15 (IDs 1–605
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 16 (IDs 1–630
 lidos; 1.049 publicadas).
 
 ---
@@ -100,10 +100,13 @@ numerado com o número antes da lacuna.
   caracteres alinhado à direita, corpo do texto recuado em três espaços. Ao
   mexer nesses textos, conferir linha a linha contra o que as questões citam.
   Casos vivos: 519–523 (ITA 2011), 556–563 (ITA 2013), 572–578 (ITA 2014).
-- **Duas convenções de numeração convivem no acervo**: em quase todos os textos
-  a prova numera só as linhas com conteúdo; em "A HISTORY OF PI" (572–578) a
-  linha em branco entre seções também é numerada — é por isso que o marcador 5
-  aparece sozinho ali. Descobrir qual convenção o texto usa antes de mexer.
+- **Três convenções de numeração convivem no acervo**: a maioria dos textos
+  numera de 5 em 5 só as linhas com conteúdo; "A HISTORY OF PI" (572–578) numera
+  também a linha em branco entre seções (daí o marcador 5 aparecer sozinho); e os
+  textos do ITA 2016 (611–617, 621–624, 625–630) numeram **linha a linha**,
+  incluindo o título como linha 1 e uma linha 2 em branco que sobrevive como um
+  "2" solto — ali o "2" é conteúdo e não pode ser removido como ruído. Descobrir
+  qual convenção o texto usa antes de mexer.
 - Nem todo número no começo da linha é numeração: o PDF deixa marcas de coluna
   ou de página que viram um algarismo solto no meio do texto. Em "DISTANT PEAK
   CAR" (584–591) havia dois "1" assim, nas linhas 16 e 31. Sinal de que é ruído:
@@ -156,6 +159,15 @@ antiga não virar 404.
 Aplicado em 29/07/2026 a 8 questões: 13, 34, 55 (cópias de ITA 2015, Fuvest 2021
 e Unesp 2025) e 769–773 (caderno 2 da PUC Minas Medicina 2019, que repete as
 cinco questões do caderno 1 com as alternativas embaralhadas).
+
+### Coerência interna do item
+
+O nome próprio, a grafia e a citação do texto precisam ser os mesmos no
+texto-base, no enunciado, nas alternativas e no comentário. Defeitos assim só
+aparecem comparando as peças entre si, nunca lendo cada uma isolada. Corrigidos
+em 30/07/2026: "Petrobrás" na alternativa D da 616 enquanto a B da mesma questão
+e o texto-base grafam "Petrobras"; e a alternativa E da 613 citando "reflex
+reactions was" onde o texto-base e a questão 617 trazem "reflex reaction was".
 
 ### Republicação
 
