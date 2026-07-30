@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 17 (IDs 1–655
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 18 (IDs 1–680
 lidos; 1.049 publicadas).
 
 ---
@@ -117,9 +117,17 @@ numerado com o número antes da lacuna.
   "(linha n)" e confere se ele cai naquela linha. Em 30/07/2026 acusou o bloco
   ITA 2013 com deslocamento de +2 (a importação re-quebrou as linhas e pôs os
   marcadores nas posições novas) e o bloco ITA 2014 com +1; ambos corrigidos
-  re-quebrando o texto pelas próprias citações. Estado atual: **27 de 27
+  re-quebrando o texto pelas próprias citações. Estado atual: **30 de 30
   citações conferidas**. Rodar essa auditoria depois de qualquer mexida em
   texto numerado.
+- **Texto sem numeração cuja questão cita "linha n"** é o caso mais silencioso:
+  a auditoria não o via, porque só examinava textos que já tinham marcadores. Em
+  "The age of obesity" (671–675, ITA 2019) a quebra de linha já era a da prova —
+  a linha 19 batia com o trecho citado —, faltavam só os marcadores; inseridos em
+  30/07/2026. Ao encontrar caso assim, conferir a quebra contra a citação antes
+  de numerar; se não bater, o texto foi re-quebrado e precisa de reconstrução.
+- A referência também quebra: "(linhas⏎19-20)". As regras de junção só colavam
+  continuação que começa por letra, então o número escapava.
 - Quebra de linha do PDF que corta a frase no meio é ruído e deve ser juntada;
   quando a linha termina em hífen, junta-se sem espaço ("so-called").
 - **Um texto, uma versão.** Quando várias questões citam a mesma peça, todas
@@ -142,6 +150,11 @@ numerado com o número antes da lacuna.
   de página ou de seção solto — isso é ruído para leitor de tela.
 - A descrição visual entre colchetes fecha o campo e é onde se registra
   diagramação, ilustração e assinatura.
+- **O alt só aparece na tela se houver imagem** (`views/publico/questao.ejs:17`
+  renderiza o par). Quando a peça não tem arquivo de imagem, a transcrição vai no
+  `texto_base` mesmo — é o caso da tirinha do CommitStrip (676–678), que parece
+  fora do padrão e não é. Verificado em 30/07/2026: **nenhum alt órfão e nenhuma
+  imagem sem alt** no acervo; `scripts/audita-imagens.js` refaz essa checagem.
 
 ## 7. Itens discretos antigos
 

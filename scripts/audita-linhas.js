@@ -7,7 +7,9 @@ const Database = require('better-sqlite3');
 const db = new Database('dados/banco.db', { readonly: true });
 
 const norm = (s) => s.toLowerCase().replace(/[“”"’'‘]/g, '').replace(/\s+/g, ' ').trim();
-const RE_CIT = /[“"]([^“”"]{6,160})[”"][^()]{0,40}\(linhas?\s+(\d{1,2})(?:\s*(?:e|a|,)\s*(\d{1,2}))?\)/g;
+// separador entre os dois numeros: "e", "a", ",", "-", "–" ou "/" ("linhas 19-20",
+// "linhas 35/36", "linhas 2 e 3"); sem isso a citacao passa despercebida
+const RE_CIT = /[“"]([^“”"]{6,160})[”"][^()]{0,40}\(linhas?\s+(\d{1,2})(?:\s*(?:e|a|,|-|–|\/)\s*(\d{1,2}))?\)/g;
 
 const qs = db.prepare("SELECT id, slug, instituicao, ano, enunciado, texto_base FROM questoes WHERE publicada=1 AND texto_base <> '' AND enunciado LIKE '%linha%'").all();
 let comCitacao = 0, ok = 0;
