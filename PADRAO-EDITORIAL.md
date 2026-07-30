@@ -4,9 +4,9 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 23 (IDs 1–814
-lidos; **1.050 publicadas**). Faltam 252 questões (IDs 815–1066), 11 lotes: 242 da
-Fuvest e 10 da PUC Minas. **ITA e quase toda a PUC Minas já curados.**
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 24 (IDs 1–840
+lidos; **1.051 publicadas**). Faltam 226 questões (IDs 841–1066), 10 lotes, todas
+da Fuvest. **ITA e PUC Minas inteiramente curados.**
 
 ---
 
@@ -201,6 +201,26 @@ detectar isso por script — só lendo.
   fora do padrão e não é. Verificado em 30/07/2026: **nenhum alt órfão e nenhuma
   imagem sem alt** no acervo; `scripts/audita-imagens.js` refaz essa checagem.
 
+### Ressalva de gabarito não oficial
+
+Algumas provas antigas da Fuvest não tiveram gabarito publicado, e o comentário
+dessas questões termina avisando: *"A Fuvest não publicou o gabarito desta prova;
+esta resposta é a leitura do nosso time, não a oficial."* Isso **não** é nota
+editorial proibida pelo §5 — é ressalva de confiabilidade, e o aluno precisa
+dela.
+
+Aparece em 68 questões e é **consistente por prova**: 1977 (9/9), 1998 (14/14),
+2001, 2002 (14/14), 2003, 2004 (8/8) têm; 1978 (0/10), 1979 (0/12), 1999 e 2000
+(0/14) não têm. Esse desenho por prova indica critério de quem curou, não
+esquecimento. Não mexer sem uma fonte que diga quais provas tiveram gabarito
+divulgado.
+
+### Pendência de tipografia
+
+**197 textos-base ainda usam aspas retas duplas** (`"`) onde o padrão do acervo
+é aspa curva (`“ ”`). É defeito amplo e uniforme, que merece um lote próprio de
+tipografia em vez de correção avulsa. Medido em 30/07/2026, não corrigido.
+
 ## 7. Itens discretos antigos
 
 Fuvest 1977–1979 e similares: tradução de frase única, escolha de forma verbal.
@@ -258,6 +278,10 @@ porque o texto-base tinha perdido a numeração das dez perguntas — e as
 alternativas citam "a pergunta n° 1/4/5/8". Com a numeração restaurada no
 lote 11, não havia mais motivo para segurá-la: publicada em 30/07/2026.
 Contagem pública: **1.048 → 1.049**.
+
+Mesma decisão para a **831** (Fuvest 1977, pronome relativo), item discreto
+idêntico em estrutura às quatro irmãs publicadas da mesma prova. Publicada no
+lote 24: **1.050 → 1.051**.
 
 Mesma decisão para a **734** (ITA 2024, protestos contra o sexismo na Coreia),
 também completa e curada, cujo enunciado cita "os parágrafos seis e sete" — o
