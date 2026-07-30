@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 12 (IDs 1–530
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 13 (IDs 1–555
 lidos; 1.049 publicadas).
 
 ---
@@ -74,6 +74,8 @@ numerado com o número antes da lacuna.
 - Não afirma detalhe que não está no texto-base.
 - É escrito em português. Palavra inglesa só como **menção** (o conectivo em
   análise), nunca como peça da sintaxe portuguesa.
+- Citação do texto entre **aspas curvas duplas** (“…”); aspas retas simples
+  ('…') são resíduo de importação. Apóstrofo dentro da palavra inglesa fica.
 - Nota editorial ("questão oficial do ENEM X", "gabarito do documento") não vai
   no comentário do aluno.
 
@@ -100,6 +102,18 @@ numerado com o número antes da lacuna.
   linha a linha contra o que as questões citam. Caso vivo: 519–523 (ITA 2011).
 - Quebra de linha do PDF que corta a frase no meio é ruído e deve ser juntada;
   quando a linha termina em hífen, junta-se sem espaço ("so-called").
+- **Um texto, uma versão.** Quando várias questões citam a mesma peça, todas
+  guardam o mesmo `texto_base` e a mesma imagem — inclusive as que não fazem
+  pergunta sobre a parte gráfica. Corrigido em 30/07/2026 no anúncio da GE
+  Capital (ITA 2012): 541 tinha manchete, imagem e alt, enquanto 540, 542 e 543
+  traziam uma versão sem manchete, sem imagem e com as lacunas mal formatadas.
+- Filete e ornamento de diagramação ("____________") não são texto: saem.
+- **Erro tipográfico evidente no texto importado é corrigido** quando nenhuma
+  questão do bloco depende dele: o banco ensina inglês e não pode reproduzir
+  forma agramatical. Aplicado a "the government an has been detained" → "and",
+  "It would work incredibility quickly" → "incredibly" e ao verso de Blake
+  "the palm of you hand" → "your hand". Grafia legítima ainda que incomum fica
+  como está (ex.: "an idea that remains illusive", que é palavra real).
 
 ### Descrição de imagem (`imagem_alt`)
 
