@@ -4,13 +4,13 @@ Documento de retomada: tudo o que é preciso para continuar a curadoria sem
 depender do histórico da conversa. O que **deve** ser feito está no
 `PADRAO-EDITORIAL.md`; aqui está **onde paramos e como se roda um lote**.
 
-Atualizado em 30/07/2026, ao fim do lote 30.
+Atualizado em 30/07/2026, ao fim do lote 31.
 
 ## Onde paramos
 
-- **Lotes 1 a 30 concluídos e gravados: IDs 1 a 990.**
-- Próximo lote começa no **ID 991**.
-- Faltam **76 questões (IDs 991–1066), 4 lotes**, todas da Fuvest.
+- **Lotes 1 a 31 concluídos e gravados: IDs 1 a 1015.**
+- Próximo lote começa no **ID 1016**.
+- Faltam **51 questões (IDs 1016–1066), 3 lotes**, todas da Fuvest.
 - **1.051 questões publicadas** (eram 1.048; entraram a 493, a 734 e a 831).
 - O **ITA e as duas PUC Minas estão inteiramente curados**. O que resta é só
   Fuvest — textos curtos e muitos itens discretos, sem o aparato de linha e
@@ -51,7 +51,7 @@ ficam versionados em `scripts/`.
    intencional, **ROLLBACK** e nada é gravado.
 4. **Dry-run, ler a saída, só então gravar.**
 5. `systemctl restart banco-questoes`.
-6. **Auditorias** — rodar os cinco verificadores; todos devem ficar em zero.
+6. **Auditorias** — rodar os seis verificadores; todos devem ficar em zero.
 7. **Verificar no site** via curl: páginas 200, o defeito corrigido aparecendo
    certo, sitemap válido, portas 8091/8096.
 8. **Registrar** no `PADRAO-EDITORIAL.md` o que a curadoria revelou, e commitar.
@@ -63,6 +63,7 @@ ficam versionados em `scripts/`.
 | `audita-linhas.js` | toda citação "(linha n)" cai na linha certa | 35/35 |
 | `audita-copias.js` | cópias do mesmo texto não divergem entre si | 134 grupos, 0 |
 | `audita-sanidade.js` | integridade do item, campos obrigatórios, metadados | 21 checagens, 0 |
+| `audita-acentos.js` | nenhum campo nosso sem acentuação | 0 |
 | `audita-paragrafos.js` | todo "segundo/terceiro parágrafo" existe no texto | 22/22 |
 | `audita-imagens.js` | nenhuma descrição órfã, nenhuma imagem sem descrição | 0 e 0 |
 | `progresso-curadoria.js` | quanto falta | — |

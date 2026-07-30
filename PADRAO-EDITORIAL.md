@@ -428,3 +428,41 @@ alternativas coincidem — hoje, nenhuma.
 
 Corrigido de verdade: a **meta description da 4**, com 175 caracteres, aparecia
 truncada no resultado de busca. Reescrita em 146.
+
+## 12. Acentuação dos campos que são nossos
+
+**Lote 31, 30/07/2026.** `tema`, `meta_description`, `titulo`, `comentario` e as
+descrições entre colchetes são redação nossa, e seguem o português correto —
+acentuação inclusive. Verificado por `scripts/audita-acentos.js`.
+
+O defeito veio à tona pela porta dos fundos. No lote 30 corrigi quatro descrições
+de imagem sem acento; no lote 31 a **994** apareceu com o mesmo problema ("um
+copo descartavel", "uma composicao que remete ao quadro") e tinha escapado,
+porque o detector daquele lote procurava uma **lista de palavras** — e lista
+sempre deixa passar a próxima palavra. Trocado por busca de **sufixo**
+(`-cao`, `-coes`, `-avel`, `-ivel`, `-encia`, `-ancia`, que em português sempre
+levam acento e não são terminações inglesas), o levantamento mostrou que o
+problema não estava nas descrições: estava em **163 campos `tema` e
+`meta_description`** — "audiencia na publicidade online", "exercicio fisico e
+cognicao", "participacao cidada na justica japonesa". Esses campos vão para a
+página e para o resultado de busca.
+
+Três armadilhas, todas descobertas por falso positivo, e todas registradas no
+verificador:
+
+- **`\w` não serve.** Ele exclui os acentuados, então em "Referenciação" a
+  varredura para antes do "ç" e inventa um "Referencia" sem acento. A classe
+  correta é `[A-Za-zÀ-ÿ]`.
+- **Verbos existem.** "o que a expressão **evidencia**", "como o espaço
+  **influencia**" e "ele **providencia** que" estão certos sem acento — só os
+  substantivos homógrafos levam. As duas ocorrências em que a palavra era mesmo
+  substantivo (735, "a evidência do apetite"; 826, "o alcance da influência do
+  professor") foram corrigidas uma a uma, não pela regra geral.
+- **`comentario` e `imagem_alt` ficam fora da varredura.** Eles citam o texto
+  original em inglês e respeitam a grafia do autor ("video evidence", "Musica
+  Popular Brasileira" como a Economist grafou); ali a falta de acento não é
+  defeito nosso.
+
+A verificação usada na correção, e que vale para qualquer mexida de acento:
+**retirados os diacríticos, o texto novo tem de ser idêntico ao antigo.** Só a
+acentuação pode mudar.
