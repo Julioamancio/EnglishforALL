@@ -4,8 +4,8 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 25 (IDs 1–865
-lidos; **1.051 publicadas**). Faltam 201 questões (IDs 866–1066), 9 lotes, todas
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 26 (IDs 1–890
+lidos; **1.051 publicadas**). Faltam 176 questões (IDs 891–1066), 8 lotes, todas
 da Fuvest. **ITA e PUC Minas inteiramente curados.**
 
 ---
@@ -248,11 +248,20 @@ Aplicado em 29/07/2026 a 8 questões: 13, 34, 55 (cópias de ITA 2015, Fuvest 20
 e Unesp 2025) e 769–773 (caderno 2 da PUC Minas Medicina 2019, que repete as
 cinco questões do caderno 1 com as alternativas embaralhadas).
 
-### Grifo no enunciado
+### Grifo no enunciado e no texto
 
 O trecho grifado vai entre colchetes duplos — `[[which]]` —, que o template
-converte em `<u>`. Colchete a mais (`[[[[which]]]]`) quebra o grifo e vaza o
-sinal para a tela; corrigido na questão 655 em 30/07/2026.
+converte em `<u>`. Vale no enunciado, na alternativa e **também no texto-base**.
+Colchete a mais (`[[[[which]]]]`) quebra o grifo e vaza o sinal para a tela;
+corrigido na questão 655 em 30/07/2026.
+
+**Por isso o mesmo texto aparece em várias cópias**: quando cinco questões
+analisam trechos diferentes de um texto, cada uma guarda a sua cópia com o seu
+realce. É deliberado, não duplicação acidental — mas exige cuidado, porque uma
+correção precisa alcançar todas as cópias. `scripts/audita-copias.js` compara as
+cópias ignorando o realce e acusa qualquer divergência. Estado em 30/07/2026:
+**134 textos com cópias, nenhuma divergente**, 31 questões usando realce, nenhum
+realce quebrado.
 
 ### Tipografia importada
 
