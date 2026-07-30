@@ -10,6 +10,7 @@ const {
   BorderStyle,
 } = require('docx');
 const fs = require('fs');
+const { semMarcacao } = require('./realce');
 const path = require('path');
 const sizeOf = null; // sem dependência extra: usamos tamanho fixo proporcional
 
@@ -37,8 +38,16 @@ const ROTULOS_TIPO = {
 };
 
 function p(texto, opcoes = {}) {
+  // No docx, um "\n" dentro de um TextRun não quebra linha nenhuma — some.
+  // Cada linha vira um run próprio, e do segundo em diante com break: 1.
+  // É isso que preserva verso de poema, manchete e assinatura no Word.
+  const linhas = String(texto ?? '').split('\n');
   return new Paragraph({
-    children: [new TextRun({ text: texto, ...opcoes.run })],
+    children: linhas.map((linha, i) =>
+      i === 0
+        ? new TextRun({ text: linha, ...opcoes.run })
+        : new TextRun({ text: linha, break: 1, ...opcoes.run })
+    ),
     ...opcoes.par,
   });
 }
@@ -115,8 +124,8 @@ async function gerarDOCX({ titulo, escola, turma, questoes, comGabarito }) {
       }
     }
 
-    if (q.texto_base && q.texto_base.trim()) {
-      q.texto_base
+    if (semMarcacao(q.texto_base) && semMarcacao(q.texto_base).trim()) {
+      semMarcacao(q.texto_base)
         .trim()
         .split(/\n\s*\n/)
         .forEach((par) =>
@@ -140,14 +149,14 @@ async function gerarDOCX({ titulo, escola, turma, questoes, comGabarito }) {
     }
 
     filhos.push(
-      p(q.enunciado, {
+      p(semMarcacao(q.enunciado), {
         par: { alignment: AlignmentType.JUSTIFIED, spacing: { after: 100 } },
       })
     );
 
     q.alternativas.forEach((a) =>
       filhos.push(
-        p(`(${a.letra})  ${a.texto}`, { par: { indent: { left: 280 } } })
+        p(`(${a.letra})  ${semMarcacao(a.texto)}`, { par: { indent: { left: 280 } } })
       )
     );
   });

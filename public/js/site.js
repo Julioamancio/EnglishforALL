@@ -2,6 +2,44 @@
 (function () {
   'use strict';
 
+  /* ------------------------------------------------------ menu do celular
+     O painel é escondido por CSS até 860px; aqui só se alterna a classe e o
+     aria-expanded, que é o que o leitor de tela anuncia. */
+  var botaoNav = document.querySelector('.nav-abrir');
+  var navPrincipal = document.getElementById('nav-principal');
+  if (botaoNav && navPrincipal) {
+    var fecharNav = function () {
+      navPrincipal.classList.remove('aberto');
+      botaoNav.setAttribute('aria-expanded', 'false');
+      botaoNav.setAttribute('aria-label', 'Abrir menu');
+    };
+
+    botaoNav.addEventListener('click', function () {
+      var aberto = navPrincipal.classList.toggle('aberto');
+      botaoNav.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      botaoNav.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    });
+
+    /* Navegar para outra página deve fechar o painel; um submenu, não. */
+    navPrincipal.addEventListener('click', function (e) {
+      if (e.target.closest('a')) fecharNav();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navPrincipal.classList.contains('aberto')) {
+        fecharNav();
+        botaoNav.focus();
+      }
+    });
+
+    /* Ao voltar para largura de desktop o painel some por CSS: o estado
+       precisa acompanhar, senão o aria-expanded fica mentindo. */
+    var largura = window.matchMedia('(min-width: 861px)');
+    var aoMudar = function (ev) { if (ev.matches) fecharNav(); };
+    if (largura.addEventListener) largura.addEventListener('change', aoMudar);
+    else if (largura.addListener) largura.addListener(aoMudar);
+  }
+
   /* ------------------------------------------------ tema claro/escuro */
   var botaoTema = document.querySelector('.tema-btn');
   if (botaoTema) {

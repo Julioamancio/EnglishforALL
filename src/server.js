@@ -48,6 +48,9 @@ app.use((req, res, next) => {
   res.locals.logado = Boolean(req.session.admin);
   res.locals.usuario = req.session.usuario || null;
   res.locals.canonical = SITE_URL.replace(/\/$/, '') + req.path;
+  // Listagem filtrada (?tema=, ?nivel=, ...) é recorte do acervo: o canonical
+  // já aponta para a página sem filtro, e a versão com query sai do índice.
+  res.locals.comFiltro = Object.keys(req.query).length > 0;
   next();
 });
 

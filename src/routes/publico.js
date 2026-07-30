@@ -4,9 +4,11 @@ const db = require('../db');
 const router = express.Router();
 
 const { ROTULOS_TIPO, rotuloGenero } = require('../rotulos');
+const { realce, semMarcacao } = require('../lib/realce');
 
 router.use((req, res, next) => {
   res.locals.rotuloGenero = rotuloGenero;
+  res.locals.realce = realce;
   next();
 });
 
@@ -165,6 +167,16 @@ Object.values(COLECOES).forEach((col) => {
       if (k !== 'pagina' && v) qsBase.append(k, v);
     });
 
+    // ?nivel= não é filtro descartável nesta rota: cada nível tem título, meta
+    // description e H1 próprios, e é uma página de destino de verdade. Só ela
+    // se autocanoniza; qualquer outro filtro (gênero, busca, paginação) volta
+    // a ser recorte e sai do índice pela regra geral.
+    const soNivel = nivel && Object.keys(req.query).every((k) => k === 'nivel');
+    if (soNivel && todas.length) {
+      res.locals.canonical = `${res.locals.SITE_URL.replace(/\/$/, '')}${col.caminho}?nivel=${nivel}`;
+      res.locals.comFiltro = false;
+    }
+
     res.render('publico/colecao', {
       title: nivel ? col.tituloNivel(nivel, todas.length) : col.tituloBase,
       description: nivel ? col.descricaoNivel(nivel, todas.length) : col.descricaoBase,
@@ -184,7 +196,13 @@ Object.values(COLECOES).forEach((col) => {
   });
 });
 
+const REDIRECIONAMENTOS = require('../lib/redirecionamentos');
+
 router.get('/questoes/:slug', (req, res, next) => {
+  // Duplicata despublicada: manda para a versão que ficou, em vez de 404.
+  const destino = REDIRECIONAMENTOS[req.params.slug];
+  if (destino) return res.redirect(301, `/questoes/${destino}`);
+
   const questao = db.porSlug(req.params.slug);
   if (!questao) return next();
 
@@ -200,14 +218,14 @@ router.get('/questoes/:slug', (req, res, next) => {
         '@type': 'Question',
         eduQuestionType: 'Multiple choice',
         name: questao.titulo,
-        text: questao.enunciado,
+        text: semMarcacao(questao.enunciado),
         suggestedAnswer: questao.alternativas
           .filter((a) => a.letra !== questao.gabarito)
-          .map((a, i) => ({ '@type': 'Answer', position: i, text: `${a.letra}) ${a.texto}` })),
+          .map((a, i) => ({ '@type': 'Answer', position: i, text: `${a.letra}) ${semMarcacao(a.texto)}` })),
         acceptedAnswer: {
           '@type': 'Answer',
           text: `${questao.gabarito}) ${
-            questao.alternativas.find((a) => a.letra === questao.gabarito)?.texto || ''
+            semMarcacao(questao.alternativas.find((a) => a.letra === questao.gabarito)?.texto)
           }`,
           explanation: questao.comentario,
         },
@@ -282,30 +300,41 @@ router.post('/montar-prova', (req, res) => {
 
 // -------------------------------------------------------------- SEO
 
+// Um <loc> precisa ser uma URL válida e com as entidades XML escapadas.
+// encodeURI cobre espaço e acento; o resto é o que a spec do sitemap exige.
+const paraLoc = (url) =>
+  encodeURI(url)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+
 router.get('/sitemap.xml', (req, res) => {
   const base = res.locals.SITE_URL.replace(/\/$/, '');
   const questoes = db.listar();
-  const f = db.facetas();
 
+  // Só páginas canônicas. As listagens filtradas de /questoes são recortes
+  // finos do mesmo acervo e ficaram de fora; os níveis das coleções entram
+  // porque têm título, descrição e conteúdo próprios — e só os que têm
+  // questões, para não anunciar página vazia.
   const urls = [
     { loc: `${base}/`, prio: '1.0' },
     { loc: `${base}/questoes`, prio: '0.9' },
     ...Object.values(COLECOES).flatMap((c) => [
       { loc: `${base}${c.caminho}`, prio: '0.9' },
-      ...NIVEIS.map((n) => ({ loc: `${base}${c.caminho}?nivel=${n}`, prio: '0.7' })),
+      ...(() => {
+        const porNivel = db.facetas(c.chave).niveis;
+        return NIVEIS.filter((n) => (porNivel.find((f) => f.valor === n)?.total || 0) > 0).map(
+          (n) => ({ loc: `${base}${c.caminho}?nivel=${n}`, prio: '0.7' })
+        );
+      })(),
     ]),
     { loc: `${base}/montar-prova`, prio: '0.7' },
     { loc: `${base}/gramatica`, prio: '0.9' },
     ...require('../lib/gramatica')
       .niveis()
       .flatMap((n) => n.topicos.map((t) => ({ loc: `${base}/gramatica/${t.slug}`, prio: '0.8' }))),
-    ...f.tipos.map((t) => ({ loc: `${base}/questoes?tipo=${t.valor}`, prio: '0.6' })),
-    ...f.niveis.map((n) => ({ loc: `${base}/questoes?nivel=${n.valor}`, prio: '0.6' })),
-    ...f.temas.map((t) => ({ loc: `${base}/questoes?tema=${t.valor}`, prio: '0.6' })),
-    ...f.instituicoes.map((i) => ({
-      loc: `${base}/questoes?instituicao=${encodeURIComponent(i.valor)}`,
-      prio: '0.6',
-    })),
     ...questoes.map((q) => ({
       loc: `${base}/questoes/${q.slug}`,
       prio: '0.8',
@@ -318,7 +347,7 @@ router.get('/sitemap.xml', (req, res) => {
       urls
         .map(
           (u) =>
-            `  <url><loc>${u.loc}</loc>${
+            `  <url><loc>${paraLoc(u.loc)}</loc>${
               u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''
             }<priority>${u.prio}</priority></url>`
         )

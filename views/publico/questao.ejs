@@ -22,7 +22,7 @@
 
     <% if (questao.texto_base && questao.texto_base.trim()) { %>
       <blockquote class="texto-base" cite="<%= questao.fonte_url %>">
-        <% questao.texto_base.trim().split(/\n\s*\n/).forEach(function(p){ %><p><%= p %></p><% }) %>
+        <% questao.texto_base.trim().split(/\n\s*\n/).forEach(function(p){ %><p><%- realce(p) %></p><% }) %>
       </blockquote>
     <% } %>
 
@@ -30,13 +30,13 @@
       <p class="fonte">Fonte: <a href="<%= questao.fonte_url %>" target="_blank" rel="noopener nofollow"><%= questao.fonte_veiculo %></a><%= questao.fonte_data ? ', ' + questao.fonte_data : '' %>.</p>
     <% } %>
 
-    <p class="enunciado"><%= questao.enunciado %></p>
+    <p class="enunciado"><%- realce(questao.enunciado) %></p>
 
     <ol class="alternativas" data-gabarito="<%= questao.gabarito %>">
       <% questao.alternativas.forEach(function(a){ %>
         <li class="alt" data-letra="<%= a.letra %>">
           <span class="bolha" aria-hidden="true"><%= a.letra %></span>
-          <span><span class="sr"><%= a.letra %>)</span> <%= a.texto %></span>
+          <span><span class="sr"><%= a.letra %>)</span> <%- realce(a.texto) %></span>
         </li>
       <% }) %>
     </ol>

@@ -1,4 +1,5 @@
 const PDFDocument = require('pdfkit');
+const { semMarcacao } = require('./realce');
 const fs = require('fs');
 const path = require('path');
 
@@ -84,8 +85,8 @@ function gerarPDF(res, { titulo, escola, turma, questoes, comGabarito }) {
       }
     }
 
-    if (q.texto_base && q.texto_base.trim()) {
-      doc.font('Times-Roman').fontSize(10.5).text(q.texto_base.trim(), {
+    if (semMarcacao(q.texto_base) && semMarcacao(q.texto_base).trim()) {
+      doc.font('Times-Roman').fontSize(10.5).text(semMarcacao(q.texto_base).trim(), {
         align: 'justify',
         indent: 12,
       });
@@ -105,11 +106,11 @@ function gerarPDF(res, { titulo, escola, turma, questoes, comGabarito }) {
     }
 
     doc.moveDown(0.5);
-    doc.font('Helvetica').fontSize(10.5).text(q.enunciado, { align: 'justify' });
+    doc.font('Helvetica').fontSize(10.5).text(semMarcacao(q.enunciado), { align: 'justify' });
     doc.moveDown(0.4);
 
     q.alternativas.forEach((a) => {
-      doc.font('Helvetica').fontSize(10.5).text(`(${a.letra})  ${a.texto}`, {
+      doc.font('Helvetica').fontSize(10.5).text(`(${a.letra})  ${semMarcacao(a.texto)}`, {
         indent: 14,
       });
     });

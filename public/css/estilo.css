@@ -31,6 +31,12 @@
   --r: 12px;
   --r-lg: 18px;
 
+  /* Altura da logo no cabeçalho. Um número só controla os dois tamanhos. */
+  --logo-alt: 186px;
+  --logo-alt-mob: 116px;
+  /* Menor alvo de toque confortável no celular (recomendação de acessibilidade). */
+  --toque: 44px;
+
   --sombra: 0 1px 2px rgba(25, 30, 56, 0.05), 0 6px 20px rgba(25, 30, 56, 0.06);
   --sombra-alta: 0 4px 10px rgba(25, 30, 56, 0.08), 0 18px 44px rgba(25, 30, 56, 0.14);
 
@@ -131,13 +137,16 @@ h3 { font-size: 1.08rem; font-weight: 700; }
   letter-spacing: -.02em; color: var(--texto); white-space: nowrap;
 }
 .marca:hover { color: var(--tinta); }
+/* A altura da logo sai de uma variável só: mudar o número aqui muda tudo.
+   O arquivo foi recortado rente ao desenho (antes tinha 34% de margem
+   transparente, que fazia a marca parecer menor do que o espaço ocupado). */
 .marca__logo {
-  width: 76px; height: 76px; flex: none; border-radius: 16px;
+  height: var(--logo-alt); width: auto; flex: none;
   object-fit: contain;
 }
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .marca { font-size: 1.15rem; gap: .55rem; }
-  .marca__logo { width: 54px; height: 54px; }
+  .marca__logo { height: var(--logo-alt-mob); }
 }
 .marca__nome { line-height: 1.1; }
 .marca__all {
@@ -251,12 +260,15 @@ html[data-tema='escuro'] .chip--ativo, html[data-tema='escuro'] .chip[aria-press
 
 /* ---------------------------------------------------------- cards */
 
-.grade { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
-@media (min-width: 44rem) { .grade { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 68rem) { .grade--3 { grid-template-columns: repeat(3, 1fr); } }
+/* minmax(0, 1fr) em vez de 1fr: com 1fr a trilha do grid nunca encolhe abaixo do
+   conteúdo mínimo do card, e no celular isso empurrava todos os cards 30px para
+   fora do contêiner, cortando o texto na borda direita. */
+.grade { display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 44rem) { .grade { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 68rem) { .grade--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 .card {
-  position: relative;
+  position: relative; min-width: 0;
   background: var(--superficie); border: 1px solid var(--borda);
   border-radius: var(--r-lg); padding: 1.2rem 1.3rem 1.1rem;
   box-shadow: var(--sombra);
@@ -342,7 +354,9 @@ html[data-tema='escuro'] .card__tag--nivel { color: #0e1120; }
   border-radius: 0 var(--r) var(--r) 0;
   font-family: var(--serif); font-size: 1.08rem; line-height: 1.75;
 }
-.texto-base p { margin: 0 0 .85rem; }
+/* quebra de linha simples no texto-base e significativa: verso de poema,
+   manchete, assinatura, transcricao de quadrinho. sem isto tudo vira prosa. */
+.texto-base p { margin: 0 0 .85rem; white-space: pre-line; }
 .texto-base p:last-child { margin-bottom: 0; }
 
 .fonte { font-family: var(--mono); font-size: .72rem; line-height: 1.5; color: var(--suave); margin: 0 0 1.5rem; text-align: right; }
@@ -361,6 +375,7 @@ html[data-tema='escuro'] .card__tag--nivel { color: #0e1120; }
   width: 2.2rem; height: 2.2rem; border: 2.5px solid var(--borda-forte); border-radius: 50%;
   display: grid; place-items: center; font-family: var(--mono); font-size: .85rem; font-weight: 700;
   color: var(--suave); background: var(--superficie); flex: none;
+  -webkit-user-select: none; user-select: none;
   transition: background .13s ease, border-color .13s ease, color .13s ease;
 }
 
@@ -808,3 +823,89 @@ html[data-tema='escuro'] .barra-prova { box-shadow: 0 -6px 20px rgba(0,0,0,.4); 
 
 /* Painel do menu Questões: cabe "Reading de provas" + contagem sem quebrar. */
 .menu__painel--largo { min-width: 275px; }
+
+/* =============================================================
+   Ajustes de celular
+   Três coisas que atrapalhavam o uso em tela pequena: texto abaixo
+   do tamanho legível, alvos de toque menores que o dedo, e conteúdo
+   largo (tabelas, blocos de código, imagens) forçando rolagem lateral.
+   ============================================================= */
+@media (max-width: 640px) {
+  /* .68rem dava 10,9px — abaixo do mínimo confortável para leitura. */
+  .card__meta { font-size: .78rem; letter-spacing: .03em; }
+  .card__rodape, .gnav__lado span { font-size: .88rem; }
+
+  /* Os chips de filtro tinham 33px de altura; o dedo pede ~44px. */
+  .chip { min-height: var(--toque); padding-top: .5rem; padding-bottom: .5rem; font-size: .92rem; }
+  .chips { gap: .55rem; }
+
+  /* Links soltos em linha de texto ganham área de toque sem mudar o desenho. */
+  .card a, .lista a, .rodape a { padding-block: .2rem; }
+
+  /* Nada deve criar rolagem horizontal: o que for largo rola dentro de si. */
+  .questao table, .conteudo table, .gtopico table { display: block; width: 100%; overflow-x: auto; }
+  .questao pre, .conteudo pre { overflow-x: auto; }
+  img, svg, video, iframe { max-width: 100%; height: auto; }
+  .questao, .conteudo, .hero__int { overflow-wrap: break-word; }
+}
+
+/* Trava de segurança: mesmo que algum bloco novo estoure a largura, a página
+   não passa a rolar de lado — o estouro fica contido no próprio elemento. */
+html, body { max-width: 100%; overflow-x: clip; }
+
+/* ------------------------------------------------------ menu no celular
+   Até 860px a navegação não cabe em linha — cabia 421px num viewport de
+   375px e empurrava a página inteira para o lado. Aqui ela vira um painel
+   que abre pelo botão, e o cabeçalho volta a ser só marca + botão. */
+.nav-abrir { display: none; }
+
+@media (max-width: 860px) {
+  .nav-abrir {
+    display: grid; place-items: center;
+    width: var(--toque); height: var(--toque); flex: none; padding: 0;
+    border: 1px solid var(--borda); border-radius: var(--r-sm);
+    background: var(--superficie); color: var(--texto); cursor: pointer;
+  }
+  .nav-abrir svg { width: 24px; height: 24px; }
+  .nav-abrir[aria-expanded='true'] { background: var(--fundo-2); color: var(--tinta); }
+  .nav-abrir[aria-expanded='true'] .nav-abrir__meio { opacity: 0; }
+
+  .topo__int { flex-wrap: wrap; gap: .6rem; }
+
+  .nav {
+    display: none; order: 3; width: 100%;
+    flex-direction: column; align-items: stretch; gap: .15rem;
+    padding: .5rem 0 .35rem; margin-top: .3rem;
+    border-top: 1px solid var(--borda); font-size: 1rem;
+  }
+  .nav.aberto { display: flex; }
+
+  /* Cada item vira uma linha inteira, com altura de toque confortável. */
+  .nav > a,
+  .nav .menu > summary,
+  .nav__sair button {
+    display: flex; align-items: center; width: 100%;
+    min-height: var(--toque); padding: .55rem .75rem; border-radius: var(--r-sm);
+  }
+  .nav .menu > summary { justify-content: space-between; }
+  .nav__sair { display: block; }
+  .nav__sair button { text-align: left; }
+
+  /* O submenu deixa de flutuar: abre empurrando o conteúdo para baixo,
+     que é o comportamento previsível numa tela pequena. */
+  .menu--nav .menu__painel,
+  .menu__painel {
+    position: static; min-width: 0; max-height: none;
+    margin: .15rem 0 .35rem; padding: .2rem 0 .2rem .6rem;
+    border: 0; border-left: 2px solid var(--borda); border-radius: 0;
+    box-shadow: none; background: none;
+  }
+  .menu__painel a { min-height: var(--toque); font-size: .95rem; }
+
+  .tema-btn {
+    width: 100%; height: var(--toque); margin: .3rem 0 0;
+    justify-content: flex-start; gap: .6rem; padding: 0 .75rem;
+    border-radius: var(--r-sm);
+  }
+  .tema-btn::after { content: 'Alternar tema'; font: inherit; font-size: 1rem; font-weight: 600; }
+}

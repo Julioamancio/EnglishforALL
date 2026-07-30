@@ -15,6 +15,7 @@ const INSTITUICOES = [
   'FCMSCSP',
   'Fac. Sírio Libanês',
   'FMABC',
+  'PUC Minas (Medicina)',
   'Santa Casa',
   'São Leopoldo Mandic',
   'Unifesp',
