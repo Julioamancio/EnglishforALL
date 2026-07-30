@@ -4,9 +4,9 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 22 (IDs 1–788
-lidos; **1.050 publicadas**). Faltam 278 questões (IDs 789–1066), 12 lotes, todas
-de Fuvest e PUC Minas: **o ITA está inteiramente curado**.
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 23 (IDs 1–814
+lidos; **1.050 publicadas**). Faltam 252 questões (IDs 815–1066), 11 lotes: 242 da
+Fuvest e 10 da PUC Minas. **ITA e quase toda a PUC Minas já curados.**
 
 ---
 
@@ -156,8 +156,8 @@ contagem, ambas corrigidas em 30/07/2026:
    a mais. Sinal seguro: o bloco anterior não termina em pontuação final.
    Encontrado em 4 textos (131, 148, 163 e 759).
 
-Estado: **10 das 12 citações em inglês conferidas**; pendentes 792 e 793 (PUC
-Minas Medicina 2023), do próximo lote.
+Estado: **as 12 citações em inglês conferidas**, zero divergências (os dois
+últimos casos, 792 e 793, saíram no lote 23 ao demarcar os parágrafos do texto).
 
 ### Citação que não bate com o texto
 
