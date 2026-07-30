@@ -4,8 +4,8 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 24 (IDs 1–840
-lidos; **1.051 publicadas**). Faltam 226 questões (IDs 841–1066), 10 lotes, todas
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 25 (IDs 1–865
+lidos; **1.051 publicadas**). Faltam 201 questões (IDs 866–1066), 9 lotes, todas
 da Fuvest. **ITA e PUC Minas inteiramente curados.**
 
 ---
@@ -121,6 +121,16 @@ numerado com o número antes da lacuna.
   re-quebrando o texto pelas próprias citações. Estado atual: **30 de 30
   citações conferidas**. Rodar essa auditoria depois de qualquer mexida em
   texto numerado.
+- **Referência de linha impossível de atender.** Quando o texto não tem numeração
+  **e** a quebra do banco não corresponde à da prova, não há como restaurar: o
+  texto 857 tem 7 linhas e a questão cita "linhas 16-17". Numerar seria inventar
+  uma quebra; trocar o número seria reescrever a prova.
+  **Decisão de 30/07/2026:** remove-se apenas a referência numérica e mantém-se a
+  citação do trecho, que é o que de fato o aluno usa para localizar — "…university
+  today.” (linhas 16-17)" vira "…university today.”". Aplicado a 21 questões
+  (ITA 2008 e Fuvest 1998–2007). O script só remove quando a palavra imediatamente
+  antes da referência existe no texto-base; caso contrário, aborta.
+  Também citam em inglês, "(line n)" — o verificador cobre as duas formas.
 - **Texto sem numeração cuja questão cita "linha n"** é o caso mais silencioso:
   a auditoria não o via, porque só examinava textos que já tinham marcadores. Em
   "The age of obesity" (671–675, ITA 2019) a quebra de linha já era a da prova —

@@ -11,6 +11,17 @@ const norm = (s) => s.toLowerCase().replace(/[“”"’'‘]/g, '').replace(/\s
 // "linhas 35/36", "linhas 2 e 3"); sem isso a citacao passa despercebida
 const RE_CIT = /[“"]([^“”"]{6,160})[”"][^()]{0,40}\(linhas?\s+(\d{1,2})(?:\s*(?:e|a|,|-|–|\/)\s*(\d{1,2}))?\)/g;
 
+// --- parte 0: citacao de linha em texto que NAO tem numeracao nenhuma.
+// Sem marcadores o aluno nao consegue contar ate a linha citada — o defeito
+// mais silencioso, porque a conferencia abaixo simplesmente pula esses textos.
+const semNumeracao = db.prepare(`SELECT id, instituicao, ano, enunciado FROM questoes
+   WHERE publicada=1 AND texto_base <> ''
+   AND (enunciado LIKE '%(linha%' OR enunciado LIKE '%(line %' OR enunciado LIKE '%(lines %')`).all()
+  .filter((q) => {
+    const t = db.prepare('SELECT texto_base FROM questoes WHERE id=?').get(q.id).texto_base;
+    return !t.split('\n').some((l) => /^\s*1\s+\S/.test(l));
+  });
+
 const qs = db.prepare("SELECT id, slug, instituicao, ano, enunciado, texto_base FROM questoes WHERE publicada=1 AND texto_base <> '' AND enunciado LIKE '%linha%'").all();
 let comCitacao = 0, ok = 0;
 const falhas = [];
@@ -60,3 +71,9 @@ Object.entries(porTexto).forEach(([prova, fs]) => {
   if (fs.length > 8) console.log(`  … e mais ${fs.length - 8}`);
 });
 console.log('\nids afetados:', [...new Set(falhas.map((f) => f.id))].join(','));
+
+console.log('\n================ citacao de linha em texto SEM numeracao ================');
+console.log(`questoes: ${semNumeracao.length}`);
+const porP = {};
+semNumeracao.forEach((q) => { (porP[`${q.instituicao} ${q.ano}`] = porP[`${q.instituicao} ${q.ano}`] || []).push(q.id); });
+Object.entries(porP).forEach(([p, ids]) => console.log(`  ${p}: ${ids.join(', ')}`));
