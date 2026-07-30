@@ -279,6 +279,23 @@ faltavam (542, 966, 976, 1019, 1023 e 1034) estavam corretas, mas o verificador
 as classificava como "texto sem numeração" e simplesmente pulava. Hoje: 35
 conferidas, zero divergências, zero textos sem numeração.
 
+### Aparato de prova no texto-base
+
+**Lote 32, 30/07/2026.** O texto-base não carrega o cabeçalho que numerava as
+questões na prova. Os textos de 1033-1035 e 1036-1037 começavam com "TEXTO PARA
+AS QUESTÕES DE 56 A 58" e "TEXTO PARA AS QUESTÕES 59 E 60": no site cada questão
+aparece sozinha, e esse cabeçalho manda o leitor procurar uma numeração que não
+existe na página. Removidos.
+
+Remover a primeira linha **não quebra a numeração de linha**, porque o
+`audita-linhas.js` deduz a origem a partir dos marcadores e não de uma posição
+fixa (ver "Numeração de linha: quatro convenções"). Conferido: a citação
+"(L. 15)" da 1034 continua caindo na linha certa depois do corte.
+
+Ficam os cabeçalhos que ainda fazem sentido isolados: "TEXTO I" (142), quando o
+enunciado se refere a ele, e "Leia os provérbios:" (1039), que apresenta o quadro
+logo abaixo.
+
 ## 7. Itens discretos antigos
 
 Fuvest 1977–1979 e similares: tradução de frase única, escolha de forma verbal.
@@ -355,6 +372,29 @@ também completa e curada, cujo enunciado cita "os parágrafos seis e sete" — 
 texto tem nove. Publicada no lote 21: **1.049 → 1.050**. O critério é este: item
 original de prova, completo, com gabarito válido e comentário curado, e cuja
 referência interna o texto atenda, entra no ar.
+
+### Por que uma questão fica fora do ar
+
+**Lote 32, 30/07/2026.** As 12 questões com `publicada = 0` foram conferidas uma
+a uma. A **1039** (Fuvest 2021, três provérbios) não tinha motivo para estar
+retida — item completo, gabarito válido, comentário curado, sem pendência de
+referência — e foi publicada: **1.051 → 1.052**. As outras continuam fora, e os
+motivos formam três famílias:
+
+- **Direito autoral de letra de música**: 34 (Maggie's Farm), 105 (Viva la Vida),
+  112 (War). É exatamente por isso que a **1038** pode estar no ar com a mesma
+  Maggie's Farm: nela a letra foi substituída por uma nota que descreve as
+  estrofes, sem reproduzi-las.
+- **Duplicata de outra já publicada**: 55 é a mesma tirinha, o mesmo enunciado e
+  o mesmo gabarito da 87; 769-773 são o caderno 2 da PUC Minas 2019, cópia das
+  764-768 do caderno 1.
+- **Texto incompleto**: 1060 começa no meio da frase ("justice, each getting what
+  he or she is due"), falta o início do verbete e não há como reconstruí-lo.
+
+Fora dessas três, sobra a **13** (tirinha The Joy of Tech num simulado próprio):
+completa e sem duplicata, mas é imagem de terceiro. Publicar imagem de terceiro
+num produto à venda é decisão de licenciamento, não editorial — fica para o
+professor decidir, e é a única pendência desse tipo no acervo.
 
 ## 9. Metadados
 
