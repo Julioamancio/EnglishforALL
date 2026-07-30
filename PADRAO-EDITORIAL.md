@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 11 (IDs 1–505
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 12 (IDs 1–530
 lidos; 1.049 publicadas).
 
 ---
@@ -92,6 +92,22 @@ numerado com o número antes da lacuna.
   do corpo.
 - Sem etiqueta de prova no corpo do texto ("(Uea 2023)") — a instituição tem
   campo próprio.
+- **Numeração de linha da prova** (ITA marca de 5 em 5) é conteúdo, não ruído,
+  quando alguma questão do bloco cita "linha n": ali a quebra de linha física é
+  a própria referência e não pode ser juntada. Marcador em campo de dois
+  caracteres alinhado à direita, corpo do texto recuado em três espaços, sem
+  linha em branco entre as linhas numeradas. Ao mexer nesses textos, conferir
+  linha a linha contra o que as questões citam. Caso vivo: 519–523 (ITA 2011).
+- Quebra de linha do PDF que corta a frase no meio é ruído e deve ser juntada;
+  quando a linha termina em hífen, junta-se sem espaço ("so-called").
+
+### Descrição de imagem (`imagem_alt`)
+
+- Começa pelo conteúdo da peça (título, primeira fala), nunca por aparato da
+  prova ("As perguntas de 4 a 8 correspondem ao texto a seguir:") nem por número
+  de página ou de seção solto — isso é ruído para leitor de tela.
+- A descrição visual entre colchetes fecha o campo e é onde se registra
+  diagramação, ilustração e assinatura.
 
 ## 7. Itens discretos antigos
 
