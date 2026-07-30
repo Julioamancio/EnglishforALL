@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 18 (IDs 1–680
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 19 (IDs 1–705
 lidos; 1.049 publicadas).
 
 ---
@@ -128,6 +128,29 @@ numerado com o número antes da lacuna.
   de numerar; se não bater, o texto foi re-quebrado e precisa de reconstrução.
 - A referência também quebra: "(linhas⏎19-20)". As regras de junção só colavam
   continuação que começa por letra, então o número escapava.
+
+### Referência a parágrafo
+
+A questão que manda olhar o "segundo parágrafo" exige que o texto **tenha
+parágrafos demarcados** — no banco, blocos separados por linha em branco, que é
+como o template os renderiza. Os textos do ITA 2020 em diante vieram da
+importação como um bloco único de linhas quebradas por largura de coluna, e 17
+citações de parágrafo ficaram sem como ser atendidas. `scripts/audita-paragrafos.js`
+mede isso; em 30/07/2026 os dez textos do bloco ITA 2020–2022 foram remontados
+(cada parágrafo numa linha corrida, separados por linha em branco), conferindo
+que o parágrafo citado contém mesmo o trecho citado. **Pendentes: 710, 713–716,
+722, 726, 727** (ITA 2022–2024), a tratar nos lotes seguintes.
+
+Quando a peça não tem `texto_base` e o texto vive no `imagem_alt`, a contagem de
+parágrafos é a do alt — é o caso da 501.
+
+### Linha fora de ordem
+
+A extração em duas colunas às vezes **troca linhas de lugar**, e o resultado é uma
+frase embaralhada que só aparece na leitura. No texto 705 o fecho estava "glimpse
+alternative / experience.” / ways of making sense of the human"; a ordem correta é
+"glimpse alternative ways of making sense of the human experience.”. Não há como
+detectar isso por script — só lendo.
 - Quebra de linha do PDF que corta a frase no meio é ruído e deve ser juntada;
   quando a linha termina em hífen, junta-se sem espaço ("so-called").
 - **Um texto, uma versão.** Quando várias questões citam a mesma peça, todas
