@@ -4,8 +4,9 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 20 (IDs 1–730
-lidos; 1.049 publicadas). Faltam 335 questões (IDs 731–1066), 14 lotes.
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 22 (IDs 1–788
+lidos; **1.050 publicadas**). Faltam 278 questões (IDs 789–1066), 12 lotes, todas
+de Fuvest e PUC Minas: **o ITA está inteiramente curado**.
 
 ---
 
@@ -144,6 +145,27 @@ que o parágrafo citado contém mesmo o trecho citado. Os últimos casos (ITA
 Quando a peça não tem `texto_base` e o texto vive no `imagem_alt`, a contagem de
 parágrafos é a do alt — é o caso da 501.
 
+**A PUC Minas cita em inglês, "(paragraph n)"**, e ali duas coisas deslocavam a
+contagem, ambas corrigidas em 30/07/2026:
+
+1. o **comando da prova dentro do texto-base** ("READ THE FOLLOWING TEXT AND
+   CHOOSE THE OPTION…") ocupava o lugar do primeiro parágrafo — 12 textos, 65
+   questões;
+2. **parágrafo partido em dois blocos**: a importação abriu linha em branco no
+   meio de uma frase e o bloco seguinte começa em minúscula, criando um parágrafo
+   a mais. Sinal seguro: o bloco anterior não termina em pontuação final.
+   Encontrado em 4 textos (131, 148, 163 e 759).
+
+Estado: **10 das 12 citações em inglês conferidas**; pendentes 792 e 793 (PUC
+Minas Medicina 2023), do próximo lote.
+
+### Citação que não bate com o texto
+
+Vale para qualquer língua: o trecho entre aspas no enunciado tem de existir no
+texto-base, palavra por palavra. Corrigidos em 30/07/2026 "physically snap them"
+(o texto traz "physically **to** snap them") e "as **a** facial recognition" (o
+texto traz "as facial recognition"). A citação segue o texto, nunca o contrário.
+
 ### Linha fora de ordem
 
 A extração em duas colunas às vezes **troca linhas de lugar**, e o resultado é uma
@@ -212,6 +234,12 @@ sinal para a tela; corrigido na questão 655 em 30/07/2026.
 - **Letras espaçadas**: título em caixa-alta com espaço entre as letras
   ("A L I F E - C H AN G I N G") é falha de extração de PDF, não estilo. Único
   caso do acervo, na 631.
+- **Palavra partida pela justificação**: "jor-⏎nais", "iden-⏎tificar",
+  "specifi-cally". Junta-se **sem o hífen**. Cuidado para não confundir com o
+  hífen legítimo cortado pela mesma quebra ("energy-⏎harvesting",
+  "post-⏎doctoral", "well-⏎being") nem com URL quebrada, casos em que o hífen
+  fica. Não há regra automática segura: os cinco casos do acervo foram tratados
+  um a um em 30/07/2026.
 
 ### Coerência interna do item
 
@@ -230,6 +258,12 @@ porque o texto-base tinha perdido a numeração das dez perguntas — e as
 alternativas citam "a pergunta n° 1/4/5/8". Com a numeração restaurada no
 lote 11, não havia mais motivo para segurá-la: publicada em 30/07/2026.
 Contagem pública: **1.048 → 1.049**.
+
+Mesma decisão para a **734** (ITA 2024, protestos contra o sexismo na Coreia),
+também completa e curada, cujo enunciado cita "os parágrafos seis e sete" — o
+texto tem nove. Publicada no lote 21: **1.049 → 1.050**. O critério é este: item
+original de prova, completo, com gabarito válido e comentário curado, e cuja
+referência interna o texto atenda, entra no ar.
 
 ## 9. Metadados
 
