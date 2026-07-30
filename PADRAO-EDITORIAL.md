@@ -4,7 +4,7 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 16 (IDs 1–630
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 17 (IDs 1–655
 lidos; 1.049 publicadas).
 
 ---
@@ -159,6 +159,23 @@ antiga não virar 404.
 Aplicado em 29/07/2026 a 8 questões: 13, 34, 55 (cópias de ITA 2015, Fuvest 2021
 e Unesp 2025) e 769–773 (caderno 2 da PUC Minas Medicina 2019, que repete as
 cinco questões do caderno 1 com as alternativas embaralhadas).
+
+### Grifo no enunciado
+
+O trecho grifado vai entre colchetes duplos — `[[which]]` —, que o template
+converte em `<u>`. Colchete a mais (`[[[[which]]]]`) quebra o grifo e vaza o
+sinal para a tela; corrigido na questão 655 em 30/07/2026.
+
+### Tipografia importada
+
+- **Apóstrofo**: a curva correta é `’` (U+2019). O OCR do ITA 2017 trocou por
+  `‘` (U+2018, aspa de abertura) dentro das palavras — "didn‘t", "Seattle‘s",
+  "Corp.‘s" —, 17 ocorrências corrigidas em 30/07/2026. Em citação simples
+  aninhada, abre com `‘` e fecha com `’`; no texto da Geri Taylor as duas
+  estavam trocadas entre si.
+- **Letras espaçadas**: título em caixa-alta com espaço entre as letras
+  ("A L I F E - C H AN G I N G") é falha de extração de PDF, não estilo. Único
+  caso do acervo, na 631.
 
 ### Coerência interna do item
 
