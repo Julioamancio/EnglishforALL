@@ -4,13 +4,13 @@ Documento de retomada: tudo o que é preciso para continuar a curadoria sem
 depender do histórico da conversa. O que **deve** ser feito está no
 `PADRAO-EDITORIAL.md`; aqui está **onde paramos e como se roda um lote**.
 
-Atualizado em 30/07/2026, ao fim do lote 29.
+Atualizado em 30/07/2026, ao fim do lote 30.
 
 ## Onde paramos
 
-- **Lotes 1 a 29 concluídos e gravados: IDs 1 a 965.**
-- Próximo lote começa no **ID 966**.
-- Faltam **101 questões (IDs 966–1066), 5 lotes**, todas da Fuvest.
+- **Lotes 1 a 30 concluídos e gravados: IDs 1 a 990.**
+- Próximo lote começa no **ID 991**.
+- Faltam **76 questões (IDs 991–1066), 4 lotes**, todas da Fuvest.
 - **1.051 questões publicadas** (eram 1.048; entraram a 493, a 734 e a 831).
 - O **ITA e as duas PUC Minas estão inteiramente curados**. O que resta é só
   Fuvest — textos curtos e muitos itens discretos, sem o aparato de linha e
@@ -60,7 +60,7 @@ ficam versionados em `scripts/`.
 
 | script | o que garante | estado em 30/07/2026 |
 |---|---|---|
-| `audita-linhas.js` | toda citação "(linha n)" cai na linha certa | 30/30 |
+| `audita-linhas.js` | toda citação "(linha n)" cai na linha certa | 35/35 |
 | `audita-copias.js` | cópias do mesmo texto não divergem entre si | 134 grupos, 0 |
 | `audita-sanidade.js` | integridade do item, campos obrigatórios, metadados | 21 checagens, 0 |
 | `audita-paragrafos.js` | todo "segundo/terceiro parágrafo" existe no texto | 22/22 |

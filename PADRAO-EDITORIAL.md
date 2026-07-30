@@ -210,6 +210,15 @@ detectar isso por script — só lendo.
   `texto_base` mesmo — é o caso da tirinha do CommitStrip (676–678), que parece
   fora do padrão e não é. Verificado em 30/07/2026: **nenhum alt órfão e nenhuma
   imagem sem alt** no acervo; `scripts/audita-imagens.js` refaz essa checagem.
+- **A descrição é texto nosso, e leva acento.** No lote 30 (30/07/2026)
+  apareceram quatro blocos digitados sem acento nenhum: "O texto e acompanhado de
+  tres graficos", "um robo industrial com dois bracos articulados sobre uma base
+  movel, com a inscricao", "cena de animacao com dois passaros" e "golpeia um
+  cerebro gigante". Eram 11 questões (984-986, 987-988, 989-991, 999-1001), e o
+  português errado ia para a página. Os demais blocos do mesmo lote (966, 967,
+  974, 979) estavam certos, o que mostra descuido e não convenção. A verificação
+  usada: retirados os diacríticos, o texto novo tem de ser idêntico ao antigo —
+  só a acentuação podia mudar.
 
 ### Ressalva de gabarito não oficial
 
@@ -244,6 +253,31 @@ palavras vizinhas e some na leitura; virou `unless she … by five`.
 
 O marcador `•` da linha de fonte também chega colado: o texto da New Scientist
 compartilhado pelas questões 922 a 926 trazia `21 July 2001• New Scientist`.
+
+### Numeração de linha: quatro convenções
+
+**Lote 30, 30/07/2026.** A numeração das provas aparece de quatro jeitos, e
+todos convivem no acervo:
+
+1. marcadores no início da linha começando em **1** (ITA);
+2. marcadores no início da linha **de 5 em 5, sem nunca imprimir o 1** — o mais
+   comum na Fuvest: só aparecem 5, 10, 15, 20;
+3. marcadores **no fim** da linha (Fuvest 2008, Fuvest 2021);
+4. numeração que conta as linhas em branco e numeração que não conta.
+
+Por isso o `audita-linhas.js` não procura mais o marcador "1": ele **deduz** a
+origem. Se o marcador M está no índice i, a linha 1 está no índice i-M+1, e dois
+marcadores de valores diferentes precisam concordar com a mesma origem — é a
+concordância, não o valor, que separa marcador de número solto no meio do texto.
+O verificador também passou a aceitar a citação abreviada (`(l. 3)`, `(L. 14-15)`)
+e a descartar o marcador de dentro da linha antes de comparar, porque ao juntar
+duas linhas ele caía no meio do trecho citado (a 1023 cita "this kind of
+barrier", que atravessa as linhas 14 e 15 com o marcador "15" no meio).
+
+O ganho foi imediato: de **30 para 35 citações efetivamente conferidas**. As que
+faltavam (542, 966, 976, 1019, 1023 e 1034) estavam corretas, mas o verificador
+as classificava como "texto sem numeração" e simplesmente pulava. Hoje: 35
+conferidas, zero divergências, zero textos sem numeração.
 
 ## 7. Itens discretos antigos
 
