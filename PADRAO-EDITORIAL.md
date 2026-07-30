@@ -4,8 +4,8 @@ Documento descritivo, não aspiracional: registra o padrão que o acervo **de fa
 segue**, apurado na curadoria questão a questão. Serve para item novo entrar
 alinhado e para decisão já tomada não voltar à mesa.
 
-Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 19 (IDs 1–705
-lidos; 1.049 publicadas).
+Última revisão: 30/07/2026 — durante a curadoria dos lotes 1 a 20 (IDs 1–730
+lidos; 1.049 publicadas). Faltam 335 questões (IDs 731–1066), 14 lotes.
 
 ---
 
@@ -138,8 +138,8 @@ importação como um bloco único de linhas quebradas por largura de coluna, e 1
 citações de parágrafo ficaram sem como ser atendidas. `scripts/audita-paragrafos.js`
 mede isso; em 30/07/2026 os dez textos do bloco ITA 2020–2022 foram remontados
 (cada parágrafo numa linha corrida, separados por linha em branco), conferindo
-que o parágrafo citado contém mesmo o trecho citado. **Pendentes: 710, 713–716,
-722, 726, 727** (ITA 2022–2024), a tratar nos lotes seguintes.
+que o parágrafo citado contém mesmo o trecho citado. Os últimos casos (ITA
+2022–2024) saíram no lote 20: **as 22 citações de parágrafo do acervo resolvem**.
 
 Quando a peça não tem `texto_base` e o texto vive no `imagem_alt`, a contagem de
 parágrafos é a do alt — é o caso da 501.
