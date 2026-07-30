@@ -329,6 +329,32 @@ referência interna o texto atenda, entra no ar.
 - CEFR: o mesmo item não pode aparecer com dois níveis diferentes.
 
 
+
+### Título
+
+O título cita a prova **entre parênteses**, no fim: `Nap breaks no trabalho
+(Fuvest 1999)`.
+
+**Lote 29, 30/07/2026.** A leitura do lote encontrou a Fuvest 2006 partida ao
+meio — as questões 951 a 954 usavam parênteses e as 955 a 958 usavam travessão
+(`… — Fuvest 2006`). O levantamento mostrou 467 títulos com parênteses contra 57
+com travessão, e os 57 eram blocos contíguos de id (881-898, 955-973,
+1027-1065), resquício de uma fase anterior do trabalho. Em quatro provas os dois
+estilos apareciam lado a lado: Fuvest 1999, 2006, 2020 e 2025. Os 58 títulos com
+travessão (57 publicados e um despublicado) passaram para parênteses. Só o campo
+`titulo` mudou; slug e URL ficaram intactos.
+
+Não são defeito, e ficam como estão:
+
+- **Meta description sem fórmula fixa.** Convivem três aberturas ("Questão de
+  inglês…", "Fuvest 2006: …" e entrada direta no assunto). Meta boa é específica
+  e convida ao clique; padronizar a abertura só a tornaria repetitiva na SERP.
+- **Disclaimer de gabarito por prova inteira.** As 68 questões que avisam que a
+  Fuvest não publicou o gabarito estão em Fuvest 1977, 1998, 2001, 2002, 2003 e
+  2004, e **nenhuma prova tem o aviso pela metade** — ou toda a prova traz, ou
+  nenhuma questão traz. É o comportamento correto: o aviso é uma propriedade da
+  prova, não do item.
+
 ## 10. SEO
 
 - Sitemap só com URL canônica. Listagem filtrada não entra.

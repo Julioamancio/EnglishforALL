@@ -4,13 +4,13 @@ Documento de retomada: tudo o que é preciso para continuar a curadoria sem
 depender do histórico da conversa. O que **deve** ser feito está no
 `PADRAO-EDITORIAL.md`; aqui está **onde paramos e como se roda um lote**.
 
-Atualizado em 30/07/2026, ao fim do lote 28.
+Atualizado em 30/07/2026, ao fim do lote 29.
 
 ## Onde paramos
 
-- **Lotes 1 a 28 concluídos e gravados: IDs 1 a 940.**
-- Próximo lote começa no **ID 941**.
-- Faltam **126 questões (IDs 941–1066), 6 lotes**, todas da Fuvest.
+- **Lotes 1 a 29 concluídos e gravados: IDs 1 a 965.**
+- Próximo lote começa no **ID 966**.
+- Faltam **101 questões (IDs 966–1066), 5 lotes**, todas da Fuvest.
 - **1.051 questões publicadas** (eram 1.048; entraram a 493, a 734 e a 831).
 - O **ITA e as duas PUC Minas estão inteiramente curados**. O que resta é só
   Fuvest — textos curtos e muitos itens discretos, sem o aparato de linha e
@@ -136,3 +136,11 @@ não a questão — os três casos estão registrados no §11 do padrão.
 A lição vale para os lotes 28 a 34: **um lote limpo não é um lote terminado.**
 Quando o dry-run der zero, a pergunta seguinte é o que ainda não está sendo
 verificado.
+
+## Lote de tipografia pendente
+
+Adiado de propósito para não misturar assuntos dentro de um lote, e agora com
+escopo fechado: **197 `texto_base` e 67 `titulo` usam aspas retas** onde o
+padrão do acervo é aspas curvas (98 títulos já usam curvas). É a última
+inconsistência de tipografia conhecida e vale um lote próprio, depois que os
+lotes por id terminarem.
