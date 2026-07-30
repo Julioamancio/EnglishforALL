@@ -1,7 +1,7 @@
 ﻿// SOMENTE LEITURA â€” quanto falta da curadoria.
 const Database = require('better-sqlite3');
 const db = new Database('dados/banco.db', { readonly: true });
-const ATE = 915; // ultimo id ja curado
+const ATE = 940; // ultimo id ja curado
 const tot = db.prepare('SELECT count(*) c FROM questoes').get().c;
 const pub = db.prepare('SELECT count(*) c FROM questoes WHERE publicada=1').get().c;
 const maxId = db.prepare('SELECT max(id) m FROM questoes').get().m;

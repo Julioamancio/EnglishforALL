@@ -4,13 +4,13 @@ Documento de retomada: tudo o que é preciso para continuar a curadoria sem
 depender do histórico da conversa. O que **deve** ser feito está no
 `PADRAO-EDITORIAL.md`; aqui está **onde paramos e como se roda um lote**.
 
-Atualizado em 30/07/2026, ao fim do lote 27.
+Atualizado em 30/07/2026, ao fim do lote 28.
 
 ## Onde paramos
 
-- **Lotes 1 a 27 concluídos e gravados: IDs 1 a 915.**
-- Próximo lote começa no **ID 916**.
-- Faltam **151 questões (IDs 916–1066), 7 lotes**, todas da Fuvest.
+- **Lotes 1 a 28 concluídos e gravados: IDs 1 a 940.**
+- Próximo lote começa no **ID 941**.
+- Faltam **126 questões (IDs 941–1066), 6 lotes**, todas da Fuvest.
 - **1.051 questões publicadas** (eram 1.048; entraram a 493, a 734 e a 831).
 - O **ITA e as duas PUC Minas estão inteiramente curados**. O que resta é só
   Fuvest — textos curtos e muitos itens discretos, sem o aparato de linha e

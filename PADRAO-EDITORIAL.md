@@ -231,6 +231,20 @@ divulgado.
 é aspa curva (`“ ”`). É defeito amplo e uniforme, que merece um lote próprio de
 tipografia em vez de correção avulsa. Medido em 30/07/2026, não corrigido.
 
+### Reticências e marcadores
+
+**Lote 28, 30/07/2026.** Reticência importada vira sequência de pontos, e a
+contagem varia: a **926** citava `"....in the long run"` com quatro pontos e a
+**928** citava `"...whole hours can go missing"` com três. Três pontos ou mais
+viram reticência tipográfica (`…`).
+
+Quando a reticência marca a **lacuna** de um item, ela precisa de espaço dos dois
+lados. A **934** trazia `unless she...by five`, em que a lacuna se cola às
+palavras vizinhas e some na leitura; virou `unless she … by five`.
+
+O marcador `•` da linha de fonte também chega colado: o texto da New Scientist
+compartilhado pelas questões 922 a 926 trazia `21 July 2001• New Scientist`.
+
 ## 7. Itens discretos antigos
 
 Fuvest 1977–1979 e similares: tradução de frase única, escolha de forma verbal.
