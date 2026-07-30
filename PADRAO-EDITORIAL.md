@@ -314,6 +314,7 @@ referência interna o texto atenda, entra no ar.
 - O ano no slug e o campo `ano` não podem divergir.
 - CEFR: o mesmo item não pode aparecer com dois níveis diferentes.
 
+
 ## 10. SEO
 
 - Sitemap só com URL canônica. Listagem filtrada não entra.
@@ -321,3 +322,35 @@ referência interna o texto atenda, entra no ar.
   de destino com título, meta description e conteúdo próprios, entram no sitemap
   e se autocanonizam. Só entram os níveis que têm questão publicada.
 - Qualquer outra query string: `noindex,follow` com canonical na página sem filtro.
+
+## 11. Sanidade estrutural
+
+Verificado por `scripts/audita-sanidade.js`, criado em 30/07/2026 quando o lote
+27 fechou com zero alterações e ficou claro que valia mais olhar o que os
+verificadores **não** cobriam do que rever o que já estava limpo. Ele checa o
+item em si — gabarito com alternativa correspondente, quantidade e sequência das
+letras, alternativas repetidas, campos obrigatórios, slug único, tamanho de
+comentário e meta description, CEFR na escala, ano coerente e questão duplicada.
+
+Três achados iniciais eram ruído do próprio verificador, e a regra foi calibrada
+em vez de a questão ser mexida:
+
+- **Alternativa que "começa com a própria letra"**: a alternativa A da **59** é
+  "A.I. writes the email…". A letra ali é sigla, não rótulo repetido. O teste
+  passou a exigir espaço depois da letra.
+- **Ano do slug divergente** em 23, 24, 25, 26 e 54: o ano no fim desses slugs é
+  o do simulado que reusou a questão ("…-uea-2023-simulado-2025"), e o campo
+  `ano` guarda o da prova de origem, como manda o §9. Slug com "simulado" saiu
+  da comparação. Não se mexe em slug publicado sem necessidade — custaria um 301.
+- **Comentário curto** em 177, 178, 182, 184 e 191 (174 a 199 caracteres): são
+  itens A1/A2 de texto curto, e os cinco explicam resposta e distratores. O piso
+  caiu de 200 para 150 caracteres, que é onde um comentário fica de fato incompleto.
+
+Também não são defeito o enunciado repetido entre questões ("Assinale a
+alternativa que completa corretamente a lacuna do texto." é comando de prova,
+repetido em 144 itens) nem duas perguntas diferentes sobre o mesmo texto, que é
+como uma prova é montada. Duplicata só é acusada quando comando, texto e
+alternativas coincidem — hoje, nenhuma.
+
+Corrigido de verdade: a **meta description da 4**, com 175 caracteres, aparecia
+truncada no resultado de busca. Reescrita em 146.

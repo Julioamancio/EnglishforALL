@@ -4,18 +4,19 @@ Documento de retomada: tudo o que é preciso para continuar a curadoria sem
 depender do histórico da conversa. O que **deve** ser feito está no
 `PADRAO-EDITORIAL.md`; aqui está **onde paramos e como se roda um lote**.
 
-Atualizado em 30/07/2026, ao fim do lote 21.
+Atualizado em 30/07/2026, ao fim do lote 27.
 
 ## Onde paramos
 
-- **Lotes 1 a 21 concluídos e gravados: IDs 1 a 758.**
-- Próximo lote começa no **ID 759**.
-- Faltam **307 questões (IDs 759–1066), 13 lotes**.
-- **1.050 questões publicadas** (eram 1.048; entraram a 493 e a 734).
-- O **ITA está inteiramente curado**. O que resta é Fuvest (242, IDs 825–1066),
-  PUC Minas Medicina (40, IDs 764–824) e PUC Minas (25, IDs 759–819) — textos
-  curtos e muitos itens discretos, sem o aparato de linha/parágrafo que gerou o
-  grosso do trabalho no ITA.
+- **Lotes 1 a 27 concluídos e gravados: IDs 1 a 915.**
+- Próximo lote começa no **ID 916**.
+- Faltam **151 questões (IDs 916–1066), 7 lotes**, todas da Fuvest.
+- **1.051 questões publicadas** (eram 1.048; entraram a 493, a 734 e a 831).
+- O **ITA e as duas PUC Minas estão inteiramente curados**. O que resta é só
+  Fuvest — textos curtos e muitos itens discretos, sem o aparato de linha e
+  parágrafo que gerou o grosso do trabalho no ITA. Os lotes 26 e 27 fecharam com
+  zero alterações, o que é o estado esperado daqui em diante: a partir do lote
+  27 o ganho vem menos de reler os itens e mais de ampliar o que se verifica.
 
 Recalcular a qualquer momento:
 
@@ -50,7 +51,7 @@ ficam versionados em `scripts/`.
    intencional, **ROLLBACK** e nada é gravado.
 4. **Dry-run, ler a saída, só então gravar.**
 5. `systemctl restart banco-questoes`.
-6. **Auditorias** — rodar os três verificadores; todos devem ficar em zero.
+6. **Auditorias** — rodar os cinco verificadores; todos devem ficar em zero.
 7. **Verificar no site** via curl: páginas 200, o defeito corrigido aparecendo
    certo, sitemap válido, portas 8091/8096.
 8. **Registrar** no `PADRAO-EDITORIAL.md` o que a curadoria revelou, e commitar.
@@ -60,6 +61,8 @@ ficam versionados em `scripts/`.
 | script | o que garante | estado em 30/07/2026 |
 |---|---|---|
 | `audita-linhas.js` | toda citação "(linha n)" cai na linha certa | 30/30 |
+| `audita-copias.js` | cópias do mesmo texto não divergem entre si | 134 grupos, 0 |
+| `audita-sanidade.js` | integridade do item, campos obrigatórios, metadados | 21 checagens, 0 |
 | `audita-paragrafos.js` | todo "segundo/terceiro parágrafo" existe no texto | 22/22 |
 | `audita-imagens.js` | nenhuma descrição órfã, nenhuma imagem sem descrição | 0 e 0 |
 | `progresso-curadoria.js` | quanto falta | — |
@@ -116,3 +119,20 @@ pergunta.
   comentário curado e referência interna que o texto atende, entra no ar.
 - Descrição de tirinha pode viver no `texto_base` quando não há arquivo de
   imagem — o template só renderiza o alt junto com a imagem.
+
+## O que o lote 27 mudou
+
+O lote fechou com dry-run em zero: nenhum defeito pelos critérios que os quatro
+verificadores já cobriam. Em vez de seguir para o lote seguinte, escrevi um
+quinto verificador para o que **nenhum** deles olhava — a integridade do item em
+si (gabarito, letras, campos obrigatórios, metadados, duplicatas). O acervo
+inteiro passa nas 21 checagens.
+
+Só um defeito real apareceu: a meta description da questão 4, com 175
+caracteres, aparecia truncada no resultado de busca; foi reescrita em 146. Os
+outros achados eram ruído do verificador novo, e o que se ajustou foi a regra,
+não a questão — os três casos estão registrados no §11 do padrão.
+
+A lição vale para os lotes 28 a 34: **um lote limpo não é um lote terminado.**
+Quando o dry-run der zero, a pergunta seguinte é o que ainda não está sendo
+verificado.
