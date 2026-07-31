@@ -25,7 +25,17 @@
     </div>
     <div class="rodape__fim">
       <span>English for ALL — Language &amp; Learning Community.</span>
-      <% if (logado) { %><form method="post" action="/admin/sair" style="margin:0"><button class="btn btn--sec btn--pequeno" type="submit">Sair do painel</button></form><% } %>
+      <% if (logado) { %>
+        <span class="rodape__admin">
+          <a class="btn btn--sec btn--pequeno" href="/admin">Painel</a>
+          <a class="btn btn--sec btn--pequeno" href="/admin/usuarios">Alunos</a>
+          <form method="post" action="/admin/sair" style="margin:0"><button class="btn btn--sec btn--pequeno" type="submit">Sair do painel</button></form>
+        </span>
+      <% } else { %>
+        <%# Atalho para o professor não precisar decorar /admin/login. A senha é
+            que protege o painel, não o segredo do endereço. %>
+        <a class="rodape__entrar-painel" href="/admin/login">Painel do professor</a>
+      <% } %>
     </div>
   </div>
 </footer>

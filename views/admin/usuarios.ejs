@@ -1,17 +1,51 @@
 <%- include('../partials/cabeca') %>
+<%
+  const dataBR = (s) => s ? s.slice(8, 10) + '/' + s.slice(5, 7) + '/' + s.slice(0, 4) : '—';
+  const comSimulado = alunos.filter((a) => a.concluidos > 0);
+%>
 <div class="env">
-  <h1>Usuários cadastrados</h1>
-  <p><%= usuarios.length %> no total.</p>
+  <h1>Alunos e desempenho</h1>
+  <p>
+    <%= alunos.length %> conta<%= alunos.length === 1 ? '' : 's' %> cadastrada<%= alunos.length === 1 ? '' : 's' %>,
+    <%= comSimulado.length %> com pelo menos um simulado concluído.
+    Só contam os simulados oficiais — o treino livre no banco não entra.
+  </p>
+
   <div class="painel rolagem">
-    <% if (!usuarios.length) { %><p class="vazio">Nenhum usuário ainda.</p><% } else { %>
-    <table class="tabela">
-      <thead><tr><th>Nome</th><th>E-mail</th><th>Cadastro</th></tr></thead>
-      <tbody>
-        <% usuarios.forEach(function(u){ %><tr><td><%= u.nome %></td><td><%= u.email %></td><td><%= u.criado_em %></td></tr><% }) %>
-      </tbody>
-    </table>
+    <% if (!alunos.length) { %>
+      <p class="vazio">Nenhum aluno ainda.</p>
+    <% } else { %>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Aluno</th><th>Onde estuda</th><th>Simulados</th>
+            <th>Média</th><th>Última nota</th><th>Acertos</th><th>Último simulado</th><th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% alunos.forEach(function (a) { %>
+            <tr>
+              <td>
+                <strong><%= a.nome %></strong><br>
+                <small class="suave"><%= a.email %></small>
+              </td>
+              <td><%= a.instituicao || '—' %></td>
+              <td>
+                <%= a.concluidos %>
+                <% if (a.em_aberto) { %><span class="etiqueta etiqueta--espera">1 em andamento</span><% } %>
+              </td>
+              <td><%= a.media == null ? '—' : a.media + '%' %></td>
+              <td><%= a.ultima_nota == null ? '—' : a.ultima_nota + '%' %></td>
+              <td><%= a.concluidos ? a.acertos + '/' + a.questoes : '—' %></td>
+              <td><%= dataBR(a.ultimo_em) %></td>
+              <td><a href="/admin/usuarios/<%= a.id %>">Ver ficha</a></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
     <% } %>
   </div>
+
   <a class="btn btn--sec" href="/admin">Voltar</a>
 </div>
 <%- include('../partials/rodape') %>

@@ -1057,3 +1057,26 @@ html, body { max-width: 100%; overflow-x: clip; }
   .gfx-hbarras__trilho { grid-column: 1 / -1; order: 3; }
   .sim-placar__nota { font-size: 2.6rem; }
 }
+
+/* ficha do aluno no painel — reaproveita os cartões e gráficos do simulado */
+.suave { color: var(--suave); }
+.acertou { color: var(--ok); font-weight: 600; }
+.errou { color: var(--correcao); font-weight: 600; }
+.tabela small.suave { display: block; font-weight: 400; }
+details.painel > summary { cursor: pointer; font-weight: 500; line-height: 1.7; }
+details.painel > summary::marker { color: var(--suave); }
+details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 1px solid var(--borda); }
+.sim-gfx h3 { font-size: .95rem; margin: 1rem 0 .5rem; }
+
+/* acesso ao painel pelo rodapé — discreto para o aluno, sempre à mão para o professor */
+.rodape__entrar-painel {
+  font-size: .82rem;
+  color: var(--suave);
+  text-decoration: none;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  padding: .3rem .8rem;
+  white-space: nowrap;
+}
+.rodape__entrar-painel:hover { color: var(--tinta); border-color: var(--borda-forte); }
+.rodape__admin { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }

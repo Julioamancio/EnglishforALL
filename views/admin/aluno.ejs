@@ -1,0 +1,123 @@
+<%- include('../partials/cabeca') %>
+<%
+  const dataBR = (s) => s ? s.slice(8, 10) + '/' + s.slice(5, 7) + '/' + s.slice(0, 4) : '—';
+  const horaBR = (s) => s ? s.slice(11, 16) : '';
+%>
+<div class="env">
+  <p class="sim-etiqueta">Ficha do aluno</p>
+  <h1><%= aluno.nome %></h1>
+  <p class="suave">
+    <%= aluno.email %><% if (aluno.instituicao) { %> · <%= aluno.instituicao %><% } %>
+    · conta criada em <%= dataBR(aluno.criado_em) %>
+  </p>
+
+  <% if (emAberto) { %>
+    <p class="aviso">Há um simulado <strong>em andamento</strong> (semana <%= emAberto.semana %>), ainda não concluído. Ele não entra nos números abaixo.</p>
+  <% } %>
+
+<% if (d.vazio) { %>
+  <p class="aviso">Este aluno ainda não concluiu nenhum simulado oficial.</p>
+<% } else { %>
+
+  <div class="sim-cartoes">
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.media %>%</span><span class="sim-cartao__r">média geral</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.concluidos %></span><span class="sim-cartao__r">simulados concluídos</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.acertos %>/<%= d.questoes %></span><span class="sim-cartao__r">acertos</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.melhor.percentual %>%</span><span class="sim-cartao__r">melhor</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.pior.percentual %>%</span><span class="sim-cartao__r">pior</span></div>
+    <div class="sim-cartao">
+      <span class="sim-cartao__n"><% if (d.variacao === null) { %>—<% } else { %><%= d.variacao > 0 ? '+' : '' %><%= d.variacao %>%<% } %></span>
+      <span class="sim-cartao__r">variação no último</span>
+    </div>
+  </div>
+
+  <% if (d.sequencia.tamanho > 1) { %>
+    <p class="aviso <%= d.sequencia.tipo === 'melhora' ? 'aviso--ok' : '' %>">
+      Sequência de <strong><%= d.sequencia.tamanho %> simulados</strong> <%= d.sequencia.tipo === 'melhora' ? 'em melhora' : 'em queda' %>.
+    </p>
+  <% } %>
+
+  <%
+    const L = d.simulados;
+    const W = 720, H = 240, ml = 42, mr = 16, mt = 18, mb = 32;
+    const iw = W - ml - mr, ih = H - mt - mb;
+    const px = (i) => ml + (L.length === 1 ? iw / 2 : (i * iw) / (L.length - 1));
+    const py = (v) => mt + ih - (v / 100) * ih;
+  %>
+  <section class="sim-gfx">
+    <h2>Evolução</h2>
+    <div class="sim-gfx__caixa">
+      <svg viewBox="0 0 <%= W %> <%= H %>" role="img" preserveAspectRatio="xMidYMid meet"
+           aria-label="Aproveitamento de <%= aluno.nome %> em cada simulado. Média de <%= d.media %>%.">
+        <% [0, 50, 100].forEach(function (v) { %>
+          <line x1="<%= ml %>" y1="<%= py(v) %>" x2="<%= W - mr %>" y2="<%= py(v) %>" class="gfx-grade"/>
+          <text x="<%= ml - 8 %>" y="<%= py(v) + 4 %>" class="gfx-rot" text-anchor="end"><%= v %>%</text>
+        <% }) %>
+        <line x1="<%= ml %>" y1="<%= py(d.media) %>" x2="<%= W - mr %>" y2="<%= py(d.media) %>" class="gfx-media"/>
+        <% if (L.length > 1) { %>
+          <polyline points="<%= L.map((s, i) => px(i).toFixed(1) + ',' + py(s.percentual).toFixed(1)).join(' ') %>" class="gfx-linha"/>
+        <% } %>
+        <% L.forEach(function (s, i) { %>
+          <circle cx="<%= px(i) %>" cy="<%= py(s.percentual) %>" r="5" class="gfx-ponto"><title>Simulado <%= s.numero %>: <%= s.percentual %>%</title></circle>
+          <text x="<%= px(i) %>" y="<%= H - 10 %>" class="gfx-rot" text-anchor="middle"><%= s.numero %></text>
+        <% }) %>
+      </svg>
+    </div>
+  </section>
+
+  <% if (d.porNivel.length || d.porTipo.length) { %>
+    <section class="sim-gfx">
+      <h2>Onde acerta e onde erra</h2>
+      <% [['Por nível CEFR', d.porNivel], ['Por tipo de questão', d.porTipo]].forEach(function (par) { %>
+        <% if (par[1].length) { %>
+          <h3 class="suave"><%= par[0] %></h3>
+          <ul class="gfx-hbarras">
+            <% par[1].forEach(function (r) { %>
+              <li>
+                <span class="gfx-hbarras__rot"><%= r.valor %></span>
+                <span class="gfx-hbarras__trilho"><span class="gfx-hbarras__preenche" style="width:<%= r.percentual %>%"></span></span>
+                <span class="gfx-hbarras__n"><%= r.percentual %>% <small>(<%= r.acertos %>/<%= r.total %>)</small></span>
+              </li>
+            <% }) %>
+          </ul>
+        <% } %>
+      <% }) %>
+      <p class="dica">Cada recorte só entra a partir de três questões respondidas nele.</p>
+    </section>
+  <% } %>
+
+  <h2>Simulados, questão por questão</h2>
+  <% lista.forEach(function (s) { %>
+    <details class="painel">
+      <summary>
+        <strong><%= dataBR(s.concluido_em) %></strong> · semana <%= s.semana %> ·
+        <%= s.acertos %>/<%= s.total %> (<%= Math.round((s.acertos / s.total) * 100) %>%)
+        <% if (s.minutos != null) { %> · <%= s.minutos %> min<% } %>
+        <% if (!s.gabarito.liberado) { %>
+          <span class="etiqueta etiqueta--espera">para o aluno, a correção abre <%= dataBR(s.gabarito.quando) %> às <%= horaBR(s.gabarito.quando) %></span>
+        <% } %>
+      </summary>
+      <div class="tabela-rolagem">
+        <table class="tabela">
+          <thead><tr><th>#</th><th>Questão</th><th>Prova</th><th>Marcou</th><th>Correta</th><th></th></tr></thead>
+          <tbody>
+            <% s.itens.forEach(function (q, n) { %>
+              <tr>
+                <td><%= n + 1 %></td>
+                <td><a href="/questoes/<%= q.slug %>" target="_blank" rel="noopener"><%= q.titulo %></a></td>
+                <td><%= q.instituicao %><%= q.ano ? ' ' + q.ano : '' %></td>
+                <td><strong><%= q.resposta || '—' %></strong></td>
+                <td><%= q.gabarito %></td>
+                <td class="<%= q.correta ? 'acertou' : 'errou' %>"><%= q.correta ? 'acertou' : 'errou' %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  <% }) %>
+<% } %>
+
+  <a class="btn btn--sec" href="/admin/usuarios">Voltar aos alunos</a>
+</div>
+<%- include('../partials/rodape') %>

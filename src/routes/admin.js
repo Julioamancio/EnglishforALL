@@ -5,6 +5,8 @@ const path = require('path');
 const fs = require('fs');
 const slugify = require('slugify');
 const db = require('../db');
+const desempenho = require('../lib/desempenho');
+const sim = require('../lib/simulado');
 
 const router = express.Router();
 
@@ -250,11 +252,39 @@ router.get('/assinantes', (req, res) => {
   });
 });
 
+// ------------------------------------------------------------------ alunos
+
 router.get('/usuarios', (req, res) => {
   res.render('admin/usuarios', {
-    title: 'Usuários cadastrados',
+    title: 'Alunos e desempenho',
     description: '',
-    usuarios: db.usuarios(),
+    alunos: desempenho.porAluno(),
+    layoutAdmin: true,
+  });
+});
+
+/**
+ * Ficha de um aluno: os mesmos números que ele vê, mais o que ele marcou em
+ * cada questão. Aqui a correção aparece sem esperar as 24 horas — o prazo existe
+ * para o aluno não conferir o gabarito na hora, não para escondê-lo de quem
+ * corrige.
+ */
+router.get('/usuarios/:id', (req, res, next) => {
+  const aluno = db.usuarioPorId(Number(req.params.id));
+  if (!aluno) return next();
+
+  const lista = sim.historico(aluno.id).map((s) => ({
+    ...s,
+    itens: sim.questoesDo(s.id, { comRespostas: true }),
+  }));
+
+  res.render('admin/aluno', {
+    title: `Desempenho de ${aluno.nome}`,
+    description: '',
+    aluno,
+    d: desempenho.resumo(aluno.id),
+    lista,
+    emAberto: sim.emAberto(aluno.id),
     layoutAdmin: true,
   });
 });

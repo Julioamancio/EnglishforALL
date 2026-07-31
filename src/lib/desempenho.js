@@ -141,4 +141,42 @@ function resumo(usuarioId) {
   };
 }
 
-module.exports = { resumo, porSimulado, porCampo };
+/**
+ * Visão do professor: uma linha por aluno, com o essencial para saber quem
+ * está indo bem e quem sumiu. Numa consulta só, para não fazer uma por aluno.
+ *
+ * Quem usa isto é o painel, atrás do login de administrador. O aluno continua
+ * enxergando apenas o próprio desempenho.
+ */
+function porAluno() {
+  return db
+    .prepare(
+      `SELECT u.id, u.nome, u.email, u.instituicao, u.criado_em,
+              COUNT(s.id)                                        AS concluidos,
+              COALESCE(SUM(s.acertos), 0)                        AS acertos,
+              COALESCE(SUM(s.total), 0)                          AS questoes,
+              MAX(s.concluido_em)                                AS ultimo_em,
+              (SELECT ROUND(AVG(x.acertos * 100.0 / x.total))
+                 FROM simulados x
+                WHERE x.usuario_id = u.id AND x.concluido_em IS NOT NULL) AS media,
+              (SELECT ROUND(x.acertos * 100.0 / x.total)
+                 FROM simulados x
+                WHERE x.usuario_id = u.id AND x.concluido_em IS NOT NULL
+                ORDER BY x.concluido_em DESC LIMIT 1)            AS ultima_nota,
+              (SELECT COUNT(*) FROM simulados x
+                WHERE x.usuario_id = u.id AND x.concluido_em IS NULL) AS em_aberto
+         FROM usuarios u
+         LEFT JOIN simulados s ON s.usuario_id = u.id AND s.concluido_em IS NOT NULL
+        GROUP BY u.id
+        ORDER BY u.criado_em DESC`
+    )
+    .all()
+    .map((a) => ({
+      ...a,
+      erros: a.questoes - a.acertos,
+      media: a.media == null ? null : Math.round(a.media),
+      ultima_nota: a.ultima_nota == null ? null : Math.round(a.ultima_nota),
+    }));
+}
+
+module.exports = { resumo, porSimulado, porCampo, porAluno };
