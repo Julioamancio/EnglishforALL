@@ -46,12 +46,17 @@
           <li><a href="/medicina"><span>Questões de Medicina</span><span class="menu__n"><%= menu.medicina %></span></a></li>
         </ul>
       </details>
-      <details class="menu menu--nav">
-        <summary<%= caminho.startsWith('/gramatica') ? ' class="ativo"' : '' %>>Aprender <svg class="menu__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-        <ul class="menu__painel menu__painel--largo">
-          <li><a href="/gramatica"><span>Grammar Explanation</span><span class="menu__n">A1&ndash;C2</span></a></li>
-        </ul>
-      </details>
+      <%# "Aprender" e "Simulado" só aparecem para quem entrou. As páginas em si
+          continuam públicas — o rodapé mantém o link para o guia de gramática, e
+          é por lá que o Google continua chegando. %>
+      <% if (logado || usuario) { %>
+        <details class="menu menu--nav">
+          <summary<%= caminho.startsWith('/gramatica') ? ' class="ativo"' : '' %>>Aprender <svg class="menu__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <ul class="menu__painel menu__painel--largo">
+            <li><a href="/gramatica"><span>Grammar Explanation</span><span class="menu__n">A1&ndash;C2</span></a></li>
+          </ul>
+        </details>
+      <% } %>
       <% if (logado) { %>
         <a href="/prova"<%= caminho.startsWith('/prova') ? ' aria-current="page"' : '' %>>Montar prova</a>
         <a href="/admin"<%= caminho.startsWith('/admin') ? ' aria-current="page"' : '' %>>Painel</a>
@@ -67,7 +72,6 @@
         <a href="/prova"<%= caminho.startsWith('/prova') ? ' aria-current="page"' : '' %>>Montar prova</a>
         <form class="nav__sair" method="post" action="/sair"><button type="submit" title="Sair da conta (<%= usuario.email %>)">Sair</button></form>
       <% } else { %>
-        <a href="/simulado"<%= caminho.startsWith('/simulado') ? ' aria-current="page"' : '' %>>Simulado</a>
         <a href="/montar-prova"<%= caminho.startsWith('/montar-prova') ? ' aria-current="page"' : '' %>>Montar prova</a>
         <a href="/entrar"<%= (caminho.startsWith('/entrar') || caminho.startsWith('/cadastro')) ? ' aria-current="page"' : '' %>>Entrar</a>
       <% } %>
