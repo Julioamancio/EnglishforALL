@@ -936,8 +936,13 @@ html, body { max-width: 100%; overflow-x: clip; }
 .sim-barra__passo.feito { background: var(--ok); border-color: var(--ok); }
 .sim-barra__passo.agora { background: var(--tinta-vivo); border-color: var(--tinta-vivo); }
 
-/* alternativa clicável do simulado: o rádio some e a linha inteira vira alvo */
-.sim-alt { display: flex; align-items: flex-start; gap: .7rem; width: 100%; cursor: pointer; }
+/* Alternativa clicável do simulado: o rádio some e a linha inteira vira alvo.
+   `display: contents` é essencial — o .alt do site é um grid de duas colunas
+   (bolha e texto) e espera esses dois como filhos DIRETOS. Envolvê-los num
+   label comum jogaria tudo na primeira coluna, de 35px, espremendo o texto até
+   a alternativa ficar com 184px de altura. */
+.sim-alt { display: contents; cursor: pointer; }
+.alternativas--escolha .alt { cursor: pointer; }
 .sim-alt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .alternativas--escolha .alt { transition: border-color .15s, background .15s; }
 .alternativas--escolha .alt:hover { border-color: var(--tinta-vivo); background: color-mix(in srgb, var(--tinta-vivo) 6%, var(--superficie)); }
@@ -1013,8 +1018,11 @@ html, body { max-width: 100%; overflow-x: clip; }
   box-shadow: var(--sombra);
   overflow-x: auto;
 }
-/* o SVG encolhe junto com a caixa: mesmo gráfico no celular e no desktop */
-.sim-gfx__caixa svg { display: block; width: 100%; height: auto; min-width: 320px; }
+/* O SVG encolhe junto com a caixa: mesmo gráfico no celular e no desktop.
+   O viewBox cuida da proporção, então não é preciso um piso largo — 260px é o
+   bastante para os rótulos continuarem legíveis e faz o gráfico caber inteiro
+   numa tela de 360px, sem a caixa precisar rolar de lado. */
+.sim-gfx__caixa svg { display: block; width: 100%; height: auto; min-width: 260px; }
 
 .gfx-grade { stroke: var(--borda); stroke-width: 1; }
 .gfx-media { stroke: var(--marca); stroke-width: 2; stroke-dasharray: 5 4; }

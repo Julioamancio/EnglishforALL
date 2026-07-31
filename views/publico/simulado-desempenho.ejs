@@ -110,9 +110,21 @@
     <% } %>
   <% } %>
 
-  <% barras('Aproveitamento por tema', d.porTema) %>
-  <% barras('Aproveitamento por nível CEFR', d.porNivel) %>
-  <% barras('Aproveitamento por tipo de questão', d.porTipo) %>
+  <% function recorte(titulo, lista) { %>
+    <% if (lista.length) { %>
+      <% barras(titulo, lista) %>
+    <% } else { %>
+      <section class="sim-gfx">
+        <h2><%= titulo %></h2>
+        <p class="dica">Ainda sem questões suficientes para um número que signifique alguma coisa. Aparece depois de alguns simulados.</p>
+      </section>
+    <% } %>
+  <% } %>
+
+  <% recorte('Aproveitamento por tema', d.porTema) %>
+  <% recorte('Aproveitamento por nível CEFR', d.porNivel) %>
+  <% recorte('Aproveitamento por tipo de questão', d.porTipo) %>
+  <p class="dica">Cada recorte só entra depois de pelo menos três questões respondidas nele — abaixo disso o percentual fala mais do sorteio do que de você.</p>
 
   <p><a href="/simulado">Simulado da semana</a> · <a href="/simulado/historico">Meus simulados</a></p>
 <% } %>

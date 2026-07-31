@@ -2,6 +2,9 @@ require('dotenv').config();
 
 const express = require('express');
 const session = require('express-session');
+const SqliteStore = require('better-sqlite3-session-store')(session);
+const Database = require('better-sqlite3');
+const fs = require('fs');
 const path = require('path');
 
 const app = express();
@@ -27,16 +30,31 @@ app.use(
 );
 app.use(express.static(path.join(__dirname, '../public'), { maxAge: '7d' }));
 
+// Sessão em arquivo próprio, e não em memória: reiniciar o serviço (todo deploy
+// reinicia) não desloga mais ninguém nem interrompe um simulado em andamento.
+// Banco separado do acervo para que uma limpeza de sessões nunca encoste nas
+// questões.
+const CAMINHO_SESSOES = process.env.SESSIONS_PATH
+  || path.join(__dirname, '../dados/sessoes.db');
+fs.mkdirSync(path.dirname(CAMINHO_SESSOES), { recursive: true });
+
 app.use(
   session({
+    store: new SqliteStore({
+      client: new Database(CAMINHO_SESSOES),
+      expired: { clear: true, intervalMs: 15 * 60 * 1000 },
+    }),
     secret: process.env.SESSION_SECRET || 'troque-isto-no-env',
     resave: false,
     saveUninitialized: false,
+    // renova o prazo a cada requisição: quem está usando o site não é
+    // desconectado no meio de um simulado
+    rolling: true,
     cookie: {
       httpOnly: true,
       sameSite: 'lax',
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 1000 * 60 * 60 * 12,
+      maxAge: 1000 * 60 * 60 * 24 * 30,
     },
   })
 );

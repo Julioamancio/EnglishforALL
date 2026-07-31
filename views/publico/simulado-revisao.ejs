@@ -52,8 +52,9 @@
             <li class="alt<%= certa ? ' alt--correta' : '' %><%= marcada && !certa ? ' alt--errada' : '' %>">
               <span class="bolha" aria-hidden="true"><%= a.letra %></span>
               <span><span class="sr"><%= a.letra %>)</span> <%- realce(a.texto) %>
-                <% if (certa) { %><span class="alt__nota">correta</span><% } %>
-                <% if (marcada) { %><span class="alt__nota">sua resposta</span><% } %>
+                <% if (certa && marcada) { %><span class="alt__nota">sua resposta · correta</span>
+                <% } else if (certa) { %><span class="alt__nota">correta</span>
+                <% } else if (marcada) { %><span class="alt__nota">sua resposta</span><% } %>
               </span>
             </li>
           <% }) %>

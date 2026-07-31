@@ -8,6 +8,16 @@
  * A comparação é do aluno com ele mesmo ao longo do tempo, não com os colegas.
  */
 const { db } = require('../db');
+const { ROTULOS_TIPO } = require('../rotulos');
+
+/**
+ * Piso para qualquer recorte (tema, nível, tipo).
+ *
+ * Com uma ou duas respostas, "100%" e "0%" descrevem o sorteio, não o aluno: um
+ * único item de nível C1 que caiu no simulado viraria "C1: 0%", o que sugere uma
+ * dificuldade que o dado não sustenta. Abaixo deste número o recorte não aparece.
+ */
+const MINIMO_POR_RECORTE = 3;
 
 /** Um resumo por simulado, do mais antigo para o mais novo (é como o gráfico lê). */
 function porSimulado(usuarioId) {
@@ -72,10 +82,14 @@ function porCampo(usuarioId, campo) {
     .all(usuarioId)
     .map((r) => ({
       ...r,
+      // no banco o tipo é minúsculo e sem acento; na tela vai o rótulo de leitura
+      valor: campo === 'tipo' ? ROTULOS_TIPO[r.valor] || r.valor : r.valor,
       erros: r.total - r.acertos,
       percentual: Math.round((r.acertos / r.total) * 100),
     }));
 }
+
+const comVolume = (lista) => lista.filter((r) => r.total >= MINIMO_POR_RECORTE);
 
 function resumo(usuarioId) {
   const lista = porSimulado(usuarioId);
@@ -121,9 +135,9 @@ function resumo(usuarioId) {
     // quanto o último variou em relação ao anterior
     variacao: lista.length > 1 ? ultimo.percentual - lista[lista.length - 2].percentual : null,
     sequencia: sequencia(lista),
-    porTema: porCampo(usuarioId, 'tema').slice(0, 8),
-    porNivel: porCampo(usuarioId, 'nivel_cefr'),
-    porTipo: porCampo(usuarioId, 'tipo'),
+    porTema: comVolume(porCampo(usuarioId, 'tema')).slice(0, 8),
+    porNivel: comVolume(porCampo(usuarioId, 'nivel_cefr')),
+    porTipo: comVolume(porCampo(usuarioId, 'tipo')),
   };
 }
 
