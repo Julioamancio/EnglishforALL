@@ -549,3 +549,38 @@ estão no ar. Fica para o professor decidir entre três caminhos:
    1038, o que torna o acervo coerente sem reduzir conteúdo.
 
 Enquanto não houver decisão, nada foi alterado.
+
+## 14. Aspas
+
+**Lote de tipografia, 31/07/2026.** A pendência registrada dizia "197 texto_base
+e 67 título usam aspas retas onde o padrão do acervo é curvas". O levantamento
+desmentiu a premissa — **o padrão não existe**:
+
+| campo | retas | curvas |
+|---|---|---|
+| texto_base | 202 | 266 |
+| titulo | 68 | 100 |
+| enunciado | 99 | 142 |
+| comentario | 644 | **341** |
+| meta_description | 64 | 69 |
+| imagem_alt | **115** | 6 |
+| alternativas | 54 | 87 |
+
+Em `comentario` e `imagem_alt` a aspa **reta** é que é a regra. Uniformizar o
+acervo seria reforma de cerca de 1.500 campos por ganho estético, não correção de
+defeito — **não foi feito, e a decisão é esta: não se uniformiza o estilo de
+aspas entre campos.**
+
+O defeito real é a **mistura dentro de um mesmo campo**, e esse foi corrigido:
+
+- **Abre curva e fecha reta**: `“bioclimatic architecture"` nas questões 764-773,
+  mais três enunciados (754, 755, 788) e dez comentários. Ao todo 28 questões.
+- **Citação dentro de citação** passou a usar aspa simples curva, que é a forma
+  correta: `“equipped with an ‘agile exoskeleton’ that…”` (600 e 784).
+
+Uma armadilha que custou três tentativas: **contagem de aspas não é critério de
+correção**. As questões 647-650 trazem falas de Hawking e de Milner na convenção
+inglesa de **citação em vários parágrafos**, em que cada parágrafo abre aspas e só
+o último fecha — 12 aberturas para 9 fechamentos, e está certo assim. Foram
+convertidas trecho a trecho, não por regra. Por isso o `scripts/audita-aspas.js`
+só acusa **fechamento sobrando**, nunca abertura sobrando.

@@ -50,7 +50,7 @@ ficam versionados em `scripts/`.
    intencional, **ROLLBACK** e nada é gravado.
 4. **Dry-run, ler a saída, só então gravar.**
 5. `systemctl restart banco-questoes`.
-6. **Auditorias** — rodar os seis verificadores; todos devem ficar em zero.
+6. **Auditorias** — rodar os sete verificadores; todos devem ficar em zero.
 7. **Verificar no site** via curl: páginas 200, o defeito corrigido aparecendo
    certo, sitemap válido, portas 8091/8096.
 8. **Registrar** no `PADRAO-EDITORIAL.md` o que a curadoria revelou, e commitar.
@@ -63,6 +63,7 @@ ficam versionados em `scripts/`.
 | `audita-copias.js` | cópias do mesmo texto não divergem entre si | 134 grupos, 0 |
 | `audita-sanidade.js` | integridade do item, campos obrigatórios, metadados | 21 checagens, 0 |
 | `audita-acentos.js` | nenhum campo nosso sem acentuação | 0 |
+| `audita-aspas.js` | nenhum campo mistura aspa reta com curva | 0 |
 | `audita-paragrafos.js` | todo "segundo/terceiro parágrafo" existe no texto | 22/22 |
 | `audita-imagens.js` | nenhuma descrição órfã, nenhuma imagem sem descrição | 0 e 0 |
 | `progresso-curadoria.js` | quanto falta | — |
@@ -140,9 +141,11 @@ verificado.
 
 ## O que ficou para depois
 
-1. **Lote de tipografia.** 197 `texto_base` e 67 `titulo` usam aspas retas onde
-   o padrão do acervo é curvas (98 títulos já usam curvas). É a última
-   inconsistência de tipografia conhecida e vale um lote próprio.
+1. ~~Lote de tipografia.~~ **Feito em 31/07/2026.** A premissa estava errada: não
+   há convenção única de aspas no acervo (em `comentario` e `imagem_alt` a reta é
+   que é a regra), então não se uniformizou nada entre campos. O que era defeito
+   de verdade — 28 questões misturando reta e curva **dentro do mesmo campo** —
+   foi corrigido, e `scripts/audita-aspas.js` guarda isso. Ver §14 do padrão.
 2. **Direito autoral de letra e poema** (§13 do padrão). 26 questões publicadas
    reproduzem letra ou poema integral e 4 recebem tratamento diferente, sem
    critério que as separe. Decisão jurídica e comercial, não editorial — está
