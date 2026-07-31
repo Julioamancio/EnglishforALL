@@ -1090,3 +1090,30 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 /* Poema e letra de canção: a quebra de verso é do autor e precisa aparecer.
    Vale só aqui — em prosa a quebra de linha costuma ser resíduo do PDF. */
 .texto-base--verso p { white-space: pre-line; }
+
+/* olho de mostrar/ocultar senha — usa as cores do tema, então acompanha o
+   claro/escuro sem regra extra */
+.campo-senha { position: relative; display: flex; }
+.campo-senha > input { flex: 1; padding-right: 2.9rem; }
+.mostrar-senha {
+  position: absolute;
+  right: .3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--suave);
+  cursor: pointer;
+  /* só o fundo transiciona: animar `color` trava o ícone na troca de tema */
+  transition: background .15s;
+}
+.mostrar-senha svg { width: 1.15rem; height: 1.15rem; }
+.mostrar-senha:hover { color: var(--tinta); background: var(--fundo-2); }
+.mostrar-senha[aria-pressed="true"] { color: var(--tinta); }
+.mostrar-senha:focus-visible { outline: 2px solid var(--tinta-vivo); outline-offset: 1px; }
