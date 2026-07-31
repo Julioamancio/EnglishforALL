@@ -21,7 +21,10 @@
     <% } %>
 
     <% if (questao.texto_base && questao.texto_base.trim()) { %>
-      <blockquote class="texto-base" cite="<%= questao.fonte_url %>">
+      <%# poema e letra guardam a quebra de verso; prosa não, porque nela a quebra
+           costuma ser resíduo da extração do PDF %>
+      <% const emVerso = /poema|cancao|canção|musica|música/i.test(questao.genero_textual || '') %>
+      <blockquote class="texto-base<%= emVerso ? ' texto-base--verso' : '' %>" cite="<%= questao.fonte_url %>">
         <% questao.texto_base.trim().split(/\n\s*\n/).forEach(function(p){ %><p><%- realce(p) %></p><% }) %>
       </blockquote>
     <% } %>

@@ -1047,10 +1047,16 @@ html, body { max-width: 100%; overflow-x: clip; }
 .gfx-hbarras__n small { font-weight: 400; }
 
 /* tabela do histórico: rola de lado no celular em vez de espremer */
+/* Escopado de propósito: .tabela já existe para o painel, lá em cima. Repetir
+   o seletor solto aqui sobrescreveria aquele estilo — foi o que aconteceu uma vez,
+   e o nowrap alargou a tabela de questões até jogar a coluna STATUS para fora do card. */
 .tabela-rolagem { overflow-x: auto; }
-.tabela { width: 100%; border-collapse: collapse; font-size: .92rem; }
-.tabela th, .tabela td { padding: .6rem .7rem; text-align: left; border-bottom: 1px solid var(--borda); white-space: nowrap; }
-.tabela thead th { font: 600 .78rem/1 var(--ui); text-transform: uppercase; letter-spacing: .04em; color: var(--suave); }
+.tabela-rolagem .tabela { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.tabela-rolagem .tabela th,
+.tabela-rolagem .tabela td { padding: .6rem .7rem; text-align: left; border-bottom: 1px solid var(--borda); white-space: nowrap; }
+.tabela-rolagem .tabela thead th { font: 600 .78rem/1 var(--ui); text-transform: uppercase; letter-spacing: .04em; color: var(--suave); }
+/* a coluna do aluno é a única que precisa quebrar: nome e e-mail em duas linhas */
+.tabela-rolagem .tabela td:first-child { white-space: normal; }
 
 @media (max-width: 560px) {
   .gfx-hbarras li { grid-template-columns: 1fr auto; }
@@ -1062,7 +1068,7 @@ html, body { max-width: 100%; overflow-x: clip; }
 .suave { color: var(--suave); }
 .acertou { color: var(--ok); font-weight: 600; }
 .errou { color: var(--correcao); font-weight: 600; }
-.tabela small.suave { display: block; font-weight: 400; }
+.tabela-rolagem .tabela small.suave { display: block; font-weight: 400; }
 details.painel > summary { cursor: pointer; font-weight: 500; line-height: 1.7; }
 details.painel > summary::marker { color: var(--suave); }
 details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 1px solid var(--borda); }
@@ -1080,3 +1086,7 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 }
 .rodape__entrar-painel:hover { color: var(--tinta); border-color: var(--borda-forte); }
 .rodape__admin { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+
+/* Poema e letra de canção: a quebra de verso é do autor e precisa aparecer.
+   Vale só aqui — em prosa a quebra de linha costuma ser resíduo do PDF. */
+.texto-base--verso p { white-space: pre-line; }
