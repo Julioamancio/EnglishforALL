@@ -28,9 +28,18 @@ function semanaAtual(agora = new Date()) {
 }
 
 /**
- * O acervo elegível: ENEM e vestibulares de medicina, sem itens de gramática e
- * sem as coleções autorais (`reading` e `use-of-english`), que são justamente o
- * material de Use of English que o simulado oficial não usa.
+ * O acervo elegível: ENEM, vestibulares de medicina e Fuvest, sem itens de
+ * gramática e sem as coleções autorais (`reading` e `use-of-english`), que são
+ * justamente o material de Use of English que o simulado oficial não usa.
+ *
+ * A Fuvest entrou porque só ENEM e medicina davam 110 questões — 22 semanas.
+ * Quem começasse em fevereiro veria questão repetida antes das provas de
+ * novembro. Com a Fuvest são 320, o bastante para uns cinco anos de simulado
+ * semanal sem repetir, e ela é o vestibular mais procurado por quem estuda para
+ * medicina em São Paulo.
+ *
+ * O ITA continua de fora de propósito: o inglês dele é bem mais difícil que o do
+ * ENEM e desequilibraria o sorteio de quem está começando.
  */
 function elegiveis() {
   const marcas = MEDICINA.map(() => '?').join(',');
@@ -40,7 +49,9 @@ function elegiveis() {
         WHERE publicada = 1
           AND colecao = ''
           AND tipo <> 'gramatica'
-          AND (instituicao LIKE 'ENEM%' OR instituicao IN (${marcas}))`
+          AND (instituicao LIKE 'ENEM%'
+               OR instituicao LIKE 'Fuvest%'
+               OR instituicao IN (${marcas}))`
     )
     .all(...MEDICINA)
     .map((r) => r.id);
@@ -156,6 +167,21 @@ function atual(usuarioId) {
   }
 }
 
+/**
+ * Marca o instante em que o aluno abriu o simulado, se ainda não estiver marcado.
+ *
+ * Antes isso acontecia na primeira resposta, e o relógio só aparecia a partir da
+ * segunda questão — além de não contar o tempo gasto lendo a primeira, que é
+ * parte da prova. Roda uma vez por simulado: o COALESCE garante que reabrir a
+ * página não reinicie a contagem.
+ */
+function marcarInicio(simuladoId) {
+  db.prepare(
+    "UPDATE simulados SET iniciado_em = COALESCE(iniciado_em, datetime('now')) WHERE id = ?"
+  ).run(simuladoId);
+  return db.prepare('SELECT * FROM simulados WHERE id = ?').get(simuladoId);
+}
+
 /** As questões de um simulado. Sem gabarito nem comentário enquanto não liberar. */
 function questoesDo(simuladoId, { comRespostas = false } = {}) {
   const campos = comRespostas
@@ -261,6 +287,54 @@ function historico(usuarioId) {
     }));
 }
 
+/**
+ * Em que pé o aluno está — para o cartão da home.
+ *
+ * Não gera simulado nenhum: só olha o que existe. Gerar aqui criaria um simulado
+ * toda vez que alguém passasse pela home, mesmo sem intenção de fazer.
+ */
+function situacao(usuarioId) {
+  const aberto = emAberto(usuarioId);
+  if (aberto) {
+    const total = db.prepare('SELECT COUNT(*) c FROM simulado_questoes WHERE simulado_id = ?').get(aberto.id).c;
+    const feitas = db.prepare('SELECT COUNT(*) c FROM simulado_questoes WHERE simulado_id = ? AND resposta IS NOT NULL').get(aberto.id).c;
+    return { estado: 'em_andamento', simulado: aberto, feitas, total };
+  }
+
+  const desta = daSemana(usuarioId);
+  if (!desta) return { estado: 'disponivel', semana: semanaAtual() };
+
+  const g = gabaritoLiberado(desta);
+  return {
+    estado: g.liberado ? 'correcao_pronta' : 'aguardando_correcao',
+    simulado: desta,
+    gabarito: g,
+  };
+}
+
+/**
+ * As questões que o aluno errou, para refazer no treino.
+ *
+ * Só entram as de simulado cujo gabarito já abriu: antes das 24 horas, dizer
+ * quais ele errou seria entregar meia correção adiantada.
+ */
+function erros(usuarioId) {
+  return db
+    .prepare(
+      `SELECT q.id, q.slug, q.titulo, q.instituicao, q.ano, q.tema, q.nivel_cefr, q.tipo,
+              sq.resposta, q.gabarito, s.concluido_em, s.semana
+         FROM simulado_questoes sq
+         JOIN simulados s ON s.id = sq.simulado_id
+         JOIN questoes q  ON q.id = sq.questao_id
+        WHERE s.usuario_id = ?
+          AND s.concluido_em IS NOT NULL
+          AND sq.correta = 0
+          AND datetime('now') >= datetime(s.concluido_em, '+${HORAS_ATE_O_GABARITO} hours')
+        ORDER BY s.concluido_em DESC, sq.ordem`
+    )
+    .all(usuarioId);
+}
+
 module.exports = {
   POR_SIMULADO,
   HORAS_ATE_O_GABARITO,
@@ -273,4 +347,7 @@ module.exports = {
   doUsuario,
   historico,
   emAberto,
+  situacao,
+  erros,
+  marcarInicio,
 };

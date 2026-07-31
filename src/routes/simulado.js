@@ -55,12 +55,15 @@ router.get('/', (req, res, next) => {
     });
   }
 
+  // o relógio passa a correr quando o aluno abre, não na primeira resposta
+  const emCurso = sim.marcarInicio(simulado.id);
+
   const questoes = sim.questoesDo(simulado.id);
   const respondidas = questoes.filter((q) => q.resposta).length;
   res.render('publico/simulado', {
     title: 'Simulado oficial da semana',
-    description: 'Cinco questões de ENEM e vestibulares de medicina, sem consulta.',
-    simulado,
+    description: 'Cinco questões de ENEM, Fuvest e vestibulares de medicina, sem consulta.',
+    simulado: emCurso,
     questoes,
     respondidas,
     atualIndice: questoes.findIndex((q) => !q.resposta),
@@ -117,6 +120,32 @@ router.get('/historico/:id', (req, res, next) => {
   });
 });
 
+// ----------------------------------------------------------- refazer os erros
+
+/**
+ * As questões que o aluno errou, para treinar de novo — é o que mais consolida.
+ *
+ * Só entram as de simulados cujo gabarito já abriu: antes das 24 horas, dizer
+ * quais ele errou seria entregar meia correção adiantada.
+ */
+router.get('/erros', (req, res) => {
+  const lista = sim.erros(req.session.usuario.id);
+  // agrupa por tema, que é onde o padrão de erro costuma aparecer
+  const porTema = {};
+  lista.forEach((q) => { (porTema[q.tema] = porTema[q.tema] || []).push(q); });
+  const temas = Object.entries(porTema)
+    .map(([tema, qs]) => ({ tema, qs }))
+    .sort((a, b) => b.qs.length - a.qs.length);
+
+  res.render('publico/simulado-erros', {
+    title: 'Questões que errei',
+    description: 'Refaça as questões que você errou nos simulados oficiais.',
+    lista,
+    temas,
+    ...base(req),
+  });
+});
+
 // ------------------------------------------------------------------ desempenho
 
 router.get('/desempenho', (req, res) => {
@@ -124,6 +153,7 @@ router.get('/desempenho', (req, res) => {
     title: 'Meu desempenho',
     description: 'Sua evolução nos simulados oficiais.',
     d: desempenho.resumo(req.session.usuario.id),
+    erros: sim.erros(req.session.usuario.id).length,
     ...base(req),
   });
 });

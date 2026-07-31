@@ -8,7 +8,18 @@
 <div class="env env--estreito">
 
   <p class="sim-etiqueta">Simulado oficial · semana <%= simulado.semana %></p>
-  <h1>Questão <%= i + 1 %> de <%= questoes.length %></h1>
+  <div class="sim-cabeca">
+    <h1>Questão <%= i + 1 %> de <%= questoes.length %></h1>
+    <%# Cronômetro: conta desde a primeira resposta, com o horário vindo do
+        servidor. Só informa o ritmo — não há tempo limite, e o simulado fica
+        guardado se o aluno sair no meio. %>
+    <% if (simulado.iniciado_em) { %>
+      <p class="sim-relogio" data-desde="<%= simulado.iniciado_em.replace(' ', 'T') %>Z" title="Tempo desde a primeira resposta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span>—</span>
+      </p>
+    <% } %>
+  </div>
 
   <div class="sim-barra" role="img" aria-label="<%= respondidas %> de <%= questoes.length %> questões respondidas">
     <% questoes.forEach(function (item, n) { %>

@@ -126,6 +126,16 @@
   <% recorte('Aproveitamento por tipo de questão', d.porTipo) %>
   <p class="dica">Cada recorte só entra depois de pelo menos três questões respondidas nele — abaixo disso o percentual fala mais do sorteio do que de você.</p>
 
+  <% if (typeof erros !== 'undefined' && erros) { %>
+    <section class="chamada chamada--em_andamento">
+      <div>
+        <h2>Refaça o que você errou</h2>
+        <p>Você tem <strong><%= erros %></strong> <%= erros === 1 ? 'questão errada' : 'questões erradas' %> com a correção já liberada. Rever o que não entrou é o que mais consolida.</p>
+      </div>
+      <a class="btn" href="/simulado/erros">Ver a lista</a>
+    </section>
+  <% } %>
+
   <p><a href="/simulado">Simulado da semana</a> · <a href="/simulado/historico">Meus simulados</a></p>
 <% } %>
 </div>

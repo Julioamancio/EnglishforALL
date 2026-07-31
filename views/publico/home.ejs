@@ -18,6 +18,43 @@
 </section>
 
 <div class="env">
+
+  <%# Cartão do aluno logado. É o que traz de volta quem terminou um simulado e
+      precisa lembrar de conferir a correção 24 h depois. %>
+  <% if (typeof situacao !== 'undefined' && situacao) { %>
+    <% const dm = (s) => s ? s.slice(8,10) + '/' + s.slice(5,7) : ''; const hm = (s) => s ? s.slice(11,16) : ''; %>
+    <section class="chamada chamada--<%= situacao.estado %>">
+      <% if (situacao.estado === 'em_andamento') { %>
+        <div>
+          <h2>Você tem um simulado em andamento</h2>
+          <p><%= situacao.feitas %> de <%= situacao.total %> questões respondidas. Ele fica guardado até você terminar.</p>
+        </div>
+        <a class="btn" href="/simulado">Continuar</a>
+
+      <% } else if (situacao.estado === 'disponivel') { %>
+        <div>
+          <h2>Seu simulado da semana está disponível</h2>
+          <p>Cinco questões de ENEM, Fuvest e vestibulares de medicina. Sem consulta, sem correção na hora.</p>
+        </div>
+        <a class="btn" href="/simulado">Começar agora</a>
+
+      <% } else if (situacao.estado === 'correcao_pronta') { %>
+        <div>
+          <h2>Sua correção comentada já abriu</h2>
+          <p>O simulado de <%= dm(situacao.simulado.concluido_em) %> teve <%= situacao.simulado.acertos %> de <%= situacao.simulado.total %> acertos. Agora dá para ver o gabarito e a explicação de cada questão.</p>
+        </div>
+        <a class="btn" href="/simulado/historico/<%= situacao.simulado.id %>">Ver a correção</a>
+
+      <% } else { %>
+        <div>
+          <h2>Simulado concluído — <%= situacao.simulado.acertos %>/<%= situacao.simulado.total %></h2>
+          <p>A correção comentada abre em <strong><%= dm(situacao.gabarito.quando) %> às <%= hm(situacao.gabarito.quando) %></strong>. O próximo simulado sai na semana que vem.</p>
+        </div>
+        <a class="btn btn--sec" href="/simulado/desempenho">Ver meu desempenho</a>
+      <% } %>
+    </section>
+  <% } %>
+
   <% if (facetas.tipos.length || facetas.niveis.length || facetas.generos.length) { %>
   <section class="explorar" aria-label="Explorar o banco">
     <div class="explorar__cabeca">

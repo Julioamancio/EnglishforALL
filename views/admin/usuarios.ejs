@@ -6,7 +6,7 @@
 <div class="env">
   <h1>Alunos e desempenho</h1>
   <p>
-    <%= alunos.length %> conta<%= alunos.length === 1 ? '' : 's' %> cadastrada<%= alunos.length === 1 ? '' : 's' %>,
+    <%= alunos.length %> <%= alunos.length === 1 ? 'conta cadastrada' : 'contas cadastradas' %>,
     <%= comSimulado.length %> com pelo menos um simulado concluído.
     Só contam os simulados oficiais — o treino livre no banco não entra.
   </p>

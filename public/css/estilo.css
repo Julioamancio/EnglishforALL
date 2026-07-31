@@ -1117,3 +1117,66 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 .mostrar-senha:hover { color: var(--tinta); background: var(--fundo-2); }
 .mostrar-senha[aria-pressed="true"] { color: var(--tinta); }
 .mostrar-senha:focus-visible { outline: 2px solid var(--tinta-vivo); outline-offset: 1px; }
+
+/* ------------------------------------------------ cartão do aluno na home
+   Aparece só para quem entrou. Muda de cor conforme o estado: verde quando a
+   correção abriu, neutro no resto — sem gritar com quem só quer navegar. */
+.chamada {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--tinta);
+  border-radius: var(--r);
+  padding: 1.1rem 1.3rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--sombra);
+}
+.chamada h2 { margin: 0 0 .2rem; font-size: 1.12rem; }
+.chamada p { margin: 0; color: var(--suave); font-size: .92rem; }
+.chamada .btn { flex-shrink: 0; }
+.chamada--correcao_pronta { border-left-color: var(--ok); background: color-mix(in srgb, var(--ok) 5%, var(--superficie)); }
+.chamada--em_andamento { border-left-color: var(--marca); }
+.chamada--aguardando_correcao { border-left-color: var(--borda-forte); }
+
+/* relógio do simulado */
+.sim-cabeca { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.sim-cabeca h1 { margin-bottom: .4rem; }
+.sim-relogio {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin: 0;
+  font: 600 .95rem/1 var(--mono, var(--ui));
+  color: var(--suave);
+  font-variant-numeric: tabular-nums;
+}
+.sim-relogio svg { width: 1rem; height: 1rem; }
+
+/* lista de erros para refazer */
+.erros-tema { margin: 1.6rem 0; }
+.erros-tema h2 { font-size: 1.02rem; display: flex; align-items: center; gap: .5rem; margin-bottom: .6rem; }
+.erros-tema__n {
+  font: 700 .72rem/1 var(--ui);
+  background: var(--correcao-fraca);
+  color: var(--correcao);
+  border-radius: 100px;
+  padding: .2rem .5rem;
+}
+.erros-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.erros-item {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-sm);
+  padding: .7rem .9rem;
+}
+.erros-item > a { font-weight: 600; }
+.erros-item__meta { display: block; margin-top: .2rem; font-size: .82rem; color: var(--suave); }
+
+@media (max-width: 560px) {
+  .chamada { flex-direction: column; align-items: stretch; }
+  .chamada .btn { width: 100%; text-align: center; }
+}

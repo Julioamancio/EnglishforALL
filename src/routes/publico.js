@@ -37,6 +37,10 @@ router.get('/', (req, res) => {
     total: db.contar({ colecao: '' }),
     totalReading: db.contar({ colecao: 'reading' }),
     ROTULOS_TIPO,
+    // Só para quem está logado: o aluno precisa saber que a correção abriu ou
+    // que há simulado esperando, senão ele não volta. `situacao` apenas lê o
+    // estado — não gera simulado por passar na home.
+    situacao: req.session.usuario ? require('../lib/simulado').situacao(req.session.usuario.id) : null,
   });
 });
 

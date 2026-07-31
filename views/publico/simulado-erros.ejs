@@ -1,0 +1,38 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Questões que errei</h1>
+  <p>Refazer o que não entrou é o que mais consolida. Só aparecem aqui as questões
+    de simulados cuja correção já abriu.</p>
+
+<% if (!lista.length) { %>
+  <p class="aviso aviso--ok">Nenhum erro para refazer — ou você acertou tudo, ou a correção dos seus simulados ainda não abriu.</p>
+  <p><a class="btn" href="/simulado">Simulado da semana</a> <a class="btn btn--sec" href="/simulado/desempenho">Meu desempenho</a></p>
+<% } else { %>
+
+  <p class="aviso"><strong><%= lista.length %></strong> <%= lista.length === 1 ? 'questão' : 'questões' %> para refazer,
+    em <%= temas.length %> <%= temas.length === 1 ? 'tema' : 'temas' %>.
+    <% if (temas[0].qs.length > 1) { %>O tema em que você mais errou é <strong><%= temas[0].tema %></strong>.<% } %></p>
+
+  <% temas.forEach(function (t) { %>
+    <section class="erros-tema">
+      <h2><%= t.tema %> <span class="erros-tema__n"><%= t.qs.length %></span></h2>
+      <ul class="erros-lista">
+        <% t.qs.forEach(function (q) { %>
+          <li class="erros-item">
+            <a href="/questoes/<%= q.slug %>"><%= q.titulo %></a>
+            <span class="erros-item__meta">
+              <%= q.instituicao %><%= q.ano ? ' ' + q.ano : '' %> ·
+              <%= q.nivel_cefr %> ·
+              você marcou <strong><%= q.resposta %></strong>, a correta era <strong><%= q.gabarito %></strong>
+            </span>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  <% }) %>
+
+  <p class="dica">Abrir a questão leva ao banco, onde o gabarito comentado está disponível.</p>
+  <p><a href="/simulado/desempenho">Meu desempenho</a> · <a href="/simulado/historico">Meus simulados</a></p>
+<% } %>
+</div>
+<%- include('../partials/rodape') %>

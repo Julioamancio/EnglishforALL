@@ -241,4 +241,27 @@
     });
   });
 
+
+  /* ------------------------------------------------------- relógio do simulado
+     Conta desde a primeira resposta. O instante de início vem do servidor, no
+     data-desde, para que mexer no relógio do aparelho não mude o que aparece.
+     É só informativo: não há tempo limite. */
+  var relogio = document.querySelector('.sim-relogio');
+  if (relogio) {
+    var desde = Date.parse(relogio.getAttribute('data-desde'));
+    var saida = relogio.querySelector('span');
+    if (!isNaN(desde) && saida) {
+      var pinta = function () {
+        var seg = Math.max(0, Math.floor((Date.now() - desde) / 1000));
+        var h = Math.floor(seg / 3600);
+        var m = Math.floor((seg % 3600) / 60);
+        var s = seg % 60;
+        var dois = function (n) { return (n < 10 ? '0' : '') + n; };
+        saida.textContent = (h ? h + ':' + dois(m) : m) + ':' + dois(s);
+      };
+      pinta();
+      setInterval(pinta, 1000);
+    }
+  }
+
 })();
