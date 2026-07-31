@@ -1,0 +1,45 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Meus simulados</h1>
+  <p>Todos os simulados oficiais que você concluiu. Só você enxerga este histórico.</p>
+
+  <% if (!lista.length) { %>
+    <p class="aviso">Você ainda não concluiu nenhum simulado oficial.</p>
+    <p><a class="btn" href="/simulado">Fazer o simulado da semana</a></p>
+  <% } else { %>
+    <div class="tabela-rolagem">
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Data</th><th>Semana</th><th>Acertos</th><th>Erros</th>
+            <th>Aproveitamento</th><th>Tempo</th><th>Correção</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% lista.forEach(function (s) {
+               const pct = Math.round((s.acertos / s.total) * 100);
+               const d = s.concluido_em; %>
+            <tr>
+              <td><%= d.slice(8, 10) %>/<%= d.slice(5, 7) %>/<%= d.slice(0, 4) %></td>
+              <td><%= s.semana %></td>
+              <td><%= s.acertos %></td>
+              <td><%= s.total - s.acertos %></td>
+              <td><strong><%= pct %>%</strong></td>
+              <td><%= s.minutos == null ? '—' : s.minutos + ' min' %></td>
+              <td>
+                <% if (s.gabarito.liberado) { %>
+                  <a href="/simulado/historico/<%= s.id %>">Ver correção</a>
+                <% } else { %>
+                  <span class="etiqueta etiqueta--espera">abre <%= s.gabarito.quando.slice(8, 10) %>/<%= s.gabarito.quando.slice(5, 7) %> às <%= s.gabarito.quando.slice(11, 16) %></span>
+                <% } %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  <% } %>
+
+  <p><a href="/simulado">Simulado da semana</a> · <a href="/simulado/desempenho">Meu desempenho</a></p>
+</div>
+<%- include('../partials/rodape') %>

@@ -15,6 +15,10 @@
         <input type="email" id="email" name="email" required autocomplete="email" value="<%= valores.email %>" placeholder="professor@escola.com.br">
       </div>
       <div class="campo">
+        <label for="instituicao">Onde você estuda ou trabalha</label>
+        <input type="text" id="instituicao" name="instituicao" required value="<%= valores.instituicao || '' %>" placeholder="Escola, faculdade ou cursinho">
+      </div>
+      <div class="campo">
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha" required autocomplete="new-password" minlength="8">
         <p class="dica">Pelo menos 8 caracteres.</p>

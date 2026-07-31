@@ -76,3 +76,40 @@ CREATE INDEX IF NOT EXISTS idx_q_tipo      ON questoes(tipo);
 CREATE INDEX IF NOT EXISTS idx_q_nivel     ON questoes(nivel_cefr);
 CREATE INDEX IF NOT EXISTS idx_q_tema      ON questoes(tema);
 CREATE INDEX IF NOT EXISTS idx_alt_questao ON alternativas(questao_id);
+-- ---------------------------------------------------------------------------
+-- Simulado oficial semanal.
+--
+-- Convive com o modo de treinamento, que continua sendo a navegação livre pelas
+-- questões: nada aqui altera `questoes`, `alternativas` ou o que já existia.
+-- Só os simulados oficiais entram no histórico e no desempenho.
+-- ---------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS simulados (
+  id            INTEGER PRIMARY KEY AUTOINCREMENT,
+  usuario_id    INTEGER NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+  -- semana ISO ("2026-W31"): é o que impede dois simulados na mesma semana
+  semana        TEXT    NOT NULL,
+  criado_em     TEXT    NOT NULL DEFAULT (datetime('now')),
+  iniciado_em   TEXT,
+  concluido_em  TEXT,
+  acertos       INTEGER,
+  total         INTEGER NOT NULL DEFAULT 5,
+  UNIQUE (usuario_id, semana)
+);
+
+CREATE TABLE IF NOT EXISTS simulado_questoes (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  simulado_id  INTEGER NOT NULL REFERENCES simulados(id) ON DELETE CASCADE,
+  questao_id   INTEGER NOT NULL REFERENCES questoes(id) ON DELETE CASCADE,
+  ordem        INTEGER NOT NULL,
+  resposta     TEXT,               -- letra marcada; NULL enquanto não respondida
+  correta      INTEGER,            -- 0/1, gravado no momento da resposta
+  respondida_em TEXT,
+  UNIQUE (simulado_id, questao_id),
+  UNIQUE (simulado_id, ordem)
+);
+
+CREATE INDEX IF NOT EXISTS idx_sim_usuario  ON simulados(usuario_id);
+CREATE INDEX IF NOT EXISTS idx_sim_semana   ON simulados(usuario_id, semana);
+CREATE INDEX IF NOT EXISTS idx_simq_sim     ON simulado_questoes(simulado_id);
+CREATE INDEX IF NOT EXISTS idx_simq_questao ON simulado_questoes(questao_id);

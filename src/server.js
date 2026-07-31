@@ -61,6 +61,9 @@ app.use('/', require('./routes/publico'));
 app.use('/', require('./routes/exercicios'));
 app.use('/admin', require('./routes/admin'));
 app.use('/prova', require('./routes/prova'));
+// Área pessoal do aluno: exige login dentro do próprio router. O conteúdo
+// público do site continua aberto, como sempre foi.
+app.use('/simulado', require('./routes/simulado'));
 
 app.use((req, res) => {
   res.status(404).render('publico/404', {

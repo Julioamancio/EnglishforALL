@@ -909,3 +909,143 @@ html, body { max-width: 100%; overflow-x: clip; }
   }
   .tema-btn::after { content: 'Alternar tema'; font: inherit; font-size: 1rem; font-weight: 600; }
 }
+
+/* ===========================================================================
+   Simulado oficial semanal — telas, placar e gráficos.
+   Usa as variáveis de cor já definidas no topo do arquivo, então acompanha
+   automaticamente o tema claro/escuro.
+   ========================================================================= */
+
+.sim-etiqueta {
+  font: 600 .78rem/1 var(--ui);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--suave);
+  margin: 0 0 .35rem;
+}
+
+/* passos do simulado (5 tracinhos) */
+.sim-barra { display: flex; gap: .4rem; margin: 0 0 1.1rem; }
+.sim-barra__passo {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--fundo-2);
+  border: 1px solid var(--borda);
+}
+.sim-barra__passo.feito { background: var(--ok); border-color: var(--ok); }
+.sim-barra__passo.agora { background: var(--tinta-vivo); border-color: var(--tinta-vivo); }
+
+/* alternativa clicável do simulado: o rádio some e a linha inteira vira alvo */
+.sim-alt { display: flex; align-items: flex-start; gap: .7rem; width: 100%; cursor: pointer; }
+.sim-alt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.alternativas--escolha .alt { transition: border-color .15s, background .15s; }
+.alternativas--escolha .alt:hover { border-color: var(--tinta-vivo); background: color-mix(in srgb, var(--tinta-vivo) 6%, var(--superficie)); }
+.alternativas--escolha .alt:has(input:checked) { border-color: var(--tinta); background: color-mix(in srgb, var(--tinta) 10%, var(--superficie)); }
+.alternativas--escolha .alt:has(input:checked) .bolha { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+.alternativas--escolha .alt:has(input:focus-visible) { outline: 2px solid var(--tinta-vivo); outline-offset: 2px; }
+.sim-form > .btn { margin-top: 1rem; }
+
+/* placar */
+.sim-placar { text-align: center; }
+.sim-placar__nota { font: 800 3.2rem/1 var(--display); color: var(--tinta); margin: 0; }
+.sim-placar__nota span { font-size: 1.6rem; color: var(--suave); }
+.sim-placar__pct { margin: .3rem 0 0; color: var(--suave); }
+
+/* veredito por questão na revisão */
+.sim-veredito {
+  font-weight: 600;
+  padding: .55rem .8rem;
+  border-radius: var(--r-sm);
+  margin: 0 0 .9rem;
+}
+.sim-veredito--ok { background: var(--ok-fraca); color: var(--ok); }
+.sim-veredito--erro { background: var(--correcao-fraca); color: var(--correcao); }
+.alt__nota {
+  display: inline-block;
+  margin-left: .5rem;
+  font: 600 .72rem/1 var(--ui);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--suave);
+}
+.questao--revisao { padding-bottom: 1.5rem; border-bottom: 1px solid var(--borda); margin-bottom: 1.5rem; }
+.sim-lista-simples { color: var(--suave); }
+
+.etiqueta--espera {
+  display: inline-block;
+  font-size: .82rem;
+  color: var(--suave);
+  background: var(--fundo-2);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  padding: .18rem .6rem;
+}
+
+/* cartões de números */
+.sim-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: .8rem;
+  margin: 1.2rem 0;
+}
+.sim-cartao {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  padding: .9rem 1rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.sim-cartao__n { font: 800 1.9rem/1 var(--display); color: var(--tinta); }
+.sim-cartao__r { font-size: .82rem; color: var(--suave); }
+
+/* ---------------------------------------------------------------- gráficos */
+.sim-gfx { margin: 2rem 0; }
+.sim-gfx h2 { font-size: 1.1rem; margin-bottom: .6rem; }
+.sim-gfx__caixa {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  padding: .8rem;
+  box-shadow: var(--sombra);
+  overflow-x: auto;
+}
+/* o SVG encolhe junto com a caixa: mesmo gráfico no celular e no desktop */
+.sim-gfx__caixa svg { display: block; width: 100%; height: auto; min-width: 320px; }
+
+.gfx-grade { stroke: var(--borda); stroke-width: 1; }
+.gfx-media { stroke: var(--marca); stroke-width: 2; stroke-dasharray: 5 4; }
+.gfx-rot { font: 500 11px var(--ui); fill: var(--suave); }
+.gfx-rot--media { fill: #9a7d16; }
+.gfx-linha { fill: none; stroke: var(--tinta-vivo); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.gfx-ponto { fill: var(--superficie); stroke: var(--tinta-vivo); stroke-width: 2.5; }
+.gfx-barra--acerto { fill: var(--ok); }
+.gfx-barra--erro { fill: var(--correcao); opacity: .85; }
+.gfx-legenda { font-size: .84rem; color: var(--suave); margin-top: .5rem; }
+.gfx-chave { display: inline-block; width: .8rem; height: .8rem; border-radius: 3px; vertical-align: -1px; margin: 0 .25rem 0 .6rem; }
+.gfx-chave--acerto { background: var(--ok); }
+.gfx-chave--erro { background: var(--correcao); }
+
+/* barras horizontais por tema/nível/tipo */
+.gfx-hbarras { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .55rem; }
+.gfx-hbarras li { display: grid; grid-template-columns: minmax(90px, 30%) 1fr auto; align-items: center; gap: .7rem; }
+.gfx-hbarras__rot { font-size: .88rem; color: var(--texto); overflow-wrap: anywhere; }
+.gfx-hbarras__trilho { background: var(--fundo-2); border-radius: 999px; height: 12px; overflow: hidden; }
+.gfx-hbarras__preenche { display: block; height: 100%; background: var(--tinta-vivo); border-radius: 999px; }
+.gfx-hbarras__n { font: 600 .85rem/1 var(--ui); color: var(--suave); white-space: nowrap; }
+.gfx-hbarras__n small { font-weight: 400; }
+
+/* tabela do histórico: rola de lado no celular em vez de espremer */
+.tabela-rolagem { overflow-x: auto; }
+.tabela { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.tabela th, .tabela td { padding: .6rem .7rem; text-align: left; border-bottom: 1px solid var(--borda); white-space: nowrap; }
+.tabela thead th { font: 600 .78rem/1 var(--ui); text-transform: uppercase; letter-spacing: .04em; color: var(--suave); }
+
+@media (max-width: 560px) {
+  .gfx-hbarras li { grid-template-columns: 1fr auto; }
+  .gfx-hbarras__trilho { grid-column: 1 / -1; order: 3; }
+  .sim-placar__nota { font-size: 2.6rem; }
+}

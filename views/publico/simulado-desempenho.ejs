@@ -1,0 +1,120 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Meu desempenho</h1>
+  <p>Só os <strong>simulados oficiais</strong> entram nesta conta. O que você responde livremente na
+    navegação pelo banco é treino e não altera nada aqui.</p>
+
+<% if (d.vazio) { %>
+  <p class="aviso">Você ainda não concluiu nenhum simulado oficial. Assim que terminar o primeiro, os números e os gráficos aparecem aqui.</p>
+  <p><a class="btn" href="/simulado">Fazer o simulado da semana</a></p>
+<% } else { %>
+
+  <div class="sim-cartoes">
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.media %>%</span><span class="sim-cartao__r">média geral</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.concluidos %></span><span class="sim-cartao__r">simulados concluídos</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.acertos %></span><span class="sim-cartao__r">acertos em <%= d.questoes %> questões</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.melhor.percentual %>%</span><span class="sim-cartao__r">melhor resultado</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.pior.percentual %>%</span><span class="sim-cartao__r">pior resultado</span></div>
+    <div class="sim-cartao">
+      <span class="sim-cartao__n">
+        <% if (d.variacao === null) { %>—<% } else { %><%= d.variacao > 0 ? '+' : '' %><%= d.variacao %>%<% } %>
+      </span>
+      <span class="sim-cartao__r">variação no último</span>
+    </div>
+  </div>
+
+  <% if (d.sequencia.tamanho > 1) { %>
+    <p class="aviso <%= d.sequencia.tipo === 'melhora' ? 'aviso--ok' : '' %>">
+      Você está em uma sequência de <strong><%= d.sequencia.tamanho %> simulados</strong>
+      <%= d.sequencia.tipo === 'melhora' ? 'em melhora' : 'em queda' %>.
+    </p>
+  <% } %>
+
+  <%
+    // ---- gráfico de linha: evolução do aproveitamento ----
+    const L = d.simulados;
+    const W = 720, H = 260, ml = 42, mr = 16, mt = 20, mb = 34;
+    const iw = W - ml - mr, ih = H - mt - mb;
+    const px = (i) => ml + (L.length === 1 ? iw / 2 : (i * iw) / (L.length - 1));
+    const py = (v) => mt + ih - (v / 100) * ih;
+    const pontos = L.map((s, i) => `${px(i).toFixed(1)},${py(s.percentual).toFixed(1)}`).join(' ');
+  %>
+
+  <section class="sim-gfx">
+    <h2>Evolução do aproveitamento</h2>
+    <div class="sim-gfx__caixa">
+      <svg viewBox="0 0 <%= W %> <%= H %>" role="img" preserveAspectRatio="xMidYMid meet"
+           aria-label="Aproveitamento de cada simulado, do primeiro ao mais recente. Média geral de <%= d.media %>%.">
+        <% [0, 25, 50, 75, 100].forEach(function (v) { %>
+          <line x1="<%= ml %>" y1="<%= py(v) %>" x2="<%= W - mr %>" y2="<%= py(v) %>" class="gfx-grade"/>
+          <text x="<%= ml - 8 %>" y="<%= py(v) + 4 %>" class="gfx-rot" text-anchor="end"><%= v %>%</text>
+        <% }) %>
+        <line x1="<%= ml %>" y1="<%= py(d.media) %>" x2="<%= W - mr %>" y2="<%= py(d.media) %>" class="gfx-media"/>
+        <text x="<%= W - mr %>" y="<%= py(d.media) - 6 %>" class="gfx-rot gfx-rot--media" text-anchor="end">média <%= d.media %>%</text>
+        <% if (L.length > 1) { %><polyline points="<%= pontos %>" class="gfx-linha"/><% } %>
+        <% L.forEach(function (s, i) { %>
+          <circle cx="<%= px(i) %>" cy="<%= py(s.percentual) %>" r="5" class="gfx-ponto"><title>Simulado <%= s.numero %>: <%= s.percentual %>% (<%= s.acertos %>/<%= s.total %>)</title></circle>
+          <% if (L.length <= 14 || i % Math.ceil(L.length / 14) === 0) { %>
+            <text x="<%= px(i) %>" y="<%= H - 12 %>" class="gfx-rot" text-anchor="middle"><%= s.numero %></text>
+          <% } %>
+        <% }) %>
+      </svg>
+    </div>
+    <p class="dica">Cada ponto é um simulado, na ordem em que você fez.</p>
+  </section>
+
+  <%
+    // ---- gráfico de barras: acertos e erros por simulado ----
+    const BW = 720, BH = 220, bml = 42, bmr = 16, bmt = 16, bmb = 34;
+    const biw = BW - bml - bmr, bih = BH - bmt - bmb;
+    const larg = Math.min(46, biw / Math.max(L.length, 1) - 8);
+    const bx = (i) => bml + (i + 0.5) * (biw / Math.max(L.length, 1)) - larg / 2;
+  %>
+
+  <section class="sim-gfx">
+    <h2>Acertos e erros em cada simulado</h2>
+    <div class="sim-gfx__caixa">
+      <svg viewBox="0 0 <%= BW %> <%= BH %>" role="img" preserveAspectRatio="xMidYMid meet"
+           aria-label="Acertos e erros de cada simulado, em barras empilhadas.">
+        <line x1="<%= bml %>" y1="<%= bmt + bih %>" x2="<%= BW - bmr %>" y2="<%= bmt + bih %>" class="gfx-grade"/>
+        <% L.forEach(function (s, i) {
+             const hA = (s.acertos / s.total) * bih;
+             const hE = (s.erros / s.total) * bih; %>
+          <rect x="<%= bx(i) %>" y="<%= bmt + bih - hA - hE %>" width="<%= larg %>" height="<%= hE %>" class="gfx-barra gfx-barra--erro"><title>Simulado <%= s.numero %>: <%= s.erros %> erros</title></rect>
+          <rect x="<%= bx(i) %>" y="<%= bmt + bih - hA %>" width="<%= larg %>" height="<%= hA %>" class="gfx-barra gfx-barra--acerto"><title>Simulado <%= s.numero %>: <%= s.acertos %> acertos</title></rect>
+          <% if (L.length <= 14 || i % Math.ceil(L.length / 14) === 0) { %>
+            <text x="<%= bx(i) + larg / 2 %>" y="<%= BH - 12 %>" class="gfx-rot" text-anchor="middle"><%= s.numero %></text>
+          <% } %>
+        <% }) %>
+      </svg>
+    </div>
+    <p class="gfx-legenda"><span class="gfx-chave gfx-chave--acerto"></span> acertos <span class="gfx-chave gfx-chave--erro"></span> erros</p>
+  </section>
+
+  <% function barras(titulo, lista, rotulo) { %>
+    <% if (lista && lista.length) { %>
+      <section class="sim-gfx">
+        <h2><%= titulo %></h2>
+        <ul class="gfx-hbarras">
+          <% lista.forEach(function (r) { %>
+            <li>
+              <span class="gfx-hbarras__rot"><%= rotulo ? rotulo(r.valor) : r.valor %></span>
+              <span class="gfx-hbarras__trilho">
+                <span class="gfx-hbarras__preenche" style="width:<%= r.percentual %>%"></span>
+              </span>
+              <span class="gfx-hbarras__n"><%= r.percentual %>% <small>(<%= r.acertos %>/<%= r.total %>)</small></span>
+            </li>
+          <% }) %>
+        </ul>
+      </section>
+    <% } %>
+  <% } %>
+
+  <% barras('Aproveitamento por tema', d.porTema) %>
+  <% barras('Aproveitamento por nível CEFR', d.porNivel) %>
+  <% barras('Aproveitamento por tipo de questão', d.porTipo) %>
+
+  <p><a href="/simulado">Simulado da semana</a> · <a href="/simulado/historico">Meus simulados</a></p>
+<% } %>
+</div>
+<%- include('../partials/rodape') %>

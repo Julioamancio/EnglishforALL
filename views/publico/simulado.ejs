@@ -1,0 +1,61 @@
+<%- include('../partials/cabeca') %>
+<%
+  // A questão da vez. Se todas estivessem respondidas o servidor já teria
+  // concluído o simulado, então aqui sempre há uma pendente.
+  const i = atualIndice < 0 ? 0 : atualIndice;
+  const q = questoes[i];
+%>
+<div class="env env--estreito">
+
+  <p class="sim-etiqueta">Simulado oficial · semana <%= simulado.semana %></p>
+  <h1>Questão <%= i + 1 %> de <%= questoes.length %></h1>
+
+  <div class="sim-barra" role="img" aria-label="<%= respondidas %> de <%= questoes.length %> questões respondidas">
+    <% questoes.forEach(function (item, n) { %>
+      <span class="sim-barra__passo<%= item.resposta ? ' feito' : (n === i ? ' agora' : '') %>"></span>
+    <% }) %>
+  </div>
+
+  <p class="aviso">Aqui não aparece o gabarito nem o comentário. A correção completa abre <strong>24 horas depois</strong> que você terminar as cinco questões. Uma resposta enviada não muda mais.</p>
+
+  <article class="questao">
+    <% if (q.instituicao) { %><p class="origem"><%= q.instituicao %><%= q.ano ? ' · ' + q.ano : '' %></p><% } %>
+
+    <% if (q.imagem) { %>
+      <figure class="questao__figura">
+        <img src="<%= q.imagem %>" alt="<%= q.imagem_alt || '' %>" loading="lazy">
+      </figure>
+    <% } %>
+
+    <% if (q.texto_base && q.texto_base.trim()) { %>
+      <blockquote class="texto-base">
+        <% q.texto_base.trim().split(/\n\s*\n/).forEach(function (p) { %><p><%- realce(p) %></p><% }) %>
+      </blockquote>
+    <% } %>
+
+    <p class="enunciado"><%- realce(q.enunciado) %></p>
+
+    <form method="post" action="/simulado/responder" class="sim-form">
+      <input type="hidden" name="simulado_id" value="<%= simulado.id %>">
+      <input type="hidden" name="questao_id" value="<%= q.id %>">
+      <ol class="alternativas alternativas--escolha">
+        <% q.alternativas.forEach(function (a) { %>
+          <li class="alt">
+            <label class="sim-alt">
+              <input type="radio" name="resposta" value="<%= a.letra %>" required>
+              <span class="bolha" aria-hidden="true"><%= a.letra %></span>
+              <span><span class="sr"><%= a.letra %>)</span> <%- realce(a.texto) %></span>
+            </label>
+          </li>
+        <% }) %>
+      </ol>
+      <button class="btn" type="submit">
+        <%= i + 1 === questoes.length ? 'Enviar e concluir o simulado' : 'Enviar e ir para a próxima' %>
+      </button>
+      <p class="dica">Não é possível voltar depois de enviar.</p>
+    </form>
+  </article>
+
+  <p><a href="/simulado/historico">Meus simulados</a> · <a href="/simulado/desempenho">Meu desempenho</a></p>
+</div>
+<%- include('../partials/rodape') %>

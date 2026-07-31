@@ -16,6 +16,14 @@ if (colunas().length && !colunas().includes('colecao')) {
 
 db.exec(fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8'));
 
+// Onde a pessoa estuda ou trabalha. Entrou depois que já havia contas criadas,
+// por isso o DEFAULT '': quem se cadastrou antes continua entrando normalmente e
+// o campo fica em branco até ser preenchido.
+const colunasUsuarios = () => db.prepare('PRAGMA table_info(usuarios)').all().map((c) => c.name);
+if (!colunasUsuarios().includes('instituicao')) {
+  db.exec("ALTER TABLE usuarios ADD COLUMN instituicao TEXT NOT NULL DEFAULT ''");
+}
+
 const LETRAS = ['A', 'B', 'C', 'D', 'E'];
 
 // ---------------------------------------------------------------- consultas
@@ -201,10 +209,10 @@ function assinantes() {
 
 // ------------------------------------------------------------- usuários
 
-function criarUsuario(nome, email, senhaHash) {
+function criarUsuario(nome, email, senhaHash, instituicao = '') {
   const info = db
-    .prepare('INSERT INTO usuarios (nome, email, senha_hash) VALUES (?, ?, ?)')
-    .run(nome.trim(), email.trim().toLowerCase(), senhaHash);
+    .prepare('INSERT INTO usuarios (nome, email, senha_hash, instituicao) VALUES (?, ?, ?, ?)')
+    .run(nome.trim(), email.trim().toLowerCase(), senhaHash, instituicao.trim());
   return info.lastInsertRowid;
 }
 
@@ -220,7 +228,7 @@ function usuarioPorId(id) {
 
 function usuarios() {
   return db
-    .prepare('SELECT id, nome, email, criado_em FROM usuarios ORDER BY criado_em DESC')
+    .prepare('SELECT id, nome, email, instituicao, criado_em FROM usuarios ORDER BY criado_em DESC')
     .all();
 }
 

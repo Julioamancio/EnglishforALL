@@ -1,0 +1,75 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <p class="sim-etiqueta">Simulado oficial · semana <%= simulado.semana %></p>
+  <h1>Correção do simulado</h1>
+
+  <div class="painel sim-placar">
+    <p class="sim-placar__nota"><%= simulado.acertos %><span>/<%= simulado.total %></span></p>
+    <p class="sim-placar__pct"><%= Math.round((simulado.acertos / simulado.total) * 100) %>% de aproveitamento</p>
+  </div>
+
+  <% if (!gabarito.liberado) { %>
+    <%# Antes do prazo o servidor nem carrega gabarito e comentário: o que não é
+        enviado não pode ser lido no HTML. %>
+    <p class="aviso">
+      A correção comentada abre em
+      <strong><%= gabarito.quando.slice(8, 10) %>/<%= gabarito.quando.slice(5, 7) %> às <%= gabarito.quando.slice(11, 16) %></strong>.
+      Até lá ficam guardados o gabarito, as explicações e a indicação de acerto e erro.
+    </p>
+    <p class="dica">O prazo é conferido no servidor.</p>
+    <ol class="sim-lista-simples">
+      <% questoes.forEach(function (q, n) { %>
+        <li>Questão <%= n + 1 %> — você marcou <strong><%= q.resposta || '—' %></strong></li>
+      <% }) %>
+    </ol>
+  <% } else { %>
+    <% questoes.forEach(function (q, n) { %>
+      <article class="questao questao--revisao">
+        <p class="origem">Questão <%= n + 1 %> · <%= q.instituicao %><%= q.ano ? ' · ' + q.ano : '' %></p>
+
+        <p class="sim-veredito <%= q.correta ? 'sim-veredito--ok' : 'sim-veredito--erro' %>">
+          <%= q.correta ? 'Você acertou' : 'Você errou' %> —
+          marcou <strong><%= q.resposta %></strong>,
+          <% if (!q.correta) { %>a correta é <strong><%= q.gabarito %></strong><% } else { %>e a correta é <strong><%= q.gabarito %></strong><% } %>
+        </p>
+
+        <% if (q.imagem) { %>
+          <figure class="questao__figura"><img src="<%= q.imagem %>" alt="<%= q.imagem_alt || '' %>" loading="lazy"></figure>
+        <% } %>
+
+        <% if (q.texto_base && q.texto_base.trim()) { %>
+          <blockquote class="texto-base">
+            <% q.texto_base.trim().split(/\n\s*\n/).forEach(function (p) { %><p><%- realce(p) %></p><% }) %>
+          </blockquote>
+        <% } %>
+
+        <p class="enunciado"><%- realce(q.enunciado) %></p>
+
+        <ol class="alternativas">
+          <% q.alternativas.forEach(function (a) {
+               const marcada = a.letra === q.resposta;
+               const certa = a.letra === q.gabarito; %>
+            <li class="alt<%= certa ? ' alt--correta' : '' %><%= marcada && !certa ? ' alt--errada' : '' %>">
+              <span class="bolha" aria-hidden="true"><%= a.letra %></span>
+              <span><span class="sr"><%= a.letra %>)</span> <%- realce(a.texto) %>
+                <% if (certa) { %><span class="alt__nota">correta</span><% } %>
+                <% if (marcada) { %><span class="alt__nota">sua resposta</span><% } %>
+              </span>
+            </li>
+          <% }) %>
+        </ol>
+
+        <% if (q.comentario && q.comentario.trim()) { %>
+          <div class="gabarito__corpo">
+            <p class="gabarito__resp">Por que a resposta é <%= q.gabarito %></p>
+            <div><%- q.comentario.replace(/\n/g, '<br>') %></div>
+          </div>
+        <% } %>
+        <p><a href="/questoes/<%= q.slug %>">Abrir esta questão no banco</a></p>
+      </article>
+    <% }) %>
+  <% } %>
+
+  <p><a href="/simulado/historico">Voltar aos meus simulados</a></p>
+</div>
+<%- include('../partials/rodape') %>

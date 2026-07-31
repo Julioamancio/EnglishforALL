@@ -1,0 +1,28 @@
+<%- include('../partials/cabeca') %>
+<div class="env env--estreito">
+  <p class="sim-etiqueta">Simulado oficial · semana <%= simulado.semana %></p>
+  <h1>Simulado concluído</h1>
+
+  <div class="painel sim-placar">
+    <p class="sim-placar__nota"><%= simulado.acertos %><span>/<%= simulado.total %></span></p>
+    <p class="sim-placar__pct"><%= Math.round((simulado.acertos / simulado.total) * 100) %>% de aproveitamento</p>
+  </div>
+
+  <% if (gabarito.liberado) { %>
+    <p class="aviso aviso--ok">A correção comentada já está disponível.</p>
+    <p><a class="btn" href="/simulado/historico/<%= simulado.id %>">Ver a correção comentada</a></p>
+  <% } else { %>
+    <p class="aviso">
+      A correção comentada abre <strong>24 horas depois</strong> da conclusão — em
+      <strong><%= gabarito.quando.slice(8, 10) %>/<%= gabarito.quando.slice(5, 7) %> às <%= gabarito.quando.slice(11, 16) %></strong>.
+      Até lá ficam guardados o gabarito, as explicações e a indicação de acerto e erro.
+    </p>
+    <p class="dica">O prazo é contado no servidor: mudar a hora do aparelho não adianta.</p>
+  <% } %>
+
+  <p>O próximo simulado é liberado na semana seguinte. Enquanto isso, você pode treinar livremente pelas
+    <a href="/questoes">questões do banco</a> — o treinamento não entra no seu desempenho oficial.</p>
+
+  <p><a href="/simulado/historico">Meus simulados</a> · <a href="/simulado/desempenho">Meu desempenho</a></p>
+</div>
+<%- include('../partials/rodape') %>
