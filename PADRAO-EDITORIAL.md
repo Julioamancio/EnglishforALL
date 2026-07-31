@@ -296,6 +296,11 @@ Ficam os cabeçalhos que ainda fazem sentido isolados: "TEXTO I" (142), quando o
 enunciado se refere a ele, e "Leia os provérbios:" (1039), que apresenta o quadro
 logo abaixo.
 
+**Lote 33:** removida também a linha "Considere o texto a seguir:" da **1065**,
+pelo mesmo motivo — o texto vem logo em seguida, na própria página, e o comando
+só repete o óbvio. Continua valendo a distinção: "Leia os provérbios:" (1039)
+fica, porque apresenta o quadro numerado de que o enunciado depende.
+
 ## 7. Itens discretos antigos
 
 Fuvest 1977–1979 e similares: tradução de frase única, escolha de forma verbal.
@@ -381,15 +386,21 @@ retida — item completo, gabarito válido, comentário curado, sem pendência d
 referência — e foi publicada: **1.051 → 1.052**. As outras continuam fora, e os
 motivos formam três famílias:
 
-- **Direito autoral de letra de música**: 34 (Maggie's Farm), 105 (Viva la Vida),
-  112 (War). É exatamente por isso que a **1038** pode estar no ar com a mesma
-  Maggie's Farm: nela a letra foi substituída por uma nota que descreve as
-  estrofes, sem reproduzi-las.
+- **Letra de música**: 34 (Maggie's Farm), 105 (Viva la Vida), 112 (War).
+  **Ressalva do lote 33:** escrevi aqui que essas três estavam fora "por direito
+  autoral" e que era por isso que a 1038 podia estar no ar com a letra
+  substituída por uma nota. Os números não sustentam essa leitura — ver
+  "Reprodução de letra e poema" na seção 12. Era racionalização minha, não uma
+  política do acervo.
 - **Duplicata de outra já publicada**: 55 é a mesma tirinha, o mesmo enunciado e
   o mesmo gabarito da 87; 769-773 são o caderno 2 da PUC Minas 2019, cópia das
   764-768 do caderno 1.
-- **Texto incompleto**: 1060 começa no meio da frase ("justice, each getting what
-  he or she is due"), falta o início do verbete e não há como reconstruí-lo.
+- ~~**Texto incompleto**: 1060.~~ **Errado, corrigido no lote 33.** A 1060 não
+  está truncada: é um **verbete**, e "justice" é a palavra-título — como a própria
+  nota do texto avisa ("a palavra-título 'justice' aparece em negrito no início do
+  texto"). O que me enganou foi a minúscula depois da aspa. O verbete traz as três
+  acepções, fecha em Aristóteles e tem a referência completa. **Publicada no lote
+  33: 1.052 → 1.053.**
 
 Fora dessas três, sobra a **13** (tirinha The Joy of Tech num simulado próprio):
 completa e sem duplicata, mas é imagem de terceiro. Publicar imagem de terceiro
@@ -506,3 +517,35 @@ verificador:
 A verificação usada na correção, e que vale para qualquer mexida de acento:
 **retirados os diacríticos, o texto novo tem de ser idêntico ao antigo.** Só a
 acentuação pode mudar.
+
+## 13. Reprodução de letra e poema — pendência declarada
+
+**Lote 33, 31/07/2026. Não é decisão editorial, e por isso não foi tomada.**
+
+O acervo tem **30 questões** cujo gênero é letra de canção ou poema. **26 estão
+publicadas com o texto integral** — ENEM (Paul McCartney, Bob Dylan, Madonna,
+Alicia Keys, Langston Hughes, Robert Frost, John Donne, Joy Harjo), simulados
+próprios e Fuvest (Maya Angelou na 1046, Langston Hughes na 1032, Taylor Swift
+nas 1063 e 1064, esta última com 25 linhas).
+
+Fora dessas, só quatro recebem tratamento diferente: **34, 105 e 112** estão
+despublicadas, e a **1038** teve a letra substituída por uma nota descritiva.
+
+Ou seja: **não existe uma política de direito autoral aplicada no acervo.**
+Existem 26 casos publicados de um jeito e 4 casos tratados de outro, sem critério
+que os separe — a 1038 e a 34 são a mesma canção de Bob Dylan, uma com nota e a
+outra fora do ar. No lote 32 eu havia registrado que as despublicações se
+explicavam por direito autoral; os números mostram que não.
+
+Isso é decisão jurídica e comercial, não editorial, e envolve 26 questões que já
+estão no ar. Fica para o professor decidir entre três caminhos:
+
+1. **Manter tudo como está**, apoiado no uso didático com atribuição de fonte
+   (a fonte está preenchida em todas).
+2. **Uniformizar por baixo**, aplicando a todas o tratamento da 1038 — nota
+   descritiva no lugar do texto, preservando no enunciado só os versos citados.
+   Custo: mexe em 26 questões publicadas e muda a experiência de leitura.
+3. **Uniformizar por cima**, republicando 34, 105 e 112 e devolvendo a letra à
+   1038, o que torna o acervo coerente sem reduzir conteúdo.
+
+Enquanto não houver decisão, nada foi alterado.

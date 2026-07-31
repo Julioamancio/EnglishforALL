@@ -4,19 +4,18 @@ Documento de retomada: tudo o que é preciso para continuar a curadoria sem
 depender do histórico da conversa. O que **deve** ser feito está no
 `PADRAO-EDITORIAL.md`; aqui está **onde paramos e como se roda um lote**.
 
-Atualizado em 30/07/2026, ao fim do lote 32.
+Atualizado em 31/07/2026, ao fim do lote 33 — **os lotes por id terminaram**.
 
 ## Onde paramos
 
-- **Lotes 1 a 32 concluídos e gravados: IDs 1 a 1040.**
-- Próximo lote começa no **ID 1041**.
-- Faltam **26 questões (IDs 1041–1066), 2 lotes**, todas da Fuvest.
-- **1.052 questões publicadas** (eram 1.048; entraram a 493, a 734, a 831 e a 1039).
-- O **ITA e as duas PUC Minas estão inteiramente curados**. O que resta é só
-  Fuvest — textos curtos e muitos itens discretos, sem o aparato de linha e
-  parágrafo que gerou o grosso do trabalho no ITA. Os lotes 26 e 27 fecharam com
-  zero alterações, o que é o estado esperado daqui em diante: a partir do lote
-  27 o ganho vem menos de reler os itens e mais de ampliar o que se verifica.
+- **Lotes 1 a 33 concluídos: o acervo inteiro passou pela curadoria (IDs 1 a 1066).**
+- Não há próximo lote por id. O que resta é o **lote de tipografia** (aspas retas) e a **pendência de direito autoral** registrada no §13 do padrão.
+- Faltam **0 questões** por id.
+- **1.053 questões publicadas** (eram 1.048; entraram a 493, a 734, a 831, a 1039 e a 1060).
+- **Todas as provas foram curadas**: ITA, as duas PUC Minas, ENEM, Fuvest e os
+  simulados. Os lotes 26, 27 e 33 fecharam com pouca ou nenhuma alteração de
+  conteúdo, que é o estado esperado no fim — a partir do lote 27 o ganho passou a
+  vir menos de reler os itens e mais de ampliar o que se verifica.
 
 Recalcular a qualquer momento:
 
@@ -138,10 +137,15 @@ A lição vale para os lotes 28 a 34: **um lote limpo não é um lote terminado.
 Quando o dry-run der zero, a pergunta seguinte é o que ainda não está sendo
 verificado.
 
-## Lote de tipografia pendente
 
-Adiado de propósito para não misturar assuntos dentro de um lote, e agora com
-escopo fechado: **197 `texto_base` e 67 `titulo` usam aspas retas** onde o
-padrão do acervo é aspas curvas (98 títulos já usam curvas). É a última
-inconsistência de tipografia conhecida e vale um lote próprio, depois que os
-lotes por id terminarem.
+## O que ficou para depois
+
+1. **Lote de tipografia.** 197 `texto_base` e 67 `titulo` usam aspas retas onde
+   o padrão do acervo é curvas (98 títulos já usam curvas). É a última
+   inconsistência de tipografia conhecida e vale um lote próprio.
+2. **Direito autoral de letra e poema** (§13 do padrão). 26 questões publicadas
+   reproduzem letra ou poema integral e 4 recebem tratamento diferente, sem
+   critério que as separe. Decisão jurídica e comercial, não editorial — está
+   descrita com os três caminhos possíveis, à espera do professor.
+3. **Questão 13** (tirinha The Joy of Tech, simulado 2021): completa e sem
+   duplicata, despublicada. Imagem de terceiro, mesma natureza do item 2.
