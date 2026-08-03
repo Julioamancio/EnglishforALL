@@ -22,9 +22,11 @@ function carregar() {
   _comVideo = new Set();
   if (!fs.existsSync(DIR)) return;
   for (const nome of NOMES) {
-    // exige o mp4: é o formato que todo navegador toca. O webm é ganho de
-    // tamanho onde houver, mas sozinho não sustenta a página.
-    if (fs.existsSync(path.join(DIR, `${nome}.mp4`))) _comVideo.add(nome);
+    // Exige o webm: MP4/H.264 não carrega canal alfa, e a transparência é o
+    // ponto — o personagem tem que flutuar sobre o fundo da página, não vir
+    // num retângulo. Quem não decodificar WebM com alfa não seleciona a fonte
+    // e fica no poster, que é a mesma PNG.
+    if (fs.existsSync(path.join(DIR, `${nome}.webm`))) _comVideo.add(nome);
   }
 }
 

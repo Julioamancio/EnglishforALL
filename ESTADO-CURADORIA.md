@@ -244,6 +244,60 @@ e no `foreign_key_check`, as contagens batem, uma questão inteira se lê, e o
 tarball das imagens abre com as 107 entradas. Senha errada falha alto, em vez
 de devolver um arquivo corrompido em silêncio.
 
+
+## Vídeos dos personagens
+
+Os quatro personagens da apresentação de `/gramatica` são vídeos de 8 s em
+laço. **Só ali** — numa página de tópico a mesma persona aparece 15 vezes, e
+quinze vídeos tocando juntos travariam o celular do aluno.
+
+```bash
+python3 scripts/processa-persona.py ORIGEM.mp4 sofia
+```
+
+Origem: 1080×1920, 24 fps, 8 s, **fundo preto**. Saída: WebM/VP9 com alfa,
+440 px de altura, ~300 KB cada.
+
+### Fundo preto é melhor que branco, para estes personagens
+
+Parece contra-intuitivo, e foi medido antes de decidir. Um recorte por
+luminância come as partes do personagem que têm a cor do fundo:
+
+| personagem | perderia com fundo BRANCO | perde com fundo PRETO |
+|---|---|---|
+| Max (robô branco) | 10% a 32% do corpo | ~2% |
+| Leo (barriga e cauda creme) | 6% a 23% | ~2% |
+| Maya (tênis e meias brancos) | 4% a 19% | ~3% |
+| Sofia (camisa creme) | 3% a 23% | ~2% |
+
+Os personagens são claros; o branco os apagaria. **Não vale a pena refazer os
+vídeos com fundo branco.**
+
+### O que o script faz, e por quê
+
+1. **Preenche a partir dos quatro cantos**, não por limiar global. Só o preto
+   **ligado à borda** vira transparente. Sem isso, o visor do Max, os cabelos
+   da Sofia e da Maya e os olhos do Leo viravam buraco — são de 9 mil a 23 mil
+   pixels escuros *dentro* do personagem.
+2. **Tolerância 70.** Medido: de 34 para 70 o resíduo escuro cai de 513 para
+   373 px e o corpo perde só 2%, que é a franja do brilho. Acima de 70 não
+   melhora mais.
+3. **Remove ilhas.** O brilho da antena do Max deixava manchas opacas soltas.
+   Preenche-se o corpo a partir de dentro; o que sobrar opaco é resto e sai.
+4. **Corta pela união das caixas de todos os quadros**, não quadro a quadro —
+   senão o personagem treme dentro do enquadramento durante a animação.
+5. **`-auto-alt-ref 0` no libvpx é obrigatório.** Com os quadros de referência
+   alternativos ligados, o codificador descarta o canal alfa e o vídeo sai com
+   fundo preto sólido.
+
+### Na página
+
+`src/lib/personas.js` lê no boot quais têm vídeo. Sem o arquivo, a persona cai
+na PNG — o site nunca quebra por falta de vídeo. O `<video>` vai com
+`autoplay muted loop playsinline` (o que o navegador exige para tocar sozinho)
+e a PNG como `poster`: quem não tocar WebM com alfa vê a imagem, sem pulo de
+layout. Quem pediu menos animação no aparelho também fica no quadro parado.
+
 ## O que ficou para depois
 
 1. ~~Lote de tipografia.~~ **Feito em 31/07/2026.** A premissa estava errada: não
