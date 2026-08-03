@@ -27,20 +27,49 @@
 </section>
 
 <div class="env">
+  <%
+    // `busca` só existe quando a rota é /gramatica; a view é reusada em contextos
+    // que não passam o termo, daí o typeof.
+    var termo = typeof busca !== 'undefined' ? busca : '';
+    var achados = typeof encontrados !== 'undefined' ? encontrados : totalTopicos;
+  %>
+
+  <form class="gram-busca" method="get" action="/gramatica" role="search">
+    <div class="busca">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="q" name="q" value="<%= termo %>"
+             placeholder="Procure um tópico: past simple, conditionals, present perfect…"
+             aria-label="Procurar tópico de gramática" autocomplete="off">
+      <button class="btn btn--pequeno" type="submit">Buscar</button>
+    </div>
+    <p class="gram-busca__n" role="status">
+      <strong><%= achados %></strong> <span class="gram-busca__rot"><%= achados === 1 ? 'tópico' : 'tópicos' %></span>
+      <span class="gram-busca__todos"<%= termo ? '' : ' hidden' %>>· <a href="/gramatica">ver todos os <%= totalTopicos %></a></span>
+    </p>
+  </form>
+
   <% if (!niveis.length) { %>
     <p class="vazio">O conteúdo de gramática está sendo preparado. Volte em breve!</p>
   <% } else { %>
 
+  <%# um só estado de "nada encontrado", que serve à busca do servidor e à do
+      cliente: o JS só troca o termo e tira o hidden %>
+  <p class="vazio gram-vazio"<%= achados ? ' hidden' : '' %>>
+    Nenhum tópico para “<span class="gram-vazio__termo"><%= termo %></span>”.
+    Tente uma palavra só — <em>past</em>, <em>modal</em>, <em>preposition</em> —
+    ou <a href="/gramatica">veja os <%= totalTopicos %> tópicos</a>.
+  </p>
+
   <nav class="niveis-nav" aria-label="Níveis CEFR">
-    <% niveis.forEach(function(n){ %>
-      <a class="niveis-nav__pill niveis-nav__pill--<%= n.nivel.toLowerCase() %>" href="#nivel-<%= n.nivel.toLowerCase() %>">
-        <strong><%= n.nivel %></strong> <span><%= n.topicos.length %> tópicos</span>
+    <% niveis.forEach(function(n){ var casam = typeof n.casam === 'number' ? n.casam : n.topicos.length; %>
+      <a class="niveis-nav__pill niveis-nav__pill--<%= n.nivel.toLowerCase() %>" href="#nivel-<%= n.nivel.toLowerCase() %>"<%= casam ? '' : ' hidden' %>>
+        <strong><%= n.nivel %></strong> <span><span class="niveis-nav__n"><%= casam %></span> <span class="niveis-nav__rot"><%= casam === 1 ? 'tópico' : 'tópicos' %></span></span>
       </a>
     <% }) %>
   </nav>
 
-  <% niveis.forEach(function(n){ %>
-  <section class="nivel-bloco" id="nivel-<%= n.nivel.toLowerCase() %>" aria-label="Nível <%= n.nivel %>">
+  <% niveis.forEach(function(n){ var casam = typeof n.casam === 'number' ? n.casam : n.topicos.length; %>
+  <section class="nivel-bloco" id="nivel-<%= n.nivel.toLowerCase() %>" aria-label="Nível <%= n.nivel %>"<%= casam ? '' : ' hidden' %>>
     <div class="nivel-bloco__cabeca">
       <span class="nivel-selo nivel-selo--<%= n.nivel.toLowerCase() %>"><%= n.nivel %></span>
       <div>
@@ -50,7 +79,9 @@
     </div>
     <div class="grade grade--gram">
       <% n.topicos.forEach(function(t, i){ %>
-        <a class="gcard" href="/gramatica/<%= t.slug %>">
+        <%# data-busca: o mesmo texto que o servidor indexa, para o filtro
+            instantâneo do site.js achar exatamente o que ?q= acharia %>
+        <a class="gcard" href="/gramatica/<%= t.slug %>" data-busca="<%= t.busca %>"<%= t.casa === false ? ' hidden' : '' %>>
           <span class="gcard__num"><%= String(i + 1).padStart(2, '0') %></span>
           <span class="gcard__corpo">
             <strong><%= t.titulo %></strong>

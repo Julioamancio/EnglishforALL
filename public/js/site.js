@@ -265,3 +265,93 @@
   }
 
 })();
+
+/* ------------------------------------------------ busca da gramática
+   Os 60 tópicos já vêm no HTML — filtrar na hora é instantâneo e o servidor
+   nem fica sabendo. O ?q= continua valendo para quem chega por link ou está
+   sem JS: o servidor marca os que não casam com `hidden`, que o navegador
+   respeita sozinho, e como nenhum tópico é omitido, apagar o campo devolve
+   os 60 sem recarregar.                                                  */
+(function () {
+  'use strict';
+  var form = document.querySelector('.gram-busca');
+  if (!form) return;
+  var campo = form.querySelector('input[name="q"]');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.grade--gram .gcard'));
+  if (!campo || !cards.length) return;
+
+  var blocos = Array.prototype.slice.call(document.querySelectorAll('.nivel-bloco'));
+  var contador = form.querySelector('.gram-busca__n strong');
+  var rotulo = form.querySelector('.gram-busca__rot');
+  var todos = form.querySelector('.gram-busca__todos');
+  var botao = form.querySelector('button[type="submit"]');
+  var vazio = document.querySelector('.gram-vazio');
+  var vazioTermo = document.querySelector('.gram-vazio__termo');
+
+  // mesma normalização de src/lib/gramatica.js: sem acento, sem pontuação
+  function normalizar(s) {
+    return String(s || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+  }
+
+  function filtrar() {
+    var termo = campo.value.trim();
+    var palavras = normalizar(termo).split(' ').filter(Boolean);
+    var achados = 0;
+
+    cards.forEach(function (card) {
+      var alvo = card.getAttribute('data-busca') || '';
+      var casa = palavras.every(function (p) { return alvo.indexOf(p) !== -1; });
+      card.hidden = !casa;
+      if (casa) achados++;
+    });
+
+    // um nível sem nenhum tópico visível não precisa do próprio cabeçalho,
+    // nem da pastilha que salta para ele
+    blocos.forEach(function (b) {
+      var visiveis = b.querySelectorAll('.gcard:not([hidden])').length;
+      b.hidden = !visiveis;
+      var pill = document.querySelector('.niveis-nav a[href="#' + b.id + '"]');
+      if (pill) {
+        pill.hidden = !visiveis;
+        var n = pill.querySelector('.niveis-nav__n');
+        var r = pill.querySelector('.niveis-nav__rot');
+        if (n) n.textContent = visiveis;
+        if (r) r.textContent = visiveis === 1 ? 'tópico' : 'tópicos';
+      }
+    });
+
+    if (contador) contador.textContent = achados;
+    if (rotulo) rotulo.textContent = achados === 1 ? 'tópico' : 'tópicos';
+    if (todos) todos.hidden = !palavras.length;
+    if (vazioTermo) vazioTermo.textContent = termo;
+    if (vazio) vazio.hidden = achados > 0;
+  }
+
+  // com JS o botão vira decoração: o resultado apareceu enquanto se digitava
+  if (botao) botao.hidden = true;
+  form.addEventListener('submit', function (ev) { ev.preventDefault(); campo.blur(); });
+  campo.addEventListener('input', filtrar);
+  campo.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && campo.value) { campo.value = ''; filtrar(); }
+  });
+
+  // "/" foca a busca, como em toda ferramenta de busca decente
+  document.addEventListener('keydown', function (ev) {
+    var alvo = document.activeElement;
+    var digitando = alvo && (/^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName) || alvo.isContentEditable);
+    if (ev.key === '/' && !digitando && !ev.ctrlKey && !ev.metaKey) {
+      ev.preventDefault();
+      campo.focus();
+      campo.select();
+    }
+  });
+
+  // chegou por link com ?q=: reaplica no cliente para o contador e os
+  // cabeçalhos ficarem coerentes com o que o servidor já escondeu
+  if (campo.value.trim()) filtrar();
+})();

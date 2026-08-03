@@ -252,11 +252,17 @@ router.get('/questoes/:slug', (req, res, next) => {
 const gramatica = require('../lib/gramatica');
 
 router.get('/gramatica', (req, res) => {
+  const busca = String(req.query.q || '').trim().slice(0, 80);
+  const { niveis, encontrados } = gramatica.buscar(busca);
   res.render('publico/gramatica', {
-    title: 'Grammar: gramática de inglês do A1 ao C2, explicada em português',
+    title: busca
+      ? `Grammar: busca por "${busca}"`
+      : 'Grammar: gramática de inglês do A1 ao C2, explicada em português',
     description:
       'Guia completo de gramática inglesa por nível CEFR (A1 ao C2): explicações em português, diálogos com personagens, erros comuns e mini-testes.',
-    niveis: gramatica.niveis(),
+    niveis,
+    busca,
+    encontrados,
     totalTopicos: gramatica.total(),
   });
 });

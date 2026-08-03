@@ -93,6 +93,20 @@ o que o aluno marcou, a correta, se acertou. O professor vê a correção **sem
 esperar as 24 horas**: o prazo existe para o aluno não conferir o gabarito na
 hora, não para escondê-lo de quem corrige.
 
+**Busca da gramática.** Em `/gramatica`, um campo acha o tópico sem ter que
+rolar os 60. Casa por título, subtítulo e resumo, ignorando acento, caixa,
+pontuação e ordem das palavras — "past-simple", "SIMPLE PAST" e "past simple"
+dão o mesmo resultado. O corpo do tópico (diálogo, exercícios) fica fora do
+índice de propósito: "past" aparece em dezenas de explicações, e uma busca que
+devolve tudo não ajuda a decidir se o tópico existe.
+
+Funciona nos dois mundos, e é o `buscar()` que permite isso: ele **marca** os
+tópicos em vez de filtrá-los. A página sempre traz os 60 e a view esconde o
+resto com o atributo `hidden`, que o navegador respeita sem JS. Com JS, o
+filtro é instantâneo e apagar o campo devolve os 60 sem recarregar — inclusive
+para quem chegou por um link `?q=`, porque nada foi omitido do HTML. "/" foca
+o campo, Esc limpa, e a busca é `noindex,follow` para não poluir o Google.
+
 **Rendimento por turma.** Em `/admin/turmas`, a mesma pergunta em outra escala.
 Turma é escola + série; quem não tem série fica de fora da lista. A página traz
 participação, distribuição das notas em faixas, **mediana ao lado da média**,
@@ -195,12 +209,12 @@ dados/                   banco.db, sessoes.db e backups (fora do git)
 
 ## Verificadores
 
-Oito scripts de leitura. Os sete primeiros checam o acervo; o oitavo checa as
-contas do painel de turma. **Todos devem fechar em zero**; rode depois de
-qualquer alteração em conteúdo:
+Nove scripts de leitura. Os sete primeiros checam o acervo; os dois últimos, as
+contas do painel de turma e a busca da gramática. **Todos devem fechar em
+zero**; rode depois de qualquer alteração em conteúdo:
 
 ```bash
-for s in linhas paragrafos imagens copias sanidade acentos aspas turmas; do
+for s in linhas paragrafos imagens copias sanidade acentos aspas turmas busca; do
   node scripts/audita-$s.js
 done
 node scripts/progresso-curadoria.js
@@ -216,6 +230,7 @@ node scripts/progresso-curadoria.js
 | `audita-acentos.js` | nenhum campo nosso sem acentuação |
 | `audita-aspas.js` | nenhum campo mistura aspa reta com curva |
 | `audita-turmas.js` | o painel de turma não mostra número que não se sustenta |
+| `audita-busca.js` | a busca da gramática acha o certo e o CSS não está corrompido |
 
 Alguns deles são mais espertos do que parecem, e por bons motivos:
 
@@ -226,6 +241,24 @@ Alguns deles são mais espertos do que parecem, e por bons motivos:
 - O `audita-acentos.js` procura por **sufixo** (`-ção`, `-ável`, `-ência`), não
   por lista de palavras — lista sempre deixa passar a próxima palavra. E ignora
   `comentario` e `imagem_alt`, que citam o texto original em inglês.
+- O `audita-busca.js` guarda duas armadilhas que já morderam:
+  1. **`hidden` perde para qualquer classe com `display`.** O atributo vale
+     `display: none`, mas isso vem da folha do navegador, e
+     `.gcard { display: flex }` ganha. Resultado: 25 dos 55 cards que o
+     filtro tinha escondido continuavam na tela. O HTML estava certo e a
+     página estava errada — contar o atributo dizia "ok". Por isso existe
+     `[hidden] { display: none !important; }` no topo do `estilo.css`, e o
+     verificador exige essa regra. **Ao conferir se algo sumiu, meça a
+     altura do elemento, não a presença do atributo.**
+  2. **Contar `/*` e `*/` não prova que o CSS está são.** Inserir uma regra
+     dentro do comentário de cabeçalho fecha o comentário cedo; o texto
+     restante vira seletor e engole o bloco `:root` — todas as variáveis de
+     cor e fonte somem e o site aparece sem estilo. A contagem continua
+     balanceada. O verificador procura **prosa em posição de seletor**.
+- E a lição de operação: **suba a versão do asset só depois de conferir o
+  arquivo.** O `?v=` quebrado e o corrigido saíram sob o mesmo número, então
+  quem carregou a página no meio guardou o CSS quebrado em cache e recarregar
+  não resolvia. Foi preciso queimar mais uma versão.
 - O `audita-turmas.js` confere **invariantes, não valores**: o corte de três
   respostas vale, a ordem é do pior para o melhor, o histograma fecha com o
   número de participantes. Nasceu de um bug real — em `porCampo` os apelidos

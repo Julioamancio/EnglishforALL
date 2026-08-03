@@ -5,6 +5,11 @@
    Temas claro/escuro via variáveis em html[data-tema].
    ============================================================ */
 
+/* O atributo hidden precisa ganhar de qualquer classe com display.
+   Sem isto, .gcard { display:flex } deixa na tela o que o filtro escondeu. */
+[hidden] { display: none !important; }
+
+
 :root {
   --tinta: #2f3ab2;
   --tinta-2: #232c8a;
@@ -1264,3 +1269,24 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 .gfx-hbarras--ranking li:nth-child(1) .rank-pos { background: var(--marca); color: #6b4d00; }
 .gfx-hbarras--ranking li:nth-child(2) .rank-pos,
 .gfx-hbarras--ranking li:nth-child(3) .rank-pos { background: var(--marca-fraca); color: #8a6100; }
+
+/* ------------------------------------------------ busca da gramática */
+
+.gram-busca { margin: 0 0 1.6rem; }
+.gram-busca .busca { max-width: 640px; margin: 0 auto; }
+
+.gram-busca__n {
+  margin: .6rem auto 0;
+  max-width: 640px;
+  font: 500 .88rem/1.4 var(--ui);
+  color: var(--suave);
+  text-align: center;
+}
+.gram-busca__n strong { color: var(--texto); font-weight: 700; }
+.gram-busca__todos a { color: var(--suave); }
+
+/* o contador muda enquanto se digita: sem transição ele "pisca" */
+.gram-busca__n strong { transition: none; }
+
+.gram-vazio { text-align: center; }
+.gram-vazio em { font-style: normal; font-weight: 600; color: var(--texto); }
