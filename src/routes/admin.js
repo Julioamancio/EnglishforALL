@@ -7,6 +7,8 @@ const slugify = require('slugify');
 const db = require('../db');
 const desempenho = require('../lib/desempenho');
 const sim = require('../lib/simulado');
+const instituicoes = require('../lib/instituicoes');
+const series = require('../lib/series');
 
 const router = express.Router();
 
@@ -255,10 +257,48 @@ router.get('/assinantes', (req, res) => {
 // ------------------------------------------------------------------ alunos
 
 router.get('/usuarios', (req, res) => {
+  const todos = desempenho.porAluno();
+  const escolas = db.instituicoes();
+
+  // O filtro compara pela chave normalizada, senão "Colégio São José Escolápias"
+  // e "Colegio Sao Jose Escolapias" seriam duas escolas diferentes.
+  const filtro = (req.query.escola || '').trim();
+  const turma = (req.query.serie || '').trim();
+  const busca = (req.query.q || '').trim().toLowerCase();
+  let alunos = todos;
+  if (filtro === 'sem') {
+    alunos = alunos.filter((a) => !(a.instituicao || '').trim());
+  } else if (filtro) {
+    alunos = alunos.filter((a) => db.chaveInstituicao(a.instituicao) === filtro);
+  }
+  if (turma === 'sem') {
+    alunos = alunos.filter((a) => !(a.serie || '').trim());
+  } else if (turma) {
+    alunos = alunos.filter((a) => a.serie === turma);
+  }
+  if (busca) {
+    alunos = alunos.filter((a) =>
+      `${a.nome} ${a.email}`.toLowerCase().includes(busca));
+  }
+
   res.render('admin/usuarios', {
     title: 'Alunos e desempenho',
     description: '',
-    alunos: desempenho.porAluno(),
+    alunos,
+    escolas,
+    semEscola: todos.filter((a) => !(a.instituicao || '').trim()).length,
+    // só as turmas que de fato têm aluno, na ordem escolar
+    turmas: series.SERIES
+      .map((s) => ({ ...s, total: todos.filter((a) => a.serie === s.valor).length }))
+      .filter((s) => s.total)
+      .sort((a, b) => series.ordem(a.valor) - series.ordem(b.valor)),
+    semTurma: todos.filter((a) => !(a.serie || '').trim()).length,
+    rotuloSerie: series.rotulo,
+    totalGeral: todos.length,
+    filtro,
+    turma,
+    busca: req.query.q || '',
+    recado: req.query.ok || '',
     layoutAdmin: true,
   });
 });
@@ -285,8 +325,76 @@ router.get('/usuarios/:id', (req, res, next) => {
     d: desempenho.resumo(aluno.id),
     lista,
     emAberto: sim.emAberto(aluno.id),
+    escolas: instituicoes.INSTITUICOES,
+    etapas: series.porEtapa(),
+    rotuloSerie: series.rotulo,
+    erro: req.query.erro || '',
+    recado: req.query.ok || '',
     layoutAdmin: true,
   });
+});
+
+/** Edita nome, e-mail e instituição. Senha tem rota própria. */
+router.post('/usuarios/:id', (req, res, next) => {
+  const id = Number(req.params.id);
+  const aluno = db.usuarioPorId(id);
+  if (!aluno) return next();
+
+  const nome = (req.body.nome || '').trim();
+  const email = (req.body.email || '').trim().toLowerCase();
+  const instituicao = (req.body.instituicao || '').trim();
+  const serie = (req.body.serie || '').trim();
+  const volta = (msg) => res.redirect(`/admin/usuarios/${id}?erro=${encodeURIComponent(msg)}`);
+
+  if (nome.length < 2) return volta('Informe o nome do aluno.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return volta('E-mail inválido.');
+
+  // o e-mail é a chave de login: não pode colidir com outra conta
+  const outro = db.usuarioPorEmail(email);
+  if (outro && outro.id !== id) return volta('Já existe outra conta com esse e-mail.');
+
+  db.atualizarUsuario(id, { nome, email, instituicao, serie });
+  res.redirect(`/admin/usuarios/${id}?ok=${encodeURIComponent('Dados atualizados.')}`);
+});
+
+/**
+ * Define uma senha nova para o aluno — para quando ele perde a dele.
+ * A senha antiga é um hash e não se recupera; só se substitui.
+ */
+router.post('/usuarios/:id/senha', (req, res, next) => {
+  const id = Number(req.params.id);
+  const aluno = db.usuarioPorId(id);
+  if (!aluno) return next();
+
+  const senha = req.body.senha || '';
+  if (senha.length < 8) {
+    return res.redirect(`/admin/usuarios/${id}?erro=${encodeURIComponent('A senha precisa de pelo menos 8 caracteres.')}`);
+  }
+  db.trocarSenhaUsuario(id, bcrypt.hashSync(senha, 12));
+  res.redirect(`/admin/usuarios/${id}?ok=${encodeURIComponent('Senha redefinida. Avise o aluno.')}`);
+});
+
+/**
+ * Exclui a conta. Leva junto os simulados e as respostas, pelo CASCADE do
+ * schema — não tem volta.
+ *
+ * Exige que o e-mail seja digitado no formulário e confere no servidor: a
+ * confirmação do navegador sozinha não bastaria, e um clique errado numa lista
+ * de vinte alunos apagaria o histórico de quem não devia.
+ */
+router.post('/usuarios/:id/excluir', (req, res, next) => {
+  const id = Number(req.params.id);
+  const aluno = db.usuarioPorId(id);
+  if (!aluno) return next();
+
+  const confirmacao = (req.body.confirmacao || '').trim().toLowerCase();
+  if (confirmacao !== aluno.email.toLowerCase()) {
+    return res.redirect(`/admin/usuarios/${id}?erro=${encodeURIComponent('Para excluir, digite o e-mail do aluno exatamente como está no cadastro.')}`);
+  }
+
+  const r = db.removerUsuario(id);
+  const recado = `Conta de ${aluno.nome} excluída` + (r.simulados ? `, com ${r.simulados} simulado(s).` : '.');
+  res.redirect(`/admin/usuarios?ok=${encodeURIComponent(recado)}`);
 });
 
 module.exports = router;

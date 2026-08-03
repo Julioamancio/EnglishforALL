@@ -1,6 +1,8 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const db = require('../db');
+const instituicoes = require('../lib/instituicoes');
+const series = require('../lib/series');
 
 const router = express.Router();
 
@@ -25,7 +27,9 @@ router.get('/cadastro', jaLogado, (req, res) => {
     description:
       'Crie sua conta gratuita para montar provas de inglês em PDF e Word com as questões do banco.',
     erro: null,
-    valores: { nome: '', email: '', instituicao: '' },
+    valores: { nome: '', email: '', instituicao: '', serie: '' },
+    escolas: instituicoes.INSTITUICOES,
+    etapas: series.porEtapa(),
     voltar: destinoSeguro(req.query.voltar),
   });
 });
@@ -35,6 +39,7 @@ router.post('/cadastro', jaLogado, (req, res) => {
   const email = (req.body.email || '').trim().toLowerCase();
   const senha = req.body.senha || '';
   const instituicao = (req.body.instituicao || '').trim();
+  const serie = (req.body.serie || '').trim();
   const voltar = destinoSeguro(req.body.voltar);
 
   const reRender = (erro, status = 400) =>
@@ -42,20 +47,24 @@ router.post('/cadastro', jaLogado, (req, res) => {
       title: 'Criar conta grátis',
       description: '',
       erro,
-      valores: { nome, email, instituicao },
+      valores: { nome, email, instituicao, serie },
+      escolas: instituicoes.INSTITUICOES,
+      etapas: series.porEtapa(),
       voltar,
     });
 
   // Nome completo: pelo menos duas palavras.
   if (nome.split(/\s+/).filter(Boolean).length < 2) return reRender('Informe seu nome completo.');
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return reRender('Informe um e-mail válido.');
-  if (instituicao.length < 2) return reRender('Informe onde você estuda ou trabalha.');
+  // lista fechada: com campo livre a mesma escola chegava de seis jeitos
+  if (!instituicoes.valida(instituicao)) return reRender('Escolha a sua instituição.');
+  if (!series.valida(serie)) return reRender('Escolha a sua série.');
   if (senha.length < 8) return reRender('A senha precisa ter pelo menos 8 caracteres.');
   if (db.usuarioPorEmail(email)) {
     return reRender('Já existe uma conta com esse e-mail. Tente entrar.', 409);
   }
 
-  const id = db.criarUsuario(nome, email, bcrypt.hashSync(senha, 12), instituicao);
+  const id = db.criarUsuario(nome, email, bcrypt.hashSync(senha, 12), instituicao, serie);
   db.salvarAssinante(email, 'cadastro');
 
   req.session.usuario = { id, nome, email };

@@ -7,13 +7,97 @@
   <p class="sim-etiqueta">Ficha do aluno</p>
   <h1><%= aluno.nome %></h1>
   <p class="suave">
-    <%= aluno.email %><% if (aluno.instituicao) { %> · <%= aluno.instituicao %><% } %>
+    <%= aluno.email %><% if (aluno.instituicao) { %> · <%= aluno.instituicao %><% } %><% if (aluno.serie) { %> · <%= rotuloSerie(aluno.serie) %><% } %>
     · conta criada em <%= dataBR(aluno.criado_em) %>
   </p>
+
+  <% if (recado) { %><p class="aviso aviso--ok"><%= recado %></p><% } %>
+  <% if (erro) { %><p class="aviso aviso--erro"><%= erro %></p><% } %>
 
   <% if (emAberto) { %>
     <p class="aviso">Há um simulado <strong>em andamento</strong> (semana <%= emAberto.semana %>), ainda não concluído. Ele não entra nos números abaixo.</p>
   <% } %>
+
+  <details class="painel ficha-editar">
+    <summary>Editar cadastro</summary>
+
+    <form method="post" action="/admin/usuarios/<%= aluno.id %>">
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" value="<%= aluno.nome %>" required>
+      </div>
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" value="<%= aluno.email %>" required>
+        <p class="dica">É com ele que o aluno entra. Mudar aqui muda o login.</p>
+      </div>
+      <%
+        // Contas antigas podem ter um valor que não está mais na lista ("Escola",
+        // "Colégio São José Escolápias"). Ele continua aparecendo como opção
+        // selecionada para não sumir sem o professor querer.
+        const foraDaLista = (aluno.instituicao || '').trim()
+          && !escolas.some((e) => e.sigla === aluno.instituicao);
+      %>
+      <div class="campo">
+        <label for="instituicao">Onde estuda</label>
+        <select id="instituicao" name="instituicao">
+          <option value=""<%= !(aluno.instituicao || '').trim() ? ' selected' : '' %>>— não informado</option>
+          <% escolas.forEach(function (e) { %>
+            <option value="<%= e.sigla %>"<%= aluno.instituicao === e.sigla ? ' selected' : '' %>><%= e.sigla === e.nome ? e.sigla : e.sigla + ' — ' + e.nome %></option>
+          <% }) %>
+          <% if (foraDaLista) { %>
+            <option value="<%= aluno.instituicao %>" selected><%= aluno.instituicao %> (cadastro antigo)</option>
+          <% } %>
+        </select>
+        <% if (foraDaLista) { %>
+          <p class="dica">Este aluno se cadastrou quando o campo era livre. Escolher uma das opções acima padroniza o filtro.</p>
+        <% } %>
+      </div>
+      <div class="campo">
+        <label for="serie">Série</label>
+        <select id="serie" name="serie">
+          <option value=""<%= !(aluno.serie || '').trim() ? ' selected' : '' %>>— não informada</option>
+          <% etapas.forEach(function (et) { %>
+            <optgroup label="<%= et.etapa %>">
+              <% et.series.forEach(function (s) { %>
+                <option value="<%= s.valor %>"<%= aluno.serie === s.valor ? ' selected' : '' %>><%= s.rotulo %></option>
+              <% }) %>
+            </optgroup>
+          <% }) %>
+        </select>
+      </div>
+      <button class="btn" type="submit">Salvar</button>
+    </form>
+
+    <hr class="ficha-sep">
+
+    <form method="post" action="/admin/usuarios/<%= aluno.id %>/senha">
+      <div class="campo">
+        <label for="senha">Definir uma senha nova</label>
+        <input type="password" id="senha" name="senha" minlength="8" placeholder="pelo menos 8 caracteres">
+        <p class="dica">Para quando o aluno perde a dele. A senha atual é um hash e não pode ser lida — só substituída.</p>
+      </div>
+      <button class="btn btn--sec" type="submit">Redefinir senha</button>
+    </form>
+
+    <hr class="ficha-sep">
+
+    <%# Excluir leva junto simulados e respostas, pelo CASCADE do schema. Por isso
+        o e-mail tem de ser digitado, e o servidor confere antes de apagar. %>
+    <form method="post" action="/admin/usuarios/<%= aluno.id %>/excluir" class="zona-risco"
+          onsubmit="return confirm('Excluir a conta de <%= aluno.nome.replace(/'/g, "\\'") %>? Os simulados e o histórico vão junto, e não há como desfazer.')">
+      <h3>Excluir esta conta</h3>
+      <p class="dica">
+        Apaga o cadastro, os <%= d.vazio ? 0 : d.concluidos %> simulado(s) concluído(s) e todas as respostas.
+        <strong>Não tem volta.</strong> Para confirmar, digite o e-mail do aluno.
+      </p>
+      <div class="campo">
+        <label for="confirmacao" class="sr">E-mail do aluno</label>
+        <input type="text" id="confirmacao" name="confirmacao" placeholder="<%= aluno.email %>" autocomplete="off">
+      </div>
+      <button class="btn btn--perigo" type="submit">Excluir permanentemente</button>
+    </form>
+  </details>
 
 <% if (d.vazio) { %>
   <p class="aviso">Este aluno ainda não concluiu nenhum simulado oficial.</p>

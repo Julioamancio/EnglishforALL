@@ -23,6 +23,11 @@ const colunasUsuarios = () => db.prepare('PRAGMA table_info(usuarios)').all().ma
 if (!colunasUsuarios().includes('instituicao')) {
   db.exec("ALTER TABLE usuarios ADD COLUMN instituicao TEXT NOT NULL DEFAULT ''");
 }
+// Série escolar, do 6º ano à 3ª do médio. Também entrou depois: quem se
+// cadastrou antes fica em branco e o painel mostra como "não informada".
+if (!colunasUsuarios().includes('serie')) {
+  db.exec("ALTER TABLE usuarios ADD COLUMN serie TEXT NOT NULL DEFAULT ''");
+}
 
 const LETRAS = ['A', 'B', 'C', 'D', 'E'];
 
@@ -209,10 +214,10 @@ function assinantes() {
 
 // ------------------------------------------------------------- usuários
 
-function criarUsuario(nome, email, senhaHash, instituicao = '') {
+function criarUsuario(nome, email, senhaHash, instituicao = '', serie = '') {
   const info = db
-    .prepare('INSERT INTO usuarios (nome, email, senha_hash, instituicao) VALUES (?, ?, ?, ?)')
-    .run(nome.trim(), email.trim().toLowerCase(), senhaHash, instituicao.trim());
+    .prepare('INSERT INTO usuarios (nome, email, senha_hash, instituicao, serie) VALUES (?, ?, ?, ?, ?)')
+    .run(nome.trim(), email.trim().toLowerCase(), senhaHash, instituicao.trim(), (serie || '').trim());
   return info.lastInsertRowid;
 }
 
@@ -228,9 +233,77 @@ function usuarioPorId(id) {
 
 function usuarios() {
   return db
-    .prepare('SELECT id, nome, email, instituicao, criado_em FROM usuarios ORDER BY criado_em DESC')
+    .prepare('SELECT id, nome, email, instituicao, serie, criado_em FROM usuarios ORDER BY criado_em DESC')
     .all();
 }
+
+/** Chave para agrupar instituições escritas de formas diferentes. */
+function chaveInstituicao(nome) {
+  return String(nome || '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '') // tira acento
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/**
+ * Instituições cadastradas, agrupadas por escrita equivalente.
+ *
+ * O campo é texto livre no cadastro, então a mesma escola chega de vários
+ * jeitos: "Colégio São José Escolápias", "Colegio Sao Jose Escolapias",
+ * "Colégio São José". Sem agrupar, o filtro viraria uma lista de quase-duplicatas
+ * e não serviria para nada. A grafia mostrada é a mais frequente do grupo.
+ */
+function instituicoes() {
+  const grupos = new Map();
+  db.prepare("SELECT instituicao FROM usuarios WHERE TRIM(COALESCE(instituicao,'')) <> ''")
+    .all()
+    .forEach(({ instituicao }) => {
+      const k = chaveInstituicao(instituicao);
+      if (!grupos.has(k)) grupos.set(k, { chave: k, total: 0, grafias: new Map() });
+      const g = grupos.get(k);
+      g.total++;
+      g.grafias.set(instituicao, (g.grafias.get(instituicao) || 0) + 1);
+    });
+  return [...grupos.values()]
+    .map((g) => {
+      const ordenadas = [...g.grafias.entries()].sort((a, b) => b[1] - a[1]);
+      return {
+        chave: g.chave,
+        nome: ordenadas[0][0],
+        total: g.total,
+        variacoes: ordenadas.length,
+        grafias: ordenadas.map(([texto, n]) => ({ texto, n })),
+      };
+    })
+    .sort((a, b) => b.total - a.total || a.nome.localeCompare(b.nome, 'pt-BR'));
+}
+
+/** Edita os dados de cadastro. Não mexe em senha — isso tem função própria. */
+const atualizarUsuario = db.transaction((id, { nome, email, instituicao, serie }) => {
+  db.prepare(
+    'UPDATE usuarios SET nome = ?, email = ?, instituicao = ?, serie = ? WHERE id = ?'
+  ).run(nome.trim(), email.trim().toLowerCase(), (instituicao || '').trim(), (serie || '').trim(), id);
+});
+
+function trocarSenhaUsuario(id, senhaHash) {
+  db.prepare('UPDATE usuarios SET senha_hash = ? WHERE id = ?').run(senhaHash, id);
+}
+
+/**
+ * Apaga a conta e tudo o que veio com ela.
+ *
+ * Os simulados e as respostas saem junto pelo ON DELETE CASCADE do schema — é
+ * irreversível, e o histórico daquele aluno não volta. A confirmação fica na
+ * interface; aqui só se executa.
+ */
+const removerUsuario = db.transaction((id) => {
+  const u = db.prepare('SELECT email FROM usuarios WHERE id = ?').get(id);
+  if (!u) return { removido: false };
+  const simulados = db.prepare('SELECT COUNT(*) c FROM simulados WHERE usuario_id = ?').get(id).c;
+  db.prepare('DELETE FROM usuarios WHERE id = ?').run(id);
+  return { removido: true, email: u.email, simulados };
+});
 
 function porIds(ids) {
   if (!ids.length) return [];
@@ -263,4 +336,9 @@ module.exports = {
   usuarioPorEmail,
   usuarioPorId,
   usuarios,
+  instituicoes,
+  chaveInstituicao,
+  atualizarUsuario,
+  trocarSenhaUsuario,
+  removerUsuario,
 };

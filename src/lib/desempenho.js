@@ -151,7 +151,7 @@ function resumo(usuarioId) {
 function porAluno() {
   return db
     .prepare(
-      `SELECT u.id, u.nome, u.email, u.instituicao, u.criado_em,
+      `SELECT u.id, u.nome, u.email, u.instituicao, u.serie, u.criado_em,
               COUNT(s.id)                                        AS concluidos,
               COALESCE(SUM(s.acertos), 0)                        AS acertos,
               COALESCE(SUM(s.total), 0)                          AS questoes,

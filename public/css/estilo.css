@@ -1180,3 +1180,34 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
   .chamada { flex-direction: column; align-items: stretch; }
   .chamada .btn { width: 100%; text-align: center; }
 }
+
+/* ------------------------------------------------- painel: filtro de alunos */
+.filtro-alunos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  align-items: flex-end;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+.filtro-alunos .campo { margin-bottom: 0; }
+.filtro-alunos .campo--cresce { flex: 1 1 16rem; }
+.filtro-alunos select { min-width: 14rem; }
+
+/* edição na ficha do aluno */
+.ficha-editar > summary { font-weight: 600; cursor: pointer; }
+.ficha-editar[open] > summary { margin-bottom: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--borda); }
+.ficha-sep { border: 0; border-top: 1px solid var(--borda); margin: 1.4rem 0; }
+
+/* a exclusão fica visualmente separada do resto: é a única ação sem volta */
+.zona-risco {
+  border: 1px solid var(--correcao);
+  border-radius: var(--r);
+  padding: 1rem 1.1rem;
+  background: var(--correcao-fraca);
+}
+.zona-risco h3 { margin: 0 0 .3rem; font-size: 1rem; color: var(--correcao); }
+.zona-risco .dica { color: var(--texto); }

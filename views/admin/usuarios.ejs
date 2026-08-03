@@ -2,23 +2,73 @@
 <%
   const dataBR = (s) => s ? s.slice(8, 10) + '/' + s.slice(5, 7) + '/' + s.slice(0, 4) : '—';
   const comSimulado = alunos.filter((a) => a.concluidos > 0);
+  const misturadas = escolas.filter((e) => e.variacoes > 1);
 %>
 <div class="env">
   <h1>Alunos e desempenho</h1>
+
+  <% if (recado) { %><p class="aviso aviso--ok"><%= recado %></p><% } %>
+
+  <form class="filtro-alunos" method="get" action="/admin/usuarios">
+    <div class="campo campo--cresce">
+      <label for="q">Buscar por nome ou e-mail</label>
+      <input type="search" id="q" name="q" value="<%= busca %>" placeholder="parte do nome ou do e-mail">
+    </div>
+    <div class="campo">
+      <label for="escola">Instituição</label>
+      <select id="escola" name="escola">
+        <option value="">Todas (<%= totalGeral %>)</option>
+        <% escolas.forEach(function (e) { %>
+          <option value="<%= e.chave %>"<%= filtro === e.chave ? ' selected' : '' %>><%= e.nome %> (<%= e.total %>)<%= e.variacoes > 1 ? ' ⚠' : '' %></option>
+        <% }) %>
+        <% if (semEscola) { %>
+          <option value="sem"<%= filtro === 'sem' ? ' selected' : '' %>>— sem instituição (<%= semEscola %>)</option>
+        <% } %>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="serie">Série</label>
+      <select id="serie" name="serie">
+        <option value="">Todas</option>
+        <% turmas.forEach(function (t) { %>
+          <option value="<%= t.valor %>"<%= turma === t.valor ? ' selected' : '' %>><%= rotuloSerie(t.valor) %> (<%= t.total %>)</option>
+        <% }) %>
+        <% if (semTurma) { %>
+          <option value="sem"<%= turma === 'sem' ? ' selected' : '' %>>— não informada (<%= semTurma %>)</option>
+        <% } %>
+      </select>
+    </div>
+    <button class="btn" type="submit">Filtrar</button>
+    <% if (filtro || turma || busca) { %><a class="btn btn--sec" href="/admin/usuarios">Limpar</a><% } %>
+  </form>
+
+  <% if (misturadas.length && !filtro) { %>
+    <%# O campo é texto livre no cadastro, então a mesma escola chega escrita de
+        vários jeitos. O filtro já agrupa; o aviso é para padronizar quando der. %>
+    <details class="aviso">
+      <summary><strong><%= misturadas.length %></strong> <%= misturadas.length === 1 ? 'instituição aparece escrita' : 'instituições aparecem escritas' %> de mais de uma forma — o filtro já agrupa, mas dá para padronizar na ficha de cada aluno.</summary>
+      <ul>
+        <% misturadas.forEach(function (e) { %>
+          <li><strong><%= e.nome %></strong>: <%= e.grafias.map(function (g) { return '“' + g.texto + '” (' + g.n + ')'; }).join(', ') %></li>
+        <% }) %>
+      </ul>
+    </details>
+  <% } %>
+
   <p>
-    <%= alunos.length %> <%= alunos.length === 1 ? 'conta cadastrada' : 'contas cadastradas' %>,
+    <%= alunos.length %> <%= alunos.length === 1 ? 'aluno' : 'alunos' %><%= (filtro || turma || busca) ? ' no filtro' : '' %>,
     <%= comSimulado.length %> com pelo menos um simulado concluído.
     Só contam os simulados oficiais — o treino livre no banco não entra.
   </p>
 
   <div class="painel rolagem">
     <% if (!alunos.length) { %>
-      <p class="vazio">Nenhum aluno ainda.</p>
+      <p class="vazio"><%= (filtro || turma || busca) ? 'Nenhum aluno com esse filtro.' : 'Nenhum aluno ainda.' %></p>
     <% } else { %>
       <table class="tabela">
         <thead>
           <tr>
-            <th>Aluno</th><th>Onde estuda</th><th>Simulados</th>
+            <th>Aluno</th><th>Onde estuda</th><th>Série</th><th>Simulados</th>
             <th>Média</th><th>Última nota</th><th>Acertos</th><th>Último simulado</th><th></th>
           </tr>
         </thead>
@@ -30,6 +80,7 @@
                 <small class="suave"><%= a.email %></small>
               </td>
               <td><%= a.instituicao || '—' %></td>
+              <td><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
               <td>
                 <%= a.concluidos %>
                 <% if (a.em_aberto) { %><span class="etiqueta etiqueta--espera">1 em andamento</span><% } %>

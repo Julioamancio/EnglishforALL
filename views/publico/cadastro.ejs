@@ -14,9 +14,30 @@
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" required autocomplete="email" value="<%= valores.email %>" placeholder="professor@escola.com.br">
       </div>
-      <div class="campo">
-        <label for="instituicao">Onde você estuda ou trabalha</label>
-        <input type="text" id="instituicao" name="instituicao" required value="<%= valores.instituicao || '' %>" placeholder="Escola, faculdade ou cursinho">
+      <div class="campo-dupla">
+        <div class="campo">
+          <label for="instituicao">Onde você estuda</label>
+          <select id="instituicao" name="instituicao" required>
+            <option value="">Selecione…</option>
+            <% escolas.forEach(function (e) { %>
+              <option value="<%= e.sigla %>"<%= valores.instituicao === e.sigla ? ' selected' : '' %>><%= e.sigla === e.nome ? e.sigla : e.sigla + ' — ' + e.nome %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="serie">Série</label>
+          <%# Agrupado por etapa: no fundamental conta-se em anos, no médio em séries %>
+          <select id="serie" name="serie" required>
+            <option value="">Selecione…</option>
+            <% etapas.forEach(function (et) { %>
+              <optgroup label="<%= et.etapa %>">
+                <% et.series.forEach(function (s) { %>
+                  <option value="<%= s.valor %>"<%= valores.serie === s.valor ? ' selected' : '' %>><%= s.rotulo %></option>
+                <% }) %>
+              </optgroup>
+            <% }) %>
+          </select>
+        </div>
       </div>
       <div class="campo">
         <label for="senha">Senha</label>
