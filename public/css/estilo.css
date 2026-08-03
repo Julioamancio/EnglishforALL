@@ -578,14 +578,15 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 /* ------------------------------------------------------------- gramática */
 .hero--gram .hero__int { padding-bottom: 1rem; }
 .turma { display: flex; flex-wrap: wrap; gap: 1.4rem 2.2rem; margin-top: 2rem; }
-.turma__membro { display: flex; align-items: center; gap: .8rem; margin: 0; }
-.turma__membro .persona svg { width: 58px; height: 58px; }
+.turma__membro { display: flex; align-items: flex-end; gap: .6rem; margin: 0; }
+.turma__membro .persona img { height: 220px; width: auto; }
 .turma__membro figcaption { display: flex; flex-direction: column; line-height: 1.35; }
 .turma__membro strong { font-size: .95rem; }
 .turma__membro span { font-size: .8rem; color: var(--suave); }
 
 .persona { display: inline-flex; flex: none; }
-.persona svg { width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 1px 4px rgba(25,30,56,.14); }
+/* figura de corpo inteiro: manda a altura, a largura acompanha */
+.persona img { height: 128px; width: auto; display: block; }
 
 .niveis-nav { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.8rem 0 .4rem; }
 .niveis-nav__pill {
@@ -673,7 +674,7 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 .erros { display: flex; flex-direction: column; gap: 1rem; }
 .erro { background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--r); padding: 1rem 1.1rem; }
 .erro__lado { display: flex; align-items: center; gap: .7rem; margin: .3rem 0; }
-.erro__lado .persona svg { width: 36px; height: 36px; }
+.erro__lado .persona img { height: 100px; }
 .erro__lado p { margin: 0; font-size: .98rem; }
 .erro__lado--errado s { color: #c23b52; text-decoration-thickness: 2px; }
 .erro__lado--certo strong { color: #1f8a4c; }
@@ -1299,3 +1300,11 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 /* questão retirada do banco: nem acerto nem erro, ponto para todos */
 .sim-veredito--anulada { background: var(--fundo-2); color: var(--texto); border-left: 4px solid var(--marca); }
 .sim-anulada__porque { margin: .4rem 0 1rem; font: 400 .88rem/1.5 var(--ui); color: var(--suave); }
+
+/* personas no celular */
+@media (max-width: 560px) {
+  .turma { gap: 1rem 1.2rem; }
+  .turma__membro .persona img { height: 150px; }
+  .persona img { height: 96px; }
+  .erro__lado .persona img { height: 76px; }
+}
