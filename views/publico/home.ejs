@@ -1,5 +1,7 @@
 <%- include('../partials/cabeca') %>
-<section class="hero">
+<section class="hero hero--particulas">
+  <%# Decoração pura: fica fora da árvore de acessibilidade e não recebe cliques. %>
+  <canvas class="hero__tela" data-particulas aria-hidden="true"></canvas>
   <div class="hero__int">
     <h1>Questões de inglês do ENEM com <span class="grifo">gabarito comentado</span></h1>
     <p class="hero__sub">Texto autêntico com fonte citada, cinco alternativas equilibradas e um comentário explicando por que cada distrator falha. Resolva online com correção na hora ou monte sua prova em PDF.</p>
@@ -110,4 +112,6 @@
     <% } %>
   </section>
 </div>
+<%# Só a home tem o hero animado, então o script não entra no cabeçalho comum. %>
+<script src="/js/particulas.js?v=1" defer></script>
 <%- include('../partials/rodape') %>
