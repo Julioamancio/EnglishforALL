@@ -22,6 +22,9 @@ cada linha dele existe por um motivo — todas foram aprendidas errando.
 > reflexo. Sem partículas, faíscas ou poeira. O personagem flutua sobre o preto,
 > sem apoio visível de nenhum tipo.**
 >
+> **Sem áudio, sem fala, sem narração, sem música. O personagem não fala: boca
+> fechada ou sorriso leve, sem movimento de lábios articulando palavras.**
+>
 > Iluminação frontal e suave, sem contraluz forte que crie borda brilhante.
 >
 > O último quadro deve ser igual ao primeiro, para o vídeo repetir em laço sem
@@ -36,7 +39,7 @@ cada linha dele existe por um motivo — todas foram aprendidas errando.
 
 | personagem | descrição |
 |---|---|
-| **Sofia** | professora adulta, cabelo castanho preso em coque, óculos redondos, cardigã rosa claro, saia marrom, segurando livros coloridos, acenando com a mão |
+| **Sofia** | mulher adulta, cabelo castanho preso em coque, óculos redondos, cardigã rosa claro, saia marrom, segurando livros coloridos junto ao corpo, mão livre relaxada ao lado |
 | **Maya** | menina negra de uns 8 anos, dois coques de cabelo cacheado com laços amarelos, camiseta amarela, jardineira jeans azul clara, tênis amarelos, uma das mãos aberta como quem apresenta |
 | **Leo** | raposa laranja e branca em pé, bípede, mochila verde, lenço azul no pescoço, cauda felpuda, dedo indicador levantado |
 | **Max** | robô branco e azul claro, cabeça arredondada com visor escuro e olhos azuis brilhantes, antena com esfera verde no topo, dedo indicador levantado |
@@ -90,3 +93,17 @@ vídeo sozinho no próximo restart; sem o arquivo, continua na imagem.
 Confira antes de aceitar: extraia um quadro e componha sobre fundo magenta. Se
 aparecer qualquer mancha escura sob os pés, o vídeo precisa ser refeito — não
 tente consertar no recorte, porque a mancha está grudada no personagem.
+
+---
+
+## Se o Flow falhar
+
+**"Falha ao gerar áudio"** — o erro é do som, não do vídeo. Nas configurações do
+Flow, marque para retornar vídeos **sem áudio**. O site toca os personagens
+mudos de qualquer jeito: o processamento descarta a trilha.
+
+Se persistir, o gatilho costuma estar em palavras que sugerem alguém falando —
+"professora", "acenando", "cumprimentando", "apresentando". Foi por isso que a
+Sofia deixou de ser "professora acenando" e virou "mulher adulta com os livros
+junto ao corpo". O papel dela aparece na página, no texto ao lado; o vídeo só
+precisa dela em pé, viva e quieta.
