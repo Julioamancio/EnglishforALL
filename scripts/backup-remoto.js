@@ -93,50 +93,45 @@ fs.unlinkSync(teste);
 if (!igual) { log('FALHA: o arquivo decifrado não bate com o original'); process.exit(1); }
 log('  ✓ conferido: o cifrado volta idêntico ao original');
 
-// instruções de restauração viajam junto — de nada adianta o backup se, no dia
-// do aperto, ninguém souber abrir
-fs.writeFileSync(path.join(TRAB, 'LEIA-ME.md'), `# Backup do English for ALL
+// O README deste repositorio e o "comece por aqui" de quem perdeu tudo: nao
+// basta ensinar a decifrar, tem que dizer onde esta o codigo, como subir um
+// servidor do zero e quais armadilhas ja morderam. O texto fica em
+// scripts/backup-readme.md — fora do JS, porque ele tem crase e \${} e escapar
+// isso dentro de uma template string ja quebrou o script uma vez.
+const modelo = fs.readFileSync(path.join(__dirname, 'backup-readme.md'), 'utf8');
+const tabela = enviados.map((e) => `| \`${e.nome}\` | ${e.mb} MB | de \`${e.origem}\` |`).join('\n');
+// as contagens saem do banco que esta indo, para o README descrever
+// exatamente o conteudo que acompanha
+let conta = { questoes: '?', usuarios: '?', simulados: '?', respostas: '?' };
+try {
+  const Database = require('better-sqlite3');
+  const b = new Database(alvos[0][1], { readonly: true });
+  const um = (sql) => b.prepare(sql).get().n;
+  conta = {
+    questoes: um('SELECT COUNT(*) n FROM questoes'),
+    usuarios: um('SELECT COUNT(*) n FROM usuarios'),
+    simulados: um('SELECT COUNT(*) n FROM simulados'),
+    respostas: um('SELECT COUNT(*) n FROM simulado_questoes WHERE resposta IS NOT NULL'),
+  };
+  b.close();
+} catch (e) {
+  log(`  aviso: nao consegui contar o conteudo (${e.message})`);
+}
 
-Gerado em ${new Date().toISOString().slice(0, 19).replace('T', ' ')} UTC.
-Cada envio SUBSTITUI o anterior: aqui fica sempre a cópia mais recente.
-O histórico está no servidor, em \`/var/backups/banco-questoes/diarios\`.
-
-| arquivo | o que é |
-|---|---|
-${enviados.map((e) => `| \`${e.nome}\` | ${e.mb} MB — de \`${e.origem}\` |`).join('\n')}
-
-## Como abrir
-
-Tudo está cifrado com AES-256. A senha está em \`/root/.backup-senha\` no
-servidor e na cópia que o professor guardou fora dele. **Sem ela nada abre** —
-nem o GitHub, nem quem escreveu isto.
-
-\`\`\`bash
-openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 \\
-  -in banco.db.enc -out banco.db -pass file:CAMINHO_DA_SENHA
-\`\`\`
-
-Confira antes de usar:
-
-\`\`\`bash
-sqlite3 banco.db "PRAGMA integrity_check;"   # tem que dizer: ok
-sqlite3 banco.db "SELECT COUNT(*) FROM questoes;"
-\`\`\`
-
-## Como voltar para o servidor
-
-Não sobrescreva \`dados/banco.db\` com o serviço no ar: o SQLite está em modo
-WAL e o banco antigo volta a valer por cima. Use o script do projeto, que para
-o serviço e apaga o \`-wal\` e o \`-shm\`:
-
-\`\`\`bash
-node scripts/restaurar.js --conferir
-node scripts/restaurar.js --restaurar CAMINHO/banco.db
-\`\`\`
-
-Restaurar o arquivo inteiro desfaz o que os alunos fizeram desde este backup.
-Para estrago pontual, leia o valor certo daqui e conserte só aquilo.
-`);
+const campos = {
+  DATA: new Date().toISOString().slice(0, 16).replace('T', ' '),
+  QUESTOES: conta.questoes,
+  USUARIOS: conta.usuarios,
+  SIMULADOS: conta.simulados,
+  RESPOSTAS: conta.respostas,
+  TAMANHO: (total / 1048576).toFixed(0),
+  TABELA: tabela,
+};
+let readme = modelo;
+for (const [k, v] of Object.entries(campos)) readme = readme.split('{{' + k + '}}').join(String(v));
+const sobrou = readme.match(/\{\{[A-Z_]+\}\}/g);
+if (sobrou) { log(`FALHA: campo sem valor no README: ${sobrou.join(', ')}`); process.exit(1); }
+fs.writeFileSync(path.join(TRAB, 'README.md'), readme);
 
 log(`total cifrado: ${(total / 1048576).toFixed(1)} MB`);
 
