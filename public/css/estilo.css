@@ -496,14 +496,10 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 .rodape a:hover { color: var(--tinta); }
 .rodape__fim { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--borda); font-size: .8rem; display: flex; flex-wrap: wrap; gap: .6rem; justify-content: space-between; }
 
-.rodape__creditos {
-  margin: 1rem 0 0;
-  text-align: center;
-  font-size: .78rem;
-  color: var(--suave);
-  letter-spacing: .01em;
-}
-.rodape__creditos strong { color: var(--texto); font-weight: 600; }
+.rodape__assina { color: var(--suave); }
+.rodape__assina strong { color: var(--texto); font-weight: 600; }
+/* o ano não pode quebrar sozinho para uma linha só dele */
+.rodape__ano { white-space: nowrap; }
 
 /* ---------------------------------------------------------- utilidades */
 

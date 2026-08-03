@@ -24,7 +24,10 @@
       </div>
     </div>
     <div class="rodape__fim">
-      <span>English for ALL — Language &amp; Learning Community.</span>
+      <span class="rodape__assina">English for ALL — Language &amp; Learning Community
+        &middot; All rights reserved
+        &middot; Feito por <strong>Júlio Amâncio</strong>
+        <span class="rodape__ano">&middot; &copy; <%= new Date().getFullYear() %></span></span>
       <% if (logado) { %>
         <span class="rodape__admin">
           <a class="btn btn--sec btn--pequeno" href="/admin">Painel</a>
@@ -38,13 +41,6 @@
         <a class="rodape__entrar-painel" href="/admin/login">Painel do professor</a>
       <% } %>
     </div>
-
-    <%# O ano sai da data do servidor para a linha não envelhecer sozinha. %>
-    <p class="rodape__creditos">
-      English for ALL &mdash; All rights reserved
-      &middot; Feito por <strong>Júlio Amâncio</strong>
-      &middot; &copy; <%= new Date().getFullYear() %>
-    </p>
   </div>
 </footer>
 </body>
