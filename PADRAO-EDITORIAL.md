@@ -550,6 +550,43 @@ estão no ar. Fica para o professor decidir entre três caminhos:
 
 Enquanto não houver decisão, nada foi alterado.
 
+
+## Descrição de imagem ausente
+
+**Ou a imagem está no item, ou não se fala dela no texto que o aluno lê.**
+
+Cinquenta e sete questões traziam, dentro do texto-base, blocos como
+`[Charge abaixo do texto: um homem de boina conversa animadamente…]` sem que
+houvesse charge alguma na tela. O aluno lia, procurava a imagem, não achava, e
+concluía que a página estava quebrada. Vinham da transcrição das provas: quem
+digitou descreveu a peça visual em vez de recortá-la.
+
+A decisão é por peça, não por questão — uma mesma charge serve a várias
+questões da mesma prova —, e a pergunta é uma só: **o comando exige a imagem?**
+
+- **Não exige** (o comando diz "According to the passage", "Segundo o texto", ou
+  é item de gramática e vocabulário): a descrição sai. Foi o caso de 18 peças e
+  56 questões, quase todas Fuvest de 1999 a 2026. A resposta está no texto; a
+  descrição de uma imagem que não aparece é só ruído. As descrições continuam no
+  histórico do git, caso um dia se decida subir as imagens.
+- **Exige** (o comando diz "os elementos visuais e verbais da figura"): apagar a
+  descrição deixaria a questão sem resposta. Aqui o conserto é a imagem. Foi o
+  caso da 1047 (Fuvest 2022, cartum do Bizarro).
+
+**De onde tirar a imagem:** da prova oficial, não de uma busca genérica. A da
+1047 saiu do PDF da Fuvest (`fuvest.br`, primeira fase 2022 tipo V, página 14),
+extraída com `pdfimages -f 14 -l 14 -png`. É a mesma procedência das outras 104
+imagens do banco, e evita hospedar a foto de produto de algum vendedor.
+
+**A descrição vai para `imagem_alt`, nunca para o texto-base.** É o campo que
+existe para isso: quem usa leitor de tela ouve a cena, quem enxerga vê a imagem,
+e ninguém lê a descrição de algo que não está lá. Lembrando que `imagem_alt` sem
+`imagem` é invisível — o template só renderiza o alt dentro da tag `<img>`.
+
+O `audita-imagens.js` confere as duas pontas: nenhuma descrição de imagem
+ausente no texto, e nenhuma `imagem` apontando para arquivo que não existe no
+disco (que renderiza ícone quebrado, pior que não ter imagem).
+
 ## 14. Aspas
 
 **Lote de tipografia, 31/07/2026.** A pendência registrada dizia "197 texto_base
