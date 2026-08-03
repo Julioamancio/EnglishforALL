@@ -1295,3 +1295,7 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 
 .gram-vazio { text-align: center; }
 .gram-vazio em { font-style: normal; font-weight: 600; color: var(--texto); }
+
+/* questão retirada do banco: nem acerto nem erro, ponto para todos */
+.sim-veredito--anulada { background: var(--fundo-2); color: var(--texto); border-left: 4px solid var(--marca); }
+.sim-anulada__porque { margin: .4rem 0 1rem; font: 400 .88rem/1.5 var(--ui); color: var(--suave); }

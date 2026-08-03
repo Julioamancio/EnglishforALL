@@ -187,7 +187,7 @@ function questoesDo(simuladoId, { comRespostas = false } = {}) {
   const campos = comRespostas
     ? 'q.*, sq.ordem, sq.resposta, sq.correta, sq.respondida_em'
     : `q.id, q.slug, q.titulo, q.texto_base, q.imagem, q.imagem_alt, q.enunciado,
-       q.instituicao, q.ano, q.tema, q.nivel_cefr, q.tipo, q.genero_textual,
+       q.instituicao, q.ano, q.tema, q.nivel_cefr, q.tipo, q.genero_textual, q.publicada,
        sq.ordem, sq.resposta, sq.respondida_em`;
   const linhas = db
     .prepare(

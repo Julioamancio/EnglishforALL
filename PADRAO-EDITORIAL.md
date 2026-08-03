@@ -587,6 +587,36 @@ O `audita-imagens.js` confere as duas pontas: nenhuma descrição de imagem
 ausente no texto, e nenhuma `imagem` apontando para arquivo que não existe no
 disco (que renderiza ícone quebrado, pior que não ter imagem).
 
+
+## Gabarito oficial é requisito de publicação
+
+**Se a banca não publicou o gabarito, a questão não vai para o ar.**
+
+Sessenta e oito questões de seis provas da Fuvest — 1977, 1998, 2001, 2002,
+2003 e 2004 — traziam no comentário o aviso de que a resposta era leitura do
+nosso time, não a oficial. Como aviso honesto, funcionava. Como produto que se
+vende, não se sustenta: quem compra um banco de questões compra a resposta
+certa, e "provavelmente é esta" não é resposta certa.
+
+Foram **despublicadas, não apagadas**, por três motivos concretos:
+
+- 39 delas já haviam caído em simulados, e o `questoesDo` faz JOIN em
+  `questoes` **sem** filtrar `publicada` — despublicar preserva o histórico do
+  aluno, apagar faria as respostas dele sumirem da revisão.
+- `elegiveis()` filtra `publicada = 1`, então despublicar já as tira do sorteio
+  dos próximos simulados, que era o efeito desejado.
+- Se a Fuvest divulgar os gabaritos um dia, é só republicar.
+
+**Quem já tinha respondido ganhou o ponto**, tendo acertado, errado ou deixado
+em branco — é o tratamento de questão anulada, e ninguém pode ser prejudicado
+por um gabarito que nós mesmos retiramos de circulação. Foram 32 notas para
+cima e nenhuma para baixo. Na revisão, essas questões aparecem com o aviso
+"Questão anulada — o ponto foi seu", porque sem ele o aluno leria "Você
+acertou, marcou D e a correta é C" e concluiria que o site quebrou.
+
+As seis provas saíram inteiras, sem deixar prova pela metade. O acervo publicado
+foi de 1053 para 985, e o sorteio do simulado de 289 para 231 questões elegíveis.
+
 ## 14. Aspas
 
 **Lote de tipografia, 31/07/2026.** A pendência registrada dizia "197 texto_base

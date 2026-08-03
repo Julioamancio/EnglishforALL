@@ -174,6 +174,45 @@ mexido a restaurar o arquivo inteiro: entre o backup e o incidente pode haver
 aluno respondendo simulado, e restaurar tudo apaga essas respostas. Depois do
 conserto, rode `PRAGMA integrity_check` e `PRAGMA foreign_key_check`.
 
+
+## Backup: o que existe e como usar
+
+```bash
+node scripts/backup.js             # cópia agora (roda com o site no ar)
+node scripts/restaurar.js --conferir   # lista os backups e compara com o atual
+node scripts/audita-backup.js      # prova que backup e restauro funcionam
+```
+
+Roda sozinho todo dia às 03:15 por cron, com saída em `/var/log/banco-backup.log`.
+Destino: `/var/backups/banco-questoes/`.
+
+- `diarios/` — as 14 últimas cópias de `banco.db` e `sessoes.db`
+- `mensais/` — a primeira cópia de cada mês, por 6 meses
+- `uploads/` — tarball das imagens, refeito **só quando o conteúdo muda**
+  (36 MB não precisam ser copiados todo dia sem motivo)
+
+Cada cópia passa por `integrity_check` e `foreign_key_check` **antes** de ser
+aceita, e é recusada se falhar. Backup que ninguém testou é confiança falsa.
+
+Duas armadilhas já cobradas na prática, ambas cobertas pelo `audita-backup.js`:
+
+1. **A cópia se faz pela API online do SQLite (`db.backup`), nunca com `cp`.**
+   O banco está em WAL: no teste, copiar o arquivo com o serviço no ar produziu
+   uma cópia em que **nem a tabela existia** — o esquema inteiro estava no
+   `-wal`.
+2. **A conferência da cópia cria `-wal` e `-shm` ao lado dela.** Precisam ser
+   removidos, senão a rotação os conta como backups e apaga cópias boas no
+   lugar deles.
+
+**Restaurar tudo é a última opção**, não a primeira: desfaz o que os alunos
+fizeram desde aquele backup. Para estrago pontual, leia o valor certo do backup
+e conserte só aquilo. Se for restaurar mesmo, o `restaurar.js` para o serviço,
+guarda o estado atual, **apaga o `-wal` e o `-shm`** (sem isso o banco velho
+volta a valer por cima do restaurado) e confere depois.
+
+**O que ainda falta:** as cópias estão no mesmo servidor. Protegem contra erro
+humano e corrupção lógica, não contra perda do disco. Falta um destino externo.
+
 ## O que ficou para depois
 
 1. ~~Lote de tipografia.~~ **Feito em 31/07/2026.** A premissa estava errada: não

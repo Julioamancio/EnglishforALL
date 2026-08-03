@@ -27,11 +27,25 @@
       <article class="questao questao--revisao">
         <p class="origem">Questão <%= n + 1 %> · <%= q.instituicao %><%= q.ano ? ' · ' + q.ano : '' %></p>
 
+        <%# Questão retirada do banco depois que este simulado foi feito: o ponto
+            foi dado a todos, então o veredito normal ("você acertou, e a correta
+            é outra letra") apareceria contraditório. %>
+        <% if (q.publicada === 0) { %>
+          <p class="sim-veredito sim-veredito--anulada">
+            Questão anulada — <strong>o ponto foi seu</strong>, tenha marcado o que tiver marcado.
+          </p>
+          <p class="sim-anulada__porque">
+            Retiramos esta questão do banco: a banca nunca publicou o gabarito oficial dela,
+            e não vamos cobrar de você uma resposta que não podemos garantir.
+            <% if (q.resposta) { %>Você havia marcado <strong><%= q.resposta %></strong>.<% } %>
+          </p>
+        <% } else { %>
         <p class="sim-veredito <%= q.correta ? 'sim-veredito--ok' : 'sim-veredito--erro' %>">
           <%= q.correta ? 'Você acertou' : 'Você errou' %> —
           marcou <strong><%= q.resposta %></strong>,
           <% if (!q.correta) { %>a correta é <strong><%= q.gabarito %></strong><% } else { %>e a correta é <strong><%= q.gabarito %></strong><% } %>
         </p>
+        <% } %>
 
         <% if (q.imagem) { %>
           <figure class="questao__figura"><img src="<%= q.imagem %>" alt="<%= q.imagem_alt || '' %>" loading="lazy"></figure>
@@ -49,7 +63,7 @@
           <% q.alternativas.forEach(function (a) {
                const marcada = a.letra === q.resposta;
                const certa = a.letra === q.gabarito; %>
-            <li class="alt<%= certa ? ' alt--correta' : '' %><%= marcada && !certa ? ' alt--errada' : '' %>">
+            <li class="alt<%= certa && q.publicada !== 0 ? ' alt--correta' : '' %><%= marcada && !certa && q.publicada !== 0 ? ' alt--errada' : '' %>">
               <span class="bolha" aria-hidden="true"><%= a.letra %></span>
               <span><span class="sr"><%= a.letra %>)</span> <%- realce(a.texto) %>
                 <% if (certa && marcada) { %><span class="alt__nota">sua resposta · correta</span>
