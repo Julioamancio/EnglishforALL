@@ -93,6 +93,19 @@ o que o aluno marcou, a correta, se acertou. O professor vê a correção **sem
 esperar as 24 horas**: o prazo existe para o aluno não conferir o gabarito na
 hora, não para escondê-lo de quem corrige.
 
+**Rendimento por turma.** Em `/admin/turmas`, a mesma pergunta em outra escala.
+Turma é escola + série; quem não tem série fica de fora da lista. A página traz
+participação, distribuição das notas em faixas, **mediana ao lado da média**,
+evolução por semana, ranking, os recortes onde a turma mais erra e as questões
+que mais derrubaram. A mediana está ali de propósito: uma turma com média 60%
+pode ser toda de alunos em 60% ou metade em 90% e metade em 30%, e essas duas
+turmas pedem aulas diferentes — a média sozinha esconde isso.
+
+Dois cortes protegem a leitura, e ambos **explicam** quando deixam a seção
+vazia, em vez de sumir com ela: um recorte só aparece com **três** respostas da
+turma, e uma questão só entra entre as difíceis se **duas** pessoas a
+responderam e **alguém errou** — quem todos acertaram não derrubou ninguém.
+
 ---
 
 ## Rodando o projeto
@@ -182,11 +195,12 @@ dados/                   banco.db, sessoes.db e backups (fora do git)
 
 ## Verificadores
 
-Sete scripts de leitura que checam o acervo inteiro. **Todos devem fechar em
-zero**; rode depois de qualquer alteração em conteúdo:
+Oito scripts de leitura. Os sete primeiros checam o acervo; o oitavo checa as
+contas do painel de turma. **Todos devem fechar em zero**; rode depois de
+qualquer alteração em conteúdo:
 
 ```bash
-for s in linhas paragrafos imagens copias sanidade acentos aspas; do
+for s in linhas paragrafos imagens copias sanidade acentos aspas turmas; do
   node scripts/audita-$s.js
 done
 node scripts/progresso-curadoria.js
@@ -201,6 +215,7 @@ node scripts/progresso-curadoria.js
 | `audita-sanidade.js` | integridade do item, campos obrigatórios, metadados |
 | `audita-acentos.js` | nenhum campo nosso sem acentuação |
 | `audita-aspas.js` | nenhum campo mistura aspa reta com curva |
+| `audita-turmas.js` | o painel de turma não mostra número que não se sustenta |
 
 Alguns deles são mais espertos do que parecem, e por bons motivos:
 
@@ -211,6 +226,14 @@ Alguns deles são mais espertos do que parecem, e por bons motivos:
 - O `audita-acentos.js` procura por **sufixo** (`-ção`, `-ável`, `-ência`), não
   por lista de palavras — lista sempre deixa passar a próxima palavra. E ignora
   `comentario` e `imagem_alt`, que citam o texto original em inglês.
+- O `audita-turmas.js` confere **invariantes, não valores**: o corte de três
+  respostas vale, a ordem é do pior para o melhor, o histograma fecha com o
+  número de participantes. Nasceu de um bug real — em `porCampo` os apelidos
+  dos agregados se chamavam `total` e `acertos`, iguais a duas colunas da
+  tabela `simulados` que entra no JOIN, e o SQLite resolveu o `HAVING` e o
+  `ORDER BY` para as colunas. O corte não filtrava nada e a ordenação usava a
+  nota do simulado. **Ao nomear agregado, confira se o nome já existe em
+  alguma tabela do JOIN**: o SQLite não avisa.
 - O `audita-aspas.js` só acusa **fechamento sobrando**, nunca abertura: o inglês
   cita em vários parágrafos abrindo aspas em cada um e fechando só no último.
 
