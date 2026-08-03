@@ -9,6 +9,7 @@ const { realce, semMarcacao } = require('../lib/realce');
 router.use((req, res, next) => {
   res.locals.rotuloGenero = rotuloGenero;
   res.locals.realce = realce;
+  res.locals.personas = require('../lib/personas');
   next();
 });
 

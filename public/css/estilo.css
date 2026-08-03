@@ -1308,3 +1308,18 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
   .persona img { height: 96px; }
   .erro__lado .persona img { height: 76px; }
 }
+
+/* vídeo do personagem: mesmo espaço da imagem, mesma regra de altura */
+.persona__video { height: inherit; width: auto; display: block; }
+.turma__membro .persona--anima .persona__video { height: 220px; width: auto; }
+.turma__membro .persona--anima video { object-fit: contain; }
+
+/* Quem configurou o aparelho para reduzir animação vê o quadro parado.
+   O poster é a mesma PNG, então não há troca de layout. */
+@media (prefers-reduced-motion: reduce) {
+  .persona__video { animation: none !important; }
+}
+
+@media (max-width: 560px) {
+  .turma__membro .persona--anima .persona__video { height: 150px; }
+}

@@ -1,22 +1,35 @@
 <%
 /* Ilustração de um personagem da gramática. Uso:
    include('../partials/persona', { nome: 'sofia' })
+   include('../partials/persona', { nome: 'sofia', animado: true })
    nomes: sofia (professora) | maya (estudante) | leo (raposa) | max (robô)
 
-   Eram desenhos em SVG feitos à mão. Foram trocados pelas ilustrações que o
-   professor encomendou — os arquivos vivem em public/img/personas/ com fundo
-   transparente e RGB branco por baixo, para nunca aparecer fundo preto em
-   visualizador que ignore transparência.
+   `animado` só vale na apresentação da turma, em /gramatica. Numa página de
+   tópico a mesma persona aparece 15 vezes; quinze vídeos tocando juntos
+   travariam o celular do aluno. Ali fica a imagem.
+
+   Mesmo com animado, o vídeo só sai se o arquivo existir — sem ele, cai na
+   imagem sem quebrar nada.
 
    `papel` vira o alt: quem usa leitor de tela ouve o que o personagem faz,
    não a descrição do desenho. */
+var _personas = (typeof personas !== 'undefined' && personas) ? personas : null;
 var _p = {
   sofia: { nome: 'Teacher Sofia', papel: 'a professora que explica a regra' },
   maya:  { nome: 'Maya',          papel: 'a estudante que faz as perguntas' },
   leo:   { nome: 'Leo',           papel: 'a raposa que dá os macetes' },
   max:   { nome: 'Max',           papel: 'o robô que erra para você não errar' },
 }[nome] || { nome: nome, papel: '' };
-%><span class="persona persona--<%= nome %>" data-nome="<%= _p.nome %>"><img
-  src="/img/personas/<%= nome %>.png?v=1"
-  alt="<%= _p.nome %>, <%= _p.papel %>"
-  loading="lazy" decoding="async"></span>
+var _anima = Boolean(_personas) && (typeof animado !== 'undefined' && animado) && _personas.temVideo(nome);
+var _descricao = _p.nome + ', ' + _p.papel;
+%><span class="persona persona--<%= nome %><%= _anima ? ' persona--anima' : '' %>" data-nome="<%= _p.nome %>"><%
+if (_anima) { %><video class="persona__video" autoplay muted loop playsinline
+    preload="none" poster="/img/personas/<%= nome %>.png?v=1"
+    aria-label="<%= _descricao %>"><%
+    _personas.formatos(nome).forEach(function (ext) { %>
+  <source src="/video/personas/<%= nome %>.<%= ext %>?v=1" type="video/<%= ext %>"><% }); %>
+  <%# quem não toca vídeo — e quem pediu menos animação — fica com a imagem %>
+  <img src="/img/personas/<%= nome %>.png?v=1" alt="<%= _descricao %>" loading="lazy" decoding="async">
+</video><%
+} else { %><img src="/img/personas/<%= nome %>.png?v=1"
+  alt="<%= _descricao %>" loading="lazy" decoding="async"><% } %></span>
