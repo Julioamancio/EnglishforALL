@@ -44,7 +44,7 @@ altSemImagem.slice(0, 8).forEach((r) => {
 //
 // A regra que fica: ou a imagem esta no item, ou nao se fala dela no texto que
 // o aluno le. Descricao de imagem tem lugar proprio, o imagem_alt.
-const RE_LEGENDA = /\[\s*(?:imagem|tirinha|charge|foto(?:grafia)?|figura|cartum|quadrinhos?|cartaz|p[oô]ster|infogr[aá]fico)[^\]]*\]/i;
+const RE_LEGENDA = /\[\s*(?:imagem|tirinha|charge|foto(?:grafia)?|figura|cartum|quadrinhos?|cartaz|p[oô]ster|infogr[aá]fico|ilustra[cç][aã]o|logotipo|meme|verbete|quadro|gr[aá]fico|tabela|desenho|pintura|mapa|capa|placa|an[uú]ncio|ao lado do texto|acima do texto|abaixo do texto)[^\]]*\]/i;
 const legendaOrfa = db.prepare(
   "SELECT id, slug, instituicao, ano, texto_base, enunciado FROM questoes WHERE publicada=1 AND COALESCE(imagem,'')=''"
 ).all().filter((q) => RE_LEGENDA.test(q.texto_base || '') || RE_LEGENDA.test(q.enunciado || ''));

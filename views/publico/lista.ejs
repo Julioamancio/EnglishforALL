@@ -67,7 +67,7 @@
     </div>
 
     <div class="toolbar__rodape">
-      <p class="resultado-n"><strong><%= questoes.length %></strong> questão<%= questoes.length === 1 ? '' : 'ões' %> encontrada<%= questoes.length === 1 ? '' : 's' %></p>
+      <p class="resultado-n"><strong><%= questoes.length %></strong> <%= questoes.length === 1 ? 'questão encontrada' : 'questões encontradas' %></p>
 
       <% var temFiltro = filtros.tipo || filtros.nivel || filtros.genero || filtros.tema || filtros.instituicao || filtros.ano || filtros.busca; %>
       <% if (temFiltro) { %>
