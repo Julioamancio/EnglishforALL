@@ -139,6 +139,41 @@ Quando o dry-run der zero, a pergunta seguinte é o que ainda não está sendo
 verificado.
 
 
+
+## Backup e restauração: a armadilha do WAL
+
+**Nunca faça backup nem restauração do banco copiando `dados/banco.db`.**
+
+O SQLite deste projeto roda em **modo WAL**. As escritas vão para
+`banco.db-wal` (que chega a passar de 6 MB) e só depois são incorporadas ao
+arquivo principal. Duas consequências, ambas já cobradas na prática:
+
+- **Copiar só o `.db` produz um backup incompleto**, sem as escritas recentes.
+- **Restaurar sobrescrevendo o `.db` não desfaz nada**: as alterações continuam
+  no `-wal` e voltam a valer. Foi assim que um teste que injetava defeitos na
+  questão 5 para conferir se o verificador acusava deixou os quatro defeitos no
+  banco de produção — o "restore" por cópia de arquivo não desfez coisa alguma,
+  e só o próprio verificador denunciou o estrago.
+
+A forma correta de tirar uma cópia consistente, com o serviço no ar:
+
+```bash
+sqlite3 dados/banco.db ".backup '/caminho/copia.db'"
+# ou, para uma cópia já compactada:
+sqlite3 dados/banco.db "VACUUM INTO '/caminho/copia.db'"
+```
+
+Ambos respeitam o WAL e produzem um arquivo íntegro.
+
+**Para testar um verificador, não use o banco de produção.** Copie com
+`.backup` para `/tmp`, aponte o teste para a cópia, e nunca escreva em
+`dados/banco.db` só para ver se o alarme dispara.
+
+**Se algo for danificado mesmo assim**, prefira o conserto cirúrgico do que foi
+mexido a restaurar o arquivo inteiro: entre o backup e o incidente pode haver
+aluno respondendo simulado, e restaurar tudo apaga essas respostas. Depois do
+conserto, rode `PRAGMA integrity_check` e `PRAGMA foreign_key_check`.
+
 ## O que ficou para depois
 
 1. ~~Lote de tipografia.~~ **Feito em 31/07/2026.** A premissa estava errada: não
