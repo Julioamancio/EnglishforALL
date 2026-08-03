@@ -9,6 +9,7 @@ const desempenho = require('../lib/desempenho');
 const sim = require('../lib/simulado');
 const instituicoes = require('../lib/instituicoes');
 const series = require('../lib/series');
+const turmasLib = require('../lib/turmas');
 
 const router = express.Router();
 
@@ -395,6 +396,28 @@ router.post('/usuarios/:id/excluir', (req, res, next) => {
   const r = db.removerUsuario(id);
   const recado = `Conta de ${aluno.nome} excluída` + (r.simulados ? `, com ${r.simulados} simulado(s).` : '.');
   res.redirect(`/admin/usuarios?ok=${encodeURIComponent(recado)}`);
+});
+
+// ------------------------------------------------------------------ turmas
+
+/**
+ * Rendimento por turma. Sem `?turma=`, compara todas; com, abre o detalhe.
+ * A pergunta aqui não é "como vai este aluno" — é "como vai esta turma, e quem
+ * dentro dela precisa de atenção".
+ */
+router.get('/turmas', (req, res) => {
+  const lista = turmasLib.turmas();
+  const escolhida = (req.query.turma || '').trim();
+  const alvo = lista.find((t) => t.chave === escolhida);
+
+  res.render('admin/turmas', {
+    title: alvo ? `Turma ${alvo.rotulo}` : 'Rendimento por turma',
+    description: '',
+    turmas: lista,
+    escolhida,
+    d: alvo ? turmasLib.detalhe(alvo.instituicao, alvo.serie) : null,
+    layoutAdmin: true,
+  });
 });
 
 module.exports = router;

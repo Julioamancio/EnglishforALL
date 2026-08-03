@@ -1,0 +1,272 @@
+<%- include('../partials/cabeca') %>
+<%
+  const dataBR = (s) => s ? s.slice(8, 10) + '/' + s.slice(5, 7) : '—';
+  // cor por faixa de aproveitamento: o mesmo critério em todos os gráficos
+  const cor = (p) => p >= 70 ? 'var(--ok)' : p >= 50 ? 'var(--marca)' : 'var(--correcao)';
+  const corTexto = (p) => p >= 70 ? 'ok' : p >= 50 ? 'media' : 'baixa';
+%>
+<div class="env">
+  <h1><%= d ? 'Turma ' + d.rotulo : 'Rendimento por turma' %></h1>
+
+  <form class="filtro-alunos" method="get" action="/admin/turmas">
+    <div class="campo campo--cresce">
+      <label for="turma">Turma</label>
+      <select id="turma" name="turma" onchange="this.form.submit()">
+        <option value="">Todas as turmas (comparação)</option>
+        <% turmas.forEach(function (t) { %>
+          <option value="<%= t.chave %>"<%= escolhida === t.chave ? ' selected' : '' %>><%= t.rotulo %> — <%= t.alunos %> alunos</option>
+        <% }) %>
+      </select>
+    </div>
+    <noscript><button class="btn" type="submit">Ver</button></noscript>
+  </form>
+
+<% if (!turmas.length) { %>
+  <p class="aviso">Nenhuma turma ainda. As turmas aparecem quando os alunos têm instituição e série no cadastro.</p>
+
+<% } else if (!d) { %>
+  <%# ---------------------------------------------------- comparação geral %>
+  <%
+    const totAlunos = turmas.reduce((s, t) => s + t.alunos, 0);
+    const totPart = turmas.reduce((s, t) => s + t.participantes, 0);
+    const totQ = turmas.reduce((s, t) => s + t.questoes, 0);
+    const totA = turmas.reduce((s, t) => s + t.acertos, 0);
+    const mediaGeral = totQ ? Math.round((totA / totQ) * 100) : 0;
+  %>
+
+  <div class="sim-cartoes">
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= turmas.length %></span><span class="sim-cartao__r">turmas</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= totAlunos %></span><span class="sim-cartao__r">alunos</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= totPart %></span><span class="sim-cartao__r">já fizeram simulado</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= mediaGeral %>%</span><span class="sim-cartao__r">média de todas</span></div>
+  </div>
+
+  <section class="sim-gfx">
+    <h2>Comparação entre as turmas</h2>
+    <ul class="gfx-hbarras">
+      <% turmas.forEach(function (t) { %>
+        <li>
+          <span class="gfx-hbarras__rot"><a href="/admin/turmas?turma=<%= encodeURIComponent(t.chave) %>"><%= t.rotulo %></a></span>
+          <span class="gfx-hbarras__trilho">
+            <span class="gfx-hbarras__preenche" style="width:<%= t.media || 0 %>%;background:<%= cor(t.media || 0) %>"></span>
+          </span>
+          <span class="gfx-hbarras__n"><%= t.media == null ? '—' : t.media + '%' %> <small>(<%= t.participantes %>/<%= t.alunos %>)</small></span>
+        </li>
+      <% }) %>
+    </ul>
+    <p class="dica">A barra é a média da turma; entre parênteses, quantos alunos já fizeram algum simulado.</p>
+  </section>
+
+  <section class="sim-gfx">
+    <h2>Participação</h2>
+    <div class="turma-cards">
+      <% turmas.forEach(function (t) {
+           const r = 52, c = 2 * Math.PI * r, feito = (t.participacao / 100) * c; %>
+        <a class="turma-card" href="/admin/turmas?turma=<%= encodeURIComponent(t.chave) %>">
+          <svg viewBox="0 0 140 140" role="img" aria-label="<%= t.participacao %>% dos alunos de <%= t.rotulo %> já fizeram simulado">
+            <circle cx="70" cy="70" r="<%= r %>" class="rosca-fundo"/>
+            <circle cx="70" cy="70" r="<%= r %>" class="rosca-frente"
+                    stroke="<%= cor(t.participacao) %>"
+                    stroke-dasharray="<%= feito.toFixed(1) %> <%= (c - feito).toFixed(1) %>"
+                    transform="rotate(-90 70 70)"/>
+            <text x="70" y="66" class="rosca-n"><%= t.participacao %>%</text>
+            <text x="70" y="88" class="rosca-r"><%= t.participantes %> de <%= t.alunos %></text>
+          </svg>
+          <span class="turma-card__nome"><%= t.rotulo %></span>
+        </a>
+      <% }) %>
+    </div>
+  </section>
+
+<% } else { %>
+  <%# ------------------------------------------------- detalhe de uma turma %>
+
+  <div class="sim-cartoes">
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.media == null ? '—' : d.media + '%' %></span><span class="sim-cartao__r">média da turma</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.mediana == null ? '—' : d.mediana + '%' %></span><span class="sim-cartao__r">mediana</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.participantes %>/<%= d.total %></span><span class="sim-cartao__r">já fizeram simulado</span></div>
+    <div class="sim-cartao"><span class="sim-cartao__n"><%= d.acertos %></span><span class="sim-cartao__r">acertos em <%= d.questoes %></span></div>
+  </div>
+
+  <% if (d.media != null && d.mediana != null && Math.abs(d.media - d.mediana) >= 10) { %>
+    <p class="aviso">A média (<%= d.media %>%) e a mediana (<%= d.mediana %>%) estão distantes: a turma não é homogênea, e há grupos com necessidades diferentes. O gráfico de distribuição abaixo mostra como estão divididos.</p>
+  <% } %>
+
+<% if (!d.participantes) { %>
+  <p class="aviso">Ninguém desta turma concluiu simulado ainda. Os gráficos aparecem a partir do primeiro.</p>
+<% } else { %>
+
+  <div class="gfx-dupla">
+    <section class="sim-gfx">
+      <h2>Distribuição das notas</h2>
+      <%
+        const maxF = Math.max(...d.distribuicao.map((f) => f.alunos), 1);
+        const W = 460, H = 240, ml = 34, mr = 12, mt = 16, mb = 44;
+        const iw = W - ml - mr, ih = H - mt - mb;
+        const larg = iw / d.distribuicao.length;
+      %>
+      <div class="sim-gfx__caixa">
+        <svg viewBox="0 0 <%= W %> <%= H %>" role="img" preserveAspectRatio="xMidYMid meet"
+             aria-label="Quantos alunos em cada faixa de aproveitamento">
+          <line x1="<%= ml %>" y1="<%= mt + ih %>" x2="<%= W - mr %>" y2="<%= mt + ih %>" class="gfx-grade"/>
+          <% d.distribuicao.forEach(function (f, i) {
+               const h = (f.alunos / maxF) * ih;
+               const x = ml + i * larg + larg * 0.18;
+               const w = larg * 0.64;
+               const meio = (f.min + f.max) / 2; %>
+            <rect x="<%= x.toFixed(1) %>" y="<%= (mt + ih - h).toFixed(1) %>" width="<%= w.toFixed(1) %>" height="<%= h.toFixed(1) %>"
+                  rx="4" fill="<%= cor(meio) %>" opacity=".9"><title><%= f.alunos %> aluno(s) entre <%= f.rotulo %></title></rect>
+            <% if (f.alunos) { %>
+              <text x="<%= (x + w / 2).toFixed(1) %>" y="<%= (mt + ih - h - 6).toFixed(1) %>" class="gfx-rot" text-anchor="middle"><%= f.alunos %></text>
+            <% } %>
+            <text x="<%= (x + w / 2).toFixed(1) %>" y="<%= H - 22 %>" class="gfx-rot" text-anchor="middle"><%= f.rotulo %></text>
+          <% }) %>
+          <text x="<%= ml %>" y="<%= H - 6 %>" class="gfx-rot">aproveitamento</text>
+        </svg>
+      </div>
+      <p class="dica">Cada barra é um grupo de alunos. Duas barras altas e afastadas significam uma turma dividida.</p>
+    </section>
+
+    <section class="sim-gfx">
+      <h2>Acertos e erros da turma</h2>
+      <%
+        const r = 62, c2 = 2 * Math.PI * r;
+        const pAcerto = d.questoes ? d.acertos / d.questoes : 0;
+        const arco = pAcerto * c2;
+      %>
+      <div class="sim-gfx__caixa gfx-centro">
+        <svg viewBox="0 0 180 180" role="img" preserveAspectRatio="xMidYMid meet"
+             aria-label="<%= d.acertos %> acertos e <%= d.erros %> erros, de <%= d.questoes %> questões">
+          <circle cx="90" cy="90" r="<%= r %>" class="rosca-fundo" stroke="var(--correcao)" opacity=".85"/>
+          <circle cx="90" cy="90" r="<%= r %>" class="rosca-frente" stroke="var(--ok)"
+                  stroke-dasharray="<%= arco.toFixed(1) %> <%= (c2 - arco).toFixed(1) %>"
+                  transform="rotate(-90 90 90)"/>
+          <text x="90" y="86" class="rosca-n"><%= Math.round(pAcerto * 100) %>%</text>
+          <text x="90" y="108" class="rosca-r">de acerto</text>
+        </svg>
+      </div>
+      <p class="gfx-legenda">
+        <span class="gfx-chave gfx-chave--acerto"></span> <%= d.acertos %> acertos
+        <span class="gfx-chave gfx-chave--erro"></span> <%= d.erros %> erros
+      </p>
+    </section>
+  </div>
+
+  <% if (d.evolucao.length > 1) { %>
+    <section class="sim-gfx">
+      <h2>Evolução da turma, semana a semana</h2>
+      <%
+        const L = d.evolucao;
+        const W2 = 720, H2 = 250, ml2 = 42, mr2 = 16, mt2 = 20, mb2 = 40;
+        const iw2 = W2 - ml2 - mr2, ih2 = H2 - mt2 - mb2;
+        const px = (i) => ml2 + (L.length === 1 ? iw2 / 2 : (i * iw2) / (L.length - 1));
+        const py = (v) => mt2 + ih2 - (v / 100) * ih2;
+        const area = L.map((e, i) => `${px(i).toFixed(1)},${py(e.media).toFixed(1)}`).join(' ');
+      %>
+      <div class="sim-gfx__caixa">
+        <svg viewBox="0 0 <%= W2 %> <%= H2 %>" role="img" preserveAspectRatio="xMidYMid meet"
+             aria-label="Média da turma em cada semana de simulado">
+          <% [0, 50, 100].forEach(function (v) { %>
+            <line x1="<%= ml2 %>" y1="<%= py(v) %>" x2="<%= W2 - mr2 %>" y2="<%= py(v) %>" class="gfx-grade"/>
+            <text x="<%= ml2 - 8 %>" y="<%= py(v) + 4 %>" class="gfx-rot" text-anchor="end"><%= v %>%</text>
+          <% }) %>
+          <polygon class="gfx-area" points="<%= ml2 %>,<%= mt2 + ih2 %> <%= area %> <%= (W2 - mr2) %>,<%= mt2 + ih2 %>"/>
+          <polyline points="<%= area %>" class="gfx-linha"/>
+          <% L.forEach(function (e, i) { %>
+            <circle cx="<%= px(i) %>" cy="<%= py(e.media) %>" r="5" class="gfx-ponto"><title><%= e.semana %>: <%= e.media %>% — <%= e.alunos %> aluno(s)</title></circle>
+            <text x="<%= px(i) %>" y="<%= H2 - 14 %>" class="gfx-rot" text-anchor="middle"><%= e.semana.slice(-3) %></text>
+          <% }) %>
+        </svg>
+      </div>
+      <p class="dica">Cada ponto é uma semana de simulado; passe o mouse para ver quantos alunos participaram.</p>
+    </section>
+  <% } %>
+
+  <section class="sim-gfx">
+    <h2>Aluno por aluno</h2>
+    <ul class="gfx-hbarras gfx-hbarras--ranking">
+      <% d.ranking.forEach(function (a, i) { %>
+        <li>
+          <span class="gfx-hbarras__rot">
+            <span class="rank-pos"><%= i + 1 %></span>
+            <a href="/admin/usuarios/<%= a.id %>"><%= a.nome %></a>
+          </span>
+          <span class="gfx-hbarras__trilho">
+            <span class="gfx-hbarras__preenche" style="width:<%= a.media %>%;background:<%= cor(a.media) %>"></span>
+          </span>
+          <span class="gfx-hbarras__n"><%= a.media %>% <small>(<%= a.acertos %>/<%= a.questoes %> em <%= a.simulados %>)</small></span>
+        </li>
+      <% }) %>
+    </ul>
+    <% if (d.semParticipar.length) { %>
+      <details class="aviso">
+        <summary><strong><%= d.semParticipar.length %></strong> <%= d.semParticipar.length === 1 ? 'aluno ainda não concluiu' : 'alunos ainda não concluíram' %> nenhum simulado</summary>
+        <ul>
+          <% d.semParticipar.forEach(function (a) { %>
+            <li><a href="/admin/usuarios/<%= a.id %>"><%= a.nome %></a><% if (a.em_aberto) { %> — tem um simulado em andamento<% } %></li>
+          <% }) %>
+        </ul>
+      </details>
+    <% } %>
+  </section>
+
+  <%
+  // Só entram recortes com 3 respostas ou mais: abaixo disso o percentual é
+  // ruído (uma questão sozinha dá 0% ou 100%) e mandaria o professor preparar
+  // aula pelo motivo errado. Quando nada alcança o corte, é melhor dizer isso
+  // do que sumir com a seção e deixar parecer defeito.
+  function barras(titulo, lista, dica) { %>
+    <section class="sim-gfx">
+      <h2><%= titulo %></h2>
+      <% if (lista.length) { %>
+        <ul class="gfx-hbarras">
+          <% lista.forEach(function (r) { %>
+            <li>
+              <span class="gfx-hbarras__rot"><%= r.valor %></span>
+              <span class="gfx-hbarras__trilho">
+                <span class="gfx-hbarras__preenche" style="width:<%= r.percentual %>%;background:<%= cor(r.percentual) %>"></span>
+              </span>
+              <span class="gfx-hbarras__n"><%= r.percentual %>% <small>(<%= r.acertos %>/<%= r.total %>)</small></span>
+            </li>
+          <% }) %>
+        </ul>
+        <% if (dica) { %><p class="dica"><%= dica %></p><% } %>
+      <% } else { %>
+        <p class="dica">Ainda não há recorte com pelo menos 3 respostas da turma. Com poucas respostas o percentual vira sorte, não diagnóstico — depois de mais alguns simulados este quadro aparece.</p>
+      <% } %>
+    </section>
+  <% } %>
+
+  <% barras('Onde a turma mais erra — por tema', d.porTema, 'Ordenado do pior para o melhor: os primeiros são candidatos a virar aula.') %>
+  <% barras('Por nível CEFR', d.porNivel) %>
+  <% barras('Por tipo de questão', d.porTipo) %>
+
+  <section class="sim-gfx">
+    <h2>Questões que mais derrubaram a turma</h2>
+    <% if (d.dificeis.length) { %>
+      <div class="tabela-rolagem">
+        <table class="tabela">
+          <thead><tr><th>Questão</th><th>Prova</th><th>Nível</th><th>Acertaram</th></tr></thead>
+          <tbody>
+            <% d.dificeis.forEach(function (q) { %>
+              <tr>
+                <td><a href="/questoes/<%= q.slug %>" target="_blank" rel="noopener"><%= q.titulo %></a></td>
+                <td><%= q.prova %><%= q.ano ? ' ' + q.ano : '' %></td>
+                <td><%= q.nivel_cefr %></td>
+                <td class="<%= corTexto(q.percentual) === 'baixa' ? 'errou' : '' %>"><%= q.acertaram %>/<%= q.responderam %> (<%= q.percentual %>%)</td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    <% } else { %>
+      <p class="dica">Nenhuma questão foi errada por dois ou mais alunos ainda. Só entram aqui as que pelo menos duas pessoas responderam e alguém errou — uma questão que todo mundo acertou não derrubou ninguém.</p>
+    <% } %>
+  </section>
+
+<% } %>
+<% } %>
+
+  <p><a href="/admin/usuarios">Lista de alunos</a> · <a href="/admin">Painel</a></p>
+</div>
+<%- include('../partials/rodape') %>

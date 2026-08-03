@@ -1211,3 +1211,56 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 }
 .zona-risco h3 { margin: 0 0 .3rem; font-size: 1rem; color: var(--correcao); }
 .zona-risco .dica { color: var(--texto); }
+
+/* ------------------------------------------------ painel de rendimento por turma */
+
+/* dois gráficos lado a lado no desktop, empilhados no celular */
+.gfx-dupla { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+.gfx-dupla .sim-gfx { margin: 1rem 0; }
+.gfx-centro { display: grid; place-items: center; }
+.gfx-centro svg { max-width: 220px; }
+
+/* rosca de proporção — desenhada com stroke-dasharray, sem biblioteca */
+.rosca-fundo { fill: none; stroke: var(--fundo-2); stroke-width: 16; }
+.rosca-frente { fill: none; stroke-width: 16; stroke-linecap: round; transition: stroke-dasharray .4s; }
+.rosca-n { font: 800 26px var(--display); fill: var(--texto); text-anchor: middle; }
+.rosca-r { font: 500 11px var(--ui); fill: var(--suave); text-anchor: middle; }
+
+/* cartões de participação por turma */
+.turma-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+.turma-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem .8rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  box-shadow: var(--sombra);
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.turma-card:hover { transform: translateY(-2px); box-shadow: var(--sombra-alta); }
+.turma-card svg { width: 100%; max-width: 130px; height: auto; }
+.turma-card__nome { font: 600 .88rem/1.3 var(--ui); color: var(--texto); text-align: center; }
+
+/* área sob a linha de evolução */
+.gfx-area { fill: var(--tinta-vivo); opacity: .1; }
+
+/* posição no ranking da turma */
+.gfx-hbarras--ranking .gfx-hbarras__rot { display: flex; align-items: center; gap: .5rem; }
+.rank-pos {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--fundo-2);
+  color: var(--suave);
+  font: 700 .72rem/1 var(--ui);
+}
+.gfx-hbarras--ranking li:nth-child(1) .rank-pos { background: var(--marca); color: #6b4d00; }
+.gfx-hbarras--ranking li:nth-child(2) .rank-pos,
+.gfx-hbarras--ranking li:nth-child(3) .rank-pos { background: var(--marca-fraca); color: #8a6100; }
