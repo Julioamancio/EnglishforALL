@@ -27,7 +27,7 @@ if (_anima) { %><video class="persona__video" autoplay muted loop playsinline
     preload="none" poster="/img/personas/<%= nome %>.png?v=1"
     aria-label="<%= _descricao %>"><%
     _personas.formatos(nome).forEach(function (ext) { %>
-  <source src="/video/personas/<%= nome %>.<%= ext %>?v=1" type="video/<%= ext %>"><% }); %>
+  <source src="/video/personas/<%= nome %>.<%= ext %>?v=2" type="video/<%= ext %>"><% }); %>
   <%# quem não toca vídeo — e quem pediu menos animação — fica com a imagem %>
   <img src="/img/personas/<%= nome %>.png?v=1" alt="<%= _descricao %>" loading="lazy" decoding="async">
 </video><%
