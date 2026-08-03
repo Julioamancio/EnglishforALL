@@ -26,7 +26,7 @@ const DRY = process.argv.includes('--dry');
 const ORIGEM = '/var/backups/banco-questoes';
 const SENHA = '/root/.backup-senha';
 const TRAB = '/tmp/backup-remoto';
-const REMOTO = process.env.BACKUP_REMOTO || 'git@github.com:Julioamancio/EnglishforALL-backups.git';
+const REMOTO = process.env.BACKUP_REMOTO || 'git@github-backups:Julioamancio/-EnglishforALL-backups.git';
 
 const log = (m) => console.log(`[${new Date().toISOString().slice(11, 19)}] ${m}`);
 const sh = (cmd, args, opts = {}) => execFileSync(cmd, args, { encoding: 'utf8', ...opts });

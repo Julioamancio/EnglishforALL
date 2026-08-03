@@ -210,8 +210,39 @@ e conserte só aquilo. Se for restaurar mesmo, o `restaurar.js` para o serviço,
 guarda o estado atual, **apaga o `-wal` e o `-shm`** (sem isso o banco velho
 volta a valer por cima do restaurado) e confere depois.
 
-**O que ainda falta:** as cópias estão no mesmo servidor. Protegem contra erro
-humano e corrupção lógica, não contra perda do disco. Falta um destino externo.
+### Fora do servidor
+
+```bash
+node scripts/backup-remoto.js --dry   # cifra e confere, sem enviar
+node scripts/backup-remoto.js         # cifra e envia
+```
+
+Roda às 03:25, dez minutos depois do backup local. Destino: o repositório
+**privado** `Julioamancio/-EnglishforALL-backups`.
+
+Não vai para o repositório do projeto: ele é público, e o banco tem nome,
+e-mail e hash de senha de 94 alunos, muitos menores. E nem como repositório
+privado com o banco commitado — o Git guarda toda versão para sempre, e 4,4 MB
+por dia viram 1,5 GB em um ano. Cada envio **recria a história do zero**
+(commit órfão + push forçado): o remoto guarda só a cópia mais recente e não
+cresce. O histórico fica nas 14 diárias locais.
+
+Tudo sai cifrado com AES-256 (pbkdf2, 200 mil iterações). A senha está em
+`/root/.backup-senha`, modo 600; o script se recusa a rodar se ela estiver
+legível por outros. **Sem essa senha o backup remoto é lixo** — guarde uma
+cópia fora do servidor.
+
+**Duas chaves SSH, de propósito.** Uma deploy key só vale para um repositório
+em todo o GitHub, então o servidor tem `id_ed25519_github` (projeto) e
+`id_ed25519_backups` (backups). O `~/.ssh/config` tem o apelido
+`github-backups`, que aponta para o mesmo github.com com a segunda chave — daí
+o remoto ser `git@github-backups:...`.
+
+Provado de ponta a ponta clonando do GitHub numa pasta limpa, sem tocar em nada
+local: os quatro arquivos chegam, decifram, o banco passa no `integrity_check`
+e no `foreign_key_check`, as contagens batem, uma questão inteira se lê, e o
+tarball das imagens abre com as 107 entradas. Senha errada falha alto, em vez
+de devolver um arquivo corrompido em silêncio.
 
 ## O que ficou para depois
 
