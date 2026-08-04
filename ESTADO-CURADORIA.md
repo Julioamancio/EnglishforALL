@@ -8,6 +8,12 @@ Atualizado em 31/07/2026, ao fim do lote 33 — **os lotes por id terminaram**.
 
 ## Onde paramos
 
+- **Lote de vestibular de agosto/2026 importado em 04/08/2026.** As 72 questões
+  novas entraram como ids **1067–1138**, todas publicadas; 6 do lote eram
+  duplicatas e foram puladas. O banco principal (`colecao = ''`, que é o que a
+  página `/questoes` lista) foi de **705 para 777**. Detalhe do que a curadoria
+  encontrou em `conteudo/lotes/2026-08-vestibular/LEIA-ME.md`; o
+  `scripts/audita-lote.js` refaz as verificações cruzadas do lote.
 - **Lotes 1 a 33 concluídos: o acervo inteiro passou pela curadoria (IDs 1 a 1066).**
 - Não há próximo lote por id. O que resta é o **lote de tipografia** (aspas retas) e a **pendência de direito autoral** registrada no §13 do padrão.
 - Faltam **0 questões** por id.
@@ -52,7 +58,12 @@ ficam versionados em `scripts/`.
 5. `systemctl restart banco-questoes`.
 6. **Auditorias** — rodar os sete verificadores; todos devem ficar em zero.
 7. **Verificar no site** via curl: páginas 200, o defeito corrigido aparecendo
-   certo, sitemap válido, portas 8091/8096.
+   certo, sitemap válido. O serviço escuta em **8098** (`PORT` do `.env`), e não
+   em 8091 nem em 8096, como esta linha dizia até 04/08/2026 — a 8091 é de outro
+   aplicativo no mesmo servidor, e testar ali devolve página 200 do projeto
+   errado, o que já custou uma rodada inteira de conferência. Descobrir a porta
+   pelo processo, não pela memória:
+   `ss -lntp | grep "pid=$(systemctl show banco-questoes -p MainPID --value),"`
 8. **Registrar** no `PADRAO-EDITORIAL.md` o que a curadoria revelou, e commitar.
 
 ## Verificadores permanentes (`scripts/`)
