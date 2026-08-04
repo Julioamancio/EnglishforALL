@@ -1,14 +1,15 @@
-/* Banco de Questões — campo de partículas do hero (sem dependências).
+/* Banco de Questões — esfera de partículas do hero (sem dependências).
 
-   Constelação com profundidade: os pontos vivem em planos diferentes (z), então
-   os da frente são maiores, mais nítidos e andam mais rápido que os do fundo —
-   é isso que dá a sensação de volume. Um halo acompanha o cursor, se liga aos
-   pontos por perto e empurra quem chega perto demais; ao sair, tudo volta ao
-   lugar sozinho.
+   Uma bola feita de pontos: eles ficam na superfície de uma esfera, ela gira
+   devagar e é projetada em perspectiva, então quem está na frente aparece
+   grande e nítido e quem está atrás fica pequeno e apagado. É essa diferença
+   que faz o olho ler uma bola, e não um borrão.
 
-   Desliga sozinho quando o hero sai da tela, quando a aba fica oculta e quando
-   o sistema pede "reduzir movimento" — nesse caso desenha um quadro parado, que
-   ainda decora sem animar nada. */
+   A bola persegue o cursor com atraso — o atraso é o que dá peso a ela — e
+   volta ao lugar de descanso quando o mouse sai. Atrás dela, um punhado de
+   pontinhos soltos dá textura ao fundo.
+
+   Desliga sozinho fora da tela, em aba oculta e com "reduzir movimento". */
 (function () {
   'use strict';
 
@@ -23,26 +24,39 @@
 
   /* ------------------------------------------------------------ ajustes */
 
-  var DENSIDADE = 16000;  // um ponto a cada N px² de hero
-  var TETO = 86;          // nunca mais que isto, custe o que custar
-  var PISO = 18;
-  var LIGACAO = 128;      // distância máxima para ligar dois pontos
-  var ALCANCE = 170;      // raio de influência do cursor
-  var ATRITO = 0.90;      // o quanto do empurrão sobra a cada quadro
+  var NA_BOLA = 150;      // pontos na superfície da esfera
+  var MALHA = 0.42;       // distância 3D máxima (em raios) para ligar dois pontos
+  var FOCO = 2.6;         // distância do olho, em raios: menor = mais perspectiva
+  var GIRO = 0.0042;      // radianos por quadro
+  var POEIRA = 34;        // pontinhos soltos no fundo
+
+  /* Onde a bola descansa quando ninguém mexe: à direita, longe do texto. */
+  var CASA_X = 0.74, CASA_Y = 0.50;
+
+  /* O quanto ela chega a percorrer até o cursor. Em 1 ela pousaria bem em
+     cima do mouse — e, com o cursor sobre o título, cobriria a manchete. Em
+     0,58 ela se inclina claramente na direção do mouse sem largar o canto
+     dela, que é onde não atrapalha a leitura. */
+  var SEGUE = 0.58;
 
   /* --------------------------------------------------------------- estado */
 
-  var pontos = [];
-  var larg = 0, alt = 0, dpr = 1;
+  var bola = [];          // {x,y,z} unitários na esfera
+  var poeira = [];
+  var larg = 0, alt = 0, dpr = 1, raio = 0;
   var quadro = 0, anterior = 0;
   var visivel = true, naTela = true;
 
-  var cursorX = 0, cursorY = 0;   // onde o cursor está
-  var haloX = 0, haloY = 0;       // onde o halo está (persegue o cursor)
-  var forca = 0, alvoForca = 0;   // 0 = cursor fora, 1 = cursor dentro
+  var giro = 0.6;         // ângulo acumulado em torno do eixo vertical
+  var balanco = 0;        // oscilação lenta do eixo, para não parecer um pião
+
+  var cursorX = 0, cursorY = 0;
+  var alvoX = 0, alvoY = 0;   // para onde a bola quer ir
+  var centroX = 0, centroY = 0;
+  var seguindo = false;
 
   var corPonto = '47, 58, 178';
-  var corHalo = '69, 82, 224';
+  var corBola = '69, 82, 224';
   var escuro = false;
 
   var menosMovimento = window.matchMedia
@@ -55,62 +69,57 @@
   function parado() { return !!(menosMovimento && menosMovimento.matches); }
   function apontavel() { return !temHover || temHover.matches; }
 
-  /* ---------------------------------------------------------------- cores
-     Ficam em variáveis CSS para acompanharem o tema claro/escuro sem que este
-     arquivo precise saber nada sobre a paleta. */
+  /* ---------------------------------------------------------------- cores */
 
   function lerCores() {
     var s = getComputedStyle(document.documentElement);
     var p = (s.getPropertyValue('--particula-rgb') || '').trim();
     var h = (s.getPropertyValue('--particula-halo-rgb') || '').trim();
     if (p) corPonto = p;
-    if (h) corHalo = h;
+    if (h) corBola = h;
     escuro = document.documentElement.dataset.tema === 'escuro';
+  }
+
+  /* ------------------------------------------------------------- a esfera
+     Espiral de Fibonacci: é o jeito barato de espalhar N pontos numa esfera
+     sem eles se amontoarem nos polos, como aconteceria com laço de lat/long. */
+
+  function montarBola() {
+    bola.length = 0;
+    var passoAng = Math.PI * (3 - Math.sqrt(5));
+    for (var i = 0; i < NA_BOLA; i++) {
+      var y = 1 - (i / (NA_BOLA - 1)) * 2;
+      var r = Math.sqrt(Math.max(0, 1 - y * y));
+      var a = passoAng * i;
+      bola.push({
+        x: Math.cos(a) * r, y: y, z: Math.sin(a) * r,
+        px: 0, py: 0, pr: 0, pf: 0   // projeção deste quadro
+      });
+    }
+  }
+
+  function montarPoeira() {
+    poeira.length = 0;
+    var n = Math.round(POEIRA * Math.min(1.4, (larg * alt) / 700000)) || 8;
+    for (var i = 0; i < n; i++) {
+      poeira.push({
+        x: Math.random() * larg,
+        y: Math.random() * alt,
+        vx: (Math.random() - 0.5) * 0.16,
+        vy: (Math.random() - 0.5) * 0.16,
+        r: 0.7 + Math.random() * 1.1,
+        o: 0.2 + Math.random() * 0.3
+      });
+    }
   }
 
   /* -------------------------------------------------------------- tamanho */
 
-  function quantos() {
-    var n = Math.round((larg * alt) / DENSIDADE);
-    return Math.max(PISO, Math.min(TETO, n));
-  }
-
-  function novo(x, y) {
-    var z = 0.35 + Math.random() * 0.65;
-    return {
-      x: x, y: y,
-      vx: (Math.random() - 0.5) * 0.24,
-      vy: (Math.random() - 0.5) * 0.24,
-      z: z,
-      r: 0.8 + z * 1.9,
-      ox: 0, oy: 0,   // deslocamento causado pelo cursor
-      px: x, py: y    // posição desenhada neste quadro
-    };
-  }
-
-  function popular() {
-    var alvo = quantos();
-    while (pontos.length > alvo) pontos.pop();
-    while (pontos.length < alvo) {
-      pontos.push(novo(Math.random() * larg, Math.random() * alt));
-    }
-  }
-
   function medir() {
-    var r = palco.getBoundingClientRect();
-    var novaL = Math.max(1, Math.round(r.width));
-    var novaA = Math.max(1, Math.round(r.height));
+    var b = palco.getBoundingClientRect();
+    var novaL = Math.max(1, Math.round(b.width));
+    var novaA = Math.max(1, Math.round(b.height));
     if (novaL === larg && novaA === alt) return;
-
-    /* Reposiciona proporcionalmente: redimensionar a janela não deve jogar
-       metade dos pontos para fora nem amontoá-los num canto. */
-    if (larg && alt) {
-      var fx = novaL / larg, fy = novaA / alt;
-      for (var i = 0; i < pontos.length; i++) {
-        pontos[i].x *= fx;
-        pontos[i].y *= fy;
-      }
-    }
 
     larg = novaL;
     alt = novaA;
@@ -118,55 +127,73 @@
     tela.width = Math.round(larg * dpr);
     tela.height = Math.round(alt * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    popular();
+
+    /* A bola acompanha o tamanho do hero, mas o teto vem da altura: com a
+       perspectiva ela cresce até ~1,6x na frente, e passar disso faz a esfera
+       encostar nas bordas e parecer cortada. */
+    raio = Math.max(66, Math.min(150, Math.min(larg * 0.16, alt * 0.28)));
+
+    if (!bola.length) montarBola();
+    montarPoeira();
+
+    mirar();
+    if (!centroX && !centroY) { centroX = alvoX; centroY = alvoY; }
   }
 
   /* --------------------------------------------------------------- física */
 
+  /* Onde a bola quer estar: no canto dela, puxada na direção do cursor. */
+  function mirar() {
+    var casaX = larg * CASA_X, casaY = alt * CASA_Y;
+    if (!seguindo) { alvoX = casaX; alvoY = casaY; return; }
+    alvoX = casaX + (cursorX - casaX) * SEGUE;
+    alvoY = casaY + (cursorY - casaY) * SEGUE;
+  }
+
   function passo(dt) {
-    var i, p;
+    giro += GIRO * dt;
+    balanco += 0.006 * dt;
 
-    /* O halo persegue o cursor com atraso — é o atraso que dá peso a ele. */
-    haloX += (cursorX - haloX) * Math.min(1, 0.12 * dt);
-    haloY += (cursorY - haloY) * Math.min(1, 0.12 * dt);
-    forca += (alvoForca - forca) * Math.min(1, 0.07 * dt);
+    /* Perseguição com atraso. Devagar de propósito: a bola tem massa. */
+    centroX += (alvoX - centroX) * Math.min(1, 0.055 * dt);
+    centroY += (alvoY - centroY) * Math.min(1, 0.055 * dt);
 
-    var raio2 = ALCANCE * ALCANCE;
+    /* Eixo inclinado: um pouco fixo, um pouco oscilando, e um empurrão de
+       acordo com a altura do cursor — a bola parece olhar para o mouse. */
+    var desvio = (centroY / Math.max(1, alt) - 0.5) * 0.6;
+    var inclina = -0.34 + Math.sin(balanco) * 0.12 + desvio;
 
-    for (i = 0; i < pontos.length; i++) {
-      p = pontos[i];
+    var cg = Math.cos(giro), sg = Math.sin(giro);
+    var ci = Math.cos(inclina), si = Math.sin(inclina);
 
-      p.x += p.vx * p.z * dt;
-      p.y += p.vy * p.z * dt;
+    for (var i = 0; i < bola.length; i++) {
+      var p = bola[i];
 
-      /* Atravessou uma borda, entra pela outra. A margem evita o ponto sumir
-         e reaparecer no mesmo pixel, o que pisca. */
-      if (p.x < -20) p.x = larg + 20; else if (p.x > larg + 20) p.x = -20;
-      if (p.y < -20) p.y = alt + 20; else if (p.y > alt + 20) p.y = -20;
+      // gira em torno do eixo vertical
+      var x = p.x * cg - p.z * sg;
+      var z = p.x * sg + p.z * cg;
+      // depois tomba o eixo para a frente
+      var y = p.y * ci - z * si;
+      z = p.y * si + z * ci;
 
-      if (forca > 0.01) {
-        var dx = p.x + p.ox - haloX;
-        var dy = p.y + p.oy - haloY;
-        var d2 = dx * dx + dy * dy;
-        if (d2 < raio2 && d2 > 1) {
-          var d = Math.sqrt(d2);
-          var f = 1 - d / ALCANCE;
-          /* Ao quadrado: perto o empurrão é firme, longe some de vez. Os
-             pontos da frente (z alto) reagem mais — de novo, profundidade. */
-          var e = f * f * 1.9 * p.z * forca * dt;
-          p.ox += (dx / d) * e;
-          p.oy += (dy / d) * e;
-        }
-      }
+      /* Perspectiva: quem está mais perto do olho (z alto) cresce. */
+      var f = FOCO / (FOCO - z);
+      p.px = centroX + x * raio * f;
+      p.py = centroY + y * raio * f;
+      p.pz = z;
+      p.pf = f;
+      p.pr = (0.55 + (f - 1) * 2.4) * 1.5;
+    }
 
-      /* Sem cursor por perto o deslocamento se dissolve e o ponto volta à
-         trajetória original. */
-      var sobra = Math.pow(ATRITO, dt);
-      p.ox *= sobra;
-      p.oy *= sobra;
+    /* Depois da projeção: de trás para a frente, para o desenho empilhar certo. */
+    bola.sort(function (a, b) { return a.pz - b.pz; });
 
-      p.px = p.x + p.ox;
-      p.py = p.y + p.oy;
+    for (var j = 0; j < poeira.length; j++) {
+      var q = poeira[j];
+      q.x += q.vx * dt;
+      q.y += q.vy * dt;
+      if (q.x < -10) q.x = larg + 10; else if (q.x > larg + 10) q.x = -10;
+      if (q.y < -10) q.y = alt + 10; else if (q.y > alt + 10) q.y = -10;
     }
   }
 
@@ -175,41 +202,45 @@
   function pintar() {
     ctx.clearRect(0, 0, larg, alt);
 
-    var i, j, a, b, dx, dy, d2, d, alfa;
-    var lig2 = LIGACAO * LIGACAO;
-    var raio2 = ALCANCE * ALCANCE;
+    var i, j, a, b, alfa;
+    var opacoPoeira = escuro ? 0.55 : 0.42;
+    var opacoMalha = escuro ? 0.30 : 0.19;
+    var opacoPonto = escuro ? 0.95 : 0.85;
 
-    var opacoPonto = escuro ? 0.62 : 0.52;
-    var opacoLinha = escuro ? 0.20 : 0.16;
-    var opacoCabo = escuro ? 0.40 : 0.32;
-
-    /* 1. Halo do cursor: um gradiente radial largo e fraco. É ele que dá a
-       impressão de uma bola de luz passeando por baixo dos pontos. */
-    if (forca > 0.01) {
-      var g = ctx.createRadialGradient(haloX, haloY, 0, haloX, haloY, ALCANCE);
-      g.addColorStop(0, 'rgba(' + corHalo + ', ' + (0.20 * forca).toFixed(3) + ')');
-      g.addColorStop(0.45, 'rgba(' + corHalo + ', ' + (0.07 * forca).toFixed(3) + ')');
-      g.addColorStop(1, 'rgba(' + corHalo + ', 0)');
-      ctx.fillStyle = g;
+    /* 1. Poeira do fundo, bem discreta. */
+    for (i = 0; i < poeira.length; i++) {
+      var q = poeira[i];
+      ctx.fillStyle = 'rgba(' + corPonto + ', ' + (q.o * opacoPoeira).toFixed(3) + ')';
       ctx.beginPath();
-      ctx.arc(haloX, haloY, ALCANCE, 0, Math.PI * 2);
+      ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2);
       ctx.fill();
     }
 
-    /* 2. Linhas entre pontos vizinhos. O alfa cai com a distância, então a
-       teia aparece e some sozinha conforme eles se cruzam. */
-    ctx.lineWidth = 1;
-    for (i = 0; i < pontos.length; i++) {
-      a = pontos[i];
-      for (j = i + 1; j < pontos.length; j++) {
-        b = pontos[j];
-        dx = a.px - b.px;
-        dy = a.py - b.py;
-        d2 = dx * dx + dy * dy;
-        if (d2 > lig2) continue;
-        d = Math.sqrt(d2);
-        alfa = (1 - d / LIGACAO) * opacoLinha * (0.45 + (a.z + b.z) * 0.35);
-        ctx.strokeStyle = 'rgba(' + corPonto + ', ' + alfa.toFixed(3) + ')';
+    /* 2. Brilho por trás da bola, para ela assentar no fundo em vez de flutuar. */
+    var g = ctx.createRadialGradient(centroX, centroY, 0, centroX, centroY, raio * 2.1);
+    g.addColorStop(0, 'rgba(' + corBola + ', ' + (escuro ? 0.16 : 0.13) + ')');
+    g.addColorStop(0.5, 'rgba(' + corBola + ', ' + (escuro ? 0.05 : 0.04) + ')');
+    g.addColorStop(1, 'rgba(' + corBola + ', 0)');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(centroX, centroY, raio * 2.1, 0, Math.PI * 2);
+    ctx.fill();
+
+    /* 3. A malha. Liga vizinhos próximos em 3D, então as linhas seguem a
+       curvatura da bola; as do lado de trás saem mais fracas. */
+    var limite = MALHA * MALHA;
+    for (i = 0; i < bola.length; i++) {
+      a = bola[i];
+      for (j = i + 1; j < bola.length; j++) {
+        b = bola[j];
+        var dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z;
+        var d2 = dx * dx + dy * dy + dz * dz;
+        if (d2 > limite) continue;
+        var prof = ((a.pf - 1) + (b.pf - 1)) * 0.5;   // 0 = fundo, ~0.6 = frente
+        alfa = opacoMalha * (0.12 + prof * 1.7);
+        if (alfa <= 0.004) continue;
+        ctx.strokeStyle = 'rgba(' + corBola + ', ' + alfa.toFixed(3) + ')';
+        ctx.lineWidth = 0.5 + prof * 1.1;
         ctx.beginPath();
         ctx.moveTo(a.px, a.py);
         ctx.lineTo(b.px, b.py);
@@ -217,45 +248,16 @@
       }
     }
 
-    /* 3. Cabos do cursor até os pontos ao alcance — o "estou ligado a isto". */
-    if (forca > 0.01) {
-      for (i = 0; i < pontos.length; i++) {
-        a = pontos[i];
-        dx = a.px - haloX;
-        dy = a.py - haloY;
-        d2 = dx * dx + dy * dy;
-        if (d2 > raio2) continue;
-        d = Math.sqrt(d2);
-        alfa = (1 - d / ALCANCE) * opacoCabo * forca;
-        ctx.strokeStyle = 'rgba(' + corHalo + ', ' + alfa.toFixed(3) + ')';
-        ctx.lineWidth = 0.6 + a.z * 0.7;
-        ctx.beginPath();
-        ctx.moveTo(haloX, haloY);
-        ctx.lineTo(a.px, a.py);
-        ctx.stroke();
-      }
-      ctx.lineWidth = 1;
-    }
-
-    /* 4. Os pontos por último, para ficarem por cima das linhas. Quem está
-       dentro do halo acende um pouco. */
-    for (i = 0; i < pontos.length; i++) {
-      a = pontos[i];
-      alfa = opacoPonto * (0.35 + a.z * 0.65);
-      var cor = corPonto;
-      if (forca > 0.01) {
-        dx = a.px - haloX;
-        dy = a.py - haloY;
-        d2 = dx * dx + dy * dy;
-        if (d2 < raio2) {
-          var perto = 1 - Math.sqrt(d2) / ALCANCE;
-          alfa = Math.min(1, alfa + perto * 0.45 * forca);
-          cor = corHalo;
-        }
-      }
-      ctx.fillStyle = 'rgba(' + cor + ', ' + alfa.toFixed(3) + ')';
+    /* 4. Os pontos, do fundo para a frente. O tamanho e o brilho vêm da
+       perspectiva — é aqui que a profundidade fica evidente. */
+    for (i = 0; i < bola.length; i++) {
+      a = bola[i];
+      var d = a.pf - 1;
+      alfa = opacoPonto * (0.14 + d * 1.9);
+      if (alfa <= 0.01) continue;
+      ctx.fillStyle = 'rgba(' + corBola + ', ' + Math.min(1, alfa).toFixed(3) + ')';
       ctx.beginPath();
-      ctx.arc(a.px, a.py, a.r, 0, Math.PI * 2);
+      ctx.arc(a.px, a.py, Math.max(0.4, a.pr), 0, Math.PI * 2);
       ctx.fill();
     }
   }
@@ -264,8 +266,6 @@
 
   function laco(agora) {
     quadro = 0;
-    /* dt em múltiplos de 16,7 ms e travado em 3: se a aba ficou congelada, o
-       primeiro quadro de volta não pode teletransportar tudo. */
     var dt = anterior ? Math.min(3, (agora - anterior) / 16.7) : 1;
     anterior = agora;
     passo(dt);
@@ -288,17 +288,14 @@
     quadro = 0;
   }
 
-  /* Com "reduzir movimento" nada se mexe: um quadro só, parado, sem cursor. */
+  /* Com "reduzir movimento" a bola aparece parada no lugar de descanso. */
   function estatico() {
     pausar();
-    forca = 0;
-    alvoForca = 0;
-    for (var i = 0; i < pontos.length; i++) {
-      pontos[i].ox = 0;
-      pontos[i].oy = 0;
-      pontos[i].px = pontos[i].x;
-      pontos[i].py = pontos[i].y;
-    }
+    seguindo = false;
+    mirar();
+    centroX = alvoX;
+    centroY = alvoY;
+    passo(0);
     pintar();
   }
 
@@ -315,13 +312,14 @@
       var r = palco.getBoundingClientRect();
       cursorX = ev.clientX - r.left;
       cursorY = ev.clientY - r.top;
-      if (alvoForca === 0) { haloX = cursorX; haloY = cursorY; }
-      alvoForca = 1;
+      seguindo = true;
+      mirar();
       tocar();
     }, { passive: true });
 
-    palco.addEventListener('pointerleave', function () { alvoForca = 0; }, { passive: true });
-    palco.addEventListener('pointercancel', function () { alvoForca = 0; }, { passive: true });
+    var soltar = function () { seguindo = false; mirar(); };
+    palco.addEventListener('pointerleave', soltar, { passive: true });
+    palco.addEventListener('pointercancel', soltar, { passive: true });
   }
 
   /* ------------------------------------------------------------- gatilhos */
@@ -341,12 +339,12 @@
   if (window.ResizeObserver) {
     new ResizeObserver(function () {
       medir();
-      if (!rodando()) pintar();
+      if (!rodando()) { passo(0); pintar(); }
     }).observe(palco);
   } else {
     window.addEventListener('resize', function () {
       medir();
-      if (!rodando()) pintar();
+      if (!rodando()) { passo(0); pintar(); }
     });
   }
 
