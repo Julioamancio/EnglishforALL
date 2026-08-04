@@ -9,15 +9,15 @@ perdeu com ela. Tudo o que sobreviveu está neste diretório.
 - `lote.json` — as 78 questões de múltipla escolha extraídas e validadas
 - `imagens/` — 78 tirinhas, nomeadas `instituicao-ano-NNN.png`
 
-## De 100 para 73
+## De 100 para 72
 
 | | |
 |---|---|
 | No documento | 100 |
 | − dissertativas | 21 (decisão do professor: só múltipla escolha) |
 | − questão 15 | 1 (matemática da Fuvest; as fórmulas se perderam na exportação) |
-| − duplicatas confirmadas | 5 |
-| **novas** | **73** |
+| − duplicatas confirmadas | 6 |
+| **novas** | **72** |
 
 Duplicatas, conferidas enunciado a enunciado contra o acervo vivo e marcadas
 no campo `duplicata_de`:
@@ -28,11 +28,20 @@ no campo `duplicata_de`:
 | Q18 | 664 | ITA/2018 |
 | Q19 | 665 | ITA/2018 |
 | Q50 | 23 | PUC-RS/2014 |
+| Q61 | 4 | ENEM/2013 |
 | Q70 | 113 | ENEM/2011 |
 
 A Q50 é o mesmo item da id 23, mas o acervo tem o enunciado **traduzido para o
 português** e o lote traz o original em inglês. Foi tratada como duplicata; se
 a tradução for desvio, o conserto é na questão existente, não aqui.
+
+A **Q61** não foi encontrada na conferência à mão: apareceu no primeiro
+`--dry` do importador, pela impressão digital do enunciado. Conferida depois,
+é a mesma questão da id 4 — enunciado, as cinco alternativas e o gabarito C
+idênticos. Fica uma pendência que **não é deste lote e não se conserta por
+aqui**, porque o importador só faz INSERT: a id 4 está publicada com
+`instituicao` vazia e `ano` nulo, e é a Q61 que traz a procedência real,
+ENEM/2013. Corrigir isso é um UPDATE na questão existente, decisão à parte.
 
 ## O que já está pronto em cada registro
 
