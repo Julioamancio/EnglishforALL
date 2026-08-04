@@ -31,6 +31,33 @@ ssh root@187.77.36.21 "cd /var/www/banco-questoes; NODE_PATH=/var/www/banco-ques
 
 (editar a constante `ATE` do script para o último ID curado)
 
+## Como publicar
+
+**Desde 04/08/2026 o deploy é automático.** Todo push na `master` dispara a
+Action "Publicar na VPS", que faz `git merge --ff-only`, reinstala dependência
+só se o `package-lock.json` tiver mudado, reinicia o serviço e **só fica verde
+quando o site responde 200** — verde ali significa publicado, não apenas
+"o SSH conectou". Também dá para disparar à mão em Actions > Run workflow.
+
+Os quatro segredos estão cadastrados: `VPS_HOST`, `VPS_USER`, `VPS_SSH_KEY` e
+`VPS_KNOWN_HOSTS`. A chave é **própria do deploy**, não a pessoal — a linha do
+`authorized_keys` termina em `github-actions-deploy-englishforall`, e revogar o
+acesso das Actions é apagar só ela:
+
+```bash
+ssh root@187.77.36.21 "sed -i /github-actions-deploy-englishforall/d /root/.ssh/authorized_keys"
+```
+
+**Importar lote continua sendo à mão, de propósito.** O deploy leva código e
+material versionado; gravar questão no banco é o `scripts/importar-lote.js
+--gravar`, que ninguém deve disparar por push.
+
+Se a Action estiver fora do ar, o caminho manual continua valendo:
+
+```bash
+ssh root@187.77.36.21 "cd /var/www/banco-questoes && git fetch origin master && git merge --ff-only origin/master && systemctl restart banco-questoes"
+```
+
 ## Como rodar no servidor
 
 Servidor `root@187.77.36.21`, chave SSH já configurada. O `node` padrão é v22 e
