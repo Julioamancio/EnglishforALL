@@ -1,0 +1,3136 @@
+[
+ {
+  "n_lote": 1,
+  "instituicao": "Famerp",
+  "ano": "2024",
+  "enunciado": "In the excerpt from the first panel “You two should stop being so competitive”, the underlined word can be replaced, without meaning change, by",
+  "texto_base": "Leia a tirinha do cartunista Jim Davis.",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "will."
+   },
+   {
+    "letra": "B",
+    "texto": "may."
+   },
+   {
+    "letra": "C",
+    "texto": "ought to."
+   },
+   {
+    "letra": "D",
+    "texto": "would."
+   },
+   {
+    "letra": "E",
+    "texto": "can."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "[A] Incorreta. O verbo modal “should” pode ser usado em situações de conselho ou sugestão e não pode ser substituído por “will”, pois sua função é alterar verbos para o Futuro do Presente.\n[B] Incorreta. O verbo modal “should” pode ser usado em situações de conselho ou sugestão e não pode ser substituído por “may”, porque esse tem como função indicar possibilidade ou pedir permissão.\n[C] Correta. O verbo modal “should” pode ser usado em situações de conselho ou sugestão e pode ser substituído por “oughtto” que tem a mesma função.\n[D] Incorreta. O verbo modal “should” pode ser usado em situações de conselho ou sugestão e não pode ser substituído por “would”, pois sua função é alterar verbos para o Futuro do Pretérito.\n[E] Incorreta. O verbo modal “should” pode ser usado em situações de conselho ou sugestão e não pode ser substituído por “can”, porque esse, tem esse é usado para expressar ideia de capacidade/habilidade, possibilidade, permissão e fazer pedidos.",
+  "imagem_arquivo": "famerp-2024-001.png",
+  "slug_base": "famerp-2024-ingles-1",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 2,
+  "instituicao": "Fcmscsp",
+  "ano": "2023",
+  "enunciado": "In the fourth panel, the expression “what if” is used to introduce",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "a meaningless question."
+   },
+   {
+    "letra": "B",
+    "texto": "a rhetorical question."
+   },
+   {
+    "letra": "C",
+    "texto": "an obvious question."
+   },
+   {
+    "letra": "D",
+    "texto": "an unnecessary question."
+   },
+   {
+    "letra": "E",
+    "texto": "a suppositional question."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "A expressão “what if” pode ser traduzida como “e se” demonstrando o significado de suposição, de supor alguma coisa.\nNo caso da tirinha, é suposto que Snoopy: “What if the wings fall of?”, e se as asas caírem? Confirmando a alternativa de letra [E].",
+  "imagem_arquivo": "fcmscsp-2023-002.png",
+  "slug_base": "fcmscsp-2023-ingles-2",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 3,
+  "instituicao": "Uft",
+  "ano": "2023",
+  "enunciado": "Read the statements: I. Peppermint Patty had to write a report about the manufacturing of binder rings. II. Peppermint Patty bought a ring too tight for her finger and now she wants to return it to the dealer. III. Marcie thinks Peppermint Patty is going very well with her job on the report IV. Peppermint Patty said she will take two weeks to finish all the parts of her report. After analyzing the statements, mark the CORRECT alternative.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Only the statement IV is incorrect."
+   },
+   {
+    "letra": "B",
+    "texto": "Only the statements I and II are incorrect."
+   },
+   {
+    "letra": "C",
+    "texto": "Only the statements I, II and IV are incorrect."
+   },
+   {
+    "letra": "D",
+    "texto": "All the sentences are incorrect."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "Todas as afirmações estão incorretas.\n[I] Incorreta. Quem teve que escrever um relatório sobre a fabricação dos anéis de encadernação foi o revendedor, como expresso em “[...] he said the rings needed to be replaced, and he'd have to write to the manufacturer [...]”.\n[II] Incorreta. A tirinha não fala nada sobre um anel muito apertado para o dedo da personagem.\n[III] Incorreta. Na frase “Goog going, Sir.. that was the best excuse i've ever heard” a personagem Mercie expressa: “Muito bem... essa foi a melhor desculpa que já ouvi” porém se referindo à desculpa dada e não ao relatório.\n[IV] Incorreta. No trecho “[...] it would take two weeks to get spare parts.” a personagem informa que levaria duas semanas para obter peças de reposição do fichário e não sobre o tempo para fazer o relatório.\nDiante disso, a alternativa correta é de letra [D].",
+  "imagem_arquivo": "uft-2023-003.png",
+  "slug_base": "uft-2023-ingles-3",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 6,
+  "instituicao": "Ufam-psc 3",
+  "ano": "2023",
+  "enunciado": "“Snoopy” se sente confuso porque:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "ele está fazendo tudo errado."
+   },
+   {
+    "letra": "B",
+    "texto": "ele se arrepende de ter uma vida sem propósito e significado."
+   },
+   {
+    "letra": "C",
+    "texto": "não é certo não ter uma vida com propósito e direção."
+   },
+   {
+    "letra": "D",
+    "texto": "apesar de estar feliz, isso não está certo."
+   },
+   {
+    "letra": "E",
+    "texto": "ele se sente feliz, apesar de sua vida não ter propósito e significado."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "Nos dois primeiros quadrinhos, Snoopy relata que sua vida não tem propósito (purpose), direção (direction), meta (aim) nem significado (meaning), e, no terceiro quadro, ele diz que ainda assim, é feliz (“And yet I’m happy”).",
+  "imagem_arquivo": "ufam-psc-3-2023-006.png",
+  "slug_base": "ufam-psc-3-2023-ingles-6",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 7,
+  "instituicao": "Ufam-psc 3",
+  "ano": "2023",
+  "enunciado": "O significado de “yet” na tirinha é:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "à medida que"
+   },
+   {
+    "letra": "B",
+    "texto": "conforme"
+   },
+   {
+    "letra": "C",
+    "texto": "logo que"
+   },
+   {
+    "letra": "D",
+    "texto": "no entanto"
+   },
+   {
+    "letra": "E",
+    "texto": "para que"
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A palavra “yet” tem diversas traduções, mas a que melhor dá sentido a tirinha é a opção de “no entanto”, pois há ideias contrapostas no texto – a de não ter objetivo, direção e afins e a de ser feliz –.",
+  "imagem_arquivo": "ufam-psc-3-2023-007.png",
+  "slug_base": "ufam-psc-3-2023-ingles-7",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 8,
+  "instituicao": "Unesp",
+  "ano": "2022",
+  "enunciado": "Leia a tira. O humor da tira decorre do fato de",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "o menino estar com o relógio parado."
+   },
+   {
+    "letra": "B",
+    "texto": "o menino ser controlado por uma máquina."
+   },
+   {
+    "letra": "C",
+    "texto": "as máquinas ajudarem humanos no trabalho e no lazer."
+   },
+   {
+    "letra": "D",
+    "texto": "o tigre considerar inverossímil a história de ficção científica."
+   },
+   {
+    "letra": "E",
+    "texto": "o tigre ter ficado com medo das máquinas."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "A alternativa [B] está correta, pois o menino fala que a história é sobre “como as máquinas controlam os seres humanos e os transformam em escravos zumbis”.",
+  "imagem_arquivo": "unesp-2022-008.png",
+  "slug_base": "unesp-2022-ingles-8",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 9,
+  "instituicao": "Eear",
+  "ano": "2021",
+  "enunciado": "According to the text, Garfield:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Thinks all days are beautiful."
+   },
+   {
+    "letra": "B",
+    "texto": "Prefers the kitchen only when it’s raining."
+   },
+   {
+    "letra": "C",
+    "texto": "Prefers staying outside if it’s a beautiful day."
+   },
+   {
+    "letra": "D",
+    "texto": "Thinks days are beautiful in the kitchen even when it’s raining."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "Segundo a afirmação de Garfield, é sempre um belo dia na cozinha: “It’s always a beautiful day in the kitchen”. Assim, se entende que a personagem ache que os dias são bonitos na cozinha, mesmo quando está chovendo, deixando clara a alternativa de letra [D].",
+  "imagem_arquivo": "eear-2021-009.png",
+  "slug_base": "eear-2021-ingles-9",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 10,
+  "instituicao": "Eear",
+  "ano": "2021",
+  "enunciado": "The sentence “Now it’s raining” is in the:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Simple Past"
+   },
+   {
+    "letra": "B",
+    "texto": "Simple Present"
+   },
+   {
+    "letra": "C",
+    "texto": "Past Progressive"
+   },
+   {
+    "letra": "D",
+    "texto": "Present Progressive"
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "O tempo verbal chamado “Present Progressive”, também chamado de “Present Continuous”, é caracterizado quando se fala sobre alguma ação no presente, principalmente no momento exato da fala. É formado pela estruturação do sujeito, seguido do verbo to be juntamente com o verbo principal da frase utilizando a partícula “-ing”, como é o caso de “Now it’s raining”. Portanto, a alternativa correta é de letra [D].",
+  "imagem_arquivo": "eear-2021-010.png",
+  "slug_base": "eear-2021-ingles-10",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 11,
+  "instituicao": "Eear",
+  "ano": "2021",
+  "enunciado": "The words “bite” and “net”, in the comic strip, are, respectively:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "a noun and a noun"
+   },
+   {
+    "letra": "B",
+    "texto": "a noun and a verb"
+   },
+   {
+    "letra": "C",
+    "texto": "a verb and a noun"
+   },
+   {
+    "letra": "D",
+    "texto": "a verb and a verb"
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "As palavras “bite”, de mordida, e “net”, de rede, no caso a da pesca, são exemplos de substantivos. A palavra “bite”, nesse caso caracterizando um substantivo, se refere ao ato de usar os dentes para cortar e rasgar algo, ou o pedaço arrancado. No caso, à mordida na isca da vara de pesca. Para a palavra “net”, seu funcionamento é de um substantivo já que refere, e nomeia, o objeto que o pássaro precisa pegar, no caso à rede de pesca. Portanto, a alternativa correta é de letra [A].",
+  "imagem_arquivo": "eear-2021-011.png",
+  "slug_base": "eear-2021-ingles-11",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 12,
+  "instituicao": "Unesp",
+  "ano": "2021",
+  "enunciado": "Leia a tira “Calvin e Haroldo”, de Bill Watterson. No último quadrinho, a fala de Calvin revela que ele",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "ficou com medo da irritação da sua mãe."
+   },
+   {
+    "letra": "B",
+    "texto": "achou que a água continuava quente demais."
+   },
+   {
+    "letra": "C",
+    "texto": "não quis mais sair do banho."
+   },
+   {
+    "letra": "D",
+    "texto": "admitiu que a mãe estava certa."
+   },
+   {
+    "letra": "E",
+    "texto": "entrou na banheira contra a sua vontade."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A alternativa [D] está correta, pois o garoto fala: “Boy, does she know me” (Cara, ela me conhece mesmo).",
+  "imagem_arquivo": "unesp-2021-012.png",
+  "slug_base": "unesp-2021-ingles-12",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 13,
+  "instituicao": "Ufgd",
+  "ano": "2021",
+  "enunciado": "Which of the following best expresses the information presented in the cartoon above?",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "According to the cartoon, the character wanted to give the whole world to his lover, but his mind went blank."
+   },
+   {
+    "letra": "B",
+    "texto": "According to the cartoon, the character decided to give up on writing a love letter because he realized that words could not represent totally his feelings."
+   },
+   {
+    "letra": "C",
+    "texto": "According to the cartoon, it is very easy to forget words when you are writing a love letter to express your emotions."
+   },
+   {
+    "letra": "D",
+    "texto": "According to the cartoon, the character decided to write a love letter but then he gave up on this activity because he realized that his typewriter had broken down."
+   },
+   {
+    "letra": "E",
+    "texto": "According to the cartoon, the character decided to give up on his relationship because he could not remembre the words to describe it."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "Na tirinha a personagem Snoopy expressa que palavras não podem dizer o quanto ele ama alguém, portanto é melhor esquecer isso. A alternativa de letra [B] expressa esse mesmo contexto, dizendo que a personagem decidiu desistir de escrever uma carta de amor porque percebeu que as palavras não poderiam representar totalmente seus sentimentos.",
+  "imagem_arquivo": "ufgd-2021-013.png",
+  "slug_base": "ufgd-2021-ingles-13",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 14,
+  "instituicao": "Integrado - Medicina",
+  "ano": "2021",
+  "enunciado": "Analise a tirinha a seguir. Agora, de acordo com a tirinha acima, leia a sentença abaixo. Hagar’s doctor, as soon as he _________ that his health was weakened, he decides to advise him to follow a healthy diet and to _________the habit of drinking. But, instead of taking this as an advice, Hagar _________ his doctor was making a joke. Assinale a alternativa que contenha os verbos corretos que melhor preenchem, em sequência, os espaços na sentença acima.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "realizes / abandoned / think."
+   },
+   {
+    "letra": "B",
+    "texto": "realize / abandon / think."
+   },
+   {
+    "letra": "C",
+    "texto": "realized / abandon / thought."
+   },
+   {
+    "letra": "D",
+    "texto": "realize / abandons / thought."
+   },
+   {
+    "letra": "E",
+    "texto": "realized / abandon / thinks."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "Alternativa [C] correta. A narrativa do quadrinho está majoritariamente conjugada no passado simples, por isso, a conjugação verbal dos demais verbos devem seguir a estrutura prévia. Primeiro e terceiro espaços devem ser completados com “realized” (percebeu) e “thought” (pensou). No segundo vão, a sentença exige que o verbo apareça em sua forma infinitiva (abandon) devido a estrutura do enunciado que já evidencia a forma com a partícula “to” precedendo o verbo.",
+  "imagem_arquivo": "integrado-medicina-2021-014.png",
+  "slug_base": "integrado-medicina-2021-ingles-14",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 16,
+  "instituicao": "Eear",
+  "ano": "2019",
+  "enunciado": "Read the cartoon and answer question. The word “bored”, used twice in the cartoon, is NOT closest in meaning to __________.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "refreshed"
+   },
+   {
+    "letra": "B",
+    "texto": "impatient"
+   },
+   {
+    "letra": "C",
+    "texto": "sleepy"
+   },
+   {
+    "letra": "D",
+    "texto": "tired"
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "A alternativa [A] deve ser escolhida, pois a palavra bored (entediado) não é sinônima de refreshed (refrescado, revigorado).",
+  "imagem_arquivo": "eear-2019-016.png",
+  "slug_base": "eear-2019-ingles-16",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 17,
+  "instituicao": "Ita",
+  "ano": "2018",
+  "enunciado": "A mãe de Helga pergunta \"What did you ever see in that man?\" porque",
+  "texto_base": "A(s) questão(ões) refere(m)-se à tirinha a seguir:",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "acha que ele não dá atenção a sua filha."
+   },
+   {
+    "letra": "B",
+    "texto": "repara que ele trata Helga de forma rude."
+   },
+   {
+    "letra": "C",
+    "texto": "percebe que Helga está chateada com ele."
+   },
+   {
+    "letra": "D",
+    "texto": "suspeita que ele trate o cão melhor do que Helga."
+   },
+   {
+    "letra": "E",
+    "texto": "observa que ele é um homem folgado."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "Tradução da pergunta: \"O que você viu naquele homem?\". A mãe de Helga faz tal pergunta, porque percebe que o marido da filha é folgado (lazy).",
+  "imagem_arquivo": "ita-2018-017.png",
+  "slug_base": "ita-2018-ingles-17",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": 663
+ },
+ {
+  "n_lote": 18,
+  "instituicao": "Ita",
+  "ano": "2018",
+  "enunciado": "O fato de Helga usar a expressão “Oh... now, mother...”, significa que ela",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "concorda com sua mãe que cometeu um erro ao se casar com Hägar."
+   },
+   {
+    "letra": "B",
+    "texto": "vai contar à sua mãe porque se casou com Hägar."
+   },
+   {
+    "letra": "C",
+    "texto": "está irritada com o comportamento do marido."
+   },
+   {
+    "letra": "D",
+    "texto": "ficou incomodada com o comentário de sua mãe."
+   },
+   {
+    "letra": "E",
+    "texto": "quer confessar para sua mãe o desânimo com o casamento."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A alternativa [D] está correta, pois a expressão em destaque pode ser entendida como \"Mãe, não começa...\". Desse modo, a filha demonstra sua irritação.",
+  "imagem_arquivo": "ita-2018-018.png",
+  "slug_base": "ita-2018-ingles-18",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": 664
+ },
+ {
+  "n_lote": 19,
+  "instituicao": "Ita",
+  "ano": "2018",
+  "enunciado": "A ironia da mãe de Helga, ao afirmar: “I can see that!”, reside no fato de que",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "ela vê quão bem Hägar trata Snert."
+   },
+   {
+    "letra": "B",
+    "texto": "ela constata que Hägar trata Snert como se fosse um serviçal."
+   },
+   {
+    "letra": "C",
+    "texto": "Snert pode comer junto com a família."
+   },
+   {
+    "letra": "D",
+    "texto": "Hägar passou a noite inteira ensinando truques para Snert."
+   },
+   {
+    "letra": "E",
+    "texto": "Hägar permite que Snert fique dentro da casa."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "A alternativa [B] está correta, pois Helga fala: \"He treats that dog like family!\" (Ele trata aquele cachorro como família!). Além disso, Hagar pede ao cão que traga um travesseiro para as costas.",
+  "imagem_arquivo": "ita-2018-019.png",
+  "slug_base": "ita-2018-ingles-19",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": 665
+ },
+ {
+  "n_lote": 20,
+  "instituicao": "Unicamp",
+  "ano": "2017",
+  "enunciado": "A tirinha ironiza uma suposta característica dos ingleses:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "o apreço pela história das invasões bárbaras."
+   },
+   {
+    "letra": "B",
+    "texto": "admiração pela família real."
+   },
+   {
+    "letra": "C",
+    "texto": "o valor que atribuem aos seus jardins."
+   },
+   {
+    "letra": "D",
+    "texto": "o cuidado com a preservação de seus edifícios históricos."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "Segundo a tirinha, o rei inglês diz não ter medo das espadas afiadas dos bárbaros. No entanto, quando um dos bárbaros ameaça cortar o jardim de rosas, o rei decide dar o ouro a eles.",
+  "imagem_arquivo": "unicamp-2017-020.png",
+  "slug_base": "unicamp-2017-ingles-20",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 25,
+  "instituicao": "Pucsp",
+  "ano": "2017",
+  "enunciado": "A tirinha acima mostra que",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Calvin sabe contornar a situação criada pelo castigo."
+   },
+   {
+    "letra": "B",
+    "texto": "a mãe de Calvin está certa ao reclamar com o pai dele que o castigo foi exagerado."
+   },
+   {
+    "letra": "C",
+    "texto": "Calvin decide não comer assim que prova a comida."
+   },
+   {
+    "letra": "D",
+    "texto": "o pai de Calvin não tem certeza de que o castigo aplicado seja a maneira mais eficiente de educá-lo."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "A alternativa [A] está correta, pois Calvin, ao ficar em seu quarto de castigo, consegui pedir uma pizza de pepperoni por telefone.",
+  "imagem_arquivo": "pucsp-2017-025.png",
+  "slug_base": "pucsp-2017-ingles-25",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 26,
+  "instituicao": "Espm",
+  "ano": "2017",
+  "enunciado": "In the comic strip above:",
+  "texto_base": "The question(s) refer to the following comic strip:",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "The mother has put rice in the soup."
+   },
+   {
+    "letra": "B",
+    "texto": "The boy has found out that his food is artificial."
+   },
+   {
+    "letra": "C",
+    "texto": "The father is upset that the meal isn’t delicious."
+   },
+   {
+    "letra": "D",
+    "texto": "The boy refuses to eat the soup."
+   },
+   {
+    "letra": "E",
+    "texto": "The food is not well cooked."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "A alternativa [A] está correta, pois a mãe de fato colocou arroz na sopa. Quando a mãe mentiu para o garoto dizendo que havia colocado larvas na sopa, ele passou a comê-la.",
+  "imagem_arquivo": "espm-2017-026.png",
+  "slug_base": "espm-2017-ingles-26",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 27,
+  "instituicao": "Uerj",
+  "ano": "2016",
+  "enunciado": "Besides being funny, comics often expresses criticism. The comic strip criticizes men’s incapacity to take the following action:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "fight what baffles them"
+   },
+   {
+    "letra": "B",
+    "texto": "confront what fools them"
+   },
+   {
+    "letra": "C",
+    "texto": "resist what alienates them"
+   },
+   {
+    "letra": "D",
+    "texto": "avoid what confuses them"
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "A tirinha critica a incapacidade dos homens de \"resistir àquilo que os aliena\". No caso, o garoto e o tigre, mesmo sabendo que a televisão os aliena, não conseguem parar de assisti-la.",
+  "imagem_arquivo": "uerj-2016-027.png",
+  "slug_base": "uerj-2016-ingles-27",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 28,
+  "instituicao": "Uerj",
+  "ano": "2016",
+  "enunciado": "Consider the visual representation of the tiger in the comic strip. The effect of closeness between the tiger and the viewer is obtained in the panel below:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "5"
+   },
+   {
+    "letra": "B",
+    "texto": "6"
+   },
+   {
+    "letra": "C",
+    "texto": "7"
+   },
+   {
+    "letra": "D",
+    "texto": "8"
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "O quadrinho 7 evidencia a proximidade entre o tigre o garoto, pois o primeiro sente-se à vontade para discordar de forma veemente do último dizendo \"Nothing to do?!\" (Nada pra fazer?!).",
+  "imagem_arquivo": "uerj-2016-028.png",
+  "slug_base": "uerj-2016-ingles-28",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 29,
+  "instituicao": "Uerj",
+  "ano": "2016",
+  "enunciado": "In the speech balloon of panel 1, the word thatappears twice. The second thatfulfils the following cohesive function:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "showing emphasis in speech"
+   },
+   {
+    "letra": "B",
+    "texto": "refering back to the quotation"
+   },
+   {
+    "letra": "C",
+    "texto": "pointing to the book in the picture"
+   },
+   {
+    "letra": "D",
+    "texto": "linking main and subordinate clauses"
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "O segundo that do primeiro quadrinho está \"fazendo referência à citação\". No caso, a citação é \"a religião é o ópio do povo\".",
+  "imagem_arquivo": "uerj-2016-029.png",
+  "slug_base": "uerj-2016-ingles-29",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 30,
+  "instituicao": "Uerj",
+  "ano": "2016",
+  "enunciado": "And I should know. (panel 4) Modal verbs can be used to refer to a speaker’s attitude. The modal should indicates that Calvin believes his knowledge of the bad quality of the TV show would be characterized as:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "desirable"
+   },
+   {
+    "letra": "B",
+    "texto": "probable"
+   },
+   {
+    "letra": "C",
+    "texto": "surprising"
+   },
+   {
+    "letra": "D",
+    "texto": "mandatory"
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "O comportamento de Calvin mostra que ele deveria saber que o programa de TV ao qual ele está assistindo ofenderia uma criança de 6 anos. O uso de should confere à frase a ideia de que seria desejável que Calvin soubesse de tal característica do programa.",
+  "imagem_arquivo": "uerj-2016-030.png",
+  "slug_base": "uerj-2016-ingles-30",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 31,
+  "instituicao": "Uerj",
+  "ano": "2016",
+  "enunciado": "By establishing links between different parts of a text, one might guess the meaning of an unknown word. Based on Calvin’s evaluation of the show he is watching, the meaning of the word tripe, in panel 8, is:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "fun"
+   },
+   {
+    "letra": "B",
+    "texto": "trash"
+   },
+   {
+    "letra": "C",
+    "texto": "pastime"
+   },
+   {
+    "letra": "D",
+    "texto": "program"
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "O significado da palavra tripe pode ser entendido como trash (lixo, porcaria), pois o tigre fala de forma irônica que o garoto, quando for mais velho, gostaria de ter mais do que apenas memórias dessa porcaria para se lembrar.",
+  "imagem_arquivo": "uerj-2016-031.png",
+  "slug_base": "uerj-2016-ingles-31",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 32,
+  "instituicao": "Unicamp",
+  "ano": "2016",
+  "enunciado": "Na tirinha, Calvin dá dicas sobre como",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "derrotar o adversário em um jogo de futebol."
+   },
+   {
+    "letra": "B",
+    "texto": "vencer o interlocutor em uma discussão."
+   },
+   {
+    "letra": "C",
+    "texto": "derrotar o adversário na olimpíada de inglês."
+   },
+   {
+    "letra": "D",
+    "texto": "ser um bom comunicador."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "A alternativa [B] está correta, pois Calvin fala que \"When a person pauses in mid-sentence to choose a word, that's the best time to jump in and change the subject\" (quando uma pessoa para no meio de uma sentença para escolher uma palavra, esse é o melhor momento para se intrometer e mudar de assunto).",
+  "imagem_arquivo": "unicamp-2016-032.png",
+  "slug_base": "unicamp-2016-ingles-32",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 33,
+  "instituicao": "Mackenzie",
+  "ano": "2016",
+  "enunciado": "According to the cartoon, Garfield",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "has just come back from a long walk."
+   },
+   {
+    "letra": "B",
+    "texto": "intends to run on the table."
+   },
+   {
+    "letra": "C",
+    "texto": "has no more room to walk on the table."
+   },
+   {
+    "letra": "D",
+    "texto": "feels sad, for he needs a new table."
+   },
+   {
+    "letra": "E",
+    "texto": "pretends to be tired for having run on the table."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "A tirinha mostra Garfield dizendo que partirá para uma jornada longa. No entanto, o gato volta pouquíssimo tempo depois dizendo que a mesa acabou, isto é, que ela é curta demais. A alternativa [C] está correta, pois afirma que “Garfield não tem mais espaço para andar na mesa”.",
+  "imagem_arquivo": "mackenzie-2016-033.png",
+  "slug_base": "mackenzie-2016-ingles-33",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 34,
+  "instituicao": "G1 - ifba",
+  "ano": "2016",
+  "enunciado": "About the Text, it is correct to say:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "“Dress” is a noun."
+   },
+   {
+    "letra": "B",
+    "texto": "“Might” expresses possibility."
+   },
+   {
+    "letra": "C",
+    "texto": "Garfield liked the woman’s idea."
+   },
+   {
+    "letra": "D",
+    "texto": "Jon has never tried the woman’s idea before."
+   },
+   {
+    "letra": "E",
+    "texto": "“ Experience” is formed by a prefix and a suffix."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "O verbo modal might indica possibilidade remota.",
+  "imagem_arquivo": "g1-ifba-2016-034.png",
+  "slug_base": "g1-ifba-2016-ingles-34",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 35,
+  "instituicao": "Eear",
+  "ano": "2016",
+  "enunciado": "Read the cartoon below and answer the question. According to the cartoon, Garfield",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "wants to build his career."
+   },
+   {
+    "letra": "B",
+    "texto": "intends to work hard."
+   },
+   {
+    "letra": "C",
+    "texto": "has something in his mind as a plan to complete his studies."
+   },
+   {
+    "letra": "D",
+    "texto": "actually wants to spend his time doing nothing but planning."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A alternativa [D] está correta, pois afirma que \"Garfield na verdade quer passar seu tempo não fazendo nada exceto planejar\". O motivo para tal decisão é que \"se você passar tempo suficiente planejando você na verdade nunca tem que fazer nada\". Em outras palavras, Garfield é um procrastinador nato.",
+  "imagem_arquivo": "eear-2016-035.png",
+  "slug_base": "eear-2016-ingles-35",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 36,
+  "instituicao": "Ufpr",
+  "ano": "2015",
+  "enunciado": "Consider the question Calvin asks: “How can you be creative when someone’s breathing down your neck?”. The purpose of it is:",
+  "texto_base": "A tira a seguir é referência para a(s) próxima(s) questão(ões).",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "to complain about the result of a test."
+   },
+   {
+    "letra": "B",
+    "texto": "to complain about writing a text on teaching."
+   },
+   {
+    "letra": "C",
+    "texto": "to question why someone has to learn how to write."
+   },
+   {
+    "letra": "D",
+    "texto": "to question how someone can be creative and meet the requirements of a writing task."
+   },
+   {
+    "letra": "E",
+    "texto": "to question why someone has to be standing at the back of another person, by his or her neck."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A pergunta destacada pode ser entendida como: \"Como você pode ser criativo quando alguém está fungando no seu pescoço?\". A alternativa correta é a [D], pois diz que o propósito da pergunta é o de \"questionar como alguém pode ser criativo e ao mesmo tempo satisfazer as exigências de uma tarefa escrita\". As exigências são os prazos, as regras e as notas.",
+  "imagem_arquivo": "ufpr-2015-036.png",
+  "slug_base": "ufpr-2015-ingles-36",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 37,
+  "instituicao": "Ufpr",
+  "ano": "2015",
+  "enunciado": "Hobbes suggests that Calvin should not think about the result of a writing task but rather have fun with the process of creating. Why is this suggestion NOT a profitable one?",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Because Calvin is doing his final exams."
+   },
+   {
+    "letra": "B",
+    "texto": "Because Calvin cannot be creative while writing."
+   },
+   {
+    "letra": "C",
+    "texto": "Because Calvin feels he will fail his writing course."
+   },
+   {
+    "letra": "D",
+    "texto": "Because Hobbes does not know how much effort the process of writing requires."
+   },
+   {
+    "letra": "E",
+    "texto": "Because Calvin was sent to the psychologist at school every time he had fun with writing."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "Segundo a tirinha, Calvin foi levado ao psicólogo da escola toda vez que ele se divertia ao escrever. O texto coloca: \"Toda vez que eu faço isso [me divirto], eu acabo na sala do psicólogo da escola\".",
+  "imagem_arquivo": "ufpr-2015-037.png",
+  "slug_base": "ufpr-2015-ingles-37",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 38,
+  "instituicao": "Ueg",
+  "ano": "2015",
+  "enunciado": "Analise a charge a seguir para responder à questão. De acordo com a imagem e a fala da personagem Calvin,",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "a prova de que há vida inteligente em outras partes do universo é que esses seres nunca tentaram contato com os humanos."
+   },
+   {
+    "letra": "B",
+    "texto": "o sinal evidente de existência de vida fora da terra é percebido pela devastação do planeta por seres extraterrestres."
+   },
+   {
+    "letra": "C",
+    "texto": "a ironia presente no texto refere-se à existência de vida inteligente na terra e à ausência dela em outros planetas."
+   },
+   {
+    "letra": "D",
+    "texto": "a árvore cortada é um sinal de que seres extraterrestres tentaram entrar em contato com os habitantes da terra."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "A alternativa [A] está correta, pois a frase pode ser entendida como: \"de vez em quando eu acho que o sinal mais evidente de que a vida inteligente existe em algum lugar no universo é que ninguém tentou nos contatar\".",
+  "imagem_arquivo": "ueg-2015-038.png",
+  "slug_base": "ueg-2015-ingles-38",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 39,
+  "instituicao": "Uema",
+  "ano": "2015",
+  "enunciado": "In the English language the‘s has different grammatical uses. Choose the alternative in which the‘s is being used in the text sentence: Who’s got my beach ball?",
+  "texto_base": "Leia a sequência em quadrinhos de Peanuts, personagem popular nas revistas americanas, e responda à(s) questão(ões).",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Past tense in the possessive case."
+   },
+   {
+    "letra": "B",
+    "texto": "Present perfect of the verb to have."
+   },
+   {
+    "letra": "C",
+    "texto": "Present simple in the genitive case."
+   },
+   {
+    "letra": "D",
+    "texto": "Contraction verb to be in the present tense."
+   },
+   {
+    "letra": "E",
+    "texto": "Contraction of the verb to be in the past tense."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "A alternativa [B] está correta, pois o 's em \"Who´s got my beach ball?\" é a contração do auxiliar has do tempo verbal present perfect. Esse tempo é formado por have/has e o verbo principal no particípio passado (no caso da questão, got).",
+  "imagem_arquivo": "uema-2015-039.png",
+  "slug_base": "uema-2015-ingles-39",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 40,
+  "instituicao": "Espm",
+  "ano": "2015",
+  "enunciado": "In the last strip the modal verb couldn’t could be replaced, without changing its meaning, by",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "mustn’t"
+   },
+   {
+    "letra": "B",
+    "texto": "wasn’t supposed to"
+   },
+   {
+    "letra": "C",
+    "texto": "shouldn’t"
+   },
+   {
+    "letra": "D",
+    "texto": "might not"
+   },
+   {
+    "letra": "E",
+    "texto": "am not able to"
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "Tradução do último quadrinho: \"não, sinceramente, eu não conseguiria comer um outro pedaço\". A alternativa [E] está correta, pois significa (eu não sou capaz).",
+  "imagem_arquivo": "espm-2015-040.png",
+  "slug_base": "espm-2015-ingles-40",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 41,
+  "instituicao": "Espm",
+  "ano": "2015",
+  "enunciado": "According to the comic strip,",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Calvin is asking his dad advice to build a tiger trap."
+   },
+   {
+    "letra": "B",
+    "texto": "Calvin’s dad told his son he ought to give the tiger shelter and feed it."
+   },
+   {
+    "letra": "C",
+    "texto": "Calvin’s dad got crossed for his son doesn’t realize he is a businessman and the boy had better not bother him with that kind of stuff."
+   },
+   {
+    "letra": "D",
+    "texto": "Calvin’s dad was pleased to dispense his son a piece of advice."
+   },
+   {
+    "letra": "E",
+    "texto": "Calvin’s dad told him, actually, to kill the tiger and fill it restoring its original appea­rance but the boy misunderstood it."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "A alternativa [E] está correta, pois afirma que \"o pai de Calvin pediu para ele, na verdade, para matar o tigre e empalhá-lo a fim de restaurar sua aparência original, mas o garoto compreendeu de forma errada\". O garoto entendeu o verbo \"to stuff\" como rechear (no sentido de alimentar) e não como empalhar.",
+  "imagem_arquivo": "espm-2015-041.png",
+  "slug_base": "espm-2015-ingles-41",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 43,
+  "instituicao": "Espm",
+  "ano": "2014",
+  "enunciado": "One may infer from the comic strip that",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Calvin’s mother thinks he had better improve his selling techniques."
+   },
+   {
+    "letra": "B",
+    "texto": "Calvin’s mother grounded him because he stepped out of line."
+   },
+   {
+    "letra": "C",
+    "texto": "Calvin intended to water the flower instead of wetting his mother."
+   },
+   {
+    "letra": "D",
+    "texto": "Calvin wishes to be a salesman when he grows up."
+   },
+   {
+    "letra": "E",
+    "texto": "Calvin has to work as a salesman to get out of trouble."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "A tirinha mostra Calvin jogando uma bexiga cheia d’água em sua mãe a fim de achar graça da situação. Consequentemente, pode ser inferido que sua mãe o coloca de castigo, pois no segundo quadrinho o garoto pergunta se o “banho” não tinha sido refrescante. No último quadrinho, o garoto diz que precisa trabalhar sua capacidade de vender uma ideia (salesmanship), pois sua mãe não se convenceu do caráter refrescante do “banho” defendido pelo garoto. Assim, ele fica em seu quarto, de castigo. A alternativa [B] está correta, pois afirma: “a mãe de Calvin o deixou de castigo porque ele ‘saiu da linha’”.",
+  "imagem_arquivo": "espm-2014-043.png",
+  "slug_base": "espm-2014-ingles-43",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 44,
+  "instituicao": "Espm",
+  "ano": "2014",
+  "enunciado": "Calvin’s words in the last strip, could be replaced, without changing their meaning, by",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "he would rather work on his salesmanship."
+   },
+   {
+    "letra": "B",
+    "texto": "he mustn’t work on his salesmanship."
+   },
+   {
+    "letra": "C",
+    "texto": "he is supposed to work on his salesmanship."
+   },
+   {
+    "letra": "D",
+    "texto": "he ought to work on his salesmanship."
+   },
+   {
+    "letra": "E",
+    "texto": "he doesn’t have to work on his salesmanship."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "Uma vez que Calvin afirma que precisa trabalhar (melhorar) sua capacidade de vendas, a alternativa mais próxima do sentido original é a [D], pois afirma: “ele deveria trabalhar/melhorar sua capacidade de vendas”.",
+  "imagem_arquivo": "espm-2014-044.png",
+  "slug_base": "espm-2014-ingles-44",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 45,
+  "instituicao": "Ufsm",
+  "ano": "2014",
+  "enunciado": "A tira em quadrinhos apresenta uma crítica social em relação ao tema",
+  "texto_base": "Para responder à(s) questão(ões), leia a tira a seguir.",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "do meio ambiente, particularmente sobre o desmatamento."
+   },
+   {
+    "letra": "B",
+    "texto": "da urbanização, particularmente sobre a arquitetura de subúrbios."
+   },
+   {
+    "letra": "C",
+    "texto": "da saúde, particularmente sobre o bem-estar propiciado por espaços verdes."
+   },
+   {
+    "letra": "D",
+    "texto": "da infância, particularmente sobre a falta de espaços de recreação."
+   },
+   {
+    "letra": "E",
+    "texto": "da educação, particularmente sobre o papel ecológico da escola."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "O garoto, em tom de revolta, pergunta: “Onde os animais devem viver agora que elas [as pessoas] cortaram essas árvores para fazer casas?”. Essa pergunta denota preocupação com o desmatamento.",
+  "imagem_arquivo": "ufsm-2014-045.png",
+  "slug_base": "ufsm-2014-ingles-45",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 46,
+  "instituicao": "Ufsm",
+  "ano": "2014",
+  "enunciado": "Assinale verdadeira (V) ou falsa (F) em cada afirmativa a seguir. (          ) No primeiro quadrinho da tira, “they” se refere às pessoas que cortaram as árvores. (          ) No segundo quadrinho da tira, “it” se refere à hipótese da derrubada de um subúrbio por animais. (          ) No quarto quadrinho da tira, “they” se refere aos animais. A sequência correta é",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "F – F – V."
+   },
+   {
+    "letra": "B",
+    "texto": "V – V – V."
+   },
+   {
+    "letra": "C",
+    "texto": "F – V – V."
+   },
+   {
+    "letra": "D",
+    "texto": "V – F – F."
+   },
+   {
+    "letra": "E",
+    "texto": "V – V – F."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "A alternativa [E] está correta, pois o pronome “they” (elas) refere-se às pessoas que provocaram o desmatamento. Tradução do primeiro quadrinho: “Onde os animais devem viver agora que elas [as pessoas] cortaram essas árvores para fazer casas?” Além disso, no segundo quadrinho o garoto fala: “Puxa, será que as pessoas gostariam se os animais destruíssem um subúrbio e colocassem novas árvores?”. Por fim, o pronome “they” no terceiro quadrinho refere-se às pessoas que cortaram as árvores e que não deixaram as chaves do trator.",
+  "imagem_arquivo": "ufsm-2014-046.png",
+  "slug_base": "ufsm-2014-ingles-46",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 47,
+  "instituicao": "Ufsm",
+  "ano": "2014",
+  "enunciado": "No terceiro quadrinho da tira, Calvin e Haroldo têm uma ideia, que Haroldo tenta colocar em prática no quarto quadrinho. Que ideia é essa?",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Replantar todas as árvores derrubadas pelos homens."
+   },
+   {
+    "letra": "B",
+    "texto": "Colocar em prática a derrubada de casas de um subúrbio por um animal."
+   },
+   {
+    "letra": "C",
+    "texto": "Dirigir a retroescavadeira deixada pelos homens."
+   },
+   {
+    "letra": "D",
+    "texto": "Construir novas moradias para os animais."
+   },
+   {
+    "letra": "E",
+    "texto": "Capturar os animais desalojados pelos depredadores."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "Tradução do terceiro quadrinho: “Não vai dar certo. Eles não deixaram as chaves”. Tais frases mostram que Calvin e Harold pretendiam derrubar as casas de um subúrbio.",
+  "imagem_arquivo": "ufsm-2014-047.png",
+  "slug_base": "ufsm-2014-ingles-47",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 48,
+  "instituicao": "Pucrs",
+  "ano": "2014",
+  "enunciado": "Fill in the gaps with the suitable pronouns",
+  "texto_base": "Answer the questions with information from the text.",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "my – she – her – his"
+   },
+   {
+    "letra": "B",
+    "texto": "my – it – our – its"
+   },
+   {
+    "letra": "C",
+    "texto": "his – it – his – her"
+   },
+   {
+    "letra": "D",
+    "texto": "his – he – his – its"
+   },
+   {
+    "letra": "E",
+    "texto": "its – he – our – our"
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "A alternativa [B] completa corretamente as lacunas da tirinha. Tradução dos trechos com lacunas: \"desta vez eu tirarei vantagem da falta de durabilidade do meu meio\"; \"à medida que essa escultura derrete, ela convida o espectador a contemplar o caráter efêmero da vida. Essa obra trata do horror de nossa própria mortalidade\"; \"o gênio nunca é compreendido em sua própria época\".",
+  "imagem_arquivo": "pucrs-2014-048.png",
+  "slug_base": "pucrs-2014-ingles-48",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 49,
+  "instituicao": "Pucrs",
+  "ano": "2014",
+  "enunciado": "A leitura da tirinha acima permite afirmar que I. Calvin esculpe bonecos de neve com o propósito de vê-los derreter. II. Calvin considera a escultura de neve uma representação da brevidade da vida. III. Calvin e Haroldo discordam sobre o conceito de arte. IV. há uma terceira voz que zomba de Calvin e seu boneco de neve. As afirmativas corretas são, apenas,",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "I e II."
+   },
+   {
+    "letra": "B",
+    "texto": "I e III."
+   },
+   {
+    "letra": "C",
+    "texto": "II e III."
+   },
+   {
+    "letra": "D",
+    "texto": "II e IV."
+   },
+   {
+    "letra": "E",
+    "texto": "III e IV."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A afirmação [I] está errada, pois a tirinha não diz que Calvin faz todos os seus bonecos de neve com a intenção de vê-los derreter. Na verdade, Calvin diz que \"desta vez eu tirarei vantagem da falta de durabilidade do meu meio\". Assim, ele percebe uma nova maneira de encarar o derretimento do último boneco de neve que ele fez.\nA afirmação [II] está correta, pois Calvin disse que \"à medida que essa escultura derrete, ela convida o espectador a contemplar o caráter efêmero da vida. Essa obra trata do horror de nossaprópria mortalidade\".\nA afirmação [III] está errada, pois Haroldo não demonstra divergência para com Calvin em relação ao conceito de arte.\nA afirmação [IV] está correta, pois Haroldo e Calvin ouvem alguém caçoando a construção de um boneco de neve em meio a um tempo quente.",
+  "imagem_arquivo": "pucrs-2014-049.png",
+  "slug_base": "pucrs-2014-ingles-49",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 50,
+  "instituicao": "Pucrs",
+  "ano": "2014",
+  "enunciado": "The word “AS” on the third frame conveys the same meaning of",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "like."
+   },
+   {
+    "letra": "B",
+    "texto": "although."
+   },
+   {
+    "letra": "C",
+    "texto": "so."
+   },
+   {
+    "letra": "D",
+    "texto": "while."
+   },
+   {
+    "letra": "E",
+    "texto": "when."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "A conjunção as, no contexto destacado, significa enquanto, à medida que e possui while como sinônima. Tradução do trecho em que a conjunção é usada: \"à medida que essa escultura derrete, ela convida o espectador a contemplar o caráter efêmero da vida\".",
+  "imagem_arquivo": "pucrs-2014-050.png",
+  "slug_base": "pucrs-2014-ingles-50",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": 23
+ },
+ {
+  "n_lote": 51,
+  "instituicao": "Enem 2ª aplicação",
+  "ano": "2014",
+  "enunciado": "A tira, definida como um segmento de história em quadrinhos, pode transmitir uma mensagem com efeito de humor. Na tira, a presença desse efeito no diálogo entre Lucy e seu irmão Linus acontece porque",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Linus prefere interpretar o ciclo da natureza à sua própria maneira."
+   },
+   {
+    "letra": "B",
+    "texto": "Lucy dá uma lição de moral em Linus usando o ciclo da vida e da natureza."
+   },
+   {
+    "letra": "C",
+    "texto": "Lucy se surpreende com a compreensão de Linus sobre o ciclo da natureza."
+   },
+   {
+    "letra": "D",
+    "texto": "Lucy associa o ciclo da natureza, que ocorre a cada dois anos, ao ciclo da vida."
+   },
+   {
+    "letra": "E",
+    "texto": "Linus satiriza a explicação que Lucy fornece sobre o ciclo da natureza e da vida."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "A alternativa [A] está certa, pois no último quadrinho Linus afirma: “Não seja uma folha... mas sim uma árvore”. Linus entende de sua maneira a razão de folhas caírem no chão.",
+  "imagem_arquivo": "enem-2a-aplicacao-2014-051.png",
+  "slug_base": "enem-2a-aplicacao-2014-ingles-51",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 57,
+  "instituicao": "Fatec",
+  "ano": "2013",
+  "enunciado": "Considere a tirinha que mostra os personagens Calvin e seu pai. De acordo com o pai de Calvin,",
+  "texto_base": "Os quadrinhos 5, 6 e 7 apresentam uma história criada por Calvin. Considere esta informação para responder às questões.",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "seu filho tem muito mais tempo livre do que ele."
+   },
+   {
+    "letra": "B",
+    "texto": "o uso das máquinas citadas diminui a ansiedade."
+   },
+   {
+    "letra": "C",
+    "texto": "as máquinas citadas nos garantem mais tempo livre."
+   },
+   {
+    "letra": "D",
+    "texto": "os equipamentos citados por ele tornam a vida mais fácil e despreocupada."
+   },
+   {
+    "letra": "E",
+    "texto": "a tecnologia faz com que as pessoas queiram que tudo seja resolvido instantaneamente."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "A alternativa [E] está correta, pois o pai de Calvin afirma que: “Now, with modems, faxes, and car phones, everybody wants everything instantly!” (agora, com modems, máquinas de fax e telefones nos carros, todos querem tudo instantaneamente!).",
+  "imagem_arquivo": "fatec-2013-057.png",
+  "slug_base": "fatec-2013-ingles-57",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 58,
+  "instituicao": "Unesp",
+  "ano": "2013",
+  "enunciado": "A personagem de barba, Hagar,",
+  "texto_base": "Leia a tira para responder à(s) questão(ões) a seguir.",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "quer que Helga, sua esposa, prepare comida condimentada."
+   },
+   {
+    "letra": "B",
+    "texto": "aprecia petiscos apimentados para acompanhar a cerveja."
+   },
+   {
+    "letra": "C",
+    "texto": "vai disfarçar o hálito de cerveja com balas de menta."
+   },
+   {
+    "letra": "D",
+    "texto": "reclamou, pois seu amigo recomendou que ele parasse de beber."
+   },
+   {
+    "letra": "E",
+    "texto": "vai parar de beber cerveja."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "Ao ser perguntado se Hagar vai parar de beber cerveja, ele responde que não, pois passará a chupar balas de menta (peppermint candy) a caminho de casa.",
+  "imagem_arquivo": "unesp-2013-058.png",
+  "slug_base": "unesp-2013-ingles-58",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 59,
+  "instituicao": "Unesp",
+  "ano": "2013",
+  "enunciado": "A expressão sick and tired no primeiro quadrinho tem sentido equivalente, em português, a",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "cansada devido à doença."
+   },
+   {
+    "letra": "B",
+    "texto": "saturada."
+   },
+   {
+    "letra": "C",
+    "texto": "com enjoo estomacal."
+   },
+   {
+    "letra": "D",
+    "texto": "doente."
+   },
+   {
+    "letra": "E",
+    "texto": "embriagada e sonolenta."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "Apesar de sick significar doente e tiredcansada, a expressão sick and tired pode ser entendida como saturada, ou também de modo mais informal como de saco cheio.",
+  "imagem_arquivo": "unesp-2013-059.png",
+  "slug_base": "unesp-2013-ingles-59",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 60,
+  "instituicao": "Udesc",
+  "ano": "2013",
+  "enunciado": "Answer the following questions according to the comic above. The comic above says:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "he doesn’t wanna work."
+   },
+   {
+    "letra": "B",
+    "texto": "he has free access to anything."
+   },
+   {
+    "letra": "C",
+    "texto": "he found out a way to acquire an easy job."
+   },
+   {
+    "letra": "D",
+    "texto": "he needed help to find an easy job."
+   },
+   {
+    "letra": "E",
+    "texto": "his friend is gonna take him for his first day at work."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "A alternativa correta é a [C], pois afirma que o garoto “descobriu uma maneira de conseguir um emprego fácil”. A fala do garoto no primeiro quadrinho é: “eu descobri como posso atingir o sucesso sem muito esforço”.\nA questão foi classificada apenas como “boa” porque há ambiguidade do pronome pessoal he, uma vez que poderia ser associado tanto ao garoto quanto ao tigre (pois se trata de um animal antropomorfizado).",
+  "imagem_arquivo": "udesc-2013-060.png",
+  "slug_base": "udesc-2013-ingles-60",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 61,
+  "instituicao": "Enem",
+  "ano": "2013",
+  "enunciado": "A partir da leitura dessa tirinha, infere-se que o discurso de Calvin teve um efeito diferente do pretendido, uma vez que ele",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "decide tirar a neve do quintal para convencer seu pai sobre seu discurso."
+   },
+   {
+    "letra": "B",
+    "texto": "culpa o pai por exercer influência negativa na formação de sua personalidade."
+   },
+   {
+    "letra": "C",
+    "texto": "comenta que suas discussões com o pai não correspondem às suas expectativas."
+   },
+   {
+    "letra": "D",
+    "texto": "conclui que os acontecimentos ruins não fazem falta para a sociedade."
+   },
+   {
+    "letra": "E",
+    "texto": "reclama que é vítima de valores que o levam a atitudes inadequadas."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "A resposta pode ser encontrada no último quadrinho, pois Calvin afirma que “essas discussões nunca vão para onde deveriam ir”, ou seja, “que as discussões com o pai nunca beneficiam o garoto”. Por esse motivo, a resposta correta é a [C].",
+  "imagem_arquivo": "enem-2013-061.png",
+  "slug_base": "enem-2013-ingles-61",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 62,
+  "instituicao": "Uel",
+  "ano": "2012",
+  "enunciado": "Na tira a expressão “pitting our wits against the raging elements” pode ser traduzida por",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "tentar fugir da rotina e do estresse do dia a dia."
+   },
+   {
+    "letra": "B",
+    "texto": "aprimorar o conhecimento de sobrevivência na selva."
+   },
+   {
+    "letra": "C",
+    "texto": "buscar soluções inteligentes para superar desafios."
+   },
+   {
+    "letra": "D",
+    "texto": "interagir com a natureza sem o auxílio da tecnologia."
+   },
+   {
+    "letra": "E",
+    "texto": "trabalhar em equipe para lidar com o elemento surpresa."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "O substantivo wit significa inteligência, sagacidade. Assim, Calvin e Haroldo estão tentando usar sua inteligência contra a natureza hostil. Em outras palavras, eles estão dispostos a encarar o desafio de pescar.",
+  "imagem_arquivo": "uel-2012-062.png",
+  "slug_base": "uel-2012-ingles-62",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 63,
+  "instituicao": "Uel",
+  "ano": "2012",
+  "enunciado": "De acordo com o texto, é correto afirmar que as personagens não conseguiram pegar nenhum peixe porque I. discordaram sobre o uso da rede. II. decidiram jogar as iscas na água. III. não quiseram manusear as iscas. IV. não souberam colocar as iscas no anzol. Assinale a alternativa correta.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Somente as afirmativas I e IV são corretas."
+   },
+   {
+    "letra": "B",
+    "texto": "Somente as afirmativas II e III são corretas."
+   },
+   {
+    "letra": "C",
+    "texto": "Somente as afirmativas III e IV são corretas."
+   },
+   {
+    "letra": "D",
+    "texto": "Somente as afirmativas I, II e III são corretas."
+   },
+   {
+    "letra": "E",
+    "texto": "Somente as afirmativas I, II e IV são corretas."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "I. Incorreta. Calvin e Haroldo concordam sobre o uso da rede. Eles a jogariam assim que os peixes pegassem as minhocas.\nII. Correta. Calvin e Haroldo decidiram jogar as iscas na água na esperança de que os peixes as pegassem.\nIII. Correta. A tirinha mostra que tanto Calvin quanto Haroldo não quiseram manusear as iscas; o primeiro por nojo e o segundo por não querer matar nenhuma minhoca para colocá-la no anzol (spear any worm).\nIV. Incorreta. A tirinha não afirma que as personagens não sabiam como colocar as iscas nos anzóis.",
+  "imagem_arquivo": "uel-2012-063.png",
+  "slug_base": "uel-2012-ingles-63",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 65,
+  "instituicao": "Ufrgs",
+  "ano": "2012",
+  "enunciado": "Select the correct alternative to fill the gap in panel 1.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "At the time."
+   },
+   {
+    "letra": "B",
+    "texto": "Not yet."
+   },
+   {
+    "letra": "C",
+    "texto": "No longer."
+   },
+   {
+    "letra": "D",
+    "texto": "Just now."
+   },
+   {
+    "letra": "E",
+    "texto": "Right now."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "No primeiro quadrinho, Calvin pergunta a Haroldo se ele viu algum objeto voador não identificado. No terceiro quadrinho, Calvin pede a Haroldo que fique com os olhos bem abertos, pois tais objetos pousarão mais cedo ou mais tarde. Assim, pelo comentário de Calvin, Haroldo teria respondido que ainda não viu um objeto voador não identificado (not yet).",
+  "imagem_arquivo": "ufrgs-2012-065.png",
+  "slug_base": "ufrgs-2012-ingles-65",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 66,
+  "instituicao": "Ufrgs",
+  "ano": "2012",
+  "enunciado": "According to the comic strip, Calvin",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "says that his parents are shaking with fright."
+   },
+   {
+    "letra": "B",
+    "texto": "watches the stars during the night."
+   },
+   {
+    "letra": "C",
+    "texto": "makes his friend Hobbes very worried about him."
+   },
+   {
+    "letra": "D",
+    "texto": "has the courage to confront some UFOs."
+   },
+   {
+    "letra": "E",
+    "texto": "expects to find an unidentified flying object."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "No terceiro quadrinho, Calvin afirma que ele espera que os objetos voadores não identificados pousem mais cedo ou mais tarde. Assim, a alternativa [E] está correta ao afirmar que Calvin “espera encontrar um objeto voador não identificado”.",
+  "imagem_arquivo": "ufrgs-2012-066.png",
+  "slug_base": "ufrgs-2012-ingles-66",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 67,
+  "instituicao": "Ufrgs",
+  "ano": "2012",
+  "enunciado": "Select the correct alternative to fill the gaps in panels 1 and 2, respectively.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "extremely — Unfortunately"
+   },
+   {
+    "letra": "B",
+    "texto": "hopelessly — Fortunately"
+   },
+   {
+    "letra": "C",
+    "texto": "finally — Incredibly"
+   },
+   {
+    "letra": "D",
+    "texto": "irremediably — Unhappily"
+   },
+   {
+    "letra": "E",
+    "texto": "slightly — surprisingly"
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "Calvin afirma no primeiro quadrinho que ele e Haroldo se separaram do grupo e que estão perdidos, de uma maneira sem volta, sem esperança (hopelessly). No entanto, felizmente (fortunately), seu lema é “esteja preparado”.",
+  "imagem_arquivo": "ufrgs-2012-067.png",
+  "slug_base": "ufrgs-2012-ingles-67",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 68,
+  "instituicao": "Espm",
+  "ano": "2012",
+  "enunciado": "In the second strip, the sentence “Either mom’s cooking dinner, or someone got sick in the furnace duct”, either...or... expresses the idea of:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "exclusion"
+   },
+   {
+    "letra": "B",
+    "texto": "alteration"
+   },
+   {
+    "letra": "C",
+    "texto": "exemplification"
+   },
+   {
+    "letra": "D",
+    "texto": "variation"
+   },
+   {
+    "letra": "E",
+    "texto": "opposition"
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "A expressão “either ... or”    pode ser entendida como “ou ... ou”,em orações afirmativas. Assim, possui a ideia de exclusão.",
+  "imagem_arquivo": "espm-2012-068.png",
+  "slug_base": "espm-2012-ingles-68",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 69,
+  "instituicao": "Espm",
+  "ano": "2012",
+  "enunciado": "According to the comic strip:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Calvin thought someone in the family was ill due to his mom dinner."
+   },
+   {
+    "letra": "B",
+    "texto": "the weird dish Calvin’s mom is cooking smells terrific."
+   },
+   {
+    "letra": "C",
+    "texto": "food will be crispy and tasty in less than half an hour."
+   },
+   {
+    "letra": "D",
+    "texto": "Calvin is keen on eating monkey heads."
+   },
+   {
+    "letra": "E",
+    "texto": "Calvin's dad refuses to eat monkey heads."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "to keen on – ter vontade de\nAo pensar que sua mãe estava cozinhando cabeças de macaco para o jantar, Calvin fica interessado em experimentá-las.",
+  "imagem_arquivo": "espm-2012-069.png",
+  "slug_base": "espm-2012-ingles-69",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 70,
+  "instituicao": "Enem",
+  "ano": "2011",
+  "enunciado": "A tira, definida como um segmento de história em quadrinhos, pode transmitir uma mensagem com efeito de humor. A presença desse efeito no diálogo entre Jon e Garfield acontece porque",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Jon pensa que sua ex-namorada é maluca e que Garfield não sabia disso."
+   },
+   {
+    "letra": "B",
+    "texto": "JodelI é a única namorada maluca que Jon teve, e Garfield acha isso estranho."
+   },
+   {
+    "letra": "C",
+    "texto": "Garfield tem certeza de que a ex-namorada de Jon é sensata, o maluco é o amigo."
+   },
+   {
+    "letra": "D",
+    "texto": "Garfield conhece as ex-namoradas de Jon e considera mais de uma como maluca."
+   },
+   {
+    "letra": "E",
+    "texto": "Jon caracteriza a ex-namorada como maluca e não entende a cara de Garfield."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "",
+  "imagem_arquivo": "enem-2011-070.png",
+  "slug_base": "enem-2011-ingles-70",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": 113
+ },
+ {
+  "n_lote": 71,
+  "instituicao": "Ueg",
+  "ano": "2010",
+  "enunciado": "Texto 2 Observando a tira, é CORRETO afirmar sobre as personagens:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Garfield is not worried about the man’s wound, but about his own food."
+   },
+   {
+    "letra": "B",
+    "texto": "Garfield is grateful to the man for the big sacrifice he has made for him."
+   },
+   {
+    "letra": "C",
+    "texto": "the man is angry at Garfield because he doesn’t like his food."
+   },
+   {
+    "letra": "D",
+    "texto": "Garfield feels sorry about the cut in the man’s finger."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "Ao saber que seu dono se cortou ao abrir a lata de comida para gatos, Garfield comenta: \"I hope you did't bleed on my food\" (Tradução livre: \"Espero que não tenha caído sangue na minha comida\")",
+  "imagem_arquivo": "ueg-2010-071.png",
+  "slug_base": "ueg-2010-ingles-71",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 75,
+  "instituicao": "Mackenzie",
+  "ano": "2009",
+  "enunciado": "According to Snoopy,",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Woodstock used to carry messages to headquarters."
+   },
+   {
+    "letra": "B",
+    "texto": "Woodstock could have been a carrier pigeon."
+   },
+   {
+    "letra": "C",
+    "texto": "Woodstock was brave and didn't talk even when he was tortured."
+   },
+   {
+    "letra": "D",
+    "texto": "Woodstock could talk a little when he was small."
+   },
+   {
+    "letra": "E",
+    "texto": "Woodstock has never been captured by the enemies."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "",
+  "imagem_arquivo": "mackenzie-2009-075.png",
+  "slug_base": "mackenzie-2009-ingles-75",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 76,
+  "instituicao": "Mackenzie",
+  "ano": "2009",
+  "enunciado": "In the story above, Garfield:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "is practicing kitty door smashing."
+   },
+   {
+    "letra": "B",
+    "texto": "wonders what to do after killing the mailman on the sidewalk."
+   },
+   {
+    "letra": "C",
+    "texto": "is testing his running skills around the house."
+   },
+   {
+    "letra": "D",
+    "texto": "believes Match 2 is considered federal offense."
+   },
+   {
+    "letra": "E",
+    "texto": "is afraid of being caught by the mailman."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "",
+  "imagem_arquivo": "mackenzie-2009-076.png",
+  "slug_base": "mackenzie-2009-ingles-76",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 77,
+  "instituicao": "Mackenzie",
+  "ano": "2009",
+  "enunciado": "According to the story above,",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Snoopy is feeling down due to the box of cookies he got."
+   },
+   {
+    "letra": "B",
+    "texto": "the coffee Snoopy is having is likely to make him depressed."
+   },
+   {
+    "letra": "C",
+    "texto": "although Snoopy is lovely, his girl is surely coming back to him."
+   },
+   {
+    "letra": "D",
+    "texto": "we can say that Snoopy must not have a liking for coconut."
+   },
+   {
+    "letra": "E",
+    "texto": "Snoopy realizes that if his girl loved him, she would be sitting and having coffee with him now."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "",
+  "imagem_arquivo": "mackenzie-2009-077.png",
+  "slug_base": "mackenzie-2009-ingles-77",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 78,
+  "instituicao": "Ufg",
+  "ano": "2008",
+  "enunciado": "Read the cartoon. Charlie Brown's anger is firstly showed in his",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "eyes."
+   },
+   {
+    "letra": "B",
+    "texto": "shout."
+   },
+   {
+    "letra": "C",
+    "texto": "cry."
+   },
+   {
+    "letra": "D",
+    "texto": "words."
+   },
+   {
+    "letra": "E",
+    "texto": "hand-writing."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "",
+  "imagem_arquivo": "ufg-2008-078.png",
+  "slug_base": "ufg-2008-ingles-78",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 79,
+  "instituicao": "Uel",
+  "ano": "2008",
+  "enunciado": "Inicialmente, Lucy supõe que a borboleta amarela é uma",
+  "texto_base": "Leia os quadrinhos abaixo e responda a(s) questão(ões).",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "enorme borboleta africana."
+   },
+   {
+    "letra": "B",
+    "texto": "borboleta incomum naquela época do ano."
+   },
+   {
+    "letra": "C",
+    "texto": "borboleta comum naquelas redondezas."
+   },
+   {
+    "letra": "D",
+    "texto": "borboleta que tem que ser observada."
+   },
+   {
+    "letra": "E",
+    "texto": "borboleta rara no Brasil."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "",
+  "imagem_arquivo": "uel-2008-079.png",
+  "slug_base": "uel-2008-ingles-79",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 80,
+  "instituicao": "Uel",
+  "ano": "2008",
+  "enunciado": "A comicidade presente no último quadrinho se deve ao fato de Lucy",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "saber que a batata frita veio do Brasil."
+   },
+   {
+    "letra": "B",
+    "texto": "constatar que não existem borboletas amarelas no Brasil."
+   },
+   {
+    "letra": "C",
+    "texto": "estar convencida de que se trata mesmo de uma borboleta."
+   },
+   {
+    "letra": "D",
+    "texto": "achar as batatas fritas brasileiras diferentes das americanas."
+   },
+   {
+    "letra": "E",
+    "texto": "não querer abrir mão do seu argumento inicial."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "",
+  "imagem_arquivo": "uel-2008-080.png",
+  "slug_base": "uel-2008-ingles-80",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 81,
+  "instituicao": "Pucrs",
+  "ano": "2007",
+  "enunciado": "Nos dois primeiros quadrinhos, Lucy aconselha Snoopy a escrever I. um texto cujo enredo seja coeso. II. um texto que provoque o leitor. III. uma história que torne o leitor provocante. IV. um enredo cada vez mais denso para prender a atenção do leitor. As afirmativas corretas são",
+  "texto_base": "COCONUT TREE, COCO PALM\nA thousand7years ago, the coconut8tree did not even exist in Tahiti.1It was the pioneering Polynesians who9first brought this21plant with them in their migrations. A2tree of10life in every sense of the11phrase, its nut12supplies water, milk and3edible pulp; its \"heart\" is eaten in salads; its22trunk serves as23framework for Tahitian24huts, and its palms are4woven as25roofing.\n15Then, of course, there is the coconut16which, when cut in two and dried18in the sun, produces oil.5Plait three6blades of grass and13dip19into this oil,14light... And you have a lamp. A lamp which not20so very long ago was still used17throughout the islands.",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "I e II."
+   },
+   {
+    "letra": "B",
+    "texto": "I e III."
+   },
+   {
+    "letra": "C",
+    "texto": "II e III."
+   },
+   {
+    "letra": "D",
+    "texto": "II e IV."
+   },
+   {
+    "letra": "E",
+    "texto": "III e IV."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "",
+  "imagem_arquivo": "pucrs-2007-081.png",
+  "slug_base": "pucrs-2007-ingles-81",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 82,
+  "instituicao": "Pucrs",
+  "ano": "2007",
+  "enunciado": "Snoopy seems to realize that",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "he's always written lighter stories."
+   },
+   {
+    "letra": "B",
+    "texto": "his plots have never been enlightened."
+   },
+   {
+    "letra": "C",
+    "texto": "he hasn't been writing long."
+   },
+   {
+    "letra": "D",
+    "texto": "plots are important to be had."
+   },
+   {
+    "letra": "E",
+    "texto": "Lucy should have given her advice earlier."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "",
+  "imagem_arquivo": "pucrs-2007-082.png",
+  "slug_base": "pucrs-2007-ingles-82",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 83,
+  "instituicao": "Ufrgs",
+  "ano": "2007",
+  "enunciado": "Considere o enunciado a seguir e as três propostas para completá-lo. A leitura do segundo quadrinho permite concluir que 1 - Lucy critica todos os meninos. 2 - Charlie já foi criticado por Lucy antes. 3 - os defeitos de Charlie jamais poderão ser sanados. Quais propostas estão corretas, de acordo com o cartum?",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Apenas 1."
+   },
+   {
+    "letra": "B",
+    "texto": "Apenas 2."
+   },
+   {
+    "letra": "C",
+    "texto": "Apenas 3."
+   },
+   {
+    "letra": "D",
+    "texto": "Apenas 1 e 2."
+   },
+   {
+    "letra": "E",
+    "texto": "1, 2 e 3."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "",
+  "imagem_arquivo": "ufrgs-2007-083.png",
+  "slug_base": "ufrgs-2007-ingles-83",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 84,
+  "instituicao": "Ufpb",
+  "ano": "2007",
+  "enunciado": "The mouse's words suggest that he is",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "thankful and relieved."
+   },
+   {
+    "letra": "B",
+    "texto": "skeptical and shocked."
+   },
+   {
+    "letra": "C",
+    "texto": "selfish and surprised."
+   },
+   {
+    "letra": "D",
+    "texto": "nervous and repulsive."
+   },
+   {
+    "letra": "E",
+    "texto": "excited and perplexed."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "",
+  "imagem_arquivo": "ufpb-2007-084.png",
+  "slug_base": "ufpb-2007-ingles-84",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 85,
+  "instituicao": "Ufg",
+  "ano": "2006",
+  "enunciado": "http://www.unitedmedia.com/comics/peanuts/archive/peanuts-0050713.html A resposta de Lucy a Charlie Brown subentende que ela é",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "religiosa."
+   },
+   {
+    "letra": "B",
+    "texto": "determinada."
+   },
+   {
+    "letra": "C",
+    "texto": "caridosa."
+   },
+   {
+    "letra": "D",
+    "texto": "presunçosa."
+   },
+   {
+    "letra": "E",
+    "texto": "ingênua."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "",
+  "imagem_arquivo": "ufg-2006-085.png",
+  "slug_base": "ufg-2006-ingles-85",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 86,
+  "instituicao": "Ita",
+  "ano": "2006",
+  "enunciado": "\"I knew things were going too smoothIy to Iast!\" é semelhante em português ao ditado:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "É melhor prevenir do que remediar."
+   },
+   {
+    "letra": "B",
+    "texto": "Tudo que é bom dura pouco."
+   },
+   {
+    "letra": "C",
+    "texto": "Quem sabe faz a hora."
+   },
+   {
+    "letra": "D",
+    "texto": "Quanto mais rezo, mais assombração me aparece."
+   },
+   {
+    "letra": "E",
+    "texto": "Antes só do que mal acompanhado."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "",
+  "imagem_arquivo": "ita-2006-086.png",
+  "slug_base": "ita-2006-ingles-86",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 87,
+  "instituicao": "Ita",
+  "ano": "2006",
+  "enunciado": "No segundo quadrinho, leia as falas que antecedem o balão em branco, bem como a fala que lhe sucede, e assinale a expressão que o preencheria adequadamente.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Okay. Put him on."
+   },
+   {
+    "letra": "B",
+    "texto": "Okay. Let me see."
+   },
+   {
+    "letra": "C",
+    "texto": "Okay. Send him away."
+   },
+   {
+    "letra": "D",
+    "texto": "Okay. Call him back."
+   },
+   {
+    "letra": "E",
+    "texto": "Okay. Send him in."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "",
+  "imagem_arquivo": "ita-2006-087.png",
+  "slug_base": "ita-2006-ingles-87",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 88,
+  "instituicao": "Ita",
+  "ano": "2006",
+  "enunciado": "A leitura da tira permite concluir que",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "trata-se da primeira visita de Eddie ao local."
+   },
+   {
+    "letra": "B",
+    "texto": "Eddie está contente por se encontrar em liberdade."
+   },
+   {
+    "letra": "C",
+    "texto": "Eddie adoeceu em decorrência de uma forte depressão que teve no ano anterior."
+   },
+   {
+    "letra": "D",
+    "texto": "o interlocutor de Eddie não lhe foi solidário."
+   },
+   {
+    "letra": "E",
+    "texto": "há mais de um profissional da área da saúde no espaço onde se desenrola a cena."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "",
+  "imagem_arquivo": "ita-2006-088.png",
+  "slug_base": "ita-2006-ingles-88",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 89,
+  "instituicao": "Ita",
+  "ano": "2006",
+  "enunciado": "Assinale, entre os adjetivos a seguir, o que melhor qualificaria Eddie.",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "Sensível."
+   },
+   {
+    "letra": "B",
+    "texto": "Hipocondríaco."
+   },
+   {
+    "letra": "C",
+    "texto": "Maníaco."
+   },
+   {
+    "letra": "D",
+    "texto": "Revoltado."
+   },
+   {
+    "letra": "E",
+    "texto": "Carente."
+   }
+  ],
+  "gabarito": "E",
+  "comentario": "",
+  "imagem_arquivo": "ita-2006-089.png",
+  "slug_base": "ita-2006-ingles-89",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 94,
+  "instituicao": "Pucpr",
+  "ano": "2005",
+  "enunciado": "Why is Calvin so anxious?",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "He didn't want to drive to the mountains."
+   },
+   {
+    "letra": "B",
+    "texto": "He's hungry and thirsty."
+   },
+   {
+    "letra": "C",
+    "texto": "He wants to get to his vacation place soon."
+   },
+   {
+    "letra": "D",
+    "texto": "His parents did not want to take a plane."
+   },
+   {
+    "letra": "E",
+    "texto": "It's a two day trip."
+   }
+  ],
+  "gabarito": "C",
+  "comentario": "",
+  "imagem_arquivo": "pucpr-2005-094.png",
+  "slug_base": "pucpr-2005-ingles-94",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 95,
+  "instituicao": "Pucpr",
+  "ano": "2005",
+  "enunciado": "The second question is a reference to",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "length."
+   },
+   {
+    "letra": "B",
+    "texto": "time."
+   },
+   {
+    "letra": "C",
+    "texto": "height."
+   },
+   {
+    "letra": "D",
+    "texto": "size."
+   },
+   {
+    "letra": "E",
+    "texto": "price."
+   }
+  ],
+  "gabarito": "B",
+  "comentario": "",
+  "imagem_arquivo": "pucpr-2005-095.png",
+  "slug_base": "pucpr-2005-ingles-95",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 96,
+  "instituicao": "Mackenzie",
+  "ano": "2003",
+  "enunciado": "According to the comic strip, we can say that:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "If the fish hadn't blinked, Garfield wouldn't have eaten it."
+   },
+   {
+    "letra": "B",
+    "texto": "The fish doesn't know how to swim properly."
+   },
+   {
+    "letra": "C",
+    "texto": "Garfield isn't that hungry."
+   },
+   {
+    "letra": "D",
+    "texto": "Garfield could have swum in the fish bowl."
+   },
+   {
+    "letra": "E",
+    "texto": "Unless the fish had been smart, Garfield would have helped the fish and its family to survive."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "",
+  "imagem_arquivo": "mackenzie-2003-096.png",
+  "slug_base": "mackenzie-2003-ingles-96",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 97,
+  "instituicao": "Puc-rio",
+  "ano": "2003",
+  "enunciado": "In the last image of the cartoon, Snoopy is meditative because Lucy:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "talked about awful things he wanted to forget."
+   },
+   {
+    "letra": "B",
+    "texto": "wanted him to behave as an adult human being."
+   },
+   {
+    "letra": "C",
+    "texto": "made him save a lot of time with her boring speech."
+   },
+   {
+    "letra": "D",
+    "texto": "spoiled the peace of his morning with her talk."
+   },
+   {
+    "letra": "E",
+    "texto": "tried to convince him to be as talkative as she is."
+   }
+  ],
+  "gabarito": "D",
+  "comentario": "",
+  "imagem_arquivo": "puc-rio-2003-097.png",
+  "slug_base": "puc-rio-2003-ingles-97",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 98,
+  "instituicao": "Puc-rio",
+  "ano": "2002",
+  "enunciado": "CALVIN AND HOBBES \"International Herald Tribune\", August 30, 2001. Calvin seems to be very angry because:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "he didn't expect his jacket to be in the closet."
+   },
+   {
+    "letra": "B",
+    "texto": "he thought his favorite jacket had been stolen."
+   },
+   {
+    "letra": "C",
+    "texto": "somebody threw his jacket away on purpose."
+   },
+   {
+    "letra": "D",
+    "texto": "his room ought to be cleaner and tidier."
+   },
+   {
+    "letra": "E",
+    "texto": "no one helped him put on his clothes."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "",
+  "imagem_arquivo": "puc-rio-2002-098.png",
+  "slug_base": "puc-rio-2002-ingles-98",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ },
+ {
+  "n_lote": 99,
+  "instituicao": "Ita",
+  "ano": "2001",
+  "enunciado": "Tapestry, R. L. Oxford & R. C. Scarcella (série), Heinle & Heinle - Boston,Massachusetts, 1994, p. 156 Considere as afirmações a seguir: I. Os personagens estão discutindo pressões sociais sobre as crianças. II. Para manter a forma física, meninos devem praticar esportes e fazer dieta. III. Meninos praticam esportes para que, na vida adulta, possam beber cerveja à vontade. Está(ão) condizente(s) com o texto:",
+  "texto_base": "",
+  "alternativas": [
+   {
+    "letra": "A",
+    "texto": "apenas a I."
+   },
+   {
+    "letra": "B",
+    "texto": "apenas a II."
+   },
+   {
+    "letra": "C",
+    "texto": "apenas a II e III."
+   },
+   {
+    "letra": "D",
+    "texto": "todas."
+   },
+   {
+    "letra": "E",
+    "texto": "nenhuma."
+   }
+  ],
+  "gabarito": "A",
+  "comentario": "",
+  "imagem_arquivo": "ita-2001-099.png",
+  "slug_base": "ita-2001-ingles-99",
+  "tipo": "",
+  "genero_textual": "",
+  "tema": "",
+  "nivel_cefr": "",
+  "titulo": "",
+  "meta_description": "",
+  "imagem_alt": "",
+  "duplicata_de": null
+ }
+]
