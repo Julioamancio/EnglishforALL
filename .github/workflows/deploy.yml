@@ -1,7 +1,8 @@
 # Publica na VPS por SSH.
 #
-# Dispara sozinho a cada push na main, e pode ser disparado à mão pela aba
-# Actions do GitHub (botão "Run workflow"), escolhendo a branch.
+# Dispara sozinho a cada push na master — a branch padrão deste repositório é
+# master, não main —, e pode ser disparado à mão pela aba Actions do GitHub
+# (botão "Run workflow"), escolhendo a branch.
 #
 # Precisa de três segredos em Settings > Secrets and variables > Actions:
 #   VPS_HOST      endereço da VPS
@@ -11,6 +12,18 @@
 #   VPS_PORT         porta do SSH (padrão 22)
 #   VPS_KNOWN_HOSTS  saída de `ssh-keyscan -H <host>`, para fixar a identidade
 #                    do servidor. Sem ele o primeiro acesso é aceito às cegas.
+#                    Vale a pena preencher: é o que impede o deploy de entregar
+#                    a chave privada a um servidor que se passe pelo nosso.
+#                    Se o `ssh-keyscan` da sua máquina reclamar de KEX (o do
+#                    Windows é antigo demais para o OpenSSH 8.9 da VPS), montar
+#                    as linhas a partir do próprio servidor dá no mesmo:
+#                      ssh root@<host> 'cut -d" " -f1,2 /etc/ssh/ssh_host_*.pub'
+#                    e prefixar cada linha com o endereço.
+#
+# A chave do deploy é PRÓPRIA, não a pessoal do professor: assim revogar o
+# acesso das Actions é apagar uma linha do authorized_keys, sem derrubar o
+# acesso de ninguém mais. A linha é a que termina em
+# "github-actions-deploy-englishforall".
 
 name: Publicar na VPS
 
