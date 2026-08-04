@@ -1,0 +1,131 @@
+# Publica na VPS por SSH.
+#
+# Dispara sozinho a cada push na main, e pode ser disparado à mão pela aba
+# Actions do GitHub (botão "Run workflow"), escolhendo a branch.
+#
+# Precisa de três segredos em Settings > Secrets and variables > Actions:
+#   VPS_HOST      endereço da VPS
+#   VPS_USER      usuário do SSH
+#   VPS_SSH_KEY   chave PRIVADA cuja pública está no authorized_keys da VPS
+# E, opcionais:
+#   VPS_PORT         porta do SSH (padrão 22)
+#   VPS_KNOWN_HOSTS  saída de `ssh-keyscan -H <host>`, para fixar a identidade
+#                    do servidor. Sem ele o primeiro acesso é aceito às cegas.
+
+name: Publicar na VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch a publicar'
+        required: true
+        default: 'main'
+
+concurrency:
+  # Dois deploys ao mesmo tempo deixariam o servidor em estado indefinido.
+  group: deploy-vps
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Preparar a chave SSH
+        env:
+          CHAVE: ${{ secrets.VPS_SSH_KEY }}
+          CONHECIDOS: ${{ secrets.VPS_KNOWN_HOSTS }}
+          MAQUINA: ${{ secrets.VPS_HOST }}
+          PORTA: ${{ secrets.VPS_PORT }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CHAVE:-}" ]; then
+            echo "::error::Falta o segredo VPS_SSH_KEY."
+            exit 1
+          fi
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$CHAVE" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+
+          if [ -n "${CONHECIDOS:-}" ]; then
+            printf '%s\n' "$CONHECIDOS" > ~/.ssh/known_hosts
+          else
+            # Sem VPS_KNOWN_HOSTS a identidade do servidor é aceita no
+            # primeiro acesso e travada dali em diante.
+            ssh-keyscan -p "${PORTA:-22}" -H "$MAQUINA" >> ~/.ssh/known_hosts 2>/dev/null
+          fi
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Publicar
+        env:
+          MAQUINA: ${{ secrets.VPS_HOST }}
+          USUARIO: ${{ secrets.VPS_USER }}
+          PORTA: ${{ secrets.VPS_PORT }}
+          REF: ${{ github.event.inputs.branch || github.ref_name }}
+        run: |
+          set -euo pipefail
+          echo "Publicando '$REF' em $MAQUINA"
+
+          ssh -i ~/.ssh/id_deploy -p "${PORTA:-22}" \
+              -o BatchMode=yes -o ConnectTimeout=20 \
+              "$USUARIO@$MAQUINA" "REF='$REF' bash -s" <<'REMOTO'
+          set -euo pipefail
+          cd /var/www/banco-questoes
+
+          antes=$(git rev-parse HEAD)
+          echo "Estava em: $antes"
+
+          git fetch --prune origin "$REF"
+
+          # --ff-only de propósito: se o que está no servidor divergiu do que
+          # está no GitHub, o deploy PARA em vez de sobrescrever. Nada de
+          # reset --hard aqui — ele apagaria silenciosamente o que houvesse
+          # de diferente na VPS.
+          git checkout "$REF" 2>/dev/null || git checkout -b "$REF" "origin/$REF"
+          git merge --ff-only "origin/$REF"
+
+          echo "Agora em:  $(git rev-parse HEAD)"
+
+          # Só mexe em dependências se o package-lock tiver mudado.
+          if ! git diff --quiet "$antes" HEAD -- package-lock.json package.json; then
+            echo "Dependências mudaram, instalando…"
+            npm ci --omit=dev
+          fi
+
+          systemctl restart banco-questoes
+          REMOTO
+
+      - name: Conferir se o site respondeu
+        env:
+          MAQUINA: ${{ secrets.VPS_HOST }}
+          USUARIO: ${{ secrets.VPS_USER }}
+          PORTA: ${{ secrets.VPS_PORT }}
+        run: |
+          set -euo pipefail
+          # O restart não é instantâneo: tenta por até ~30 s antes de desistir.
+          ssh -i ~/.ssh/id_deploy -p "${PORTA:-22}" \
+              -o BatchMode=yes -o ConnectTimeout=20 \
+              "$USUARIO@$MAQUINA" 'bash -s' <<'REMOTO'
+          set -euo pipefail
+          for i in $(seq 1 15); do
+            codigo=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8098/ || true)
+            if [ "$codigo" = "200" ]; then
+              echo "Site respondeu 200. Publicado."
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "O site não respondeu 200 (último código: ${codigo:-nenhum})."
+          systemctl status banco-questoes --no-pager --lines 30 || true
+          journalctl -u banco-questoes --no-pager --lines 40 || true
+          exit 1
+          REMOTO
+
+      - name: Apagar a chave
+        if: always()
+        run: rm -f ~/.ssh/id_deploy
