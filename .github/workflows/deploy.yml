@@ -16,13 +16,13 @@ name: Publicar na VPS
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
     inputs:
       branch:
         description: 'Branch a publicar'
         required: true
-        default: 'main'
+        default: 'master'
 
 concurrency:
   # Dois deploys ao mesmo tempo deixariam o servidor em estado indefinido.
