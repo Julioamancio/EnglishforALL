@@ -56,8 +56,10 @@
         </optgroup>
       </select>
     </div>
-    <button class="btn" type="submit">Filtrar</button>
-    <% if (filtro || turma || busca || ordem) { %><a class="btn btn--sec" href="/admin/usuarios">Limpar</a><% } %>
+    <div class="filtro-alunos__acoes">
+      <button class="btn" type="submit">Filtrar</button>
+      <% if (filtro || turma || busca || ordem) { %><a class="btn btn--sec" href="/admin/usuarios">Limpar</a><% } %>
+    </div>
   </form>
 
   <% if (misturadas.length && !filtro) { %>

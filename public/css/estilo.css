@@ -474,10 +474,24 @@ html[data-tema='escuro'] .btn--sec:hover { color: var(--tinta-2); }
 .campo > label { font-size: .82rem; font-weight: 700; color: var(--suave); }
 .campo > .dica { font-size: .78rem; color: var(--suave); margin: 0; }
 input[type='text'], input[type='email'], input[type='password'], input[type='url'],
-input[type='date'], select, textarea {
+input[type='date'], select, textarea,
+/* O type='search' ficava de fora e herdava o desenho do navegador: borda fina,
+   altura menor e cantos diferentes dos <select> ao lado, o que fazia a barra de
+   filtro parecer montada por acidente. Vale só dentro de .campo, que é onde o
+   input tem de parecer campo de formulário; a barra .busca, com lupa e formato
+   de pílula, tem estilo próprio e a especificidade maior daqui não a alcança. */
+.campo input[type='search'] {
   width: 100%; padding: .62rem .8rem; font: inherit; font-size: .95rem;
   border: 1.5px solid var(--borda-forte); border-radius: var(--r-sm);
   background: var(--superficie); color: var(--texto);
+  /* Sem estas duas linhas o <input> e o <select> saem com alturas diferentes e os
+     rótulos acima deles desalinham: o input herda a entrelinha do corpo do texto
+     (25px) e o select usa a do navegador (~21px), diferença de 4px que salta aos
+     olhos numa barra com os dois lado a lado. A entrelinha fixa aproxima os dois e
+     o min-height iguala o resto, que varia conforme o controle e o navegador. O
+     textarea tem line-height e min-height próprios na regra logo abaixo. */
+  line-height: 1.4;
+  min-height: 2.75rem;
 }
 textarea { min-height: 7rem; resize: vertical; line-height: 1.55; }
 input:focus, select:focus, textarea:focus { border-color: var(--tinta-vivo); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--tinta-vivo) 16%, transparent); }
@@ -1219,20 +1233,34 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 }
 
 /* ------------------------------------------------- painel: filtro de alunos */
+/* Grade em vez de flex: com quatro campos, o flex-wrap jogava os botões sozinhos
+   para uma segunda linha, encostados à esquerda, e o resultado parecia quebrado em
+   vez de proposital. Na grade os campos ocupam colunas iguais que se reagrupam
+   sozinhas conforme a largura, e os botões ganham uma faixa própria. */
 .filtro-alunos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .8rem;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: .9rem 1rem;
+  align-items: end;
   background: var(--superficie);
   border: 1px solid var(--borda);
   border-radius: var(--r);
-  padding: 1rem 1.1rem;
+  padding: 1.1rem 1.15rem;
   margin-bottom: 1rem;
 }
-.filtro-alunos .campo { margin-bottom: 0; }
-.filtro-alunos .campo--cresce { flex: 1 1 16rem; }
-.filtro-alunos select { min-width: 14rem; }
+.filtro-alunos .campo { margin-bottom: 0; min-width: 0; }
+/* sem isto o conteúdo do select estoura a coluna em vez de encolher com ela */
+.filtro-alunos select,
+.filtro-alunos input { width: 100%; min-width: 0; }
+.filtro-alunos__acoes {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  border-top: 1px solid var(--borda);
+  margin-top: .2rem;
+  padding-top: .95rem;
+}
 
 /* edição na ficha do aluno */
 .ficha-editar > summary { font-weight: 600; cursor: pointer; }
