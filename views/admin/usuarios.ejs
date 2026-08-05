@@ -38,8 +38,17 @@
         <% } %>
       </select>
     </div>
+    <div class="campo">
+      <label for="ordem">Ordenar por</label>
+      <select id="ordem" name="ordem">
+        <option value=""<%= ordem === '' ? ' selected' : '' %>>Cadastro mais recente</option>
+        <option value="az"<%= ordem === 'az' ? ' selected' : '' %>>Nome (A–Z)</option>
+        <option value="maior"<%= ordem === 'maior' ? ' selected' : '' %>>Maior média</option>
+        <option value="menor"<%= ordem === 'menor' ? ' selected' : '' %>>Menor média</option>
+      </select>
+    </div>
     <button class="btn" type="submit">Filtrar</button>
-    <% if (filtro || turma || busca) { %><a class="btn btn--sec" href="/admin/usuarios">Limpar</a><% } %>
+    <% if (filtro || turma || busca || ordem) { %><a class="btn btn--sec" href="/admin/usuarios">Limpar</a><% } %>
   </form>
 
   <% if (misturadas.length && !filtro) { %>
@@ -59,6 +68,15 @@
     <%= alunos.length %> <%= alunos.length === 1 ? 'aluno' : 'alunos' %><%= (filtro || turma || busca) ? ' no filtro' : '' %>,
     <%= comSimulado.length %> com pelo menos um simulado concluído.
     Só contam os simulados oficiais — o treino livre no banco não entra.
+    <% if ((ordem === 'maior' || ordem === 'menor') && semNota) { %>
+      <%# Sem este aviso, "menor média" pareceria começar pelos piores alunos
+          quando na verdade começaria por quem nunca fez prova. %>
+      <br><small class="suave">
+        Ordenado por média.
+        <%= semNota %> <%= semNota === 1 ? 'aluno ainda não tem média e ficou' : 'alunos ainda não têm média e ficaram' %>
+        no fim da lista — sem nota não é nota baixa.
+      </small>
+    <% } %>
   </p>
 
   <div class="painel rolagem">

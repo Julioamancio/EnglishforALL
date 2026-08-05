@@ -266,6 +266,7 @@ router.get('/usuarios', (req, res) => {
   const filtro = (req.query.escola || '').trim();
   const turma = (req.query.serie || '').trim();
   const busca = (req.query.q || '').trim().toLowerCase();
+  const ordem = (req.query.ordem || '').trim();
   let alunos = todos;
   if (filtro === 'sem') {
     alunos = alunos.filter((a) => !(a.instituicao || '').trim());
@@ -280,6 +281,34 @@ router.get('/usuarios', (req, res) => {
   if (busca) {
     alunos = alunos.filter((a) =>
       `${a.nome} ${a.email}`.toLowerCase().includes(busca));
+  }
+
+  /* Ordenação. Sem parâmetro fica como sempre foi, do cadastro mais recente para
+     o mais antigo, para não mudar o que o professor já espera ver ao abrir.
+
+     Por nome: localeCompare em pt-BR, senão "Álvaro" cai depois de "Zeca" —
+     comparação por código de caractere joga todo acentuado para o fim.
+
+     Por nota: quem nunca concluiu um simulado não tem média, e "sem nota" não é
+     nota baixa. Esses alunos vão para o FIM nas duas ordenações; do contrário,
+     "menor média" abriria com quem sequer fez prova, escondendo justamente os
+     alunos que o professor quer encontrar. Empate desempata por nome. */
+  const porNome = (a, b) =>
+    // o `|| ''` não é adorno: um cadastro sem nome derrubaria a página inteira
+    // com "cannot read properties of null", e é a página que o professor usa
+    // para achar exatamente esse tipo de cadastro torto.
+    (a.nome || '').localeCompare(b.nome || '', 'pt-BR', { sensitivity: 'base' });
+  if (ordem === 'az') {
+    alunos = [...alunos].sort(porNome);
+  } else if (ordem === 'maior' || ordem === 'menor') {
+    const sinal = ordem === 'maior' ? -1 : 1;
+    alunos = [...alunos].sort((a, b) => {
+      if (a.media == null && b.media == null) return porNome(a, b);
+      if (a.media == null) return 1;
+      if (b.media == null) return -1;
+      if (a.media !== b.media) return (a.media - b.media) * sinal;
+      return porNome(a, b);
+    });
   }
 
   res.render('admin/usuarios', {
@@ -298,6 +327,8 @@ router.get('/usuarios', (req, res) => {
     totalGeral: todos.length,
     filtro,
     turma,
+    ordem,
+    semNota: alunos.filter((a) => a.media == null).length,
     busca: req.query.q || '',
     recado: req.query.ok || '',
     layoutAdmin: true,
