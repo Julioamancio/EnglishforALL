@@ -266,7 +266,26 @@ router.get('/usuarios', (req, res) => {
   const filtro = (req.query.escola || '').trim();
   const turma = (req.query.serie || '').trim();
   const busca = (req.query.q || '').trim().toLowerCase();
-  const ordem = (req.query.ordem || '').trim();
+  /* Duas notas diferentes, e o professor escolhe por qual ordenar:
+       media       — junta todos os simulados concluídos do aluno;
+       ultima_nota — só o último que ele entregou.
+     Servem a perguntas distintas: a média diz como o aluno vem indo, a última
+     nota diz como ele está agora. Um aluno que caiu nas últimas semanas some
+     dentro de uma média boa, e é justamente ele que o professor procura. */
+  const ORDENS = {
+    'media-maior': { campo: 'media', sinal: -1, rotulo: 'média' },
+    'media-menor': { campo: 'media', sinal: 1, rotulo: 'média' },
+    'ultima-maior': { campo: 'ultima_nota', sinal: -1, rotulo: 'última nota' },
+    'ultima-menor': { campo: 'ultima_nota', sinal: 1, rotulo: 'última nota' },
+  };
+  // 'maior'/'menor' eram os valores da primeira versão, quando só havia média;
+  // seguem valendo para não quebrar link já salvo.
+  const APELIDOS = { maior: 'media-maior', menor: 'media-menor' };
+  let ordem = (req.query.ordem || '').trim();
+  if (APELIDOS[ordem]) ordem = APELIDOS[ordem];
+  // valor que não existe volta ao padrão em vez de ficar num limbo em que a
+  // lista sai numa ordem e o campo da tela não mostra nenhuma escolhida
+  if (ordem !== 'az' && !ORDENS[ordem]) ordem = '';
   let alunos = todos;
   if (filtro === 'sem') {
     alunos = alunos.filter((a) => !(a.instituicao || '').trim());
@@ -287,12 +306,14 @@ router.get('/usuarios', (req, res) => {
      o mais antigo, para não mudar o que o professor já espera ver ao abrir.
 
      Por nome: localeCompare em pt-BR, senão "Álvaro" cai depois de "Zeca" —
-     comparação por código de caractere joga todo acentuado para o fim.
+     comparação por código de caractere joga todo acentuado para o fim, e os
+     nomes cadastrados em minúscula junto.
 
-     Por nota: quem nunca concluiu um simulado não tem média, e "sem nota" não é
-     nota baixa. Esses alunos vão para o FIM nas duas ordenações; do contrário,
-     "menor média" abriria com quem sequer fez prova, escondendo justamente os
-     alunos que o professor quer encontrar. Empate desempata por nome. */
+     Por nota: quem nunca concluiu um simulado não tem nota nenhuma, e "sem nota"
+     não é nota baixa. Esses alunos vão para o FIM nas duas direções; do
+     contrário, "menor" abriria com quem sequer fez prova, escondendo justamente
+     os alunos que o professor quer encontrar. Empate desempata por nome, para a
+     lista não trocar de ordem sozinha entre um carregamento e outro. */
   const porNome = (a, b) =>
     // o `|| ''` não é adorno: um cadastro sem nome derrubaria a página inteira
     // com "cannot read properties of null", e é a página que o professor usa
@@ -300,13 +321,15 @@ router.get('/usuarios', (req, res) => {
     (a.nome || '').localeCompare(b.nome || '', 'pt-BR', { sensitivity: 'base' });
   if (ordem === 'az') {
     alunos = [...alunos].sort(porNome);
-  } else if (ordem === 'maior' || ordem === 'menor') {
-    const sinal = ordem === 'maior' ? -1 : 1;
+  } else if (ORDENS[ordem]) {
+    const { campo, sinal } = ORDENS[ordem];
     alunos = [...alunos].sort((a, b) => {
-      if (a.media == null && b.media == null) return porNome(a, b);
-      if (a.media == null) return 1;
-      if (b.media == null) return -1;
-      if (a.media !== b.media) return (a.media - b.media) * sinal;
+      const x = a[campo];
+      const y = b[campo];
+      if (x == null && y == null) return porNome(a, b);
+      if (x == null) return 1;
+      if (y == null) return -1;
+      if (x !== y) return (x - y) * sinal;
       return porNome(a, b);
     });
   }
@@ -328,7 +351,11 @@ router.get('/usuarios', (req, res) => {
     filtro,
     turma,
     ordem,
-    semNota: alunos.filter((a) => a.media == null).length,
+    // o aviso de "sem nota" conta a coluna que está ordenando, não a média sempre
+    rotuloOrdem: ORDENS[ordem] ? ORDENS[ordem].rotulo : '',
+    semNota: ORDENS[ordem]
+      ? alunos.filter((a) => a[ORDENS[ordem].campo] == null).length
+      : 0,
     busca: req.query.q || '',
     recado: req.query.ok || '',
     layoutAdmin: true,
