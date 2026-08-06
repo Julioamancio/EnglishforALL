@@ -133,7 +133,7 @@ h3 { font-size: 1.08rem; font-weight: 700; }
    COLAPSA para fora do .env e o conteúdo encosta na borda do cabeçalho —
    era por isso que a ficha do aluno começava colada. Com padding em cima o
    colapso para e a margem do título passa a valer dentro da caixa. */
-.env { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 1.5rem 1.25rem 0; }
+.env { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 3rem 1.25rem 0; }
 .env--estreito { max-width: var(--leitura); }
 /* O painel do professor não é texto para ler, é tabela para varrer: os
    1120px pensados para leitura obrigavam a tabela a rolar de lado, e
