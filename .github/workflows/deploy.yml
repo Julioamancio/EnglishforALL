@@ -20,11 +20,19 @@
 #                      ssh root@<host> 'cut -d" " -f1,2 /etc/ssh/ssh_host_*.pub'
 #                    e prefixar cada linha com o endereço.
 #
-# A conexão do runner até a VPS falha por timeout de vez em quando, sem que nada
-# chegue ao sshd do servidor — é a rede no caminho, não o servidor recusando.
-# Por isso a publicação tenta até 4 vezes antes de desistir, e só repete quando o
-# ssh não conectou (código 255): erro vindo do próprio script remoto não se
-# resolve repetindo.
+# ESTE WORKFLOW NÃO É O ÚNICO CAMINHO, e de propósito. Em 06/08/2026 três
+# publicações seguidas falharam sem culpa do código: duas vezes o GitHub não
+# arrumou máquina para o job ("The job was not acquired by Runner of type
+# hosted") e uma vez a conexão até a VPS caiu por timeout. O servidor também
+# puxa sozinho, por cron, de cinco em cinco minutos — então mesmo que este
+# workflow não rode, o que foi para a master chega ao ar.
+#
+# Quando ele roda, é mais rápido: publica em segundos em vez de esperar o cron.
+# A conexão até a VPS falha por timeout de vez em quando sem que nada chegue ao
+# sshd do servidor — é a rede no caminho, não o servidor recusando —, então a
+# publicação tenta até 4 vezes antes de desistir, e só repete quando o ssh não
+# conectou (código 255): erro vindo do próprio script remoto não se resolve
+# repetindo.
 #
 # A chave do deploy é PRÓPRIA, não a pessoal do professor: assim revogar o
 # acesso das Actions é apagar uma linha do authorized_keys, sem derrubar o
@@ -94,65 +102,20 @@ jobs:
           # linha do ssh: assim a mesma coisa pode ser reenviada numa segunda
           # tentativa sem duplicar o texto.
           cat > /tmp/remoto.sh <<'REMOTO'
-          set -euo pipefail
-          cd /var/www/banco-questoes
-
-          antes=$(git rev-parse HEAD)
-          echo "Estava em: $antes"
-
-          git fetch --prune origin "$REF"
-
-          # --ff-only de propósito: se o que está no servidor divergiu do que
-          # está no GitHub, o deploy PARA em vez de sobrescrever. Nada de
-          # reset --hard aqui — ele apagaria silenciosamente o que houvesse
-          # de diferente na VPS.
-          git checkout "$REF" 2>/dev/null || git checkout -b "$REF" "origin/$REF"
-          git merge --ff-only "origin/$REF"
-
-          echo "Agora em:  $(git rev-parse HEAD)"
-
-          # Só mexe em dependências se o package-lock tiver mudado.
+          set -uo pipefail
+          # A logica de publicacao mora em scripts/publicar.sh, versionado junto
+          # com a aplicacao, e o cron do servidor chama exatamente o mesmo
+          # arquivo de cinco em cinco minutos. Dois gatilhos, uma implementacao:
+          # o que for corrigido num caminho vale para o outro.
           #
-          # O `npm ci` PRECISA rodar com o node20, e não com o node do sistema.
-          # O better-sqlite3 é módulo nativo: compilado contra o v22 do PATH, ele
-          # deixa de carregar no v20 que a aplicação usa, o serviço entra em
-          # laço de reinício e o site cai. Aconteceu em 06/08/2026, na primeira
-          # vez que uma dependência mudou desde que este deploy existe.
-          #
-          # `npm` é um programa JS e roda com o primeiro `node` do PATH. Como só
-          # existe o binário `node20`, criamos um `node` apontando para ele numa
-          # pasta temporária e a colocamos na frente do PATH.
-          if ! git diff --quiet "$antes" HEAD -- package-lock.json package.json; then
-            echo "Dependências mudaram, instalando com o node20…"
-            mkdir -p /tmp/n20bin
-            ln -sf /usr/local/bin/node20 /tmp/n20bin/node
-            PATH=/tmp/n20bin:$PATH npm ci --omit=dev
-            rm -rf /tmp/n20bin
-            # prova que o módulo nativo carrega ANTES de reiniciar o serviço
-            NODE_PATH=/var/www/banco-questoes/node_modules /usr/local/bin/node20 \
-              -e "require('better-sqlite3'); console.log('better-sqlite3 carrega no node20')"
-          fi
-
-          systemctl restart banco-questoes
-
-          # A conferência é aqui dentro, e não numa segunda conexão: cada ssh
-          # novo é mais uma chance de tomar o timeout de rede que derrubou dois
-          # deploys em 06/08/2026. Uma conexão faz tudo.
-          #
-          # O restart não é instantâneo: tenta por até ~30 s antes de desistir.
-          codigo=
-          for i in $(seq 1 15); do
-            codigo=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8098/ || true)
-            if [ "$codigo" = "200" ]; then break; fi
-            sleep 2
-          done
-          if [ "$codigo" != "200" ]; then
-            echo "O site não respondeu 200 (último código: ${codigo:-nenhum})."
-            systemctl status banco-questoes --no-pager --lines 30 || true
-            journalctl -u banco-questoes --no-pager --lines 40 || true
-            exit 1
-          fi
-          echo "Site respondeu 200. Publicado."
+          # Roda uma COPIA: o publicar.sh atualiza a propria pasta, e trocar o
+          # arquivo debaixo do bash em execucao corrompe a leitura do script no
+          # meio — o interpretador le aos poucos, nao de uma vez.
+          cp /var/www/banco-questoes/scripts/publicar.sh /tmp/publicar-agora.sh
+          rc=0
+          REF="$REF" bash /tmp/publicar-agora.sh -v || rc=$?
+          rm -f /tmp/publicar-agora.sh
+          exit $rc
           REMOTO
 
           publicar() {
