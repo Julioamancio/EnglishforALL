@@ -16,23 +16,51 @@
       <p class="gtopico__resumo">Ficou com dúvida em alguma? A explicação aparece logo abaixo da questão — e a teoria completa está em <a href="/gramatica/<%= topico.slug %>">Grammar Explanation: <%= topico.titulo %></a>.</p>
     </header>
 
-    <div class="placar" data-placar hidden>
-      <strong data-placar-texto></strong>
-      <div class="placar__barra"><span data-placar-barra style="width:0%"></span></div>
-    </div>
+    <%# As dez questões vão inteiras no HTML, sempre. O player só esconde as que
+        não são a atual — sem JavaScript esta página continua sendo a lista de
+        antes, que funciona e é o que o buscador lê. O painel de progresso e a
+        tela de resultado nascem escondidos e só o JavaScript os revela. %>
+    <section class="arena" data-arena aria-label="Questões do teste">
 
-    <section class="gsec" aria-label="Questões do teste">
+      <div class="arena__hud" data-hud hidden>
+        <span class="arena__contador">Questão <b data-atual>1</b> de <span data-total><%= topico.exercicios.length %></span></span>
+        <span class="arena__trilha" data-trilha aria-hidden="true"></span>
+        <span class="arena__placar">
+          <span class="arena__acertos"><span data-acertos>0</span> ✓</span>
+          <span class="arena__seq" data-seq hidden>🔥 <span data-seq-n>0</span></span>
+        </span>
+      </div>
+
       <% topico.exercicios.forEach(function(q, qi){ %>
       <div class="quiz" data-correta="<%= q.correta %>">
         <p class="quiz__pergunta"><span class="quiz__n"><%= qi + 1 %></span> <%= q.pergunta %></p>
         <div class="quiz__opcoes">
           <% q.opcoes.forEach(function(op, oi){ %>
-            <button type="button" class="quiz__opcao" data-i="<%= oi %>"><%= op %></button>
+            <button type="button" class="quiz__opcao" data-i="<%= oi %>">
+              <span class="quiz__forma" aria-hidden="true"></span>
+              <span class="quiz__texto"><%= op %></span>
+              <span class="quiz__marca" aria-hidden="true"></span>
+            </button>
           <% }) %>
         </div>
         <p class="quiz__explica" hidden><%= q.explicacao %></p>
       </div>
       <% }) %>
+
+      <div class="arena__fim" data-fim hidden>
+        <p class="arena__nota"><span data-nota>0</span><span>/<%= topico.exercicios.length %></span></p>
+        <p class="arena__recado" data-recado></p>
+        <div class="arena__barra"><span data-barra></span></div>
+        <div class="arena__acoes">
+          <button class="btn" type="button" data-refazer>Refazer o teste</button>
+          <a class="btn btn--sec" href="/gramatica/<%= topico.slug %>">Ver a explicação do tópico</a>
+        </div>
+        <div class="arena__revisao" data-revisao hidden>
+          <h3>O que revisar</h3>
+          <ol data-revisao-lista></ol>
+        </div>
+      </div>
+
     </section>
 
     <nav class="gnav" aria-label="Outros testes do nível">

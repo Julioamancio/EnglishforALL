@@ -720,25 +720,205 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 .erro__lado--certo strong { color: #1f8a4c; }
 .erro__explica { margin: .55rem 0 0; font-size: .88rem; color: var(--suave); line-height: 1.6; }
 
-.quiz { background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--r); padding: 1.05rem 1.15rem; margin-bottom: 1rem; }
-.quiz__pergunta { margin: 0 0 .75rem; font-weight: 600; }
+/* ==================================================== arena de exercícios
+   O teste de gramática num formato de quiz: uma questão por vez, alternativas
+   grandes e coloridas, correção animada.
+
+   Três coisas que a implementação encara de propósito:
+
+   1. TODAS as questões continuam vindo prontas do servidor. O player só esconde
+      as que não são a atual (`.arena--js .quiz { display:none }`). Sem
+      JavaScript a página volta a ser a lista de sempre, que funciona e é o que
+      o buscador lê — não se troca conteúdo por animação.
+   2. As cores das alternativas são as do formato de quiz (vermelho, azul e
+      amarelo, cada uma com sua forma geométrica). Isso ocuparia o vermelho, que
+      no site significa "errado" — por isso, no instante em que o aluno
+      responde, TODAS as alternativas perdem a cor e só a correta continua
+      acesa. Dali em diante vermelho e verde voltam a ser livres para dizer
+      certo e errado, sem competir com alternativa nenhuma.
+   3. O erro é sinalizado por quatro caminhos independentes, não só por cor:
+      a alternativa escolhida perde a cor, ganha um ✕, recebe risco no texto e
+      treme. Quem não distingue cores continua entendendo o que aconteceu.
+
+   Não há cronômetro. Num quiz de competição o relógio é a graça; num site de
+   estudo ele faz o aluno chutar para não perder ponto, que é o contrário do que
+   a explicação logo abaixo da questão tenta ensinar. */
+
+.arena { margin: 0; }
+
+/* ---- painel fixo: progresso, acertos, sequência ---- */
+.arena__hud {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; align-items: center; gap: .85rem; flex-wrap: wrap;
+  background: var(--superficie); border: 1px solid var(--borda);
+  border-radius: var(--r); padding: .7rem .9rem; margin-bottom: 1.1rem;
+  box-shadow: var(--sombra);
+}
+.arena__contador { font-family: var(--display); font-weight: 800; font-size: 1.05rem; white-space: nowrap; }
+.arena__contador b { color: var(--tinta); }
+.arena__trilha { display: flex; gap: .28rem; flex: 1; min-width: 8rem; }
+.arena__ponto {
+  flex: 1; height: 7px; border-radius: 99px; background: var(--fundo-2);
+  transition: background .3s ease, transform .3s ease;
+}
+.arena__ponto--atual { background: var(--borda-forte); transform: scaleY(1.6); }
+.arena__ponto--ok { background: var(--ok); }
+.arena__ponto--erro { background: var(--correcao); }
+.arena__placar { display: flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .9rem; white-space: nowrap; }
+.arena__acertos { color: var(--ok); }
+.arena__seq {
+  display: inline-flex; align-items: center; gap: .2rem;
+  background: var(--marca); color: #4a3800; border-radius: 99px;
+  padding: .1rem .5rem; font-size: .82rem; font-weight: 800;
+  transform: scale(.7); opacity: 0; transition: opacity .25s, transform .25s;
+}
+.arena__seq--on { opacity: 1; transform: scale(1); }
+
+/* ---- cartão da questão ---- */
+.quiz {
+  position: relative;
+  background: var(--superficie); border: 1px solid var(--borda);
+  border-radius: var(--r-lg); padding: 1.4rem 1.3rem; margin-bottom: 1rem;
+  box-shadow: var(--sombra);
+}
+.arena--js .quiz { display: none; margin-bottom: 0; }
+.arena--js .quiz--atual { display: block; animation: quiz-entra .32s cubic-bezier(.2,.8,.3,1) both; }
+@keyframes quiz-entra { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+
+.quiz__pergunta {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.12rem, 2.6vw, 1.45rem); line-height: 1.3;
+  margin: 0 0 1.1rem; display: flex; gap: .6rem; align-items: flex-start;
+}
 .quiz__n {
-  display: inline-grid; place-items: center; width: 1.55em; height: 1.55em; margin-right: .3em;
-  border-radius: 50%; background: var(--tinta-vivo); color: #fff; font-size: .8em; font-weight: 700;
+  flex: none; display: inline-grid; place-items: center;
+  width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  background: var(--tinta); color: #fff; font-size: .85rem; font-weight: 800; margin-top: .15rem;
 }
-.quiz__opcoes { display: flex; flex-wrap: wrap; gap: .55rem; }
+.arena--js .quiz__n { display: none; }
+
+/* ---- alternativas: cor + forma ---- */
+.quiz__opcoes { display: grid; gap: .6rem; }
+@media (min-width: 34rem) {
+  .quiz__opcoes { grid-template-columns: 1fr 1fr; }
+  /* com três alternativas, a terceira ocupa a linha inteira em vez de deixar buraco */
+  .quiz__opcoes > :nth-child(3):last-child { grid-column: 1 / -1; }
+}
 .quiz__opcao {
-  cursor: pointer; font: inherit; font-size: .93rem;
-  padding: .5rem .95rem; border-radius: 999px;
-  border: 1.5px solid var(--borda-forte); background: var(--fundo); color: var(--texto);
-  transition: border-color .12s, background .12s;
+  --cor: #1368ce;
+  position: relative; display: flex; align-items: center; gap: .7rem; width: 100%;
+  min-height: calc(var(--toque) + 1.1rem);
+  padding: .8rem 1rem; border: 0; border-radius: var(--r);
+  background: var(--cor); color: #fff; text-align: left;
+  font: inherit; font-size: 1.02rem; font-weight: 600; cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0,0,0,.24);
+  transition: transform .12s ease, box-shadow .16s ease, filter .3s ease, opacity .3s ease;
+  animation: opcao-entra .3s cubic-bezier(.2,.8,.3,1) both;
 }
-.quiz__opcao:hover { border-color: var(--tinta-vivo); }
-.quiz__opcao--certa { background: #e5f6ec; border-color: #1f8a4c; color: #17693a; font-weight: 700; }
-.quiz__opcao--errada { background: rgba(216,74,99,.09); border-color: #c23b52; color: #c23b52; }
-.quiz__opcao:disabled { cursor: default; opacity: .92; }
-.quiz__explica { margin: .8rem 0 0; font-size: .88rem; color: var(--suave); line-height: 1.6; border-top: 1px dashed var(--borda); padding-top: .7rem; }
-html[data-tema='escuro'] .quiz__opcao--certa { background: rgba(31,138,76,.18); color: #7fd9a4; }
+.quiz__opcao:nth-child(1) { --cor: #e21b3c; animation-delay: .04s; }
+.quiz__opcao:nth-child(2) { --cor: #1368ce; animation-delay: .10s; }
+.quiz__opcao:nth-child(3) { --cor: #d89e00; animation-delay: .16s; }
+.quiz__opcao:nth-child(4) { --cor: #26890c; animation-delay: .22s; }
+@keyframes opcao-entra { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+.quiz__opcao:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 5px 0 rgba(0,0,0,.24), var(--sombra-alta); filter: brightness(1.08); }
+.quiz__opcao:active:not(:disabled) { transform: translateY(1px); box-shadow: 0 1px 0 rgba(0,0,0,.24); }
+.quiz__opcao:focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; }
+.quiz__opcao:disabled { cursor: default; }
+
+.quiz__forma { flex: none; width: 22px; height: 22px; display: block; position: relative; }
+.quiz__forma::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.94); }
+.quiz__opcao:nth-child(1) .quiz__forma::before { clip-path: polygon(50% 4%, 100% 96%, 0 96%); }
+.quiz__opcao:nth-child(2) .quiz__forma::before { clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.quiz__opcao:nth-child(3) .quiz__forma::before { border-radius: 50%; }
+.quiz__opcao:nth-child(4) .quiz__forma::before { border-radius: 3px; }
+.quiz__texto { flex: 1; min-width: 0; }
+
+/* ---- depois de responder: a cor sai de cena ---- */
+/* nimation: none e obrigatorio aqui: a animacao de entrada usa fill-mode
+   both, e o preenchimento de animacao ganha da declaracao de opacidade. Sem
+   isto a alternativa que o aluno NAO escolheu continua acesa depois da
+   resposta — a certa e a errada escapavam por receberem outra animacao. */
+.quiz--feito .quiz__opcao { animation: none; filter: grayscale(1) brightness(.82); opacity: .42; }
+.quiz--feito .quiz__opcao--certa {
+  filter: none; opacity: 1;
+  box-shadow: 0 3px 0 rgba(0,0,0,.24), 0 0 0 4px var(--superficie), 0 0 0 8px var(--ok);
+  animation: pulo .5s cubic-bezier(.2,.9,.3,1.4);
+}
+.quiz--feito .quiz__opcao--errada {
+  opacity: .72; filter: grayscale(1) brightness(.72);
+  box-shadow: 0 3px 0 rgba(0,0,0,.24), 0 0 0 3px var(--correcao) inset;
+  animation: tremor .42s;
+}
+.quiz__opcao--errada .quiz__texto { text-decoration: line-through; text-decoration-thickness: 2px; }
+@keyframes pulo { 0% { transform: scale(1); } 45% { transform: scale(1.05); } 100% { transform: scale(1); } }
+@keyframes tremor { 10%, 90% { transform: translateX(-3px); } 30%, 70% { transform: translateX(5px); } 50% { transform: translateX(-5px); } }
+
+.quiz__marca {
+  flex: none; display: grid; place-items: center;
+  width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  font-size: .95rem; font-weight: 900; line-height: 1;
+  opacity: 0; transform: scale(.3);
+  transition: opacity .25s .12s, transform .32s .12s cubic-bezier(.2,.9,.3,1.7);
+}
+.quiz__opcao--certa .quiz__marca { background: var(--ok); color: #fff; opacity: 1; transform: scale(1); }
+.quiz__opcao--errada .quiz__marca { background: var(--correcao); color: #fff; opacity: 1; transform: scale(1); }
+
+/* ---- veredito e explicação ---- */
+.quiz__veredito {
+  display: flex; align-items: center; gap: .55rem;
+  margin: .95rem 0 0; padding: .65rem 1rem; border-radius: var(--r);
+  font-family: var(--display); font-weight: 800; font-size: 1.02rem; color: #fff;
+  animation: veredito-entra .34s cubic-bezier(.2,.8,.3,1) both;
+}
+.quiz--acertou .quiz__veredito { background: var(--ok); }
+.quiz--errou .quiz__veredito { background: var(--correcao); }
+@keyframes veredito-entra { from { opacity: 0; transform: translateY(-8px) scale(.97); } to { opacity: 1; transform: none; } }
+
+.quiz__explica {
+  margin: .6rem 0 0; padding: .85rem 1rem; border-radius: var(--r);
+  background: var(--fundo-2); border-left: 4px solid var(--tinta);
+  font-size: .95rem; line-height: 1.6; color: var(--texto);
+  animation: veredito-entra .34s .06s cubic-bezier(.2,.8,.3,1) both;
+}
+.quiz__adiante { display: flex; justify-content: flex-end; margin-top: .9rem; }
+.arena:not(.arena--js) .quiz__adiante { display: none; }
+
+/* confete do acerto: pontos soltos que sobem e somem */
+.quiz__festa { position: absolute; inset: 0; pointer-events: none; overflow: hidden; border-radius: var(--r-lg); }
+.quiz__confete { position: absolute; width: 9px; height: 9px; border-radius: 2px; opacity: 0; animation: confete .9s ease-out forwards; }
+@keyframes confete {
+  0% { opacity: 1; transform: translate(0,0) rotate(0); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--giro)); }
+}
+
+/* ---- tela de resultado ---- */
+.arena__fim {
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--r-lg);
+  padding: 2rem 1.4rem; text-align: center; box-shadow: var(--sombra);
+  animation: quiz-entra .35s cubic-bezier(.2,.8,.3,1) both;
+}
+.arena__nota { font-family: var(--display); font-size: clamp(2.6rem, 10vw, 4rem); font-weight: 800; line-height: 1; color: var(--tinta); }
+.arena__nota span { font-size: .4em; color: var(--suave); }
+.arena__recado { font-size: 1.05rem; font-weight: 600; margin: .5rem 0 1.2rem; }
+.arena__barra { height: 12px; border-radius: 99px; background: var(--fundo-2); overflow: hidden; margin: 0 auto 1.4rem; max-width: 22rem; }
+.arena__barra span { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--tinta-vivo), var(--ok)); transition: width 1s cubic-bezier(.2,.8,.3,1); }
+.arena__acoes { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+.arena__revisao { text-align: left; margin-top: 1.8rem; border-top: 1px solid var(--borda); padding-top: 1.2rem; }
+.arena__revisao h3 { font-family: var(--display); font-size: 1rem; margin: 0 0 .7rem; }
+.arena__revisao ol { margin: 0; padding-left: 1.2rem; font-size: .93rem; color: var(--suave); }
+.arena__revisao li { margin-bottom: .6rem; line-height: 1.55; }
+.arena__revisao b { color: var(--texto); }
+
+@media (prefers-reduced-motion: reduce) {
+  .arena--js .quiz--atual, .quiz__opcao, .quiz__explica, .quiz__veredito, .arena__fim,
+  .quiz--feito .quiz__opcao--certa, .quiz--feito .quiz__opcao--errada { animation: none; }
+  .quiz__opcao:hover:not(:disabled) { transform: none; }
+  .arena__barra span { transition: none; }
+  .quiz__confete { display: none; }
+}
+
+html[data-tema='escuro'] .quiz__explica { background: rgba(255,255,255,.05); }
 
 /* dropdown "Aprender" no cabeçalho */
 .menu--nav summary {
@@ -751,21 +931,6 @@ html[data-tema='escuro'] .quiz__opcao--certa { background: rgba(31,138,76,.18); 
 }
 .menu--nav .menu__painel { min-width: 235px; right: auto; }
 .menu--nav .menu__painel a { font-weight: 600; }
-
-.placar {
-  position: sticky; top: 74px; z-index: 20;
-  background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--r);
-  padding: .7rem 1rem; margin-bottom: 1.4rem; box-shadow: var(--sombra);
-}
-.placar strong { font-size: .92rem; }
-.placar__barra {
-  height: 7px; margin-top: .5rem; border-radius: 99px; background: var(--fundo-2); overflow: hidden;
-}
-.placar__barra span {
-  display: block; height: 100%; border-radius: 99px;
-  background: linear-gradient(90deg, var(--tinta-vivo), #1f8a4c);
-  transition: width .25s ease;
-}
 
 .gnav { display: flex; justify-content: space-between; gap: 1rem; margin: 2.8rem 0 1rem; }
 .gnav__lado { display: flex; flex-direction: column; gap: .15rem; text-decoration: none; color: var(--texto); max-width: 46%; }

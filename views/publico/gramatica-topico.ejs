@@ -100,9 +100,15 @@
       <% topico.mini_teste.forEach(function(q, qi){ %>
       <div class="quiz" data-correta="<%= q.correta %>">
         <p class="quiz__pergunta"><span class="quiz__n"><%= qi + 1 %></span> <%= q.pergunta %></p>
+        <%# Mesmas alternativas do teste completo, mas SEM o player: aqui o aluno
+            está lendo a explicação, e as três questões ficam à vista de uma vez. %>
         <div class="quiz__opcoes">
           <% q.opcoes.forEach(function(op, oi){ %>
-            <button type="button" class="quiz__opcao" data-i="<%= oi %>"><%= op %></button>
+            <button type="button" class="quiz__opcao" data-i="<%= oi %>">
+              <span class="quiz__forma" aria-hidden="true"></span>
+              <span class="quiz__texto"><%= op %></span>
+              <span class="quiz__marca" aria-hidden="true"></span>
+            </button>
           <% }) %>
         </div>
         <p class="quiz__explica" hidden><%= q.explicacao %></p>
