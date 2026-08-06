@@ -174,6 +174,49 @@ h3 { font-size: 1.08rem; font-weight: 700; }
 .marca__logo {
   height: var(--logo-alt); width: auto; flex: none;
   object-fit: contain;
+  /* A gracinha de 30 em 30 segundos.
+
+     Não há temporizador em JavaScript de propósito: um setInterval rodando
+     em toda página do site, o dia inteiro, só para mexer numa imagem seria
+     desperdício. O truque é a animação durar os 30s inteiros e toda a ação
+     caber nos primeiros 4,4% dela — 1,3 segundo de pulo e os outros 28,7
+     parada. De quebra, o navegador congela a animação sozinho quando a aba
+     sai da frente, coisa que um setInterval não faria.
+
+     Só `transform`: nada aqui reposiciona nada, então a página não pula. A
+     origem embaixo faz o salto parecer impulso do chão, não deslize. */
+  transform-origin: bottom center;
+  animation: logo-gracinha 30s ease-in-out infinite;
+}
+
+/* São dois conjuntos de quadros com o mesmo desenho de movimento, e não um
+   só, porque servem a durações muito diferentes: no ciclo de 30s a ação tem
+   de ficar espremida no comecinho; no hover ela ocupa o tempo todo. Reusar
+   os quadros de 30s num hover de 1,3s faria o pulo acontecer em 60ms — um
+   tranco, não uma animação. */
+@keyframes logo-gracinha {
+  0%, 100% { transform: none; }
+  1%   { transform: scale(1.1, .88); }                                  /* agacha  */
+  2%   { transform: scale(.92, 1.12) translateY(-14px) rotate(-7deg); } /* pula    */
+  2.8% { transform: scale(1.04, .97) translateY(0) rotate(6deg); }      /* aterra  */
+  3.4% { transform: rotate(-4deg); }
+  3.9% { transform: rotate(2deg); }
+  4.4% { transform: none; }
+}
+@keyframes logo-pulo {
+  0%   { transform: none; }
+  22%  { transform: scale(1.1, .88); }
+  45%  { transform: scale(.92, 1.12) translateY(-14px) rotate(-7deg); }
+  64%  { transform: scale(1.04, .97) translateY(0) rotate(6deg); }
+  77%  { transform: rotate(-4deg); }
+  89%  { transform: rotate(2deg); }
+  100% { transform: none; }
+}
+/* Passar o mouse antecipa a graça, sem ter de esperar os 30 segundos. */
+.marca:hover .marca__logo { animation: logo-pulo 1.3s ease-in-out; }
+/* Quem pediu menos animação no aparelho não recebe a brincadeira. */
+@media (prefers-reduced-motion: reduce) {
+  .marca__logo, .marca:hover .marca__logo { animation: none; }
 }
 @media (max-width: 860px) {
   .marca { font-size: 1.15rem; gap: .55rem; }
