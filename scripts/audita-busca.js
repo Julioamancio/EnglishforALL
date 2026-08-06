@@ -97,6 +97,33 @@ for (const v of ['--tinta', '--fundo', '--texto', '--superficie']) {
   if (!new RegExp(`\\${v}\\s*:`).test(semComentarios)) falha(`estilo.css sem a variável ${v}`);
 }
 
+/* Nenhum var(--x) pode apontar para variável que ninguém define.
+ *
+ * Escrever `background: var(--primaria)` quando o token se chama `--tinta` não
+ * quebra nada: o CSS é válido, a regra é aceita, e a propriedade simplesmente
+ * não pinta. Em 06/08/2026 foi assim que o número da página atual saiu sem
+ * fundo nenhum na paginação nova — o "você está aqui" invisível, que é a única
+ * coisa que uma paginação precisa acertar. No olho continuava parecendo uma
+ * paginação; só medindo a cor computada aparecia o rgba(0, 0, 0, 0).
+ *
+ * As quatro da lista abaixo são definidas em tempo de execução, pelo próprio
+ * JS, no atributo style do elemento — não estão nem podem estar no :root.
+ */
+const DEFINIDAS_PELO_JS = ['--cor', '--dx', '--dy', '--giro'];
+const declaradas = new Set(
+  [...semComentarios.matchAll(/(--[a-z0-9-]+)\s*:/g)].map((m) => m[1])
+);
+const usadas = new Set(
+  [...semComentarios.matchAll(/var\(\s*(--[a-z0-9-]+)/g)].map((m) => m[1])
+);
+const fantasmas = [...usadas].filter(
+  (v) => !declaradas.has(v) && !DEFINIDAS_PELO_JS.includes(v)
+);
+if (fantasmas.length) {
+  falha(`estilo.css usa ${fantasmas.length} variável(is) que ninguém define — a propriedade não pinta`);
+  fantasmas.forEach((v) => console.log(`      \u2192 var(${v})`));
+}
+
 // o placeholder não pode sugerir um tópico que não existe
 const view = fs.readFileSync(path.join(raiz, 'views', 'publico', 'gramatica.ejs'), 'utf8');
 const ph = (view.match(/placeholder="Procure um tópico:([^"]*)"/) || [])[1];

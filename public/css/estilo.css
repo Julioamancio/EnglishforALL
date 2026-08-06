@@ -1729,7 +1729,7 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
   padding: 0 .7rem;
   border: 1px solid var(--borda);
   border-radius: .6rem;
-  background: var(--cartao);
+  background: var(--superficie);
   color: var(--texto);
   font-size: .95rem;
   font-variant-numeric: tabular-nums;
@@ -1738,13 +1738,13 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 }
 .paginacao__n:hover,
 .paginacao__passo:hover {
-  border-color: var(--primaria);
-  color: var(--primaria);
+  border-color: var(--tinta);
+  color: var(--tinta);
 }
 .paginacao__n--atual,
 .paginacao__n--atual:hover {
-  background: var(--primaria);
-  border-color: var(--primaria);
+  background: var(--tinta);
+  border-color: var(--tinta);
   color: #fff;
   font-weight: 700;
   cursor: default;
