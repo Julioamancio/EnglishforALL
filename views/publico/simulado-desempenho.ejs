@@ -4,6 +4,40 @@
   <p>Só os <strong>simulados oficiais</strong> entram nesta conta. O que você responde livremente na
     navegação pelo banco é treino e não altera nada aqui.</p>
 
+<%# A nota do bimestre vem antes de tudo, inclusive de quem ainda não fez nenhum
+    simulado: é justamente a esse aluno que o aviso precisa chegar. A regra é de
+    presença, e não de acerto — por isso ela não fica junto dos gráficos. %>
+<% if (nota) { %>
+  <div class="nota-aluno <%= nota.atingiuMinimo ? 'nota-aluno--pronto' : (nota.aindaDaTempo ? '' : 'nota-aluno--risco') %>">
+    <div class="nota-aluno__valor">
+      <b><%= nota.notaProvisoria == null ? '—' : nota.notaProvisoria.toFixed(1).replace('.', ',') %></b>
+      <span>nota provisória</span>
+    </div>
+    <div class="nota-aluno__corpo">
+      <h2>Você fez <%= nota.concluidos %> de <%= calendario.minimo %> simulados obrigatórios</h2>
+      <div class="nota-aluno__prog">
+        <span style="width:<%= Math.min(100, Math.round((nota.concluidos / calendario.minimo) * 100)) %>%"></span>
+      </div>
+      <% if (nota.atingiuMinimo) { %>
+        <p><strong>Presença garantida.</strong> Você já fez o mínimo exigido, então sua nota final
+          será o seu desempenho: hoje, <strong><%= nota.notaProvisoria.toFixed(1).replace('.', ',') %></strong>.
+          Cada simulado novo continua entrando na média.</p>
+      <% } else if (!nota.aindaDaTempo) { %>
+        <p><strong>Não é mais possível alcançar o mínimo.</strong> Faltam <%= nota.faltam %> simulados
+          e restam <%= nota.semanasRestantes %> semanas. Procure o professor.</p>
+      <% } else { %>
+        <p>São <%= calendario.total %> simulados no bimestre, um por semana, e é obrigatório fazer
+          <strong><%= calendario.exigencia %>%</strong> deles — <strong><%= calendario.minimo %></strong>.
+          Faltam <strong><%= nota.faltam %></strong>, e ainda há <strong><%= nota.semanasRestantes %></strong>
+          semanas para fazê-los.</p>
+        <p class="suave">Enquanto o mínimo não for atingido, a nota final fica <strong>0</strong> —
+          mesmo com boas notas nos simulados que você já fez.</p>
+      <% } %>
+      <p><a href="/simulado">Fazer o simulado desta semana &rarr;</a></p>
+    </div>
+  </div>
+<% } %>
+
 <% if (d.vazio) { %>
   <p class="aviso">Você ainda não concluiu nenhum simulado oficial. Assim que terminar o primeiro, os números e os gráficos aparecem aqui.</p>
   <p><a class="btn" href="/simulado">Fazer o simulado da semana</a></p>

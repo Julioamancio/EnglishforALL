@@ -1,0 +1,117 @@
+<%- include('../partials/cabeca') %>
+<div class="env">
+  <h1>Nota do bimestre</h1>
+
+  <%# A regra por extenso, na tela. Nota de aluno não pode depender de alguém
+      lembrar de cabeça qual era o combinado. %>
+  <div class="aviso aviso--regra">
+    <p>
+      São <strong><%= calendario.total %> simulados</strong>, um por semana, de
+      <strong><%= calendario.primeira %></strong> a <strong><%= calendario.ultima %></strong>
+      — a última é a semana de 20 de novembro, e as aulas terminam em 30 de novembro.
+      O aluno precisa fazer <strong><%= calendario.exigencia %>%</strong> deles, isto é,
+      <strong><%= calendario.minimo %> simulados</strong>.
+    </p>
+    <p>
+      A <strong>nota provisória</strong> é o desempenho nos simulados já feitos, de 0 a 10.
+      A <strong>nota final</strong> é a mesma nota — mas fica <strong>0</strong> para quem
+      não alcançar os <%= calendario.minimo %>, por melhor que tenha ido.
+      <% if (!encerrada) { %>Enquanto a temporada não acaba, a coluna final mostra
+      como ficaria se o bimestre terminasse hoje.<% } %>
+    </p>
+  </div>
+
+  <div class="notas-resumo">
+    <div class="notas-cartao"><b><%= resumo.alunos %></b><span>alunos</span></div>
+    <div class="notas-cartao"><b class="ok"><%= resumo.atingiram %></b><span>já fizeram os <%= calendario.minimo %></span></div>
+    <div class="notas-cartao"><b class="alerta"><%= resumo.semNenhum %></b><span>nenhum simulado ainda</span></div>
+    <div class="notas-cartao"><b class="<%= resumo.semTempo ? 'perigo' : '' %>"><%= resumo.semTempo %></b><span>já não dá tempo</span></div>
+  </div>
+
+  <form class="filtro-alunos" method="get" action="/admin/notas">
+    <div class="campo">
+      <label for="escola">Instituição</label>
+      <select id="escola" name="escola">
+        <option value="">Todas (<%= totalGeral %>)</option>
+        <% escolas.forEach(function (e) { %>
+          <option value="<%= e.chave %>"<%= filtro === e.chave ? ' selected' : '' %>><%= e.nome %> (<%= e.total %>)</option>
+        <% }) %>
+        <% if (semEscola) { %><option value="sem"<%= filtro === 'sem' ? ' selected' : '' %>>— sem instituição (<%= semEscola %>)</option><% } %>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="serie">Série</label>
+      <select id="serie" name="serie">
+        <option value="">Todas</option>
+        <% turmas.forEach(function (t) { %>
+          <option value="<%= t.valor %>"<%= turma === t.valor ? ' selected' : '' %>><%= rotuloSerie(t.valor) %> (<%= t.total %>)</option>
+        <% }) %>
+        <% if (semTurma) { %><option value="sem"<%= turma === 'sem' ? ' selected' : '' %>>— não informada (<%= semTurma %>)</option><% } %>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="ordem">Ordenar por</label>
+      <select id="ordem" name="ordem">
+        <option value="risco"<%= ordem === 'risco' ? ' selected' : '' %>>Quem fez menos simulados</option>
+        <option value="nota"<%= ordem === 'nota' ? ' selected' : '' %>>Maior nota provisória</option>
+        <option value="az"<%= ordem === 'az' ? ' selected' : '' %>>Nome (A–Z)</option>
+      </select>
+    </div>
+    <div class="filtro-alunos__acoes">
+      <button class="btn" type="submit">Filtrar</button>
+      <% if (filtro || turma || ordem !== 'risco') { %><a class="btn btn--sec" href="/admin/notas">Limpar</a><% } %>
+    </div>
+  </form>
+
+  <div class="painel rolagem">
+    <% if (!alunos.length) { %>
+      <p class="vazio">Nenhum aluno com esse filtro.</p>
+    <% } else { %>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Aluno</th><th>Onde estuda</th><th>Série</th>
+            <th>Simulados</th><th>Média</th>
+            <th>Nota provisória</th><th>Nota final</th><th>Situação</th><th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% alunos.forEach(function (a) { %>
+            <tr>
+              <td><strong><%= a.nome %></strong><br><small class="suave"><%= a.email %></small></td>
+              <td><%= a.instituicao || '—' %></td>
+              <td><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
+              <td>
+                <strong><%= a.concluidos %></strong><span class="suave">/<%= calendario.total %></span>
+                <div class="notas-barra" title="<%= a.concluidos %> de <%= calendario.minimo %> exigidos">
+                  <span style="width:<%= Math.min(100, Math.round((a.concluidos / calendario.minimo) * 100)) %>%"></span>
+                </div>
+              </td>
+              <td><%= a.media == null ? '—' : a.media + '%' %></td>
+              <td><strong><%= a.notaProvisoria == null ? '—' : a.notaProvisoria.toFixed(1).replace('.', ',') %></strong></td>
+              <td>
+                <strong class="<%= a.notaFinal > 0 ? 'nota-ok' : 'nota-zero' %>">
+                  <%= a.notaFinal.toFixed(1).replace('.', ',') %>
+                </strong>
+              </td>
+              <td>
+                <% if (a.atingiuMinimo) { %>
+                  <span class="etiqueta etiqueta--ok">mínimo cumprido</span>
+                <% } else if (!a.aindaDaTempo) { %>
+                  <span class="etiqueta etiqueta--perigo">não dá mais tempo</span>
+                <% } else { %>
+                  <span class="etiqueta etiqueta--espera">faltam <%= a.faltam %></span>
+                  <small class="suave"><%= a.semanasRestantes %> semanas restantes</small>
+                <% } %>
+              </td>
+              <td><a href="/admin/usuarios/<%= a.id %>">Ver ficha</a></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  </div>
+
+  <a class="btn btn--sec" href="/admin">Voltar</a>
+</div>
+<%- include('../partials/rodape') %>

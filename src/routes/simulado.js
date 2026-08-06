@@ -8,6 +8,7 @@
 const express = require('express');
 const sim = require('../lib/simulado');
 const desempenho = require('../lib/desempenho');
+const notas = require('../lib/notas');
 const { realce } = require('../lib/realce');
 
 const router = express.Router();
@@ -154,6 +155,10 @@ router.get('/desempenho', (req, res) => {
     description: 'Sua evolução nos simulados oficiais.',
     d: desempenho.resumo(req.session.usuario.id),
     erros: sim.erros(req.session.usuario.id).length,
+    // A nota do bimestre aparece ANTES dos gráficos: é a informação que muda o
+    // comportamento do aluno, e ela depende de presença, não de acerto.
+    nota: notas.doAluno(req.session.usuario.id),
+    calendario: notas.CALENDARIO,
     ...base(req),
   });
 });

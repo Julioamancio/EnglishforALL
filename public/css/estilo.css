@@ -1210,6 +1210,54 @@ html, body { max-width: 100%; overflow-x: clip; }
 .questao--revisao { padding-bottom: 1.5rem; border-bottom: 1px solid var(--borda); margin-bottom: 1.5rem; }
 .sim-lista-simples { color: var(--suave); }
 
+/* ------------------------------------------------ nota do bimestre */
+/* A regra escrita na tela, e não só no código: nota de aluno não pode
+   depender de alguém lembrar de cabeça qual era o combinado. */
+.aviso--regra { background: var(--fundo-2); border: 1px solid var(--borda); color: var(--texto); line-height: 1.6; }
+.aviso--regra p { margin: 0 0 .5rem; }
+.aviso--regra p:last-child { margin-bottom: 0; }
+
+.notas-resumo { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .8rem; margin-bottom: 1.2rem; }
+.notas-cartao {
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--r);
+  padding: .9rem 1rem; text-align: center;
+}
+.notas-cartao b { display: block; font-family: var(--display); font-size: 1.9rem; line-height: 1; }
+.notas-cartao b.ok { color: var(--ok); }
+.notas-cartao b.alerta { color: #b7791f; }
+.notas-cartao b.perigo { color: var(--correcao); }
+.notas-cartao span { display: block; font-size: .82rem; color: var(--suave); margin-top: .25rem; }
+
+/* Quanto falta para o mínimo, não para o total: é o mínimo que decide a nota. */
+.notas-barra { height: 5px; margin-top: .3rem; border-radius: 99px; background: var(--fundo-2); overflow: hidden; min-width: 4rem; }
+.notas-barra span { display: block; height: 100%; border-radius: 99px; background: var(--tinta-vivo); }
+
+.nota-ok { color: var(--ok); font-size: 1.05rem; }
+.nota-zero { color: var(--correcao); font-size: 1.05rem; }
+
+.etiqueta--ok { display: inline-block; font-size: .82rem; font-weight: 600; color: var(--ok);
+  background: var(--ok-fraca); border: 1px solid var(--ok); border-radius: 999px; padding: .12rem .6rem; }
+.etiqueta--perigo { display: inline-block; font-size: .82rem; font-weight: 600; color: var(--correcao);
+  background: var(--correcao-fraca); border: 1px solid var(--correcao); border-radius: 999px; padding: .12rem .6rem; }
+
+/* --- o mesmo, na área do aluno --- */
+.nota-aluno {
+  display: grid; gap: 1rem; grid-template-columns: 1fr; align-items: center;
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--r-lg);
+  padding: 1.3rem 1.4rem; margin-bottom: 1.4rem; box-shadow: var(--sombra);
+}
+@media (min-width: 38rem) { .nota-aluno { grid-template-columns: auto 1fr; gap: 1.6rem; } }
+.nota-aluno__valor { text-align: center; }
+.nota-aluno__valor b { display: block; font-family: var(--display); font-size: 3.2rem; line-height: 1; color: var(--tinta); }
+.nota-aluno__valor span { font-size: .8rem; color: var(--suave); }
+.nota-aluno__corpo h2 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 .4rem; }
+.nota-aluno__corpo p { margin: 0 0 .5rem; font-size: .93rem; line-height: 1.6; }
+.nota-aluno__corpo p:last-child { margin-bottom: 0; }
+.nota-aluno__prog { height: 9px; border-radius: 99px; background: var(--fundo-2); overflow: hidden; margin: .5rem 0 .6rem; }
+.nota-aluno__prog span { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--tinta-vivo), var(--ok)); transition: width .6s ease; }
+.nota-aluno--risco { border-color: var(--correcao); }
+.nota-aluno--pronto { border-color: var(--ok); }
+
 .etiqueta--espera {
   display: inline-block;
   font-size: .82rem;

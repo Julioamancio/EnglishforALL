@@ -10,6 +10,7 @@ const sim = require('../lib/simulado');
 const instituicoes = require('../lib/instituicoes');
 const series = require('../lib/series');
 const turmasLib = require('../lib/turmas');
+const notas = require('../lib/notas');
 
 const router = express.Router();
 
@@ -358,6 +359,68 @@ router.get('/usuarios', (req, res) => {
       : 0,
     busca: req.query.q || '',
     recado: req.query.ok || '',
+    layoutAdmin: true,
+  });
+});
+
+/**
+ * Nota do bimestre: provisória (o desempenho até aqui) e final (a mesma nota,
+ * ou 0 para quem não fizer o mínimo de simulados). A regra vive em lib/notas.js;
+ * aqui só se filtra e se ordena.
+ */
+router.get('/notas', (req, res) => {
+  const todos = notas.todos();
+  const calendario = notas.CALENDARIO;
+
+  const filtro = (req.query.escola || '').trim();
+  const turma = (req.query.serie || '').trim();
+  const ordem = (req.query.ordem || 'risco').trim();
+
+  let alunos = todos;
+  if (filtro === 'sem') alunos = alunos.filter((a) => !(a.instituicao || '').trim());
+  else if (filtro) alunos = alunos.filter((a) => db.chaveInstituicao(a.instituicao) === filtro);
+  if (turma === 'sem') alunos = alunos.filter((a) => !(a.serie || '').trim());
+  else if (turma) alunos = alunos.filter((a) => a.serie === turma);
+
+  const porNome = (a, b) => (a.nome || '').localeCompare(b.nome || '', 'pt-BR', { sensitivity: 'base' });
+  /* O padrão é "risco": quem fez menos simulados primeiro. É a ordem que serve
+     para agir — a lista alfabética só serve para procurar um aluno específico. */
+  if (ordem === 'az') alunos = [...alunos].sort(porNome);
+  else if (ordem === 'nota') {
+    alunos = [...alunos].sort((a, b) => {
+      if (a.notaProvisoria == null && b.notaProvisoria == null) return porNome(a, b);
+      if (a.notaProvisoria == null) return 1;
+      if (b.notaProvisoria == null) return -1;
+      return b.notaProvisoria - a.notaProvisoria || porNome(a, b);
+    });
+  } else {
+    alunos = [...alunos].sort((a, b) => a.concluidos - b.concluidos || porNome(a, b));
+  }
+
+  res.render('admin/notas', {
+    title: 'Nota do bimestre',
+    description: '',
+    alunos,
+    calendario,
+    encerrada: notas.encerrada(),
+    resumo: {
+      alunos: alunos.length,
+      atingiram: alunos.filter((a) => a.atingiuMinimo).length,
+      semNenhum: alunos.filter((a) => a.concluidos === 0).length,
+      semTempo: alunos.filter((a) => !a.aindaDaTempo).length,
+    },
+    escolas: db.instituicoes(),
+    semEscola: todos.filter((a) => !(a.instituicao || '').trim()).length,
+    turmas: series.SERIES
+      .map((s) => ({ ...s, total: todos.filter((a) => a.serie === s.valor).length }))
+      .filter((s) => s.total)
+      .sort((a, b) => series.ordem(a.valor) - series.ordem(b.valor)),
+    semTurma: todos.filter((a) => !(a.serie || '').trim()).length,
+    rotuloSerie: series.rotulo,
+    totalGeral: todos.length,
+    filtro,
+    turma,
+    ordem,
     layoutAdmin: true,
   });
 });
