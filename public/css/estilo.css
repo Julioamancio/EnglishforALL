@@ -1749,6 +1749,14 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
   font-weight: 700;
   cursor: default;
 }
+/* No tema escuro o --tinta clareia para #97a2ff, e branco sobre ele dá 2,4:1 —
+   abaixo do mínimo de 4,5. O site já resolve isso em toda parte (.btn, .chip
+   ativo, .card__tag--nivel) trocando o texto por #0e1120; aqui é o mesmo caso,
+   e sair do padrão seria criar uma segunda regra para a mesma pergunta. */
+html[data-tema='escuro'] .paginacao__n--atual,
+html[data-tema='escuro'] .paginacao__n--atual:hover {
+  color: #0e1120;
+}
 /* O passo indisponível continua ocupando lugar: sem ele, "Próxima" pularia
    para onde estava "Anterior" na última página, e o dedo erraria o alvo. */
 .paginacao__passo--morto {
