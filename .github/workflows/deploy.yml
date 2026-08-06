@@ -105,9 +105,25 @@ jobs:
           echo "Agora em:  $(git rev-parse HEAD)"
 
           # Só mexe em dependências se o package-lock tiver mudado.
+          #
+          # O `npm ci` PRECISA rodar com o node20, e não com o node do sistema.
+          # O better-sqlite3 é módulo nativo: compilado contra o v22 do PATH, ele
+          # deixa de carregar no v20 que a aplicação usa, o serviço entra em
+          # laço de reinício e o site cai. Aconteceu em 06/08/2026, na primeira
+          # vez que uma dependência mudou desde que este deploy existe.
+          #
+          # `npm` é um programa JS e roda com o primeiro `node` do PATH. Como só
+          # existe o binário `node20`, criamos um `node` apontando para ele numa
+          # pasta temporária e a colocamos na frente do PATH.
           if ! git diff --quiet "$antes" HEAD -- package-lock.json package.json; then
-            echo "Dependências mudaram, instalando…"
-            npm ci --omit=dev
+            echo "Dependências mudaram, instalando com o node20…"
+            mkdir -p /tmp/n20bin
+            ln -sf /usr/local/bin/node20 /tmp/n20bin/node
+            PATH=/tmp/n20bin:$PATH npm ci --omit=dev
+            rm -rf /tmp/n20bin
+            # prova que o módulo nativo carrega ANTES de reiniciar o serviço
+            NODE_PATH=/var/www/banco-questoes/node_modules /usr/local/bin/node20 \
+              -e "require('better-sqlite3'); console.log('better-sqlite3 carrega no node20')"
           fi
 
           systemctl restart banco-questoes
