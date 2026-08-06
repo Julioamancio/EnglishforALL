@@ -67,44 +67,43 @@
     <% if (!alunos.length) { %>
       <p class="vazio">Nenhum aluno com esse filtro.</p>
     <% } else { %>
-      <table class="tabela">
+      <table class="tabela tabela--larga">
         <thead>
           <tr>
             <th>Aluno</th><th>Onde estuda</th><th>Série</th>
-            <th>Simulados</th><th>Média</th>
-            <th>Nota provisória</th><th>Nota final</th><th>Situação</th><th></th>
+            <th class="num">Simulados</th><th class="num">Média</th>
+            <th class="num">Nota provisória</th><th class="num">Nota final</th>
+            <th>Situação</th><th></th>
           </tr>
         </thead>
         <tbody>
           <% alunos.forEach(function (a) { %>
             <tr>
-              <td><strong><%= a.nome %></strong><br><small class="suave"><%= a.email %></small></td>
+              <td class="tabela__aluno"><strong><%= a.nome %></strong><br><small class="suave"><%= a.email %></small></td>
               <td><%= a.instituicao || '—' %></td>
-              <td><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
-              <td>
+              <td class="nao-quebra"><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
+              <td class="num">
                 <strong><%= a.concluidos %></strong><span class="suave">/<%= calendario.total %></span>
                 <div class="notas-barra" title="<%= a.concluidos %> de <%= calendario.minimo %> exigidos">
                   <span style="width:<%= Math.min(100, Math.round((a.concluidos / calendario.minimo) * 100)) %>%"></span>
                 </div>
               </td>
-              <td><%= a.media == null ? '—' : a.media + '%' %></td>
-              <td><strong><%= a.notaProvisoria == null ? '—' : a.notaProvisoria.toFixed(1).replace('.', ',') %></strong></td>
-              <td>
-                <strong class="<%= a.notaFinal > 0 ? 'nota-ok' : 'nota-zero' %>">
-                  <%= a.notaFinal.toFixed(1).replace('.', ',') %>
-                </strong>
+              <td class="num"><%= a.media == null ? '—' : a.media + '%' %></td>
+              <td class="num"><strong><%= a.notaProvisoria == null ? '—' : a.notaProvisoria.toFixed(1).replace('.', ',') %></strong></td>
+              <td class="num">
+                <strong class="<%= a.notaFinal > 0 ? 'nota-ok' : 'nota-zero' %>"><%= a.notaFinal.toFixed(1).replace('.', ',') %></strong>
               </td>
-              <td>
+              <td class="nao-quebra">
                 <% if (a.atingiuMinimo) { %>
                   <span class="etiqueta etiqueta--ok">mínimo cumprido</span>
                 <% } else if (!a.aindaDaTempo) { %>
                   <span class="etiqueta etiqueta--perigo">não dá mais tempo</span>
                 <% } else { %>
                   <span class="etiqueta etiqueta--espera">faltam <%= a.faltam %></span>
-                  <small class="suave"><%= a.semanasRestantes %> semanas restantes</small>
+                  <br><small class="suave"><%= a.semanasRestantes %> semanas restantes</small>
                 <% } %>
               </td>
-              <td><a href="/admin/usuarios/<%= a.id %>">Ver ficha</a></td>
+              <td class="tabela__acao"><a href="/admin/usuarios/<%= a.id %>">Ver ficha</a></td>
             </tr>
           <% }) %>
         </tbody>

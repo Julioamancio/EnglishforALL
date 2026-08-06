@@ -95,31 +95,32 @@
     <% if (!alunos.length) { %>
       <p class="vazio"><%= (filtro || turma || busca) ? 'Nenhum aluno com esse filtro.' : 'Nenhum aluno ainda.' %></p>
     <% } else { %>
-      <table class="tabela">
+      <table class="tabela tabela--larga">
         <thead>
           <tr>
-            <th>Aluno</th><th>Onde estuda</th><th>Série</th><th>Simulados</th>
-            <th>Média</th><th>Última nota</th><th>Acertos</th><th>Último simulado</th><th></th>
+            <th>Aluno</th><th>Onde estuda</th><th>Série</th><th class="num">Simulados</th>
+            <th class="num">Média</th><th class="num">Última nota</th><th class="num">Acertos</th>
+            <th class="nao-quebra">Último simulado</th><th></th>
           </tr>
         </thead>
         <tbody>
           <% alunos.forEach(function (a) { %>
             <tr>
-              <td>
+              <td class="tabela__aluno">
                 <strong><%= a.nome %></strong><br>
                 <small class="suave"><%= a.email %></small>
               </td>
               <td><%= a.instituicao || '—' %></td>
-              <td><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
-              <td>
+              <td class="nao-quebra"><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
+              <td class="num">
                 <%= a.concluidos %>
                 <% if (a.em_aberto) { %><span class="etiqueta etiqueta--espera">1 em andamento</span><% } %>
               </td>
-              <td><%= a.media == null ? '—' : a.media + '%' %></td>
-              <td><%= a.ultima_nota == null ? '—' : a.ultima_nota + '%' %></td>
-              <td><%= a.concluidos ? a.acertos + '/' + a.questoes : '—' %></td>
-              <td><%= dataBR(a.ultimo_em) %></td>
-              <td><a href="/admin/usuarios/<%= a.id %>">Ver ficha</a></td>
+              <td class="num"><%= a.media == null ? '—' : a.media + '%' %></td>
+              <td class="num"><%= a.ultima_nota == null ? '—' : a.ultima_nota + '%' %></td>
+              <td class="num"><%= a.concluidos ? a.acertos + '/' + a.questoes : '—' %></td>
+              <td class="nao-quebra"><%= dataBR(a.ultimo_em) %></td>
+              <td class="tabela__acao"><a href="/admin/usuarios/<%= a.id %>">Ver ficha</a></td>
             </tr>
           <% }) %>
         </tbody>

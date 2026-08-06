@@ -514,10 +514,35 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 /* ---------------------------------------------------------- tabela admin */
 
 .tabela { width: 100%; border-collapse: collapse; font-size: .9rem; }
-.tabela th, .tabela td { text-align: left; padding: .7rem .6rem; border-bottom: 1px solid var(--borda); vertical-align: top; }
-.tabela th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--suave); }
+.tabela th, .tabela td { text-align: left; padding: .75rem .7rem; border-bottom: 1px solid var(--borda); vertical-align: middle; }
+/* `middle` e não `top`: com uma célula de duas linhas (nome + e-mail) e as
+   outras de uma, o alinhamento pelo topo deixava a linha inteira torta. */
+.tabela th {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--suave);
+  white-space: nowrap; /* rótulo de coluna é etiqueta, não texto: não quebra */
+}
+/* Listras: em tabela larga o olho perde a fila entre a primeira e a última
+   coluna. O tom vem da paleta (--fundo), então acompanha o tema escuro. */
+.tabela tbody tr:nth-child(even) td { background: var(--fundo); }
 .tabela tr:hover td { background: var(--fundo-2); }
 .rolagem { overflow-x: auto; }
+
+/* A tabela tinha width:100% e nenhuma largura mínima, então em vez de usar a
+   rolagem do .rolagem ela espremia as colunas até quebrar palavra — "Ver
+   ficha" virava duas linhas, "1ª série do médio" também, e cada linha ficava
+   com uma altura diferente. Com um piso de largura ela rola, que é o que a
+   caixa em volta sempre esteve preparada para fazer. */
+.tabela--larga { min-width: 54rem; }
+
+/* Números à direita e com dígitos de largura fixa: assim as casas se alinham
+   entre as linhas e dá para comparar a coluna de cima a baixo. */
+.tabela .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tabela .nao-quebra { white-space: nowrap; }
+.tabela__acao { white-space: nowrap; text-align: right; }
+/* Nome comprido quebrava em duas linhas e só aquela linha ficava com 96px
+   contra 73px das outras — uma fila torta no meio da tabela. Como a tabela
+   agora rola, é melhor ela ficar mais larga do que ter altura irregular. */
+.tabela__aluno { white-space: nowrap; }
 
 /* seleção de questões no montador */
 .escolha { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; padding: .85rem; border: 1px solid var(--borda); border-radius: var(--r); background: var(--superficie); margin-bottom: .6rem; }
@@ -1259,6 +1284,7 @@ html, body { max-width: 100%; overflow-x: clip; }
 .nota-aluno--pronto { border-color: var(--ok); }
 
 .etiqueta--espera {
+  white-space: nowrap;
   display: inline-block;
   font-size: .82rem;
   color: var(--suave);
