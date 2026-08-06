@@ -1,0 +1,62 @@
+<%
+/* Paginação da listagem.
+ *
+ * Espera: base (caminho), pagina, paginas, baseQuery (query já montada, sem o p).
+ *
+ * Links de verdade, com href — não botões de JavaScript. Assim o aluno pode
+ * abrir uma página em nova aba, o botão "voltar" funciona e o buscador segue
+ * os links sozinho.
+ *
+ * A janela mostra no máximo sete números, sempre com a primeira e a última:
+ * numa lista de 33 páginas, imprimir todas viraria outro problema de rolagem.
+ */
+var url = function (n) {
+  var q = baseQuery ? baseQuery + '&' : '';
+  return n === 1 && !q ? base : base + '?' + q + 'p=' + n;
+};
+var janela = [];
+if (paginas <= 7) {
+  for (var i = 1; i <= paginas; i++) janela.push(i);
+} else {
+  var ini = Math.max(2, pagina - 1);
+  var fim = Math.min(paginas - 1, pagina + 1);
+  janela.push(1);
+  if (ini > 2) janela.push('…');
+  for (var j = ini; j <= fim; j++) janela.push(j);
+  if (fim < paginas - 1) janela.push('…');
+  janela.push(paginas);
+}
+%>
+<% if (paginas > 1) { %>
+<nav class="paginacao" aria-label="Páginas de resultados">
+  <% if (pagina > 1) { %>
+    <a class="paginacao__passo" rel="prev" href="<%= url(pagina - 1) %>">
+      <span aria-hidden="true">&larr;</span> Anterior
+    </a>
+  <% } else { %>
+    <span class="paginacao__passo paginacao__passo--morto"><span aria-hidden="true">&larr;</span> Anterior</span>
+  <% } %>
+
+  <ol class="paginacao__numeros">
+    <% janela.forEach(function (n) { %>
+      <li>
+        <% if (n === '…') { %>
+          <span class="paginacao__reticencias" aria-hidden="true">…</span>
+        <% } else if (n === pagina) { %>
+          <span class="paginacao__n paginacao__n--atual" aria-current="page"><%= n %></span>
+        <% } else { %>
+          <a class="paginacao__n" href="<%= url(n) %>" aria-label="Página <%= n %>"><%= n %></a>
+        <% } %>
+      </li>
+    <% }) %>
+  </ol>
+
+  <% if (pagina < paginas) { %>
+    <a class="paginacao__passo" rel="next" href="<%= url(pagina + 1) %>">
+      Próxima <span aria-hidden="true">&rarr;</span>
+    </a>
+  <% } else { %>
+    <span class="paginacao__passo paginacao__passo--morto">Próxima <span aria-hidden="true">&rarr;</span></span>
+  <% } %>
+</nav>
+<% } %>

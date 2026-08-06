@@ -59,12 +59,45 @@ router.get('/questoes', (req, res) => {
     colecao: '',
   };
 
-  const questoes = db.listar(filtros);
+  /* Paginado desde 06/08/2026.
+   *
+   * Sem página, a listagem despejava as 777 questões do acervo de uma vez: 1 MB
+   * de HTML e uma página de 391 telas de altura. Ninguém rola 391 telas — e
+   * quem abre no celular pagava o download inteiro para olhar os primeiros seis
+   * cartões.
+   *
+   * As questões continuam todas no sitemap.xml, uma URL cada, então paginar não
+   * esconde nada de buscador: o rastreamento nunca dependeu desta página.
+   */
+  const POR_PAGINA = 24;
+  const total = db.contar(filtros);
+  const paginas = Math.max(1, Math.ceil(total / POR_PAGINA));
+  // fora do intervalo vira a última página, e não uma tela vazia
+  const pagina = Math.min(Math.max(1, Number(req.query.p) || 1), paginas);
+
+  const questoes = db.listar({
+    ...filtros,
+    limite: POR_PAGINA,
+    offset: (pagina - 1) * POR_PAGINA,
+  });
+
+  // a query da paginação preserva os filtros e troca só o número
+  const params = new URLSearchParams();
+  Object.entries({
+    tipo: filtros.tipo, nivel: filtros.nivel, tema: filtros.tema,
+    genero: filtros.genero, instituicao: filtros.instituicao,
+    banca: filtros.banca, ano: filtros.ano, q: filtros.busca,
+  }).forEach(([k, v]) => { if (v) params.set(k, v); });
 
   res.render('publico/lista', {
     title: tituloFiltro(filtros),
-    description: `${questoes.length} questões de inglês no estilo ENEM com gabarito comentado, texto autêntico e fonte citada.`,
+    description: `${total} questões de inglês no estilo ENEM com gabarito comentado, texto autêntico e fonte citada.`,
     questoes,
+    total,
+    pagina,
+    paginas,
+    porPagina: POR_PAGINA,
+    baseQuery: params.toString(),
     filtros,
     facetas: db.facetas(''),
     ROTULOS_TIPO,

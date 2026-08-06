@@ -53,10 +53,18 @@ function porId(id) {
 }
 
 /**
- * Listagem com filtros combináveis. Todos os campos são opcionais.
- * Usada tanto pelo site público quanto pelo painel e pelo montador de provas.
+ * O WHERE que listar() e contar() dividem.
+ *
+ * Nasceu separado porque contar() era `listar(...).length`: cada número
+ * materializava todas as linhas que ia contar. São sete contagens em TODA
+ * requisição do site — o menu é middleware —, o que dava 1.873 questões
+ * carregadas e 44 ms gastos por página só para escrever sete números no topo.
+ * Com COUNT(*) são 2 ms. Medido em 06/08/2026, no servidor.
  */
-function listar({ tipo, nivel, tema, genero, instituicao, instituicoes, banca, ano, busca, colecao, publicada = 1, limite, offset = 0 } = {}) {
+function montarFiltro({
+  tipo, nivel, tema, genero, instituicao, instituicoes, banca, ano, busca,
+  colecao, publicada = 1,
+} = {}) {
   const where = [];
   const params = [];
 
@@ -88,6 +96,20 @@ function listar({ tipo, nivel, tema, genero, instituicao, instituicoes, banca, a
     params.push(t, t, t);
   }
 
+  return { where, params };
+}
+
+/**
+ * Listagem com filtros combináveis. Todos os campos são opcionais.
+ * Usada tanto pelo site público quanto pelo painel e pelo montador de provas.
+ *
+ * `limite` e `offset` paginam no banco, e não em JavaScript: sem eles a
+ * listagem pública trazia as 777 questões do acervo em toda visita.
+ */
+function listar(filtros = {}) {
+  const { where, params } = montarFiltro(filtros);
+  const { limite, offset = 0 } = filtros;
+
   let sql = 'SELECT * FROM questoes';
   if (where.length) sql += ' WHERE ' + where.join(' AND ');
   sql += ' ORDER BY criada_em DESC, id DESC';
@@ -99,8 +121,12 @@ function listar({ tipo, nivel, tema, genero, instituicao, instituicoes, banca, a
   return db.prepare(sql).all(...params);
 }
 
+/** Quantas questões o filtro alcança, sem trazer nenhuma. */
 function contar(filtros = {}) {
-  return listar({ ...filtros, limite: null }).length;
+  const { where, params } = montarFiltro(filtros);
+  let sql = 'SELECT COUNT(*) AS n FROM questoes';
+  if (where.length) sql += ' WHERE ' + where.join(' AND ');
+  return db.prepare(sql).get(...params).n;
 }
 
 function facetas(colecao) {

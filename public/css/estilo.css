@@ -1697,3 +1697,79 @@ details.painel[open] > summary { margin-bottom: .9rem; padding-bottom: .6rem; bo
 @media (max-width: 560px) {
   .turma__membro .persona--anima .persona__video { height: 150px; }
 }
+
+/* --------------------------------------------------------------- paginação */
+/* A listagem trazia as 777 questões de uma vez: uma página de 391 telas de
+   altura, que ninguém rola. São 24 por página desde 06/08/2026. */
+.paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: 2.5rem 0 1rem;
+}
+.paginacao__numeros {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.paginacao__n,
+.paginacao__passo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* alvo de toque de 2.5rem: no celular estes são os únicos controles da
+     página, e botão pequeno em lista longa é armadilha */
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 .7rem;
+  border: 1px solid var(--borda);
+  border-radius: .6rem;
+  background: var(--cartao);
+  color: var(--texto);
+  font-size: .95rem;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.paginacao__n:hover,
+.paginacao__passo:hover {
+  border-color: var(--primaria);
+  color: var(--primaria);
+}
+.paginacao__n--atual,
+.paginacao__n--atual:hover {
+  background: var(--primaria);
+  border-color: var(--primaria);
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+}
+/* O passo indisponível continua ocupando lugar: sem ele, "Próxima" pularia
+   para onde estava "Anterior" na última página, e o dedo erraria o alvo. */
+.paginacao__passo--morto {
+  opacity: .38;
+  cursor: default;
+}
+.paginacao__reticencias {
+  display: inline-block;
+  min-width: 1.4rem;
+  text-align: center;
+  color: var(--suave);
+}
+.resultado-n__faixa {
+  margin-left: .5rem;
+  color: var(--suave);
+  font-weight: 400;
+  font-size: .9em;
+}
+@media (max-width: 30rem) {
+  /* Num celular, sete números mais dois passos não cabem numa linha. Os passos
+     bastam para caminhar; os números viram atalho de quem está no computador. */
+  .paginacao__numeros { display: none; }
+  .paginacao__passo { flex: 1; }
+}
