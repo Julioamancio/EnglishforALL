@@ -25,7 +25,16 @@
  */
 const { db } = require('../db');
 
-/** Segunda-feira da primeira semana com simulado (2026-W31). */
+/**
+ * Segunda-feira da primeira semana com simulado (2026-W31).
+ *
+ * É a semana do primeiro simulado que existe no banco, e **não** o começo do
+ * bimestre letivo. Perguntei ao professor em 06/08/2026 se o início deveria
+ * recuar caso as aulas tivessem começado antes, e a resposta foi que não
+ * importa: a contagem vale das semanas em que houve simulado para fazer.
+ * Recuar esta data aumentaria o total e, com ele, o mínimo — cobrando do aluno
+ * semanas em que não havia o que fazer. Não mexer sem nova decisão dele.
+ */
 const PRIMEIRA_SEGUNDA = '2026-07-27';
 /** "A última semana será a semana do dia 20 de novembro." */
 const ULTIMA_REFERENCIA = '2026-11-20';
