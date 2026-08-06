@@ -4,9 +4,16 @@
   <p>Só os <strong>simulados oficiais</strong> entram nesta conta. O que você responde livremente na
     navegação pelo banco é treino e não altera nada aqui.</p>
 
-<%# A nota do bimestre vem antes de tudo, inclusive de quem ainda não fez nenhum
+<%- include('../partials/etapas', {
+      etapas: etapasDoAno, selecionada: etapaAberta,
+      base: '/simulado/desempenho', paraAluno: true }) %>
+
+<%# A nota da etapa vem antes de tudo, inclusive para quem ainda não fez nenhum
     simulado: é justamente a esse aluno que o aviso precisa chegar. A regra é de
-    presença, e não de acerto — por isso ela não fica junto dos gráficos. %>
+    presença, e não de acerto — por isso ela não fica junto dos gráficos.
+
+    `nota` vem nulo quando a etapa aberta é a desconsiderada: ali não há o que
+    cobrar, e a faixa acima já explicou o porquê. %>
 <% if (nota) { %>
   <div class="nota-aluno <%= nota.atingiuMinimo ? 'nota-aluno--pronto' : (nota.aindaDaTempo ? '' : 'nota-aluno--risco') %>">
     <div class="nota-aluno__valor">
@@ -14,7 +21,7 @@
       <span>nota provisória</span>
     </div>
     <div class="nota-aluno__corpo">
-      <h2>Você fez <%= nota.concluidos %> de <%= calendario.minimo %> simulados obrigatórios</h2>
+      <h2>Você fez <%= nota.concluidos %> de <%= calendario.minimo %> simulados obrigatórios da <%= calendario.nome %></h2>
       <div class="nota-aluno__prog">
         <span style="width:<%= Math.min(100, Math.round((nota.concluidos / calendario.minimo) * 100)) %>%"></span>
       </div>
@@ -26,7 +33,7 @@
         <p><strong>Não é mais possível alcançar o mínimo.</strong> Faltam <%= nota.faltam %> simulados
           e restam <%= nota.semanasRestantes %> semanas. Procure o professor.</p>
       <% } else { %>
-        <p>São <%= calendario.total %> simulados no bimestre, um por semana, e é obrigatório fazer
+        <p>A <%= calendario.nome %> tem <%= calendario.total %> simulados, um por semana, e é obrigatório fazer
           <strong><%= calendario.exigencia %>%</strong> deles — <strong><%= calendario.minimo %></strong>.
           Faltam <strong><%= nota.faltam %></strong>, e ainda há <strong><%= nota.semanasRestantes %></strong>
           semanas para fazê-los.</p>

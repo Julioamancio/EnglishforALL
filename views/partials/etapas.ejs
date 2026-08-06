@@ -1,0 +1,66 @@
+<%
+/* As três etapas do ano, com a situação de cada uma.
+ *
+ * Espera:
+ *   etapas     lista de notas.doAlunoEmTodas (aluno) ou de {etapa, resumo} (painel)
+ *   selecionada id da etapa aberta
+ *   base       caminho para os links ('/simulado/desempenho' ou '/admin/notas')
+ *   paraAluno  true = fala com o aluno; false = fala com o professor
+ *
+ * As três aparecem sempre, inclusive a que não conta e a que ainda nem começou.
+ * Esconder a 1ª faria parecer que o ano começou em agosto; esconder a 3ª
+ * esconderia justamente o que ainda dá para fazer. E cada uma diz o SEU número,
+ * porque a exigência não é a mesma nas três — 3 simulados na 2ª etapa, 10 na 3ª.
+ */
+var _extra = (typeof extraQuery !== 'undefined' && extraQuery) ? extraQuery + '&' : '';
+%>
+<nav class="etapas" aria-label="Etapas do ano">
+  <% etapas.forEach(function (e) {
+       var et = e.etapa;
+       var aberta = et.id === selecionada;
+       var classe = 'etapa'
+         + (aberta ? ' etapa--aberta' : '')
+         + (!et.conta ? ' etapa--fora' : '')
+         + (e.naoComecou ? ' etapa--futura' : '');
+  %>
+    <a class="<%= classe %>" href="<%= base %>?<%= _extra %>etapa=<%= et.id %>"
+       <%= aberta ? 'aria-current="true"' : '' %>>
+      <span class="etapa__nome"><%= et.nome %></span>
+      <span class="etapa__periodo">
+        <%= et.inicio.slice(8, 10) %>/<%= et.inicio.slice(5, 7) %>
+        a <%= et.fim.slice(8, 10) %>/<%= et.fim.slice(5, 7) %>
+      </span>
+
+      <% if (!et.conta) { %>
+        <span class="etapa__estado">não conta</span>
+      <% } else if (e.naoComecou) { %>
+        <span class="etapa__estado"><%= et.minimo %> de <%= et.total %> exigidos</span>
+      <% } else if (typeof e.concluidos === 'number') { %>
+        <span class="etapa__estado">
+          <strong><%= e.concluidos %></strong>/<%= et.minimo %>
+          <%= e.atingiuMinimo ? '· garantida' : (e.aindaDaTempo ? '' : '· sem tempo') %>
+        </span>
+        <span class="etapa__barra" aria-hidden="true">
+          <span style="width:<%= Math.min(100, Math.round((e.concluidos / et.minimo) * 100)) %>%"></span>
+        </span>
+      <% } else if (typeof e.resumo !== 'undefined' && e.resumo) { %>
+        <span class="etapa__estado"><strong><%= e.resumo.atingiram %></strong> de <%= e.resumo.alunos %> garantidos</span>
+      <% } else { %>
+        <span class="etapa__estado"><%= et.minimo %> de <%= et.total %> exigidos</span>
+      <% } %>
+    </a>
+  <% }) %>
+</nav>
+
+<%# O porquê de a etapa aberta ser diferente das outras fica escrito, e não
+    subentendido: é regra de nota, e ninguém deve ter de adivinhar. %>
+<% var _ab = etapas.filter(function (x) { return x.etapa.id === selecionada; })[0]; %>
+<% if (_ab && _ab.etapa.desconsiderada) { %>
+  <p class="aviso aviso--regra"><strong><%= _ab.etapa.nome %>: desconsiderada.</strong> <%= _ab.etapa.desconsiderada %></p>
+<% } else if (_ab && _ab.etapa.recorte) { %>
+  <p class="aviso aviso--regra">
+    <strong><%= _ab.etapa.nome %>: contagem recortada.</strong> <%= _ab.etapa.recorte %>
+    São <strong><%= _ab.etapa.total %> semanas</strong> com simulado, e o mínimo é
+    <strong><%= _ab.etapa.minimo %></strong>.
+  </p>
+<% } %>

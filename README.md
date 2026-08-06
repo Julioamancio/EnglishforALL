@@ -78,6 +78,38 @@ histórico e no desempenho.
 - O prazo é calculado com o `datetime` do SQLite. Mudar o relógio do aparelho
   não adianta.
 - Toda rota confere o dono antes de responder: simulado de outro usuário dá 404.
+
+### A nota de cada etapa
+
+O ano tem **três etapas**, e cada uma tem a sua nota. A regra é de **presença**,
+não de acerto: o aluno precisa fazer **70% dos simulados da etapa**, e quem não
+alcança fica com **0**, por melhor que tenha ido nos que fez.
+
+| etapa | período | conta | mínimo |
+|---|---|---|---|
+| 1ª | 02/03 a 03/05 | **não** — o banco não existia | — |
+| 2ª | 04/05 a 31/08 | só de **03/08** em diante: 4 semanas | **3** |
+| 3ª | 01/09 a 30/11 | inteira: 13 semanas | **10** |
+
+A 2ª etapa é recortada porque ela já ia pela metade quando o primeiro simulado
+saiu. Cobrar 70% das 17 semanas dela seria cobrar semanas em que não havia o que
+fazer — o mínimo se calcula sobre as semanas que de fato têm simulado.
+
+**O ano que vem não precisa de nada disso.** Acrescentar as três etapas de 2027
+em `ETAPAS`, no `lib/notas.js`, sem `desconsiderada` e sem `contaDe`, faz tudo
+funcionar sozinho. Por isso o recorte é **campo de dados** e não um `if` no meio
+da conta: exceção escrita como código vira dívida permanente; escrita como dado,
+some sozinha quando deixa de existir.
+
+**Uma semana pertence à etapa da sua quinta-feira.** É a mesma convenção que
+define o ano de uma semana ISO, e resolve o caso que aparece neste calendário:
+31/08/2026 cai numa segunda, e a semana dela é quase toda setembro — pela
+quinta, ela é da 3ª etapa. Sem essa regra a mesma semana cairia em duas etapas, e
+alguém seria cobrado duas vezes pelo mesmo simulado.
+
+As três aparecem na tela, para o aluno e para o professor, inclusive a que não
+conta e a que ainda nem começou: esconder a 1ª faria parecer que o ano começou em
+agosto, e esconder a 3ª esconderia justamente o que ainda dá para fazer.
 - Simulado inacabado nunca é substituído, mesmo virando a semana.
 
 **Desempenho.** Média, melhor e pior resultado, variação do último, sequência de

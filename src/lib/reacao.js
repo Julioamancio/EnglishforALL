@@ -37,7 +37,11 @@ function anterior(usuarioId, simulado) {
 }
 
 function numeros(usuarioId, simulado) {
-  const semanas = notas.CALENDARIO.semanas;
+  // a etapa a que ESTE simulado pertence, e não a de hoje: quem abre um
+  // resultado antigo tem de ler os números daquela etapa
+  const etapa = notas.CALENDARIO.find((e) => e.semanas.includes(simulado.semana))
+    || notas.etapaAtual();
+  const semanas = etapa.semanas;
   const marcas = semanas.map(() => '?').join(',');
   const feitos = db
     .prepare(
@@ -47,10 +51,12 @@ function numeros(usuarioId, simulado) {
     .all(usuarioId, ...semanas);
 
   return {
+    etapa,
     concluidos: feitos.length,
     seguidas: notas.corridaDeSemanas(
       new Set(feitos.map((f) => f.semana)),
-      notas.semanaISO(new Date())
+      notas.semanaISO(new Date()),
+      semanas
     ),
     antes: anterior(usuarioId, simulado),
   };
@@ -70,12 +76,12 @@ function daConclusao(usuarioId, simulado) {
   const subiu = n.antes && acertos > n.antes.acertos;
   const primeiro = n.concluidos <= 1;
   const seq = n.seguidas.atual;
-  const min = notas.CALENDARIO.minimo;
+  const min = n.etapa.minimo;
   const faltam = Math.max(0, min - n.concluidos);
 
   const rumoAoMinimo = faltam > 0
     ? { texto: `Faltam ${faltam} para a presença estar garantida`, href: '/simulado/desempenho' }
-    : { texto: 'Ver a sua nota do bimestre', href: '/simulado/desempenho' };
+    : { texto: `Ver a sua nota da ${n.etapa.nome}`, href: '/simulado/desempenho' };
 
   if (gabaritou) {
     return {
@@ -101,7 +107,7 @@ function daConclusao(usuarioId, simulado) {
     return {
       persona: 'sofia',
       titulo: 'Primeiro simulado concluído',
-      fala: `Este conta como 1 dos ${min} obrigatórios do bimestre. A partir daqui é um por semana — e o que pesa na nota é aparecer, não acertar tudo.`,
+      fala: `Este conta como 1 dos ${min} obrigatórios da ${n.etapa.nome}. A partir daqui é um por semana — e o que pesa na nota é aparecer, não acertar tudo.`,
       atalho: rumoAoMinimo,
     };
   }
@@ -110,7 +116,7 @@ function daConclusao(usuarioId, simulado) {
     return {
       persona: 'max',
       titulo: `${seq} semanas seguidas`,
-      fala: `Você não deixou passar nenhuma das últimas ${seq}. É exatamente esse hábito que a nota deste bimestre cobra.`,
+      fala: `Você não deixou passar nenhuma das últimas ${seq}. É exatamente esse hábito que a nota da ${n.etapa.nome} cobra.`,
       atalho: rumoAoMinimo,
     };
   }
@@ -132,7 +138,7 @@ function daConclusao(usuarioId, simulado) {
   return {
     persona: 'leo',
     titulo: 'Este já está contado',
-    fala: `Fez ${acertos} de ${total}, e o simulado entrou na sua contagem do mesmo jeito: a exigência do bimestre é de presença. Quando a correção abrir, refazer o que escapou é o que muda o resultado da próxima.`,
+    fala: `Fez ${acertos} de ${total}, e o simulado entrou na sua contagem do mesmo jeito: a exigência da ${n.etapa.nome} é de presença. Quando a correção abrir, refazer o que escapou é o que muda o resultado da próxima.`,
     atalho: { texto: 'Questões que eu errei', href: '/simulado/erros' },
   };
 }

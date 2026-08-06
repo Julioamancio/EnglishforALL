@@ -1,17 +1,33 @@
 /**
- * Nota do bimestre a partir dos simulados semanais.
+ * Nota das etapas a partir dos simulados semanais.
  *
- * A regra, definida pelo professor em 06/08/2026:
+ * A regra, definida pelo professor:
  *
- *   - acontece um simulado por semana, da primeira semana da temporada até a
- *     semana de 20 de novembro de 2026 — as aulas terminam no dia 30, mas a
- *     última semana de simulado é a do dia 20;
- *   - o aluno é obrigado a fazer **70% deles**;
- *   - a nota é a média dos simulados, de 0 a 10;
- *   - **quem não atingir o mínimo fica com 0**, por melhor que tenha ido nos
- *     simulados que fez.
+ *   - acontece um simulado por semana;
+ *   - o aluno é obrigado a fazer **70%** dos simulados **da etapa**;
+ *   - a nota é a média dos simulados que ele fez, de 0 a 10;
+ *   - **quem não atingir o mínimo da etapa fica com 0**, por melhor que tenha
+ *     ido nos simulados que fez.
  *
- * Duas coisas que este módulo trata com cuidado, porque é nota de aluno:
+ * O ano tem três etapas, cada uma com a sua nota. Até 06/08/2026 havia aqui uma
+ * temporada só, de julho a novembro; nessa data o professor passou o calendário
+ * escolar de verdade, e ele não é uniforme:
+ *
+ *   1ª  02/03 a 03/05   DESCONSIDERADA — o banco de simulados não existia
+ *   2ª  04/05 a 31/08   RECORTADA — a etapa já ia pela metade quando o primeiro
+ *                       simulado saiu; contam as semanas de 03/08 em diante, e
+ *                       os 70% são calculados sobre essas
+ *   3ª  01/09 a 30/11   INTEIRA, do jeito padrão
+ *
+ * O ano que vem começa do início e não precisa de nada disto. Acrescentar as
+ * três etapas de 2027 em ETAPAS — sem `desconsiderada` e sem `contaDe` — faz
+ * tudo funcionar sozinho. É por isso que o recorte é **campo de dados** e não
+ * um `if` no meio da conta: exceção escrita como código vira dívida; escrita
+ * como dado, some sozinha quando deixa de existir.
+ *
+ * ------------------------------------------------------------------------
+ *
+ * Três coisas que este módulo trata com cuidado, porque é nota de aluno:
  *
  * 1. O mínimo se calcula com aritmética inteira, `ceil(total * 70 / 100)`. Isso
  *    é precaução, não conserto de defeito: eu havia escrito aqui que
@@ -19,29 +35,66 @@
  *    falso — `10 * 0.7` dá exatamente 7, e para todo total de 1 a 500 as duas
  *    formas concordam. A inteira fica porque é exata por construção e dispensa
  *    quem ler no futuro de refazer essa verificação; não porque a outra falhe.
- * 2. Só contam simulados **concluídos** e **dentro da temporada**. Um simulado
- *    começado e abandonado não é simulado feito, e um de outra temporada não
- *    pertence a esta nota.
+ *
+ * 2. Só contam simulados **concluídos** e **dentro das semanas da etapa**. Um
+ *    simulado começado e abandonado não é simulado feito.
+ *
+ * 3. Uma semana pertence à etapa da sua **quinta-feira**. É a mesma convenção
+ *    que define o ano de uma semana ISO, e resolve sozinha o caso que aparece
+ *    neste calendário: 31/08/2026 cai numa segunda, e a semana dela é quase
+ *    toda setembro. Pela quinta, ela é da 3ª etapa — que é onde ela pertence de
+ *    fato. Sem essa regra, a mesma semana cairia em duas etapas ou em nenhuma,
+ *    e alguém seria cobrado duas vezes pelo mesmo simulado.
  */
 const { db } = require('../db');
 
-/**
- * Segunda-feira da primeira semana com simulado (2026-W31).
- *
- * É a semana do primeiro simulado que existe no banco, e **não** o começo do
- * bimestre letivo. Perguntei ao professor em 06/08/2026 se o início deveria
- * recuar caso as aulas tivessem começado antes, e a resposta foi que não
- * importa: a contagem vale das semanas em que houve simulado para fazer.
- * Recuar esta data aumentaria o total e, com ele, o mínimo — cobrando do aluno
- * semanas em que não havia o que fazer. Não mexer sem nova decisão dele.
- */
-const PRIMEIRA_SEGUNDA = '2026-07-27';
-/** "A última semana será a semana do dia 20 de novembro." */
-const ULTIMA_REFERENCIA = '2026-11-20';
-/** As aulas acabam no dia 30, mas a semana de 30/11 não tem simulado. */
-const FIM_DAS_AULAS = '2026-11-30';
 /** Percentual de presença exigido. */
 const EXIGENCIA = 70;
+
+/**
+ * O calendário escolar. Acrescentar etapa aqui é a única coisa necessária para
+ * um ano novo funcionar.
+ *
+ *   desconsiderada  texto do porquê; a etapa não gera nota e não cobra nada
+ *   contaDe         recorta o início: só semanas a partir desta data contam
+ *   contaAte        recorta o fim; existe para o caso de a última semana da
+ *                   etapa não ter simulado
+ */
+const ETAPAS = [
+  {
+    id: '2026-1',
+    nome: '1ª etapa',
+    ano: 2026,
+    inicio: '2026-03-02',
+    fim: '2026-05-03',
+    desconsiderada:
+      'O banco de simulados não existia nesta etapa — o primeiro simulado é de 03/08/2026. '
+      + 'Ela não gera nota e não cobra nada de ninguém.',
+  },
+  {
+    id: '2026-2',
+    nome: '2ª etapa',
+    ano: 2026,
+    inicio: '2026-05-04',
+    fim: '2026-08-31',
+    // Decisão do professor em 06/08/2026: conta de 03/08, e os 70% valem sobre
+    // as semanas que sobraram — não sobre a etapa inteira, em que não havia o
+    // que fazer. Cobrar semanas sem simulado seria cobrar o impossível.
+    contaDe: '2026-08-03',
+    recorte:
+      'A etapa começou em 04/05, mas o primeiro simulado é de 03/08. Contam as semanas '
+      + 'de 03/08 em diante, e a exigência de 70% é calculada sobre elas.',
+  },
+  {
+    id: '2026-3',
+    nome: '3ª etapa',
+    ano: 2026,
+    inicio: '2026-09-01',
+    fim: '2026-11-30',
+  },
+];
+
+/* -------------------------------------------------------------- semanas ISO */
 
 /** Semana ISO de uma data, no mesmo formato que a tabela `simulados` guarda. */
 function semanaISO(data) {
@@ -52,67 +105,126 @@ function semanaISO(data) {
   return `${d.getUTCFullYear()}-W${String(n).padStart(2, '0')}`;
 }
 
-/** Todas as semanas da temporada, em ordem. */
-function semanas() {
+const emDia = (s) => new Date(s + 'T00:00:00Z');
+
+/** A quinta-feira da semana em que a data cai. É ela que decide a etapa. */
+function quintaDa(data) {
+  const d = new Date(Date.UTC(data.getUTCFullYear(), data.getUTCMonth(), data.getUTCDate()));
+  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+  return d;
+}
+
+/** As semanas que contam para uma etapa, em ordem. */
+function semanasDa(etapa) {
+  if (etapa.desconsiderada) return [];
+
+  const inicio = emDia(etapa.inicio);
+  const fim = emDia(etapa.fim);
+  const de = etapa.contaDe ? emDia(etapa.contaDe) : inicio;
+  const ate = etapa.contaAte ? emDia(etapa.contaAte) : fim;
+
   const lista = [];
-  const fim = new Date(ULTIMA_REFERENCIA + 'T00:00:00Z');
-  for (let d = new Date(PRIMEIRA_SEGUNDA + 'T00:00:00Z'); d <= fim; d.setUTCDate(d.getUTCDate() + 7)) {
-    lista.push(semanaISO(d));
+  // parte da segunda-feira da semana da data inicial e anda de sete em sete
+  const d = new Date(de);
+  d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+
+  for (; d <= fim; d.setUTCDate(d.getUTCDate() + 7)) {
+    const quinta = quintaDa(d);
+    if (quinta >= inicio && quinta <= fim && quinta >= de && quinta <= ate) {
+      lista.push(semanaISO(d));
+    }
   }
   return lista;
 }
 
-const SEMANAS = semanas();
-const TOTAL = SEMANAS.length;
-const MINIMO = Math.ceil((TOTAL * EXIGENCIA) / 100);
+/** As etapas com o calendário já calculado. É o que o resto do sistema usa. */
+const CALENDARIO = ETAPAS.map((e) => {
+  const semanas = semanasDa(e);
+  const total = semanas.length;
+  return {
+    ...e,
+    semanas,
+    total,
+    minimo: Math.ceil((total * EXIGENCIA) / 100),
+    exigencia: EXIGENCIA,
+    primeira: semanas[0] || null,
+    ultima: semanas[total - 1] || null,
+    conta: !e.desconsiderada && total > 0,
+  };
+});
 
-const CALENDARIO = {
-  primeira: SEMANAS[0],
-  ultima: SEMANAS[TOTAL - 1],
-  semanas: SEMANAS,
-  total: TOTAL,
-  minimo: MINIMO,
-  exigencia: EXIGENCIA,
-  fimDasAulas: FIM_DAS_AULAS,
-  ultimaReferencia: ULTIMA_REFERENCIA,
-};
+const porId = new Map(CALENDARIO.map((e) => [e.id, e]));
+
+/** Todas as semanas que contam no ano, de todas as etapas. */
+const TODAS_AS_SEMANAS = CALENDARIO.flatMap((e) => e.semanas);
+
+/** A etapa a que uma data pertence; null se a data cai fora de todas. */
+function etapaDe(agora = new Date()) {
+  const q = quintaDa(agora);
+  return CALENDARIO.find((e) => q >= emDia(e.inicio) && q <= emDia(e.fim)) || null;
+}
 
 /**
- * Semanas seguidas com simulado concluído: a atual, a melhor, e o que está em jogo.
+ * A etapa que a tela deve abrir por padrão.
+ *
+ * Fora do período letivo cai na última que contou, e não em nenhuma: quem abre
+ * o site em janeiro quer ver como terminou o ano, não uma tela vazia.
+ */
+function etapaAtual(agora = new Date()) {
+  const dela = etapaDe(agora);
+  if (dela && dela.conta) return dela;
+  const q = quintaDa(agora);
+  const passadas = CALENDARIO.filter((e) => e.conta && emDia(e.fim) < q);
+  if (passadas.length) return passadas[passadas.length - 1];
+  return CALENDARIO.find((e) => e.conta) || CALENDARIO[0];
+}
+
+/** A etapa já acabou? */
+function encerrada(etapa, agora = new Date()) {
+  return quintaDa(agora) > emDia(etapa.fim);
+}
+
+/* ------------------------------------------------------- semanas seguidas */
+
+/**
+ * Semanas seguidas com simulado concluído: a atual, a melhor, e o que está em
+ * jogo. Contadas dentro de uma lista de semanas — a de uma etapa, ou a do ano.
  *
  * O cuidado que decide se isto motiva ou desanima está em **quando a semana
- * corrente conta contra**. Quem fez três semanas seguidas e abre o site na
- * segunda ainda tem até domingo; dizer "sequência perdida" ali seria falso, e
- * falso no pior momento — bem antes da hora em que a pessoa ainda podia agir.
+ * corrente conta contra**. Quem fez três seguidas e abre o site na segunda
+ * ainda tem até domingo; dizer "sequência perdida" ali seria falso, e falso no
+ * pior momento possível — bem antes da hora em que a pessoa ainda podia agir.
  * Por isso a contagem começa na semana de hoje quando ela já foi feita, e na
  * anterior quando não. A semana só conta contra depois de fechar.
  *
  * Essa cortesia vale uma vez só, e apenas para a semana aberta: a busca para no
- * primeiro buraco anterior. Semana vazia com a temporada já encerrada também
- * conta contra, porque ali não há mais o que esperar.
+ * primeiro buraco anterior. Semana vazia com a etapa já encerrada também conta
+ * contra, porque ali não há mais o que esperar.
  *
  * `melhor` existe para que perder a sequência não apague o que a pessoa fez.
  * Zerar o único número visível transforma um tropeço em recomeço do zero, que é
  * exatamente o momento em que aluno desiste.
  */
-function corridaDeSemanas(feitas, semanaDeHoje) {
-  const hoje = SEMANAS.indexOf(semanaDeHoje);
-  const acabou = semanaDeHoje > CALENDARIO.ultima;
-  // fora da temporada pela frente, a régua vai até o fim dela; antes do começo,
-  // não há régua nenhuma
+function corridaDeSemanas(feitas, semanaDeHoje, semanas) {
+  const SEM = semanas || TODAS_AS_SEMANAS;
+  const TOTAL = SEM.length;
+  const ultima = TOTAL ? SEM[TOTAL - 1] : null;
+
+  const hoje = SEM.indexOf(semanaDeHoje);
+  const acabou = ultima !== null && semanaDeHoje > ultima;
   const limite = hoje !== -1 ? hoje : acabou ? TOTAL - 1 : -1;
 
   let atual = 0;
   if (limite >= 0) {
     let i = limite;
-    // a cortesia da semana ainda aberta — só existe com a temporada correndo
-    if (hoje !== -1 && !feitas.has(SEMANAS[i])) i -= 1;
-    for (; i >= 0 && feitas.has(SEMANAS[i]); i -= 1) atual += 1;
+    // a cortesia da semana ainda aberta — só existe com a etapa correndo
+    if (hoje !== -1 && !feitas.has(SEM[i])) i -= 1;
+    for (; i >= 0 && feitas.has(SEM[i]); i -= 1) atual += 1;
   }
 
   let melhor = 0;
   let corrida = 0;
-  for (const semana of SEMANAS) {
+  for (const semana of SEM) {
     if (feitas.has(semana)) {
       corrida += 1;
       if (corrida > melhor) melhor = corrida;
@@ -127,28 +239,58 @@ function corridaDeSemanas(feitas, semanaDeHoje) {
     atual,
     melhor,
     fezEstaSemana,
-    // a sequência existe, a semana está aberta e ainda não foi feita: é o que a
-    // tela usa para dizer o que a pessoa perde se deixar passar
     emRisco: correndo && atual > 0 && !fezEstaSemana,
-    // recorde vivo, para a tela poder comemorar no momento em que acontece
     noRecorde: atual > 0 && atual === melhor,
   };
 }
 
-/** A temporada já acabou? */
-function encerrada(agora = new Date()) {
-  return semanaISO(agora) > CALENDARIO.ultima;
+/* ------------------------------------------------------------------ notas */
+
+/** Aluno de uma etapa desconsiderada: aparece, e não deve nada. */
+function semCobranca(u, etapa) {
+  return {
+    id: u.id,
+    nome: u.nome,
+    email: u.email,
+    instituicao: u.instituicao,
+    serie: u.serie,
+    etapa,
+    concluidos: 0,
+    acertos: 0,
+    questoes: 0,
+    media: null,
+    notaProvisoria: null,
+    notaFinal: null,
+    atingiuMinimo: true,
+    faltam: 0,
+    semanasRestantes: 0,
+    aindaDaTempo: true,
+    temporadaEncerrada: true,
+    desconsiderada: true,
+    semanasSeguidas: { atual: 0, melhor: 0, fezEstaSemana: false, emRisco: false, noRecorde: false },
+  };
 }
 
 /**
- * Nota de todos os alunos, numa consulta só.
+ * Nota de todos os alunos numa etapa, em duas consultas.
  *
- * Devolve, por aluno: quantos simulados concluiu dentro da temporada, a média,
- * a nota provisória (o desempenho até aqui), a nota final (a provisória, ou 0
- * se não bateu o mínimo) e quantas semanas ainda restam para ele se salvar.
+ * Devolve, por aluno: quantos simulados concluiu dentro da etapa, a média, a
+ * nota provisória (o desempenho até aqui), a nota final (a provisória, ou 0 se
+ * não bateu o mínimo) e quantas semanas ainda restam para ele se salvar.
  */
-function todos(agora = new Date()) {
+function todos(agora = new Date(), etapaId) {
+  const etapa = (etapaId && porId.get(etapaId)) || etapaAtual(agora);
+
+  if (!etapa.conta) {
+    return db
+      .prepare('SELECT id, nome, email, instituicao, serie FROM usuarios ORDER BY nome')
+      .all()
+      .map((u) => semCobranca(u, etapa));
+  }
+
+  const SEMANAS = etapa.semanas;
   const marcas = SEMANAS.map(() => '?').join(',');
+
   const linhas = db
     .prepare(
       `SELECT u.id, u.nome, u.email, u.instituicao, u.serie,
@@ -182,7 +324,8 @@ function todos(agora = new Date()) {
   }
 
   const semanaDeHoje = semanaISO(agora);
-  const acabou = semanaDeHoje > CALENDARIO.ultima;
+  const acabou = encerrada(etapa, agora);
+  const MINIMO = etapa.minimo;
 
   return linhas.map((r) => {
     const media = r.media == null ? null : Math.round(r.media);
@@ -192,13 +335,13 @@ function todos(agora = new Date()) {
     const jaFeitas = feitas.get(r.id) || new Set();
     const restantes = SEMANAS.filter((s) => s >= semanaDeHoje && !jaFeitas.has(s)).length;
     const faltam = Math.max(0, MINIMO - r.concluidos);
-    const seguidas = corridaDeSemanas(jaFeitas, semanaDeHoje);
     return {
       id: r.id,
       nome: r.nome,
       email: r.email,
       instituicao: r.instituicao,
       serie: r.serie,
+      etapa,
       concluidos: r.concluidos,
       acertos: r.acertos,
       questoes: r.questoes,
@@ -212,17 +355,55 @@ function todos(agora = new Date()) {
       // quando `faltam` passa das oportunidades que sobraram, a conta já fechou
       aindaDaTempo: faltam <= restantes,
       temporadaEncerrada: acabou,
-      // "semanas seguidas", e não "sequência": `sequencia` já significa outra
-      // coisa no desempenho.js — sequência de notas em melhora ou em queda —, e
-      // duas coisas com o mesmo nome viram duas conversas embaralhadas.
-      semanasSeguidas: seguidas,
+      desconsiderada: false,
+      semanasSeguidas: corridaDeSemanas(jaFeitas, semanaDeHoje, SEMANAS),
     };
   });
 }
 
 /** A mesma conta, para um aluno só. */
-function doAluno(usuarioId, agora = new Date()) {
-  return todos(agora).find((a) => a.id === usuarioId) || null;
+function doAluno(usuarioId, agora = new Date(), etapaId) {
+  return todos(agora, etapaId).find((a) => a.id === usuarioId) || null;
 }
 
-module.exports = { CALENDARIO, semanaISO, encerrada, todos, doAluno, corridaDeSemanas };
+/**
+ * As três etapas de um aluno, na ordem do ano — é o que as abas mostram.
+ *
+ * `naoComecou` separa a etapa que ainda vem da etapa em que o aluno falhou. As
+ * duas têm zero simulados feitos, e dizer a mesma coisa das duas seria acusar
+ * alguém de não ter feito o que ainda não existe.
+ */
+function doAlunoEmTodas(usuarioId, agora = new Date()) {
+  const atual = etapaAtual(agora);
+  const q = quintaDa(agora);
+  return CALENDARIO.map((e) => {
+    const n = doAluno(usuarioId, agora, e.id);
+    return {
+      ...(n || {}),
+      etapa: e,
+      ehAtual: e.id === atual.id,
+      naoComecou: e.conta && q < emDia(e.inicio),
+    };
+  });
+}
+
+/** O mesmo para a turma inteira, usado pelo painel. */
+function turmaEmTodas(agora = new Date()) {
+  return CALENDARIO.map((e) => ({ etapa: e, alunos: todos(agora, e.id) }));
+}
+
+module.exports = {
+  CALENDARIO,
+  ETAPAS: CALENDARIO,
+  TODAS_AS_SEMANAS,
+  EXIGENCIA,
+  semanaISO,
+  etapaDe,
+  etapaAtual,
+  encerrada,
+  todos,
+  doAluno,
+  doAlunoEmTodas,
+  turmaEmTodas,
+  corridaDeSemanas,
+};

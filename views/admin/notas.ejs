@@ -1,14 +1,19 @@
 <%- include('../partials/cabeca') %>
 <div class="env env--painel">
-  <h1>Nota do bimestre</h1>
+  <h1>Notas por etapa</h1>
+
+  <%- include('../partials/etapas', {
+        etapas: etapasDoAno, selecionada: etapaAberta,
+        base: '/admin/notas', paraAluno: false }) %>
 
   <%# A regra por extenso, na tela. Nota de aluno não pode depender de alguém
-      lembrar de cabeça qual era o combinado. %>
+      lembrar de cabeça qual era o combinado — e agora a régua muda de etapa
+      para etapa, o que torna escrevê-la ainda mais necessário. %>
   <div class="aviso aviso--regra">
     <p>
-      São <strong><%= calendario.total %> simulados</strong>, um por semana, de
-      <strong><%= calendario.primeira %></strong> a <strong><%= calendario.ultima %></strong>
-      — a última é a semana de 20 de novembro, e as aulas terminam em 30 de novembro.
+      A <strong><%= calendario.nome %></strong> tem
+      <strong><%= calendario.total %> simulados</strong>, um por semana, de
+      <strong><%= calendario.primeira %></strong> a <strong><%= calendario.ultima %></strong>.
       O aluno precisa fazer <strong><%= calendario.exigencia %>%</strong> deles, isto é,
       <strong><%= calendario.minimo %> simulados</strong>.
     </p>
@@ -16,8 +21,8 @@
       A <strong>nota provisória</strong> é o desempenho nos simulados já feitos, de 0 a 10.
       A <strong>nota final</strong> é a mesma nota — mas fica <strong>0</strong> para quem
       não alcançar os <%= calendario.minimo %>, por melhor que tenha ido.
-      <% if (!encerrada) { %>Enquanto a temporada não acaba, a coluna final mostra
-      como ficaria se o bimestre terminasse hoje.<% } %>
+      <% if (!encerrada) { %>Enquanto a etapa não acaba, a coluna final mostra
+      como ficaria se ela terminasse hoje.<% } %>
     </p>
   </div>
 
@@ -29,6 +34,7 @@
   </div>
 
   <form class="filtro-alunos" method="get" action="/admin/notas">
+    <input type="hidden" name="etapa" value="<%= etapaAberta %>">
     <div class="campo">
       <label for="escola">Instituição</label>
       <select id="escola" name="escola">

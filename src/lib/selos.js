@@ -62,20 +62,24 @@ const SELOS = [
     chave: 'meia-jornada',
     emoji: '🧗',
     nome: 'Meio caminho',
-    descricao: () => `Chegar à metade dos ${notas.CALENDARIO.minimo} simulados obrigatórios.`,
+    descricao: 'Concluir seis simulados oficiais no ano.',
     grupo: 'hábito',
-    alvo: () => Math.ceil(notas.CALENDARIO.minimo / 2),
+    // Número do ANO, e não metade do mínimo da etapa: o mínimo muda de etapa
+    // para etapa (3 na 2ª, 10 na 3ª), e um alvo que sobe quando a etapa vira
+    // tiraria do aluno um selo que ele já tinha. Nenhum selo se perde.
+    alvo: 6,
     valor: (d) => d.concluidos,
   },
   {
     chave: 'presenca-garantida',
     emoji: '🛡️',
     nome: 'Presença garantida',
-    descricao: () =>
-      `Cumprir os ${notas.CALENDARIO.minimo} simulados exigidos. A partir daqui a nota final deixa de ser 0.`,
+    descricao: 'Cumprir o mínimo exigido em uma etapa inteira — a nota daquela etapa deixa de ser 0.',
     grupo: 'hábito',
-    alvo: () => notas.CALENDARIO.minimo,
-    valor: (d) => d.concluidos,
+    // "em ALGUMA etapa", e não "na etapa atual": assim o selo continua valendo
+    // depois que a etapa vira. O que foi conquistado fica conquistado.
+    alvo: 1,
+    valor: (d) => d.etapasGarantidas,
   },
   // -------------------------------------------------------------- acerto
   {
@@ -109,9 +113,15 @@ const SELOS = [
 
 const resolve = (x, ...args) => (typeof x === 'function' ? x(...args) : x);
 
-/** Os números de que os critérios precisam, em duas consultas. */
+/**
+ * Os números de que os critérios precisam, em duas consultas.
+ *
+ * Contados sobre o ANO inteiro — todas as semanas de todas as etapas que
+ * contam. Selo é troféu do caminho, e o caminho não recomeça quando a etapa
+ * vira. A nota é que é por etapa.
+ */
 function dadosDoAluno(usuarioId) {
-  const semanas = notas.CALENDARIO.semanas;
+  const semanas = notas.TODAS_AS_SEMANAS;
   const marcas = semanas.map(() => '?').join(',');
 
   const feitos = db
@@ -135,12 +145,19 @@ function dadosDoAluno(usuarioId) {
     }
   }
 
+  /* Em quantas etapas o aluno já cumpriu o mínimo. Uma vez cumprido, cumprido
+     fica: a etapa acabou e o número dela não muda mais. */
+  const etapasGarantidas = notas.CALENDARIO.filter(
+    (e) => e.conta && e.semanas.filter((w) => feitasSet.has(w)).length >= e.minimo
+  ).length;
+
   return {
     concluidos: feitos.length,
     gabaritos: feitos.filter((f) => f.total > 0 && f.acertos === f.total).length,
     melhorou,
+    etapasGarantidas,
     // a MELHOR sequência, nunca a atual: é o que impede o selo de sumir
-    melhorSequencia: notas.corridaDeSemanas(feitasSet, notas.semanaISO(new Date())).melhor,
+    melhorSequencia: notas.corridaDeSemanas(feitasSet, notas.semanaISO(new Date()), semanas).melhor,
   };
 }
 

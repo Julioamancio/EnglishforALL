@@ -1997,3 +1997,54 @@ html[data-tema='escuro'] .retomar__seta { color: #0e1120; }
     border-top: 0;
   }
 }
+
+/* ------------------------------------------------------------- etapas */
+/* As três do ano, sempre visíveis. A que não conta e a que ainda nem começou
+   aparecem junto: esconder a 1ª faria parecer que o ano começou em agosto, e
+   esconder a 3ª esconderia justamente o que ainda dá para fazer. */
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: .6rem;
+  margin: 0 0 1.2rem;
+}
+.etapa {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .75rem .9rem .8rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  background: var(--superficie);
+  color: var(--texto);
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+}
+.etapa:hover { border-color: var(--tinta); }
+.etapa--aberta {
+  border-color: var(--tinta);
+  border-width: 2px;
+  padding: calc(.75rem - 1px) calc(.9rem - 1px) calc(.8rem - 1px);
+}
+/* A etapa que não conta fica apagada, e não escondida: ela faz parte do ano e
+   a pessoa precisa ver que existe e que não cobra nada. */
+.etapa--fora { opacity: .6; }
+.etapa--futura .etapa__estado { color: var(--suave); }
+.etapa__nome { font-weight: 700; font-size: 1rem; }
+.etapa__periodo { color: var(--suave); font-size: .8rem; }
+.etapa__estado { font-size: .88rem; font-variant-numeric: tabular-nums; margin-top: .15rem; }
+.etapa__barra {
+  display: block;
+  height: 4px;
+  margin-top: .35rem;
+  border-radius: 100px;
+  background: var(--fundo-2);
+  overflow: hidden;
+}
+.etapa__barra > span { display: block; height: 4px; background: var(--tinta); border-radius: 100px; }
+
+@media (max-width: 30rem) {
+  .etapas { grid-template-columns: 1fr; gap: .4rem; }
+  .etapa { flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
+  .etapa__barra { flex-basis: 100%; }
+}

@@ -370,8 +370,24 @@ router.get('/usuarios', (req, res) => {
  * aqui só se filtra e se ordena.
  */
 router.get('/notas', (req, res) => {
-  const todos = notas.todos();
-  const calendario = notas.CALENDARIO;
+  /* A etapa vem da query; sem ela, a de hoje. Cada etapa tem o seu mínimo — 3
+     na 2ª deste ano, 10 na 3ª —, então trocar de etapa troca a régua inteira da
+     tela, e não só os números. */
+  const pedida = String(req.query.etapa || '');
+  const calendario = notas.CALENDARIO.find((e) => e.id === pedida) || notas.etapaAtual();
+  const todos = notas.todos(new Date(), calendario.id);
+
+  // as três, com o resumo de cada uma, para a faixa do topo
+  const etapas = notas.CALENDARIO.map((e) => {
+    const lista = e.id === calendario.id ? todos : notas.todos(new Date(), e.id);
+    return {
+      etapa: e,
+      resumo: {
+        alunos: lista.length,
+        atingiram: e.conta ? lista.filter((a) => a.atingiuMinimo).length : 0,
+      },
+    };
+  });
 
   const filtro = (req.query.escola || '').trim();
   const turma = (req.query.serie || '').trim();
@@ -399,6 +415,8 @@ router.get('/notas', (req, res) => {
   }
 
   res.render('admin/notas', {
+    etapasDoAno: etapas,
+    etapaAberta: calendario.id,
     title: 'Nota do bimestre',
     description: '',
     alunos,
@@ -447,8 +465,19 @@ router.get('/usuarios/:id', (req, res, next) => {
     aluno,
     d: desempenho.resumo(aluno.id),
     // a mesma nota que o aluno vê, para o professor não precisar abrir outra tela
-    nota: notas.doAluno(aluno.id),
-    calendario: notas.CALENDARIO,
+    // `etapasDoAno`, e não `etapas`: este render já tinha um `etapas`, que são
+    // as séries escolares do seletor de turma. Com o mesmo nome, o JavaScript
+    // fica com a última chave e a faixa das etapas recebia séries.
+    etapasDoAno: notas.doAlunoEmTodas(aluno.id),
+    etapaAberta: (notas.CALENDARIO.find((e) => e.id === String(req.query.etapa || ''))
+      || notas.etapaAtual()).id,
+    nota: (() => {
+      const alvo = notas.CALENDARIO.find((e) => e.id === String(req.query.etapa || ''))
+        || notas.etapaAtual();
+      return alvo.conta ? notas.doAluno(aluno.id, new Date(), alvo.id) : null;
+    })(),
+    calendario: notas.CALENDARIO.find((e) => e.id === String(req.query.etapa || ''))
+      || notas.etapaAtual(),
     selos: selos.doAluno(aluno.id),
     lista,
     emAberto: sim.emAberto(aluno.id),

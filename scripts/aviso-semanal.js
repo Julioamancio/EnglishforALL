@@ -60,11 +60,12 @@ function montar(a) {
   const faltam = a.faltam;
   const restam = a.semanasRestantes;
 
+  const etapa = a.etapa;
   const linhaSituacao = a.atingiuMinimo
-    ? `Você já cumpriu os ${notas.CALENDARIO.minimo} simulados obrigatórios — este aqui é só para manter a média subindo.`
+    ? `Você já cumpriu os ${etapa.minimo} simulados obrigatórios da ${etapa.nome} — este aqui é só para manter a média subindo.`
     : !a.aindaDaTempo
       ? `Atenção: faltam ${faltam} simulados e restam ${restam} semanas. Já não é possível fechar o mínimo — procure o professor.`
-      : `Você fez ${a.concluidos} dos ${notas.CALENDARIO.minimo} obrigatórios. Faltam ${faltam}, e ainda há ${restam} semanas.`;
+      : `Você fez ${a.concluidos} dos ${etapa.minimo} obrigatórios da ${etapa.nome}. Faltam ${faltam}, e ainda há ${restam} semanas.`;
 
   /* `parou` vem preenchido quando existe simulado da semana sem conclusão. Zero
      respondidas é caso à parte: a pessoa abriu e fechou, não desistiu no meio. */
@@ -111,7 +112,7 @@ function montar(a) {
     ``,
     `---`,
     `Você recebe este aviso porque é aluno do professor Julio no English for ALL.`,
-    `São ${notas.CALENDARIO.total} simulados no bimestre, um por semana, e é obrigatório fazer ${notas.CALENDARIO.exigencia}% deles.`,
+    `A ${etapa.nome} tem ${etapa.total} simulados, um por semana, e é obrigatório fazer ${etapa.exigencia}% deles — ${etapa.minimo}.`,
   ].join('\n');
 
   /* A sequência entra só quando existe e está em jogo.
@@ -160,7 +161,7 @@ function montar(a) {
   </p>
   <p style="margin:0;padding-top:18px;border-top:1px solid #dfe2f0;font-size:12px;line-height:1.6;color:#5b6382">
     Você recebe este aviso porque é aluno do professor Julio no English for ALL.
-    São ${notas.CALENDARIO.total} simulados no bimestre, um por semana, e é obrigatório fazer ${notas.CALENDARIO.exigencia}% deles.
+    A ${etapa.nome} tem ${etapa.total} simulados, um por semana, e é obrigatório fazer ${etapa.exigencia}% deles — ${etapa.minimo}.
   </p>
 </div></body></html>`;
 
@@ -212,12 +213,13 @@ function destinatarios(semana) {
 
 (async () => {
   const semana = notas.semanaISO(new Date());
-  const naTemporada = notas.CALENDARIO.semanas.includes(semana);
+  const etapaDeHoje = notas.etapaAtual();
+  const naTemporada = etapaDeHoje.conta && etapaDeHoje.semanas.includes(semana);
 
   console.log(`semana atual: ${semana}`);
   if (!naTemporada) {
     console.log(
-      `fora da temporada (${notas.CALENDARIO.primeira} a ${notas.CALENDARIO.ultima}) — nada a enviar.`
+      `fora das semanas com simulado (${etapaDeHoje.nome}: ${etapaDeHoje.primeira || '—'} a ${etapaDeHoje.ultima || '—'}) — nada a enviar.`
     );
     process.exit(0);
   }
@@ -279,7 +281,7 @@ function destinatarios(semana) {
     console.log('');
     lista.slice(0, 10).forEach((a) =>
       console.log(
-        `  ${a.nome.charAt(0)}·  ${situacao(a).padEnd(22)} fez ${a.concluidos}/${notas.CALENDARIO.minimo} no bimestre`
+        `  ${a.nome.charAt(0)}·  ${situacao(a).padEnd(22)} fez ${a.concluidos}/${a.etapa.minimo} na ${a.etapa.nome}`
       )
     );
     if (lista.length > 10) console.log(`  ... e mais ${lista.length - 10}`);

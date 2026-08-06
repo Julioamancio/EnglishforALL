@@ -153,15 +153,26 @@ router.get('/erros', (req, res) => {
 // ------------------------------------------------------------------ desempenho
 
 router.get('/desempenho', (req, res) => {
+  /* As três etapas aparecem sempre; `?etapa=` escolhe qual abre em detalhe.
+     Sem parâmetro, abre a de hoje — que é o que o aluno quer ver em 99% das
+     visitas. As outras duas continuam a um clique. */
+  const etapas = notas.doAlunoEmTodas(req.session.usuario.id);
+  const pedida = String(req.query.etapa || '');
+  const escolhida = etapas.find((e) => e.etapa.id === pedida)
+    || etapas.find((e) => e.ehAtual)
+    || etapas[0];
+
   res.render('publico/simulado-desempenho', {
+    etapasDoAno: etapas,
+    etapaAberta: escolhida.etapa.id,
     title: 'Meu desempenho',
     description: 'Sua evolução nos simulados oficiais.',
     d: desempenho.resumo(req.session.usuario.id),
     erros: sim.erros(req.session.usuario.id).length,
     // A nota do bimestre aparece ANTES dos gráficos: é a informação que muda o
     // comportamento do aluno, e ela depende de presença, não de acerto.
-    nota: notas.doAluno(req.session.usuario.id),
-    calendario: notas.CALENDARIO,
+    nota: escolhida.etapa.conta ? escolhida : null,
+    calendario: escolhida.etapa,
     selos: selos.doAluno(req.session.usuario.id),
     ...base(req),
   });
