@@ -11,6 +11,7 @@ const instituicoes = require('../lib/instituicoes');
 const series = require('../lib/series');
 const turmasLib = require('../lib/turmas');
 const notas = require('../lib/notas');
+const selos = require('../lib/selos');
 
 const router = express.Router();
 
@@ -448,6 +449,7 @@ router.get('/usuarios/:id', (req, res, next) => {
     // a mesma nota que o aluno vê, para o professor não precisar abrir outra tela
     nota: notas.doAluno(aluno.id),
     calendario: notas.CALENDARIO,
+    selos: selos.doAluno(aluno.id),
     lista,
     emAberto: sim.emAberto(aluno.id),
     escolas: instituicoes.INSTITUICOES,

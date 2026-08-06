@@ -1882,3 +1882,68 @@ html[data-tema='escuro'] .retomar__seta { color: #0e1120; }
   .retomar { font-size: .88rem; padding: .6rem .8rem; }
   .retomar__seta { display: none; }
 }
+
+/* ------------------------------------------------------------------ selos */
+/* Os fechados aparecem junto com os abertos: o selo fechado é o convite, e
+   esconder o que falta transforma a grade num placar do que já acabou. */
+.selos { margin: 1.6rem 0 2rem; }
+.selos__topo { display: flex; align-items: baseline; gap: .7rem; }
+.selos__topo h2 { margin: 0; }
+.selos__placar { color: var(--suave); font-size: .95rem; }
+.selos__proximo {
+  margin: .5rem 0 1rem;
+  padding: .7rem .95rem;
+  background: var(--fundo-2);
+  border-radius: var(--r-sm);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+.selos__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: .7rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.selo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  padding: .9rem .7rem .75rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--r);
+  background: var(--superficie);
+  text-align: center;
+}
+/* Fechado é apagado, não riscado nem vermelho: ainda não é diferente de
+   falhou, e a diferença entre as duas leituras é quem continua tentando. */
+.selo:not(.selo--on) { opacity: .58; }
+.selo:not(.selo--on) .selo__icone { filter: grayscale(1); }
+.selo--on { border-color: var(--tinta); box-shadow: 0 1px 0 var(--tinta) inset; }
+.selo__icone { font-size: 1.9rem; line-height: 1.1; }
+.selo__nome { font-weight: 600; font-size: .92rem; line-height: 1.3; }
+.selo__estado { color: var(--suave); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.selo--on .selo__estado { color: var(--tinta); font-weight: 600; }
+.selo__barra {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: .2rem;
+  border-radius: 100px;
+  background: var(--fundo-2);
+  overflow: hidden;
+}
+.selo__barra > span { display: block; height: 4px; background: var(--tinta); border-radius: 100px; }
+
+/* Compacto: a ficha do professor mostra o placar, não o convite. */
+.selos--compacto .selos__grade { grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr)); gap: .45rem; }
+.selos--compacto .selo { padding: .55rem .4rem .45rem; }
+.selos--compacto .selo__icone { font-size: 1.35rem; }
+.selos--compacto .selo__nome { font-size: .78rem; }
+.selos--compacto .selo__estado { font-size: .7rem; }
+
+@media (max-width: 30rem) {
+  .selos__grade { grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr)); }
+}

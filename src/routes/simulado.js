@@ -9,6 +9,7 @@ const express = require('express');
 const sim = require('../lib/simulado');
 const desempenho = require('../lib/desempenho');
 const notas = require('../lib/notas');
+const selos = require('../lib/selos');
 const { realce } = require('../lib/realce');
 
 const router = express.Router();
@@ -159,6 +160,7 @@ router.get('/desempenho', (req, res) => {
     // comportamento do aluno, e ela depende de presença, não de acerto.
     nota: notas.doAluno(req.session.usuario.id),
     calendario: notas.CALENDARIO,
+    selos: selos.doAluno(req.session.usuario.id),
     ...base(req),
   });
 });

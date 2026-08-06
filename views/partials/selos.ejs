@@ -1,0 +1,49 @@
+<%
+/* Selos, na tela do aluno e na ficha do professor.
+ *
+ * Espera: selos (de lib/selos.doAluno) e, opcional, compacto.
+ *
+ * Os fechados aparecem, e com o número que falta. Esconder o que ainda não foi
+ * conquistado economizaria espaço e perderia o principal: o selo fechado é o
+ * convite. "Faltam 8" é um alvo; um cadeado mudo é só uma recusa.
+ */
+var compacto = (typeof compacto !== 'undefined') && compacto;
+%>
+<section class="selos<%= compacto ? ' selos--compacto' : '' %>">
+  <div class="selos__topo">
+    <h2>Selos</h2>
+    <span class="selos__placar"><strong><%= selos.conquistados %></strong> de <%= selos.total %></span>
+  </div>
+
+  <% if (!compacto && selos.proximo) { %>
+    <%# Um alvo por vez. Oito barras de progresso ao mesmo tempo não apontam
+        para lugar nenhum. %>
+    <p class="selos__proximo">
+      Próximo: <strong><%= selos.proximo.emoji %> <%= selos.proximo.nome %></strong>
+      — <%= selos.proximo.descricao %>
+      <% if (selos.proximo.alvo > 1) { %>
+        <span class="suave">(<%= selos.proximo.feito %> de <%= selos.proximo.alvo %>)</span>
+      <% } %>
+    </p>
+  <% } %>
+
+  <ul class="selos__grade">
+    <% selos.lista.forEach(function (s) { %>
+      <li class="selo<%= s.conquistado ? ' selo--on' : '' %>"
+          title="<%= s.descricao %>">
+        <span class="selo__icone" aria-hidden="true"><%= s.emoji %></span>
+        <span class="selo__nome"><%= s.nome %></span>
+        <% if (s.conquistado) { %>
+          <span class="selo__estado">conquistado</span>
+        <% } else if (s.alvo > 1) { %>
+          <span class="selo__barra" role="img" aria-label="<%= s.feito %> de <%= s.alvo %>">
+            <span style="width:<%= Math.round((s.feito / s.alvo) * 100) %>%"></span>
+          </span>
+          <span class="selo__estado"><%= s.feito %> de <%= s.alvo %></span>
+        <% } else { %>
+          <span class="selo__estado">ainda não</span>
+        <% } %>
+      </li>
+    <% }) %>
+  </ul>
+</section>

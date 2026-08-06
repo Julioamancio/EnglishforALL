@@ -69,6 +69,13 @@
   </div>
 <% } %>
 
+<%# Os selos vêm depois da nota e da sequência: nota é o que decide o bimestre,
+    sequência é o hábito que leva até ela, selo é o troféu do caminho. Nessa
+    ordem, e não na inversa. %>
+<% if (typeof selos !== 'undefined' && selos) { %>
+  <%- include('../partials/selos', { selos: selos, compacto: false }) %>
+<% } %>
+
 <% if (d.vazio) { %>
   <p class="aviso">Você ainda não concluiu nenhum simulado oficial. Assim que terminar o primeiro, os números e os gráficos aparecem aqui.</p>
   <p><a class="btn" href="/simulado">Fazer o simulado da semana</a></p>

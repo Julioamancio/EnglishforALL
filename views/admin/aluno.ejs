@@ -151,6 +151,12 @@
   </p>
 <% } %>
 
+<%# Versão compacta: o professor precisa ver de relance quantos o aluno tem,
+    não ser convidado a conquistar nada. %>
+<% if (typeof selos !== 'undefined' && selos) { %>
+  <%- include('../partials/selos', { selos: selos, compacto: true }) %>
+<% } %>
+
 <% if (d.vazio) { %>
   <p class="aviso">Este aluno ainda não concluiu nenhum simulado oficial.</p>
 <% } else { %>
