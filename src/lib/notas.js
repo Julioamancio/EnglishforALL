@@ -77,6 +77,64 @@ const CALENDARIO = {
   ultimaReferencia: ULTIMA_REFERENCIA,
 };
 
+/**
+ * Semanas seguidas com simulado concluído: a atual, a melhor, e o que está em jogo.
+ *
+ * O cuidado que decide se isto motiva ou desanima está em **quando a semana
+ * corrente conta contra**. Quem fez três semanas seguidas e abre o site na
+ * segunda ainda tem até domingo; dizer "sequência perdida" ali seria falso, e
+ * falso no pior momento — bem antes da hora em que a pessoa ainda podia agir.
+ * Por isso a contagem começa na semana de hoje quando ela já foi feita, e na
+ * anterior quando não. A semana só conta contra depois de fechar.
+ *
+ * Essa cortesia vale uma vez só, e apenas para a semana aberta: a busca para no
+ * primeiro buraco anterior. Semana vazia com a temporada já encerrada também
+ * conta contra, porque ali não há mais o que esperar.
+ *
+ * `melhor` existe para que perder a sequência não apague o que a pessoa fez.
+ * Zerar o único número visível transforma um tropeço em recomeço do zero, que é
+ * exatamente o momento em que aluno desiste.
+ */
+function corridaDeSemanas(feitas, semanaDeHoje) {
+  const hoje = SEMANAS.indexOf(semanaDeHoje);
+  const acabou = semanaDeHoje > CALENDARIO.ultima;
+  // fora da temporada pela frente, a régua vai até o fim dela; antes do começo,
+  // não há régua nenhuma
+  const limite = hoje !== -1 ? hoje : acabou ? TOTAL - 1 : -1;
+
+  let atual = 0;
+  if (limite >= 0) {
+    let i = limite;
+    // a cortesia da semana ainda aberta — só existe com a temporada correndo
+    if (hoje !== -1 && !feitas.has(SEMANAS[i])) i -= 1;
+    for (; i >= 0 && feitas.has(SEMANAS[i]); i -= 1) atual += 1;
+  }
+
+  let melhor = 0;
+  let corrida = 0;
+  for (const semana of SEMANAS) {
+    if (feitas.has(semana)) {
+      corrida += 1;
+      if (corrida > melhor) melhor = corrida;
+    } else {
+      corrida = 0;
+    }
+  }
+
+  const correndo = hoje !== -1;
+  const fezEstaSemana = correndo && feitas.has(semanaDeHoje);
+  return {
+    atual,
+    melhor,
+    fezEstaSemana,
+    // a sequência existe, a semana está aberta e ainda não foi feita: é o que a
+    // tela usa para dizer o que a pessoa perde se deixar passar
+    emRisco: correndo && atual > 0 && !fezEstaSemana,
+    // recorde vivo, para a tela poder comemorar no momento em que acontece
+    noRecorde: atual > 0 && atual === melhor,
+  };
+}
+
 /** A temporada já acabou? */
 function encerrada(agora = new Date()) {
   return semanaISO(agora) > CALENDARIO.ultima;
@@ -134,6 +192,7 @@ function todos(agora = new Date()) {
     const jaFeitas = feitas.get(r.id) || new Set();
     const restantes = SEMANAS.filter((s) => s >= semanaDeHoje && !jaFeitas.has(s)).length;
     const faltam = Math.max(0, MINIMO - r.concluidos);
+    const seguidas = corridaDeSemanas(jaFeitas, semanaDeHoje);
     return {
       id: r.id,
       nome: r.nome,
@@ -153,6 +212,10 @@ function todos(agora = new Date()) {
       // quando `faltam` passa das oportunidades que sobraram, a conta já fechou
       aindaDaTempo: faltam <= restantes,
       temporadaEncerrada: acabou,
+      // "semanas seguidas", e não "sequência": `sequencia` já significa outra
+      // coisa no desempenho.js — sequência de notas em melhora ou em queda —, e
+      // duas coisas com o mesmo nome viram duas conversas embaralhadas.
+      semanasSeguidas: seguidas,
     };
   });
 }
@@ -162,4 +225,4 @@ function doAluno(usuarioId, agora = new Date()) {
   return todos(agora).find((a) => a.id === usuarioId) || null;
 }
 
-module.exports = { CALENDARIO, semanaISO, encerrada, todos, doAluno };
+module.exports = { CALENDARIO, semanaISO, encerrada, todos, doAluno, corridaDeSemanas };

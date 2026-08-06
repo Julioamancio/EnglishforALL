@@ -135,6 +135,22 @@
   </div>
 <% } %>
 
+<%# A mesma sequência que o aluno vê, para o professor não precisar adivinhar
+    quem está embalado e quem parou. Aqui é informação, não incentivo: nenhum
+    botão, nenhuma comemoração.
+
+    Fora do cartão da nota de propósito — ele é um flex de duas colunas, e um
+    terceiro filho entra torto. %>
+<% if (nota && (nota.semanasSeguidas.atual > 0 || nota.semanasSeguidas.melhor > 0)) { var q = nota.semanasSeguidas; %>
+  <p class="aviso<%= q.atual > 0 && !q.emRisco ? ' aviso--ok' : '' %>">
+    <% if (q.atual > 0) { %>
+      <strong><%= q.atual %> <%= q.atual === 1 ? 'semana seguida' : 'semanas seguidas' %></strong><% if (q.emRisco) { %> — e ainda não fez a desta semana.<% } else { %> (melhor: <%= q.melhor %>).<% } %>
+    <% } else { %>
+      Sequência interrompida. A melhor foi de <strong><%= q.melhor %></strong>.
+    <% } %>
+  </p>
+<% } %>
+
 <% if (d.vazio) { %>
   <p class="aviso">Este aluno ainda não concluiu nenhum simulado oficial.</p>
 <% } else { %>

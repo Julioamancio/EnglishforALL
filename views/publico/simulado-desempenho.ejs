@@ -38,6 +38,37 @@
   </div>
 <% } %>
 
+<%# Semanas seguidas.
+    Vem depois da nota, e não antes: a nota é o que decide o bimestre, e a
+    sequência é o hábito que leva até ela. Trocar a ordem faria o jogo parecer
+    mais importante que a regra.
+
+    Não aparece para quem nunca fez nada — "0 semanas seguidas" na primeira
+    visita é uma derrota antes de começar. %>
+<% if (nota && (nota.semanasSeguidas.atual > 0 || nota.semanasSeguidas.melhor > 0)) { var q = nota.semanasSeguidas; %>
+  <div class="seguidas<%= q.emRisco ? ' seguidas--risco' : '' %><%= q.atual === 0 ? ' seguidas--parada' : '' %>">
+    <span class="seguidas__fogo" aria-hidden="true"><%= q.atual > 0 ? '🔥' : '💤' %></span>
+    <div class="seguidas__texto">
+      <% if (q.atual > 0) { %>
+        <b><%= q.atual %> <%= q.atual === 1 ? 'semana seguida' : 'semanas seguidas' %></b>
+        <% if (q.emRisco) { %>
+          <span>O simulado desta semana ainda está aberto. Fazendo, você chega a <%= q.atual + 1 %>.</span>
+        <% } else if (q.noRecorde && q.atual > 1) { %>
+          <span>É a sua melhor sequência até agora. Não deixe a próxima passar.</span>
+        <% } else { %>
+          <span>Sua melhor sequência: <%= q.melhor %>.</span>
+        <% } %>
+      <% } else { %>
+        <b>Sua melhor sequência foi de <%= q.melhor %> <%= q.melhor === 1 ? 'semana' : 'semanas' %></b>
+        <span>Fazendo o simulado desta semana você começa outra.</span>
+      <% } %>
+    </div>
+    <% if (!q.fezEstaSemana) { %>
+      <a class="btn btn--pequeno" href="/simulado">Fazer agora</a>
+    <% } %>
+  </div>
+<% } %>
+
 <% if (d.vazio) { %>
   <p class="aviso">Você ainda não concluiu nenhum simulado oficial. Assim que terminar o primeiro, os números e os gráficos aparecem aqui.</p>
   <p><a class="btn" href="/simulado">Fazer o simulado da semana</a></p>

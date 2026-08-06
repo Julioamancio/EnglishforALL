@@ -1781,3 +1781,51 @@ html[data-tema='escuro'] .paginacao__n--atual:hover {
   .paginacao__numeros { display: none; }
   .paginacao__passo { flex: 1; }
 }
+
+/* ------------------------------------------------------- semanas seguidas */
+/* O hábito que a regra dos 70% exige. Fica depois da nota: a nota decide o
+   bimestre, a sequência é o caminho até ela. */
+.seguidas {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  margin: 1rem 0 1.6rem;
+  padding: .9rem 1.1rem;
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--ok, #178a5a);
+  border-radius: var(--r);
+  background: var(--superficie);
+}
+.seguidas__fogo {
+  font-size: 1.7rem;
+  line-height: 1;
+  flex: none;
+}
+.seguidas__texto { flex: 1; min-width: 0; }
+.seguidas__texto b { display: block; font-size: 1.05rem; }
+.seguidas__texto span { display: block; color: var(--suave); font-size: .9rem; margin-top: .15rem; }
+
+/* Em risco: a semana está aberta e a sequência ainda não foi renovada. Âmbar e
+   não vermelho — nada foi perdido ainda, e vermelho aqui leria como fracasso. */
+.seguidas--risco { border-left-color: var(--marca, #ffd84d); }
+.seguidas--parada { border-left-color: var(--borda-forte); }
+.seguidas--parada .seguidas__fogo { opacity: .55; }
+
+@media (max-width: 30rem) {
+  /* No celular o botão desce para a linha de baixo em vez de espremer o texto */
+  .seguidas { flex-wrap: wrap; }
+  .seguidas .btn { width: 100%; justify-content: center; }
+}
+
+/* O 🔥 pulsa devagar, e só para quem não pediu para parar de animar. Chamar
+   atenção uma vez por segundo é propaganda; a cada quatro é lembrete. */
+@media (prefers-reduced-motion: no-preference) {
+  .seguidas:not(.seguidas--parada) .seguidas__fogo {
+    animation: seguidas-pulsa 4s ease-in-out infinite;
+  }
+}
+@keyframes seguidas-pulsa {
+  0%, 88%, 100% { transform: scale(1); }
+  92%           { transform: scale(1.18) rotate(-6deg); }
+  96%           { transform: scale(1.08) rotate(4deg); }
+}

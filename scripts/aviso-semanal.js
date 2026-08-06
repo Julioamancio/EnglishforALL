@@ -105,6 +105,7 @@ function montar(a) {
     ...(convite ? [``, convite] : []),
     ``,
     linhaSituacao,
+    ...(linhaSeguidas ? [``, linhaSeguidas] : []),
     ``,
     `${botao}: ${SITE}/simulado`,
     ``,
@@ -112,6 +113,22 @@ function montar(a) {
     `Você recebe este aviso porque é aluno do professor Julio no English for ALL.`,
     `São ${notas.CALENDARIO.total} simulados no bimestre, um por semana, e é obrigatório fazer ${notas.CALENDARIO.exigencia}% deles.`,
   ].join('\n');
+
+  /* A sequência entra só quando existe e está em jogo.
+   *
+   * Quem recebe este e-mail é, por definição, quem ainda não fez a semana — e
+   * quem tem sequência viva está a um simulado de perdê-la. É a única frase da
+   * mensagem que fala de algo que a pessoa já construiu, e não de dívida. Para
+   * quem tem zero, ela some: "sua sequência é de 0 semanas" é uma cobrança
+   * disfarçada de incentivo.
+   */
+  const q = a.semanasSeguidas || { atual: 0, melhor: 0 };
+  const linhaSeguidas =
+    q.atual > 0
+      ? `Você está em ${q.atual} ${q.atual === 1 ? 'semana seguida' : 'semanas seguidas'}. Fazendo o desta semana, chega a ${q.atual + 1}.`
+      : q.melhor > 1
+        ? `Sua melhor sequência foi de ${q.melhor} semanas seguidas. Dá para começar outra hoje.`
+        : '';
 
   const cor = a.aindaDaTempo ? '#2f3ab2' : '#e0324b';
 
@@ -137,6 +154,7 @@ function montar(a) {
   <p style="margin:0 0 22px;padding:12px 14px;background:#f2f3fa;border-left:4px solid ${cor};border-radius:8px;font-size:14px;line-height:1.6">
     ${linhaSituacao}
   </p>
+  ${linhaSeguidas ? `<p style="margin:0 0 22px;font-size:14px;line-height:1.6"><span style="font-size:17px">\u{1F525}</span> ${linhaSeguidas}</p>` : ''}
   <p style="margin:0 0 24px">
     <a href="${SITE}/simulado" style="display:inline-block;background:#2f3ab2;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 24px;border-radius:100px">${botao}</a>
   </p>
