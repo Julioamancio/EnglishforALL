@@ -1947,3 +1947,53 @@ html[data-tema='escuro'] .retomar__seta { color: #0e1120; }
 @media (max-width: 30rem) {
   .selos__grade { grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr)); }
 }
+
+/* ------------------------------------------------- reação do personagem */
+/* Aparece na tela de conclusão do simulado, ao lado do placar. */
+.reacao {
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.reacao__figura { flex: none; width: 5.5rem; }
+.reacao__figura .persona img,
+.reacao__figura .persona video { width: 100%; height: auto; display: block; }
+.reacao__balao {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  padding: .85rem 1.05rem;
+  background: var(--fundo-2);
+  border-radius: var(--r);
+  line-height: 1.55;
+}
+/* O bico do balão, apontando para o personagem. Feito com borda em vez de
+   imagem: acompanha a cor do tema sozinho. */
+.reacao__balao::before {
+  content: '';
+  position: absolute;
+  left: -.5rem;
+  bottom: 1.1rem;
+  border: .5rem solid transparent;
+  border-right-color: var(--fundo-2);
+  border-left: 0;
+}
+.reacao__balao b { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
+.reacao__balao p { margin: 0 0 .4rem; font-size: .95rem; }
+.reacao__balao a { font-size: .92rem; font-weight: 600; }
+
+@media (max-width: 26rem) {
+  /* Num aparelho estreito o personagem sobe para cima do balão: espremido em
+     duas colunas, sobrariam três palavras por linha. */
+  .reacao { flex-direction: column; align-items: flex-start; gap: .2rem; }
+  .reacao__figura { width: 4.5rem; margin-left: .3rem; }
+  .reacao__balao::before {
+    left: 1.2rem;
+    bottom: auto;
+    top: -.5rem;
+    border: .5rem solid transparent;
+    border-bottom-color: var(--fundo-2);
+    border-top: 0;
+  }
+}

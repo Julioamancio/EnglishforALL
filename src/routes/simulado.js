@@ -10,6 +10,7 @@ const sim = require('../lib/simulado');
 const desempenho = require('../lib/desempenho');
 const notas = require('../lib/notas');
 const selos = require('../lib/selos');
+const reacao = require('../lib/reacao');
 const { realce } = require('../lib/realce');
 
 const router = express.Router();
@@ -52,6 +53,7 @@ router.get('/', (req, res, next) => {
       description: 'Resultado do seu simulado oficial.',
       simulado,
       gabarito: g,
+      reacao: reacao.daConclusao(req.session.usuario.id, simulado),
       proxima: sim.semanaAtual(),
       ...base(req),
     });

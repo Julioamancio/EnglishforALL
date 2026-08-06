@@ -8,6 +8,23 @@
     <p class="sim-placar__pct"><%= Math.round((simulado.acertos / simulado.total) * 100) %>% de aproveitamento</p>
   </div>
 
+<%# Alguém reagindo ao número.
+    O personagem reage ao esforço e à evolução, nunca ao fracasso — a lógica
+    inteira está em lib/reacao.js, com o porquê. A nota já aparecia aqui desde
+    sempre; o que espera 24 horas é a correção comentada. %>
+<% if (typeof reacao !== 'undefined' && reacao) { %>
+  <div class="reacao reacao--<%= reacao.persona %>">
+    <div class="reacao__figura"><%- include('../partials/persona', { nome: reacao.persona }) %></div>
+    <div class="reacao__balao">
+      <b><%= reacao.titulo %></b>
+      <p><%= reacao.fala %></p>
+      <% if (reacao.atalho) { %>
+        <a href="<%= reacao.atalho.href %>"><%= reacao.atalho.texto %> &rarr;</a>
+      <% } %>
+    </div>
+  </div>
+<% } %>
+
   <% if (gabarito.liberado) { %>
     <p class="aviso aviso--ok">A correção comentada já está disponível.</p>
     <p><a class="btn" href="/simulado/historico/<%= simulado.id %>">Ver a correção comentada</a></p>
