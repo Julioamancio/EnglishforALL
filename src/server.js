@@ -38,13 +38,39 @@ const CAMINHO_SESSOES = process.env.SESSIONS_PATH
   || path.join(__dirname, '../dados/sessoes.db');
 fs.mkdirSync(path.dirname(CAMINHO_SESSOES), { recursive: true });
 
+/* O segredo da sessão sem valor fixo de reserva.
+ *
+ * Em 06/08/2026 o `.env` teve o dono trocado por engano e a aplicação, que roda
+ * como www-data, deixou de conseguir lê-lo. O site continuou de pé porque quase
+ * tudo tem padrão — e o padrão do segredo era uma constante escrita aqui, num
+ * repositório PÚBLICO. Por uns cinquenta minutos qualquer pessoa que conhecesse
+ * o código podia assinar um cookie de sessão válido.
+ *
+ * Reserva aleatória em vez de fixa: continua subindo (derrubar o site por causa
+ * de configuração é pior), mas ninguém consegue forjar sessão, e o sintoma —
+ * todo mundo deslogado a cada reinício — aparece rápido em vez de ficar mudo.
+ */
+const SEGREDO_SESSAO = process.env.SESSION_SECRET
+  || require('crypto').randomBytes(32).toString('hex');
+
+if (!process.env.SESSION_SECRET) {
+  console.error(
+    '[ATENCAO] SESSION_SECRET nao chegou ao processo. Usando um segredo '
+      + 'aleatorio: todo reinicio vai deslogar todo mundo. Confira se o .env '
+      + 'existe E se o usuario do servico consegue le-lo (ls -l .env).'
+  );
+}
+if (!process.env.ADMIN_SENHA_HASH) {
+  console.error('[ATENCAO] ADMIN_SENHA_HASH nao chegou ao processo: o painel nao abre.');
+}
+
 app.use(
   session({
     store: new SqliteStore({
       client: new Database(CAMINHO_SESSOES),
       expired: { clear: true, intervalMs: 15 * 60 * 1000 },
     }),
-    secret: process.env.SESSION_SECRET || 'troque-isto-no-env',
+    secret: SEGREDO_SESSAO,
     resave: false,
     saveUninitialized: false,
     // renova o prazo a cada requisição: quem está usando o site não é
