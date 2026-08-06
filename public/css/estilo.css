@@ -131,6 +131,12 @@ h3 { font-size: 1.08rem; font-weight: 700; }
 
 .env { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 1.25rem; }
 .env--estreito { max-width: var(--leitura); }
+/* O painel do professor não é texto para ler, é tabela para varrer: os
+   1120px pensados para leitura obrigavam a tabela a rolar de lado, e
+   rolagem lateral em tabela é ruim de usar. Aqui a largura acompanha a
+   janela, com um teto para não esticar demais em monitor grande. */
+.env--painel { max-width: min(1560px, 98vw); padding-inline: .8rem; }
+@media (max-width: 40rem) { .env--painel { padding-inline: 1rem; } }
 
 .topo {
   position: sticky; top: 0; z-index: 30;
@@ -513,8 +519,8 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 
 /* ---------------------------------------------------------- tabela admin */
 
-.tabela { width: 100%; border-collapse: collapse; font-size: .9rem; }
-.tabela th, .tabela td { text-align: left; padding: .75rem .7rem; border-bottom: 1px solid var(--borda); vertical-align: middle; }
+.tabela { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.tabela th, .tabela td { text-align: left; padding: .6rem .55rem; border-bottom: 1px solid var(--borda); vertical-align: middle; }
 /* `middle` e não `top`: com uma célula de duas linhas (nome + e-mail) e as
    outras de uma, o alinhamento pelo topo deixava a linha inteira torta. */
 .tabela th {
@@ -532,7 +538,7 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
    ficha" virava duas linhas, "1ª série do médio" também, e cada linha ficava
    com uma altura diferente. Com um piso de largura ela rola, que é o que a
    caixa em volta sempre esteve preparada para fazer. */
-.tabela--larga { min-width: 54rem; }
+.tabela--larga { min-width: 46rem; }
 
 /* Números à direita e com dígitos de largura fixa: assim as casas se alinham
    entre as linhas e dá para comparar a coluna de cima a baixo. */
@@ -543,6 +549,8 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
    contra 73px das outras — uma fila torta no meio da tabela. Como a tabela
    agora rola, é melhor ela ficar mais larga do que ter altura irregular. */
 .tabela__aluno { white-space: nowrap; }
+/* o e-mail é o que mais estica a coluna e é informação de apoio */
+.tabela__aluno small { font-size: .78rem; }
 
 /* seleção de questões no montador */
 .escolha { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; padding: .85rem; border: 1px solid var(--borda); border-radius: var(--r); background: var(--superficie); margin-bottom: .6rem; }
@@ -1286,7 +1294,7 @@ html, body { max-width: 100%; overflow-x: clip; }
 .etiqueta--espera {
   white-space: nowrap;
   display: inline-block;
-  font-size: .82rem;
+  font-size: .76rem;
   color: var(--suave);
   background: var(--fundo-2);
   border: 1px solid var(--borda);

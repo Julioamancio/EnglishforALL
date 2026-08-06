@@ -5,7 +5,7 @@
   const cor = (p) => p >= 70 ? 'var(--ok)' : p >= 50 ? 'var(--marca)' : 'var(--correcao)';
   const corTexto = (p) => p >= 70 ? 'ok' : p >= 50 ? 'media' : 'baixa';
 %>
-<div class="env">
+<div class="env env--painel">
   <h1><%= d ? 'Turma ' + d.rotulo : 'Rendimento por turma' %></h1>
 
   <form class="filtro-alunos" method="get" action="/admin/turmas">

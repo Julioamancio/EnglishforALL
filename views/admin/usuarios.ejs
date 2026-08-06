@@ -4,7 +4,7 @@
   const comSimulado = alunos.filter((a) => a.concluidos > 0);
   const misturadas = escolas.filter((e) => e.variacoes > 1);
 %>
-<div class="env">
+<div class="env env--painel">
   <h1>Alunos e desempenho</h1>
 
   <% if (recado) { %><p class="aviso aviso--ok"><%= recado %></p><% } %>
@@ -114,7 +114,11 @@
               <td class="nao-quebra"><%= a.serie ? rotuloSerie(a.serie) : '—' %></td>
               <td class="num">
                 <%= a.concluidos %>
-                <% if (a.em_aberto) { %><span class="etiqueta etiqueta--espera">1 em andamento</span><% } %>
+                <%# "1 em andamento" por extenso esticava esta coluna para 156px
+                    para exibir um número de um dígito, e era o que empurrava a
+                    tabela para a rolagem lateral. O texto inteiro vive no
+                    title. %>
+                <% if (a.em_aberto) { %><span class="etiqueta etiqueta--espera" title="1 simulado em andamento, ainda não concluído">+1 aberto</span><% } %>
               </td>
               <td class="num"><%= a.media == null ? '—' : a.media + '%' %></td>
               <td class="num"><%= a.ultima_nota == null ? '—' : a.ultima_nota + '%' %></td>

@@ -1,5 +1,5 @@
 <%- include('../partials/cabeca') %>
-<div class="env">
+<div class="env env--painel">
   <h1>Nota do bimestre</h1>
 
   <%# A regra por extenso, na tela. Nota de aluno não pode depender de alguém
@@ -71,8 +71,11 @@
         <thead>
           <tr>
             <th>Aluno</th><th>Onde estuda</th><th>Série</th>
+            <%# "Nota provisória" e "Nota final" por extenso custavam 229px de
+                cabeçalho numa página que já se chama Nota do bimestre. Encurtar
+                foi o que fez a tabela caber sem rolagem lateral. %>
             <th class="num">Simulados</th><th class="num">Média</th>
-            <th class="num">Nota provisória</th><th class="num">Nota final</th>
+            <th class="num">Provisória</th><th class="num">Final</th>
             <th>Situação</th><th></th>
           </tr>
         </thead>
