@@ -27,7 +27,37 @@
     <% }) %>
   </div>
 
-  <p class="aviso">Aqui não aparece o gabarito nem o comentário. A correção completa abre <strong>24 horas depois</strong> que você terminar as cinco questões. Uma resposta enviada não muda mais.</p>
+<%# O que vem antes da primeira questão foi reescrito em 06/08/2026, depois de
+    olhar quem abandona.
+
+    Treze alunos abriram e não terminaram, e NOVE não responderam nem a primeira
+    questão. Não havia questão travando ninguém — eram treze questões
+    diferentes. O que havia era esta tela: a primeira coisa depois do título era
+    uma caixa de restrições, terminando em "uma resposta enviada não muda mais".
+    Para quem está inseguro, isso é um bom motivo para fechar a aba.
+
+    E o código sabia de uma coisa que a tela nunca disse: o simulado FICA
+    GUARDADO. Estava só num comentário aqui dentro. Quem fechou a aba não tinha
+    como saber que dava para voltar.
+
+    As regras continuam todas — são pedagógicas, e o aluno precisa saber que a
+    resposta é definitiva antes de marcar. O que mudou foi a ordem: primeiro o
+    que tranquiliza, depois o que restringe. %>
+  <% if (respondidas > 0) { %>
+    <p class="retoma">
+      <strong>Bem-vindo de volta.</strong>
+      Você já respondeu <%= respondidas %> de <%= questoes.length %>
+      <%= respondidas === 1 ? 'questão' : 'questões' %>, e continua exatamente de onde parou.
+    </p>
+  <% } else { %>
+    <p class="retoma">
+      <strong>Pode ir com calma.</strong>
+      São <%= questoes.length %> questões, uns 10 minutos. Se precisar sair no meio,
+      o que você já respondeu fica guardado e você volta neste mesmo ponto.
+    </p>
+  <% } %>
+
+  <p class="aviso">Uma resposta enviada não muda mais, então marque com atenção. O gabarito e o comentário abrem <strong>24 horas depois</strong> que você terminar as <%= questoes.length %>.</p>
 
   <article class="questao">
     <% if (q.instituicao) { %><p class="origem"><%= q.instituicao %><%= q.ano ? ' · ' + q.ano : '' %></p><% } %>

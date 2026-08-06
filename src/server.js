@@ -95,6 +95,22 @@ app.use((req, res, next) => {
   // Listagem filtrada (?tema=, ?nivel=, ...) é recorte do acervo: o canonical
   // já aponta para a página sem filtro, e a versão com query sai do índice.
   res.locals.comFiltro = Object.keys(req.query).length > 0;
+
+  /* Simulado começado e não terminado, para a faixa do cabeçalho.
+   *
+   * Em 06/08/2026, 13 alunos abriram o simulado e não concluíram — e NOVE deles
+   * não chegaram a responder a primeira questão. O painel do professor já
+   * mostrava "há um simulado em andamento"; o aluno não via isso em lugar
+   * nenhum. Abrir, sair e nunca mais ser lembrado é o caminho mais curto para a
+   * semana passar em branco, e a semana em branco custa a nota.
+   *
+   * Só para aluno logado, e é uma busca por índice: `simulados` tem
+   * UNIQUE (usuario_id, semana), então o SQLite resolve isso sem varrer nada.
+   */
+  res.locals.simuladoAberto = req.session.usuario
+    ? require('./lib/simulado').emAberto(req.session.usuario.id) || null
+    : null;
+
   next();
 });
 

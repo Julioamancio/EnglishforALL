@@ -1829,3 +1829,56 @@ html[data-tema='escuro'] .paginacao__n--atual:hover {
   92%           { transform: scale(1.18) rotate(-6deg); }
   96%           { transform: scale(1.08) rotate(4deg); }
 }
+
+/* ------------------------------------------------ faixa de retomar simulado */
+/* Nove dos treze que abandonaram nunca responderam a primeira questão, e nada
+   no site lembrava que havia simulado esperando. A faixa é a lembrança. */
+.retomar {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .7rem 1.1rem;
+  background: var(--marca-fraca);
+  border-bottom: 1px solid var(--borda);
+  color: var(--texto);
+  text-decoration: none;
+  font-size: .95rem;
+  line-height: 1.45;
+}
+.retomar:hover { background: var(--marca); }
+.retomar__texto { flex: 1; min-width: 0; }
+.retomar__seta { flex: none; font-size: 1.2rem; }
+/* O ponto pulsa devagar: é o que faz o olho achar a faixa sem que ela precise
+   ser vermelha. Nada aqui é urgência — é lembrete. */
+.retomar__ponto {
+  flex: none;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  background: #e8a300;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .retomar__ponto { animation: retomar-pisca 2.4s ease-in-out infinite; }
+}
+@keyframes retomar-pisca {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: .45; transform: scale(.82); }
+}
+html[data-tema='escuro'] .retomar { color: #0e1120; }
+html[data-tema='escuro'] .retomar__seta { color: #0e1120; }
+
+/* A frase que tranquiliza, antes da que restringe. */
+.retoma {
+  margin: 0 0 .7rem;
+  padding: .75rem .95rem;
+  border-radius: var(--r-sm);
+  background: var(--fundo-2);
+  border-left: 3px solid var(--tinta);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 30rem) {
+  .retomar { font-size: .88rem; padding: .6rem .8rem; }
+  .retomar__seta { display: none; }
+}

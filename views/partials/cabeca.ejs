@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/estilo.css?v=56">
+<link rel="stylesheet" href="/css/estilo.css?v=57">
 <script src="/js/site.js?v=10" defer></script>
 <% if (typeof jsonld !== 'undefined' && jsonld) { %>
 <script type="application/ld+json"><%- JSON.stringify(jsonld) %></script>
@@ -89,4 +89,21 @@
     </nav>
   </div>
 </header>
+<%# Faixa de retomada.
+    Fica FORA do <nav> de propósito: mexer no menu quebraria o alinhamento que
+    já foi acertado, e esta faixa precisa aparecer em toda página, não só nas do
+    aluno. Some sozinha quando não há simulado pendente — aviso que fica na tela
+    depois de resolvido ensina a ignorar avisos.
+
+    Não aparece na própria página do simulado: lá o aluno já está no lugar. %>
+<% if (typeof simuladoAberto !== 'undefined' && simuladoAberto && caminho !== '/simulado') { %>
+<a class="retomar" href="/simulado">
+  <span class="retomar__ponto" aria-hidden="true"></span>
+  <span class="retomar__texto">
+    <strong>Você tem um simulado em andamento.</strong>
+    O que já respondeu está guardado — dá para continuar de onde parou.
+  </span>
+  <span class="retomar__seta" aria-hidden="true">&rarr;</span>
+</a>
+<% } %>
 <main id="conteudo">
