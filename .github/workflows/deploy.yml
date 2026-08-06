@@ -20,6 +20,12 @@
 #                      ssh root@<host> 'cut -d" " -f1,2 /etc/ssh/ssh_host_*.pub'
 #                    e prefixar cada linha com o endereço.
 #
+# A conexão do runner até a VPS falha por timeout de vez em quando, sem que nada
+# chegue ao sshd do servidor — é a rede no caminho, não o servidor recusando.
+# Por isso a publicação tenta até 4 vezes antes de desistir, e só repete quando o
+# ssh não conectou (código 255): erro vindo do próprio script remoto não se
+# resolve repetindo.
+#
 # A chave do deploy é PRÓPRIA, não a pessoal do professor: assim revogar o
 # acesso das Actions é apagar uma linha do authorized_keys, sem derrubar o
 # acesso de ninguém mais. A linha é a que termina em
@@ -45,7 +51,7 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Preparar a chave SSH
@@ -74,7 +80,7 @@ jobs:
           fi
           chmod 600 ~/.ssh/known_hosts
 
-      - name: Publicar
+      - name: Publicar e conferir
         env:
           MAQUINA: ${{ secrets.VPS_HOST }}
           USUARIO: ${{ secrets.VPS_USER }}
@@ -84,9 +90,10 @@ jobs:
           set -euo pipefail
           echo "Publicando '$REF' em $MAQUINA"
 
-          ssh -i ~/.ssh/id_deploy -p "${PORTA:-22}" \
-              -o BatchMode=yes -o ConnectTimeout=20 \
-              "$USUARIO@$MAQUINA" "REF='$REF' bash -s" <<'REMOTO'
+          # O que roda no servidor vai para um arquivo em vez de ficar colado na
+          # linha do ssh: assim a mesma coisa pode ser reenviada numa segunda
+          # tentativa sem duplicar o texto.
+          cat > /tmp/remoto.sh <<'REMOTO'
           set -euo pipefail
           cd /var/www/banco-questoes
 
@@ -127,33 +134,61 @@ jobs:
           fi
 
           systemctl restart banco-questoes
-          REMOTO
 
-      - name: Conferir se o site respondeu
-        env:
-          MAQUINA: ${{ secrets.VPS_HOST }}
-          USUARIO: ${{ secrets.VPS_USER }}
-          PORTA: ${{ secrets.VPS_PORT }}
-        run: |
-          set -euo pipefail
+          # A conferência é aqui dentro, e não numa segunda conexão: cada ssh
+          # novo é mais uma chance de tomar o timeout de rede que derrubou dois
+          # deploys em 06/08/2026. Uma conexão faz tudo.
+          #
           # O restart não é instantâneo: tenta por até ~30 s antes de desistir.
-          ssh -i ~/.ssh/id_deploy -p "${PORTA:-22}" \
-              -o BatchMode=yes -o ConnectTimeout=20 \
-              "$USUARIO@$MAQUINA" 'bash -s' <<'REMOTO'
-          set -euo pipefail
+          codigo=
           for i in $(seq 1 15); do
             codigo=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8098/ || true)
-            if [ "$codigo" = "200" ]; then
-              echo "Site respondeu 200. Publicado."
-              exit 0
-            fi
+            if [ "$codigo" = "200" ]; then break; fi
             sleep 2
           done
-          echo "O site não respondeu 200 (último código: ${codigo:-nenhum})."
-          systemctl status banco-questoes --no-pager --lines 30 || true
-          journalctl -u banco-questoes --no-pager --lines 40 || true
-          exit 1
+          if [ "$codigo" != "200" ]; then
+            echo "O site não respondeu 200 (último código: ${codigo:-nenhum})."
+            systemctl status banco-questoes --no-pager --lines 30 || true
+            journalctl -u banco-questoes --no-pager --lines 40 || true
+            exit 1
+          fi
+          echo "Site respondeu 200. Publicado."
           REMOTO
+
+          publicar() {
+            ssh -i ~/.ssh/id_deploy -p "${PORTA:-22}" \
+                -o BatchMode=yes -o ConnectTimeout=20 -o ServerAliveInterval=15 \
+                "$USUARIO@$MAQUINA" "REF='$REF' bash -s" < /tmp/remoto.sh
+          }
+
+          # Em 06/08/2026 o deploy falhou duas vezes com "connect ... timed out",
+          # e o sshd do servidor não registrou nenhuma tentativa nos horários: os
+          # pacotes do runner não chegaram. Não é o servidor recusando (não há
+          # fail2ban nem regra bloqueando a 22) — é a rede no caminho. Contra
+          # isso insistir funciona; desistir na primeira só transfere o trabalho
+          # para alguém publicar à mão.
+          for tentativa in 1 2 3 4; do
+            codigo=0
+            publicar || codigo=$?
+            if [ "$codigo" -eq 0 ]; then exit 0; fi
+
+            # 255 é falha do próprio ssh — não conectou, nada rodou no servidor.
+            # Qualquer outro código veio do script remoto, e repetir um merge
+            # recusado ou um site que não sobe não conserta nada.
+            if [ "$codigo" -ne 255 ]; then
+              echo "::error::O script no servidor falhou (código $codigo). Não vou repetir."
+              exit "$codigo"
+            fi
+
+            if [ "$tentativa" -lt 4 ]; then
+              espera=$((tentativa * 20))
+              echo "Não consegui conectar (tentativa $tentativa de 4). De novo em ${espera}s."
+              sleep "$espera"
+            fi
+          done
+
+          echo "::error::A VPS não aceitou conexão em 4 tentativas. Publique à mão com o publicar-a-mao.sh do repositório EnglishforALL-vps."
+          exit 1
 
       - name: Apagar a chave
         if: always()
