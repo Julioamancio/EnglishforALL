@@ -129,13 +129,26 @@ h3 { font-size: 1.08rem; font-weight: 700; }
 
 /* ---------------------------------------------------------- estrutura */
 
-.env { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 1.25rem; }
+/* O `padding-top` não é só respiro: sem ele a margem do primeiro título
+   COLAPSA para fora do .env e o conteúdo encosta na borda do cabeçalho —
+   era por isso que a ficha do aluno começava colada. Com padding em cima o
+   colapso para e a margem do título passa a valer dentro da caixa. */
+.env { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 1.5rem 1.25rem 0; }
 .env--estreito { max-width: var(--leitura); }
 /* O painel do professor não é texto para ler, é tabela para varrer: os
    1120px pensados para leitura obrigavam a tabela a rolar de lado, e
    rolagem lateral em tabela é ruim de usar. Aqui a largura acompanha a
    janela, com um teto para não esticar demais em monitor grande. */
 .env--painel { max-width: min(1560px, 98vw); padding-inline: .8rem; }
+/* Os mesmos números do .env--painel, de propósito: cabeçalho e conteúdo
+   precisam nascer e terminar na mesma coluna. Se um dos dois mudar sem o
+   outro, a logo volta a flutuar no meio da tela, que foi o defeito que
+   apareceu quando só o conteúdo ficou largo. */
+/* A classe é repetida de propósito (.topo__int.topo__int--painel): a regra
+   base .topo__int mora mais adiante no arquivo e tem a mesma
+   especificidade, então venceria pela ordem. Com a classe dobrada o
+   modificador ganha onde quer que ele esteja. */
+.topo__int.topo__int--painel { max-width: min(1560px, 98vw); padding-left: .8rem; padding-right: .8rem; }
 @media (max-width: 40rem) { .env--painel { padding-inline: 1rem; } }
 
 .topo {
