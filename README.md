@@ -359,11 +359,19 @@ cada situação.
 
 ## O que ficou em aberto
 
-- **Questões 105 e 112** (Viva la Vida, War) estão despublicadas porque o
-  `texto_base` está vazio e não há imagem — a questão não se responde. Para
-  publicá-las, é preciso importar a letra da prova original.
-- **Contas criadas antes da coluna `instituicao`** ficam com o campo em branco.
-  Não quebra nada; se quiser preencher, é edição direta no banco.
+- **Questões 105 e 112** seguem despublicadas, e agora por decisão e não por
+  pendência. As duas se apoiam na letra de uma canção reproduzida na prova
+  original, e letra de música não entra aqui: hospedar a letra inteira num site
+  aberto é problema de direito autoral, não detalhe de curadoria. Sem o texto a
+  questão não se responde, então elas ficam fora. Conferido em 06/08/2026: as
+  duas retornam 404 na URL direta — `porSlug` filtra `publicada = 1` —, não
+  aparecem em listagem nenhuma e não contam em número nenhum do site. Se um dia
+  entrarem, será com outro texto-base, não com a letra.
+
+**Resolvido desde a última revisão:**
+
+- ~~Contas sem `instituicao`~~ — conferido em 06/08/2026: **zero** das 103
+  contas está com o campo em branco.
 
 ---
 
