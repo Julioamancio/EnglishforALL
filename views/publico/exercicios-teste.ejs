@@ -26,6 +26,13 @@
         <span class="arena__contador">Questão <b data-atual>1</b> de <span data-total><%= topico.exercicios.length %></span></span>
         <span class="arena__trilha" data-trilha aria-hidden="true"></span>
         <span class="arena__placar">
+          <%# Cronômetro que conta PARA CIMA: mede quanto o aluno levou nesta
+              questão, para ele conhecer o próprio ritmo. Não é contagem
+              regressiva, e para no clique — o tempo lendo a explicação é
+              estudo, não prova. aria-hidden porque um número que muda a cada
+              segundo seria lido em voz alta sem parar; o resumo do tempo vai
+              na tela de resultado, aí sim anunciável. %>
+          <span class="arena__tempo" data-relogio aria-hidden="true">⏱ <span data-relogio-n>0s</span></span>
           <span class="arena__acertos"><span data-acertos>0</span> ✓</span>
           <span class="arena__seq" data-seq hidden>🔥 <span data-seq-n>0</span></span>
         </span>
@@ -51,6 +58,11 @@
         <p class="arena__nota"><span data-nota>0</span><span>/<%= topico.exercicios.length %></span></p>
         <p class="arena__recado" data-recado></p>
         <div class="arena__barra"><span data-barra></span></div>
+        <div class="arena__tempos" data-tempos hidden>
+          <span>Tempo total<b data-t-total>—</b></span>
+          <span>Média por questão<b data-t-media>—</b></span>
+          <span>A mais demorada<b data-t-max>—</b><small data-t-max-q></small></span>
+        </div>
         <div class="arena__acoes">
           <button class="btn" type="button" data-refazer>Refazer o teste</button>
           <a class="btn btn--sec" href="/gramatica/<%= topico.slug %>">Ver a explicação do tópico</a>

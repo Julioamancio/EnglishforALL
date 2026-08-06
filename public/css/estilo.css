@@ -765,6 +765,10 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 .arena__ponto--ok { background: var(--ok); }
 .arena__ponto--erro { background: var(--correcao); }
 .arena__placar { display: flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .9rem; white-space: nowrap; }
+/* Cronômetro: conta PARA CIMA, para o aluno saber o próprio ritmo. Números
+   tabulares para o relógio não tremer a cada segundo. */
+.arena__tempo { display: inline-flex; align-items: center; gap: .25rem; font-weight: 700; font-size: .9rem; color: var(--suave); font-variant-numeric: tabular-nums; }
+.arena__tempo--parado { color: var(--texto); }
 .arena__acertos { color: var(--ok); }
 .arena__seq {
   display: inline-flex; align-items: center; gap: .2rem;
@@ -773,6 +777,15 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
   transform: scale(.7); opacity: 0; transition: opacity .25s, transform .25s;
 }
 .arena__seq--on { opacity: 1; transform: scale(1); }
+/* No celular o painel quebrava em três linhas e comia 91px de tela — e ele é
+   fixo, então essa perda seria permanente. Contador e placar dividem a
+   primeira linha; a trilha, que precisa de largura, fica com a segunda. */
+@media (max-width: 30rem) {
+  .arena__hud { gap: .45rem .7rem; padding: .55rem .75rem; }
+  .arena__contador { order: 1; font-size: .95rem; }
+  .arena__placar { order: 2; margin-left: auto; }
+  .arena__trilha { order: 3; flex-basis: 100%; }
+}
 
 /* ---- cartão da questão ---- */
 .quiz {
@@ -874,6 +887,8 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 .quiz--acertou .quiz__veredito { background: var(--ok); }
 .quiz--errou .quiz__veredito { background: var(--correcao); }
 @keyframes veredito-entra { from { opacity: 0; transform: translateY(-8px) scale(.97); } to { opacity: 1; transform: none; } }
+.quiz__tempo { margin-left: auto; flex: none; font-family: var(--ui); font-size: .85rem; font-weight: 700;
+  background: rgba(255,255,255,.22); padding: .12rem .6rem; border-radius: 99px; font-variant-numeric: tabular-nums; }
 
 .quiz__explica {
   margin: .6rem 0 0; padding: .85rem 1rem; border-radius: var(--r);
@@ -903,6 +918,8 @@ html[data-tema='escuro'] .selo--rascunho { color: var(--marca); }
 .arena__recado { font-size: 1.05rem; font-weight: 600; margin: .5rem 0 1.2rem; }
 .arena__barra { height: 12px; border-radius: 99px; background: var(--fundo-2); overflow: hidden; margin: 0 auto 1.4rem; max-width: 22rem; }
 .arena__barra span { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--tinta-vivo), var(--ok)); transition: width 1s cubic-bezier(.2,.8,.3,1); }
+.arena__tempos { display: flex; gap: 1.4rem; justify-content: center; flex-wrap: wrap; margin: 0 0 1.4rem; font-size: .82rem; color: var(--suave); }
+.arena__tempos b { display: block; font-family: var(--display); font-size: 1.3rem; color: var(--texto); font-variant-numeric: tabular-nums; }
 .arena__acoes { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
 .arena__revisao { text-align: left; margin-top: 1.8rem; border-top: 1px solid var(--borda); padding-top: 1.2rem; }
 .arena__revisao h3 { font-family: var(--display); font-size: 1rem; margin: 0 0 .7rem; }

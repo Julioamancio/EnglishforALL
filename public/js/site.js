@@ -244,6 +244,62 @@
   var trilha = arena.querySelector('[data-trilha]');
   var fim = arena.querySelector('[data-fim]');
   var acertos = 0, seq = 0, erradas = [];
+  var tempos = [], marcado = 0, parado = 0, tique = null;
+
+  /* --------------------------------------------------------- cronômetro
+     Conta para CIMA: mede quanto o aluno levou para responder, que é o
+     dado de ritmo que interessa a quem treina para prova com tempo. Para
+     no clique da alternativa — o tempo lendo a explicação é estudo, não
+     prova, e somá-lo distorceria a média.
+
+     Pausa quando a aba sai da frente: aluno que troca de janela e volta
+     dez minutos depois não levou dez minutos pensando, e um número desses
+     não mede nada. */
+  function relogio() { return arena.querySelector('[data-relogio-n]'); }
+
+  function comoTempo(ms) {
+    var s = Math.max(0, Math.round(ms / 1000));
+    if (s < 60) return s + 's';
+    return Math.floor(s / 60) + 'min' + (s % 60 ? ' ' + (s % 60) + 's' : '');
+  }
+
+  function pinta() {
+    var el = relogio();
+    if (el && marcado) el.textContent = comoTempo(Date.now() - marcado);
+  }
+
+  function comeca() {
+    marcado = Date.now();
+    pinta();
+    if (tique) clearInterval(tique);
+    tique = setInterval(pinta, 1000);
+    var caixa = arena.querySelector('[data-relogio]');
+    if (caixa) caixa.classList.remove('arena__tempo--parado');
+  }
+
+  function para() {
+    if (tique) { clearInterval(tique); tique = null; }
+    var gasto = marcado ? Date.now() - marcado : 0;
+    marcado = 0;
+    // o painel repinta de segundo em segundo; sem esta linha ele congela no
+    // último tique e mostra 14s enquanto o carimbo da resposta diz 15s
+    var el = relogio();
+    if (el && gasto) el.textContent = comoTempo(gasto);
+    var caixa = arena.querySelector('[data-relogio]');
+    if (caixa) caixa.classList.add('arena__tempo--parado');
+    return gasto;
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      if (marcado) { parado = Date.now(); if (tique) { clearInterval(tique); tique = null; } }
+    } else if (parado && marcado) {
+      marcado += Date.now() - parado;
+      parado = 0;
+      pinta();
+      tique = setInterval(pinta, 1000);
+    }
+  });
 
   arena.classList.add('arena--js');
   if (hud) hud.hidden = false;
@@ -266,6 +322,7 @@
     });
     var el = arena.querySelector('[data-atual]');
     if (el) el.textContent = i + 1;
+    if (!quizzes[i].dataset.feito) comeca();
     quizzes[i].querySelectorAll('.quiz__opcao').forEach(function (b) {
       b.style.animation = 'none'; void b.offsetWidth; b.style.animation = '';
     });
@@ -302,6 +359,23 @@
         'Esse tópico ainda não está firme. Leia a explicação com calma e volte aqui.';
     }
 
+    var feitos = tempos.filter(function (t) { return typeof t === 'number'; });
+    var caixaT = arena.querySelector('[data-tempos]');
+    if (caixaT && feitos.length) {
+      var soma = feitos.reduce(function (a, b) { return a + b; }, 0);
+      var maior = Math.max.apply(null, feitos);
+      var qMaior = tempos.indexOf(maior) + 1;
+      var mostraTempo = function (sel, txt) {
+        var e = arena.querySelector(sel);
+        if (e) e.textContent = txt;
+      };
+      mostraTempo('[data-t-total]', comoTempo(soma));
+      mostraTempo('[data-t-media]', comoTempo(soma / feitos.length));
+      mostraTempo('[data-t-max]', comoTempo(maior));
+      mostraTempo('[data-t-max-q]', 'questão ' + qMaior);
+      caixaT.hidden = false;
+    }
+
     var rev = arena.querySelector('[data-revisao]');
     var lista = arena.querySelector('[data-revisao-lista]');
     if (rev && lista) {
@@ -323,6 +397,7 @@
         rev.hidden = false;
       } else rev.hidden = true;
     }
+    para();
     fim.scrollIntoView({ behavior: suave ? 'smooth' : 'auto', block: 'center' });
   }
 
@@ -338,6 +413,15 @@
     quiz.appendChild(caixa);
 
     prepara(quiz, function (acertou) {
+      var gasto = para();
+      tempos[idx] = gasto;
+      var vd = quiz.querySelector('.quiz__veredito');
+      if (vd) {
+        var chip = document.createElement('span');
+        chip.className = 'quiz__tempo';
+        chip.textContent = comoTempo(gasto);
+        vd.appendChild(chip);
+      }
       pontos[idx].classList.remove('arena__ponto--atual');
       pontos[idx].classList.add(acertou ? 'arena__ponto--ok' : 'arena__ponto--erro');
 
