@@ -99,6 +99,42 @@
     </form>
   </details>
 
+<%# A nota do bimestre vem ANTES do desempenho, e aparece mesmo para quem não
+    concluiu simulado nenhum: para o professor, a pergunta "esse aluno vai
+    fechar o mínimo?" decide antes de "como ele vai nas questões". É o mesmo
+    bloco que o aluno vê em Meu desempenho, redigido na terceira pessoa. %>
+<% if (nota) { %>
+  <div class="nota-aluno <%= nota.atingiuMinimo ? 'nota-aluno--pronto' : (nota.aindaDaTempo ? '' : 'nota-aluno--risco') %>">
+    <div class="nota-aluno__valor">
+      <b><%= nota.notaProvisoria == null ? '—' : nota.notaProvisoria.toFixed(1).replace('.', ',') %></b>
+      <span>nota provisória</span>
+    </div>
+    <div class="nota-aluno__corpo">
+      <h2>Nota do bimestre</h2>
+      <p>
+        Fez <strong><%= nota.concluidos %></strong> dos <strong><%= calendario.minimo %></strong>
+        simulados obrigatórios (<%= calendario.exigencia %>% de <%= calendario.total %>).
+        Nota final hoje:
+        <strong class="<%= nota.notaFinal > 0 ? 'nota-ok' : 'nota-zero' %>"><%= nota.notaFinal.toFixed(1).replace('.', ',') %></strong>.
+      </p>
+      <div class="nota-aluno__prog">
+        <span style="width:<%= Math.min(100, Math.round((nota.concluidos / calendario.minimo) * 100)) %>%"></span>
+      </div>
+      <% if (nota.atingiuMinimo) { %>
+        <p>Mínimo cumprido — a nota final é o desempenho dele, e cada simulado novo continua entrando na média.</p>
+      <% } else if (!nota.aindaDaTempo) { %>
+        <p><strong>Já não é possível alcançar o mínimo:</strong> faltam <%= nota.faltam %> simulados
+          e restam <%= nota.semanasRestantes %> semanas. A nota final fica em 0.</p>
+      <% } else { %>
+        <p>Faltam <strong><%= nota.faltam %></strong> simulados, com
+          <strong><%= nota.semanasRestantes %></strong> semanas ainda disponíveis.
+          Enquanto não cumprir, a nota final fica <strong>0</strong>.</p>
+      <% } %>
+      <p><a href="/admin/notas">Ver a turma inteira &rarr;</a></p>
+    </div>
+  </div>
+<% } %>
+
 <% if (d.vazio) { %>
   <p class="aviso">Este aluno ainda não concluiu nenhum simulado oficial.</p>
 <% } else { %>

@@ -445,6 +445,9 @@ router.get('/usuarios/:id', (req, res, next) => {
     description: '',
     aluno,
     d: desempenho.resumo(aluno.id),
+    // a mesma nota que o aluno vê, para o professor não precisar abrir outra tela
+    nota: notas.doAluno(aluno.id),
+    calendario: notas.CALENDARIO,
     lista,
     emAberto: sim.emAberto(aluno.id),
     escolas: instituicoes.INSTITUICOES,
