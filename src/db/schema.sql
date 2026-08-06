@@ -109,6 +109,21 @@ CREATE TABLE IF NOT EXISTS simulado_questoes (
   UNIQUE (simulado_id, ordem)
 );
 
+-- Aviso semanal por e-mail. Existe para o mesmo aviso não sair duas vezes: o
+-- cron pode repetir, e o professor pode rodar à mão no mesmo dia. A chave
+-- (usuario_id, semana, tipo) é quem garante isso, não a boa vontade de quem
+-- chama. Só se grava depois do envio dar certo — falha não conta como enviado,
+-- para a próxima execução tentar de novo.
+CREATE TABLE IF NOT EXISTS avisos (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  usuario_id INTEGER NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+  semana     TEXT    NOT NULL,
+  tipo       TEXT    NOT NULL DEFAULT 'simulado-semanal',
+  enviado_em TEXT    NOT NULL DEFAULT (datetime('now')),
+  UNIQUE (usuario_id, semana, tipo)
+);
+CREATE INDEX IF NOT EXISTS idx_avisos_semana ON avisos(semana, tipo);
+
 CREATE INDEX IF NOT EXISTS idx_sim_usuario  ON simulados(usuario_id);
 CREATE INDEX IF NOT EXISTS idx_sim_semana   ON simulados(usuario_id, semana);
 CREATE INDEX IF NOT EXISTS idx_simq_sim     ON simulado_questoes(simulado_id);
