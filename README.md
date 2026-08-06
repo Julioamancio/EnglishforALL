@@ -304,6 +304,57 @@ NODE_PATH=/var/www/banco-questoes/node_modules /usr/local/bin/node20 scripts/aud
 
 Depois de gravar no banco: `systemctl restart banco-questoes`.
 
+### Como o código chega ao ar
+
+Dois gatilhos, **uma implementação só** — `scripts/publicar.sh`:
+
+| gatilho | quando | atraso |
+|---|---|---|
+| GitHub Actions | a cada push na `master` | segundos |
+| cron do servidor | de 5 em 5 minutos | até 5 minutos |
+
+O cron não é redundância decorativa. Em 06/08/2026 três publicações seguidas
+falharam sem culpa do código: duas vezes o GitHub não arrumou máquina para o job
+(*"The job was not acquired by Runner of type hosted"*) e uma vez a conexão do
+runner até a VPS caiu por timeout, sem que nada chegasse ao `sshd` daqui —
+verificado no log do servidor, que não registrou nenhuma tentativa nos horários.
+Nenhuma das três tem conserto do nosso lado **enquanto o gatilho for só de fora
+para dentro**. Com o servidor puxando, o pior caso deixa de ser "não publicou" e
+passa a ser "publicou cinco minutos depois".
+
+O script:
+
+- **trava com `flock`** — os dois gatilhos podem cair no mesmo instante;
+- **marca o commit que falhou**, em `/var/lib/publicar-englishforall.falhou`.
+  Sem isso o cron reencontraria o mesmo commit quebrado a cada cinco minutos e
+  reiniciaria o serviço para sempre;
+- **volta atrás** se o site não responder 200 depois do restart. `reset --hard`
+  é seguro aqui e só aqui: o `merge --ff-only` saiu de uma árvore limpa, então
+  voltar desfaz o que o próprio script acabou de fazer, e nada mais;
+- **prova que o `better-sqlite3` carrega** antes de reiniciar, quando as
+  dependências mudam.
+
+Quem chama roda uma **cópia** do script: o bash lê o arquivo aos poucos enquanto
+executa, e este script atualiza a própria pasta.
+
+Acompanhar: `tail -f /var/log/publicar.log`.
+
+### Aviso semanal por e-mail
+
+Quarta-feira às 22:00 UTC (19h de Brasília), por cron. Quarta de propósito: quem
+já fez o simulado na segunda não é incomodado, e ainda sobram cinco dias para
+quem não fez.
+
+São três textos conforme a situação — não fez, abriu sem responder, parou no
+meio —, e o do meio do caminho diz quantas questões faltam e que **simulado
+começado não conta**. Quem respondeu 3 de 5 costuma achar que já cumpriu a
+semana.
+
+O script pula quem já fez e quem já foi avisado (tabela `avisos`), então rodar
+duas vezes na mesma semana não manda em dobro. Simula por padrão; enviar exige
+`--enviar`. Para ver como chega: `--para=seu@email`, que manda uma amostra de
+cada situação.
+
 ---
 
 ## O que ficou em aberto
